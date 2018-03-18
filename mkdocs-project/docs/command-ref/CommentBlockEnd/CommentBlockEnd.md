@@ -1,4 +1,4 @@
-# Learn GeoProcessor / Command / Comment Block End `*/` #
+# Learn TSTool / Command / Comment Block End `*/` #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -11,15 +11,22 @@
 
 ## Overview ##
 
-Multiple-line comments end with `*/`.
-Spaces and tabs at the start of the comment line are OK.
-Additional text before the comment indicator is allowed.
+The `*/` command ends a multi-line comment block and is useful for inserting long comments or
+temporarily commenting out blocks of commands.
+See also the [`/*`](../CommentBlockStart/CommentBlockStart) and [`#`](../Comment/Comment) commands.
+Commands between the `/*` and `*/` are not converted to comments but are skipped during processing.
+See also the [`#`](../Comment/Comment) comment documentation for information about comment @ annotations.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../CommentBlockEnd.png">See also the full-size image.</a>
 
-**Need to implement UI.**
+![CommentBlockEnd](CommentBlockEnd.png)
+
+**<p style="text-align: center;">
+`*/` Command Editor
+</p>**
 
 ## Command Syntax ##
 
@@ -38,11 +45,11 @@ The commands between `/*` and `*/` lines will be recognized as commands but will
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/CommentBlockEnd).
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CommentBlock).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
 * [Comment - `#`](../Comment/Comment) command
-* [CommentBlockStart - `/*`](../CommentBlockStart/CommentBlockStart) command
+* [CommentBlockEnd - `*/`](../CommentBlockEnd/CommentBlockEnd) command

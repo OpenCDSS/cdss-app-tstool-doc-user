@@ -13,28 +13,28 @@ pages:
 - Command Reference:
   - Overview: command-ref/overview.md
 #  - Blank: command-ref/Blank/Blank.md
-#  - Comment: command-ref/Comment/Comment.md
-#  - CommentBlockStart: command-ref/CommentBlockStart/CommentBlockStart.md
-#  - CommentBlockEnd: command-ref/CommentBlockEnd/CommentBlockEnd.md
-#  - CompareFiles: command-ref/CompareFiles/CompareFiles.md
-#  - CopyFile: command-ref/CopyFile/CopyFile.md
+  - '# Comment': command-ref/Comment/Comment.md
+  - '/* Comment Start': command-ref/CommentBlockStart/CommentBlockStart.md
+  - '*/ Comment End': command-ref/CommentBlockEnd/CommentBlockEnd.md
+  - CompareFiles: command-ref/CompareFiles/CompareFiles.md
+  - CopyFile: command-ref/CopyFile/CopyFile.md
 #  - Copy: command-ref/Copy/Copy.md
-#  - CreateRegressionTestCommandFile: command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md
-#  - EndFor: command-ref/EndFor/EndFor.md
-#  - EndIf: command-ref/EndIf/EndIf.md
+  - CreateRegressionTestCommandFile: command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md
+  - EndFor: command-ref/EndFor/EndFor.md
+  - EndIf: command-ref/EndIf/EndIf.md
 #  - For: command-ref/For/For.md
 #  - Free: command-ref/Free/Free.md
 #  - If: command-ref/If/If.md
 #  - ListFiles: command-ref/ListFiles/ListFiles.md
 #  - Message: command-ref/Message/Message.md
 #  - ReadFromDelimitedFile: command-ref/ReadFromDelimitedFile/ReadFromDelimitedFile.md
-#  - RemoveFile: command-ref/RemoveFile/RemoveFile.md
-#  - RunCommands: command-ref/RunCommands/RunCommands.md
+  - RemoveFile: command-ref/RemoveFile/RemoveFile.md
+  - RunCommands: command-ref/RunCommands/RunCommands.md
 #  - RunProgram: command-ref/RunProgram/RunProgram.md
 #  - SetProperty: command-ref/SetProperty/SetProperty.md
 #  - SetPropertyFromTimeSeries: command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md
 #  - StartLog: command-ref/StartLog/StartLog.md
-#  - StartRegressionTestResultsReport: command-ref/StartRegressionTestResultsReport/StartRegressionTestResultsReport.md
+  - StartRegressionTestResultsReport: command-ref/StartRegressionTestResultsReport/StartRegressionTestResultsReport.md
 #  - UnknownCommand: command-ref/UnknownCommand/UnknownCommand.md
 #  - UnzipFile: command-ref/UnzipFile/UnzipFile.md
 #  - WebGet: command-ref/WebGet/WebGet.md
@@ -57,7 +57,7 @@ theme: material
 #repo_url:  https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-doc-user
 site_description:  CDSS Learn TSTool
 site_author:  OpenCDSS
-site_favicon:  'images/OWF-Logo-Favicon-32x32.png'
+site_favicon:  'images/opencdss-favicon.ico'
 copyright:  Copyright State of Colorado
 # Use extra CSS to customize styles, based on theme
 extra_css:

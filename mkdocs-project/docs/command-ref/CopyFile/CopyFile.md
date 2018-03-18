@@ -1,4 +1,4 @@
-# Learn GeoProcessor / Command / CopyFile #
+# Learn TSTool / Command / CopyFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -16,8 +16,13 @@ The `CopyFile` command copies a source file to a destination.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../CopyFile.png">See also the full-size image.</a>
 
-**Need to implement UI.**
+![CopyFile](CopyFile.png)
+
+**<p style="text-align: center;">
+`CopyFile` Command Editor
+</p>**
 
 ## Command Syntax ##
 
@@ -32,14 +37,13 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `SourceFile` | The name of the source file to delete.  Can be specified using `${Property}`. | None - must be specified. |
-| `DestinationFile` | The name of the destination file.  Can be specified using `${Property}`. | None - must be specified. |
-| `IfSourceFileNotFound` | Indicate an action if the source file is not found:  `Ignore` (ignore the missing file and do not warn), `Warn` (generate a warning message), `Fail` (generate a failure message) | `Warn` |
-
+| `InputFile` | The name of the source file to copy.  Can be specified using `${Property}`. | None - must be specified. |
+| `OutputFile` | The name of the output file.  Can be specified using `${Property}`. | None - must be specified. |
+| `IfInputNotFound` | Indicate an action if the source file is not found:  `Ignore` (ignore the missing file and do not warn), `Warn` (generate a warning message), `Fail` (generate a failure message) | `Warn` |
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/CopyFile).
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CopyFile).
 
 ## Troubleshooting ##
 

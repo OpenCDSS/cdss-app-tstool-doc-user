@@ -11,15 +11,21 @@
 
 ## Overview ##
 
-The `EndFor` command ends a block of commands that start with a `For` command. The `For`
-and `EndFor` commands must have the same value for the `Name` parameter to allow the processor to
+The `EndFor` command ends a block of commands that start with a [`For`](../For/For) command.
+The [`For`](../For/For) and `EndFor` commands must have the same value for the `Name` parameter to allow the processor to
 determine the start and end of the block.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../EndFor.png">See also the full-size image.</a>
 
-**Need to implement UI.**
+![EndFor](EndFor.png)
+
+**<p style="text-align: center;">
+`EndFor` Command Editor
+</p>**
+
 
 ## Command Syntax ##
 
@@ -34,12 +40,11 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `Name` | The name that will be matched with the name of an `For` command to indicate the block of commands in the loop. | None - must be specified. |
-
+| `Name` | The name that will be matched with the name of an [`For`](../For/For) command to indicate the block of commands in the loop. | None - must be specified. |
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/EndFor).
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/EndFor).
 
 ## Troubleshooting ##
 

@@ -1,4 +1,4 @@
-# Learn GeoProcessor / Command / RunCommands #
+# Learn TSTool / Command / RunCommands #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -37,8 +37,13 @@ More options to hand off logging from one file to another may be implemented in 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../RunCommands.png">See also the full-size image.</a>
 
-**Need to implement UI.**
+![RunCommands](RunCommands.png)
+
+**<p style="text-align: center;">
+`RunCommands` Command Editor
+</p>**
 
 ## Command Syntax ##
 
@@ -55,10 +60,37 @@ Command Parameters
 | --------------|-----------------|----------------- |
 | `CommandFile` | The command file to run. A path relative to the master command file can be specified.  Can use `${Property}`. | None - must be specified. |
 | `ExpectedStatus` | Used for testing – indicates the expected status from the command, one of: <ul><li>`Unknown`</li><li>`Success`</li><li>`Warning`</li><li>`Failure`</li></ul><br> If this parameter is NOT used, the command log messages from commands that are run will be appended to the `RunCommands` command log.  However, using this parameter will not append those messages – this is used in automated testing to allow a successful test even when there are warning and failure messages. | `Success` |
+| `ShareDatastores` | Indicate whether data stores in the parent should be shared with the child command processor.  Normally this should be done so that databases can be opened once.  Note that opening data stores in the child command file will not make the data stores available in the parent. | `Share` |
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/RunCommands).
+* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunCommands).
+
+The following example illustrates how the `RunCommands` command can be used to test TSTool software (or any implementation of commands).
+First, individual command files are implemented to test specific functionality,
+which will result in warnings if a test fails:
+
+```
+StartLog(LogFile="Results/Test_ReadStateMod_1.TSTool.log")
+NewPatternTimeSeries(NewTSID="MyLoc..MyData.Day",Alias=”TS”,Description="Test data",SetStart="1950-01-01",SetEnd="1951-03-12",Units="CFS",PatternValues="5,10,12,13,75")
+# Uncomment the following command to regenerate the expected results file.
+# WriteStateMod(TSList=AllTS,OutputFile="ExpectedResults\Test_ReadStateMod_1_out.stm")
+ReadStateMod(InputFile="ExpectedResults\Test_ReadStateMod_1_out.stm")
+CompareTimeSeries(Precision=3,Tolerance=".001",DiffFlag="X",WarnIfDifferent=True)
+```
+Next, use the `RunCommands` command to run one or more tests:
+
+```
+StartRegressionTestResultsReport(OutputFile="RunRegressionTest_commands_general.TSTool.out.txt")
+RunCommands(InputFile="..\..\..\commands\general\ReadStateMod\Test_ReadStateMod_1.TSTool")
+```
+
+Each of the above command files should produce expected results, without warnings.
+If any command file unexpectedly produces a warning, a warning will also be visible in TSTool.
+The issue can then be evaluated to determine whether a software or configuration change is necessary.
+See the [StartRegressionTestResultsReport](../StartRegressionTestResultsReport/StartRegressionTestResultsReport)
+command documentation for an explanation of how to disable a command file with `#@enabled False`
+or indicate its expected status for testing (e.g., `@#expectedStatus Warning`).
 
 ## Troubleshooting ##
 

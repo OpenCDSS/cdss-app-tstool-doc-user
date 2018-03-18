@@ -1,4 +1,4 @@
-# Learn GeoProcessor / Command / RemoveFile #
+# Learn TSTool / Command / RemoveFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -17,11 +17,18 @@ The command is used to remove results files before attempting to regenerate the 
 A failure will be generated if the file exists and cannot be removed (e.g., due to file permissions or because
 the file is being used by another process).
 
+Even read-only files may be removed by this command, depending on how the operating system and computer environment handle access permissions.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../RemoveFile.png">See also the full-size image.</a>
 
-**Need to implement UI.**
+![RemoveFile](RemoveFile.png)
+
+**<p style="text-align: center;">
+`RemoveFile` Command Editor
+</p>**
 
 ## Command Syntax ##
 
@@ -34,15 +41,14 @@ RemoveFile(Parameter="Value",...)
 Command Parameters
 </p>**
 
-| **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| --------------|-----------------|----------------- |
-| `SourceFile` | The name of the file to delete.  Can be specified using `${Property}`. | None - must be specified. |
-| `IfSourceFileNotFound` | Indicate an action if the source file is not found:  `Ignore` (ignore the missing file and do not warn), `Warn` (generate a warning message), `Fail` (generate a failure message) | `Warn` |
-
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|--------------|-----------------|----------------- |
+|`InputFile`   | The name of the file to delete.  Can be specified using `${Property}`. | None - must be specified. |
+|`IfNotFound`  | Indicate an action if the source file is not found:  `Ignore` (ignore the missing file and do not warn), `Warn` (generate a warning message), `Fail` (generate a failure message) | `Warn` |
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/RemoveFile).
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/RemoveFile).
 
 ## Troubleshooting ##
 

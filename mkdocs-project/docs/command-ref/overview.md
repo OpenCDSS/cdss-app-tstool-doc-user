@@ -314,7 +314,7 @@ meaning they are not specific to processing data.
 ### General - File Handling ###
 
 * [`AppendFile`](AppendFile/AppendFile)
-* [`CopyFile`](CopyFile/CopyFile)
+* [`CopyFile`](CopyFile/CopyFile) - copy a file to another name
 * [`ListFiles`](ListFiles/ListFiles)
 * [`FTPGet`](FTPGet/FTPGet)
 * [`WebGet`](WebGet/WebGet)
@@ -339,14 +339,14 @@ meaning they are not specific to processing data.
 * [`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty)
 * [`FormatStringProperty`](FormatStringProperty/FormatStringProperty)
 * [`WritePropertiesToFile`](WritePropertiesToFile/WritePropertiesToFile)
-* [`RunCommands`](RunCommands/RunCommands)
+* [`RunCommands`](RunCommands/RunCommands) - run a TSTool command file
 * [`RunProgram`](RunProgram/RunProgram)
 * [`RunPython`](RunPython/RunPython)
 * [`RunDSSUTL`](RunDSSUTL/RunDSSUTL)
 * [`If`](If/If)
 * [`EndIf`](EndIf/EndIf)
 * [`For`](For/For)
-* [`EndFor`](EndFor/EndFor)
+* [`EndFor`](EndFor/EndFor) - end of a For loop block of commands
 * [`Exit`](Exit/Exit)
 * [`Wait`](Wait/Wait)
 * [`SetWorkingDir`](SetWorkingDir/SetWorkingDir)
@@ -358,8 +358,8 @@ meaning they are not specific to processing data.
 
 * [`WriteTimeSeriesPropertiesToFile`](WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile)
 * [`WriteTimeSeriesProperty`](WriteTimeSeriesProperty/WriteTimeSeriesProperty)
-* [`CompareFiles`](CompareFiles/CompareFiles)
-* [`CreateRegressionTestCommandFile`](CreateRegressionTestCommandFile/CreateRegressionTestCommandFile)
+* [`CompareFiles`](CompareFiles/CompareFiles) - compare files to detect if the same/different
+* [`CreateRegressionTestCommandFile`](CreateRegressionTestCommandFile/CreateRegressionTestCommandFile) - create a regression test suite command file
 * [`StartRegressionTestResultsReport`](StartRegressionTestResultsReport/StartRegressionTestResultsReport)
 * [`WriteCommandSummaryToFile`](WriteCommandSummaryToFile/WriteCommandSummaryToFile)
 
@@ -456,10 +456,10 @@ have been migrated to the new online version (this documentation).
 **This table needs to be completed for all commands.**
 
 |**Command**                                                                                                  |**Description**                  |**Documentation Status**|
-|-------------------------------------------------------------------------------------------------------------|---------------------------------|------------------------|
-|[`#` comment](Comment/Comment)                                                                               |Single line comment.             |Not yet migrated        |
-|[`\*` comment block start](CommentBlockStart/CommentBlockStart)                                              |Start of multi-line comment block|Not yet migrated        |
-|[`\*` comment block end](CommentBlockEnd/CommentBlockEnd)                                                    |End of multi-line comment block  |Not yet migrated        |
+|-------------------------------------------------------------------------------------------------------------|---------------------------------|:----------------------:|
+|[`#` comment](Comment/Comment)                                                                               |Single line comment.             |Migrated                |
+|[`\*` comment block start](CommentBlockStart/CommentBlockStart)                                              |Start of multi-line comment block|Migrated                |
+|[`\*` comment block end](CommentBlockEnd/CommentBlockEnd)                                                    |End of multi-line comment block  |Migrated                |
 |[`Add`](Add/Add)                                                                                             |                                 |Not yet migrated        |
 |[`AddConstant`](AddConstant/AddConstant)                                                                     |                                 |Not yet migrated        |
 |[`AdjustExtremes`](AdjustExtremes/AdjustExtremes)                                                            |                                 |Not yet migrated        |
@@ -477,21 +477,21 @@ have been migrated to the new online version (this documentation).
 |[`CheckTimeSeriesStatistic`](CheckTimeSeriesStatistic/CheckTimeSeriesStatistic)                              |                                 |Not yet migrated        |
 |[`CloseDataStore`](CloseDataStore/CloseDataStore)                                                            |                                 |Not yet migrated        |
 |[`CloseExcelWorkbook`](CloseExcelWorkbook/CloseExcelWorkbook)                                                |                                 |Not yet migrated        |
-|[`CompareFiles`](CompareFiles/CompareFiles)                                                                  |                                 |Not yet migrated        |
+|[`CompareFiles`](CompareFiles/CompareFiles)                                                                  |Compare files to detect if the same/different. |Migrated                |
 |[`CompareTables`](CompareTables/CompareTables)                                                               |                                 |Not yet migrated        |
 |[`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries)                                                   |                                 |Not yet migrated        |
 |[`ComputeErrorTimeSeries`](ComputeErrorTimeSeries/CompauteErrorTimeSeries)                                   |                                 |Not yet migrated        |
 |[`ConvertDataUnits`](ConvertDataUnits/ConvertDataUnits)                                                      |                                 |Not yet migrated        |
 |[`Copy`](Copy/Copy)                                                                                          |                                 |Not yet migrated        |
 |[`CopyEnsemble`](CopyEnsemble/CopyEnsemble)                                                                  |                                 |Not yet migrated        |
-|[`CopyFile`](CopyFile/CopyFile)                                                                              |                                 |Not yet migrated        |
+|[`CopyFile`](CopyFile/CopyFile)                                                                              |Copy a file to another name.                   |Migrated                |
 |[`CopyTable`](CopyTable/CopyTable)                                                                           |                                 |Not yet migrated        |
 |[`CopyTimeSeriesPropertiesToTable`](CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable)         |                                 |Not yet migrated        |
 |[`CreateDataStoreDataDictionary`](CreateDataStoreDataDictionary/CreateDataStoreDataDictionary)               |                                 |Not yet migrated        |
 |[`CreateEnsembleFromOneTimeSeries`](CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries)         |                                 |Not yet migrated        |
 |[`CreateFromList`](CreateFromList/CreateFromList)                                                            |                                 |Not yet migrated        |
 |[`CreateNetworkFromTable`](CreateNetworkFromTable/CreateNetworkFromTable)                                    |                                 |Not yet migrated        |
-|[`CreateRegressionTestCommandFile`](CreateRegressionTestCommandFile/CreateRegressionTestCommandFile)         |                                 |Not yet migrated        |
+|[`CreateRegressionTestCommandFile`](CreateRegressionTestCommandFile/CreateRegressionTestCommandFile)         |Create regression test suite command file. |Migrated                |
 |[`CreateTimeSeriesEventTable`](CreateTimeSeriesEventTable/CreateTimeSeriesEventTable)                        |                                 |Not yet migrated        |
 |[`CreateTraces`](CreateTraces/CreateTraces)                                                                  |                                 |Not yet migrated        |
 |[`Cumulate`](Cumulate/Cumulate)                                                                              |                                 |Not yet migrated        |
@@ -502,7 +502,7 @@ have been migrated to the new online version (this documentation).
 |[`DeselectTimeSeries`](DeselectTimeSeries/DeselectTimeSeries)                                                |                                 |Not yet migrated        |
 |[`Disaggregate`](Disaggregate/Disaggregate)                                                                  |                                 |Not yet migrated        |
 |[`Divide`](Divide/Divide)                                                                                    |                                 |Not yet migrated        |
-|[`EndFor`](EndFor/EndFor)                                                                                    |                                 |Not yet migrated        |
+|[`EndFor`](EndFor/EndFor)                                                                                    |End of For loop                  |Migrated                |
 |[`EndIf`](EndIf/EndIf)                                                                                       |                                 |Not yet migrated        |
 |[`Exit`](Exit/Exit)                                                                                          |                                 |Not yet migrated        |
 |[`ExpandTemplateFile`](ExpandTemplateFile/ExpandTemplateFile)                                                |                                 |Not yet migrated        |
@@ -607,7 +607,7 @@ have been migrated to the new online version (this documentation).
 |[`RemoveFile`](RemoveFile/RemoveFile)                                                                        |                                 |Not yet migrated        |
 |[`ReplaceValue`](ReplaceValue/ReplaceValue)                                                                  |                                 |Not yet migrated        |
 |[`ResequenceTimeSeriesData`](ResequenceTimeSeriesData/ResequenceTimeSeriesData)                              |                                 |Not yet migrated        |
-|[`RunCommands`](RunCommands/RunCommands)                                                                     |                                 |Not yet migrated        |
+|[`RunCommands`](RunCommands/RunCommands)                                                                     |Run a TSTool command file.       |Migrated                |
 |[`RunDSSUtil`](RunDSSUtil/RunDSSUtil)                                                                        |                                 |Not yet migrated        |
 |[`RunningAverage`](RunningAverage/RunningAverage)                                                            |                                 |Not yet migrated        |
 |[`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries)                        |                                 |Not yet migrated        |
@@ -653,7 +653,7 @@ have been migrated to the new online version (this documentation).
 |[`SplitTableColumn`](SplitTableColumn/SplitTableColumn)                                                      |                                 |Not yet migrated        |
 |[`SplitTableRow`](SplitTableRow/SplitTableRow)                                                               |                                 |Not yet migrated        |
 |[`StartLog`](StartLog/StartLog)                                                                              |                                 |Not yet migrated        |
-|[`StartRegressionTestResultsReport`](StartRegressionTestResults/ReportStartRegressionTestResultsReport)      |                                 |Not yet migrated        |
+|[`StartRegressionTestResultsReport`](StartRegressionTestResults/ReportStartRegressionTestResultsReport)      |Start the regression test results report file to record output of tests.|Migrated                |
 |[`Subtract`](Subtract/Subtract)                                                                              |                                 |Not yet migrated        |
 |[`TableMath`](TableMath/TableMath)                                                                           |                                 |Not yet migrated        |
 |[`TableTimeSeriesMath`](TableTimeSeriesMath/TableTimeSeriesMath)                                             |                                 |Not yet migrated        |
