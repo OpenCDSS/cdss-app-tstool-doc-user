@@ -1,2 +1,154 @@
-# cdss-app-tstool-doc-user
-TSTool user documentation (MkDocs)
+# cdss-app-tstool-doc-user #
+
+This repository contains the user documentation for Colorado's Decision Support Systems (CDSS) TSTool software.
+
+See the deployed [CDSS / Learn TSTool](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/) documentation.
+
+## TSTool Software ##
+
+The TSTool software is a Java application that automates time series processing:
+
+1. Command-based workflow language.
+2. General commands including as file manipulation, logic controls such as `For` and `If` commands,
+and support for processor properties to allow dynamic scripting.
+3. Time series data processing commands for:
+	1. Reading time series from files, databases, and web services
+	2. Creating time series
+	3. Setting time series data
+	4. Filling time series data
+	5. Manipulating time series data (add, multiply, etc.)
+	6. Analyzing time series
+	7. Models that use time series (e.g., routing)
+	8. Writing time series to files and databases
+	9. Checking time series
+4. Table processing commands:
+	1. Create tables
+	2. Read tables
+	3. Table/time series transfer
+	4. Manipulate tables
+	5. Analyze tables
+	6. Write tables
+5. Other data processing commands:
+	1. Datastores (databases)
+	2. Ensembles (groups of time series)
+	3. Network
+	4. Spatial data
+	5. Spreadsheet
+	6. Template
+	7. Visualization
+6. General commands
+	1. Comments
+	2. File handling
+	3. Logging
+	4. Run control
+	5. Testing
+7. General commands:
+8. Built-in test framework, which is used to run functional tests, suitable for software developers and also
+non-programmers who want to validate processing workflows.
+9. Multiple run modes including batch, command shell interpreter, user interface, HTTP server.
+10. Integration with other tools to leverage the strengths of those tools.
+
+## Repository Contents ##
+
+The repository contains the following:
+
+```text
+.github/              Files specific to GitHub such as issue template.
+.gitattributes        Typical Git configuration file for repository attributes.
+.gitignore            Typical Git configuration file for ignored file list.
+README.md             This file.
+build-util/           Useful scripts to view, build, and deploy documentation.
+mkdocs-project/       Typical MkDocs project for this documentation.
+  mkdocs.yml          MkDocs configuration file for website.
+  docs/               Folder containing source Markdown and other files for website.
+  site/               Folder created by MkDocs containing the static website - ignored using .gitignore.
+
+```
+
+The repository can be cloned into the recommended standard CDSS development folder structure:
+
+```text
+C:\Users\user\                            Windows:  User's files.
+/home/user/                               Linux:  User's files.
+/cygdrive/C/Users/user/                   Cygwin:  User's files.
+  cdss-dev/                               Main development location for CDSS products.
+    TSTool/                               TSTool software development files.
+      git-repos/                          Git repositories for TSTool software.
+        cdss-app-tstool-doc/
+        cdss-app-tstool-doc-user/         Git repository for user documentation.
+        cdss-app-tstool-main/
+        cdss-app-tstool-test/
+        cdss-lib-cdss-java/
+        cdss-lib-common-java/
+        cdss-lib-dmi-hydrobase-java/
+        cdss-lib-dmi-nwsrfs-java/
+        cdss-lib-dmi-riversidedb-java/
+        cdss-lib-dmi-satmonsys-java/
+        cdss-lib-models-java/
+        cdss-lib-processor-ts-java/
+        cdss-util-buildtools/
+```
+
+## Development Environment ##
+
+The development environment for contributing to this documentation requires
+installation of Python, MkDocs, and Material MkDocs theme.
+Python 2 has been used for development.
+See the [OWF / Learn MkDocs](http://learn.openwaterfoundation.org/owf-learn-mkdocs/)
+documentation for information about installing these tools.
+
+Python 3 with MkDocs and Material theme can also be used,
+given that the source documentation files are the same.
+
+## Editing and Viewing Content ##
+
+If the development environment is properly configured, edit and view content as follows:
+
+1. Edit content in the `mkdocs-project/docs` folder and update `mkdocs-project/mkdocs.yml` as appropriate.
+2. Run the `build-util/run-mkdocs-serve-8000.sh` script (Linux) or equivalent.
+3. View content in a web browser using URL `http://localhost:8000`.
+
+## Style Guide ##
+
+The following are general style guide recommendations for this documentation,
+with the goal of keeping formatting simple in favor of focusing on useful content:
+
+* Use the Material MkDocs theme - it looks nice, provides good navigation features, and enables search.
+* Follow MkDocs Markdown standards - use extensions beyond basic Markdown when useful.
+* Show files and program names as `code (tick-surrounded)` formatting.
+* Where a source file can be linked to in GitHub, provide a link so that the most current file can be viewed.
+* Use triple-tick formatting for code blocks, with language specifier.
+* Use ***bold italics*** when referencing UI components such as menus.
+* Use slashes to indicate ***Menu / SubMenu***.
+* Place images in a folder with the same name as the content file and include `-images` at the end of the folder name.
+* Minimize the use of inlined HTML, but use it where Markdown formatting is limited.
+* Although the Material them provides site and page navigation sidebars,
+provide in-line table of contents on pages, where appropriate, to facilitate review of page content.
+
+## License ##
+
+This documentation is licensed under the
+[Creative Commons Attribution 2.0 Generic License](https://creativecommons.org/licenses/by/2.0/)
+
+## Contributing ##
+
+Contribute to the documentation as follows:
+
+1. Use GitHub repository issues to report minor issues.
+Fill out the template issue.
+2. Use GitHub pull requests.
+
+## Maintainers ##
+
+This repository is maintained by the OpenCDSS team.
+
+## Contributors ##
+
+Steve Malers, Open Water Foundation (@smalers) - technical lead
+
+## Release Notes ##
+
+The following release notes indicate the update history for documentation, with GitHub repository issue indicated,
+if applicable (links to issues via README.md are not cleanly supported by GitHub so use the repository issues page to find).
+
+* 2018-03-16 - Initial content.

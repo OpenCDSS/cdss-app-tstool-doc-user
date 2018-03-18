@@ -1,0 +1,66 @@
+# This is the main configuration file for the MkDocs website.
+# Use hash-comments to comment out pages have not been written
+# Reference: http://www.mkdocs.org/user-guide/configuration/
+#
+site_name: Learn CDSS / TSTool
+pages:
+- Home: index.md
+- Introduction: introduction.md
+- Install TSTool: install.md
+- Getting Started: getting-started.md
+- Lesssons:
+  - Overview: lessons/overview.md
+- Command Reference:
+  - Overview: command-ref/overview.md
+#  - Blank: command-ref/Blank/Blank.md
+#  - Comment: command-ref/Comment/Comment.md
+#  - CommentBlockStart: command-ref/CommentBlockStart/CommentBlockStart.md
+#  - CommentBlockEnd: command-ref/CommentBlockEnd/CommentBlockEnd.md
+#  - CompareFiles: command-ref/CompareFiles/CompareFiles.md
+#  - CopyFile: command-ref/CopyFile/CopyFile.md
+#  - Copy: command-ref/Copy/Copy.md
+#  - CreateRegressionTestCommandFile: command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md
+#  - EndFor: command-ref/EndFor/EndFor.md
+#  - EndIf: command-ref/EndIf/EndIf.md
+#  - For: command-ref/For/For.md
+#  - Free: command-ref/Free/Free.md
+#  - If: command-ref/If/If.md
+#  - ListFiles: command-ref/ListFiles/ListFiles.md
+#  - Message: command-ref/Message/Message.md
+#  - ReadFromDelimitedFile: command-ref/ReadFromDelimitedFile/ReadFromDelimitedFile.md
+#  - RemoveFile: command-ref/RemoveFile/RemoveFile.md
+#  - RunCommands: command-ref/RunCommands/RunCommands.md
+#  - RunProgram: command-ref/RunProgram/RunProgram.md
+#  - SetProperty: command-ref/SetProperty/SetProperty.md
+#  - SetPropertyFromTimeSeries: command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md
+#  - StartLog: command-ref/StartLog/StartLog.md
+#  - StartRegressionTestResultsReport: command-ref/StartRegressionTestResultsReport/StartRegressionTestResultsReport.md
+#  - UnknownCommand: command-ref/UnknownCommand/UnknownCommand.md
+#  - UnzipFile: command-ref/UnzipFile/UnzipFile.md
+#  - WebGet: command-ref/WebGet/WebGet.md
+#  - WriteCommandSummaryToFile: command-ref/WriteCommandSummaryToFile/WriteCommandSummaryToFile.md
+#  - WriteTimeSeriesPropertiesToFile: command-ref/WriteGeoLayerPropertiesToFile/WriteGeoLayerPropertiesToFile.md
+#  - WriteDelimitedFile: command-ref/WriteGeoLayerToDelimitedFile/WriteGeoLayerToDelimitedFile.md
+#  - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
+- Datastore Reference:
+  - Overview: datastore-ref/overview.md
+#  - Esri File Geodatabase: spatial-data-format-ref/EsriFileGeodatabase/EsriFileGeodatabase.md
+- Best Practices:
+  - Time Series Identifiers: best-practices/ts-identifiers.md
+- Resources: resources.md
+- Troubleshooting: troubleshooting.md
+# ------- configuration properties ---------------
+# Use Material theme
+# - installation notes:  https://github.com/squidfunk/mkdocs-material
+theme: material
+# Don't enable the repo URL because irritating edit icons are shown when editing really isn't allowed
+#repo_url:  https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-doc-user
+site_description:  CDSS Learn TSTool
+site_author:  OpenCDSS
+site_favicon:  'images/OWF-Logo-Favicon-32x32.png'
+copyright:  Copyright State of Colorado
+# Use extra CSS to customize styles, based on theme
+extra_css:
+  - 'css/extra-material-theme.css'
+markdown_extensions:
+  - footnotes
