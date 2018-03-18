@@ -1,4 +1,4 @@
-# Learn GeoProcessor / Command / WriteCommandSummaryToFile #
+# Learn TSTool / Command / WriteCommandSummaryToFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -14,6 +14,9 @@
 The `WriteCommandSummaryToFile` command writes command logging messages to a summary file.
 This is useful to review automated tests and to troubleshoot tests.
 Currently only HTML format output file is supported.
+
+**This command is currently not available for TSTool but has been prototyped in the GeoProcessor.
+A command will be implemented in TSTool to help with automated testing.**
 
 ## Command Editor ##
 
@@ -38,7 +41,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/WriteCommandSummaryToFile).
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteCommandSummaryToFile).
 
 ## Troubleshooting ##
 

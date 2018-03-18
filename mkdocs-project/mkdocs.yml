@@ -12,36 +12,39 @@ pages:
   - Overview: lessons/overview.md
 - Command Reference:
   - Overview: command-ref/overview.md
-#  - Blank: command-ref/Blank/Blank.md
   - '# Comment': command-ref/Comment/Comment.md
   - '/* Comment Start': command-ref/CommentBlockStart/CommentBlockStart.md
   - '*/ Comment End': command-ref/CommentBlockEnd/CommentBlockEnd.md
   - CompareFiles: command-ref/CompareFiles/CompareFiles.md
   - CopyFile: command-ref/CopyFile/CopyFile.md
-#  - Copy: command-ref/Copy/Copy.md
+  - Copy: command-ref/Copy/Copy.md
   - CreateRegressionTestCommandFile: command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md
+  - Empty: command-ref/Empty/Empty.md
   - EndFor: command-ref/EndFor/EndFor.md
   - EndIf: command-ref/EndIf/EndIf.md
-#  - For: command-ref/For/For.md
-#  - Free: command-ref/Free/Free.md
-#  - If: command-ref/If/If.md
-#  - ListFiles: command-ref/ListFiles/ListFiles.md
-#  - Message: command-ref/Message/Message.md
+  - Exit: command-ref/Exit/Exit.md
+  - For: command-ref/For/For.md
+  - Free: command-ref/Free/Free.md
+  - If: command-ref/If/If.md
+  - ListFiles: command-ref/ListFiles/ListFiles.md
+  - Message: command-ref/Message/Message.md
 #  - ReadFromDelimitedFile: command-ref/ReadFromDelimitedFile/ReadFromDelimitedFile.md
   - RemoveFile: command-ref/RemoveFile/RemoveFile.md
   - RunCommands: command-ref/RunCommands/RunCommands.md
-#  - RunProgram: command-ref/RunProgram/RunProgram.md
-#  - SetProperty: command-ref/SetProperty/SetProperty.md
-#  - SetPropertyFromTimeSeries: command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md
-#  - StartLog: command-ref/StartLog/StartLog.md
+  - RunProgram: command-ref/RunProgram/RunProgram.md
+  - SetProperty: command-ref/SetProperty/SetProperty.md
+  - SetPropertyFromTimeSeries: command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md
+  - SetTimeSeriesProperty: command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md
+  - StartLog: command-ref/StartLog/StartLog.md
   - StartRegressionTestResultsReport: command-ref/StartRegressionTestResultsReport/StartRegressionTestResultsReport.md
-#  - UnknownCommand: command-ref/UnknownCommand/UnknownCommand.md
-#  - UnzipFile: command-ref/UnzipFile/UnzipFile.md
-#  - WebGet: command-ref/WebGet/WebGet.md
-#  - WriteCommandSummaryToFile: command-ref/WriteCommandSummaryToFile/WriteCommandSummaryToFile.md
-#  - WriteTimeSeriesPropertiesToFile: command-ref/WriteGeoLayerPropertiesToFile/WriteGeoLayerPropertiesToFile.md
-#  - WriteDelimitedFile: command-ref/WriteGeoLayerToDelimitedFile/WriteGeoLayerToDelimitedFile.md
-#  - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
+  - UnknownCommand: command-ref/UnknownCommand/UnknownCommand.md
+  - UnzipFile: command-ref/UnzipFile/UnzipFile.md
+  - WebGet: command-ref/WebGet/WebGet.md
+  - WriteCommandSummaryToFile: command-ref/WriteCommandSummaryToFile/WriteCommandSummaryToFile.md
+  - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
+  - WriteTimeSeriesPropertiesToFile: command-ref/WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile.md
+#  - WriteDelimitedFile: command-ref/WriteDelimitedFile/WriteDelimitedFile.md
+  - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
 - Datastore Reference:
   - Overview: datastore-ref/overview.md
 #  - Esri File Geodatabase: spatial-data-format-ref/EsriFileGeodatabase/EsriFileGeodatabase.md
@@ -54,7 +57,7 @@ pages:
 # - installation notes:  https://github.com/squidfunk/mkdocs-material
 theme: material
 # Don't enable the repo URL because irritating edit icons are shown when editing really isn't allowed
-#repo_url:  https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-doc-user
+#repo_url:  https://github.com/OpenWaterFoundation/cdss-app-tstool-doc-user
 site_description:  CDSS Learn TSTool
 site_author:  OpenCDSS
 site_favicon:  'images/opencdss-favicon.ico'

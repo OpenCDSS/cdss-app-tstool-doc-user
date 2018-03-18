@@ -1,4 +1,4 @@
-# Learn GeoProcessor / Command / UnknownCommand #
+# Learn TSTool / Command / UnknownCommand #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -16,8 +16,13 @@ The `UnknownCommand` is used to store commands that are not recognized as valid 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../UnknownCommand.png">See also the full-size image.</a>
 
-**Need to implement UI.**
+![UnknownCommand](UnknownCommand.png)
+
+**<p style="text-align: center;">
+`UnknownCommand` Command Editor
+</p>**
 
 ## Command Syntax ##
 
@@ -25,10 +30,10 @@ Unrecognized commands in command files are converted to `UnknownCommand` command
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/UnknownCommand).
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/UnknownCommand).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [BlankCommand](../BlankCommand/BlankCommand) command - used for commands that only contain whitespace
+* [Empty](../Empty/Empty) command - used for commands that only contain an empty line

@@ -1,4 +1,4 @@
-# Learn GeoProcessor / Command / WriteGeoLayerPropertiesToFile #
+# Learn TSTool / Command / WriteTimeSeriesPropertiesToFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -11,12 +11,11 @@
 
 ## Overview ##
 
-The `WriteGeoLayerPropertiesToFile` command writes GeoLayer properties to a file.
-Examples of using the command include:
-
-* creating tests to verify that properties are being set
-* passing information from the GeoProcessor to another program
-* storing persistent information for later use, such as the date/time that data were last downloaded from a web service
+The `WriteTimeSeriesPropertiesToFile` command writes the value of time series properties to a file.
+This command should not be confused with the [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile) command,
+which writes processor properties.
+This command is useful for testing whether properties are being set.
+It can also be used to pass information from TSTool to another program.  
 
 A number of property formats are supported as listed in the following table.
 
@@ -33,34 +32,43 @@ Property File Formats
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../WriteTimeSeriesPropertiesToFile.png">See also the full-size image.</a>
 
-**Need to implement UI.**
+![WriteTimeSeriesPropertiesToFile](WriteTimeSeriesPropertiesToFile.png)
+
+**<p style="text-align: center;">
+`WriteTimeSeriesPropertiesToFile` Command Editor
+</p>**
 
 ## Command Syntax ##
 
 The command syntax is as follows:
 
 ```text
-WriteGeoLayerPropertiesToFile(Parameter="Value",...)
+WriteTimeSeriesPropertiesToFile(Parameter="Value",...)
 ```
 **<p style="text-align: center;">
 Command Parameters
 </p>**
 
-| **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| --------------------|-----------------|----------------- |
-| `GeoLayerID`        | The GeoLayer identifier, can use `${Property}`. | None - must be specified. |
-| `OutputFile`        | The property file to write, as an absolute path or relative to the command file, can use `${Property}`. | None - must be specified. |
-| `IncludeProperties` | The names of properties to write, separated by commas.  The `*` wildcard can be used to indicate multiple properties. | If not specified, all processor properties will be written. |
-| `WriteMode`         | Indicates how the file should be written:<ul><li>`Append` – append the properties to the file without checking for matches (create the file if it does not exist).</li><li>`Overwrite` – overwrite the properties file.</ul> | `Overwrite` |
+| **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| --------------|-----------------|----------------- |
+| `TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTSTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+| `TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
+| `EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
+|`OutputFile`<br>**required**| The property file to write, as an absolute path or relative to the command file, can use `${Property}`. | None - must be specified. |
+|`IncludeProperties` | The names of properties to write, separated by commas.  The `*` wildcard can be used to indicate multiple properties. | If not specified, all processor properties will be written.|
+|`WriteMode`|Indicates how the file should be written:<br><ul><li>`Append` – append the properties to the file without checking for matches (create the file if it does not exist)</li><li>`Overwrite` – overwrite the properties file</li><li>`Update` – update the properties in the file by first checking for matching property names (which will be updated) and then appending unmatched properties (not yet implemented)</li></ul>|`Overwrite`|
+|`FileFormat`|Format of the properties file (see descriptions in the above **Property File Formats** table):<ul><li>`NameValue`</li><li>`NameTypeValue`</li><li>`NameTypeValuePython`|`NameValue`|
+|`SortOrder`|The order to sort properties:<br><ul><li>`Ascending`</li><li>`Descending`</li><li>`None`</li></ul>|None – order depends on order in processor.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/WriteGeoLayerPropertiesToFile).
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WritePropertiesToFile).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [SetGeoLayerProperty](../SetGeoLayerProperty/SetGeoLayerProperty) command
-* [SetPropertyFromGeoLayer](../SetPropertyFromGeoLayer/SetPropertyFromGeoLayer) command
+* [SetProperty](../SetProperty/SetProperty) command
+* [SetPropertyFromTimeSeries](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) command

@@ -1,4 +1,4 @@
-# Learn GeoProcessor / Command / WebGet #
+# Learn TSTool / Command / WebGet #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -11,16 +11,28 @@
 
 ## Overview ##
 
-The `WebGet` command downloads a file or other web resource from a URL source. Common uses of this command are:
-
-* Download data files
-* Query web services 
+The `WebGet` command retrieves content from a website and writes the content to a local file.
+The transfer occurs using binary characters and the local copy is the same as that shown by
+***View / Source*** (or ***View / Page Source***) in the web browser.
+This command is useful for mining time series data and other content from data provider web sites.
+The local file can then be processed with additional commands, for example 
+[`ReadFromDelimitedFile`](../ReadFromDelimitedFile/ReadFromDelimitedFile) if the content is
+comma-separated-value.
+	
+Extraneous content (such as HTML markup around text) and inconsistencies in newline characters
+(`CRLF`=`\r\n` for windows and `LF`=`\n` on other systems) may lead to some issues in processing the content.
+Additional command capabilities may be implemented to help handle these issues.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../WebGet.png">See also the full-size image.</a>
 
-**Need to implement UI.**
+![WebGet](WebGet.png)
+
+**<p style="text-align: center;">
+`WebGet` Command Editor
+</p>**
 
 ## Command Syntax ##
 
@@ -35,43 +47,18 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `URL` <br>  **_required_**| The URL of the resource to download. [`${Property}` syntax](../../introduction/#geoprocessor-properties-property) is recognized.| None - must be specified. |
-| `OutputFile` <br> *optional*| The output file path (relative or absolute). [`${Property}` syntax](../../introduction/#geoprocessor-properties-property) is recognized. [Formatting character (%f)](../../introduction/#geolayer-property-format-specifiers) is recognized. If already existing, the output file will be overwritten.| Same filename as source. Saved to the parent folder of the `.gp` workflow. |
+| `URI`<br>**required**| The Uniform Resource Identifier (URI) for the content to be retrieved.  This is often also referred to as the Uniform Resource Locator (URL).  Global properties can be used with the `${Property}` syntax.| None - must be specified.|
+| `LocalFile` | The local file in which to save the content.  Global properties can be used with the `${Property}` syntax.| Output file will not be written.|
+| `OutputProperty` | Name of the processor property to set the retrieved contents.  For example, a snippet of data can be set as a property for processing by other commands, in which case the content will be accessed using `${Property}` notation.| Content will not be set in a property.|
 
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/WebGet).
-
-### Example 1: Using the `%f` Formatting Character in the `OutputFile` Parameter###
-
-```
-WebGet(URL = "https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/2015_fire_data/Florida/Mystery_Hammock_Wf/fl_mystery_hammock_wf_20150817_0000_dd83.cpg", OutputFile = "ExampleOutputFolder/NewFilename")
-WebGet(URL = "https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/2015_fire_data/Florida/Mystery_Hammock_Wf/fl_mystery_hammock_wf_20150817_0000_dd83.cpg", OutputFile = "ExampleOutputFolder/%f")
-
-```
-
-The two commands download the same [data file](https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/2015_fire_data/Florida/Mystery_Hammock_Wf/fl_mystery_hammock_wf_20150817_0000_dd83.cpg). 
-
-- The first command specifies a different filename using the `OutputFile` parameter. The name of the downloaded file is renamed to the specified filename. 
-- The second command utilizes the `%f` [formatting character](../../introduction/#geolayer-property-format-specifiers) in the `OutputFile` parameter. The name of the downloaded file is the same as the URL filename.
-
-
-After running the commands, the following files are downloaded to the `ExampleOutputFolder` folder. 
-
-**<p style="text-align: left;">
-ExampleOutputFolder
-</p>**
-
-|Filename|Command Responsible for Output|
-|------|---|
-|NewFilename.cpg|First command|
-|fl_mystery_hammock_wf_20150817_0000_dd83.cpg|Second command|
-
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WebGet).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-- The files are downloaded using the Python [Requests](http://docs.python-requests.org/en/master/) library.
 * [ListFiles](../ListFiles/ListFiles) command
+* [UnzipFile](../UnzipFile/UnzipFile) command

@@ -41,7 +41,7 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `OutputFile` | The regression results report file to write, as an absolute path or relative to the command file.  Can use `${Property}`. | None - must be specified. |
+| `OutputFile`<br>**required** | The regression results report file to write, as an absolute path or relative to the command file.  Can use `${Property}`. | None - must be specified. |
 | `TestResultsTableID` | The identifier of an output table to be created.  The table will be created. | No table will be output. |
 
 ## Examples ##

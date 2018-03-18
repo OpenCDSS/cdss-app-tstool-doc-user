@@ -1,4 +1,4 @@
-# Learn GeoProcessor / Command / UnzipFile #
+# Learn TSTool / Command / UnzipFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -11,16 +11,19 @@
 
 ## Overview ##
 
-The `UnzipFile` command unzips a compressed file. 
-
-* The compressed file can contain one or more files and/or folders. 
-* Can unzip numerous types of [compressed files](https://en.wikipedia.org/wiki/List_of_archive_formats) (not specific to `.zip` files.)
+The `UnzipFile` command unzips the contents of a zip (`*.zip`) or gzip (`*.gz`) file, saving to a specified output folder.
+Existing files will be overwritten.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../UnzipFile.png">See also the full-size image.</a>
 
-**Need to implement UI.**
+![UnzipFile](UnzipFile.png)
+
+**<p style="text-align: center;">
+`UnzipFile` Command Editor
+</p>**
 
 ## Command Syntax ##
 
@@ -33,78 +36,17 @@ UnzipFile(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `File` <br>  **_required_**| The file to be unzipped (relative or absolute path). [`${Property}` syntax](../../introduction/#geoprocessor-properties-property) is recognized.| None - must be specified. |
-| `FileType` <br>  *optional*|The file format of the input `File`. The following file formats are currently accepted. <br><br> `TAR`: a [.tar file](https://en.wikipedia.org/wiki/Tar_(computing)). <br> `ZIP`: A [.zip file](https://en.wikipedia.org/wiki/Zip_(file_format)).| Determined from the `File`'s extension. |
-|`OutputFolder`  <br>  *optional*|The name of the destination folder. The extracted files are saved here. [`${Property}` syntax](../../introduction/#geoprocessor-properties-property) is recognized.|The parent folder of the `File`.|
-|`DeleteFile` <br>  *optional*|Boolean. <br><br> If `True`, the compressed file is deleted after the extraction. <br> If `False`, the compressed file remains after the extraction. |`False`|
-
+|`InputFile`<br>**required**|The name of the file to unzip.  Can be specified using processor `${Property}`. | None – must be specified.|
+|`OutputFile` | The name of the output file, when the zip file contains a single file.  Can be specified using processor `${Property}`. | **This parameter is not enabled.**  Output file is determined from the zip file contents. |
+|`OutputFolder` | The name of the output folder, to receive the contents of the zip file.  Can be specified using processor `${Property}`.| The output folder will be created if it does not already exist.i The default is the same folder as the input file.|
+|`IfNotFound` | Indicate action if the input file is not found, one of:<br><br><ul><li>`Ignore` – ignore the missing file (do not warn).</li><li>`Warn` – generate a warning (use this if the file truly is expected and a missing file is a cause for concern).</li><li>`Fail` – generate a failure (use this if the file truly is expected and a missing file is a cause for concern).</li></ul> | `Warn`|
+|`ListInResults` | Indicate whether to list unzipped output files in results (`True`) or not (`False`).  It may be necessary to avoid listing for zip files with many entries. | `True` |
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/UnzipFile).
-
-The following folder, `ExampleFolder`[^1], and its contents are used for the examples. 
-
-[^1]: *The `ExampleFolder` is not an actual existing folder. It is used in this documentation to explain how the `UnzipFile` command interacts with similar, existing folders on your local machine.*
-
-**<p style="text-align: left;">
-ExampleFolder
-</p>**
-
-|Name|Folder/File|
-| ---- |---|
-| ExampleFile.zip |File|
-| ExampleSubFolder| Folder|
-
-**<p style="text-align: left;">
-Archived contents of ExampleFile.zip
-</p>**
-
-|Files|
-|-|
-|ExampleFile1.geojson|
-|ExampleFile2.txt|
-
-### Example 1: Unzip a Zip File ###
-
-```
-UnzipFile(File = "ExampleFolder/ExampleFile.zip")
-```
-
-After running the command, the following files are written to the `ExampleFolder`. Note that, by default, the original zipped file remains after the extraction. 
-
-|ExampleFolder|
-|------|
-|ExampleFile1.geojson|
-|ExampleFile2.txt|
-|ExampleFile.zip |
-|ExampleSubFolder|
-
-
-### Example 2: Unzip a Zip File to a Different Folder ###
-
-```
-UnzipFile(File = "ExampleFolder/ExampleFile.zip", OutputFolder = "ExampleFolder/ExampleSubFolder")
-```
-
-After running the command, the following files are written to the `ExampleFolder`. 
-
-|ExampleFolder|
-|------|
-| ExampleFile.zip |
-| ExampleSubFolder|
-
-After running the command, the following files are written to the `ExampleSubFolder`. 
-
-|ExampleSubFolder|
-|-----|
-|ExampleFile1.geojson|
-|ExampleFile2.txt|
-
-
-
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/UnzipFile).
 
 ## Troubleshooting ##
 

@@ -56,8 +56,8 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `InputFile1` | The name of the first file to read for comparison.  Can be specified using `${Property}`. | None - must be specified. |
-| `InputFile2` | The name of the second file to read for comparison.  Can be specified using `${Property}`. | None - must be specified. |
+| `InputFile1`<br>**required** | The name of the first file to read for comparison.  Can be specified using `${Property}`. | None - must be specified. |
+| `InputFile2`<br>**required** | The name of the second file to read for comparison.  Can be specified using `${Property}`. | None - must be specified. |
 | `CommentLineChar` | The character(s) that if found at the start of a line indicate comment lines. Comment lines are ignored in the comparison because they typically may include information such as date/time that changes even if the remainder of the file contents is the same. | `#` |
 | `MatchCase` | If `True`, lines must match exactly.  If `False`, case is ignored for the comparison. | `True` |
 | `IgnoreWhitespace` | If `True`, then each line is trimmed to remove leading and trailing whitespace characters (spaces, tabs, etc.) before doing the comparison.  If `False`, then whitespace is retained for the comparison. | `False` |

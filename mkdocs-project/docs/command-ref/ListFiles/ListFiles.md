@@ -1,4 +1,4 @@
-# Learn GeoProcessor / Command / ListFiles #
+# Learn TSTool / Command / ListFiles #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -11,17 +11,25 @@
 
 ## Overview ##
 
-The `ListFiles` command lists the files and folders within a folder or a URL. 
-
-* Can specify to list only files, only folders or  both files and folders. 
-* Output is a list assigned to a [GeoProcessor property](../../introduction/#geoprocessor-properties-property). Requires a property name. 
-* Can specify [glob-style patterns](https://en.wikipedia.org/wiki/Glob_(programming)) to include or exclude items within the output list.
+The `ListFiles` command lists files in a folder and saves the list to a table.
+The table can then be used to drive processes, such as looping with [`For`](../For/For) command
+and working with a template.
+The resulting table will include the following columns:
+	
+* `FileName` – name of the file without leading path
+* `RelativePath` – name of the file as a relative path (relative to the command file working directory)
+* `AbsolutePath` – name of the file as the full absolute path
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../ListFiles.png">See also the full-size image.</a>
 
-**Need to implement UI.**
+![ListFiles](ListFiles.png)
+
+**<p style="text-align: center;">
+`ListFiles` Command Editor Showing Conditions Test
+</p>**
 
 ## Command Syntax ##
 
@@ -36,22 +44,18 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`Folder` <br>  *see Default*|The path of the folder of interest (relative or absolute). | **_Required_** if `URL` parameter is not specified. |
-|`URL` <br> *see Default*| The URL of interest. | **_Required_** if `Folder` parameter is not specified. |
-|`ListProperty`<br> **_required_**|A [property](../../introduction/#geoprocessor-properties-property) name to hold the output list.|None - must be specified.|
-|`IncludePatterns`<br> *optional*|A list of comma-separated [glob-style patterns](https://en.wikipedia.org/wiki/Glob_(programming)) that filter which items to include in the output list. |`*` <br> All files/folders are included.|
-|`ExcludePatterns`<br> *optional*|A list of comma-separated [glob-style patterns](https://en.wikipedia.org/wiki/Glob_(programming)) that filter which items to exclude in the output list.|`''` <br>No files/folders are excluded.|
-|`ListFiles`<br> *optional*|Boolean <br><br> If `True`, files will be listed. <br> If `False`, files will *not* be listed.|`True`|
-|`ListFolders`<br> *optional*|Boolean <br><br> If `True`, folders will be listed. <br> If `False`, folders will *not* be listed.|`True`|
-|`IfPropertyExists`<br> *optional*|The action that occurs if the `ListProperty` is already an existing property. <br><br> `Replace` : The existing property value is overwritten with the output list. No warning is logged.<br><br> `ReplaceAndWarn`: The existing property value is overwritten with the output list. A warning is logged. <br><br> `Warn` : The existing property keeps its original value. A warning is logged. <br><br> `Fail` : The existing property keeps its original value. A fail message is logged. | `Replace` | 
-
+|`Folder`<br>**required**|The path of the folder for which to list files. | None - must be specified. |
+|`IncludeFiles`|A pattern indicating files to include from Folder.  Use `*` in the filename for a wildcard.| All files will be included.|
+|`ExcludeFiles`|A pattern indicating files to exclude from Folder, checked after the `IncludeFiles` parameter is checked.  Use `*` in the filename for a wildcard.| No files will be excluded.|
+|`TableID`<br>**required**|The identifier for the table to output the list.  If the table does not exist, it will be created.  See also `Append`.|None - must be specified.|
+|`Append`|Indicate whether list output should be appended to the table.  This allows multiple `ListFiles` commands to be used to create a larger list.|`False` - the table will contain only the current output list.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-test/tree/master/test/commands/ListFiles).
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ListFiles).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-- The source content of the URL is read using the the Python [urllib2](https://docs.python.org/2/library/urllib2.html) library.
+* [`For`](../For/For) command
