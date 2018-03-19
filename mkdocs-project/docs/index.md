@@ -5,12 +5,16 @@ Colorado's Decision Support Systems (CDSS) TSTool software,
 which automates processing of time series, tabular, and other data.
 
 **The TSTool documentation has in the past been maintained in Microsoft Word and PDF
-but is being migrated to Markdown using MkDocs.
+and is being migrated to Markdown/MkDocs in order to provide a better user experience.
+The general organization of the documentation will remain the same; however,
+some consolidation is expected beause linked documentation presents opportunities to
+remove duplicate information.
 Due to the significant amount of documentation, this process will take some time.
 All documentation is listed in this web version, and notes are provided to indicate the status of
 the migration.  If necessary, refer to the PDF version that is distributed with software.**
 
 * [How to Use this Documentation](#how-to-use-this-documentation)
+* [Acknowledgements](#acknowledgements)
 * [Colorado's Decision Support Systems](#colorados-decision-support-systems)
 * [About the Open Water Foundation](#about-the-open-water-foundation)
 * [License](#license)
@@ -31,6 +35,10 @@ Use the navigation menu provided on the right side of the page to navigate the d
 The navigation menus may not be displayed if the web browser window is narrow or if viewing on a mobile device,
 in which case look for a menu icon to access the menus.
 Use the search feature to find documentation matching the search words.
+
+## Acknowledgements
+
+**Need to insert here "Chapter 1 Acknowledgements" from TSTool Word documentation**
 
 ## Colorado's Decision Support Systems ##
 
@@ -53,7 +61,7 @@ Since the initial development, TSTool has been significantly enhanced to use add
 add commands with new functionality, and add new functionality to facilitate interactive
 and automated data processing.
 
-In late 2016, the Open Water Foundation began the effort to move StateMod and other CDSS software to open source licensing
+In late 2016, the Open Water Foundation began the effort to move TSTool and other CDSS software to open source licensing
 and establish open source software projects, referred to as "OpenCDSS".
 The OpenCDSS project is resulting in a significant evolution in how CDSS software development occurs,
 such as implementing version control with Git/GitHub and modernizing the development environment and documentation.

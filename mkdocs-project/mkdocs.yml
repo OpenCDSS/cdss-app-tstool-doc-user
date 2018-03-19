@@ -5,12 +5,22 @@
 site_name: Learn CDSS / TSTool
 pages:
 - Home: index.md
-- Introduction: introduction.md
-- Install TSTool: install.md
-- Getting Started: getting-started.md
-- Lesssons:
+- 1 - Introduction: introduction.md
+- 2 - Getting Started: getting-started.md
+- 3 - Commands: commands.md
+- 4 - Tools: tools.md
+- 5 - Examples of Use: examples.md
+- 6 - Quality Control: quality-control.md
+- 7 - Spatial Data Integration: spatial.md
+- 8 - Spreadsheet Integration: spreadsheet.md
+- 9 - Model Framework Integration: modeling.md
+- 10 - Troubleshooting: troubleshooting.md
+- 11 - Best Practices:
+  - Time Series Identifiers: best-practices/ts-identifiers.md
+- 12 - Resources: resources.md
+- Lessons:
   - Overview: lessons/overview.md
-- Command Reference:
+- Reference - Commands:
   - Overview: command-ref/overview.md
   - '# Comment': command-ref/Comment/Comment.md
   - '/* Comment Start': command-ref/CommentBlockStart/CommentBlockStart.md
@@ -45,13 +55,12 @@ pages:
   - WriteTimeSeriesPropertiesToFile: command-ref/WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile.md
 #  - WriteDelimitedFile: command-ref/WriteDelimitedFile/WriteDelimitedFile.md
   - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
-- Datastore Reference:
+- Reference - Datastores:
   - Overview: datastore-ref/overview.md
 #  - Esri File Geodatabase: spatial-data-format-ref/EsriFileGeodatabase/EsriFileGeodatabase.md
-- Best Practices:
-  - Time Series Identifiers: best-practices/ts-identifiers.md
-- Resources: resources.md
-- Troubleshooting: troubleshooting.md
+- 'Appendix - Install TSTool': install.md
+- 'Appendix - TSView Time Series Viewing Tools': tsview.md
+- 'Appendix - GeoView Mapping Tools': geoview.md
 # ------- configuration properties ---------------
 # Use Material theme
 # - installation notes:  https://github.com/squidfunk/mkdocs-material

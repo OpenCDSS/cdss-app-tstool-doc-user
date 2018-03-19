@@ -5,8 +5,9 @@ listed in groups consistent with the TSTool software menus.
 If necessary, use the documentation ***Search*** tool or the ***Find*** tool for the
 web browser to find a specific command or topic.
 
-**Reference documentation for commands is being transferred from
-the original Word versions.
+**Reference documentation for commands is being transferred from the original Word versions.
+The current Word "Chapter 4 - Commmands" can likely merge into this page since content
+is just screen shots of menus and overview comments about command groups.
 Refer to the PDF documentation distributed with TSTool and available online if
 documentation is not available below.
 Commands that don't have a description after the name do not have documentation included here.**
