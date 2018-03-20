@@ -314,20 +314,20 @@ meaning they are not specific to processing data.
 
 ### General - File Handling ###
 
-* [`AppendFile`](AppendFile/AppendFile)
+* [`AppendFile`](AppendFile/AppendFile) - append a file to another file
 * [`CopyFile`](CopyFile/CopyFile) - copy a file to another name
 * [`ListFiles`](ListFiles/ListFiles) - list files in a folder
-* [`FTPGet`](FTPGet/FTPGet)
+* [`FTPGet`](FTPGet/FTPGet) - download a file from an FTP site
 * [`WebGet`](WebGet/WebGet) - download a file from a URL
 * [`RemoveFile`](RemoveFile/RemoveFile) - remove a file
 * [`UnzipFile`](UnzipFile/UnzipFile) - unzip the contents of a zip file
-* [`PrintTextFile`](PrintTextFile/PrintTextFile)
+* [`PrintTextFile`](PrintTextFile/PrintTextFile) - print a text file to printer
 
 ### General - Logging and Messaging ###
 
 * [`Message`](Message/Message) - output a message to the log file
-* [`SetDebugLevel`](SetDebugLevel/SetDebugLevel)
-* [`SetWarningLevel`](SetWarningLevel/SetWarningLevel)
+* [`SetDebugLevel`](SetDebugLevel/SetDebugLevel) - set the debug level for logging
+* [`SetWarningLevel`](SetWarningLevel/SetWarningLevel) - set the warning level for logging
 * [`StartLog`](StartLog/StartLog) - (re)start the log file
 * [`SendEmailMessage`](SendEmailMessage/SendEmailMessage)
 
@@ -357,10 +357,10 @@ meaning they are not specific to processing data.
 
 ### General - Test Processing ###
 
-* [`WriteTimeSeriesPropertiesToFile`](WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile)
+* [`WriteTimeSeriesPropertiesToFile`](WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile) - write time series properites to a file
 * [`CompareFiles`](CompareFiles/CompareFiles) - compare files to detect if the same/different
 * [`CreateRegressionTestCommandFile`](CreateRegressionTestCommandFile/CreateRegressionTestCommandFile) - create a regression test suite command file
-* [`StartRegressionTestResultsReport`](StartRegressionTestResultsReport/StartRegressionTestResultsReport)
+* [`StartRegressionTestResultsReport`](StartRegressionTestResultsReport/StartRegressionTestResultsReport) - start the regression test results report file to record output of tests
 * [`WriteCommandSummaryToFile`](WriteCommandSummaryToFile/WriteCommandSummaryToFile) - write summary of command log to a file
 
 ## Deprecated Commands ##
@@ -465,7 +465,7 @@ have been migrated to the new online version (this documentation).
 |[`AdjustExtremes`](AdjustExtremes/AdjustExtremes)                                                            |                                 |Not yet migrated        |
 |[`AnalyzeNetworkPointFlow`](AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow)                                 |                                 |Not yet migrated        |
 |[`AnalyzePattern`](AnalyzePattern/AnalyzePattern)                                                            |                                 |Not yet migrated        |
-|[`AppendFile`](AppendFile/AppendFile)                                                                        |                                 |Not yet migrated        |
+|[`AppendFile`](AppendFile/AppendFile)                                                                        |Append a file to another file.   |Migrated                |
 |[`AppendTable`](AppendTable/AppendTable)                                                                     |                                 |Not yet migrated        |
 |[`ARMA`](ARMA/ARMA)                                                                                          |                                 |Not yet migrated        |
 |[`Blend`](Blend/Blend)                                                                                       |                                 |Not yet migrated        |
@@ -477,7 +477,7 @@ have been migrated to the new online version (this documentation).
 |[`CheckTimeSeriesStatistic`](CheckTimeSeriesStatistic/CheckTimeSeriesStatistic)                              |                                 |Not yet migrated        |
 |[`CloseDataStore`](CloseDataStore/CloseDataStore)                                                            |                                 |Not yet migrated        |
 |[`CloseExcelWorkbook`](CloseExcelWorkbook/CloseExcelWorkbook)                                                |                                 |Not yet migrated        |
-|[`CompareFiles`](CompareFiles/CompareFiles)                                                                  |Compare files to detect if the same/different. |Migrated                |
+|[`CompareFiles`](CompareFiles/CompareFiles)                                                                  |Compare files to detect if they are the same/different. |Migrated                |
 |[`CompareTables`](CompareTables/CompareTables)                                                               |                                 |Not yet migrated        |
 |[`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries)                                                   |                                 |Not yet migrated        |
 |[`ComputeErrorTimeSeries`](ComputeErrorTimeSeries/CompauteErrorTimeSeries)                                   |                                 |Not yet migrated        |
@@ -530,7 +530,7 @@ have been migrated to the new online version (this documentation).
 |[`FormatTableString`](FormatTableString/FormatTableString)                                                   |                                 |Not yet migrated        |
 |[`Free`](Free/Free)                                                                                          |Free memory used by time series. |Migrated                |
 |[`FreeTable`](FreeTable/FreeTable)                                                                           |                                 |Not yet migrated        |
-|[`FTPGet`](FTPGet/FTPGet)                                                                                    |                                 |Not yet migrated        |
+|[`FTPGet`](FTPGet/FTPGet)                                                                                    |Download a file from an FTP site.|Migrated                |
 |[`If`](If/If)                                                                                                |Test a condition to control logic flow.      |Migrated                |
 |[`InsertTableColumn`](InsertTableColumn/InsertTableColumn)                                                   |                                 |Not yet migrated        |
 |[`InsertTableRow`](InsertTableRow/InsertTableRow)                                                            |                                 |Not yet migrated        |
@@ -559,7 +559,7 @@ have been migrated to the new online version (this documentation).
 |[`OpenCheckFile`](OpenCheckFile/OpenCheckFile)                                                               |                                 |Not yet migrated        |
 |[`OpenHydroBase`](OpenHydroBase/OpenHydroBase)                                                               |                                 |Not yet migrated        |
 |[`OpenNDFD`](OpenNDFD/OpenNDFD)                                                                              |                                 |Not yet migrated        |
-|[`PrintTextFile`](PrintTextFile/PrintTextFile)                                                               |                                 |Not yet migrated        |
+|[`PrintTextFile`](PrintTextFile/PrintTextFile)                                                               |Print text file to a printer.    |Migrated                |
 |[`ProcessRasterGraph`](ProcessRasterGraph/ProcessRasterGraph)                                                |                                 |Not yet migrated        |
 |[`ProcessTSProduct`](ProcessTSProduct/ProcessTSProduct)                                                      |                                 |Not yet migrated        |
 |[`ProfileCommands`](ProfileCommands/ProfileCommands)                                                         |                                 |Not yet migrated        |
@@ -622,7 +622,7 @@ have been migrated to the new online version (this documentation).
 |[`SetConstant`](SetConstant/SetConstant)                                                                     |                                 |Not yet migrated        |
 |[`SetConstantBefore`](SetConstantBefore/SetConstantBefore)                                                   |                                 |Not yet migrated        |
 |[`SetDataValue`](SetDataValue/SetDataValue)                                                                  |                                 |Not yet migrated        |
-|[`SetDebugLevel`](SetDebugLevel/SetDebugLevel)                                                               |                                 |Not yet migrated        |
+|[`SetDebugLevel`](SetDebugLevel/SetDebugLevel)                                                               |Set the debug level for logging. |Migrated                |
 |[`SetEnsembleProperty`](SetEnsembleProperty/SetEnsembleProperty)                                             |                                 |Not yet migrated        |
 |[`SetExcelCell`](SetExcelCell/SetExcelCell)                                                                  |                                 |Not yet migrated        |
 |[`SetExcelWorksheetViewProperties`](SetExcelWorksheetViewProperties/SetExcelWorksheetViewProperties)         |                                 |Not yet migrated        |
@@ -645,7 +645,7 @@ have been migrated to the new online version (this documentation).
 |[`SetTimeSeriesValuesFromTable`](SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable)                  |                                 |Not yet migrated        |
 |[`SetToMax`](SetToMax/SetToMax)                                                                              |                                 |Not yet migrated        |
 |[`SetToMin`](SetToMin/SetToMin)                                                                              |                                 |Not yet migrated        |
-|[`SetWarningLevel`](SetWarningLevel/SetWarningLevel)                                                         |                                 |Not yet migrated        |
+|[`SetWarningLevel`](SetWarningLevel/SetWarningLevel)                                                         |Set the warning level for logging.|Migrated                |
 |[`SetWorkingDir`](SetWorkingDir/SetWorkingDir)                                                               |                                 |Not yet migrated        |
 |[`ShiftTimeByInterval`](ShiftTimeByInterval/ShiftTimeByInterval)                                             |                                 |Not yet migrated        |
 |[`StateModMax`](StateModMax/StateModMax)                                                                     |                                 |Not yet migrated        |

@@ -25,6 +25,7 @@ pages:
   - '# Comment': command-ref/Comment/Comment.md
   - '/* Comment Start': command-ref/CommentBlockStart/CommentBlockStart.md
   - '*/ Comment End': command-ref/CommentBlockEnd/CommentBlockEnd.md
+  - AppendFile: command-ref/AppendFile/AppendFile.md
   - CompareFiles: command-ref/CompareFiles/CompareFiles.md
   - CopyFile: command-ref/CopyFile/CopyFile.md
   - Copy: command-ref/Copy/Copy.md
@@ -35,16 +36,20 @@ pages:
   - Exit: command-ref/Exit/Exit.md
   - For: command-ref/For/For.md
   - Free: command-ref/Free/Free.md
+  - FTPGet: command-ref/FTPGet/FTPGet.md
   - If: command-ref/If/If.md
   - ListFiles: command-ref/ListFiles/ListFiles.md
   - Message: command-ref/Message/Message.md
 #  - ReadFromDelimitedFile: command-ref/ReadFromDelimitedFile/ReadFromDelimitedFile.md
+  - PrintTextFile: command-ref/PrintTextFile/PrintTextFile.md
   - RemoveFile: command-ref/RemoveFile/RemoveFile.md
   - RunCommands: command-ref/RunCommands/RunCommands.md
   - RunProgram: command-ref/RunProgram/RunProgram.md
+  - SetDebugLevel: command-ref/SetDebugLevel/SetDebugLevel.md
   - SetProperty: command-ref/SetProperty/SetProperty.md
   - SetPropertyFromTimeSeries: command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md
   - SetTimeSeriesProperty: command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md
+  - SetWarningLevel: command-ref/SetWarningLevel/SetWarningLevel.md
   - StartLog: command-ref/StartLog/StartLog.md
   - StartRegressionTestResultsReport: command-ref/StartRegressionTestResultsReport/StartRegressionTestResultsReport.md
   - UnknownCommand: command-ref/UnknownCommand/UnknownCommand.md
