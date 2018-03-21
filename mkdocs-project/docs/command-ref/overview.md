@@ -94,12 +94,16 @@ whereas newer commands recognize that other objects may be processed and have mo
 
 ### Select, Free, Sort Time Series ###
 
+These commands select, free, and sort time series.
+
 * [`SelectTimeSeries`](SelectTimeSeries/SelectTimeSeries)
 * [`DeselectTimeSeries`](DeselectTimeSeries/DeselectTimeSeries)
 * [`Free`](Free/Free) - free memory used by time series
 * [`SortTimeSeries`](SortTimeSeries/SortTimeSeries)
 
 ### Create Time Series ###
+
+These commands create new time series from other time series or data values.
 
 * [`NewPatternTimeSeries`](NewPatternTimeSeries/NewPatternTimeSeries)
 * [`NewTimeSeries`](NewTimeSeries/NewTimeSeries)
@@ -120,8 +124,10 @@ whereas newer commands recognize that other objects may be processed and have mo
 
 ### Read Time Series ###
 
+These commands read time series from various sources.
+
 * [`SetIncludeMissingTS`](SetIncludeMissingTS/SetIncludeMissingTS)
-* [`SetInputPeriod`](SetInputPeriod/SetInputPeriod)
+* [`SetInputPeriod`](SetInputPeriod/SetInputPeriod) - set the global processor input period
 * [`CreateFromList`](CreateFromList/CreateFromList)
 * [`ReadDateValue`](ReadDateValue/ReadDateValue)
 * [`ReadDelftFewsPiXml`](ReadDelftFewsPiXml/ReadDelftFewsPiXml)
@@ -153,6 +159,8 @@ whereas newer commands recognize that other objects may be processed and have mo
 
 ### Fill Time Series Missing Data ###
 
+These commands fill missing time series values.
+
 * [`FillConstant`](FillConstant/FillConstant)
 * [`FillDayTSFrom2MonthTSAnd1DayTS`](FillDayTSFrom2MonthTSAnd1DayTS/FillDayTSFrom2MonthTSAnd1DayTS)
 * [`FillFromTS`](FillFromTS/FillFromTS)
@@ -173,6 +181,8 @@ whereas newer commands recognize that other objects may be processed and have mo
 
 ### Set Time Series Contents ###
 
+These commands set time series contents, including properties and data values.
+
 * [`ReplaceValue`](ReplaceValue/ReplaceValue)
 * [`SetConstant`](SetConstant/SetConstant)
 * [`SetDataValue`](SetDataValue/SetDataValue)
@@ -184,6 +194,8 @@ whereas newer commands recognize that other objects may be processed and have mo
 * [`SetTimeSeriesProperty`](SetTimeSeriesProperty/SetTimeSeriesProperty) - set a time series property
 
 ### Manipulate Time Series ###
+
+These commands perform basic time series manipulation.
 
 * [`Add`](Add/Add)
 * [`AddConstant`](AddConstant/AddConstant)
@@ -202,21 +214,27 @@ whereas newer commands recognize that other objects may be processed and have mo
 
 ### Analyze Time Series ###
 
+These commands analyze time series.
+
 * [`AnalyzePattern`](AnalyzePattern/AnalyzePattern)
 * [`CalculateTimeSeriesStatistic`](CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic)
-* [`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries)
+* [`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries) - compare time series to detect whether they are the same or different
 * [`ComputeErrorTimeSeries`](ComputeErrorTimeSeries/ComputeErrorTimeSeries)
 
 ### Models - Routing ###
+
+These commands route flow time series from one location to another.
 
 * [`LagK`](LagK/LagK)
 * [`VariableLagK`](VariableLagK/VariableLagK)
 
 ### Output Time Series ###
 
+These commands output time series to different formats.
+
 * [`SetOutputDetailedHeaders`](SetOutputDetailedHeaders/SetOutputDetailedHeaders)
-* [`SetOutputPeriod`](SetOutputPeriod/SetOutputPeriod)
-* [`SetOutputYearType`](SetOutputYearType/SetOutputYearType)
+* [`SetOutputPeriod`](SetOutputPeriod/SetOutputPeriod) - set the global processor output period
+* [`SetOutputYearType`](SetOutputYearType/SetOutputYearType) - set the global processor output year type
 * [`WriteDateValue`](WriteDateValue/WriteDateValue)
 * [`WriteDelimitedFile`](WriteDelimitedFile/WriteDelimitedFile)
 * [`WriteHECDSS`](WriteHECDSS/WriteHECDSS)
@@ -233,6 +251,8 @@ whereas newer commands recognize that other objects may be processed and have mo
 
 ### Check Time Series ###
 
+These commands are used to check time series, for example for quality control.
+
 * [`CheckTimeSeries`](CheckTimeSeries/CheckTimeSeries)
 * [`CheckTimeSeriesStatistic`](CheckTimeSeriesStatistic/CheckTimeSeriesStatistic)
 * [`WriteCheckFile`](WriteCheckFile/WriteCheckFile)
@@ -242,6 +262,9 @@ whereas newer commands recognize that other objects may be processed and have mo
 The following commands are grouped into specific topic areas.
 
 ### Datastore Processing ###
+
+These commands handle reading and writing time series and other data from datastores, in particular databases.
+Utility commands for executing SQL and creating a data dictionary are also provided.
 
 * [`NewDerbyDatabase`](NewDerbyDatabase/NewDerbyDatabase)
 * [`ReadTableFromDataStore`](ReadTableFromDataStore/ReadTableFromDataStore)
@@ -304,15 +327,19 @@ The following commands are grouped into specific topic areas.
 ## General Commands ##
 
 General commands perform tasks that are general in nature,
-meaning they are not specific to processing data.
+meaning they are not specific to processing time series, tables, or other specific data types.
 
 ### General - Comments ###
+
+These commands are used to insert comments into command files.
 
 * [`#` comment](Comment/Comment) - single line comment
 * [`\*` comment block start](CommentBlockStart/CommentBlockStart) - start of multi-line comment block
 * [`\*` comment block end](CommentBlockEnd/CommentBlockEnd) - end of multi-line comment block
 
 ### General - File Handling ###
+
+These commands provide general file handling capabilities.
 
 * [`AppendFile`](AppendFile/AppendFile) - append a file to another file
 * [`CopyFile`](CopyFile/CopyFile) - copy a file to another name
@@ -325,6 +352,8 @@ meaning they are not specific to processing data.
 
 ### General - Logging and Messaging ###
 
+These commands handle run-time configuration of logging and sending messages.
+
 * [`Message`](Message/Message) - output a message to the log file
 * [`SetDebugLevel`](SetDebugLevel/SetDebugLevel) - set the debug level for logging
 * [`SetWarningLevel`](SetWarningLevel/SetWarningLevel) - set the warning level for logging
@@ -332,6 +361,9 @@ meaning they are not specific to processing data.
 * [`SendEmailMessage`](SendEmailMessage/SendEmailMessage) - **need to write documentation**
 
 ### General - Running and Properties ###
+
+These commands provide general capabilities to control running commands, including running programs external to TSTool,
+handling processor properties (used with `${Property}`), and control commands such as [`For`](For/For) and [`If`](If/If).
 
 * [`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile) - read processor properties from a file
 * [`SetProperty`](SetProperty/SetProperty) - set a processor property value
@@ -357,8 +389,10 @@ meaning they are not specific to processing data.
 
 ### General - Test Processing ###
 
+These commands are used to run automated tests, in particular when running the full suite of tests.
+
 * [`WriteTimeSeriesPropertiesToFile`](WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile) - write time series properites to a file
-* [`CompareFiles`](CompareFiles/CompareFiles) - compare files to detect if the same/different
+* [`CompareFiles`](CompareFiles/CompareFiles) - compare files to detect whether they are the same or different
 * [`CreateRegressionTestCommandFile`](CreateRegressionTestCommandFile/CreateRegressionTestCommandFile) - create a regression test suite command file
 * [`StartRegressionTestResultsReport`](StartRegressionTestResultsReport/StartRegressionTestResultsReport) - start the regression test results report file to record output of tests
 * [`WriteCommandSummaryToFile`](WriteCommandSummaryToFile/WriteCommandSummaryToFile) - write summary of command log to a file
@@ -381,15 +415,19 @@ Tables and time series can be converted back and forth, as needed.
 
 ### Create, Copy, Free Table ###
 
-* [`NewTable`](NewTable/NewTable)
-* [`CopyTable`](CopyTable/CopyTable)
-* [`FreeTable`](FreeTable/FreeTable)
+These commands create, copy, and free tables.
+
+* [`NewTable`](NewTable/NewTable) - create a new table
+* [`CopyTable`](CopyTable/CopyTable) - copy a table to a new table
+* [`FreeTable`](FreeTable/FreeTable) - free memory resources for a table
 
 ### Read Table ###
 
+These commands read tables from various sources.
+
 * [`ReadTableFromDataStore`](ReadTableFromDataStore/ReadTableFromDataStore)
 * [`ReadTableFromDBF`](ReadTableFromDBF/ReadTableFromDBF)
-* [`ReadTableFromDelimitedFile`](ReadTableFromDBF/ReadTableFromDelimitedFile)
+* [`ReadTableFromDelimitedFile`](ReadTableFromDBF/ReadTableFromDelimitedFile) - read a table from a delimited file
 * [`ReadTableFromExcel`](ReadTableFromDBF/ReadTableFromExcel)
 * [`ReadTableFromFixedFormatFile`](ReadTableFromFixedFormatFile/ReadTableFromFixedFormatFile)
 * [`ReadTableFromJSON`](ReadTableFromDBF/ReadTableFromJSON)
@@ -397,10 +435,14 @@ Tables and time series can be converted back and forth, as needed.
 
 ### Append, Join Tables ###
 
+These commands append and join tables.
+
 * [`AppendTables`](AppendTables/AppendTables)
 * [`JoinTables`](JoinTables/JoinTables)
 
 ### Table, Time Series Processing ###
+
+These commands convert between tables and time series.
 
 * [`TimeSeriesToTable`](TimeSeriesToTable/TimeSeriesToTable)
 * [`TableToTimeSeries`](TableToTimeSeries/TableToTimeSeries)
@@ -409,6 +451,8 @@ Tables and time series can be converted back and forth, as needed.
 * [`CopyTimeSeriesPropertiesToTable`](CopoyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable)
 
 ### Manipulate Tables ###
+
+These commands manipulate tables.
 
 * [`InsertTableColumn`](InsertTableColumn/InsertTableColumn)
 * [`DeleteTableColumns`](DeleteTableColumns/DeleteTableColumns)
@@ -426,16 +470,22 @@ Tables and time series can be converted back and forth, as needed.
 
 ### Analyze Table ###
 
-* [`CompareTables`](CompareTables/CompareTables)
+These commands analyze tables.
+
+* [`CompareTables`](CompareTables/CompareTables) - compare tables to detect whether they are the same or different
 
 ### Output Table ###
 
+These commands write tables to various formats.
+
 * [`WriteTableToDataStore`](WriteTableToDataStore/WriteTableToDataStore)
-* [`WriteTableToDelimitedFile`](WriteTableToDelimitedFile/WriteTableToDelimitedFile)
+* [`WriteTableToDelimitedFile`](WriteTableToDelimitedFile/WriteTableToDelimitedFile) - write a table to a delimited file
 * [`WriteTableToExcel`](WriteTableToExcel/WriteTableToExcel)
 * [`WriteTableToHTML`](WriteTableToHTML/WriteTableToHTML)
 
 ### Running and Properties ###
+
+These commands handle table properties, which are used to control run logic.
 
 * [`SetPropertyFromTable`](SetPropertyFromTable/SetPropertyFromTable)
 * [`CopyPropertiesToTable`](CopyPropertiesToTable/CopyPropertiesToTable)
@@ -477,15 +527,15 @@ have been migrated to the new online version (this documentation).
 |[`CheckTimeSeriesStatistic`](CheckTimeSeriesStatistic/CheckTimeSeriesStatistic)                              |                                 |Not yet migrated        |
 |[`CloseDataStore`](CloseDataStore/CloseDataStore)                                                            |                                 |Not yet migrated        |
 |[`CloseExcelWorkbook`](CloseExcelWorkbook/CloseExcelWorkbook)                                                |                                 |Not yet migrated        |
-|[`CompareFiles`](CompareFiles/CompareFiles)                                                                  |Compare files to detect if they are the same/different. |Migrated                |
-|[`CompareTables`](CompareTables/CompareTables)                                                               |                                 |Not yet migrated        |
-|[`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries)                                                   |                                 |Not yet migrated        |
+|[`CompareFiles`](CompareFiles/CompareFiles)                                                                  |Compare files to detect whether they are the same or different. |Migrated                |
+|[`CompareTables`](CompareTables/CompareTables)                                                               |Compare tables to detect whether they are the same or different. |Migrated                |
+|[`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries)                                                   |Compare time series to detect whether they are the same or different.   |Migrated                |
 |[`ComputeErrorTimeSeries`](ComputeErrorTimeSeries/CompauteErrorTimeSeries)                                   |                                 |Not yet migrated        |
 |[`ConvertDataUnits`](ConvertDataUnits/ConvertDataUnits)                                                      |                                 |Not yet migrated        |
 |[`Copy`](Copy/Copy)                                                                                          |Copy a time series.              |Migrated                |
 |[`CopyEnsemble`](CopyEnsemble/CopyEnsemble)                                                                  |                                 |Not yet migrated        |
 |[`CopyFile`](CopyFile/CopyFile)                                                                              |Copy a file to another name.                   |Migrated                |
-|[`CopyTable`](CopyTable/CopyTable)                                                                           |                                 |Not yet migrated        |
+|[`CopyTable`](CopyTable/CopyTable)                                                                           |Copy a table to a new table.     |Migrated                |
 |[`CopyTimeSeriesPropertiesToTable`](CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable)         |                                 |Not yet migrated        |
 |[`CreateDataStoreDataDictionary`](CreateDataStoreDataDictionary/CreateDataStoreDataDictionary)               |                                 |Not yet migrated        |
 |[`CreateEnsembleFromOneTimeSeries`](CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries)         |                                 |Not yet migrated        |
@@ -529,7 +579,7 @@ have been migrated to the new online version (this documentation).
 |[`FormatTableDateTime`](FormatTableDateTime/FormatTableDateTime)                                             |                                 |Not yet migrated        |
 |[`FormatTableString`](FormatTableString/FormatTableString)                                                   |                                 |Not yet migrated        |
 |[`Free`](Free/Free)                                                                                          |Free memory used by time series. |Migrated                |
-|[`FreeTable`](FreeTable/FreeTable)                                                                           |                                 |Not yet migrated        |
+|[`FreeTable`](FreeTable/FreeTable)                                                                           |Free memory resources for a table.      |Migrated                |
 |[`FTPGet`](FTPGet/FTPGet)                                                                                    |Download a file from an FTP site.|Migrated                |
 |[`If`](If/If)                                                                                                |Test a condition to control logic flow.      |Migrated                |
 |[`InsertTableColumn`](InsertTableColumn/InsertTableColumn)                                                   |                                 |Not yet migrated        |
@@ -552,7 +602,7 @@ have been migrated to the new online version (this documentation).
 |[`NewStatisticTimeSeries`](NewStatisticTimeSeries/NewStatisticTimeSeries)                                    |                                 |Not yet migrated        |
 |[`NewStatisticTimeSeriesFromEnsemble`](NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble)|                                 |Not yet migrated        |
 |[`NewStatisticYearTS`](NewStatisticYearTS/NewStatisticYearTS)                                                |                                 |Not yet migrated        |
-|[`NewTable`](NewTable/NewTable)                                                                              |                                 |Not yet migrated        |
+|[`NewTable`](NewTable/NewTable)                                                                              |Create a new table.              |Migrated                |
 |[`NewTimeSeries`](NewTimeSeries/NewTimeSeries)                                                               |                                 |Not yet migrated        |
 |[`NewTreeView`](NewTreeView/NewTreeView)                                                                     |                                 |Not yet migrated        |
 |[`Normalize`](Normalize/Normalize)                                                                           |                                 |Not yet migrated        |
@@ -590,7 +640,7 @@ have been migrated to the new online version (this documentation).
 |[`ReadTableCellsFromExcel`](ReadTableCellsFromExcel/ReadTableCellsFromExcel)                                 |                                 |Not yet migrated        |
 |[`ReadTableFromDataStore`](ReadTableFromDataStore/ReadTableFromDataStore)                                    |                                 |Not yet migrated        |
 |[`ReadTableFromDBF`](ReadTableFromDBF/ReadTableFromDBF)                                                      |                                 |Not yet migrated        |
-|[`ReadTableFromDelimitedFile`](ReadTableFromDelimitedFile/ReadTableFromDelimitedFile)                        |                                 |Not yet migrated        |
+|[`ReadTableFromDelimitedFile`](ReadTableFromDelimitedFile/ReadTableFromDelimitedFile)                        |Read a table from a delimited file. |Not yet migrated        |
 |[`ReadTableFromExcel`](ReadTableFromExcel/ReadTableFromExcel)                                                |                                 |Not yet migrated        |
 |[`ReadTableFromFixedFormatFile`](ReadTableFromFixedFormatFile/ReadTableFromFixedFormatFile)                  |                                 |Not yet migrated        |
 |[`ReadTableFromJSON`](ReadTableFromJSON/ReadTableFromJSON)                                                   |                                 |Not yet migrated        |
@@ -630,9 +680,9 @@ have been migrated to the new online version (this documentation).
 |[`SetFromTS`](SetFromTS/SetFromTS)                                                                           |                                 |Not yet migrated        |
 |[`SetIgnoreLEZero`](SetIgnoreLEZero/SetIgnoreLEZero)                                                         |                                 |Not yet migrated        |
 |[`SetIncludeMissingTS`](SetIncludeMissingTS/SetIncludeMissingTS)                                             |                                 |Not yet migrated        |
-|[`SetInputPeriod`](SetInputPeriod/SetInputPeriod)                                                            |                                 |Not yet migrated        |
-|[`SetOutputPeriod`](SetOutputPeriod/SetOutputPeriod)                                                         |                                 |Not yet migrated        |
-|[`SetOutputYearType`](SetOutputYearType/SetOutputYearType)                                                   |                                 |Not yet migrated        |
+|[`SetInputPeriod`](SetInputPeriod/SetInputPeriod)                                                            |Set the global processor input period.     |Migrated                |
+|[`SetOutputPeriod`](SetOutputPeriod/SetOutputPeriod)                                                         |Set the global processor output period.        |Migrated                |
+|[`SetOutputYearType`](SetOutputYearType/SetOutputYearType)                                                   |Set the global processor output year type. |Migrated                |
 |[`SetPatternFile`](SetPatternFile/SetPatternFile)                                                            |                                 |Not yet migrated        |
 |[`SetProperty`](SetProperty/SetProperty)                                                                     |Set processor property value.    |Migrated                |
 |[`SetPropertyFromNwsrfsAppDefault`](SetPropertyFromNwsrfsAppDefault/SetPropertyFromNwsrfsAppDefault)         |                                 |Not yet migrated        |
@@ -685,7 +735,7 @@ have been migrated to the new online version (this documentation).
 |[`WriteSummary`](WriteSummary/WriteSummary)                                                                  |                                 |Not yet migrated        |
 |[`WriteTableCellsToExcel`](WriteTableCellsToExcel/WriteTableCellsToExcel)                                    |                                 |Not yet migrated        |
 |[`WriteTableToDataStore`](WriteTableToDataStore/WriteTableToDataStore)                                       |                                 |Not yet migrated        |
-|[`WriteTableToDelimitedFile`](WriteTableToDelimitedFile/WriteTableToDelimitedFile)                           |                                 |Not yet migrated        |
+|[`WriteTableToDelimitedFile`](WriteTableToDelimitedFile/WriteTableToDelimitedFile)                           |Write a table to delimited file.   |Migrated                |
 |[`WriteTableToExcel`](WriteTableToExcel/WriteTableToExcel)                                                   |                                 |Not yet migrated        |
 |[`WriteTableToGeoJSON`](WriteTableToGeoJSON/WriteTableToGeoJSON)                                             |                                 |Not yet migrated        |
 |[`WriteTableToHTML`](WriteTableToHTML/lWriteTableToHTML)                                                     |                                 |Not yet migrated        |

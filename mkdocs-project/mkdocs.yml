@@ -27,8 +27,11 @@ pages:
   - '*/ Comment End': command-ref/CommentBlockEnd/CommentBlockEnd.md
   - AppendFile: command-ref/AppendFile/AppendFile.md
   - CompareFiles: command-ref/CompareFiles/CompareFiles.md
+  - CompareTables: command-ref/CompareTables/CompareTables.md
+  - CompareTimeSeries: command-ref/CompareTimeSeries/CompareTimeSeries.md
   - CopyFile: command-ref/CopyFile/CopyFile.md
   - Copy: command-ref/Copy/Copy.md
+  - CopyTable: command-ref/CopyTable/CopyTable.md
   - CreateRegressionTestCommandFile: command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md
   - Empty: command-ref/Empty/Empty.md
   - EndFor: command-ref/EndFor/EndFor.md
@@ -38,20 +41,26 @@ pages:
   - FormatDateTimeProperty: command-ref/FormatDateTimeProperty/FormatDateTimeProperty.md
   - FormatStringProperty: command-ref/FormatStringProperty/FormatStringProperty.md
   - Free: command-ref/Free/Free.md
+  - FreeTable: command-ref/FreeTable/FreeTable.md
   - FTPGet: command-ref/FTPGet/FTPGet.md
   - If: command-ref/If/If.md
   - ListFiles: command-ref/ListFiles/ListFiles.md
   - Message: command-ref/Message/Message.md
+  - NewTable: command-ref/NewTable/NewTable.md
   - PrintTextFile: command-ref/PrintTextFile/PrintTextFile.md
   - ProfileCommands: command-ref/ProfileCommands/ProfileCommands.md
 #  - ReadFromDelimitedFile: command-ref/ReadFromDelimitedFile/ReadFromDelimitedFile.md
   - ReadPropertiesFromFile: command-ref/ReadPropertiesFromFile/ReadPropertiesFromFile.md
+  - ReadTableFromDelimitedFile: command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md
   - RemoveFile: command-ref/RemoveFile/RemoveFile.md
   - RunCommands: command-ref/RunCommands/RunCommands.md
   - RunDSSUTL: command-ref/RunDSSUTL/RunDSSUTL.md
   - RunProgram: command-ref/RunProgram/RunProgram.md
   - RunPython: command-ref/RunPython/RunPython.md
   - SetDebugLevel: command-ref/SetDebugLevel/SetDebugLevel.md
+  - SetInputPeriod: command-ref/SetInputPeriod/SetInputPeriod.md
+  - SetOutputPeriod: command-ref/SetOutputPeriod/SetOutputPeriod.md
+  - SetOutputYearType: command-ref/SetOutputYearType/SetOutputYearType.md
   - SetProperty: command-ref/SetProperty/SetProperty.md
   - SetPropertyFromEnsemble: command-ref/SetPropertyFromEnsemble/SetPropertyFromEnsemble.md
   - SetPropertyFromTimeSeries: command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md
@@ -66,6 +75,7 @@ pages:
   - WebGet: command-ref/WebGet/WebGet.md
   - WriteCommandSummaryToFile: command-ref/WriteCommandSummaryToFile/WriteCommandSummaryToFile.md
   - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
+  - WriteTableToDelimitedFile: command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md
   - WriteTimeSeriesPropertiesToFile: command-ref/WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile.md
 #  - WriteDelimitedFile: command-ref/WriteDelimitedFile/WriteDelimitedFile.md
   - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
