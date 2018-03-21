@@ -26,13 +26,17 @@ pages:
   - '/* Comment Start': command-ref/CommentBlockStart/CommentBlockStart.md
   - '*/ Comment End': command-ref/CommentBlockEnd/CommentBlockEnd.md
   - AppendFile: command-ref/AppendFile/AppendFile.md
+  - AppendTable: command-ref/AppendTable/AppendTable.md
   - CompareFiles: command-ref/CompareFiles/CompareFiles.md
   - CompareTables: command-ref/CompareTables/CompareTables.md
   - CompareTimeSeries: command-ref/CompareTimeSeries/CompareTimeSeries.md
   - CopyFile: command-ref/CopyFile/CopyFile.md
   - Copy: command-ref/Copy/Copy.md
   - CopyTable: command-ref/CopyTable/CopyTable.md
+  - CopyTimeSeriesPropertiesToTable: command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md
   - CreateRegressionTestCommandFile: command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md
+  - DeleteTableColumns: command-ref/DeleteTableColumns/DeleteTableColumns.md
+  - DeleteTableRows: command-ref/DeleteTableRows/DeleteTableRows.md
   - Empty: command-ref/Empty/Empty.md
   - EndFor: command-ref/EndFor/EndFor.md
   - EndIf: command-ref/EndIf/EndIf.md
@@ -40,18 +44,28 @@ pages:
   - For: command-ref/For/For.md
   - FormatDateTimeProperty: command-ref/FormatDateTimeProperty/FormatDateTimeProperty.md
   - FormatStringProperty: command-ref/FormatStringProperty/FormatStringProperty.md
+  - FormatTableDateTime: command-ref/FormatTableDateTime/FormatTableDateTime.md
+  - FormatTableString: command-ref/FormatTableString/FormatTableString.md
   - Free: command-ref/Free/Free.md
   - FreeTable: command-ref/FreeTable/FreeTable.md
   - FTPGet: command-ref/FTPGet/FTPGet.md
   - If: command-ref/If/If.md
+  - InsertTableColumn: command-ref/InsertTableColumn/InsertTableColumn.md
+  - InsertTableRow: command-ref/InsertTableRow/InsertTableRow.md
+  - JoinTables: command-ref/JoinTables/JoinTables.md
   - ListFiles: command-ref/ListFiles/ListFiles.md
+  - ManipulateTableString: command-ref/ManipulateTableString/ManipulateTableString.md
   - Message: command-ref/Message/Message.md
   - NewTable: command-ref/NewTable/NewTable.md
   - PrintTextFile: command-ref/PrintTextFile/PrintTextFile.md
   - ProfileCommands: command-ref/ProfileCommands/ProfileCommands.md
-#  - ReadFromDelimitedFile: command-ref/ReadFromDelimitedFile/ReadFromDelimitedFile.md
+  - ReadDelimitedFile: command-ref/ReadDelimitedFile/ReadDelimitedFile.md
   - ReadPropertiesFromFile: command-ref/ReadPropertiesFromFile/ReadPropertiesFromFile.md
+  - ReadTableFromDBF: command-ref/ReadTableFromDBF/ReadTableFromDBF.md
   - ReadTableFromDelimitedFile: command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md
+  - ReadTableFromFixedFormatFile: command-ref/ReadTableFromFixedFormatFile/ReadTableFromFixedFormatFile.md
+  - ReadTableFromJSON: command-ref/ReadTableFromJSON/ReadTableFromJSON.md
+  - ReadTableFromXml: command-ref/ReadTableFromXml/ReadTableFromXml.md
   - RemoveFile: command-ref/RemoveFile/RemoveFile.md
   - RunCommands: command-ref/RunCommands/RunCommands.md
   - RunDSSUTL: command-ref/RunDSSUTL/RunDSSUTL.md
@@ -63,22 +77,29 @@ pages:
   - SetOutputYearType: command-ref/SetOutputYearType/SetOutputYearType.md
   - SetProperty: command-ref/SetProperty/SetProperty.md
   - SetPropertyFromEnsemble: command-ref/SetPropertyFromEnsemble/SetPropertyFromEnsemble.md
+  - SetPropertyFromTable: command-ref/SetPropertyFromTable/SetPropertyFromTable.md
   - SetPropertyFromTimeSeries: command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md
+  - SetTableValues: command-ref/SetTableValues/SetTableValues.md
   - SetTimeSeriesProperty: command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md
   - SetWarningLevel: command-ref/SetWarningLevel/SetWarningLevel.md
   - SetWorkingDir: command-ref/SetWorkingDir/SetWorkingDir.md
+  - SortTable: command-ref/SortTable/SortTable.md
+  - SplitTableColumn: command-ref/SplitTableColumn/SplitTableColumn.md
   - StartLog: command-ref/StartLog/StartLog.md
   - StartRegressionTestResultsReport: command-ref/StartRegressionTestResultsReport/StartRegressionTestResultsReport.md
+  - TableMath: command-ref/TableMath/TableMath.md
+  - TableTimeSeriesMath: command-ref/TableTimeSeriesMath/TableTimeSeriesMath.md
   - UnknownCommand: command-ref/UnknownCommand/UnknownCommand.md
   - UnzipFile: command-ref/UnzipFile/UnzipFile.md
   - Wait: command-ref/Wait/Wait.md
   - WebGet: command-ref/WebGet/WebGet.md
   - WriteCommandSummaryToFile: command-ref/WriteCommandSummaryToFile/WriteCommandSummaryToFile.md
+  - WriteDelimitedFile: command-ref/WriteDelimitedFile/WriteDelimitedFile.md
   - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
+  - WriteTableToDataStore: command-ref/WriteTableToDataStore/WriteTableToDataStore.md
   - WriteTableToDelimitedFile: command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md
+  - WriteTableToHTML: command-ref/WriteTableToHTML/WriteTableToHTML.md
   - WriteTimeSeriesPropertiesToFile: command-ref/WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile.md
-#  - WriteDelimitedFile: command-ref/WriteDelimitedFile/WriteDelimitedFile.md
-  - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
 - Reference - Datastores:
   - Overview: datastore-ref/overview.md
 #  - Esri File Geodatabase: spatial-data-format-ref/EsriFileGeodatabase/EsriFileGeodatabase.md
