@@ -329,29 +329,29 @@ meaning they are not specific to processing data.
 * [`SetDebugLevel`](SetDebugLevel/SetDebugLevel) - set the debug level for logging
 * [`SetWarningLevel`](SetWarningLevel/SetWarningLevel) - set the warning level for logging
 * [`StartLog`](StartLog/StartLog) - (re)start the log file
-* [`SendEmailMessage`](SendEmailMessage/SendEmailMessage)
+* [`SendEmailMessage`](SendEmailMessage/SendEmailMessage) - **need to write documentation**
 
 ### General - Running and Properties ###
 
-* [`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile)
+* [`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile) - read processor properties from a file
 * [`SetProperty`](SetProperty/SetProperty) - set a processor property value
-* [`SetPropertyFromEnsemble`](SetPropertyFromEnsemble/SetPropertyFromEnsemble)
+* [`SetPropertyFromEnsemble`](SetPropertyFromEnsemble/SetPropertyFromEnsemble) - set a processor property from an ensemble
 * [`SetPropertyFromTimeSeries`](SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) - set time series property from time series property
-* [`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty)
-* [`FormatStringProperty`](FormatStringProperty/FormatStringProperty)
+* [`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty) - format a date/time processor property
+* [`FormatStringProperty`](FormatStringProperty/FormatStringProperty) - format a string processor property
 * [`WritePropertiesToFile`](WritePropertiesToFile/WritePropertiesToFile) - write processor properties to a file
 * [`RunCommands`](RunCommands/RunCommands) - run a TSTool command file
 * [`RunProgram`](RunProgram/RunProgram) - run a program
-* [`RunPython`](RunPython/RunPython)
-* [`RunDSSUTL`](RunDSSUTL/RunDSSUTL)
+* [`RunPython`](RunPython/RunPython) - run a Python a program
+* [`RunDSSUTL`](RunDSSUTL/RunDSSUTL) - run HEC-DSS DSSUTL program
 * [`If`](If/If) - test a condition to control logic flow
 * [`EndIf`](EndIf/EndIf) - end of an [`If`](If/If) block of commands
 * [`For`](For/For) - iterate over items in a loop
 * [`EndFor`](EndFor/EndFor) - end of a [`For`](For/For) loop block of commands
 * [`Exit`](Exit/Exit) - stop processing commands
-* [`Wait`](Wait/Wait)
-* [`SetWorkingDir`](SetWorkingDir/SetWorkingDir)
-* [`ProfileCommands`](ProfileCommands/ProfileCommands)
+* [`Wait`](Wait/Wait) - wait for a time before continuing
+* [`SetWorkingDir`](SetWorkingDir/SetWorkingDir) - set the working directory (folder) for following commands
+* [`ProfileCommands`](ProfileCommands/ProfileCommands) - create summary table with containing performance data
 * [`Empty`](Empty/Empty) - empty (blank) line
 * [`UnknownCommand`](UnknownCommand/UnknownCommand) - unknown command
 
@@ -524,8 +524,8 @@ have been migrated to the new online version (this documentation).
 |[`FillRepeat`](FillRepeat/FillRepeat)                                                                        |                                 |Not yet migrated        |
 |[`FillUsingDiversionComments`](FillUsingDiversionComments/FillUsingDiversionComments)                        |                                 |Not yet migrated        |
 |[`For`](For/For)                                                                                             |Iterate over items in a loop.    |Migrated                |
-|[`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty)                                    |                                 |Not yet migrated        |
-|[`FormatStringProperty`](FormatStringProperty/FormatStringProperty)                                          |                                 |Not yet migrated        |
+|[`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty)                                    |Format a date/time processor property.     |Migrated                |
+|[`FormatStringProperty`](FormatStringProperty/FormatStringProperty)                                          |Format string processor property.|Migrated                |
 |[`FormatTableDateTime`](FormatTableDateTime/FormatTableDateTime)                                             |                                 |Not yet migrated        |
 |[`FormatTableString`](FormatTableString/FormatTableString)                                                   |                                 |Not yet migrated        |
 |[`Free`](Free/Free)                                                                                          |Free memory used by time series. |Migrated                |
@@ -562,7 +562,7 @@ have been migrated to the new online version (this documentation).
 |[`PrintTextFile`](PrintTextFile/PrintTextFile)                                                               |Print text file to a printer.    |Migrated                |
 |[`ProcessRasterGraph`](ProcessRasterGraph/ProcessRasterGraph)                                                |                                 |Not yet migrated        |
 |[`ProcessTSProduct`](ProcessTSProduct/ProcessTSProduct)                                                      |                                 |Not yet migrated        |
-|[`ProfileCommands`](ProfileCommands/ProfileCommands)                                                         |                                 |Not yet migrated        |
+|[`ProfileCommands`](ProfileCommands/ProfileCommands)                                                         |Create summary table with containing performance data |Migrated                |
 |[`ReadDateValue`](ReadDateValue/ReadDateValue)                                                               |                                 |Not yet migrated        |
 |[`ReadDelftFewsPiXml`](ReadDelftFewsPiXml/ReadDelftFewsPiXml)                                                |                                 |Not yet migrated        |
 |[`ReadDelimitedFile`](ReadDelimitedFile/ReadDelimitedFile)                                                   |                                 |Not yet migrated        |
@@ -577,7 +577,7 @@ have been migrated to the new online version (this documentation).
 |[`ReadNwsrfsFs5files`](ReadNwsrfsFs5files/ReadNwsrfsFs5files)                                                |                                 |Not yet migrated        |
 |[`ReadPatternFile`](ReadPatternFile/ReadPatternFile)                                                         |                                 |Not yet migrated        |
 |[`ReadPropertiesFromExcel`](ReadPropertiesFromExcel/ReadPropertiesFromExcel)                                 |                                 |Not yet migrated        |
-|[`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile)                                    |                                 |Not yet migrated        |
+|[`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile)                                    |Read processor properties from a file.   |Migrated                |
 |[`ReadRccAcis`](ReadRccAcis/ReadRccAcis)                                                                     |                                 |Not yet migrated        |
 |[`ReadReclamationHDB`](ReadReclamationHDB/ReadReclamationHDB)                                                |                                 |Not yet migrated        |
 |[`ReadReclamationPisces`](ReadReclamationPisces/ReadReclamationPisces)                                       |                                 |Not yet migrated        |
@@ -609,14 +609,15 @@ have been migrated to the new online version (this documentation).
 |[`ReplaceValue`](ReplaceValue/ReplaceValue)                                                                  |                                 |Not yet migrated        |
 |[`ResequenceTimeSeriesData`](ResequenceTimeSeriesData/ResequenceTimeSeriesData)                              |                                 |Not yet migrated        |
 |[`RunCommands`](RunCommands/RunCommands)                                                                     |Run a TSTool command file.       |Migrated                |
-|[`RunDSSUtil`](RunDSSUtil/RunDSSUtil)                                                                        |                                 |Not yet migrated        |
+|[`RunDSSUTL`](RunDSSUTL/RunDSSUTL)                                                                           |Run HEC-DSS DSSUTL program.      |Migrated                |
 |[`RunningAverage`](RunningAverage/RunningAverage)                                                            |                                 |Not yet migrated        |
 |[`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries)                        |                                 |Not yet migrated        |
 |[`RunProgram`](RunProgram/RunProgram)                                                                        |Run a program.                   |Migrated                |
-|[`RunPython`](RunPython/RunPython)                                                                           |                                 |Not yet migrated        |
+|[`RunPython`](RunPython/RunPython)                                                                           |Run a python program.            |Migrated                |
 |[`RunSql`](RunSql/RunSql)                                                                                    |                                 |Not yet migrated        |
 |[`Scale`](Scale/Scale)                                                                                       |                                 |Not yet migrated        |
 |[`SelectTimeSeries`](SelectTimeSeries/SelectTimeSeries)                                                      |                                 |Not yet migrated        |
+|[`SendEmailMessage`](SendEmailMessage/SendEmailMessage)                                                      |Send an email message.           |**Need to write documentation.**|
 |[`SetAutoExtendPeriod`](SetAutoExtendPeriod/SetAutoExtendPeriod)                                             |                                 |Not yet migrated        |
 |[`SetAveragePeriod`](SetAveragePeriod/SetAveragePeriod)                                                      |                                 |Not yet migrated        |
 |[`SetConstant`](SetConstant/SetConstant)                                                                     |                                 |Not yet migrated        |
@@ -635,7 +636,7 @@ have been migrated to the new online version (this documentation).
 |[`SetPatternFile`](SetPatternFile/SetPatternFile)                                                            |                                 |Not yet migrated        |
 |[`SetProperty`](SetProperty/SetProperty)                                                                     |Set processor property value.    |Migrated                |
 |[`SetPropertyFromNwsrfsAppDefault`](SetPropertyFromNwsrfsAppDefault/SetPropertyFromNwsrfsAppDefault)         |                                 |Not yet migrated        |
-|[`SetPropertyFromEnsemble`](SetPropertyFromEnsemble/SetPropertyFromEnsemble)                                 |                                 |Not yet migrated        |
+|[`SetPropertyFromEnsemble`](SetPropertyFromEnsemble/SetPropertyFromEnsemble)                                 |Set processor property from ensemble.     |Migrated                |
 |[`SetPropertyFromTable`](SetPropertyFromTable/SetPropertyFromTable)                                          |                                 |Not yet migrated        |
 |[`SetPropertyFromTimeSeries`](SetPropertyFromTimeSeries/SetPropertyFromTimeSeries)                           |Set processor property from time series property. |Not yet migrated        |
 |[`SetTableValues`](SetTableValues/SetTableValues)                                                            |                                 |Not yet migrated        |
@@ -646,7 +647,7 @@ have been migrated to the new online version (this documentation).
 |[`SetToMax`](SetToMax/SetToMax)                                                                              |                                 |Not yet migrated        |
 |[`SetToMin`](SetToMin/SetToMin)                                                                              |                                 |Not yet migrated        |
 |[`SetWarningLevel`](SetWarningLevel/SetWarningLevel)                                                         |Set the warning level for logging.|Migrated                |
-|[`SetWorkingDir`](SetWorkingDir/SetWorkingDir)                                                               |                                 |Not yet migrated        |
+|[`SetWorkingDir`](SetWorkingDir/SetWorkingDir)                                                               |Set the working directory (folder) for following commands.  |Migrated                |
 |[`ShiftTimeByInterval`](ShiftTimeByInterval/ShiftTimeByInterval)                                             |                                 |Not yet migrated        |
 |[`StateModMax`](StateModMax/StateModMax)                                                                     |                                 |Not yet migrated        |
 |[`SortTable`](SortTable/SortTable)                                                                           |                                 |Not yet migrated        |
@@ -663,7 +664,7 @@ have been migrated to the new online version (this documentation).
 |[`UnknownCommand`](UnknownCommand/UnknownCommand)                                                            |Unknown command.                 |Migrated                |
 |[`UnzipFile`](UnzipFile/UnzipFile)                                                                           |Unzip the contents of a zip file.|Migrated                |
 |[`VariableLagK`](VariableLagK/VariableLagK)                                                                  |                                 |Not yet migrated        |
-|[`Wait`](Wait/Wait)                                                                                          |                                 |Not yet migrated        |
+|[`Wait`](Wait/Wait)                                                                                          |Wait for at time before continuing.   |Migrated                |
 |[`WebGet`](WebGet/WebGet)                                                                                    |Download a file from a URL.      |Migrated                |
 |[`WeightTraces`](WeightTraces/WeightTraces)                                                                  |                                 |Not yet migrated        |
 |[`WriteCheckFile`](WriteCheckFile/WriteCheckFile)                                                            |                                 |Not yet migrated        |
