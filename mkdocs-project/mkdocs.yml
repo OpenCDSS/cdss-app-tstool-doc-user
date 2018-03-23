@@ -33,7 +33,7 @@ pages:
   - CopyFile: command-ref/CopyFile/CopyFile.md
   - Copy: command-ref/Copy/Copy.md
   - CopyTable: command-ref/CopyTable/CopyTable.md
-  - CopyTimeSeriesPropertiesToTable: command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md
+#- CopyTimeSeriesPropertiesToTable: command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md
   - CreateRegressionTestCommandFile: command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md
   - DeleteTableColumns: command-ref/DeleteTableColumns/DeleteTableColumns.md
   - DeleteTableRows: command-ref/DeleteTableRows/DeleteTableRows.md
@@ -61,8 +61,10 @@ pages:
   - ProfileCommands: command-ref/ProfileCommands/ProfileCommands.md
   - ReadDelimitedFile: command-ref/ReadDelimitedFile/ReadDelimitedFile.md
   - ReadPropertiesFromFile: command-ref/ReadPropertiesFromFile/ReadPropertiesFromFile.md
+  - ReadTableFromDataStore: command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md
   - ReadTableFromDBF: command-ref/ReadTableFromDBF/ReadTableFromDBF.md
   - ReadTableFromDelimitedFile: command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md
+  - ReadTableFromExcel: command-ref/ReadTableFromExcel/ReadTableFromExcel.md
   - ReadTableFromFixedFormatFile: command-ref/ReadTableFromFixedFormatFile/ReadTableFromFixedFormatFile.md
   - ReadTableFromJSON: command-ref/ReadTableFromJSON/ReadTableFromJSON.md
   - ReadTableFromXml: command-ref/ReadTableFromXml/ReadTableFromXml.md
