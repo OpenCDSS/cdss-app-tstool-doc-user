@@ -33,14 +33,21 @@ pages:
   - CopyFile: command-ref/CopyFile/CopyFile.md
   - Copy: command-ref/Copy/Copy.md
   - CopyTable: command-ref/CopyTable/CopyTable.md
-#- CopyTimeSeriesPropertiesToTable: command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md
+  - CopyTimeSeriesPropertiesToTable: command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md
   - CreateRegressionTestCommandFile: command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md
+  - CreateTimeSeriesEventTable: command-ref/CreateTimeSeriesEventTable/CreateTimeSeriesEventTable.md
   - DeleteTableColumns: command-ref/DeleteTableColumns/DeleteTableColumns.md
   - DeleteTableRows: command-ref/DeleteTableRows/DeleteTableRows.md
+  - DeselectTimeSeries: command-ref/DeselectTimeSeries/DeselectTimeSeries.md
   - Empty: command-ref/Empty/Empty.md
   - EndFor: command-ref/EndFor/EndFor.md
   - EndIf: command-ref/EndIf/EndIf.md
   - Exit: command-ref/Exit/Exit.md
+  - ExpandTemplateFile: command-ref/ExpandTemplateFile/ExpandTemplateFile.md
+  - FillConstant: command-ref/FillConstant/FillConstant.md
+  - FillFromTS: command-ref/FillFromTS/FillFromTS.md
+  - FillProrate: command-ref/FillProrate/FillProrate.md
+  - FillRepeat: command-ref/FillRepeat/FillRepeat.md
   - For: command-ref/For/For.md
   - FormatDateTimeProperty: command-ref/FormatDateTimeProperty/FormatDateTimeProperty.md
   - FormatStringProperty: command-ref/FormatStringProperty/FormatStringProperty.md
@@ -58,6 +65,7 @@ pages:
   - Message: command-ref/Message/Message.md
   - NewTable: command-ref/NewTable/NewTable.md
   - PrintTextFile: command-ref/PrintTextFile/PrintTextFile.md
+  - ProcessTSProduct: command-ref/ProcessTSProduct/ProcessTSProduct.md
   - ProfileCommands: command-ref/ProfileCommands/ProfileCommands.md
   - ReadDelimitedFile: command-ref/ReadDelimitedFile/ReadDelimitedFile.md
   - ReadPropertiesFromFile: command-ref/ReadPropertiesFromFile/ReadPropertiesFromFile.md
@@ -73,7 +81,11 @@ pages:
   - RunDSSUTL: command-ref/RunDSSUTL/RunDSSUTL.md
   - RunProgram: command-ref/RunProgram/RunProgram.md
   - RunPython: command-ref/RunPython/RunPython.md
+  - SelectTimeSeries: command-ref/SelectTimeSeries/SelectTimeSeries.md
+  - SetConstant: command-ref/SetConstant/SetConstant.md
+  - SetDataValue: command-ref/SetDataValue/SetDataValue.md
   - SetDebugLevel: command-ref/SetDebugLevel/SetDebugLevel.md
+  - SetFromTS: command-ref/SetFromTS/SetFromTS.md
   - SetInputPeriod: command-ref/SetInputPeriod/SetInputPeriod.md
   - SetOutputPeriod: command-ref/SetOutputPeriod/SetOutputPeriod.md
   - SetOutputYearType: command-ref/SetOutputYearType/SetOutputYearType.md
@@ -83,14 +95,19 @@ pages:
   - SetPropertyFromTimeSeries: command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md
   - SetTableValues: command-ref/SetTableValues/SetTableValues.md
   - SetTimeSeriesProperty: command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md
+  - SetTimeSeriesPropertiesFromTable: command-ref/SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md
   - SetWarningLevel: command-ref/SetWarningLevel/SetWarningLevel.md
   - SetWorkingDir: command-ref/SetWorkingDir/SetWorkingDir.md
   - SortTable: command-ref/SortTable/SortTable.md
+  - SortTimeSeries: command-ref/SortTimeSeries/SortTimeSeries.md
   - SplitTableColumn: command-ref/SplitTableColumn/SplitTableColumn.md
+  - SplitTableRow: command-ref/SplitTableRow/SplitTableRow.md
   - StartLog: command-ref/StartLog/StartLog.md
   - StartRegressionTestResultsReport: command-ref/StartRegressionTestResultsReport/StartRegressionTestResultsReport.md
   - TableMath: command-ref/TableMath/TableMath.md
   - TableTimeSeriesMath: command-ref/TableTimeSeriesMath/TableTimeSeriesMath.md
+  - TableToTimeSeries: command-ref/TableToTimeSeries/TableToTimeSeries.md
+  - TimeSeriesToTable: command-ref/TimeSeriesToTable/TimeSeriesToTable.md
   - UnknownCommand: command-ref/UnknownCommand/UnknownCommand.md
   - UnzipFile: command-ref/UnzipFile/UnzipFile.md
   - Wait: command-ref/Wait/Wait.md
@@ -100,14 +117,17 @@ pages:
   - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
   - WriteTableToDataStore: command-ref/WriteTableToDataStore/WriteTableToDataStore.md
   - WriteTableToDelimitedFile: command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md
+  - WriteTableToExcel: command-ref/WriteTableToExcel/WriteTableToExcel.md
   - WriteTableToHTML: command-ref/WriteTableToHTML/WriteTableToHTML.md
   - WriteTimeSeriesPropertiesToFile: command-ref/WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile.md
+  - WriteTimeSeriesToDataStream: command-ref/WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream.md
 - Reference - Datastores:
   - Overview: datastore-ref/overview.md
+  - Colorado HydroBase: datastore-ref/CO-HydroBase/CO-HydroBase.md
 #  - Esri File Geodatabase: spatial-data-format-ref/EsriFileGeodatabase/EsriFileGeodatabase.md
-- 'Appendix - Install TSTool': install.md
-- 'Appendix - TSView Time Series Viewing Tools': tsview.md
-- 'Appendix - GeoView Mapping Tools': geoview.md
+- 'Appendix - Install TSTool': appendix/install.md
+- 'Appendix - TSView Time Series Viewing Tools': appendix/tsview.md
+- 'Appendix - GeoView Mapping Tools': appendix/geoview.md
 # ------- configuration properties ---------------
 # Use Material theme
 # - installation notes:  https://github.com/squidfunk/mkdocs-material
