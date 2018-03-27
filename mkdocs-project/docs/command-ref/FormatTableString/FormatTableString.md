@@ -61,5 +61,5 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [FormatTableDateTime](../FormatTableDateTime/FormatTableDateTime) command
-* [ManipulateTableString](../ManipulateTableString/ManipulateTableString) command
+* [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime) command
+* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command

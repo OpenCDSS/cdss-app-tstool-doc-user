@@ -59,5 +59,5 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [SetWarningLevel](../SetWarningLevel/SetWarningLevel) command
-* [StartLog](../StartLog/StartLog) command
+* [`SetWarningLevel`](../SetWarningLevel/SetWarningLevel) command
+* [`StartLog`](../StartLog/StartLog) command

@@ -55,4 +55,4 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [WriteTableToDelimitedFile](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command
+* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command

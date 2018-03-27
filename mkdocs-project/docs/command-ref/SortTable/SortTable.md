@@ -51,4 +51,4 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [NewTable](../NewTable/NewTable) command
+* [`NewTable`](../NewTable/NewTable) command

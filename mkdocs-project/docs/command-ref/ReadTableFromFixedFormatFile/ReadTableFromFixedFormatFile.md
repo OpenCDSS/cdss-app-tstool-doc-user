@@ -106,4 +106,4 @@ The following table in TSTool illustrates the resulting output:
 
 ## See Also ##
 
-* [WriteTableToDelimitedFile](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command
+* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command

@@ -55,4 +55,4 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [If](../If/If) command
+* [`If`](../If/If) command

@@ -53,5 +53,5 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [InsertTableColumn](../InsertTableColumn/InsertTableColumn) command
-* [WriteTableCellsToExcel](../WriteTableCellsToExcel/WriteTableCellsToExcel) command
+* [`InsertTableColumn`](../InsertTableColumn/InsertTableColumn) command
+* [`WriteTableCellsToExcel`](../WriteTableCellsToExcel/WriteTableCellsToExcel) command

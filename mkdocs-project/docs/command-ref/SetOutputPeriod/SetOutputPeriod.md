@@ -84,5 +84,5 @@ SetOutputPeriod(OutputStart="1950-01",OutputEnd="2002-12")
 
 ## See Also ##
 
-* [SetInputPeriod](../SetInputPeriod/SetInputPeriod) command
-* [SetOutputYearType](../SetOutputYearType/SetOutputYearType) command
+* [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod) command
+* [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType) command

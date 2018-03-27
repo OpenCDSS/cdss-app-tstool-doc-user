@@ -145,8 +145,8 @@ Single Data Column Table
 
 ## See Also ##
 
-* [SortTable](../SortTable/SortTable) command
-* [TableToTimeSeries](../TableToTimeSeries/TableToTimeSeries) command
-* [WriteTableToDelimitedFile](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command
-* [WriteTimeSeriesToDataStream](../WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream) command
-* [WriteTableToHTML](../WriteTableToHTML/WriteTableToHTML) command
+* [`SortTable`](../SortTable/SortTable) command
+* [`TableToTimeSeries`](../TableToTimeSeries/TableToTimeSeries) command
+* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command
+* [`WriteTimeSeriesToDataStream`](../WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream) command
+* [`WriteTableToHTML`](../WriteTableToHTML/WriteTableToHTML) command

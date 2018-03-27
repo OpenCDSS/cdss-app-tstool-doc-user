@@ -70,6 +70,6 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [SelectTimeSeries](../SelectTimeSeries/SelectTimeSeries) command
-* [SetProperty](../SetProperty/SetProperty) command
-* [SetPropertyFromTimeSeries](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`SetProperty`](../SetProperty/SetProperty) command
+* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) command

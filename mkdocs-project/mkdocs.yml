@@ -25,19 +25,30 @@ pages:
   - '# Comment': command-ref/Comment/Comment.md
   - '/* Comment Start': command-ref/CommentBlockStart/CommentBlockStart.md
   - '*/ Comment End': command-ref/CommentBlockEnd/CommentBlockEnd.md
+  - AnalyzePattern: command-ref/AnalyzePattern/AnalyzePattern.md
   - AppendFile: command-ref/AppendFile/AppendFile.md
   - AppendTable: command-ref/AppendTable/AppendTable.md
+  - CheckTimeSeries: command-ref/CheckTimeSeries/CheckTimeSeries.md
+  - CheckTimeSeriesStatistic: command-ref/CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md
+  - CloseDataStore: command-ref/CloseDataStore/CloseDataStore.md
+  - CloseExcelWorkbook: command-ref/CloseExcelWorkbook/CloseExcelWorkbook.md
   - CompareFiles: command-ref/CompareFiles/CompareFiles.md
   - CompareTables: command-ref/CompareTables/CompareTables.md
   - CompareTimeSeries: command-ref/CompareTimeSeries/CompareTimeSeries.md
+  - ComputeErrorTimeSeries: command-ref/ComputeErrorTimeSeries/ComputeErrorTimeSeries.md
   - CopyFile: command-ref/CopyFile/CopyFile.md
   - Copy: command-ref/Copy/Copy.md
+  - CopyEnsemble: command-ref/CopyEnsemble/CopyEnsemble.md
   - CopyTable: command-ref/CopyTable/CopyTable.md
   - CopyTimeSeriesPropertiesToTable: command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md
+  - CreateDataStoreDataDictionary: command-ref/CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md
+  - CreateEnsembleFromOneTimeSeries: command-ref/CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md
   - CreateRegressionTestCommandFile: command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md
   - CreateTimeSeriesEventTable: command-ref/CreateTimeSeriesEventTable/CreateTimeSeriesEventTable.md
+  - DeleteDataStoreTableRows: command-ref/DeleteDataStoreTableRows/DeleteDataStoreTableRows.md
   - DeleteTableColumns: command-ref/DeleteTableColumns/DeleteTableColumns.md
   - DeleteTableRows: command-ref/DeleteTableRows/DeleteTableRows.md
+  - Delta: command-ref/Delta/Delta.md
   - DeselectTimeSeries: command-ref/DeselectTimeSeries/DeselectTimeSeries.md
   - Empty: command-ref/Empty/Empty.md
   - EndFor: command-ref/EndFor/EndFor.md
@@ -46,6 +57,7 @@ pages:
   - ExpandTemplateFile: command-ref/ExpandTemplateFile/ExpandTemplateFile.md
   - FillConstant: command-ref/FillConstant/FillConstant.md
   - FillFromTS: command-ref/FillFromTS/FillFromTS.md
+  - FillPattern: command-ref/FillPattern/FillPattern.md
   - FillProrate: command-ref/FillProrate/FillProrate.md
   - FillRepeat: command-ref/FillRepeat/FillRepeat.md
   - For: command-ref/For/For.md
@@ -59,15 +71,22 @@ pages:
   - If: command-ref/If/If.md
   - InsertTableColumn: command-ref/InsertTableColumn/InsertTableColumn.md
   - InsertTableRow: command-ref/InsertTableRow/InsertTableRow.md
+  - InsertTimeSeriesIntoEnsemble: command-ref/InsertTimeSeriesIntoEnsemble/InsertTimeSeriesIntoEnsemble.md
   - JoinTables: command-ref/JoinTables/JoinTables.md
   - ListFiles: command-ref/ListFiles/ListFiles.md
   - ManipulateTableString: command-ref/ManipulateTableString/ManipulateTableString.md
   - Message: command-ref/Message/Message.md
+  - NewEnsemble: command-ref/NewEnsemble/NewEnsemble.md
+  - NewExcelWorkbook: command-ref/NewExcelWorkbook/NewExcelWorkbook.md
+  - NewStatisticEnsemble: command-ref/NewStatisticEnsemble/NewStatisticEnsemble.md
   - NewTable: command-ref/NewTable/NewTable.md
+  - NewTreeView: command-ref/NewTreeView/NewTreeView.md
   - PrintTextFile: command-ref/PrintTextFile/PrintTextFile.md
+  - ProcessRasterGraph: command-ref/ProcessRasterGraph/ProcessRasterGraph.md
   - ProcessTSProduct: command-ref/ProcessTSProduct/ProcessTSProduct.md
   - ProfileCommands: command-ref/ProfileCommands/ProfileCommands.md
   - ReadDelimitedFile: command-ref/ReadDelimitedFile/ReadDelimitedFile.md
+  - ReadPatternFile: command-ref/ReadPatternFile/ReadPatternFile.md
   - ReadPropertiesFromFile: command-ref/ReadPropertiesFromFile/ReadPropertiesFromFile.md
   - ReadTableFromDataStore: command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md
   - ReadTableFromDBF: command-ref/ReadTableFromDBF/ReadTableFromDBF.md
@@ -76,16 +95,22 @@ pages:
   - ReadTableFromFixedFormatFile: command-ref/ReadTableFromFixedFormatFile/ReadTableFromFixedFormatFile.md
   - ReadTableFromJSON: command-ref/ReadTableFromJSON/ReadTableFromJSON.md
   - ReadTableFromXml: command-ref/ReadTableFromXml/ReadTableFromXml.md
+  - ReadTimeSeriesFromDataStore: command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md
   - RemoveFile: command-ref/RemoveFile/RemoveFile.md
+  - ReplaceValue: command-ref/ReplaceValue/ReplaceValue.md
   - RunCommands: command-ref/RunCommands/RunCommands.md
   - RunDSSUTL: command-ref/RunDSSUTL/RunDSSUTL.md
   - RunProgram: command-ref/RunProgram/RunProgram.md
   - RunPython: command-ref/RunPython/RunPython.md
+  - RunSql: command-ref/RunSQL/RunSql.md
   - SelectTimeSeries: command-ref/SelectTimeSeries/SelectTimeSeries.md
+  - SetAveragePeriod: command-ref/SetAveragePeriod/SetAveragePeriod.md
   - SetConstant: command-ref/SetConstant/SetConstant.md
   - SetDataValue: command-ref/SetDataValue/SetDataValue.md
   - SetDebugLevel: command-ref/SetDebugLevel/SetDebugLevel.md
+  - SetEnsembleProperty: command-ref/SetEnsembleProperty/SetEnsembleProperty.md
   - SetFromTS: command-ref/SetFromTS/SetFromTS.md
+  - SetIgnoreLEZero: command-ref/SetIgnoreLEZero/SetIgnoreLEZero.md
   - SetInputPeriod: command-ref/SetInputPeriod/SetInputPeriod.md
   - SetOutputPeriod: command-ref/SetOutputPeriod/SetOutputPeriod.md
   - SetOutputYearType: command-ref/SetOutputYearType/SetOutputYearType.md
@@ -112,6 +137,8 @@ pages:
   - UnzipFile: command-ref/UnzipFile/UnzipFile.md
   - Wait: command-ref/Wait/Wait.md
   - WebGet: command-ref/WebGet/WebGet.md
+  - WeightTraces: command-ref/WeightTraces/WeightTraces.md
+  - WriteCheckFile: command-ref/WriteCheckFile/WriteCheckFile.md
   - WriteCommandSummaryToFile: command-ref/WriteCommandSummaryToFile/WriteCommandSummaryToFile.md
   - WriteDelimitedFile: command-ref/WriteDelimitedFile/WriteDelimitedFile.md
   - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
@@ -120,11 +147,13 @@ pages:
   - WriteTableToExcel: command-ref/WriteTableToExcel/WriteTableToExcel.md
   - WriteTableToHTML: command-ref/WriteTableToHTML/WriteTableToHTML.md
   - WriteTimeSeriesPropertiesToFile: command-ref/WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile.md
+  - WriteTimeSeriesToDataStore: command-ref/WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md
   - WriteTimeSeriesToDataStream: command-ref/WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream.md
 - Reference - Datastores:
   - Overview: datastore-ref/overview.md
   - Colorado HydroBase: datastore-ref/CO-HydroBase/CO-HydroBase.md
-#  - Esri File Geodatabase: spatial-data-format-ref/EsriFileGeodatabase/EsriFileGeodatabase.md
+  - Generic Database: datastore-ref/GenericDatabase/GenericDatabase.md
+  - StateMod Model: datastore-ref/StateMod/StateMod.md
 - 'Appendix - Install TSTool': appendix/install.md
 - 'Appendix - TSView Time Series Viewing Tools': appendix/tsview.md
 - 'Appendix - GeoView Mapping Tools': appendix/geoview.md

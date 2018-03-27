@@ -68,5 +68,5 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [SelectTimeSeries](../SelectTimeSeries/SelectTimeSeries) command
-* [SetFromTS](../SetFromTS/SetFromTS) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`SetFromTS`](../SetFromTS/SetFromTS) command

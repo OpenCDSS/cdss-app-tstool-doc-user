@@ -54,9 +54,9 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [For](../For/For) command
-* [If](../If/If) command
-* [SetProperty](../SetProperty/SetProperty) command
-* [SetPropertyFromTimeSeries](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) command
-* [SetTimeSeriesProperty](../SetTimeSeriesProperty/SetTimeSeriesProperty) command
-* [WritePropertiesToFile](../WritePropertiesToFile/WritePropertiesToFile) command
+* [`For`](../For/For) command
+* [`If`](../If/If) command
+* [`SetProperty`](../SetProperty/SetProperty) command
+* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) command
+* [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty) command
+* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile) command

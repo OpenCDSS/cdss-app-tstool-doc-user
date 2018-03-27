@@ -49,4 +49,4 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [RemoveFile](../RemoveFile/RemoveFile) command
+* [`RemoveFile`](../RemoveFile/RemoveFile) command

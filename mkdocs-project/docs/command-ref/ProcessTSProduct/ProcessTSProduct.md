@@ -135,4 +135,4 @@ ProcessTSProduct(TSProductFile="Example_ProcessTSProduct.tsp")
 
 ## See Also ##
 
-* [ExpandTemplateFile](../ExpandTemplateFile/ExpandTemplateFile) command
+* [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile) command

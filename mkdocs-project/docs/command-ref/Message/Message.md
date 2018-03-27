@@ -52,4 +52,4 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [StartLog](../StartLog/StartLog) command - controls log file where messages are written
+* [`StartLog`](../StartLog/StartLog) command - controls log file where messages are written

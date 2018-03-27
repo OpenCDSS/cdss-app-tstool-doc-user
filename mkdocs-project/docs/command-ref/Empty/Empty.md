@@ -36,4 +36,4 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [UnknownCommand](../UnknownCommand/UnknownCommand) command - unknown commands that are not empty lines
+* [`UnknownCommand`](../UnknownCommand/UnknownCommand) command - unknown commands that are not empty lines

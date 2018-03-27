@@ -96,4 +96,4 @@ some junk to be skipped
 
 ## See Also ##
 
-* [WriteTableToDelimitedFile](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command
+* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command

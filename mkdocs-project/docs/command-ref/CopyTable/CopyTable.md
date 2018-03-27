@@ -59,7 +59,7 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [ExpandTemplateFile](../ExpandTemplateFile/ExpandTemplateFile) command
-* [FreeTable](../FreeTable/FreeTable) command
-* [NewTable](../NewTable/NewTable) command
-* [ReadTimeSeriesList](../ReadTimeSeriesList/ReadTimeSeriesList) command
+* [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile) command
+* [`FreeTable`](../FreeTable/FreeTable) command
+* [`NewTable`](../NewTable/NewTable) command
+* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList) command

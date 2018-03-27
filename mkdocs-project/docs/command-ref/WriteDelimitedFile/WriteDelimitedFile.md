@@ -72,5 +72,5 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [ReadDelimitedFile](../ReadDelimitedFile/ReadDelimitedFile) command
-* [SelectTimeSeries](../SelectTimeSeries/SelectTimeSeries) command
+* [`ReadDelimitedFile`](../ReadDelimitedFile/ReadDelimitedFile) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command

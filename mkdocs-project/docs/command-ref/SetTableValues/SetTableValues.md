@@ -55,5 +55,5 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [FormatTableString](../FormatTableString/FormatTableString) command
-* [ManipulateTableString](../ManipulateTableString/ManipulateTableString) command
+* [`FormatTableString`](../FormatTableString/FormatTableString) command
+* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command

@@ -79,6 +79,6 @@ Table Corresponding to Results from Parameters in Command Editor
 
 ## See Also ##
 
-* [FreeTable](../FreeTable/FreeTable) command
-* [JoinTables](../JoinTables/JoinTables) command
-* [NewTable](../NewTable/NewTable) command
+* [`FreeTable`](../FreeTable/FreeTable) command
+* [`JoinTables`](../JoinTables/JoinTables) command
+* [`NewTable`](../NewTable/NewTable) command

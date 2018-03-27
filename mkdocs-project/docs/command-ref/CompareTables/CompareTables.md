@@ -65,6 +65,6 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [CompareFiles](../CompareFiles/CompareFiles) command
-* [CompareTimeSeries](../CompareTimeSeries/CompareTimeSeries) command
-* [ReadTableFromDelimitedFile](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command
+* [`CompareFiles`](../CompareFiles/CompareFiles) command
+* [`CompareTimeSeries`](../CompareTimeSeries/CompareTimeSeries) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command

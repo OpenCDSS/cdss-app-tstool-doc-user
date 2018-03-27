@@ -62,5 +62,5 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [FormatDateTimeProperty](../FormatDateTimeProperty/FormatDateTimeProperty) command
-* [SetProperty](../SetProperty/SetProperty) command
+* [`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty) command
+* [`SetProperty`](../SetProperty/SetProperty) command

@@ -36,4 +36,4 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [Empty](../Empty/Empty) command - used for commands that only contain an empty line
+* [`Empty`](../Empty/Empty) command - used for commands that only contain an empty line

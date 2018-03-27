@@ -534,10 +534,10 @@ For example, see the TSTool [`If`](../If/If) and [`For`](../For/For) commands.
 
 ## See Also ##
 
-* [CopyTable](../CopyTable/CopyTable) command
-* [For](../For/For) command
-* [If](../If/If) command
-* [ProcessTSProduct](../ProcessTSProduct/ProcessTSProduct) command
-* [ReadTableFromDataStore](../ReadTableFromDataStore/ReadTableFromDataStore) command
-* [SetProperty](../SetProperty/SetProperty) command
-* [WritePropertiesToFile](../WritePropertiesToFile/WritePropertiesToFile) command
+* [`CopyTable`](../CopyTable/CopyTable) command
+* [`For`](../For/For) command
+* [`If`](../If/If) command
+* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct) command
+* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore) command
+* [`SetProperty`](../SetProperty/SetProperty) command
+* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile) command

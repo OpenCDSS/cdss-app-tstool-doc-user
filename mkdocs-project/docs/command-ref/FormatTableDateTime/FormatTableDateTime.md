@@ -164,5 +164,5 @@ Output is as shown below.  <a href="../FormatTableDateTime_IncrementData.png">Se
 
 ## See Also ##
 
-* [FormatTableString](../FormatTableString/FormatTableString) command
-* [ManipulateTableString](../ManipulateTableString/ManipulateTableString) command
+* [`FormatTableString`](../FormatTableString/FormatTableString) command
+* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command

@@ -60,6 +60,6 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [FTPGet](../FTPGet/FTPGet) command
-* [ListFiles](../ListFiles/ListFiles) command
-* [UnzipFile](../UnzipFile/UnzipFile) command
+* [`FTPGet`](../FTPGet/FTPGet) command
+* [`ListFiles`](../ListFiles/ListFiles) command
+* [`UnzipFile`](../UnzipFile/UnzipFile) command

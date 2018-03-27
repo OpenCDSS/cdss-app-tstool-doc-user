@@ -58,5 +58,5 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [SetProperty](../SetProperty/SetProperty) command
-* [SetTimeSeriesProperty](../SetTimeSeriesProperty/SetTimeSeriesProperty) command
+* [`SetProperty`](../SetProperty/SetProperty) command
+* [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty) command

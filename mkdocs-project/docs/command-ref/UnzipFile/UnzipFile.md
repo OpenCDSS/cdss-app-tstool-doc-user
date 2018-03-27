@@ -52,4 +52,4 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [WebGet](../WebGet/WebGet) command
+* [`WebGet`](../WebGet/WebGet) command

@@ -87,5 +87,5 @@ FormatDateTimeProperty(PropertyName="DateTimePropString",DateTimePropertyName="D
 
 ## See Also ##
 
-* [FormatStringProperty](../FormatStringProperty/FormatStringProperty) command
-* [SetProperty](../SetProperty/SetProperty) command
+* [`FormatStringProperty`](../FormatStringProperty/FormatStringProperty) command
+* [`SetProperty`](../SetProperty/SetProperty) command

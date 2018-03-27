@@ -66,5 +66,5 @@ DeleteTableColumns(TableID="Table1",DeleteColumns="double1,integer1")
 
 ## See Also ##
 
-* [DeleteTableRows](../DeleteTableRows/DeleteTableRows) command
-* [ReadTableFromDelimitedFile](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command
+* [`DeleteTableRows`](../DeleteTableRows/DeleteTableRows) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command

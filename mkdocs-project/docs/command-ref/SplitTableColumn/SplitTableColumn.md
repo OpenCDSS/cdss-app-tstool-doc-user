@@ -61,6 +61,6 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [FormatTableString](../FormatTableString/FormatTableString) command
-* [ManipulateTableString](../ManipulateTableString/ManipulateTableString) command
-* [SplitTableRow](../SplitTableRow/SplitTableRow) command
+* [`FormatTableString`](../FormatTableString/FormatTableString) command
+* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command
+* [`SplitTableRow`](../SplitTableRow/SplitTableRow) command

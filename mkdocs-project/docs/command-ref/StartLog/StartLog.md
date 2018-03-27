@@ -63,4 +63,4 @@ Add(TSID="06753400.USGS.Streamflow.Month",AddTSList=AllTS,HandleMissingHow="Igno
 
 ## See Also ##
 
-* [Message](../Message/Message) command - can be used to write messages to the log file
+* [`Message`](../Message/Message) command - can be used to write messages to the log file

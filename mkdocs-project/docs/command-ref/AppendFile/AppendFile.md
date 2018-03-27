@@ -60,5 +60,5 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [CopyFile](../CopyFile/CopyFile) command
-* [RemoveFile](../RemoveFile/RemoveFile) command
+* [`CopyFile`](../CopyFile/CopyFile) command
+* [`RemoveFile`](../RemoveFile/RemoveFile) command

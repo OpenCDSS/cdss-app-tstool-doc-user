@@ -216,4 +216,4 @@ In this case, the relationship table will add overhead and potentially confusion
 
 ## See Also ##
 
-* [ReadTableFromDataStore](../ReadTableFromDataStore/ReadTableFromDataStore) command
+* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore) command

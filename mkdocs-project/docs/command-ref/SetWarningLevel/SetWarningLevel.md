@@ -61,5 +61,5 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [SetDebugLevel](../SetDebugLevel/SetDebugLevel) command
-* [StartLog](../StartLog/StartLog) command
+* [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel) command
+* [`StartLog`](../StartLog/StartLog) command

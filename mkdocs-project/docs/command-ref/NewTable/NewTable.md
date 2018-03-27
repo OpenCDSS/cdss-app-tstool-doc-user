@@ -57,4 +57,4 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [FreeTable](../FreeTable/FreeTable) command
+* [`FreeTable`](../FreeTable/FreeTable) command

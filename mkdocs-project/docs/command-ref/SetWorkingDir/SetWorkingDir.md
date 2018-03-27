@@ -68,4 +68,4 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ## See Also ##
 
-* [Message](../Message/Message) command - can be used to output the working directory
+* [`Message`](../Message/Message) command - can be used to output the working directory

@@ -108,6 +108,6 @@ Total          = 18
 
 ## See Also ##
 
-* [CreateRegressionTestCommandFile](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile) command
-* [RunCommands](../RunCommands/RunCommands) command
-* [WriteCommandSummaryToFile](../WriteCommandSummaryToFile/WriteCommandSummaryToFile) command
+* [`CreateRegressionTestCommandFile`](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile) command
+* [`RunCommands`](../RunCommands/RunCommands) command
+* [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile) command

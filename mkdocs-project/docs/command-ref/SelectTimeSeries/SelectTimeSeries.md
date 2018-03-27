@@ -102,5 +102,5 @@ SelectTimeSeries(TSList=AllMatchingTSID,TSID="40*",DeselectAllFirst=True)
 
 ## See Also ##
 
-* [DeselectTimeSeries](../DeselectTimeSeries/DeselectTimeSeries) command
-* [Free](../Free/Free) command
+* [`DeselectTimeSeries`](../DeselectTimeSeries/DeselectTimeSeries) command
+* [`Free`](../Free/Free) command
