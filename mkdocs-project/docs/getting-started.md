@@ -44,7 +44,7 @@ are suitable to perform the above conceptual work tasks (documentation is being 
 
 The command file is created using the TSTool graphical user interface.
 
-**Need to integrate existing exmaples here.**
+**Need to integrate existing examples here.**
 
 ### Best Practices for Command Files ###
 

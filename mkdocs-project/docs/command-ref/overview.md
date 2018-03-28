@@ -121,7 +121,7 @@ These commands create new time series from other time series or data values.
 * [`ResequenceTimeSeriesData`](ResequenceTimeSeriesData/ResequenceTimeSeriesData) - resequence time series data values by year
 * [`NewStatisticTimeSeries`](NewStatisticTimeSeries/NewStatisticTimeSeries) - create a new time series having statistic repeated each year
 * [`NewStatisticMonthTimeSeries`](NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries) - create a new time series with monthly statistics
-* [`NewStatisticYearTimeSeries`](NewStatisticYearTimeSeries/NewStatisticYearTimeSeries)
+* [`NewStatisticYearTS`](NewStatisticYearTS/NewStatisticYearTS)
 * [`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries)
 
 ### Read Time Series ###

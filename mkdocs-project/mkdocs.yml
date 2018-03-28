@@ -10,7 +10,7 @@ pages:
 - 3 - Commands: commands.md
 - 4 - Tools: tools.md
 - 5 - Examples of Use: examples.md
-- 6 - Quality Control: quality-control.md
+- 6 - Quality Control: quality-control/quality-control.md
 - 7 - Spatial Data Integration: spatial.md
 - 8 - Spreadsheet Integration: spreadsheet.md
 - 9 - Model Framework Integration: modeling.md
