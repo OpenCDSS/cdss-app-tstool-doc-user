@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetConstant #
+# Learn TSTool / Command / ShiftTimeByInterval #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -11,17 +11,20 @@
 
 ## Overview ##
 
-The `SetConstant` command sets the values of a time series to a single or monthly constant values.
+The `ShiftTimeByInterval` command shifts a time series in time.
+This command can be used to perform a simple shift (e.g., to shift hourly data because the
+[`Disaggregate`](../Disaggregate/Disaggregate) command did not
+result in data being set at the desired hours) and to perform simple routing.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SetConstant.png">See also the full-size image.</a>
+<a href="../ShiftTimeByInterval.png">See also the full-size image.</a>
 
-![SetConstant](SetConstant.png)
+![ShiftTimeByInterval](ShiftTimeByInterval.png)
 
 **<p style="text-align: center;">
-`SetConstant` Command Editor
+`ShiftTimeByInterval` Command Editor
 </p>**
 
 ## Command Syntax ##
@@ -29,7 +32,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The command syntax is as follows:
 
 ```text
-SetConstant(Parameter="Value",...)
+ShiftTimeByInterval(Parameter="Value",...)
 ```
 **<p style="text-align: center;">
 Command Parameters
@@ -40,28 +43,34 @@ Command Parameters
 |`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
-|`ConstantValue`|The constant value to use as the data value.|None – must be specified, or specify monthly values.|
-|`MonthValues`|Monthly values to use as the data values.  Twelve values for January – December must be specified, separated by commas.  `*` indicates to keep the original value.  Blank or `NaN` indicates to set the value to missing.  If the time series data interval is less than monthly, each date/time will be set for a specific month.|None – must be specified, or specify a constant value.|
-|`SetStart`|The starting date/time for the data set.  Can set using processor `${Property}`.|Set data for the full period.|
-|`SetEnd`|The ending date/time for the data set.  Can set using processor `${Property}`.|Set data for the full period.|
+|`ShiftData`|Interval,multiplier tuples to apply to the data to perform the shift.  All values should be separated by commas.  An interval of `-1` indicates that the previous time step should be shifted to the current time step.  If the interval is `–1` and the multiplier is `1`, the previous time step is shifted to the current and multiplied by `1`, effectively shifting the time series by one interval.|None – at least 1 `value,multiplier` tuple must be specified.}
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetConstant).
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ShiftTimeByInterval).
 
-A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
-is as follows (only the early period is set to zero):
+A sample command file to shift a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+is as follows:
 
 ```text
-# 08235700 - ALAMOSA RIVER BELOW CASTLEMAN GULCH NEAR JASPER
-08235700.DWR.Streamflow.Month~HydroBase
-SetConstant(TSList=AllMatchingTSID,TSID="08235700.DWR.Streamflow.Month",ConstantValue=0,SetEnd="1950-01")
+# 08213500 - RIO GRANDE RIVER AT THIRTY MILE BRIDGE NEAR CREEDE
+08213500.DWR.Streamflow.Day~HydroBase
+ShiftTimeByInterval(TSList=AllMatchingTSID,TSID="08213500.DWR.Streamflow.Day",ShiftData="-1,1")
+08213500.DWR.Streamflow.Day~HydroBase
 ```
+The following is the result.
+<a href="../ShiftTimeByInterval_Graph.png">See also the full-size image.</a>
+
+![ShiftTimeByInterval Graph](ShiftTimeByInterval_Graph.png)
+
+**<p style="text-align: center;">
+Results from `ShiftTimeByInterval` Command
+</p>**
+
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`AddConstant`](../AddConstant/AddConstant) command
-* [`FillConstant`](../FillConstant/FillConstant) command
+* [`Disaggregate`](../Disaggregate/Disaggregate) command
 * [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command

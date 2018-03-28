@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetConstant #
+# Learn TSTool / Command / ChangePeriod #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
@@ -11,17 +11,18 @@
 
 ## Overview ##
 
-The `SetConstant` command sets the values of a time series to a single or monthly constant values.
+The `ChangePeriod` command changes the period for the given time series,
+for example to extend the time series.  A longer period will be filled with missing values.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SetConstant.png">See also the full-size image.</a>
+<a href="../ChangePeriod.png">See also the full-size image.</a>
 
-![SetConstant](SetConstant.png)
+![ChangePeriod](ChangePeriod.png)
 
 **<p style="text-align: center;">
-`SetConstant` Command Editor
+`ChangePeriod` Command Editor
 </p>**
 
 ## Command Syntax ##
@@ -29,7 +30,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The command syntax is as follows:
 
 ```text
-SetConstant(Parameter="Value",...)
+ChangePeriod(Parameter="Value",...)
 ```
 **<p style="text-align: center;">
 Command Parameters
@@ -40,28 +41,23 @@ Command Parameters
 |`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
-|`ConstantValue`|The constant value to use as the data value.|None – must be specified, or specify monthly values.|
-|`MonthValues`|Monthly values to use as the data values.  Twelve values for January – December must be specified, separated by commas.  `*` indicates to keep the original value.  Blank or `NaN` indicates to set the value to missing.  If the time series data interval is less than monthly, each date/time will be set for a specific month.|None – must be specified, or specify a constant value.|
-|`SetStart`|The starting date/time for the data set.  Can set using processor `${Property}`.|Set data for the full period.|
-|`SetEnd`|The ending date/time for the data set.  Can set using processor `${Property}`.|Set data for the full period.|
+|`NewStart`|The new period start, specified to precision that matches the time series data interval.  Can be specified with a processor `${Property}`.|Start will remain the same.|
+|`NewEnd`|The new period end, specified to precision that matches the time series data interval.  Can be specified with a processor `${Property}`.|End will remain the same.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetConstant).
+See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ChangePeriod).
 
-A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
-is as follows (only the early period is set to zero):
+A sample command file to change the period for a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+is as follows:
 
 ```text
-# 08235700 - ALAMOSA RIVER BELOW CASTLEMAN GULCH NEAR JASPER
-08235700.DWR.Streamflow.Month~HydroBase
-SetConstant(TSList=AllMatchingTSID,TSID="08235700.DWR.Streamflow.Month",ConstantValue=0,SetEnd="1950-01")
+# 08236000 - ALAMOSA RIVER ABOVE TERRACE RESERVOIR
+08236000.DWR.Streamflow.Month~HydroBase
+ChangePeriod(TSList=AllTS,NewStart="1900-01")
 ```
-
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`AddConstant`](../AddConstant/AddConstant) command
-* [`FillConstant`](../FillConstant/FillConstant) command
 * [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
