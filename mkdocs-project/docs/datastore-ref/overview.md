@@ -41,7 +41,7 @@ The following datastores (and input types) are listed in alphabetical order by d
 | [NWS Card](NwsCard/NwsCard)                                       | File (text)            | No limit           | General time series format (hour interval)     | **not yet migrated**     |
 | [NWSRFS ESP Ensemble](NwsrfsEspEnsemble/NwsrfsEspEnsemble)        | File (binary)          | No limit           | Ensembles of time series (hour interval)       | **not yet migrated**     |
 | [NWSRFS FS5Files](NwsrfsFs5files/NwsrfsFs5files)                  | File database (binary) | No limit           | National Weather Service River Forecast System | **not yet migrated**     |
-| [RCC ACIS](NwsrfsFs5files/NwsrfsFs5files)                         | Web service (REST)     | USA                | Precipitation, temperature, other climate      | **not yet migrated**     |
+| [RCC ACIS](RCC-ACIS/RCC-ACIS)                                     | Web service (REST)     | USA                | Precipitation, temperature, other climate      | Migrated                 |
 | [Reclamation HDB](ReclamationHdb/ReclamationHdb)                  | Database (Oracle)      | USA                | Water resources                                | **not yet migrated**     |
 | [Reclamation Pisces](ReclamationPisces/ReclamationPisces)         | Database (MySQL)       | USA                | Water resources                                | **not yet migrated**     |
 | [RiverWare](RiverWare/RiverWare)                                  | File (text)            | No limit           | RiverWare modeling software data file          | **not yet migrated**     |
