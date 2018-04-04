@@ -5,16 +5,16 @@
 site_name: CDSS / Learn TSTool
 pages:
 - Home: index.md
-- 1 - Introduction: introduction.md
-- 2 - Getting Started: getting-started.md
-- 3 - Commands: commands.md
-- 4 - Tools: tools.md
-- 5 - Examples of Use: examples.md
+- 1 - Introduction: introduction/introduction.md
+- 2 - Getting Started: getting-started/getting-started.md
+- 3 - Commands: commands/commands.md
+- 4 - Tools: tools/tools.md
+- 5 - Examples of Use: examples/examples.md
 - 6 - Quality Control: quality-control/quality-control.md
-- 7 - Spatial Data Integration: spatial.md
-- 8 - Spreadsheet Integration: spreadsheet.md
-- 9 - Model Framework Integration: modeling.md
-- 10 - Troubleshooting: troubleshooting.md
+- 7 - Spatial Data Integration: spatial/spatial.md
+- 8 - Spreadsheet Integration: spreadsheet/spreadsheet.md
+- 9 - Model Framework Integration: modeling/modeling.md
+- 10 - Troubleshooting: troubleshooting/troubleshooting.md
 - 11 - Best Practices:
   - Time Series Identifiers: best-practices/ts-identifiers.md
 - 12 - Resources: resources.md
@@ -233,9 +233,9 @@ pages:
   - StateMod Model Binary Output: datastore-ref/StateModB/StateModB.md
   - USGS NWIS Daily: datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md
   - USGS NWIS RDB: datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB.md
-- 'Appendix - Install TSTool': appendix/install.md
-- 'Appendix - TSView Time Series Viewing Tools': appendix/tsview.md
-- 'Appendix - GeoView Mapping Tools': appendix/geoview.md
+- 'Appendix - Install TSTool': appendix-install/install.md
+- 'Appendix - TSView Time Series Viewing Tools': appendix-tsview/tsview.md
+- 'Appendix - GeoView Mapping Tools': appendix-geoview/geoview.md
 # ------- configuration properties ---------------
 # Use Material theme
 # - installation notes:  https://github.com/squidfunk/mkdocs-material
