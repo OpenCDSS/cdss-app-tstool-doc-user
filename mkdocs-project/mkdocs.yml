@@ -22,6 +22,7 @@ pages:
   - Overview: lessons/overview.md
 - Reference - Commands:
   - Overview: command-ref/overview.md
+  - Command Syntax: command-ref/command-syntax.md
   - '# Comment': command-ref/Comment/Comment.md
   - '/* Comment Start': command-ref/CommentBlockStart/CommentBlockStart.md
   - '*/ Comment End': command-ref/CommentBlockEnd/CommentBlockEnd.md
@@ -234,6 +235,8 @@ pages:
   - USGS NWIS Daily: datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md
   - USGS NWIS RDB: datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB.md
 - 'Appendix - Install TSTool': appendix-install/install.md
+- 'Appendix - Release Notes': appendix-release-notes/release-notes.md
+- 'Appendix - Running TSTool in Various Modes': appendix-running/running.md
 - 'Appendix - TSView Time Series Viewing Tools': appendix-tsview/tsview.md
 - 'Appendix - GeoView Mapping Tools': appendix-geoview/geoview.md
 # ------- configuration properties ---------------

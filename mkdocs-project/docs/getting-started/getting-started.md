@@ -1,9 +1,9 @@
 # Learn TSTool / Getting Started #
 
+**The original Word version of TSTool documentation "Chapter 3 Getting Started" needs to be integrated here.**
+
 This page explains how to get started using TSTool.
 It is assumed that the software has been installed as per the [Install TSTool](install) documentation.
-
-**The original Word version of TSTool documentation "Chapter 3 Getting Started" needs to be integrated here.**
 
 The following are basic tasks to use the TSTool:
 
