@@ -27,7 +27,7 @@ that can be used with software to enable map-based interfaces.
 The main purpose of the GeoView package is to provide simple and
 flexible map displays that can be used in a variety of software applications with little or no reconfiguration.
 
-The GeoView package has been developed by the Open Water Foundation using Java technology.
+The GeoView package has been developed using Java technology.
 GeoView interfaces can be embedded in Java applications (e.g.,
 use GeoView as the main window interface), can be enabled as a separate
 floating window (e.g., to support an application's features without being embedded in the main window),
