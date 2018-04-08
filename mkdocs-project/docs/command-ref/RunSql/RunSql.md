@@ -1,4 +1,4 @@
-# Learn TSTool / Command / RunSql #
+# TSTool / Command / RunSql #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

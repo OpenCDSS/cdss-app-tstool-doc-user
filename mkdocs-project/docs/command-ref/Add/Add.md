@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Add #
+# TSTool / Command / Add #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

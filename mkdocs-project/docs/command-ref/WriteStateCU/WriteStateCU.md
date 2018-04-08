@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteStateCU #
+# TSTool / Command / WriteStateCU #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

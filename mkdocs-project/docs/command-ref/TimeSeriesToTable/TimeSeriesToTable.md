@@ -1,4 +1,4 @@
-# Learn TSTool / Command / TimeSeriesToTable #
+# TSTool / Command / TimeSeriesToTable #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

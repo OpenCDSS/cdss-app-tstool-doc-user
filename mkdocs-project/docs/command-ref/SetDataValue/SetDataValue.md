@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetDataValue #
+# TSTool / Command / SetDataValue #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

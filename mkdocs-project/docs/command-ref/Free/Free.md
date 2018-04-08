@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Free Time Series #
+# TSTool / Command / Free Time Series #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

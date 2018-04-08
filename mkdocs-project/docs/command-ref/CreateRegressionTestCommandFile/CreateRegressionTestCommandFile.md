@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CreateRegressionTestCommandFile #
+# TSTool / Command / CreateRegressionTestCommandFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteRiverWare #
+# TSTool / Command / WriteRiverWare #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

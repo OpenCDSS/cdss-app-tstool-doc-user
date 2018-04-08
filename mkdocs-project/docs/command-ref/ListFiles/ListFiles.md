@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ListFiles #
+# TSTool / Command / ListFiles #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

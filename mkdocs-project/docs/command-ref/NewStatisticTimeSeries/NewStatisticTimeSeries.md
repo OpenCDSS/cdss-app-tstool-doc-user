@@ -1,4 +1,4 @@
-# Learn TSTool / Command / NewStatisticTimeSeries #
+# TSTool / Command / NewStatisticTimeSeries #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

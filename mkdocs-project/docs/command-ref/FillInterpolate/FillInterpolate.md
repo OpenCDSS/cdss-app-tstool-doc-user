@@ -1,4 +1,4 @@
-# Learn TSTool / Command / FillInterpolate #
+# TSTool / Command / FillInterpolate #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

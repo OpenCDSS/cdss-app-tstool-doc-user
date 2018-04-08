@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReplaceValue #
+# TSTool / Command / ReplaceValue #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

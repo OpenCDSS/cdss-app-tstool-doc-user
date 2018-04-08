@@ -1,4 +1,4 @@
-# Learn TSTool / Command / FTPGet #
+# TSTool / Command / FTPGet #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

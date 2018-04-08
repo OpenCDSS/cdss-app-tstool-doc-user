@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteTimeSeriesToJson #
+# TSTool / Command / WriteTimeSeriesToJson #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

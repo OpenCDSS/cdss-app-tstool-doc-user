@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CloseDataStore #
+# TSTool / Command / CloseDataStore #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command Syntax #
+# TSTool / Command Syntax #
 
 * [Introduction](#introduction)
 * [Commands - Basic Syntax](#commands-basic-syntax)

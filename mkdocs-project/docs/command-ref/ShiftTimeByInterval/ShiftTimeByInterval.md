@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ShiftTimeByInterval #
+# TSTool / Command / ShiftTimeByInterval #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

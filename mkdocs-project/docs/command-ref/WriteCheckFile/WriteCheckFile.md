@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteCheckFile #
+# TSTool / Command / WriteCheckFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

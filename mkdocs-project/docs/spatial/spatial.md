@@ -1,4 +1,4 @@
-# Learn TSTool / Spatial Data Integration #
+# TSTool / Spatial Data Integration #
 
 This chapter describes TSTool integration with spatial data.
 This chapter will be updated when addition spatial data integration features are implemented.

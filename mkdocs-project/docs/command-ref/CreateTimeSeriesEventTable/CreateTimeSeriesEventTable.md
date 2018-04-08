@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CreateTimeSeriesEventTable #
+# TSTool / Command / CreateTimeSeriesEventTable #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

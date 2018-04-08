@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Empty Command Line #
+# TSTool / Command / Empty Command Line #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

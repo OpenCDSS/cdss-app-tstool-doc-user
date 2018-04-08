@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ExpandTemplateFile #
+# TSTool / Command / ExpandTemplateFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

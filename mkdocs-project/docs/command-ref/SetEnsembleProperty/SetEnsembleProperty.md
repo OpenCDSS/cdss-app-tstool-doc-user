@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetEnsembleProperty #
+# TSTool / Command / SetEnsembleProperty #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CreateDataStoreDataDictionary #
+# TSTool / Command / CreateDataStoreDataDictionary #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

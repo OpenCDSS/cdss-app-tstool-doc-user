@@ -1,4 +1,4 @@
-# Learn TSTool / Command / InsertTableColumn #
+# TSTool / Command / InsertTableColumn #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

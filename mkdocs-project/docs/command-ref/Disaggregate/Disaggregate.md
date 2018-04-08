@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Disaggregate #
+# TSTool / Command / Disaggregate #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

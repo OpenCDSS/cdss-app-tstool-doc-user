@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteTableToExcel #
+# TSTool / Command / WriteTableToExcel #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadExcelWorkbook #
+# TSTool / Command / ReadExcelWorkbook #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

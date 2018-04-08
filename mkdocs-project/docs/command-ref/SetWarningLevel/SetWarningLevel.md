@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetWarningLevel #
+# TSTool / Command / SetWarningLevel #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

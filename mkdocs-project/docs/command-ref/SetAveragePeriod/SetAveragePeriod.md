@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetAveragePeriod #
+# TSTool / Command / SetAveragePeriod #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

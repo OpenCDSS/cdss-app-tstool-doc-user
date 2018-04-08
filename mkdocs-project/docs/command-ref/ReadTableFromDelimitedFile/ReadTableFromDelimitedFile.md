@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadTableFromDelimitedFile #
+# TSTool / Command / ReadTableFromDelimitedFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

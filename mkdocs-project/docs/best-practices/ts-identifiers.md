@@ -1,4 +1,4 @@
-# Learn TSTool / Best Practices / Time Series Identifiers #
+# TSTool / Best Practices / Time Series Identifiers #
 
 ## Overview ##
 

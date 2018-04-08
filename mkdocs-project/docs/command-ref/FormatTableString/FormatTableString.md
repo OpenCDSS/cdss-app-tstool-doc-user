@@ -1,4 +1,4 @@
-# Learn TSTool / Command / FormatTableString #
+# TSTool / Command / FormatTableString #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

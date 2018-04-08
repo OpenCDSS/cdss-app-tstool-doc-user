@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadPatternFile #
+# TSTool / Command / ReadPatternFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

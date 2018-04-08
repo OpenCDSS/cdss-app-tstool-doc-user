@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WebGet #
+# TSTool / Command / WebGet #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

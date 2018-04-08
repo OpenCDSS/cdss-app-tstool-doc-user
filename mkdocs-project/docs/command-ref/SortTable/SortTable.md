@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SortTable #
+# TSTool / Command / SortTable #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

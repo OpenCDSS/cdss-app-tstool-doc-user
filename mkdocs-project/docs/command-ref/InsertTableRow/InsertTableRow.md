@@ -1,4 +1,4 @@
-# Learn TSTool / Command / InsertTableRow #
+# TSTool / Command / InsertTableRow #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

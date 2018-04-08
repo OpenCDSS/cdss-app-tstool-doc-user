@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ResequenceTimeSeriesData #
+# TSTool / Command / ResequenceTimeSeriesData #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CopyTable #
+# TSTool / Command / CopyTable #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

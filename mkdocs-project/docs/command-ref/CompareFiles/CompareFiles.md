@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CompareFiles #
+# TSTool / Command / CompareFiles #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

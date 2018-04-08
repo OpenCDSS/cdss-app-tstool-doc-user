@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Exit #
+# TSTool / Command / Exit #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

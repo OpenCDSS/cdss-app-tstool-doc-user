@@ -1,4 +1,4 @@
-# Learn TSTool / Command / NewStatisticYearTS #
+# TSTool / Command / NewStatisticYearTS #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

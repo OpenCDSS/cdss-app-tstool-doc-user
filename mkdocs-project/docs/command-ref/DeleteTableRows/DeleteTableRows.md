@@ -1,4 +1,4 @@
-# Learn TSTool / Command / DeleteTableRows #
+# TSTool / Command / DeleteTableRows #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

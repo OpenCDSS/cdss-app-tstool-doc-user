@@ -1,4 +1,4 @@
-# Learn TSTool / Command / FillFromTS #
+# TSTool / Command / FillFromTS #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

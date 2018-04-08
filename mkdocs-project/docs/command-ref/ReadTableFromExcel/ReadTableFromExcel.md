@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadTableFromExcel #
+# TSTool / Command / ReadTableFromExcel #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

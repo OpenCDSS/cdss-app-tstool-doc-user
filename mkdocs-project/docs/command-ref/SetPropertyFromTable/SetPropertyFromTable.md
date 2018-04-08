@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetPropertyFromTable #
+# TSTool / Command / SetPropertyFromTable #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

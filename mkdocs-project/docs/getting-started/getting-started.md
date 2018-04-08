@@ -1,4 +1,4 @@
-# Learn TSTool / Getting Started #
+# TSTool / Getting Started #
 
 **The original Word version of TSTool documentation "Chapter 3 Getting Started" needs to be integrated here.**
 

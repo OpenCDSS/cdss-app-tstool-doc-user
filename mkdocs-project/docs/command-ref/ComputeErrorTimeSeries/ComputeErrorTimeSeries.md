@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ComputeErrorTimeSeries #
+# TSTool / Command / ComputeErrorTimeSeries #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

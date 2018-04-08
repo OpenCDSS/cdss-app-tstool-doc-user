@@ -1,4 +1,4 @@
-# Learn TSTool / Command / AppendTable #
+# TSTool / Command / AppendTable #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

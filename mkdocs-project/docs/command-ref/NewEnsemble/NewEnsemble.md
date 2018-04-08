@@ -1,4 +1,4 @@
-# Learn TSTool / Command / NewEnsemble #
+# TSTool / Command / NewEnsemble #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

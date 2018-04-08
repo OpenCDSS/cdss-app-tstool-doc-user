@@ -1,4 +1,4 @@
-# Learn TSTool / Command / NewEndOfMonthTSFromDayTS #
+# TSTool / Command / NewEndOfMonthTSFromDayTS #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

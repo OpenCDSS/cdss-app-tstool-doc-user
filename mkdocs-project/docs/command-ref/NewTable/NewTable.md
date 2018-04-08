@@ -1,4 +1,4 @@
-# Learn TSTool / Command / NewTable #
+# TSTool / Command / NewTable #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

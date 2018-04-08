@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetToMax #
+# TSTool / Command / SetToMax #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

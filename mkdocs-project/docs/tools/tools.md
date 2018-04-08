@@ -1,4 +1,4 @@
-# Learn TSTool / Tools #
+# TSTool / Tools #
 
 This chapter discusses the tools available under the ***Tools*** menu.
 The ***Tools*** menu lists tools that perform additional analysis on

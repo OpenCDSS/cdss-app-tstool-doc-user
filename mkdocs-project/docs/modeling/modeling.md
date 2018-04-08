@@ -1,4 +1,4 @@
-# Learn TSTool / Model Integration #
+# TSTool / Model Integration #
 
 TSTool can integrate with modeling frameworks or serve as a modeling framework.
 This chapter explores various aspects of this integration.

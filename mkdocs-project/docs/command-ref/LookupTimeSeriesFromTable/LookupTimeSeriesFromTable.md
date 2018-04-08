@@ -1,4 +1,4 @@
-# Learn TSTool / Command / LookupTimeSeriesFromTable #
+# TSTool / Command / LookupTimeSeriesFromTable #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

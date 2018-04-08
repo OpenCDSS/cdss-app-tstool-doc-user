@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteTableToHTML #
+# TSTool / Command / WriteTableToHTML #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteHecDss #
+# TSTool / Command / WriteHecDss #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

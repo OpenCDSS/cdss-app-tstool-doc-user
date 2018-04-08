@@ -1,4 +1,4 @@
-# Learn TSTool / Command / TableMath #
+# TSTool / Command / TableMath #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

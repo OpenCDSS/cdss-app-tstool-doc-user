@@ -1,4 +1,4 @@
-# Learn TSTool / Command / NewStatisticEnsemble #
+# TSTool / Command / NewStatisticEnsemble #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

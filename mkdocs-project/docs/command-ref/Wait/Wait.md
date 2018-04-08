@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Wait #
+# TSTool / Command / Wait #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

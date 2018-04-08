@@ -1,4 +1,4 @@
-# Learn TSTool / Command / RelativeDiff #
+# TSTool / Command / RelativeDiff #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

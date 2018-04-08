@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ProcessRasterGraph #
+# TSTool / Command / ProcessRasterGraph #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteTableToDelimitedFile #
+# TSTool / Command / WriteTableToDelimitedFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

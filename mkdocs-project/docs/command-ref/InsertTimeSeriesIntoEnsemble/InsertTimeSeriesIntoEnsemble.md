@@ -1,4 +1,4 @@
-# Learn TSTool / Command / InsertTimeSeriesIntoEnsemble #
+# TSTool / Command / InsertTimeSeriesIntoEnsemble #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

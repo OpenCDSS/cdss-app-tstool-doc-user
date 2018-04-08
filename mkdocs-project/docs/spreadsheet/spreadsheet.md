@@ -1,4 +1,4 @@
-# Learn TSTool / Spreadsheet Integration #
+# TSTool / Spreadsheet Integration #
 
 This chapter provides a comparison of TSTool and Microsoft Excel and describes how they can be integrated.
 

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadUsgsNwisDaily #
+# TSTool / Command / ReadUsgsNwisDaily #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

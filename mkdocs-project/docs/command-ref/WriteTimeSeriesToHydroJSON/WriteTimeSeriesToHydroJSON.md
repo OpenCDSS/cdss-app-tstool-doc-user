@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteTimeSeriesToHydroJSON #
+# TSTool / Command / WriteTimeSeriesToHydroJSON #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

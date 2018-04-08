@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetExcelCell #
+# TSTool / Command / SetExcelCell #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

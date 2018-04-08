@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetOutputPeriod #
+# TSTool / Command / SetOutputPeriod #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

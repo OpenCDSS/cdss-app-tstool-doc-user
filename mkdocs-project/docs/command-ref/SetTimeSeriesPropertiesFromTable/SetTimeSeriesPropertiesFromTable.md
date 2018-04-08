@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetTimeSeriesPropertiesFromTable #
+# TSTool / Command / SetTimeSeriesPropertiesFromTable #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

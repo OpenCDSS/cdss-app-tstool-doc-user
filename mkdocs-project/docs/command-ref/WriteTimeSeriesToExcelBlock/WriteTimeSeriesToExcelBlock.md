@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteTimeSeriesToExcelBlock #
+# TSTool / Command / WriteTimeSeriesToExcelBlock #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

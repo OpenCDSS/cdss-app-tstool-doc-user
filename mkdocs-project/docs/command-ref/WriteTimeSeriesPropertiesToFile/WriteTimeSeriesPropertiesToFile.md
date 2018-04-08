@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteTimeSeriesPropertiesToFile #
+# TSTool / Command / WriteTimeSeriesPropertiesToFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

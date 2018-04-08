@@ -1,4 +1,4 @@
-# Learn TSTool / Command / StartLog #
+# TSTool / Command / StartLog #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

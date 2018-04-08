@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteTableToDataStore #
+# TSTool / Command / WriteTableToDataStore #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

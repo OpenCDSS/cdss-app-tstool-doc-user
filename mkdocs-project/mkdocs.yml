@@ -219,6 +219,8 @@ pages:
 - Reference - Datastores:
   - Overview: datastore-ref/overview.md
   - Colorado HydroBase: datastore-ref/CO-HydroBase/CO-HydroBase.md
+  - ColoradoWaterHBGuest: datastore-ref/ColoradoWaterHBGuest/ColoradoWaterHBGuest.md
+  - ColoradoWaterSMS: datastore-ref/ColoradoWaterSMS/ColoradoWaterSMS.md
   - DateValue: datastore-ref/DateValue/DateValue.md
   - Delft FEWS PI XML: datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md
   - Generic Database: datastore-ref/GenericDatabase/GenericDatabase.md
@@ -227,12 +229,16 @@ pages:
   - MODSIM: datastore-ref/MODSIM/MODSIM.md
   - NRCS AWDB: datastore-ref/NRCS-AWDB/NRCS-AWDB.md
   - RCC ACIS: datastore-ref/RCC-ACIS/RCC-ACIS.md
+  - ReclamationHDB: datastore-ref/ReclamationHDB/ReclamationHDB.md
+  - ReclamationPisces: datastore-ref/ReclamationPisces/ReclamationPisces.md
   - RiverWare: datastore-ref/RiverWare/RiverWare.md
   - StateCU Model: datastore-ref/StateCU/StateCU.md
   - StateCU Model Binary Output: datastore-ref/StateCUB/StateCUB.md
   - StateMod Model: datastore-ref/StateMod/StateMod.md
   - StateMod Model Binary Output: datastore-ref/StateModB/StateModB.md
   - USGS NWIS Daily: datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md
+  - USGS NWIS Groundwater: datastore-ref/USGS-NWIS-Groundwater/USGS-NWIS-Groundwater.md
+  - USGS NWIS Instananeous: datastore-ref/USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous.md
   - USGS NWIS RDB: datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB.md
 - 'Appendix - Install TSTool': appendix-install/install.md
 - 'Appendix - Release Notes': appendix-release-notes/release-notes.md

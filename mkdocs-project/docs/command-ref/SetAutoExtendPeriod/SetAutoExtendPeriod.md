@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetAutoExtendPeriod #
+# TSTool / Command / SetAutoExtendPeriod #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

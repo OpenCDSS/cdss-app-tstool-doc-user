@@ -1,4 +1,4 @@
-# Learn TSTool / Examples of Use #
+# TSTool / Examples of Use #
 
 This chapter provides examples for reading and processing time series data using TSTool.
 General examples are listed first, followed by more complex examples.

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / AnalyzePattern #
+# TSTool / Command / AnalyzePattern #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

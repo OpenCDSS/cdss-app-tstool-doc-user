@@ -1,4 +1,4 @@
-# Learn TSTool / Commands #
+# TSTool / Commands #
 
 This chapter summarizes features in the ***Commands*** menu.
 See also the [Command Reference overview](../command-ref/overview).

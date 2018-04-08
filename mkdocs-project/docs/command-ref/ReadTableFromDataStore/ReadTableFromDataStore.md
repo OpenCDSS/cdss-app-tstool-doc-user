@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadTableFromDataStore #
+# TSTool / Command / ReadTableFromDataStore #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

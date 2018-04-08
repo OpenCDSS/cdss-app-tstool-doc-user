@@ -1,4 +1,4 @@
-# Learn TSTool / Command / FillHistYearAverage #
+# TSTool / Command / FillHistYearAverage #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CheckTimeSeriesStatistic #
+# TSTool / Command / CheckTimeSeriesStatistic #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

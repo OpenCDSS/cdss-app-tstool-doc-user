@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Normalize #
+# TSTool / Command / Normalize #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

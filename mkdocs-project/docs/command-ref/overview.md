@@ -1,4 +1,4 @@
-# Learn TSTool / Command Reference / Overview #
+# TSTool / Command Reference / Overview #
 
 This reference section of the documentation provides information about TSTool commands,
 listed in groups consistent with the TSTool software menus.

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / NewExcelWorkbook #
+# TSTool / Command / NewExcelWorkbook #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

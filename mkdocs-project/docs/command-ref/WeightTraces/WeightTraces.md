@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WeightTraces #
+# TSTool / Command / WeightTraces #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

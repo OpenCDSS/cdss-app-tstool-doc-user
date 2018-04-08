@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteStateMod #
+# TSTool / Command / WriteStateMod #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

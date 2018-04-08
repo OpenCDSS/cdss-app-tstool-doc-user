@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Multiply #
+# TSTool / Command / Multiply #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

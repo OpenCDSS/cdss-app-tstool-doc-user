@@ -1,4 +1,4 @@
-# Learn TSTool / Command / FillProrate #
+# TSTool / Command / FillProrate #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

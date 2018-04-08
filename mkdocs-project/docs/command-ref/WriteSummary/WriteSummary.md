@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteSummary #
+# TSTool / Command / WriteSummary #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

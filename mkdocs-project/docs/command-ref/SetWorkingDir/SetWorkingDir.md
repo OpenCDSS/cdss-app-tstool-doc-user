@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetWorkingDir #
+# TSTool / Command / SetWorkingDir #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

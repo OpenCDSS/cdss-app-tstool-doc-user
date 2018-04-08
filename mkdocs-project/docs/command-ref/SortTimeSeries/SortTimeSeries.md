@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SortTimeSeries #
+# TSTool / Command / SortTimeSeries #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

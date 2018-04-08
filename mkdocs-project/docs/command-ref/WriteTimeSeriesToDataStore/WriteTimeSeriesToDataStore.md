@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteTimeSeriesToDataStore #
+# TSTool / Command / WriteTimeSeriesToDataStore #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

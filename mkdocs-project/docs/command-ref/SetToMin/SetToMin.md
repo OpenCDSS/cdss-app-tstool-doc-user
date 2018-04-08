@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetToMin #
+# TSTool / Command / SetToMin #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / TableTimeSeriesMath #
+# TSTool / Command / TableTimeSeriesMath #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

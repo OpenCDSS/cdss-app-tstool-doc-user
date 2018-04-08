@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CloseExcelWorkbook #
+# TSTool / Command / CloseExcelWorkbook #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

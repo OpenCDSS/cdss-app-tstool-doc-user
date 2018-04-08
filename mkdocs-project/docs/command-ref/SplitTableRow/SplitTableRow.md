@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SplitTableRow #
+# TSTool / Command / SplitTableRow #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

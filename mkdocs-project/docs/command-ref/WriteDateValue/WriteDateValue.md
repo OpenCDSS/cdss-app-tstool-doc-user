@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteDateValue #
+# TSTool / Command / WriteDateValue #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

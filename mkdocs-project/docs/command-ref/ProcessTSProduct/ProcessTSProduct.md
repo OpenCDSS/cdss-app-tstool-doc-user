@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ProcessTSProduct #
+# TSTool / Command / ProcessTSProduct #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

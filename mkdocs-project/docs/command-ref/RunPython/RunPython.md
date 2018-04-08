@@ -1,4 +1,4 @@
-# Learn TSTool / Command / RunPython #
+# TSTool / Command / RunPython #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / UnzipFile #
+# TSTool / Command / UnzipFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

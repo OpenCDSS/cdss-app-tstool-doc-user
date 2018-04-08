@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WritePropertiesToFile #
+# TSTool / Command / WritePropertiesToFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

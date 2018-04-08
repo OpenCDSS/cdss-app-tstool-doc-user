@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Comment Block Start `/*` #
+# TSTool / Command / Comment Block Start `/*` #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

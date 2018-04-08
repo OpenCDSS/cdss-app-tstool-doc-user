@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadStateCU #
+# TSTool / Command / ReadStateCU #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

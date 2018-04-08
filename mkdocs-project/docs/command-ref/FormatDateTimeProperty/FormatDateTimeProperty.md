@@ -1,4 +1,4 @@
-# Learn TSTool / Command / FormatDateTimeProperty #
+# TSTool / Command / FormatDateTimeProperty #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / NewStatisticMonthTimeSeries #
+# TSTool / Command / NewStatisticMonthTimeSeries #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

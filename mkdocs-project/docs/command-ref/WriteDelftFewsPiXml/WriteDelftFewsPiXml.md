@@ -1,4 +1,4 @@
-# Learn TSTool / Command / WriteDelftFewsPiXml #
+# TSTool / Command / WriteDelftFewsPiXml #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

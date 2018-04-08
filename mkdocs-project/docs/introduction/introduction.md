@@ -1,4 +1,4 @@
-# Learn TSTool / Introduction #
+# TSTool / Introduction #
 
 * [Introduction](#introduction)
 * [TSTool Data Flow Concepts](#tstool-data-flow-concepts)

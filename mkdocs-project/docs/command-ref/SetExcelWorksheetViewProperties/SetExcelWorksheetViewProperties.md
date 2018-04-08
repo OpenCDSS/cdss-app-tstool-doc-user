@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetExcelWorksheetViewProperties #
+# TSTool / Command / SetExcelWorksheetViewProperties #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

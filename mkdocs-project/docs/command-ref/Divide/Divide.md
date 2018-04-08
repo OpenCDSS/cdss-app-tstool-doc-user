@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Divide #
+# TSTool / Command / Divide #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

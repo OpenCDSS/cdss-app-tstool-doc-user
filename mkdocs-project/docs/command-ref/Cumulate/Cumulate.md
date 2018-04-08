@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Cumulate #
+# TSTool / Command / Cumulate #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

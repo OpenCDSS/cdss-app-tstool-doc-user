@@ -1,4 +1,4 @@
-# Learn TSTool / Command / AddConstant #
+# TSTool / Command / AddConstant #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

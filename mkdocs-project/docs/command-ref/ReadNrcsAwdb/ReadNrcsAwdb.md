@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadNrcsAwdb #
+# TSTool / Command / ReadNrcsAwdb #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

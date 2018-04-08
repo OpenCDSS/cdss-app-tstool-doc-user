@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ManipulateTableString #
+# TSTool / Command / ManipulateTableString #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

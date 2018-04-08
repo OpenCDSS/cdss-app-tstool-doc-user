@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetOutputYearType #
+# TSTool / Command / SetOutputYearType #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

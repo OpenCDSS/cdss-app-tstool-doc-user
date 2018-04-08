@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetInputPeriod #
+# TSTool / Command / SetInputPeriod #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadDateValue #
+# TSTool / Command / ReadDateValue #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

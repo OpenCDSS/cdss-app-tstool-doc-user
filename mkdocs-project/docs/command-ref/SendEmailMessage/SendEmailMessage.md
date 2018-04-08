@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SendEmailMessage #
+# TSTool / Command / SendEmailMessage #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

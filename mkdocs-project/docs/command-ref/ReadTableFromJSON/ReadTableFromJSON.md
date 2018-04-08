@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadTableFromJSON #
+# TSTool / Command / ReadTableFromJSON #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

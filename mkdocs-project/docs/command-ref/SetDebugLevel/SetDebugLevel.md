@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetDebugLevel #
+# TSTool / Command / SetDebugLevel #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

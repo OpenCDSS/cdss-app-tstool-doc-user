@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadTimeSeriesList #
+# TSTool / Command / ReadTimeSeriesList #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

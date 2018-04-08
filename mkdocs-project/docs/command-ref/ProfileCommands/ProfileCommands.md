@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ProfileCommands #
+# TSTool / Command / ProfileCommands #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

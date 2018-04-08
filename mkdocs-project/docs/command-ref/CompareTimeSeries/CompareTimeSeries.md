@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CompareTimeSeries #
+# TSTool / Command / CompareTimeSeries #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

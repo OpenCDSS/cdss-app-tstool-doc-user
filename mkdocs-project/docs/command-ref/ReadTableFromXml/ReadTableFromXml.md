@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadTableFromXml #
+# TSTool / Command / ReadTableFromXml #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

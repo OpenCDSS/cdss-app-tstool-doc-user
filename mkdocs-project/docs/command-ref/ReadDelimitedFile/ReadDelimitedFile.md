@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadDelimitedFile #
+# TSTool / Command / ReadDelimitedFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

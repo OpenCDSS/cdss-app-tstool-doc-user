@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadPropertiesFromFile #
+# TSTool / Command / ReadPropertiesFromFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

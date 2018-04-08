@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Subtract #
+# TSTool / Command / Subtract #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

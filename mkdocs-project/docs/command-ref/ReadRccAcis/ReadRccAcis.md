@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadRccAcis #
+# TSTool / Command / ReadRccAcis #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadTableFromDBF #
+# TSTool / Command / ReadTableFromDBF #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

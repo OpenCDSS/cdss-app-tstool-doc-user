@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CreateFromList #
+# TSTool / Command / CreateFromList #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

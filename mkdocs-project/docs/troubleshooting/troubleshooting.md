@@ -1,4 +1,4 @@
-# Learn TSTool / Troubleshooting #
+# TSTool / Troubleshooting #
 
 TSTool is a Java desktop application that uses many software components,
 some of which are tightly integrated with TSTool software code,

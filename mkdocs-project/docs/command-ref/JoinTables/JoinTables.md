@@ -1,4 +1,4 @@
-# Learn TSTool / Command / JoinTables #
+# TSTool / Command / JoinTables #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

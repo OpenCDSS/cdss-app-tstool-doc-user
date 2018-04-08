@@ -1,4 +1,4 @@
-# Learn TSTool / Command / DeleteTableColumns #
+# TSTool / Command / DeleteTableColumns #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

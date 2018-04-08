@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CreateEnsembleFromOneTimeSeries #
+# TSTool / Command / CreateEnsembleFromOneTimeSeries #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Comment Block End `*/` #
+# TSTool / Command / Comment Block End `*/` #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

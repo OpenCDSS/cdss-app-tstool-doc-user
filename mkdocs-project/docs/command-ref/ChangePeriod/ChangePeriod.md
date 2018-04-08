@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ChangePeriod #
+# TSTool / Command / ChangePeriod #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

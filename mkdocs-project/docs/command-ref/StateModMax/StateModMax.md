@@ -1,4 +1,4 @@
-# Learn TSTool / Command / StateModMax #
+# TSTool / Command / StateModMax #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

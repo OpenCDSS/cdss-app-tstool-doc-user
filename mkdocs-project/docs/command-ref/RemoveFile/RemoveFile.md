@@ -1,4 +1,4 @@
-# Learn TSTool / Command / RemoveFile #
+# TSTool / Command / RemoveFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

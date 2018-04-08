@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetIncludeMissingTS #
+# TSTool / Command / SetIncludeMissingTS #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

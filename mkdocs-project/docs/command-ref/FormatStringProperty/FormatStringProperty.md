@@ -1,4 +1,4 @@
-# Learn TSTool / Command / FormatStringProperty #
+# TSTool / Command / FormatStringProperty #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

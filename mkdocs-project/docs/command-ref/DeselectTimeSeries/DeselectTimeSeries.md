@@ -1,4 +1,4 @@
-# Learn TSTool / Command / DeselectTimeSeries #
+# TSTool / Command / DeselectTimeSeries #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

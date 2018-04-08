@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ChangeTimeZone #
+# TSTool / Command / ChangeTimeZone #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

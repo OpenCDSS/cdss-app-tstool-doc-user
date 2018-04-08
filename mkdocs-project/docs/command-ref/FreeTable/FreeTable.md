@@ -1,4 +1,4 @@
-# Learn TSTool / Command / FreeTable #
+# TSTool / Command / FreeTable #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

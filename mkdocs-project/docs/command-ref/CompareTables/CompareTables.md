@@ -1,4 +1,4 @@
-# Learn TSTool / Command / CompareTables #
+# TSTool / Command / CompareTables #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

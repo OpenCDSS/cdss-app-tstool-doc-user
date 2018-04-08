@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Blend #
+# TSTool / Command / Blend #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Install TSTool #
+# TSTool / Install TSTool #
 
 This appendix describes how to install TSTool.
 TSTool was originally developed for [CDSS (Colorado's Decision Support Systems)](http://cdss.state.co.us)

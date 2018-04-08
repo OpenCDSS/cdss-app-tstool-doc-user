@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetIgnoreLEZero #
+# TSTool / Command / SetIgnoreLEZero #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

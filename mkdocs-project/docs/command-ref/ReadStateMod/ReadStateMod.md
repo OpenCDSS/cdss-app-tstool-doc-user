@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadStateMod #
+# TSTool / Command / ReadStateMod #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

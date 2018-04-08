@@ -1,4 +1,4 @@
-# Learn TSTool / Command / Scale #
+# TSTool / Command / Scale #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

@@ -1,4 +1,4 @@
-# Learn TSTool / Command / PrintTextFile #
+# TSTool / Command / PrintTextFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

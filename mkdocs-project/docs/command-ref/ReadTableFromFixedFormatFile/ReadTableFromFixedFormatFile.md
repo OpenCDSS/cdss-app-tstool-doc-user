@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadTableFromFixedFormatFile #
+# TSTool / Command / ReadTableFromFixedFormatFile #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

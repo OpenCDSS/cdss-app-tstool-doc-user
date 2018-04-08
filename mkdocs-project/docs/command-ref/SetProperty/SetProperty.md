@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetProperty #
+# TSTool / Command / SetProperty #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

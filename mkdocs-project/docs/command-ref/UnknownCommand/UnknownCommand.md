@@ -1,4 +1,4 @@
-# Learn TSTool / Command / UnknownCommand #
+# TSTool / Command / UnknownCommand #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

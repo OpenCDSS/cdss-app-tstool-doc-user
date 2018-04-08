@@ -1,4 +1,4 @@
-# Learn TSTool / Command / NewTreeView #
+# TSTool / Command / NewTreeView #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

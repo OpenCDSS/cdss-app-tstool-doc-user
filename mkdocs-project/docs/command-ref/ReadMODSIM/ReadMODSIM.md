@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadMODSIM #
+# TSTool / Command / ReadMODSIM #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

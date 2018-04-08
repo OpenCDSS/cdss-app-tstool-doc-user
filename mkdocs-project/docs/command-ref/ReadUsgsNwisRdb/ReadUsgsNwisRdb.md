@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadUsgsNwisRdb #
+# TSTool / Command / ReadUsgsNwisRdb #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

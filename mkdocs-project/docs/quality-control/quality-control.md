@@ -1,4 +1,4 @@
-# Learn TSTool / Quality Control #
+# TSTool / Quality Control #
 
 This chapter discusses how TSTool software is quality controlled and how to use TSTool for quality control.
 

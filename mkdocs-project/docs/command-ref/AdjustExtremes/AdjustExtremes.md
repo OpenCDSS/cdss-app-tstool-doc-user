@@ -1,4 +1,4 @@
-# Learn TSTool / Command / AdjustExtremes #
+# TSTool / Command / AdjustExtremes #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

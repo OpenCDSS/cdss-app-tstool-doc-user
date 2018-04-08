@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ConvertDataUnits #
+# TSTool / Command / ConvertDataUnits #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

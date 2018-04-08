@@ -1,4 +1,4 @@
-# Learn TSTool / Command / ReadPropertiesFromExcel #
+# TSTool / Command / ReadPropertiesFromExcel #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)

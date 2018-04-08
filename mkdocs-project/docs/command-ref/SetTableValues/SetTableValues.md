@@ -1,4 +1,4 @@
-# Learn TSTool / Command / SetTableValues #
+# TSTool / Command / SetTableValues #
 
 * [Overview](#overview)
 * [Command Editor](#command-editor)
