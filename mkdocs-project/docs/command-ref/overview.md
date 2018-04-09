@@ -122,7 +122,7 @@ These commands create new time series from other time series or data values.
 * [`NewStatisticTimeSeries`](NewStatisticTimeSeries/NewStatisticTimeSeries) - create a new time series having statistic repeated each year
 * [`NewStatisticMonthTimeSeries`](NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries) - create a new time series with monthly statistics
 * [`NewStatisticYearTS`](NewStatisticYearTS/NewStatisticYearTS) - create a new time series of annual statistics
-* [`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries)
+* [`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries) - create time series containing statistic from moving "running" sample
 
 ### Read Time Series ###
 
@@ -134,17 +134,17 @@ These commands read time series from various sources.
 * [`ReadDateValue`](ReadDateValue/ReadDateValue) - read time series from a [DateValue file](../datastore-ref/DateValue/DateValue)
 * [`ReadDelftFewsPiXml`](ReadDelftFewsPiXml/ReadDelftFewsPiXml) - read time series from Delft [FEWS PI XML file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML)
 * [`ReadDelimitedFile`](ReadDelimitedFile/ReadDelimitedFile) - read time series from delimited file
-* [`ReadHecDss`](ReadHecDss/ReadHecDss)
+* [`ReadHecDss`](ReadHecDss/ReadHecDss) - read time series from [HEC-DSS file](../datastore-ref/HEC-DSS/HEC-DSS)
 * [`ReadHydroBase`](ReadHydroBase/ReadHydroBase) - read time series from [State of Colorado HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase)
 * [`ReadMODSIM`](ReadMODSIM/ReadMODSIM) - read time series from [MODSIM model file](../datastore-ref/MODSIM/MODSIM)
 * [`ReadNrcsAwdb`](ReadNrcsAwdb/ReadNrcsAwdb) - read time series from [NRCS AWDB web services](../datastore-ref/NRCS-AWDB/NRCS-AWDB)
 * [`ReadNwsCard`](ReadNwsCard/ReadNwsCard)
 * [`ReadNwsrfsTraceEnsemble`](ReadNwsrfsTraceEnsemble/ReadNwsrfsTraceEnsemble)
-* [`ReadNwsrfsFs5files`](ReadNwsrfsFs5files/ReadNwsrfsFs5files)
+* [`ReadNwsrfsFS5files`](ReadNwsrfsFS5files/ReadNwsrfsFS5files)
 * [`ReadRccAcis`](ReadRccAcis/ReadRccAcis) - read time series from [RCC ACIS web service](../datastore-ref/RCC-ACIS/RCC-ACIS)
-* [`ReadReclamationHDB`](ReadReclamationHDB/ReadReclamationHDB)
-* [`ReadReclamationPisces`](ReadReclamationPisces/ReadReclamationPisces)
-* [`ReadRiverWare`](ReadRiverWare/ReadRiverWare)
+* [`ReadReclamationHDB`](ReadReclamationHDB/ReadReclamationHDB) - read time series from [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB)
+* [`ReadReclamationPisces`](ReadReclamationPisces/ReadReclamationPisces) - read time series from [Reclamation Pisces database](../datastore-ref/ReclamationPisces)
+* [`ReadRiverWare`](ReadRiverWare/ReadRiverWare) - read time series from [RiverWare file](../datastore-ref/RiverWare/RiverWare)
 * [`ReadStateCU`](ReadStateCU/ReadStateCU) - read time series from a [StateCU file](../datastore-ref/StateCU/StateCU)
 * [`ReadStateCUB`](ReadStateCUB/ReadStateCUB) - read time series from a [StateCU binary file](../datastore-ref/StateCUB/StateCUB)
 * [`ReadStateMod`](ReadStateMod/ReadStateMod) - read time series from a [StateMod file](../datastore-ref/StateMod/StateMod)
@@ -152,9 +152,9 @@ These commands read time series from various sources.
 * [`ReadTimeSeries`](ReadTimeSeries/ReadTimeSeries) - read a single time series using TSID to determine data source
 * [`ReadTimeSeriesFromDataStore`](ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore) - read time series from a datastore
 * [`ReadTimeSeriesList`](ReadTimeSeriesList/ReadTimeSeriesList) - read time series from a list in a table
-* [`ReadUsgsNwisDaily`](ReadUsgsNwisDaily/ReadUsgsNwisDaily) - read time series from [USGS NWIS Daily web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily)
-* [`ReadUsgsNwisInstantaneous`](ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous)
-* [`ReadUsgsNwisGroundwater`](ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater)
+* [`ReadUsgsNwisDaily`](ReadUsgsNwisDaily/ReadUsgsNwisDaily) - read daily value time series from [USGS NWIS Daily web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily)
+* [`ReadUsgsNwisInstantaneous`](ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous) - read instantaneous value time series from [USGS NWIS Instantaneous web services](../datastore-ref/USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous)
+* [`ReadUsgsNwisGroundwater`](ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater) - read groundwater time series from [USGS NWIS Daily web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily) 
 * [`ReadUsgsNwisRdb`](ReadUsgsNwisRdb/ReadUsgsNwisRdb) - read time series from a [USGS NWS RDB file](../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB)
 * [`ReadWaterML`](ReadUsgsWaterML/ReadUsgsWaterML)
 * [`StateModMax`](StateModMax/StateModMax) - create time series that are maximum of two [StateMod files](../datastore-ref/StateMod/StateMod)
@@ -164,7 +164,7 @@ These commands read time series from various sources.
 These commands fill missing time series values.
 
 * [`FillConstant`](FillConstant/FillConstant) - fill missing time series values with a constant
-* [`FillDayTSFrom2MonthTSAnd1DayTS`](FillDayTSFrom2MonthTSAnd1DayTS/FillDayTSFrom2MonthTSAnd1DayTS)
+* [`FillDayTSFrom2MonthTSAnd1DayTS`](FillDayTSFrom2MonthTSAnd1DayTS/FillDayTSFrom2MonthTSAnd1DayTS) - fill a daily time series by prorating monthly volumes using a daily pattern
 * [`FillFromTS`](FillFromTS/FillFromTS) - fill missing time series values from another time series
 * [`FillHistMonthAverage`](FillHistMonthAverage/FillHistMonthAverage) - fill missing time series values with historical monthly average
 * [`FillHistYearAverage`](FillHistYearAverage/FillHistYearAverage) - fill missing time series values with historical yearly average
@@ -176,7 +176,7 @@ These commands fill missing time series values.
 * [`FillProrate`](FillProrate/FillProrate) - fill missing time series values by prorating another time series
 * [`FillRegression`](FillRegression/FillRegression)
 * [`FillRepeat`](FillRepeat/FillRepeat) - fill missing time series values by repeating values
-* [`FillUsingDiversionComments`](FillUsingDiversionComments/FillUsingDiversionComments)
+* [`FillUsingDiversionComments`](FillUsingDiversionComments/FillUsingDiversionComments) - fill missing time series values using HydroBase diversion comments
 * [`SetAutoExtendPeriod`](SetAutoExtendPeriod/SetAutoExtendPeriod) - set global property to auto-extend time series to output period
 * [`SetAveragePeriod`](SetAveragePeriod/SetAveragePeriod) - set the global period used to compute historical averages
 * [`SetIgnoreLEZero`](SetIgnoreLEZero/SetIgnoreLEZero) - set global property to ignore time series values <= 0 in averages
@@ -189,8 +189,8 @@ These commands set time series contents, including properties and data values.
 * [`SetConstant`](SetConstant/SetConstant) - set time series data values to a constant
 * [`SetDataValue`](SetDataValue/SetDataValue) - set data values in time series
 * [`SetFromTS`](SetFromTS/SetFromTS) - set time series data values from another time series
-* [`SetTimeSeriesValuesFromLookupTable`](SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable)
-* [`SetTimeSeriesValuesFromTable`](SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable)
+* [`SetTimeSeriesValuesFromLookupTable`](SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable) - set time series values from a lookup table
+* [`SetTimeSeriesValuesFromTable`](SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable) - set time series values from a table
 * [`SetToMax`](SetToMax/SetToMax) - set time series values to maximum of 1+ time series
 * [`SetToMin`](SetToMin/SetToMin) - set time series values to minimum of 1+ time series
 * [`SetTimeSeriesProperty`](SetTimeSeriesProperty/SetTimeSeriesProperty) - set a time series property
@@ -240,7 +240,7 @@ These commands output time series to different formats.
 * [`WriteDelftFewsPiXml`](WriteDelftFewsPiXml/WriteDelftFewsPiXml) - write time series to [Delft FEWS PI XML format file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML)
 * [`WriteDelimitedFile`](WriteDelimitedFile/WriteDelimitedFile) - write time series to a delimited file
 * [`WriteHecDss`](WriteHecDss/WriteHecDss) - write time series to a [HEC-DSS file](../datastore-ref/HEC-DSS/HEC-DSS)
-* [`WriteReclamationHDB`](WriteReclamationHDB/WriteReclamationHDB)
+* [`WriteReclamationHDB`](WriteReclamationHDB/WriteReclamationHDB) - write time series to [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB)
 * [`WriteRiverWare`](WriteRiverWare/WriteRiverWare) write time series to a [RiverWare file](../datastore-ref/RiverWare/RiverWare)
 * [`WriteStateCU`](WriteStateCU/WriteStateCU) - write time series to a [StateCU file](../datastore-ref/StateCU/StateCU)
 * [`WriteStateMod`](WriteStateMod/WriteStateMod) - write time series to a [StateMod file](../datastore-ref/StateMod/StateMod)
@@ -292,15 +292,16 @@ Utility commands for executing SQL and creating a data dictionary are also provi
 
 ### Network Processing ###
 
-* [`AnalyzeNetworkPointFlow`](AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow)
+* [`AnalyzeNetworkPointFlow`](AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow) - perform point flow analysis for a network
+* [`CreateNetworkFromTable`](CreateNetworkFromTable/CreateNetworkFromTable) - create a network from a table
 
 ### Spatial Processing ###
 
-* [`WriteTableToGeoJSON`](WriteTableToGeoJSON/WriteTableToGeoJSON)
-* [`WriteTableToShapefile`](WriteTableToShapefile/WriteTableToShapefile)
-* [`WriteTableToKml`](WriteTableToKml/WriteTableToKml)
-* [`WriteTimeSeriesToGeoJSON`](WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON)
-* [`WriteTimeSeriesToKml`](WriteTimeSeriesToKml/WriteTimeSeriesToKml)
+* [`WriteTableToGeoJSON`](WriteTableToGeoJSON/WriteTableToGeoJSON) - write a table to a GeoJSON file
+* [`WriteTableToShapefile`](WriteTableToShapefile/WriteTableToShapefile) - write a table to a shapefile
+* [`WriteTableToKml`](WriteTableToKml/WriteTableToKml) - write a table to a KML file
+* [`WriteTimeSeriesToGeoJSON`](WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON) - write time series to a GeoJSON file
+* [`WriteTimeSeriesToKml`](WriteTimeSeriesToKml/WriteTimeSeriesToKml) - write time series to a KML file
 
 ### Spreadsheet Processing ###
 
@@ -371,6 +372,7 @@ handling processor properties (used with `${Property}`), and control commands su
 * [`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile) - read processor properties from a file
 * [`SetProperty`](SetProperty/SetProperty) - set a processor property value
 * [`SetPropertyFromEnsemble`](SetPropertyFromEnsemble/SetPropertyFromEnsemble) - set a processor property from an ensemble
+* [`SetPropertyFromNwsrfsAppDefault`](SetPropertyFromNwsrfsAppDefault/SetPropertyFromNwsrfsAppDefault)
 * [`SetPropertyFromTimeSeries`](SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) - set time series property from time series property
 * [`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty) - format a date/time processor property
 * [`FormatStringProperty`](FormatStringProperty/FormatStringProperty) - format a string processor property
@@ -516,14 +518,14 @@ have been migrated to the new online version (this documentation).
 |[`Add`](Add/Add)                                                                                             |Add time series to time series.|Migrated|
 |[`AddConstant`](AddConstant/AddConstant)                                                                     |Add a constant to time series values.|Migrated|
 |[`AdjustExtremes`](AdjustExtremes/AdjustExtremes)                                                            |Adjust extreme values in time series.|Migrated|
-|[`AnalyzeNetworkPointFlow`](AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow)                                 |                                 |Not yet migrated|
+|[`AnalyzeNetworkPointFlow`](AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow)                                 |Perform point flow analysis for a network.|Migrated|
 |[`AnalyzePattern`](AnalyzePattern/AnalyzePattern)                                                            |Analyze pattern of time series data.|Migrated|
 |[`AppendFile`](AppendFile/AppendFile)                                                                        |Append a file to another file.   |Migrated|
 |[`AppendTable`](AppendTable/AppendTable)                                                                     |Append a table to another table. |Migrated|
-|[`ARMA`](ARMA/ARMA)                                                                                          |                                 |Not yet migrated|
+|[`ARMA`](ARMA/ARMA)                                                                                          |                                 |Not yet migrated (placeholder)|
 |[`Blend`](Blend/Blend)                                                                                       |Blend one time series into another.|Migrated|
-|[`CalculateTimeSeriesStatistic`](CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic)                  |                                 |Not yet migrated|
-|[`ChangeInterval`](ChangeInterval/ChangeInterval)                                                            |                                 |Not yet migrated|
+|[`CalculateTimeSeriesStatistic`](CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic)                  |                                 |Not yet migrated (placeholder)|
+|[`ChangeInterval`](ChangeInterval/ChangeInterval)                                                            |                                 |Not yet migrated (placeholder)|
 |[`ChangePeriod`](ChangePeriod/ChangePeriod)                                                                  |Change time series data period.  |Migrated|
 |[`ChangeTimeZone`](ChangeTimeZone/ChangeTimeZone)                                                            |Change the time zone for time series.|Migrated|
 |[`CheckTimeSeries`](CheckTimeSeries/CheckTimeSeries)                                                         |Check time series values against criteria.|Migrated|
@@ -544,10 +546,9 @@ have been migrated to the new online version (this documentation).
 |[`CreateDataStoreDataDictionary`](CreateDataStoreDataDictionary/CreateDataStoreDataDictionary)               |Create a database data dictionary.|Migrated|
 |[`CreateEnsembleFromOneTimeSeries`](CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries)         |Create an ensemble from a time series.|Migrated|
 |[`CreateFromList`](CreateFromList/CreateFromList)                                                            |Create time series from a list in a file.|Migrated|
-|[`CreateNetworkFromTable`](CreateNetworkFromTable/CreateNetworkFromTable)                                    |                                 |Not yet migrated|
+|[`CreateNetworkFromTable`](CreateNetworkFromTable/CreateNetworkFromTable)                                    |Create a network from a table.|Migrated|
 |[`CreateRegressionTestCommandFile`](CreateRegressionTestCommandFile/CreateRegressionTestCommandFile)         |Create regression test suite command file.|Migrated|
 |[`CreateTimeSeriesEventTable`](CreateTimeSeriesEventTable/CreateTimeSeriesEventTable)                        |Create an event table associated with time series.|Migrated|
-|[`CreateTraces`](CreateTraces/CreateTraces)                                                                  |                                 |Not yet migrated|
 |[`Cumulate`](Cumulate/Cumulate)                                                                              |Set time series values to cumulative values.|Migrated|
 |[`DeleteDataStoreTableRows`](DeleteDataStoreTableRows/DeleteDataStoreTableRows)                              |Delete datastore table rows.     |Migrated|
 |[`DeleteTableColumns`](DeleteTableColumns/DeleteTableColumns)                                                |Delete columns from a table.     |Migrated|
@@ -563,20 +564,20 @@ have been migrated to the new online version (this documentation).
 |[`ExpandTemplateFile`](ExpandTemplateFile/ExpandTemplateFile)                                                |Expand template file into full file.|Migrated|
 |[`FillCarryForward`](FillCarryForward/FillCarryForward)                                                      |Replaced by [`FillRepeat`](FillRepeat/FillRepeat).|NA|
 |[`FillConstant`](FillConstant/FillConstant)                                                                  |Fill missing time series values with a constant.|Migrated|
-|[`FillDayTSFrom2MonthTSAnd1DayTS`](FillDayTSFrom2MonthTSAnd1DayTS/FillDayTSFrom2MonthTSAnd1DayTS)            |                                 |Not yet migrated|
+|[`FillDayTSFrom2MonthTSAnd1DayTS`](FillDayTSFrom2MonthTSAnd1DayTS/FillDayTSFrom2MonthTSAnd1DayTS)            |Fill a daily time series by prorating monthly volumes using a daily pattern.|Migrated|
 |[`FillFromTS`](FillFromTS/FillFromTS)                                                                        |Fill missing time series values from another time series.|Migrated|
 |[`FillHistMonthAverage`](FillHistMonthAverage/FillHistMonthAverage)                                          |Fill missing time series values with historical monthly average. |Migrated|
 |[`FillHistYearAverage`](FillHistYearAverage/FillHistYearAverage)                                             |Fill missing time series values with historical yearly average.|Migrated|
 |[`FillInterpolate`](FillInterpolate/FillInterpolate)                                                         |Fill missing time series values using interpolation. |Migrated|
-|[`FillMixedStation`](FillMixedStation/FillMixedStation)                                                      |                                 |Not yet migrated|
-|[`FillMOVE1`](FillMOVE1/FillMOVE1)                                                                           |                                 |Not yet migrated|
-|[`FillMOVE2`](FillMOVE2/FillMOVE2)                                                                           |                                 |Not yet migrated|
+|[`FillMixedStation`](FillMixedStation/FillMixedStation)                                                      |                                 |Not yet migrated (placeholder)|
+|[`FillMOVE1`](FillMOVE1/FillMOVE1)                                                                           |                                 |Not yet migrated (placeholder)|
+|[`FillMOVE2`](FillMOVE2/FillMOVE2)                                                                           |                                 |Not yet migrated (placeholder)|
 |[`FillPattern`](FillPattern/FillPattern)                                                                     |Fill missing time series values using historical pattern average.|Migrated|
-|[`FillPrincipalComponentAnalysis`](FillPrincipalComponentAnalysis/FillPrincipalComponentAnalysis)            |                                 |Not yet migrated|
+|[`FillPrincipalComponentAnalysis`](FillPrincipalComponentAnalysis/FillPrincipalComponentAnalysis)            |                                 |Not yet migrated (placeholder)|
 |[`FillProrate`](FillProrate/FillProrate)                                                                     |Fill missing time series values by prorating another time series.|Migrated|
-|[`FillRegression`](FillRegression/FillRegression)                                                            |                                 |Not yet migrated|
+|[`FillRegression`](FillRegression/FillRegression)                                                            |                                 |Not yet migrated (placeholder)|
 |[`FillRepeat`](FillRepeat/FillRepeat)                                                                        |Fill missing time series values by repeating values.|Migrated|
-|[`FillUsingDiversionComments`](FillUsingDiversionComments/FillUsingDiversionComments)                        |                                 |Not yet migrated|
+|[`FillUsingDiversionComments`](FillUsingDiversionComments/FillUsingDiversionComments)                        |Fill missing time series values using HydroBase diversion comments.|Migrated|
 |[`For`](For/For)                                                                                             |Iterate over items in a loop.    |Migrated|
 |[`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty)                                    |Format a date/time processor property.|Migrated|
 |[`FormatStringProperty`](FormatStringProperty/FormatStringProperty)                                          |Format string processor property.|Migrated|
@@ -590,7 +591,7 @@ have been migrated to the new online version (this documentation).
 |[`InsertTableRow`](InsertTableRow/InsertTableRow)                                                            |Insert a row in a table.         |Migrated|
 |[`InsertTimeSeriesIntoEnsemble`](InsertTimeSeriesIntoEnsemble/InsertTimeSeriesIntoEnsemble)                  |Insert a time series into an ensemble.|Migrated|
 |[`JoinTables`](JoinTables/JoinTables)                                                                        |Join two tables.                 |Migrated|
-|[`LagK`](LagK/LagK)                                                                                          |                                 |Not yet migrated|
+|[`LagK`](LagK/LagK)                                                                                          |                                 |Not yet migrated (placeholder)|
 |[`ListFiles`](ListFiles/ListFiles)                                                                           |List files in a folder.          |Migrated|
 |[`LookupTimeSeriesFromTable`](LookupTimeSeriesFromTable/LookupTimeSeriesFromTable)                           |Create a time series by looking up data values from a table.|Migrated|
 |[`ManipulateTableString`](ManipulateTableString/ManipulateTableString)                                       |Manipulate a string in a table.  |Migrated|
@@ -605,15 +606,14 @@ have been migrated to the new online version (this documentation).
 |[`NewStatisticMonthTimeSeries`](NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries)                     |Create a new time series with monthly statistics.|Migrated|
 |[`NewStatisticEnsemble`](NewStatisticEnsemble/NewStatisticEnsemble)                                          |Create an ensemble of static time series.|Migrated|
 |[`NewStatisticTimeSeries`](NewStatisticTimeSeries/NewStatisticTimeSeries)                                    |Create a new time series having statistic repeated each year.|Migrated|
-|[`NewStatisticTimeSeriesFromEnsemble`](NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble)|                                 |Not yet migrated|
+|[`NewStatisticTimeSeriesFromEnsemble`](NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble)|                                 |Not yet migrated (placeholder)|
 |[`NewStatisticYearTS`](NewStatisticYearTS/NewStatisticYearTS)                                                |Create a new time series of annual statistics.|Migrated|
 |[`NewTable`](NewTable/NewTable)                                                                              |Create a new table.              |Migrated|
 |[`NewTimeSeries`](NewTimeSeries/NewTimeSeries)                                                               |Create a new time series.        |Not yet migrated|
 |[`NewTreeView`](NewTreeView/NewTreeView)                                                                     |Create a tree view in the user interface.|Migrated|
 |[`Normalize`](Normalize/Normalize)                                                                           |Create new time series by normalizing a time series.|Migrated|
-|[`OpenCheckFile`](OpenCheckFile/OpenCheckFile)                                                               |                                 |Not yet migrated|
-|[`OpenHydroBase`](OpenHydroBase/OpenHydroBase)                                                               |                                 |Not yet migrated|
-|[`OpenNDFD`](OpenNDFD/OpenNDFD)                                                                              |                                 |Not yet migrated|
+|[`OpenCheckFile`](OpenCheckFile/OpenCheckFile)                                                               |                                 |Not yet migrated (placeholder)|
+|[`OpenHydroBase`](OpenHydroBase/OpenHydroBase)                                                               |Open a HydroBase database connection.|Migrated|
 |[`PrintTextFile`](PrintTextFile/PrintTextFile)                                                               |Print text file to a printer.    |Migrated|
 |[`ProcessRasterGraph`](ProcessRasterGraph/ProcessRasterGraph)                                                |Process (create) time series raster graph.|Migrated|
 |[`ProcessTSProduct`](ProcessTSProduct/ProcessTSProduct)                                                      |Process (create) time series data product.|Migrated|
@@ -622,22 +622,21 @@ have been migrated to the new online version (this documentation).
 |[`ReadDelftFewsPiXml`](ReadDelftFewsPiXml/ReadDelftFewsPiXml)                                                |Read time series from [Delft FEWS PI XML file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML).|Migrated|
 |[`ReadDelimitedFile`](ReadDelimitedFile/ReadDelimitedFile)                                                   |Read time series from delimited file.|Migrated|
 |[`ReadExcelWorkbook`](ReadExcelWorkbook/ReadExcelWorkbook)                                                   |Read Excel workbook file.        |Migrated|
-|[`ReadHecDss`](ReadHecDss/ReadHecDss)                                                                        |                                 |Not yet migrated|
+|[`ReadHecDss`](ReadHecDss/ReadHecDss)                                                                        |Read time series from [HEC-DSS file](../datastore-ref/HEC-DSS/HEC-DSS)|Migrated|
 |[`ReadHydroBase`](ReadHydroBase/ReadHydroBase)                                                               |Read time series from [State of Colorado HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase)|Migrated|
 |[`ReadMODSIM`](ReadMODSIM/ReadMODSIM)                                                                        |Read time series from [MODSIM model file](../datastore-ref/MODSIM/MODSIM).|Migrated|
-|[`ReadNDFD`](ReadNDFD/ReadNDFD)                                                                              |                                 |Not yet migrated|
 |[`ReadNrcsAwdb`](ReadNrcsAwdb/ReadNrcsAwdb)                                                                  |Read time series from [NRCS AWDB web services](../datastore-ref/NRCS-AWDB/NRCS-AWDB)|Migrated|
-|[`ReadNwsCard`](ReadNwsCard/ReadNwsCard)                                                                     |                                 |Not yet migrated|
-|[`ReadNwsrfsTraceEnsemble`](ReadNwsrfsTraceEnsemble/ReadNwsrfsTraceEnsemble)                                 |                                 |Not yet migrated|
-|[`ReadNwsrfsFs5files`](ReadNwsrfsFs5files/ReadNwsrfsFs5files)                                                |                                 |Not yet migrated|
+|[`ReadNwsCard`](ReadNwsCard/ReadNwsCard)                                                                     |                                 |Not yet migrated (placeholder)|
+|[`ReadNwsrfsTraceEnsemble`](ReadNwsrfsTraceEnsemble/ReadNwsrfsTraceEnsemble)                                 |                                 |Not yet migrated (placeholder)|
+|[`ReadNwsrfsFS5files`](ReadNwsrfsFS5files/ReadNwsrfsFS5files)                                                |                                 |Not yet migrated (placeholder)|
 |[`ReadPatternFile`](ReadPatternFile/ReadPatternFile)                                                         |Read time series used by [`ReadPattern`](ReadPattern/ReadPattern)|Migrated|
 |[`ReadPropertiesFromExcel`](ReadPropertiesFromExcel/ReadPropertiesFromExcel)                                 |Read processor properties from Excel.|Migrated|
 |[`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile)                                    |Read processor properties from a file.|Migrated|
 |[`ReadRccAcis`](ReadRccAcis/ReadRccAcis)                                                                     |Read time series from [RCC ACIS web service](../datastore-ref/RCC-ACIS/RCC-ACIS).|Migrated|
-|[`ReadReclamationHDB`](ReadReclamationHDB/ReadReclamationHDB)                                                |                                 |Not yet migrated|
-|[`ReadReclamationPisces`](ReadReclamationPisces/ReadReclamationPisces)                                       |                                 |Not yet migrated|
-|[`ReadRiversideDB`](ReadRiversideDB/ReadRiversideDB)                                                         |                                 |Not yet migrated|
-|[`ReadRiverWare`](ReadRiverWare/ReadRiverWare)                                                               |                                 |Not yet migrated|
+|[`ReadReclamationHDB`](ReadReclamationHDB/ReadReclamationHDB)                                                |Read time series from [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB)|Migrated|
+|[`ReadReclamationPisces`](ReadReclamationPisces/ReadReclamationPisces)                                       |Read time series from [Reclamation Pisces database](../datastore-ref/ReclamationPisces)|Migrated|
+|[`ReadRiversideDB`](ReadRiversideDB/ReadRiversideDB)                                                         |                                 |Not yet migrated (placeholder)|
+|[`ReadRiverWare`](ReadRiverWare/ReadRiverWare)                                                               |Read time series from [RiverWare file](../datastore-ref/RiverWare/RiverWare)|Migrated|
 |[`ReadStateCU`](ReadStateCU/ReadStateCU)                                                                     |Read time series from a [StateCU file](../datastore-ref/StateCU/StateCU).|Migrated|
 |[`ReadStateCUB`](ReadStateCUB/ReadStateCUB)                                                                  |Read time series from a [StateCU binary file](../datastore-ref/StateCUStateCUB).|Migrated|
 |[`ReadStateMod`](ReadStateMod/ReadStateMod)                                                                  |Read time series from a [StateMod file](../datastore-ref/StateMod/StateMod).|Migrated|
@@ -653,11 +652,11 @@ have been migrated to the new online version (this documentation).
 |[`ReadTimeSeries`](ReadTimeSeries/ReadTimeSeries)                                                            |Read a single time series using TSID to determine data source.|Migrated|
 |[`ReadTimeSeriesFromDataStore`](ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore)                     |Read time series from a datastore.|Migrated|
 |[`ReadTimeSeriesList`](ReadTimeSeriesList/ReadTimeSeriesList)                                                |Read time series from a list in a table.|Migrated|
-|[`ReadUsgsNwisDaily`](ReadUsgsNwisDaily/ReadUsgsNwisDaily)                                                   |Read time series from [USGS NWIS Daily web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily)|Migrated|
-|[`ReadUsgsNwisGroundwater`](ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater)                                 |                                 |Not yet migrated|
-|[`ReadUsgsNwisInstantaneous`](ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous)                           |                                 |Not yet migrated|
-|[`ReadWaterML`](ReadWaterML/ReadWaterML)                                                                     |                                 |Not yet migrated|
-|[`ReadWaterOneFlow`](ReadWaterOneFlow/ReadWaterOneFlow)                                                      |                                 |Not yet migrated|
+|[`ReadUsgsNwisDaily`](ReadUsgsNwisDaily/ReadUsgsNwisDaily)                                                   |Read daily value time series from [USGS NWIS Daily web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily)|Migrated|
+|[`ReadUsgsNwisGroundwater`](ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater)                                 |Read groundwater time series from [USGS NWIS Groundwater web services](../datastore-ref/USGS-NWIS-Groundwater/USGS-NWIS-Groundwater)|Migrated|
+|[`ReadUsgsNwisInstantaneous`](ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous)                           |Read instantaneous value time series from [USGS NWIS Instantaneous web services](../datastore-ref/USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous)|Migrated|
+|[`ReadWaterML`](ReadWaterML/ReadWaterML)                                                                     |                                 |Not yet migrated (placeholder)|
+|[`ReadWaterOneFlow`](ReadWaterOneFlow/ReadWaterOneFlow)                                                      |                                 |Not yet migrated (placeholder)|
 |[`ReadUsgsNwisRdb`](ReadUsgsNwisRdb/ReadUsgsNwisRdb)                                                         |Read time series from a [USGS NWS RDB file](../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB)|Migrated|
 |[`RelativeDiff`](RelativeDiff/RelativeDiff)                                                                  |Create a new time series as relative difference of two time series.|Migrated|
 |[`RemoveFile`](RemoveFile/RemoveFile)                                                                        |Remove a file.                   |Migrated|
@@ -666,7 +665,7 @@ have been migrated to the new online version (this documentation).
 |[`RunCommands`](RunCommands/RunCommands)                                                                     |Run a TSTool command file.       |Migrated|
 |[`RunDSSUTL`](RunDSSUTL/RunDSSUTL)                                                                           |Run HEC-DSS DSSUTL program.      |Migrated|
 |[`RunningAverage`](RunningAverage/RunningAverage)                                                            |Replaced by [`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries)|NA|
-|[`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries)                        |                                 |Not yet migrated|
+|[`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries)                        |Create time series containing statistic from moving "running" sample.|Not yet migrated (placeholder)|
 |[`RunProgram`](RunProgram/RunProgram)                                                                        |Run a program.                   |Migrated|
 |[`RunPython`](RunPython/RunPython)                                                                           |Run a python program.            |Migrated|
 |[`RunSql`](RunSql/RunSql)                                                                                    |Run an SQL statement on a datastore.|Migrated|
@@ -690,15 +689,15 @@ have been migrated to the new online version (this documentation).
 |[`SetOutputYearType`](SetOutputYearType/SetOutputYearType)                                                   |Set the global processor output year type. |Migrated|
 |[`SetPatternFile`](SetPatternFile/SetPatternFile)                                                            |Replaced by [`ReadPatternFile`](ReadPatternFile/ReadPatternFile) command|NA|
 |[`SetProperty`](SetProperty/SetProperty)                                                                     |Set processor property value.    |Migrated|
-|[`SetPropertyFromNwsrfsAppDefault`](SetPropertyFromNwsrfsAppDefault/SetPropertyFromNwsrfsAppDefault)         |                                 |Not yet migrated|
+|[`SetPropertyFromNwsrfsAppDefault`](SetPropertyFromNwsrfsAppDefault/SetPropertyFromNwsrfsAppDefault)         |                                 |Not yet migrated (placeholder)|
 |[`SetPropertyFromEnsemble`](SetPropertyFromEnsemble/SetPropertyFromEnsemble)                                 |Set processor property from ensemble.|Migrated|
 |[`SetPropertyFromTable`](SetPropertyFromTable/SetPropertyFromTable)                                          |Set processor property from a table.|Migrated|
-|[`SetPropertyFromTimeSeries`](SetPropertyFromTimeSeries/SetPropertyFromTimeSeries)                           |Set processor property from time series property.|Not yet migrated|
+|[`SetPropertyFromTimeSeries`](SetPropertyFromTimeSeries/SetPropertyFromTimeSeries)                           |Set processor property from time series property.|Migrated|
 |[`SetTableValues`](SetTableValues/SetTableValues)                                                            |Set values in a table.           |Migrated|
 |[`SetTimeSeriesPropertiesFromTable`](SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable)      |Set time series properties from table values.|Migrated|
 |[`SetTimeSeriesProperty`](SetTimeSeriesProperty/SetTimeSeriesProperty)                                       |Set a time series property.      |Migrated|
-|[`SetTimeSeriesValuesFromLookupTable`](SetTimeSeriesValuesFromLookup/TableSetTimeSeriesValuesFromLookupTable)|                                 |Not yet migrated|
-|[`SetTimeSeriesValuesFromTable`](SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable)                  |                                 |Not yet migrated|
+|[`SetTimeSeriesValuesFromLookupTable`](SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable)|Set time series values from a lookup table.|Migrated|
+|[`SetTimeSeriesValuesFromTable`](SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable)                  |Set time series values from a table.|Migrated|
 |[`SetToMax`](SetToMax/SetToMax)                                                                              |Set time series values to maximum of 1+ time series.|Migrated|
 |[`SetToMin`](SetToMin/SetToMin)                                                                              |Set time series values to minimum of 1+ time series.|Migrated|
 |[`SetWarningLevel`](SetWarningLevel/SetWarningLevel)                                                         |Set the warning level for logging.|Migrated|
@@ -718,7 +717,7 @@ have been migrated to the new online version (this documentation).
 |[`TimeSeriesToTable`](TimeSeriesToTable/TimeSeriesToTable)                                                   |Copy time series to a table.     |Migrated|
 |[`UnknownCommand`](UnknownCommand/UnknownCommand)                                                            |Unknown command.                 |Migrated|
 |[`UnzipFile`](UnzipFile/UnzipFile)                                                                           |Unzip the contents of a zip file.|Migrated|
-|[`VariableLagK`](VariableLagK/VariableLagK)                                                                  |                                 |Not yet migrated|
+|[`VariableLagK`](VariableLagK/VariableLagK)                                                                  |                                 |Not yet migrated (placeholder)|
 |[`Wait`](Wait/Wait)                                                                                          |Wait for at time before continuing.|Migrated|
 |[`WebGet`](WebGet/WebGet)                                                                                    |Download a file from a URL.      |Migrated|
 |[`WeightTraces`](WeightTraces/WeightTraces)                                                                  |Create time series as weighted sum of ensemble traces.|Migrated|
@@ -728,13 +727,13 @@ have been migrated to the new online version (this documentation).
 |[`WriteDelftFewsPiXml`](WriteDelftFewsPiXml/WriteDelftFewsPiXml)                                             |Write time series to a [Delft FEWS PI XML file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML).|Migrated|
 |[`WriteDelimitedFile`](WriteDelimitedFile/WriteDelimitedFile)                                                |Write time series from delimited file.|Migrated|
 |[`WriteHecDss`](WriteHecDss/WriteHecDss)                                                                     |Write time series to a [HEC-DSS file](../datastore-ref/HEC-DSS/HEC-DSS).|Migrated|
-|[`WriteNwsCard`](WriteNwsCard/WriteNwsCard)                                                                  |                                 |Not yet migrated|
-|[`WriteNWSRFSESPTraceEnsemble`](WriteNWSRFSESPTraceEnsemble/WriteNWSRFSESPTraceEnsemble)                     |                                 |Not yet migrated|
+|[`WriteNwsCard`](WriteNwsCard/WriteNwsCard)                                                                  |                                 |Not yet migrated (placeholder)|
+|[`WriteNWSRFSESPTraceEnsemble`](WriteNWSRFSESPTraceEnsemble/WriteNWSRFSESPTraceEnsemble)                     |                                 |Not yet migrated (placeholder)|
 |[`WritePropertiesToFile`](WritePropertiesToFile/WritePropertiesToFile)                                       |Write processor properties to a file.|Migrated|
-|[`WriteReclamationHDB`](WriteReclamationHDB/WriteReclamationHDB)                                             |                                 |Not yet migrated|
-|[`WriteRiversideDB`](WriteRiversideDB/WriteRiversideDB)                                                      |                                 |Not yet migrated|
+|[`WriteReclamationHDB`](WriteReclamationHDB/WriteReclamationHDB)                                             |Write time series to [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB)|Migrated|
+|[`WriteRiversideDB`](WriteRiversideDB/WriteRiversideDB)                                                      |                                 |Not yet migrated (placeholder)|
 |[`WriteRiverWare`](WriteRiverWare/WriteRiverWare)                                                            |Write time series to a [RiverWare file](../datastore-ref/RiverWare/RiverWare).|Migrated|
-|[`WriteSHEF`](WriteSHEF/WriteSHEF)                                                                           |                                 |Not yet migrated|
+|[`WriteSHEF`](WriteSHEF/WriteSHEF)                                                                           |Write time series to [SHEF file](../datastore-ref/SHEF/SHEF).|Migrated|
 |[`WriteStateCU`](WriteStateCU/WriteStateCU)                                                                  |Write time series to a [StateCU file](../datastore-ref/StateCU/StateCU).|Migrated|
 |[`WriteStateMod`](WriteStateMod/WriteStateMod)                                                               |Write time series to a [StateMod file](../datastore-ref/StateMod/StateMod).|Migrated|
 |[`WriteSummary`](WriteSummary/WriteSummary)                                                                  |Write time series to a summary report file.|Migrated|
@@ -742,18 +741,18 @@ have been migrated to the new online version (this documentation).
 |[`WriteTableToDataStore`](WriteTableToDataStore/WriteTableToDataStore)                                       |Write a table to a datastore.    |Migrated|
 |[`WriteTableToDelimitedFile`](WriteTableToDelimitedFile/WriteTableToDelimitedFile)                           |Write a table to delimited file. |Migrated|
 |[`WriteTableToExcel`](WriteTableToExcel/WriteTableToExcel)                                                   |Write a table to an Excel workbook file.|Migrated|
-|[`WriteTableToGeoJSON`](WriteTableToGeoJSON/WriteTableToGeoJSON)                                             |                                 |Not yet migrated|
+|[`WriteTableToGeoJSON`](WriteTableToGeoJSON/WriteTableToGeoJSON)                                             |Write a table to a GeoJSON file.|Migrated|
 |[`WriteTableToHTML`](WriteTableToHTML/lWriteTableToHTML)                                                     |Write a table to an HTML file.   |Migrated|
-|[`WriteTableToKml`](WriteTableToKml/WriteTableToKml)                                                         |                                 |Not yet migrated|
-|[`WriteTableToShapefile`](WriteTableToShapefile/WriteTableToShapefile)                                       |                                 |Not yet migrated|
+|[`WriteTableToKml`](WriteTableToKml/WriteTableToKml)                                                         |Write a table to a KML file.|Migrated|
+|[`WriteTableToShapefile`](WriteTableToShapefile/WriteTableToShapefile)                                       |Write a table to a shapefile.|Migrated|
 |[`WriteTimeSeriesPropertiesToFile`](WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile)         |Write time series properties to a file.|Migrated|
 |[`WriteTimeSeriesToDataStore`](WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore)                        |Write time series to a datastore.|Migrated|
 |[`WriteTimeSeriesToDataStream`](WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream)                     |Write time series to a stream of data lines.|Migrated|
 |[`WriteTimeSeriesToExcel`](WriteTimeSeriesToExcel/WriteTimeSeriesToExcel)                                    |Write time series to an Excel workbook.|Migrated|
 |[`WriteTimeSeriesToExcelBlock`](WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock)                     |Write time series to an Excel workbook using block format.|Migrated|
-|[`WriteTimeSeriesToGeoJSON`](WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON)                              |                                 |Not yet migrated|
+|[`WriteTimeSeriesToGeoJSON`](WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON)                              |Write time series to a GeoJSON file.|Migrated|
 |[`WriteTimeSeriesToHydroJSON`](WriteTimeSeriesToHydroJSON/WriteTimeSeriesToHydroJSON)                        |Write time series to a [HydroJSON file](../datastore-ref/HydroJSON/HydroJSON).|Migrated|
 |[`WriteTimeSeriesToJson`](WriteTimeSeriesToJson/WriteTimeSeriesToJson)                                       |Write time series to a JSON file.|Migrated|
-|[`WriteTimeSeriesToKml`](WriteTimeSeriesToKml/WriteTimeSeriesToKml)                                          |                                 |Not yet migrated|
-|[`WriteWaterML`](WriteWaterML/WriteWaterML)                                                                  |                                 |Not yet migrated|
-|[`WriteWaterML2`](WriteWaterML2/WriteWaterML2)                                                               |                                 |Not yet migrated|
+|[`WriteTimeSeriesToKml`](WriteTimeSeriesToKml/WriteTimeSeriesToKml)                                          |Write time esries to a KML file. |Migrated|
+|[`WriteWaterML`](WriteWaterML/WriteWaterML)                                                                  |                                 |Not yet migrated (placeholder)|
+|[`WriteWaterML2`](WriteWaterML2/WriteWaterML2)                                                               |                                 |Not yet migrated (placeholder)|
