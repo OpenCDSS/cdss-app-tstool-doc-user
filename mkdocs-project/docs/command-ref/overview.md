@@ -157,6 +157,7 @@ These commands read time series from various sources.
 * [`ReadUsgsNwisGroundwater`](ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater) - read groundwater time series from [USGS NWIS Daily web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily) 
 * [`ReadUsgsNwisRdb`](ReadUsgsNwisRdb/ReadUsgsNwisRdb) - read time series from a [USGS NWS RDB file](../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB)
 * [`ReadWaterML`](ReadUsgsWaterML/ReadUsgsWaterML)
+* [`ReadWaterML2`](ReadUsgsWaterML2/ReadUsgsWaterML2)
 * [`StateModMax`](StateModMax/StateModMax) - create time series that are maximum of two [StateMod files](../datastore-ref/StateMod/StateMod)
 
 ### Fill Time Series Missing Data ###
@@ -656,6 +657,7 @@ have been migrated to the new online version (this documentation).
 |[`ReadUsgsNwisGroundwater`](ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater)                                 |Read groundwater time series from [USGS NWIS Groundwater web services](../datastore-ref/USGS-NWIS-Groundwater/USGS-NWIS-Groundwater)|Migrated|
 |[`ReadUsgsNwisInstantaneous`](ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous)                           |Read instantaneous value time series from [USGS NWIS Instantaneous web services](../datastore-ref/USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous)|Migrated|
 |[`ReadWaterML`](ReadWaterML/ReadWaterML)                                                                     |                                 |Not yet migrated (placeholder)|
+|[`ReadWaterML2`](ReadWaterML2/ReadWaterML2)                                                                  |                                 |Not yet migrated (placeholder)|
 |[`ReadWaterOneFlow`](ReadWaterOneFlow/ReadWaterOneFlow)                                                      |                                 |Not yet migrated (placeholder)|
 |[`ReadUsgsNwisRdb`](ReadUsgsNwisRdb/ReadUsgsNwisRdb)                                                         |Read time series from a [USGS NWS RDB file](../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB)|Migrated|
 |[`RelativeDiff`](RelativeDiff/RelativeDiff)                                                                  |Create a new time series as relative difference of two time series.|Migrated|

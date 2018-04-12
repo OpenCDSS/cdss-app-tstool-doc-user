@@ -120,8 +120,26 @@ with the goal of keeping formatting simple in favor of focusing on useful conten
 * Use triple-tick formatting for code blocks, with language specifier.
 * Use ***bold italics*** when referencing UI components such as menus.
 * Use slashes to indicate ***Menu / SubMenu***.
-* Place images in a folder with the same name as the content file and include `-images` at the end of the folder name.
-* Minimize the use of inlined HTML, but use it where Markdown formatting is limited.
+* Include table of contents at top of pages using lists with links to sections to
+facilitate navigation in a page (without needing side-bar navigation) and because
+it helps if documents are printed.
+* Images are handled as follows:
+	+ Where narrative content pages are sufficiently separated into folders,
+	image files exist in those folder with names that match the original TSTool Word documentation.
+	+ If necessary, place images in a folder with the same name as the content file and include
+	`-images` at the end of the folder name at the same level (for example `x.md` and `x-images/`)
+	or include an `images` folder under the content folder.
+	The previous option has been used for the most part.
+	+ When using images in the documents, consider providing a link to look at the full-sized
+	image, as follows:
+
+```text
+The following figure illustrates the ***Mixed Station Analysis*** tool.
+<a href="../Menu_Tools_Analysis_MixedStationAnalysis.png">See also the full-size image.</a>
+
+![Menu_Tools_Analysis_MixedStationAnalysis](Menu_Tools_Analysis_MixedStationAnalysis.png)
+```
+* Minimize the use of inlined HTML elements, but use it where Markdown formatting is limited.
 * Although the Material them provides site and page navigation sidebars,
 provide in-line table of contents on pages, where appropriate, to facilitate review of page content.
 

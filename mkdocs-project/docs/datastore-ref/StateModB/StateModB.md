@@ -110,7 +110,7 @@ The B43 binary file contains the following records:
 |11|25|`dat(25)`|real|Station Balance - `River_By_Well`|
 |11|26|`dat(26)`|real|Station Balance - `River_Outflow`|
 |11|27|`dat(27)`|real|Available Flow - `Available_Flow`|
-|11|28|`dat(28)`|real|Structure type (Na):<br><ul><li>< 0 = Baseflow node (e.g., -10001 indicates a diversion that is a baseflow node).</li><li>0 = Well only.</li><li>1-5000 = Diversion</li><li>5001 – 7500 = Instream flow</li><li>7501 – 10000 = Reservoir</li></ul>`|
+|11|28|`dat(28)`|real|Structure type (Na):<br><ul><li>< 0 = Baseflow node (e.g., -10001 indicates a diversion that is a baseflow node).</li><li>0 = Well only.</li><li>1-5000 = Diversion</li><li>5001 – 7500 = Instream flow</li><li>7501 – 10000 = Reservoir</li></ul>|
 |11|29|`dat(29)`|real|Number of structures at this node (typically 1).|
  
 ## Standard Time Series Properties ##

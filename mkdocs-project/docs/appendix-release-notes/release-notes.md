@@ -1,3 +1,188 @@
 # TSTool / Release Notes #
 
-**Need to integrate "Release Notes" from TSTool Word documentation.**
+This appendix provides information about changes that have occurred in TSTool.
+A summary table is provided, with links to details for major versions.
+
+* [TSTool Version Numbering Convention](#tstool-version-numbering-convention)
+* [TSTool Version History](#tstool-version-history)
+* [Known Limitations](#known-limitations)
+* [TSTool Version Details](#tstool-version-details) - the following are separate documentation pages
+	+ [Version 12 Details](release-notes-12)
+	+ [Version 11 Details](release-notes-11)
+	+ [Version 10 Details](release-notes-10)
+	+ [Version 9 Details](release-notes-09)
+	+ [Version 8 Details](release-notes-08)
+	+ [Version 7 Details](release-notes-07)
+	+ [Version 6 Details](release-notes-06)
+
+---------------
+
+## TSTool Version Numbering Convention ##
+
+TSTool versioning generally adheres to the following pattern:
+
+```
+Major.Minor.Maintenance
+```
+where:
+
+* `Major` is a number indating a major change to the software
+* `Minor` is a number indating a minor change to the software
+* `Maintenance` is a number indating a maintenance release,
+for example to fix a bug with no new features
+* The version may also be followed by another indicator such as "beta" to indicate a beta release
+* Numbers have traditionally been two digits and zero-padded;
+however, the zero-padding convention may be abandoned moving forward given
+that the major version does not require it to sort the version.
+
+This convention is not always strictly followed but more attention to this standard is now occurring.
+
+The above version string is used in the software as follows, where `Version` is the version as noted above:
+
+* installation folder on Windows is `C:\CDSS\TSTool-Version`
+* Windows ***Start*** menu is ***Start / CDSS / TSTool-Version***
+* Windows install file is `TSTool_CDSS_Version_Setup.exe`
+
+## TSTool Version History ##
+
+The following table summarizes the TSTool release history.
+See the TSTool Version Details links above for more detailed information about each version.
+Only recent versions are documented in detail.
+Comments for minor versions may be listed under a version that is publicly released.
+Release note items are categorized as follows,
+and release note items for a version are typically listed in the same order as shown to emphasize impacts on software users.
+
+* ![limitation](limitation.png) **Known Limitation** – A known limitation has been documented and may impact the user.
+The limitation will be addressed in a future release.
+* ![bug](bug.png) **Bug Fix** – A bug has been fixed.  Users should evaluate whether their work is impacted.
+Sometimes bug fixes impact internal code and changes may not be very visible to users.
+* ![remove](remove.png) **Remove** – A feature has been removed, generally because functionality
+has been migrated to other code or the functionality is no longer needed (e.g., a database is no longer available).
+* ![change](change.png) **Update/Change** – An existing feature has been changed or enhanced.
+Backward compatibility is usually retained.  Modifications to an existing command are considered a change.
+* ![new](new.png) **New Feature** – A new feature has been added, such as a new command.
+New features may or may not be obvious to users but will generally be visible in menus.
+
+**<p style="text-align: center;">
+TSTool Version History Summary (most current at top)
+</p>**
+
+|**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
+|12.05.00|Minor enhancements.|2017-11-19|
+|12.04.00|Enhance support for [datastore plugins](../datastore-ref/Plugin/Plugin).  Add network object.  Add initial [WaterML 2.0](../datastore-ref/WaterML2/WaterML2) support.|2017-07-13|
+|12.00.00|Update to use Java 8 including using Java 8 language standards.  Add new graphing features including y-axis zoom, and graph template feature.  Many other minor enhancements.|2017-04-24|
+|11.11.00 – 11.13.00|Improve Excel integration, enhance [`For`](../command-ref/For/For) command support for various commands.  Enhance [`VariableLagK`](../command-ref/VariableLagK/VariableLagK) command to read and save states.  Add graph mouse tracker and time series select/highlight.|2017-03-07|
+|11.09.00 – 11.10.01|TSTool configuration files have been added to the user’s home folder in addition to the installation files.  Windows are positioned on TSTool screen, handling multiple monitors.  Begin prototyping HTML command documentation.  Initial version of [plugin datastore](../datastore-ref/Plugin/Plugin) and [plugin command](../command-ref/Plugin/Plugin) features.|2016-05-02|
+|11.08.00 – 11.08.01|Enhancements to write tables and time series to additional spatial formats.  Add support for [Delft FEWS Pi XML format](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML), which is used by the National Weather Service.  Update additional commands to recognize properties as input.|2016-02-14|
+|11.07.00 – 11.07.06|Add support for [Reclamation Pisces datastore](../datastore-ref/ReclamationPisces/ReclamationPisces).  Add support for writing [HydroJSON format](../datastore-ref/HydroJSON/HydroJSON).  Add preliminary support for writing [WaterML](../datastore-ref/WaterML/WaterML). Add support for reading JSON into table.|2015-12-09|
+|11.06.00 – 11.06.01|Add [`ReadExcelWorkbook`](../command-ref/ReadExcelWorkbook/ReadExcelWorkbook) command and enhance [`CloseExcelWorkbook`](../command-ref/CloseExcelWorkbook/CloseExcelWorkbook) to allow existing workbooks to be read and updated.  Other maintenance.|2015-07-29|
+|11.05.00|Add date/time for appropriate statistics in [`CalculateTimeSeriesStatistic`](../command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic).|2015-07-17|
+|11.04.00 – 11.04.03|Add support for `${Property}` in additional commands.  Improve error handling when [`RunCommands`](../command-ref/RunCommands/RunCommands) is used with [`For`](../command-ref/For/For).   List all output files in TSTool interface when using [`For`](../command-ref/For/For).|2015-07-15|
+|11.03.00 – 11.03.10|Add support for `${Property}` in some command parameters for over 50 commands.  Enable nested [`For`](../command-ref/For/For) loops.  Add support for Excel formatting condition and style tables.  Multiple incremental updates during beta testing.|2015-06-29|
+|11.02.00 – 11.02.03|Improved Excel integration and automation control for table and properties, add properties and data flag descriptions to [DateValue files](../datastore-ref/DateValue/DateValue), add flags and descriptions to more fill/set commands.|2015-05-27|
+|11.01.00|[ReclamationHDB datastore](../datastore-ref/ReclamationHDB/ReclamationHDB) support enhancements.|2015-03-23|
+|11.00.00|Update from Java 6 to 7.  Enhancements for Excel integration.  Add PostgreSQL database support.|2015-03-16|
+|10.31.00|Add preliminary [`For`](../command-ref/For/For) command.|2014-08-05|
+|10.30.00 – 10.30.02|Add [`InsertTableColumn`](../command-ref/InsertTableColumn/InsertTableColumn), other enhancements to facilitate calculating statistics and saving output to tables.|2014-06-22|
+|10.29.00|Additional Excel integration and table processing features.|2014-05-19|
+|10.28.02|Enable table view for irregular interval time series.  Enhance [ReclamationHDB](../datastore-ref/ReclamationHDB/ReclamationHDB) query features.|2014-04-19|
+|10.27.00|Significant Excel integration improvements, add some utility commands.|2014-03-21|
+|10.26.00|Improve [NRCS AWDB web service](../datastore-ref/NRCS-AWDB/NRCS-AWDB) support.  Add [`If`](../command-ref/If/If) and [`Endif`](../command-ref/EndIf/EndIf) and other enhancements to help automate computation of NRCS Surface Water Supply Index.|2013-12-24|
+|10.25.00|Additional enhancements for [ReclamationHDB datastore](../datastore-ref/ReclamationHDB/ReclamationHDB).|2013-10-15|
+|10.24.01|Change ensemble trace identifiers to string to allow more flexibility.  Update [ReclamationHDB](../datastore-ref/ReclamationHDB/ReclamationHDB) commands to handle ensembles.|2013-09-30|
+|10.23.00|Initial work to add features to create time series event table to annotate products.  Fix [`FillRegression`](../command-ref/FillRegression/FillRegression) and [`FillMixedStation`](../command-ref/FillMixedStation/FillMixedStation) issues introduced in previous release.|2013-09-12|
+|10.22.00|Add raster graph and move data visualization commands to new menu, improve [generic database datastore](../datastore-ref/GenericDatabase/GenericDatabase) read/write functionality.|2013-08-30|
+|10.21.00|Add initial network processing command, add additional functionality for processing tables, and a number of maintenance updates.|2013-07-14|
+|10.20.00|Enhancements to [ReclamationHDB](../datastore-ref/ReclamationHDB/ReclamationHDB) read/write commands.  Enable filtering [HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase) diversion coding structures by structure type and WDID.|2013-04-21|
+|10.19.00|Enhancements to [ReclamationHDB](../datastore-ref/ReclamationHDB/ReclamationHDB) write features.|2013-03-16|
+|10.18.00|Add commands to read a table from Excel and write to a datastore.|2013-03-03|
+|10.17.00|Add [`ProfileCommands`](../command-ref/ProfileCommands) command and other features to help with performance on large command files.|2013-02-18|
+|10.16.00|Minor update to improve processing of well level data and templates.|2013-02-13|
+|10.15.00|Minor update in response to feedback on previous release, split documentation into multiple volumes.|2013-01-14|
+|10.14.00|Minor update in response to feedback on previous release.|2012-12-18|
+|10.13.00|Many enhancements to improve USGS processing, add [NRCS AWDB support](../datastore-ref/NRCS-AWDB/NRCS-AWDB), add [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries) command.|2012-12-04|
+|10.12.00|Many enhancements to improve HydroBase, USGS, and general datastore processing.|2012-10-01|
+|10.11.00|Update to support [RCC ACIS](../datastore-ref/RCC-ACIS/RCC-ACIS) version 2.|2012-07-03|
+|10.10.00|Add exceedance probability and related statistics to [`RunningStatisticTimeSeries`](../command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries) command.|2012-06-12|
+|10.00.00 – 10.09.00|Migrate all `TS Alias = Command()` syntax to `Command(Alias=”...”)`.  Other user interface cleanup, maintenance, and many enhancements.|2012-05-15|
+|9.10.00 – 9.10.03|Add support for [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB), [Regional Climate Center RCC ACIS](../datastore-ref/RCC-ACIS/RCC-ACIS) (preliminary), and [USGS NWIS](../datastore-ref/USGS-NWS-Daily/USGS-NWIS-Daily) (preliminary) as data stores.  Add area graphs.|2011-02-18|
+|9.09.00 – 9.09.01|Add additional commands for table processing.  Improve template integration with processor properties and tables.|2010-10-18|
+|9.08.00 – 9.08.01|Support connecting to more than one [RiversideDB](../datastore-ref/RiversideDB/RiversideDB) and introduce the concept of named data stores as an alternative to input type/name.  Add [`TableMath`](../command-ref/TableMath/TableMath) and [`TableTimeSeriesMath`](../command-ref/TableTimeSeriesMath/TableTimeSeriesMath) commands.|2010-09-15|
+|9.07.00 – 9.07.02|Add HTML summary, improve data flag handling, improve Python integration, initial support for [ColoradoWaterHBGuest web service](../datastore-ref/ColoradoWaterHBGuest/ColoradoWaterHBGuest), include training materials, other maintenance.|2010-08-20|
+|9.06.00 – 9.06.04|Initial support for [ColoradoWaterSMS web service](../datastore-ref/ColoradoWaterSMS/ColoradoWaterSMS), enhance [RiversideDB](../datastore-ref/RiversideDB/RiversideDB) support, various improvements.|2010-05-25|
+|9.05.00 – 9.05.03|Enhancements to support additional time series and ensemble processing, in particular to compute statistics for drought studies.|2009-11-17|
+|9.04.00 – 9.04.02|The following features are now at production level:  [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile), [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile), [`ResequenceTimeSeriesData`](../command-ref/ResequenceTimeSeriesData/ResequenceTimeSeriesData).   The [`CalculateTimeSeriesStatistic`](../command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic) command and additional table processing features have been added.|2009-07-28|
+|9.01.00 – 9.03.06|Add [`VariableLagK`](../command-ref/VariableLagK/VariableLagK) and [`RunDSSUTL`](../command-ref/RunDSSUTL/RunDSSUTL) commands, fix several bugs, and enhance several commands.   Add preliminary [`CheckTimeSeries`](../command-ref/CheckTimeSeries/CheckTimeSeries), [`WriteCheckFile`](../command-ref/WriteCheckFile/WriteCheckFile) commands.  Enhance the [`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval) command and documentation.|2009-04-29|
+|9.00.00 – 9.00.05|Update from Java 1.4.2 to Java 1.6, various bug fixes.|2009-02-05|
+|8.18.00 – 8.18.02|Initial [HEC-DSS](../datastore-ref/HEC-DSS/HEC-DSS) support.  Improved [RiversideDB](../datastore-ref/RiversideDB/RiversideDB) support.|2008-11-24|
+|8.17.01 – 8.17.02|Bug fixes for 8.17.00.  See below. New features include ***File / New*** to open a new command file and add support for new [StateMod 12.29 binary file format](../datastore-ref/StateModB/StateModB).|2008-10-29|
+|8.17.00|All commands are updated to the new error handling and named parameter notation.  Many other minor changes have been made for consistency.  Many minor user-requested enhancements have been implemented.  Several minor bugs reported by users have been fixed.  The [StateCUB (StateCU binary output file)](../datastore-ref/StateCUB/StateCUB) has been enabled.|2008-10-06|
+|8.16.00 – 8.16.02|Migrate additional commands to new error-handling and named parameter notation.  Add [`RunPython`](../command-ref/RunPython/RunPython) and [`FTPGet`](../command-ref/FTPGet/FTPGet) commands.|2008-07-22|
+|8.15.01 – 8.15.03|Fix a number of problems where migration of commands from fixed parameter to named parameter syntax resulted in some old command files not being handled.  The command file is also now marked as modified if any commands are automatically updated.  Added more error checks, such as in DateValue file reading to help provide better feedback to users.|2008-06-11|
+|8.13.00 – 8.14.02|Add commands to set properties, for use by other commands (e.g., to configure file names).  Continue updating commands to utilize the new error handling.|2008-02-20|
+|8.03.00 – 8.12.06|Update many commands to utilize new error handling and consistently handle the `TSList` parameter.  Add ensemble processing to many commands.  Enable ability for read commands to run in discovery mode to let other commands know time series identifiers.  Add more commands to compute statistics time series.|2008-01-14|
+|8.00.00 – 8.02.00|Update main interface to use new error-handling visualization features.  Add several commands to allow TSTool to perform regression tests on itself.|2007-12-03|
+|7.04.00|Various updates for [HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase) including adding support for administrative flow station.  Allow reading [StateMod rights files](../datastore-ref/StateMod/StateMod) and handle new [StateCU file formats](../datastore-ref/StateCU/StateCU).|2007-06-22|
+|7.01.00|Support new `SFUT(G)` coding for [HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase) diversion classes, and allow `CIU` when filling diversion data.  Fix a number of bugs in the [`AnalyzePattern`](../command-ref/AnalyzePattern/AnalyzePattern), [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate), and [`Cumulate`](../command-ref/Cumulate/Cumulate) commands|2007-03-02|
+|7.00.00|Begin distributing software using a new installer.  Add CASS livestock data and human population data.|2006-10-31|
+|6.19.00|Update to extend period when filling with diversion comments.|2006-05-19|
+|6.18.00|Add the [`RunCommands`](../command-ref/RunCommands/RunCommands) command to facilitate data processing.|2006-05-02|
+|6.17.00|Add the [`CompareFiles`](../command-ref/CompareFiles/CompareFiles) command to facilitate testing.|2006-04-17|
+|6.16.02|Begin adding commands to test data, for alarms.|2006-04-17|
+|6.16.01|Time series to map link is enabled.  Improve UNC support.  Improve startup performance in batch mode.|2006-02-16|
+|6.16.00|Begin adding support for [NDFD (National Digitial Forecast Database)](../datastore-ref/NDFD/NDFD) input type, and maintenance.|2006-01-31|
+|6.15.00|Begin adding time series to map link.|2006-01-16|
+|6.14.00|Update some commands to named parameter notation, and maintenance.|2005-12-14|
+|6.13.00|Internal release.|2005-11-13|
+|6.12.00|Improve error handling when running in batch mode with graphs.|2005-10-05|
+|6.11.00|Enable the ColoradoSMS input type for hydrograph annotations and update batch mode features to better utilize the CDSS configuration file.|2005-10-05|
+|6.10.09|Maintenance release – convert some commands to use named parameters.|2005-09-28|
+|6.10.08|Maintenance release – convert some commands to use named parameters.  Add the [`NewStatisticYearTS`](../command-ref/NewStatisticYearTS/NewStatisticYearTS) command.|2005-09-22|
+|6.10.07|Maintenance release – convert some commands to use named parameters.|2005-08-24|
+|6.10.06|Release corresponding to the CDSS CD release.|2005-08-04|
+|6.10.05|Respond to CDSS testing feedback.|2005-08-01|
+|6.10.04|Respond to CDSS testing feedback.  Add additional query filters for [HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase) stations and structures.|2005-07-20|
+|6.10.03 BETA|Begin phasing in saving time series products to [HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase) and [`RiversideDB`](../datastore-ref/RiversideDB/RiversideDB).|2005-07-08|
+|6.10.02 BETA|Update the [`OpenHydroBase`](../command-ref/OpenHydroBase/OpenHydroBase) command to use free-format parameters.|2005-06-28|
+|6.10.01 BETA|Begin enabling data flags for time series to support enhancements to fill commands.|2005-06-03|
+|6.10.00 BETA|Initial release supporting [HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase) stored procedures with initial prototypes of Mixed Station Analysis and related features.  Implement new message log viewer and commands to simplify comparison of time series.|2005-06-01|
+|6.09.03|Maintenance release.|2004-12-21|
+|6.09.02|Maintenance release.|2004-10-05|
+|6.09.01|Add NWSRFS FS5Files input type.|2004-09-01|
+|6.09.00|Add [`ReadHydroBase`](../command-ref/ReadHydroBase/ReadHydroBase) commands.|2004-08-27|
+|6.08.02|Documentation made current to include all version 6 changes.|2004-07-27|
+|6.08.01|Allow [HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase) connection to be made at startup.|2004-07-20|
+|6.08.00|Allow wildcards in commands that read from [StateCU](../datastore-ref/StateCU/StateCU) and [StateModB](../datastore-ref/StateModB/StateModB) input types.|2004-07-11|
+||Initial Java version.|1997-10-23|
+
+## Known Limitations ##
+
+* ![limitation](limitation.png) TSTool uses a “discovery mode” to partially execute commands when editing the commands.
+This is used to determine lists of time series identifiers, table identifiers, and properties for editor choices.
+However, some workflow logic is so complex that commands cannot fully execute in discovery mode.
+Consequently, warnings may result when loading a command file or some editor choices may be incomplete.
+When this is known to be an issue, the command editors provide a text field rather than a choice.
+These complexities will be improved over time as additional resources are devoted to solving design limitations.
+* ![limitation](limitation.png) When saving time series product [(`*.tsp`) files](../appendix-tsview/tsview), the absolute path is saved with each file.
+This is not as portable as saving a path relative to the command file.
+It may be necessary to edit the product file manually to change file paths from absolute to relative – the
+relative path will then be converted to absolute when processed and time series files will be found,
+assuming that the locations are consistent.
+* ![limitation](limitation.png) The [`ReadStateCUB`](../command-ref/ReadStateCUB/ReadStateCUB) command,
+unlike other read commands, does not provide a discovery mode.
+Consequently, other commands will not be provided with a list of time series identifiers for the binary file.
+The reason for this is that StateMod and StateCU binary files can contain a huge number
+of time series and providing a list could be overwhelming and slow.
+Alternatives are being evaluated.
+Currently, commands that reference time series in the binary files must use
+more generic selection methods such as `TSLIST=AllMatchingTSID` and `TSID` with wildcards.
+* ![limitation](limitation.png) Plotting features do not know understand the concept of instantaneous, mean,
+and accumulated time series (referred to as the time scale).  All values are plotted at data value date/time.
+In the future, features may be implemented to automatically determine from the
+data type and time scale whether to adjust the visual representation based on the time scale,
+for example to use a “carry forward” line instead of connecting points.
+* ![limitation](limitation.png) Using the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir) command may result in warnings after commands are edited.
+This is due to the initial checks on filenames not fully recognizing the impacts of previous
+[`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir) commands.
+It is recommended that the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir) command be avoided and
+that paths be specified relative to the command file.

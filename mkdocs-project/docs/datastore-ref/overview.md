@@ -39,12 +39,14 @@ The following datastores (and input types) are listed in alphabetical order by d
 | [HydroJSON](HydroJSON/HydroJSON)                                  | File (text)            | No limit           | HydroJSON time series format                   | Migrated |
 | [MODSIM](MODSIM/MODSIM)                                           | File (text)            | No limit           | MODSIM modeling software data file             | Migrated |
 | [NRCS AWDB](NRCS-AWDB/NRCS-AWDB)                                  | Web service (SOAP)     | USA                | Snow, reservoir, climate, other                | Migrated |
+| [NDFD](NDFD/NDFD)                                                 | File (text)            | No limit           | National Digital Forecast Database.            | **not yet migrated (placeholder)**|
 | [NWS Card](NwsCard/NwsCard)                                       | File (text)            | No limit           | General time series format (hour interval)     | **not yet migrated**     |
 | [NWSRFS ESP Ensemble](NwsrfsEspEnsemble/NwsrfsEspEnsemble)        | File (binary)          | No limit           | Ensembles of time series (hour interval)       | **not yet migrated**     |
 | [NWSRFS FS5Files](NwsrfsFs5files/NwsrfsFs5files)                  | File database (binary) | No limit           | National Weather Service River Forecast System | **not yet migrated**     |
 | [RCC ACIS](RCC-ACIS/RCC-ACIS)                                     | Web service (REST)     | USA                | Precipitation, temperature, other climate      | Migrated |
 | [Reclamation HDB](ReclamationHdb/ReclamationHdb)                  | Database (Oracle)      | USA                | Water resources                                | Migrated |
 | [Reclamation Pisces](ReclamationPisces/ReclamationPisces)         | Database (MySQL)       | USA                | Water resources                                | Migrated |
+| [RiversideDB](RiversideDB/RiversideDB)                            | Database (SQL Server)  | No limit           | Hydrologic modeling database.                  | **not yet migrated (placeholder)**     |
 | [RiverWare](RiverWare/RiverWare)                                  | File (text)            | No limit           | RiverWare modeling software data file          | Migrated |
 | [StateCU](StateCU/StateCU)                                        | File (text)            | No limit           | StateCU modeling software data file            | Migrated |
 | [StateCUB - StateCU Output](StateCUB/StateCUB)                    | File (binary)          | No limit           | StateCU modeling software data file            | Migrated |
@@ -54,5 +56,6 @@ The following datastores (and input types) are listed in alphabetical order by d
 | [USGS NWIS Groundwater](USGS-NWIS-Groundwater/USGS-NWIS-Groundwater)| Web service (REST)   | No limit           | Groundwater and other data                     | Migrated |
 | [USGS NWIS Instantaneous](USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous)| Web service (REST)| No limit        | Water and other data (instantaneous interval)  | Migrated |
 | [USGS NWIS RDB](USGS-NWIS-RDB/USGS-NWIS-RDB)                      | File (text)            | No limit           | RDB format for USGS data (see USGS above)      | Migrated |
-| [WaterML](WaterML/WaterML)                                        | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | **not yet migrated**     |
+| [WaterML](WaterML/WaterML)                                        | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | **not yet migrated (placeholder)**     |
+| [WaterML2](WaterML/WaterML2)                                      | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | **not yet migrated (placeholder)**     |
 | [WaterOneFlow](WaterOneFlow/WaterOneFlow)                         | Web service (SOAP)     | No limit           | Web service for CUAHSI                         | **not yet migrated**     |

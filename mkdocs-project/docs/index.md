@@ -7,11 +7,13 @@ which automates processing of time series, tabular, and other data.
 **The TSTool documentation has in the past been maintained in Microsoft Word and PDF
 and is being migrated to Markdown/MkDocs in order to provide a better user experience.
 The general organization of the documentation will remain the same; however,
-some consolidation is expected beause linked documentation presents opportunities to
-remove duplicate information.
-Due to the significant amount of documentation, this process will take some time.
-All documentation is listed in this web version, and notes are provided to indicate the status of
-the migration.  If necessary, refer to the PDF version that is distributed with software.**
+some consolidation is expected beause linked documentation presents opportunities to remove duplicate information.
+Most of the migration has been completed, except for a few sections.
+The [datastore](datastore-ref/overview) and
+[command reference](command-ref/overview#command-list) overview sections provide an
+inventory of documentation to indicate which sections still need to be migrated.
+Notes within documents also indicate the status of the migration.
+If necessary, refer to the PDF version that is distributed with software.**
 
 * [How to Use this Documentation](#how-to-use-this-documentation)
 * [Acknowledgements](#acknowledgements)
@@ -38,7 +40,34 @@ Use the search feature to find documentation matching the search words.
 
 ## Acknowledgements
 
-**Need to insert here "Chapter 1 Acknowledgements" from TSTool Word documentation**
+TSTool has been developed by the Open Water Foundation (OWF) with significant
+funding provided by the Colorado Water Conservation Board (CWCB)
+in coordination with the Division of Water Resources (DWR),
+as part of Colorado’s Decision Support Systems (CDSS).
+
+Additional enhancement to TSTool have been funded by various organizations including:
+
+* Open Water Foundation
+* US Bureau of Reclamation
+* Tennessee Valley Authority
+* and others
+
+TSTool software users are encouraged to provide feedback using the
+[GitHub Issues page](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/issues).
+
+Feedback specific to CDSS functionality (e.g.,
+[HydroBase](datastore-ref/CO-HydroBase/CO-HydroBase],
+[StateMod](datastore-ref/StateMod),
+[StateModB](datastore-ref/StateModB), and
+[StateCU](datastore-ref/StateCU) input types and other features)
+can be provided using the [CDSS email address](mailto:cdss@state.co.us).
+
+### Software Components
+
+The following components are used in TSTool and require or request attribution:
+
+* [Material Theme icons](https://material.io/icons/) - these icons are used in documentation
+* More information will be added here as the open source license is finalized.
 
 ## Colorado's Decision Support Systems ##
 
@@ -65,9 +94,7 @@ In late 2016, the Open Water Foundation began the effort to move TSTool and othe
 and establish open source software projects, referred to as "OpenCDSS".
 The OpenCDSS project is resulting in a significant evolution in how CDSS software development occurs,
 such as implementing version control with Git/GitHub and modernizing the development environment and documentation.
-See the following website for more information.
-
-[OpenCDSS Website](http://learn.openwaterfoundation.org/cdss-website-opencdss/)
+See the [OpenCDSS Website](http://learn.openwaterfoundation.org/cdss-website-opencdss/) for more information.
 
 ## About the Open Water Foundation ##
 
@@ -75,28 +102,22 @@ The [Open Water Foundation](http://openwaterfoundation.org) is a 501(c)3 nonprof
 on developing and supporting open source software for water resources,
 so that organizations can make better decisions about water.
 OWF also works to advance open data tools and implementation.
-OWF is currently the lead entity on TSTool development with staff that have been involved in TSTool
-development for over 20 years.
-
-See also other [OWF learning resources](http://learn.openwaterfoundation.org).
+OWF staff have been the primary TSTool developers on State of Colorado and other projects.
 
 ## License ##
 
 The TSTool software open source license is being determined in the OpenCDSS project.
 
-The TSTool documentation is licensed under the
-[Creative Commons Attribution 2.0 Generic License (CC BY 2.0)](https://creativecommons.org/licenses/by/2.0/).
-Please appropriately attribute uses of this documentation.
+The TSTool documentation is also being determined but is expected to be a Creative Commons license of some type.
 
 ## Source Repository on GitHub ##
 
 The source files for this documentation are maintained in a GitHub repository:
 [cdss-app-tstool-doc-user](https://github.com/OpenWaterFoundation/cdss-app-tstool-doc-user).
 
-This user documentation is currently maintained in a separate repository in order to avoid
-confusion with the legacy documentation and to facilitate updates.
+This user documentation is currently maintained in a repository that is separate from TSTool code
+in order to avoid confusion with the legacy documentation and to facilitate updates.
 
 ## Release Notes ##
 
-See the [Release Notes in the GitHub repository README](https://github.com/OpenWaterFoundation/owf-app-tstool-doc-user#release-notes).
-The documentation is typically published after any changes have been made.
+See the [release notes](appendix-release-notes/release-notes) section of this documentation.
