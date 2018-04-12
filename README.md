@@ -120,9 +120,6 @@ with the goal of keeping formatting simple in favor of focusing on useful conten
 * Use triple-tick formatting for code blocks, with language specifier.
 * Use ***bold italics*** when referencing UI components such as menus.
 * Use slashes to indicate ***Menu / SubMenu***.
-* Include table of contents at top of pages using lists with links to sections to
-facilitate navigation in a page (without needing side-bar navigation) and because
-it helps if documents are printed.
 * Images are handled as follows:
 	+ Where narrative content pages are sufficiently separated into folders,
 	image files exist in those folder with names that match the original TSTool Word documentation.
@@ -142,11 +139,12 @@ The following figure illustrates the ***Mixed Station Analysis*** tool.
 * Minimize the use of inlined HTML elements, but use it where Markdown formatting is limited.
 * Although the Material them provides site and page navigation sidebars,
 provide in-line table of contents on pages, where appropriate, to facilitate review of page content.
+Use a simple list with links to sections on the page.
 
 ## License ##
 
 This documentation is licensed under the
-[Creative Commons Attribution 2.0 Generic License](https://creativecommons.org/licenses/by/2.0/)
+[Creative Commons Attribution 2.0 Generic License](https://creativecommons.org/licenses/by/2.0/).
 
 ## Contributing ##
 
