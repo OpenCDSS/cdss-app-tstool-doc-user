@@ -37,7 +37,7 @@ commands to use for specific work tasks.  For example, the following commands
 are suitable to perform the above conceptual work tasks (documentation is being migrated from Word to this documentation):
 
 1. `ReadTableFromExcel` - to read the list of stations
-2. [`For`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/For/For/) - to loop over the stations in the table
+2. [`For`](../command-ref/For/For/) - to loop over the stations in the table
 3. `ReadHydroBase` (to read monthly data directly) and ReadUsgsNwisDaily (will need to process daily data into monthly using `ChangeInterval` command)
 4. `NewRunningStatisticTimeSeries` or `CalculateTimeSeriesStatistic` (creates a table)
 5. `WriteTableToExcel` (output tabular form) and `ProcessTSProduct` (output graphs)

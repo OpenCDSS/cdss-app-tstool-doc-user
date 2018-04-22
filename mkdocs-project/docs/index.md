@@ -1,19 +1,28 @@
-# CDSS / Learn TSTool #
+# CDSS / TSTool #
 
 This documentation provides resources to learn how to use
-Colorado's Decision Support Systems (CDSS) TSTool software,
+[Colorado's Decision Support Systems (CDSS)](http://cdss.state.co.us/Pages/CDSSHome.aspx) TSTool software,
 which automates processing of time series, tabular, and other data.
+This documentation is generally referred to as the **"User Documentation"** in contrast to
+**"Developer Documentation"**, which is relevant to software developers.
 
 **The TSTool documentation has in the past been maintained in Microsoft Word and PDF
-and is being migrated to Markdown/MkDocs in order to provide a better user experience.
-The general organization of the documentation will remain the same; however,
-some consolidation is expected beause linked documentation presents opportunities to remove duplicate information.
-Most of the migration has been completed, except for a few sections.
+and is being migrated to
+[Markdown](https://en.wikipedia.org/wiki/Markdown)/[MkDocs](http://www.mkdocs.org/)
+in order to provide a better user experience.
+The general organization of the documentation is similar to the original Word version; however,
+some reorganization has occurred because linked documentation presents opportunities
+to remove duplicate information and leverage online features.
+As of April, 2018, most of the migration has been completed, except for a few pages.
 The [datastore](datastore-ref/overview) and
 [command reference](command-ref/overview#command-list) overview sections provide an
 inventory of documentation to indicate which sections still need to be migrated.
 Notes within documents also indicate the status of the migration.
-If necessary, refer to the PDF version that is distributed with software.**
+If necessary, refer to the PDF version that is distributed with older versions of software.
+Upcoming releases of the TSTool software will refer to the online documentation and PDF documentation
+will no longer be distributed with the software.
+This documentation is currently being hosted on the Open Water Foundation website until an appropriate
+location can be configured on the CDSS website.**
 
 * [How to Use this Documentation](#how-to-use-this-documentation)
 * [Acknowledgements](#acknowledgements)
@@ -120,4 +129,4 @@ in order to avoid confusion with the legacy documentation and to facilitate upda
 
 ## Release Notes ##
 
-See the [release notes](appendix-release-notes/release-notes) section of this documentation.
+See the [release notes](appendix-release-notes/release-notes) section of this documentation for information about TSTool software changes.

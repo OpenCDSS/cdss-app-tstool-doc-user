@@ -1,10 +1,21 @@
 # cdss-app-tstool-doc-user #
 
-This repository contains the user documentation for Colorado's Decision Support Systems (CDSS) TSTool software.
+This repository contains the user documentation for
+[Colorado's Decision Support Systems (CDSS)](http://cdss.state.co.us/Pages/CDSSHome.aspx) TSTool software.
 
-See the deployed [CDSS / Learn TSTool](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/) documentation.
+See the deployed [CDSS / TSTool](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/) documentation.
+This documentation is currently hosted on Open Water Foundation website but is expected to
+be integrated into the CDSS website.
 
-## TSTool Software ##
+* [TSTool Software Overview](#tstool-software-overview)
+* [Repository Contents](#repository-contents)
+* [Development Environment](#development-environment)
+* [Editing and Viewing Content](#editing-and-viewing-content)
+* [Style Guide](#style-guide)
+
+---------------------------
+
+## TSTool Software Overview ##
 
 The TSTool software is a Java application that automates time series processing:
 
@@ -61,11 +72,14 @@ build-util/           Useful scripts to view, build, and deploy documentation.
 mkdocs-project/       Typical MkDocs project for this documentation.
   mkdocs.yml          MkDocs configuration file for website.
   docs/               Folder containing source Markdown and other files for website.
+    css/              Custom CSS to augment MkDocs theme.
   site/               Folder created by MkDocs containing the static website - ignored using .gitignore.
 
 ```
 
-The repository can be cloned into the recommended standard CDSS development folder structure:
+The repository can be cloned into the recommended standard CDSS development folder structure,
+shown below.  Each of the component libraries have README files that indicate
+dependencies.
 
 ```text
 C:\Users\user\                            Windows:  User's files.
@@ -74,19 +88,20 @@ C:\Users\user\                            Windows:  User's files.
   cdss-dev/                               Main development location for CDSS products.
     TSTool/                               TSTool software development files.
       git-repos/                          Git repositories for TSTool software.
-        cdss-app-tstool-doc/
-        cdss-app-tstool-doc-user/         Git repository for user documentation.
-        cdss-app-tstool-main/
-        cdss-app-tstool-test/
-        cdss-lib-cdss-java/
-        cdss-lib-common-java/
-        cdss-lib-dmi-hydrobase-java/
-        cdss-lib-dmi-nwsrfs-java/
-        cdss-lib-dmi-riversidedb-java/
-        cdss-lib-dmi-satmonsys-java/
-        cdss-lib-models-java/
-        cdss-lib-processor-ts-java/
-        cdss-util-buildtools/
+        cdss-app-tstool-doc/              Legacy user and developer documentation, primarily in Word/PDF.
+        cdss-app-tstool-doc-dev/          Developer documentation using Markdown/MkDocs.
+        cdss-app-tstool-doc-user/         User documentation using Markdown/MkDocs.
+        cdss-app-tstool-main/             Main TSTool application, primarily the main UI.
+        cdss-app-tstool-test/             Functional tests that run command files.
+        cdss-lib-cdss-java/               Shared CDSS code.
+        cdss-lib-common-java/             Shared general utility code.
+        cdss-lib-dmi-hydrobase-java/      State of Colorado's HydroBase API.
+        cdss-lib-dmi-nwsrfs-java/         Legacy National Weather Service API.
+        cdss-lib-dmi-riversidedb-java/    Legacy RiversideDB database API.
+        cdss-lib-dmi-satmonsys-java/      Colorado Satellite Monitoring System API.
+        cdss-lib-models-java/             CDSS StateCU and StateMod model API.
+        cdss-lib-processor-ts-java/       Core TSTool processing library.
+        cdss-util-buildtools/             Utilities to build and deploy TSTool.
 ```
 
 ## Development Environment ##
@@ -123,12 +138,12 @@ with the goal of keeping formatting simple in favor of focusing on useful conten
 * Images are handled as follows:
 	+ Where narrative content pages are sufficiently separated into folders,
 	image files exist in those folder with names that match the original TSTool Word documentation.
+	This approach has been used for the most part.
 	+ If necessary, place images in a folder with the same name as the content file and include
 	`-images` at the end of the folder name at the same level (for example `x.md` and `x-images/`)
 	or include an `images` folder under the content folder.
-	The previous option has been used for the most part.
 	+ When using images in the documents, consider providing a link to look at the full-sized
-	image, as follows:
+	image, as follows (normal MkDocs approach does not seem to work?):
 
 ```text
 The following figure illustrates the ***Mixed Station Analysis*** tool.
@@ -143,8 +158,9 @@ Use a simple list with links to sections on the page.
 
 ## License ##
 
-This documentation is licensed under the
-[Creative Commons Attribution 2.0 Generic License](https://creativecommons.org/licenses/by/2.0/).
+This documentation is currently licensed under the
+[Creative Commons Attribution 2.0 Generic License](https://creativecommons.org/licenses/by/2.0/),
+which is the recommendation for CDSS documentation that is currently under review.
 
 ## Contributing ##
 
@@ -153,6 +169,7 @@ Contribute to the documentation as follows:
 1. Use GitHub repository issues to report minor issues.
 Fill out the template issue.
 2. Use GitHub pull requests.
+3. A member of the core development team will follow up to issues and pull requests.
 
 ## Maintainers ##
 
@@ -160,7 +177,7 @@ This repository is maintained by the OpenCDSS team.
 
 ## Contributors ##
 
-Steve Malers, Open Water Foundation (@smalers) - technical lead
+* Steve Malers, Open Water Foundation (@smalers) - primary contact
 
 ## Release Notes ##
 
@@ -168,3 +185,4 @@ The following release notes indicate the update history for documentation, with 
 if applicable (links to issues via README.md are not cleanly supported by GitHub so use the repository issues page to find).
 
 * 2018-03-16 - Initial content.
+* 2018-04-22 - Majority of content transferred except for a few commands and datastores.

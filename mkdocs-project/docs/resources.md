@@ -1,4 +1,4 @@
-# Learn TSTool / Resources #
+# TSTool / Resources #
 
 The following are useful resources.
 
