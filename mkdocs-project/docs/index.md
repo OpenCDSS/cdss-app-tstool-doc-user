@@ -2,7 +2,7 @@
 
 This documentation provides resources to learn how to use
 [Colorado's Decision Support Systems (CDSS)](http://cdss.state.co.us/Pages/CDSSHome.aspx) TSTool software,
-which automates processing of time series, tabular, and other data.
+which automates processing time series, data tables, and other data.
 This documentation is generally referred to as the **"User Documentation"** in contrast to
 **"Developer Documentation"**, which is relevant to software developers.
 
@@ -65,7 +65,7 @@ TSTool software users are encouraged to provide feedback using the
 [GitHub Issues page](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/issues).
 
 Feedback specific to CDSS functionality (e.g.,
-[HydroBase](datastore-ref/CO-HydroBase/CO-HydroBase],
+[HydroBase](datastore-ref/CO-HydroBase/CO-HydroBase]),
 [StateMod](datastore-ref/StateMod),
 [StateModB](datastore-ref/StateModB), and
 [StateCU](datastore-ref/StateCU) input types and other features)

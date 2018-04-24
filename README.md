@@ -12,6 +12,11 @@ be integrated into the CDSS website.
 * [Development Environment](#development-environment)
 * [Editing and Viewing Content](#editing-and-viewing-content)
 * [Style Guide](#style-guide)
+* [License](#license)
+* [Contributing](#contributing)
+* [Maintainers](#maintainers)
+* [Contributors](#contributors)
+* [Release Notes](#release-notes)
 
 ---------------------------
 
@@ -120,7 +125,7 @@ given that the source documentation files are the same.
 If the development environment is properly configured, edit and view content as follows:
 
 1. Edit content in the `mkdocs-project/docs` folder and update `mkdocs-project/mkdocs.yml` as appropriate.
-2. Run the `build-util/run-mkdocs-serve-8000.sh` script (Linux) or equivalent.
+2. Run the `build-util/run-mkdocs-serve-8000.sh` script (Cygwin/Linux) or equivalent.
 3. View content in a web browser using URL `http://localhost:8000`.
 
 ## Style Guide ##
@@ -177,7 +182,7 @@ This repository is maintained by the OpenCDSS team.
 
 ## Contributors ##
 
-* Steve Malers, Open Water Foundation (@smalers) - primary contact
+* Steve Malers, Open Water Foundation (@smalers)
 
 ## Release Notes ##
 
