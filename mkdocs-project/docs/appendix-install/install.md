@@ -2,7 +2,8 @@
 
 This appendix describes how to install TSTool.
 TSTool was originally developed for [CDSS (Colorado's Decision Support Systems)](http://cdss.state.co.us)
-but can be used on any computer.
+to process water resources data for modeling and analysis.
+However, TSTool can be used outside of CDSS and also can be used to analyze data other than water resources.
 
 * [Overview](#overview)
 * [File Locations](#file-locations)
@@ -62,7 +63,8 @@ C:\CDSS\TSTool-Version                      Windows top-level install directory.
     *.cfg                                   Shared datastore configuration files. See also user files below.
 ```
 
-User files are saved in a `.tstool` folder under the user’s home folder and
+In addition to the software installation files above,
+user files are saved in a `.tstool` folder under the user’s home folder and
 provide user-specific customization of the TSTool installation.
 Folders names beginning with a period are by default hidden on Linux computers.
 These files apply to all versions of TSTool and therefore allow settings to
@@ -76,6 +78,14 @@ file settings when configuration setting values are found in both places.
 **<p style="text-align: center;">
 TSTool User Configuration Files
 </p>**
+
+**The following design has been implemented in TSTool 12.xx.xx in order to
+enable plugin datastores and commands.
+The initial design envisioned that configuration and plugins could be used across all installed TSTool versions.
+However, based on experience, it is likely that future TSTool updates will
+user versioned user files, for example consistent within a major version.
+In this case, files might be moved across versions through "import" functionality,
+which will be implemented in the TSTool user interface.**
 
 TSTool user configuration files:
 
