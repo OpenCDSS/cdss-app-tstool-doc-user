@@ -94,11 +94,11 @@ Command Parameters
 </p>**
 
 |**Compare Method**| **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-|--------------|-----------------|----------------- |
+|---|--------------|-----------------|----------------- |
 |2 time series|`TSID1`|First time series identifier (or alias) to compare.|Specify if only 2 time series are compared.|
 |2 time series|`TSID2`|Second time series identifier (or alias) to compare.|Specify if only 2 time series are compared.|
-|2 enembles|`EnsembleID1`|First ensemble identifier to compare.|Specify if time series from 2 ensembles are compared.|
-|2 enembles|`EnsembleID2`|Second ensemble identifier to compare.|Specify if time series from 2 ensembles are compared.|
+|2 ensembles|`EnsembleID1`|First ensemble identifier to compare.|Specify if time series from 2 ensembles are compared.|
+|2 ensembles|`EnsembleID2`|Second ensemble identifier to compare.|Specify if time series from 2 ensembles are compared.|
 ||`MatchLocation`|Match the location part of time series identifiers when matching time series to compare.|`True`|
 ||`MatchDataType`|Match the data type part of time series identifiers when matching time series to compare.|`False`|
 ||`Precision`|When comparing data values, round the values to the given precision.  For example, a precision of 2 will round to the hundredths place.  This can be used to do comparisons on the lowest precision of the available time series.|Compare the available values without rounding.|

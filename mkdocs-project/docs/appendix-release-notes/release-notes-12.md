@@ -7,20 +7,25 @@
 
 ## Changes in Versions 12.01.00 - 12.05.00 ##
 
+* ![new](new.png) [12.05.00] Initial version of [ColoradoHydroBaseRest web service datastore](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest) features.
+command and added network object as main object type in TSTool main interface.
 * ![new](new.png) [12.03.00] Added the [`CreateNetworkFromTable`](../command-ref/CreateNetworkFromTable/CreateNetworkFromTable)
 command and added network object as main object type in TSTool main interface.
-* ![new](new.png) [12.04.00] Added the [`ReadWaterML2`](../command-ref/ReadWaterML2/ReadWaterML2) command.
-* ![new](new.png) [12.01.00] Added [plugin datastore](../datastore-ref/Plugin/Plugin)
+* ![new](new.png) [12.01.00] Added experimental [plugin datastore](../datastore-ref/Plugin/Plugin)
 feature to allow third-party modules to add datastore functionality.
 This allows developers to add functionality to TSTool without changing the core software.
-* ![change](change.png) [12.03.04] Enhance the [`For`](../command-ref/For/For) command to allow
-`SequenceStart` and `SequenceEnd` parameters to be specified with `${Property}`.
+* ![change](change.png) [12.05.00] Begin changing command editor dialogs to default to relative path when files are selected via a file chooser.
 * ![change](change.png) [12.05.00] Enhance the [`If`](../command-ref/If/If) command to have `contains` and
 `!contains` operators for string evaluations.
 * ![change](change.png) [12.05.00] Enhance the [`InsertTableColumn`](../command-ref/InsertTableColumn/InsertTableColumn) command to have
 `InitialFunction` parameter to facilitate setting initial values.
 * ![change](change.png) [12.05.00] Enhance the [`InsertTableRow`](../command-ref/InsertTableRow/InsertTableRow) command to have
 `ColumnValues` parameter to set cell values for the inserted row.
+* ![change](change.png) [12.05.00] Enhance the [`WebGet`](../command-ref/WebGet/WebGet) command to have
+`ResponseCodeProperty` parameter to help handle errors in requests.
+* ![new](new.png) [12.04.00] Added the [`ReadWaterML2`](../command-ref/ReadWaterML2/ReadWaterML2) command.
+* ![change](change.png) [12.03.04] Enhance the [`For`](../command-ref/For/For) command to allow
+`SequenceStart` and `SequenceEnd` parameters to be specified with `${Property}`.
 * ![change](change.png) [12.03.00] Enhance the [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command to have
 `RowCountProperty` parameter.
 * ![change](change.png) [12.03.00] Enhance the [`SelectTimeSeries`](../command-ref/SelectTimeSeries/SelectTimeSeries) command to

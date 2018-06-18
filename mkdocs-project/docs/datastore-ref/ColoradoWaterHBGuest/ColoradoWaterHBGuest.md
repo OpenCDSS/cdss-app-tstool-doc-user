@@ -19,7 +19,7 @@ The ColoradoWaterHBGuest datastore provides internet web service access to histo
 * [HBGuest Web Service Data Dictionary](http://www.dwr.state.co.us/HBGuest/Documents/HBGuestWebService Objects.pdf)
 * [HBGuest Web Services landing page](http://www.dwr.state.co.us/HBGuest/default.aspx)
 
-The ColoradoWaterHBGuest datastore is being enhanced to read all time series
+The ColoradoWaterHBGuest datastore provides access to many HydroBase time series
 that are available via the web service, but currently there are some limitations (see below).
 
 The ColoradoWaterSMS datastore (see the [Colorado Water SMS Datastore appendix](../ColoradoWaterSMS/ColoradoWaterSMS)

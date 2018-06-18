@@ -19,16 +19,17 @@ A summary table is provided, with links to details for major versions.
 
 ## TSTool Version Numbering Convention ##
 
-TSTool versioning generally adheres to the following pattern:
+TSTool versioning generally adheres to the following pattern.
+The version may be incremented in source code but does not become official until a public software release is made.
 
 ```
 Major.Minor.Maintenance
 ```
 where:
 
-* `Major` is a number indating a major change to the software
-* `Minor` is a number indating a minor change to the software
-* `Maintenance` is a number indating a maintenance release,
+* `Major` is a number indicating a major change to the software
+* `Minor` is a number indicating a minor change to the software
+* `Maintenance` is a number indicating a maintenance release,
 for example to fix a bug with no new features
 * The version may also be followed by another indicator such as "beta" to indicate a beta release
 * Numbers have traditionally been two digits and zero-padded;
@@ -68,7 +69,8 @@ TSTool Version History Summary (most current at top)
 </p>**
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
-|12.05.00|Minor enhancements.|2017-11-19|
+|--|--|--|
+|12.05.00|Various enhancements and cleanup based on open source migration.|2018-06-??|
 |12.04.00|Enhance support for [datastore plugins](../datastore-ref/Plugin/Plugin).  Add network object.  Add initial [WaterML 2.0](../datastore-ref/WaterML2/WaterML2) support.|2017-07-13|
 |12.00.00|Update to use Java 8 including using Java 8 language standards.  Add new graphing features including y-axis zoom, and graph template feature.  Many other minor enhancements.|2017-04-24|
 |11.11.00 – 11.13.00|Improve Excel integration, enhance [`For`](../command-ref/For/For) command support for various commands.  Enhance [`VariableLagK`](../command-ref/VariableLagK/VariableLagK) command to read and save states.  Add graph mouse tracker and time series select/highlight.|2017-03-07|
