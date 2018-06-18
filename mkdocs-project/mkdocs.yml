@@ -267,6 +267,7 @@ pages:
 - Reference - Datastores:
   - Overview: datastore-ref/overview.md
   - Colorado HydroBase: datastore-ref/CO-HydroBase/CO-HydroBase.md
+  - Colorado HydroBase REST Web Service: datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md
   - ColoradoWaterHBGuest: datastore-ref/ColoradoWaterHBGuest/ColoradoWaterHBGuest.md
   - ColoradoWaterSMS: datastore-ref/ColoradoWaterSMS/ColoradoWaterSMS.md
   - DateValue: datastore-ref/DateValue/DateValue.md

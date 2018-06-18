@@ -27,6 +27,8 @@ in which case `Read` command parameters or datastore configuration properties ar
 The following datastores (and input types) are listed in alphabetical order by datastore name, with the following explanation:
 
 | **Datastore (link to documentation)**                             | **Technology**         | **Spatial Extent** | **Contents**                                   | **Documentation Status** |
+|--|--|--|--|--|
+| [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest) | Web service (REST)  | Colorado           | Historical and real-time data                  | New - in process |
 | [Colorado SMS (legacy)](ColoradoSMSDatabase/ColoradoSMSDatabase)  | Database (SQL Server)  | Colorado           | Real-time data                                 | **not yet migrated**     |
 | [ColoradoWaterHBGuest](ColoradoWaterHBGuest/ColoradoWaterHBGuest) | Web service (SOAP)     | Colorado           | Historical data                                | Migrated |
 | [ColoradoWaterSMS](ColoradoWaterSMS/ColoradoWaterSMS)             | Web service (SOAP)     | Colorado           | Real-time data                                 | Migrated |

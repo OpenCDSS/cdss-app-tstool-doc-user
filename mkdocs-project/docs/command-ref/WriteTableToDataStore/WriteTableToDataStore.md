@@ -56,23 +56,23 @@ An example of column mapping to a related table is as follows,
 using the notation Table.Column to fully identify columns:
 
 * the string `TableID.DataType` column is in the input data
-* an integer database table `TimeSeriesMeta.DataTypesID` column is a foreign key
-to `DataTypes.DataTypesID`, and `DataTypes.Abbreviation` is the string data type – in other words,
+* an integer database table `TimeSeriesMeta.DataTypeID` column is a foreign key
+to `DataTypes.DataTypeID`, and `DataTypes.Abbreviation` is the string data type – in other words,
 the datastore column being written does not match the string data type,but uses a relationship to match the integer data type in a separate table
 
 To handle this relationship:
 
-* Use the `ColumnMap` parameter to tell the command that the `DataType` column in input table maps to the `DataTypesID` column in the datastore table:
+* Use the `ColumnMap` parameter to tell the command that the `DataType` column in input table maps to the `DataTypeID` column in the datastore table:
 
 ```
-ColumnMap=”DataType:DataTypesID”
+ColumnMap=”DataType:DataTypeID”
 ```
 
-* Use the `DataStoreRelatedColumnsMap` parameter to tell the command that the `DataTypesID`
+* Use the `DataStoreRelatedColumnsMap` parameter to tell the command that the `DataTypeID`
 column should be looked up the Abbreviation column, which is a second level of column mapping:
 
 ```
-DataStoreRelatedColumnsMap=”DataTypesID:Abbreviation”
+DataStoreRelatedColumnsMap=”DataTypeID:Abbreviation”
 ```
 
 ## Command Editor ##
@@ -114,34 +114,34 @@ See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool
 
 ### Writing a Table with Foreign Keys ###
 
-To explain loading tables with foreign keys, consider the definitions (lookup, reference) table:
+To explain loading tables with foreign keys, consider the `DataTypes` definitions table used as a reference table:
 
-| **DataTypes** |
+|**Column**|**Description**|
 |-----------|-----------|
-|`DataTypesID`|Integer autonumber primary key for this record|
+|`DataTypeID`|Integer autonumber primary key for this record|
 |`Abbreviation`|Varchar – what the user sees and what is referenced in other data (e.g., `Streamflow`)|
 |`Name`|Varchar|
 |`Definition`|Varchar|
 
-Another table (below) may use the above table with a relationship to the `DataTypesID` column, as follows:
+Another `TimeSeriesMeta` table (below) may use the above table with a relationship to the `DataTypeID` column, as follows:
 
-| **TimeSeriesMeta**|
+|**Column**|**Description**|
 |-----------|-----------|
 |`TimeSeriesMetaID`|Integer autonumber primary key for this record.|
-|`DataTypesID`|Foreign key to `DataTypes.DataTypesID`|
+|`DataTypeID`|Foreign key to `DataTypes.DataTypeID`|
 |`Other`|...|
 
 Time series being written to the `TimeSeriesMeta` table is specified with a data type of `Streamflow`
 and the internal database keys are opaque (meaning the values are not used directly by software user).
-If the `TimeSeriesMeta` table properties define the foreign key for `TimeSeriesMeta.DataTypesID`,
+If the `TimeSeriesMeta` table properties define the foreign key for `TimeSeriesMeta.DataTypeID`,
 then the TSTool software can automatically determine the table relationship.
 However, additional information is needed to indicate that the value for `DataTypes.Abbreviation`
 specified in the load data should be used to complete the relationship.
-Assume that the TSTool being written is as follows:
+Assume that the TSTool table being written is as per the following `TimeSeriesMeta_TSTool` table:
 
-|**TimeSeriesMeta\_TSTool**|
+|**Column**|**Description**|
 |------|------|
-|`DataTypeAbbreviation`|Foreign key to `DataTypes.DataTypesID`|
+|`DataTypeAbbreviation`|Foreign key to `DataTypes.DataTypeID`|
 |Other|...|	
 
 In this case, the following command parameters are required to complete the TSTool table to datastore table mapping:
@@ -150,13 +150,15 @@ In this case, the following command parameters are required to complete the TSTo
 `IncludeColumns = “DataTypeAbbreviation”` (or blank to write all TSTool table columns)<br>
 `DataStore = as appropriate`<br>
 `DataStoreTable = “TimeSeriesMeta”`<br>
-`ColumnMap = “DataTypeAbbreviation:DataTypesID”` (to indicate column in TimeSeriesMeta)<br>
-`DataStoreRelatedColumnMap = “DataTypesID:Abbreviation”` (to further indicate that the
+`ColumnMap = “DataTypeAbbreviation:DataTypeID”` (to indicate column in TimeSeriesMeta)<br>
+`DataStoreRelatedColumnMap = “DataTypeID:Abbreviation”` (to further indicate that the
 record in the related table matching the foreign key should use the `DataTypes.Abbreviation`
 column to look up the record to match the load data.
 This assumes that a foreign key relationship is defined, which while provide the foreign table.
 If a foreign key relationship is not defined, supply the foreign table, as in:<br>
-`DataStoreRelatedColumnMap = “DataTypesID:DataTypes.Abbreviation”`
+`DataStoreRelatedColumnMap = “DataTypeID:DataTypes.Abbreviation”`
+
+The internal code will essentially replace data table DataTypeID column values with `select primary_key from DataTypes where DataTypes.Abbrevation = DataTypeID`.
 
 ### Writing a Relationship (Association) Table ###
 
@@ -165,7 +167,7 @@ for example in the case where a one-to-many, or many-to-many relationship exists
 For example consider the following case, where a basin record can be associated with multiple subbasin records.
 The `Basins` table may have a design similar to the following:
 
-|**Basins**|
+|**Column**|**Description**|
 |---|----|
 |`BasinsID`|Integer autonumber primary key for this record|
 |`Abbreviation`|Varchar – what the user sees and what is referenced in other data (e.g., “Basin1”)|
@@ -174,16 +176,16 @@ The `Basins` table may have a design similar to the following:
 
 The Subbasins table may have a design similar to the following:
 
-|**Subbasins**|
+|**Column**|**Description**|
 |--------|----------|
 |`SubbasinsID`|Integer autonumber primary key for this record|
 |`Abbreviation`|Varchar – what the user sees and what is referenced in other data (e.g., “Subbasin1”)|
 |`Name`|Varchar|
 |`Other data||
 
-An association table may have a design similar to the following:
+An association table may have a design similar to the following `Basins_Subbasins_Relate` table:
 
-|**Basins_Subbasins**|
+|**Column**|**Description**|
 |-----------|--------------|
 |`BasinsID`|Integer autonumber primary key for this record|
 |`SubbasinsID`|Integer autonumber primary key for this record|
