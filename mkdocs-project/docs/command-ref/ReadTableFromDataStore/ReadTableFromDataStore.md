@@ -127,7 +127,7 @@ Command Parameters
 </p>**
 
 |**Query Method**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| --------------|-----------------|----------------- |
+|--------------|-----------------|-----------------|----|
 |All|`DataStore`<br>**required**|The name of a database datastore to read.|None – must be specified.|
 |Table/view|`DataStoreTable`|The name of the database table or view to read when querying a single table or view.  If specified, do not specify `Sql` or `SqlFile`.|None.|
 |Table/view|`DataStoreColumns`|When reading a single table/view, the names of the columns to read, separated by commas.|All columns from `DataStoreTable` are read.|
