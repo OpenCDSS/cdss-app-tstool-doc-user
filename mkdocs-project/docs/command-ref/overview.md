@@ -13,6 +13,7 @@ documentation is not available below.
 Commands that don't have a description after the name do not have documentation included here.**
 
 * [Command Syntax Overview](#command-syntax-overview)
+* [Command List](#command-list) - alphabetical list of commands (**is at the end of this section**)
 * [Time Series Processing](#time-series-processing)
 	+ [Select, Free, Sort Time Series](#select-free-sort-time-series) - basic handling of time series objects
 	+ [Create Time Series](#create-time-series) - create new time series
@@ -49,7 +50,6 @@ Commands that don't have a description after the name do not have documentation 
 	+ [Output Table](#output-table) - output (write) tables to files and databases
 	+ [Running and Properties](#running-and-properties) - use table data to control logic
 * [Plugin Commands](#plugin-commands) - commands developed by third parties
-* [Command List](#command-list) - alphabetical list of commands
 
 ---------------------------
 
@@ -131,6 +131,7 @@ These commands read time series from various sources.
 * [`SetIncludeMissingTS`](SetIncludeMissingTS/SetIncludeMissingTS) - set the global property to include missing time series in output
 * [`SetInputPeriod`](SetInputPeriod/SetInputPeriod) - set the global processor input period
 * [`CreateFromList`](CreateFromList/CreateFromList) - create time series from a list in a file
+* [`ReadColoradoHydroBaseRest`](ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest) - read time series from [Colorado HydroBase REST web services](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest)
 * [`ReadDateValue`](ReadDateValue/ReadDateValue) - read time series from a [DateValue file](../datastore-ref/DateValue/DateValue)
 * [`ReadDelftFewsPiXml`](ReadDelftFewsPiXml/ReadDelftFewsPiXml) - read time series from Delft [FEWS PI XML file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML)
 * [`ReadDelimitedFile`](ReadDelimitedFile/ReadDelimitedFile) - read time series from delimited file
@@ -619,6 +620,7 @@ have been migrated to the new online version (this documentation).
 |[`ProcessRasterGraph`](ProcessRasterGraph/ProcessRasterGraph)                                                |Process (create) time series raster graph.|Migrated||
 |[`ProcessTSProduct`](ProcessTSProduct/ProcessTSProduct)                                                      |Process (create) time series data product.|Migrated||
 |[`ProfileCommands`](ProfileCommands/ProfileCommands)                                                         |Create summary table with containing performance data|Migrated||
+|[`ReadColoradoHydroBaseRest`](ReadColordoHydroBaseRest/ReadColoradoHydroBaseRest)                            |Read time series from [State of Colorado HydroBase REST web services](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest)|Migrated||
 |[`ReadDateValue`](ReadDateValue/ReadDateValue)                                                               |Read time series from a [DateValue file](../datastore-ref/DateValue/DateValue).|Migrated||
 |[`ReadDelftFewsPiXml`](ReadDelftFewsPiXml/ReadDelftFewsPiXml)                                                |Read time series from [Delft FEWS PI XML file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML).|Migrated||
 |[`ReadDelimitedFile`](ReadDelimitedFile/ReadDelimitedFile)                                                   |Read time series from delimited file.|Migrated||
@@ -717,6 +719,7 @@ have been migrated to the new online version (this documentation).
 |[`TableTimeSeriesMath`](TableTimeSeriesMath/TableTimeSeriesMath)                                             |Perform simple math on a table and time series.|Migrated||
 |[`TableToTimeSeries`](TableToTimeSeries/TableToTimeSeries)                                                   |Create time series from a table. |Migrated||
 |[`TimeSeriesToTable`](TimeSeriesToTable/TimeSeriesToTable)                                                   |Copy time series to a table.     |Migrated||
+|[`TSID`](TSID/TSID)                                                                                          |Time series identifier (TSID), causes time series to be read. |Migrated||
 |[`UnknownCommand`](UnknownCommand/UnknownCommand)                                                            |Unknown command.                 |Migrated||
 |[`UnzipFile`](UnzipFile/UnzipFile)                                                                           |Unzip the contents of a zip file.|Migrated||
 |[`VariableLagK`](VariableLagK/VariableLagK)                                                                  |                                 |Not yet migrated (placeholder)||
