@@ -1,9 +1,26 @@
 # TSTool / Release Notes / Version 12 #
 
+* [Changes in Version 12.06.00](#changes-in-version-120600)
 * [Changes in Versions 12.01.00 - 12.05.00](#changes-in-versions-120100-120500)
 * [Changes in Version 12.00.00](#changes-in-version-120000)
 
 ----------
+
+## Changes in Version 12.06.00 ##
+
+* ![change](change.png) [12.06.00] Significant general improvements to command editors:
+	+ All command editor dialogs default to relative path when files or folders are selected via a file chooser.
+	+ Command editors now have a ***Help*** button to access online documentation.
+	+ Most dialogs are now not resizable.
+	+ The order of editor buttons has been standardized according to Java standards (***OK***, ***Cancel***, ***Help***).
+* ![change](change.png) [12.06.00] Fix known issues with
+[ColoradoHydroBaseRest web service datastore](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest) TSID command
+and [ReadColoradoHydroBaseRest](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest) command features:
+	+ command was not properly handling where clauses in parameters - now fixed.
+	+ add reservoir storage and volume.
+	+ telemetry station data types were not being properly handled when saving and re-editing the command - now fixed.
+* ![change](change.png) [12.06.00] Add `ExcludeText` parameter to the
+[`CompareFiles`](../command-ref/CreateNetworkFromTable/CreateNetworkFromTable) command to ignore dynamic data in tests.
 
 ## Changes in Versions 12.01.00 - 12.05.00 ##
 

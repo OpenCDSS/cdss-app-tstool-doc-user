@@ -128,6 +128,7 @@ pages:
   - ProcessRasterGraph: command-ref/ProcessRasterGraph/ProcessRasterGraph.md
   - ProcessTSProduct: command-ref/ProcessTSProduct/ProcessTSProduct.md
   - ProfileCommands: command-ref/ProfileCommands/ProfileCommands.md
+  - ReadColoradoHydroBaseRest: command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md
   - ReadDateValue: command-ref/ReadDateValue/ReadDateValue.md
   - ReadDelftFewsPiXml: command-ref/ReadDelftFewsPiXml/ReadDelftFewsPiXml.md
   - ReadDelimitedFile: command-ref/ReadDelimitedFile/ReadDelimitedFile.md
@@ -223,6 +224,7 @@ pages:
   - TableTimeSeriesMath: command-ref/TableTimeSeriesMath/TableTimeSeriesMath.md
   - TableToTimeSeries: command-ref/TableToTimeSeries/TableToTimeSeries.md
   - TimeSeriesToTable: command-ref/TimeSeriesToTable/TimeSeriesToTable.md
+  - TSID: command-ref/TSID/TSID.md
   - UnknownCommand: command-ref/UnknownCommand/UnknownCommand.md
   - UnzipFile: command-ref/UnzipFile/UnzipFile.md
   - VariableLagK: command-ref/VariableLagK/VariableLagK.md
