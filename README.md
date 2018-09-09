@@ -1,11 +1,17 @@
 # cdss-app-tstool-doc-user #
 
-This repository contains the user documentation for
-[Colorado's Decision Support Systems (CDSS)](http://cdss.state.co.us/Pages/CDSSHome.aspx) TSTool software.
+This repository contains the user documentation for Colorado's Decision Support Systems (CDSS) TSTool software.
 
 See the deployed [CDSS / TSTool](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/) documentation.
 This documentation is currently hosted on Open Water Foundation website but is expected to
-be integrated into the CDSS website.
+be integrated into the CDSS website.  See the following online resources:
+
+* [CDSS](http://cdss.state.co.us)
+* [OpenCDSS](http://learn.openwaterfoundation.org/cdss-emod-dev/)
+* [TSTool software main repository](https://github.com/OpenWaterFoundation/cdss-app-tstool-main)
+* [TSTool Developer Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-dev/)
+
+See the following sections on this page.
 
 * [TSTool Software Overview](#tstool-software-overview)
 * [Repository Contents](#repository-contents)
