@@ -7,7 +7,7 @@ This documentation is currently hosted on Open Water Foundation website but is e
 be integrated into the CDSS website.  See the following online resources:
 
 * [CDSS](http://cdss.state.co.us)
-* [OpenCDSS](http://learn.openwaterfoundation.org/cdss-emod-dev/)
+* [OpenCDSS](http://learn.openwaterfoundation.org/cdss-website-opencdss/)
 * [TSTool software main repository](https://github.com/OpenWaterFoundation/cdss-app-tstool-main)
 * [TSTool Developer Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-dev/)
 
