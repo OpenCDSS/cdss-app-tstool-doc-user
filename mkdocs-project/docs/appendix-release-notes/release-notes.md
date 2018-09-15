@@ -70,7 +70,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|12.06.00|Update all editor dialogs to link to documentation and other editor improvements.|2018-09-??|
+|12.06.00|Update all editor dialogs to link to documentation and other editor improvements.|2018-09-14|
 |12.05.00|Various enhancements and cleanup based on open source migration, preliminary HydroBase REST web services implementation.|2018-07-03|
 |12.04.00|Enhance support for [datastore plugins](../datastore-ref/Plugin/Plugin).  Add network object.  Add initial [WaterML 2.0](../datastore-ref/WaterML2/WaterML2) support.|2017-07-13|
 |12.00.00|Update to use Java 8 including using Java 8 language standards.  Add new graphing features including y-axis zoom, and graph template feature.  Many other minor enhancements.|2017-04-24|

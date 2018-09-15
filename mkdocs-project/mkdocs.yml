@@ -47,6 +47,7 @@ pages:
   - CompareTables: command-ref/CompareTables/CompareTables.md
   - CompareTimeSeries: command-ref/CompareTimeSeries/CompareTimeSeries.md
   - ComputeErrorTimeSeries: command-ref/ComputeErrorTimeSeries/ComputeErrorTimeSeries.md
+  - ConfigureLogging: command-ref/ConfigureLogging/ConfigureLogging.md
   - ConvertDataUnits: command-ref/ConvertDataUnits/ConvertDataUnits.md
   - CopyFile: command-ref/CopyFile/CopyFile.md
   - Copy: command-ref/Copy/Copy.md

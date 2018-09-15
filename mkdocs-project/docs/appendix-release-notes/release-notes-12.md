@@ -8,6 +8,8 @@
 
 ## Changes in Version 12.06.00 ##
 
+* ![new](new.png) [12.06.00] Add [`ConfigureLogging`](../command-ref/ConfigureLogging/ConfigureLogging) command
+to help with troubleshooting tests.
 * ![change](change.png) [12.06.00] Significant general improvements to command editors:
 	+ All command editor dialogs default to relative path when files or folders are selected via a file chooser.
 	+ Command editors now have a ***Help*** button to access online documentation.
@@ -19,6 +21,8 @@ and [ReadColoradoHydroBaseRest](../command-ref/ReadColoradoHydroBaseRest/ReadCol
 	+ command was not properly handling where clauses in parameters - now fixed.
 	+ add reservoir storage and volume.
 	+ telemetry station data types were not being properly handled when saving and re-editing the command - now fixed.
+	+ the new HydroBase diversion coding that uses a period to delimit an account in the water class is handled by surrounding
+	the data type with single quotes
 * ![change](change.png) [12.06.00] Add `ExcludeText` parameter to the
 [`CompareFiles`](../command-ref/CreateNetworkFromTable/CreateNetworkFromTable) command to ignore dynamic data in tests.
 
