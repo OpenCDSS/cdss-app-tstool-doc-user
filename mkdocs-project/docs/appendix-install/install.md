@@ -273,7 +273,39 @@ The software will expect that file locations use the same drives as when the sof
 
 ## Uninstalling TSTool Software ##
 
-To uninstall TSTool software, select the ***CDSS / Uninstall / TSTool*** from the ***Start*** menu and confirm the uninstall.
+The process to uninstall TSTool changed as of TSTool 12.06.00.
+First make sure that TSTool is not running.
+
+### Uninstall TSTool 12.06.00 and Later ###
+
+As of TSTool 12.06.00, the software uninstall process has been simplified
+to take advantage of Windows features.
+
+The first way to uninstall is to right-click on the TSTool software version in the ***Start***
+menu and select the ***Uninstall*** menu, as shown in the following image.
+The next steps are similar to those described below.
+
+![uninstall-start-menu](uninstall-start-menu.png)
+
+The second way to uninstall TSTool is as follow.
+Use the windows ***Run*** search field (lower left of desktop).
+Enter `uninstall`.  This should display an option to open ***Add or remove programs***.
+
+![uninstall-apps-and-features1](uninstall-apps-and-features1.png)
+
+Search for `TSTool` as shown above.
+Select the version of TSTool to uninstall and press ***Uninstall***.
+A confirmation will be requested.
+The uninstall will then continue as shown in images in the next section.
+
+After uninstalling, the software files will have been removed from `C:\CDSS\TSTool-Version`.
+However, any files that exist in the users' files will remain.
+This allows datastore configurations, plugins, and other user-configured files to be shared with
+other TSTool version installations.
+
+### Uninstall TSTool 12.05.00 and Earlier ###
+
+To uninstall TSTool 12.05.00 and earlier versions, select the ***CDSS / Uninstall / TSTool*** from the ***Start*** menu and confirm the uninstall.
 CDSS components that are used by other software (e.g., CDSS Base component software) as well as user data will remain installed.
 
 ![Uninstall_Confirmation](Uninstall_Confirmation.png)
