@@ -229,8 +229,8 @@ These commands analyze time series.
 
 These commands route flow time series from one location to another.
 
-* [`LagK`](LagK/LagK)
-* [`VariableLagK`](VariableLagK/VariableLagK)
+* [`LagK`](LagK/LagK) - lag and attenuate flows
+* [`VariableLagK`](VariableLagK/VariableLagK) - lag and attenuate flows
 
 ### Output Time Series ###
 
@@ -360,6 +360,7 @@ These commands provide general file handling capabilities.
 
 These commands handle run-time configuration of logging and sending messages.
 
+* [`ConfigureLogging`](ConfigureLogging/ConfigureLogging) - configure logging
 * [`Message`](Message/Message) - output a message to the log file
 * [`SetDebugLevel`](SetDebugLevel/SetDebugLevel) - set the debug level for logging
 * [`SetWarningLevel`](SetWarningLevel/SetWarningLevel) - set the warning level for logging
@@ -538,6 +539,7 @@ have been migrated to the new online version (this documentation).
 |[`CompareTables`](CompareTables/CompareTables)                                                               |Compare tables to detect whether they are the same or different.|Migrated||
 |[`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries)                                                   |Compare time series to detect whether they are the same or different.|Migrated||
 |[`ComputeErrorTimeSeries`](ComputeErrorTimeSeries/CompauteErrorTimeSeries)                                   |Compute the error between two time series.|Migrated||
+|[`ConfigureLogging`](ConfigureLogging/ConfigureLogging)                                                      |Configure logging.               |Migrated||
 |[`ConvertDataUnits`](ConvertDataUnits/ConvertDataUnits)                                                      |Convert time series data units.  |Migrated||
 |[`Copy`](Copy/Copy)                                                                                          |Copy a time series.              |Migrated||
 |[`CopyEnsemble`](CopyEnsemble/CopyEnsemble)                                                                  |Copy an ensemble to a new ensemble.|Migrated||
@@ -593,7 +595,7 @@ have been migrated to the new online version (this documentation).
 |[`InsertTableRow`](InsertTableRow/InsertTableRow)                                                            |Insert a row in a table.         |Migrated||
 |[`InsertTimeSeriesIntoEnsemble`](InsertTimeSeriesIntoEnsemble/InsertTimeSeriesIntoEnsemble)                  |Insert a time series into an ensemble.|Migrated||
 |[`JoinTables`](JoinTables/JoinTables)                                                                        |Join two tables.                 |Migrated||
-|[`LagK`](LagK/LagK)                                                                                          |                                 |Not yet migrated (placeholder)||
+|[`LagK`](LagK/LagK)                                                                                          |Lag and attenuate flows.         |Migrated||
 |[`ListFiles`](ListFiles/ListFiles)                                                                           |List files in a folder.          |Migrated||
 |[`LookupTimeSeriesFromTable`](LookupTimeSeriesFromTable/LookupTimeSeriesFromTable)                           |Create a time series by looking up data values from a table.|Migrated||
 |[`ManipulateTableString`](ManipulateTableString/ManipulateTableString)                                       |Manipulate a string in a table.  |Migrated||
@@ -722,7 +724,7 @@ have been migrated to the new online version (this documentation).
 |[`TSID`](TSID/TSID)                                                                                          |Time series identifier (TSID), causes time series to be read. |Migrated||
 |[`UnknownCommand`](UnknownCommand/UnknownCommand)                                                            |Unknown command.                 |Migrated||
 |[`UnzipFile`](UnzipFile/UnzipFile)                                                                           |Unzip the contents of a zip file.|Migrated||
-|[`VariableLagK`](VariableLagK/VariableLagK)                                                                  |                                 |Not yet migrated (placeholder)||
+|[`VariableLagK`](VariableLagK/VariableLagK)                                                                  |Lag and attenuate flows.         |Migrated||
 |[`Wait`](Wait/Wait)                                                                                          |Wait for at time before continuing.|Migrated||
 |[`WebGet`](WebGet/WebGet)                                                                                    |Download a file from a URL.      |Migrated||
 |[`WeightTraces`](WeightTraces/WeightTraces)                                                                  |Create time series as weighted sum of ensemble traces.|Migrated||
