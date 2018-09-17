@@ -25,6 +25,8 @@ and [ReadColoradoHydroBaseRest](../command-ref/ReadColoradoHydroBaseRest/ReadCol
 	the data type with single quotes
 * ![change](change.png) [12.06.00] Add `ExcludeText` parameter to the
 [`CompareFiles`](../command-ref/CreateNetworkFromTable/CreateNetworkFromTable) command to ignore dynamic data in tests.
+* ![change](change.png) [12.06.00] Completed migration of [`LagK`](../command-ref/LagK/LagK) and
+[`VariableLagK`](../command-ref/VariableLagK/VariableLagK) documentation to online form.
 
 ## Changes in Versions 12.01.00 - 12.05.00 ##
 
