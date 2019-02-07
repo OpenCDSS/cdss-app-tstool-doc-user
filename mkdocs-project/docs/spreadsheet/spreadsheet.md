@@ -92,8 +92,8 @@ TSTool and Excel Comparison
 |Templates|Used to scale processing of large amounts of data.|Not available (have to replicate worksheets, rows, columns).|
 |Automation|Fundamental part of TSTool design.|Workbooks tend to be an accumulation of data and processing, although Excel can be called in a process to perform specific work.|
 |Command line (batch mode)|Run with:  `tstool –commands ...`|Can run `excel.exe` with switches.|
-|Time series graphs|<ul><li>Built in with default properties</li><li>Extensive graph properties</li><li>Can automate graphs using text time series product files and [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct) command.</li><li>Focus on time series, not general data series</li><li>Can graph different data intervals on same chart</li></ul>|<ul><li>Built in charts</li><li>Use third party tools</li><li>Time series can be graphed but are essentially arrays of numbers</li><li>Cannot easily graph different intervals on same chart due to grid formatting of data</li></ul>|
-|Database connectivity|<ul><li>Integrated for specific datastores</li><li>Use ODBC DSN defined for Excel workbook and [GenericDatabaseDataStore](../datastore-ref/GenericDatabase/GenericDatabase)</li></ul>|<ul><li>Use ODBC DSN defined for Excel workbook</li></ul>|
+|Time series graphs|<ul><li>Built in with default properties</li><li>Extensive graph properties</li><li>Can automate graphs using text time series product files and [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command.</li><li>Focus on time series, not general data series</li><li>Can graph different data intervals on same chart</li></ul>|<ul><li>Built in charts</li><li>Use third party tools</li><li>Time series can be graphed but are essentially arrays of numbers</li><li>Cannot easily graph different intervals on same chart due to grid formatting of data</li></ul>|
+|Database connectivity|<ul><li>Integrated for specific datastores</li><li>Use ODBC DSN defined for Excel workbook and [GenericDatabaseDataStore](../datastore-ref/GenericDatabase/GenericDatabase.md)</li></ul>|<ul><li>Use ODBC DSN defined for Excel workbook</li></ul>|
 |Accessing external data|Use read commands to read from standard file formats, databases, and web services, including delimited files.|Use features under the Excel ***Data*** menu, including accessing from databases, web services, and files.|
 |Missing data|Handled transparently in most cases, including special data values (e.g., `NaN`, `-999`).|No specific handling, typically must ensure blanks in data cells so that missing values will not generate errors.|
 |Data units|Handled transparently in most cases, based on units in time series metadata, with checks in place to prevent incompatible manipulation.|No specific handling.  User must guard against incompatible manipulation.|
@@ -115,20 +115,20 @@ using a VBA macro in Excel. TSTool can be run in batch mode using a command line
 TSTool –commands CommandFile.TSTool
 ```
 
-See the [Getting Started chapter](../getting-started/getting-started) for more information about running TSTool in batch mode.
+See the [Getting Started chapter](../getting-started/getting-started.md) for more information about running TSTool in batch mode.
 In the future, a TSTool server mode may be implemented to allow Excel to “drive” TSTool,
 for example using REST web services.
 
 ## Running Excel from TSTool ##
 
-TSTool can run Excel by using its [`RunProgram`](../command-ref/RunProgram/RunProgram) command,
+TSTool can run Excel by using its [`RunProgram`](../command-ref/RunProgram/RunProgram.md) command,
 and appropriate Excel command-line switches
 (see:  [Command line Switches for Microsoft Office Products](http://office.microsoft.com/en-us/excel-help/command-line-switches-for-excel-HA010158030.aspx)) (is there a better reference, for example to explain how to run in headless mode and exit?).
 
 It also is possible to run and control Excel.
 However, this is not integrated into TSTool.
-One option is to use the TSTool [`RunPython`](../command-ref/RunPython/RunPython) or
-[`RunProgram`](../command-ref/RunProgram/RunProgram) command to run an IronPython script,
+One option is to use the TSTool [`RunPython`](../command-ref/RunPython/RunPython.md) or
+[`RunProgram`](../command-ref/RunProgram/RunProgram.md) command to run an IronPython script,
 which then interacts with Excel.  For example, see the [IronPython Cookbook](http://www.ironpython.info/index.php/Interacting_with_Excel).
 
 ## Manipulating Excel Files from TSTool ##
@@ -146,40 +146,40 @@ The following options are available for integrating TSTool and Excel
 and an appropriate option should be chosen for the specific environment, problem, and user:
 
 * Use built-in TSTool features to interact directly with Excel `*.xls`, `*.xlsx` files:
-	+ See [TSTool commands to read and write Excel files](../command-ref/overview#spreadsheet-processing).
+	+ See [TSTool commands to read and write Excel files](../command-ref/overview.md#spreadsheet-processing).
 	+ The [Apache POI package](http://poi.apache.org) is used for integration with Excel files.
 	Functionality that is envisioned for future TSTool enhancements can be implemented using this package.
 * Use built-in TSTool features to interact directly with Excel `*.csv` files,
 	which can be edited by Excel and do not include formatting, formulas, etc.:
-	+ Use the [`ReadDelimitedFile`](../command-ref/ReadDelimitedFile/ReadDelimitedFile)
+	+ Use the [`ReadDelimitedFile`](../command-ref/ReadDelimitedFile/ReadDelimitedFile.md)
 	command to read time series from a delimited file that was exported from Excel as a `*.csv` file.
-	+ Use the [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile)
+	+ Use the [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md)
 	command to read a table from a delimited file that was exported from Excel as a `*.csv` file.
-	+ Use the [`WriteDateValue`](../command-ref/WriteDateValue/WriteDateValue) command to write a DateValue format file.
+	+ Use the [`WriteDateValue`](../command-ref/WriteDateValue/WriteDateValue.md) command to write a DateValue format file.
 	The bottom part of the file can be read into Excel as a delimited file.
 	A command may be implemented in the future to write time series to a delimited file (with no extra information).
-	+ Use the [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile)
+	+ Use the [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md)
 	command to write a TSTool table to a delimited (`*.csv`) file that can be opened in Excel.
 * Use built-in TSTool features to interact with an Excel file as if it is a database:
 	+ Define an ODBC DSN for the Excel file and use a GenericDatabaseDataStore (see
-	[Generic Database DataStore appendix](../datastore-ref/GenericDatabase/GenericDatabase)).
+	[Generic Database DataStore appendix](../datastore-ref/GenericDatabase/GenericDatabase.md)).
 	Use `DatabaseEngine=”Excel”` and specify the OdbcName property in the datastore configuration file.
-	+ Use the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore) command:
+	+ Use the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command:
 		- The Excel worksheet must be relatively simple with column headings in the first row.
 		- Need a good reference for EXCEL SQL statements,
 		in particular showing complex queries and how to write to the sheet?
 		What are the limitations on SQL when processing Excel files?
-	+ Optionally use the [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries)
+	+ Optionally use the [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md)
 	command to convert the table to time series.
 	+ Time series can be read from a datastore with the
-	[`ReadTimeSeriesFromDataStore`](../command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore) command
-	or use the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore) command with the
-	[`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries) command).
+	[`ReadTimeSeriesFromDataStore`](../command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md) command
+	or use the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command with the
+	[`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command).
 * Use Python software to read/write Excel files and create files that can be processed with TSTool commands,
-such as a `*.csv` file and the [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command.
+such as a `*.csv` file and the [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command.
 The use of Python or similar adds another level of communication between TSTool and Excel,
 but may be necessary to achieve the level of data manipulation and integration that is required.
-Python versions that have been tested with TSTool’s [`RunPython`](../command-ref/RunPython/RunPython) command include:
+Python versions that have been tested with TSTool’s [`RunPython`](../command-ref/RunPython/RunPython.md) command include:
 	+ [Python Pandas library](https://pandas.pydata.org/) - supports reading and writing many data formats
 	+ [Python xlrd](http://pypi.python.org/pypi/xlrd) and [xlwt](http://pypi.python.org/pypi/xlwt) modules:
 		- The xlwt module does not handle `*.xlsx` files as of version 0.7.4
@@ -188,7 +188,7 @@ Python versions that have been tested with TSTool’s [`RunPython`](../command-r
 		- Uses native Microsoft .NET libraries (tighter integration) but IronPython lags behind Python
 		- Requires understanding the internals of Excel data representations
 	+ [Jython](http://www.jython.org/):
-		- Is written in Java (see the TSTool [`RunPython`](../command-ref/RunPython/RunPython)
+		- Is written in Java (see the TSTool [`RunPython`](../command-ref/RunPython/RunPython.md)
 		command for the version that is shipped with the TSTool software installer)
 		- Has potential to allow running Python scripts with tight integration to TSTool software,
 		including access to TSTool internal objects
@@ -207,7 +207,7 @@ In the future, standard Excel macros may be distributed with TSTool to facilitat
 
 ## Testing Excel and TSTool Software and Command Files ##
 
-The [Quality Control chapter](../quality-control/quality-control) explains how to use TSTool features for testing,
+The [Quality Control chapter](../quality-control/quality-control.md) explains how to use TSTool features for testing,
 including testing commands and user-defined command files.
 It also is possible to use TSTool test features in conjunction with Excel:
 
@@ -222,10 +222,10 @@ analysis in one of the tools and then fully implement in the other)
 Specific issues related to testing with Excel include:
 
 * TSTool’s limited ability to read Excel files may limit testing.
-For example, see the [`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel)
+For example, see the [`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md)
 command documentation for limitations.
 One known issue is that Excel formula results may not be accessible to the
-[`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel)
+[`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md)
 command because the formula results in the cell may be computed by
 Excel when the workbook file is opened and is not stored in the file.
 In this case it may be necessary to copy the Excel worksheet, paste special into a new worksheet,
@@ -237,7 +237,7 @@ processing but may be a reasonable work-around for defining software tests.
 may result in Excel software (or underlying “headless” library processes)
 processes running that may impose restrictions such as locking files.
 If issues arise the work-around may be to read Excel files directly with
-[`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel) and similar commands.
+[`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md) and similar commands.
 
 ## Making TSTool Graph Output Look Like Excel Charts ##
 
@@ -256,7 +256,7 @@ TSTool and Excel Time Series Graph Comparison
 
 |**TSTool Graph Feature Compared to Excel**|**Rationale for Implementation in TSTool**|**Potential enhancement**|
 |--|--|--|
-|TSTool default graphs are simple, with no titles|The default graphs that are displayed have relatively basic formatting because TSTool processes data from many sources.  For example, it is not implemented in the current software to use blue to draw all time series of data type “streamflow”.  Time series properties for titles are also difficult to implement in generic way.|Allow default graph properties to be configured so that TSTool defaults are more appropriate for a particular system.<br><br>Users can edit many graph properties by right-clicking on graph area and use the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct) command.|
+|TSTool default graphs are simple, with no titles|The default graphs that are displayed have relatively basic formatting because TSTool processes data from many sources.  For example, it is not implemented in the current software to use blue to draw all time series of data type “streamflow”.  Time series properties for titles are also difficult to implement in generic way.|Allow default graph properties to be configured so that TSTool defaults are more appropriate for a particular system.<br><br>Users can edit many graph properties by right-clicking on graph area and use the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command.|
 |TSTool has limited fonts|The core fonts supported in Java are offered.  It can be an issue if non-standard fonts are used because they are not offered on all computers.|Expand fonts based on latest Java capabilities and use standard default if font is not available.|
 |TSTool X-axis graph labels cannot be rotated|The TSTool auto-labeling features for date/times provide intelligent horizontal labeling and is currently the default behavior.|Enable label rotation as an option using latest Java capabilities.|
 |TSTool lines look a bit blocky|TSTool has no limitations on the number of data points that can be graphed.  However, handling missing data as gaps in lines, sometimes results in blocky transitions through sharp angles.|Improve the TSTool drawing algorithm to take advantage of improved Java drawing internals (use less moveto/lineto and instead draw more polylines).  Also implement a line property to draw lines by connecting points (the current default) and as step-function to show continuous value for interval.|

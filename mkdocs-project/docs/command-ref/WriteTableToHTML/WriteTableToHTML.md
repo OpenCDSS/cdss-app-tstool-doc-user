@@ -21,12 +21,11 @@ Default styles are written at the top of the HTML.  In the future the command ma
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../WriteTableToHTML.png">See also the full-size image.</a>
 
 ![WriteTableToHTML](WriteTableToHTML.png)
 
 **<p style="text-align: center;">
-`WriteTableToHTML` Command Editor
+`WriteTableToHTML` Command Editor (<a href="../WriteTableToHTML.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -47,10 +46,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToHTML).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToHTML).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command

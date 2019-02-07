@@ -12,10 +12,10 @@
 ## Overview ##
 
 The `ReadHecDss` command reads time series from a HEC-DSS file.
-See the [HEC-DSS Input Type Appendix](../../datastore-ref/HEC-DSS/HEC-DSS) for information
+See the [HEC-DSS Input Type Appendix](../../datastore-ref/HEC-DSS/HEC-DSS.md) for information
 about how time series properties are assigned using HEC-DSS file data.
 Current limitations for the command include:
-	
+
 * Irregular time series cannot be read.
 * HEC-DSS uses times through `2400`.
 However, TSTool will convert this to `0000` of the next day.  Year, month, and day data are not impacted.
@@ -24,12 +24,11 @@ However, TSTool will convert this to `0000` of the next day.  Year, month, and d
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 In the future, it is envisioned that choices for A – F parts will be made available using data from the file.
-<a href="../ReadHecDss.png">See also the full-size image.</a>
 
 ![ReadHecDss](ReadHecDss.png)
 
 **<p style="text-align: center;">
-`ReadHecDss` Command Editor
+`ReadHecDss` Command Editor (<a href="../ReadHecDss.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -55,11 +54,11 @@ Command Parameters
 |`InputStart`|Starting date/time to read data, in precision consistent with data.  Can be specified with `${Property}` notation.|Read all data.|
 |`InputEnd`|Ending date/time to read data, in precision consistent with data.  Can be specified with `${Property}` notation.|Read all data.|
 |`Location`|The location to assign for the time series identifier.  Use `%A`...`%F` to indicate the `A`part ... `F` part (`D` part is not available).  The assignment will impact the Alias assignment.  This is useful when only `B` part is desired as the location identifier.  Can be specified with `${Property}` notation.|Apart:Bpart (`%A:%B`).|
-|`Alias`|Alias to assign to the output time series.  See the `LegendFormat` property described in the [TSView Time Series Viewing Tools appendix](../../appendix-tsview/tsview).  For example, `%L` is full location, `%T` is data type (parameter in HEC-DSS notation), `%I` is interval, and `%Z` is scenario.  Can be specified with `${Property}` notation.|None is assigned.  However, if the location contains periods that are in conflict with time series identifier conventions, the alias is set to the identifier with periods, and the periods are replaced with spaces in the full time series identifier.|
+|`Alias`|Alias to assign to the output time series.  See the `LegendFormat` property described in the [TSView Time Series Viewing Tools appendix](../../appendix-tsview/tsview.md).  For example, `%L` is full location, `%T` is data type (parameter in HEC-DSS notation), `%I` is interval, and `%Z` is scenario.  Can be specified with `${Property}` notation.|None is assigned.  However, if the location contains periods that are in conflict with time series identifier conventions, the alias is set to the identifier with periods, and the periods are replaced with spaces in the full time series identifier.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadHecDss).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadHecDss).
 
 A sample command file is as follows:
 
@@ -71,4 +70,4 @@ ReadHecDss(InputFile="sample.dss",InputStart="1992-01-01",InputEnd="1992-12-31",
 
 ## See Also ##
 
-* [`WriteHecDss`](../WriteHecDss/WriteHecDss) command
+* [`WriteHecDss`](../WriteHecDss/WriteHecDss.md) command

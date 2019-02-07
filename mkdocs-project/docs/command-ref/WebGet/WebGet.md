@@ -16,9 +16,9 @@ The transfer occurs using binary characters and the local copy is the same as th
 ***View / Source*** (or ***View / Page Source***) in the web browser.
 This command is useful for mining time series data and other content from data provider web sites.
 The local file can then be processed with additional commands, for example 
-[`ReadFromDelimitedFile`](../ReadFromDelimitedFile/ReadFromDelimitedFile) if the content is
+[`ReadDelimitedFile`](../ReadDelimitedFile/ReadDelimitedFile.md) if the content is
 comma-separated-value.
-	
+
 Extraneous content (such as HTML markup around text) and inconsistencies in newline characters
 (`CRLF`=`\r\n` for windows and `LF`=`\n` on other systems) may lead to some issues in processing the content.
 Additional command capabilities may be implemented to help handle these issues.
@@ -26,12 +26,11 @@ Additional command capabilities may be implemented to help handle these issues.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../WebGet.png">See also the full-size image.</a>
 
 ![WebGet](WebGet.png)
 
 **<p style="text-align: center;">
-`WebGet` Command Editor
+`WebGet` Command Editor (<a href="../WebGet.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -55,12 +54,13 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WebGet).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WebGet).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FTPGet`](../FTPGet/FTPGet) command
-* [`ListFiles`](../ListFiles/ListFiles) command
-* [`UnzipFile`](../UnzipFile/UnzipFile) command
+* [`FTPGet`](../FTPGet/FTPGet.md) command
+* [`ListFiles`](../ListFiles/ListFiles.md) command
+* [`ReadDelimitedFile`](../ReadDelimitedFile/ReadDelimitedFile.md) command
+* [`UnzipFile`](../UnzipFile/UnzipFile.md) command

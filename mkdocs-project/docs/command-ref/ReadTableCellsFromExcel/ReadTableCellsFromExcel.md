@@ -24,30 +24,27 @@ the Excel file and consequently functionality is constrained by the features of 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing Excel file parameters.
-<a href="../ReadTableCellsFromExcel_Excel.png">See also the full-size image.</a>
 
 ![ReadTableCellsFromExcel](ReadTableCellsFromExcel_Excel.png)
 
 **<p style="text-align: center;">
-`ReadTableCellsFromExcel` Command Editor Showing Excel File Parameters
+`ReadTableCellsFromExcel` Command Editor Showing Excel File Parameters (<a href="../ReadTableCellsFromExcel_Excel.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing Excel cell map parameters.
-<a href="../ReadTableCellsFromExcel_Map.png">See also the full-size image.</a>
 
 ![ReadTableCellsFromExcel Map](ReadTableCellsFromExcel_Map.png)
 
 **<p style="text-align: center;">
-`ReadTableCellsFromExcel` Command Editor Showing Excel Cell Map Parameters
+`ReadTableCellsFromExcel` Command Editor Showing Excel Cell Map Parameters (<a href="../ReadTableCellsFromExcel_Map.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing table parameters.
-<a href="../ReadTableCellsFromExcel_Table.png">See also the full-size image.</a>
 
 ![ReadTableCellsFromExcel Table](ReadTableCellsFromExcel_Table.png)
 
 **<p style="text-align: center;">
-`ReadTableCellsFromExcel` Command Editor Showing Table Parameters
+`ReadTableCellsFromExcel` Command Editor Showing Table Parameters (<a href="../ReadTableCellsFromExcel_Table.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -73,10 +70,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableCellsFromExcel).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableCellsFromExcel).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook) command
+* [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook.md) command

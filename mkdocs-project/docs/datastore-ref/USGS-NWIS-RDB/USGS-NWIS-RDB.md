@@ -12,7 +12,7 @@ The UsgsNwisRdb time series input type corresponds to the
 United States Geological Survey (USGS) National Water Information System (NWIS) RDB format.
 A number of RDB variations are available but currently only the surface
 water daily format is supported.  Data files can be created by saving USGS NWIS
-website data to a text file or use the TSTool [`WebGet`](../../command-ref/WebGet/WebGet) command.
+website data to a text file or use the TSTool [`WebGet`](../../command-ref/WebGet/WebGet.md) command.
 The example below shows the format of a daily surface water file.
 Important comments about the file format are:
 

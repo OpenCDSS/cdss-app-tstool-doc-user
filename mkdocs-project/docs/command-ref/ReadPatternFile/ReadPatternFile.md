@@ -12,15 +12,15 @@
 ## Overview ##
 
 The `ReadPatternFile` command reads pattern time series to be used with
-[`FillPattern`](../FillPattern/FillPattern) command.
+[`FillPattern`](../FillPattern/FillPattern.md) command.
 The patterns indicate whether a month is wet, dry, or average, although any number of characterizations can be used.
 One or more patterns can be included in each pattern file, similar to StateMod time series files
-(see the [StateMod Input Type appendix](../../datastore-ref/StateMod/StateMod)).
+(see the [StateMod Input Type appendix](../../datastore-ref/StateMod/StateMod.md)).
 Multiple pattern files can be used, if appropriate.
 The following example illustrates the file format.
-See also the [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern) command, which can be used to generate the file.
+See also the [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern.md) command, which can be used to generate the file.
 
-```	
+```
 #  Years Shown = Water Years
 #  Missing monthly data filled by the Mixed Station Method, USGS 1989
 #  Time series identifier         = 09034500.CRDSS_USGS.QME.MONTH.1
@@ -37,12 +37,11 @@ See also the [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern) command, which
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ReadPatternFile.png">See also the full-size image.</a>
 
 ![ReadPatternFile](ReadPatternFile.png)
 
 **<p style="text-align: center;">
-`ReadPatternFile` Command Editor
+`ReadPatternFile` Command Editor (<a href="../ReadPatternFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -62,11 +61,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadPatternFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadPatternFile).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FillPattern`](../FillPattern/FillPattern) command
-* [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern) command
+* [`FillPattern`](../FillPattern/FillPattern.md) command
+* [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern.md) command

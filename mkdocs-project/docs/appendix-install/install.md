@@ -71,12 +71,11 @@ These files apply to all versions of TSTool and therefore allow settings to
 persist even when newer TSTool software versions are installed.
 User configuration files will override the installation configuration
 file settings when configuration setting values are found in both places.
-<a href="../Config_UserFiles.png">See also the full-size image.</a>
 
 ![Config_UserFiles](Config_UserFiles.png)
 
 **<p style="text-align: center;">
-TSTool User Configuration Files
+TSTool User Configuration Files (<a href="../Config_UserFiles.png">see also the full-size image</a>)
 </p>**
 
 **The following design has been implemented in TSTool 12.xx.xx in order to
@@ -535,7 +534,7 @@ Therefore, correct information must be specified in the CDSS configuration file 
 
 TSTool can display maps configured as GeoView project files,
 although this functionality is experimental and has not been widely utilized.
-See the [GeoView Mapping Tools Appendix](../appendix-geoview/geoview) for more information about these files.
+See the [GeoView Mapping Tools Appendix](../appendix-geoview/geoview.md) for more information about these files.
 To allow a link between time series and map layers,
 use the `TimeSeriesMapLayerLook` property in the `TSTool.cfg` file to specify a time series to
 map layer lookup file (see the [TSTool Configuration File](#tstool-configuration-file) section above).
@@ -558,19 +557,19 @@ The following example file illustrates the contents of the lookup file:
 #
 # TS_InputType - the time series input type, as used in TSTool
 # TS_DataType - the data type shown in TSTool, specific to an input type
-#		For example, TSTool uses "Streamflow" for HydroBase, whereas
-#		for other input types a different data type string may be used.
+#                For example, TSTool uses "Streamflow" for HydroBase, whereas
+#                for other input types a different data type string may be used.
 # TS_Interval - time series interval of interest (e.g.,"Month", "Day", "1Hour"
-#		"Irregular")
+#                "Irregular")
 # Layer_Name - the layer name used in the map layer list
 # Layer_Location - the attribute that is used to identify a location, to be
-#		matched against the time series data location
+#                matched against the time series data location
 # Layer_DataType - the attribute that is used to indicate the data type for a
-#		station's time series (CURRENTLY NOT USED - UNDER EVALUATION)
+#                station's time series (CURRENTLY NOT USED - UNDER EVALUATION)
 # Layer_Interval - the attribute that is used to indicate the interval for a
-#		station's time series
+#                station's time series
 # Layer_DataSource - the attribute that is used to indicate the data source for
-#		a station's time series.
+#                a station's time series.
 #
 # When matching time series in the TSTool time series query list with features
 # on the map, the TS_* values are matched with the time series identifier

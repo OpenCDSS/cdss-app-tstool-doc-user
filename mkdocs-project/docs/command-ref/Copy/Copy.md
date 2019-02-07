@@ -24,12 +24,11 @@ Parameters are available to control how much of the original data are copied.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../Copy.png">See also the full-size image.</a>
 
 ![Copy](Copy.png)
 
 **<p style="text-align: center;">
-`Copy` Command Editor
+`Copy` Command Editor (<a href="../Copy.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -59,7 +58,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Copy).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Copy).
 
 An example command file to read a time series from the HydroBase database and make a copy is as follows:
 
@@ -72,3 +71,7 @@ Copy(Alias=”Filled”,TSID="08223000.DWR.Streamflow.Month",NewTSID="08223000.D
 ## Troubleshooting ##
 
 ## See Also ##
+
+* [`CopyFile`](../CopyFile/CopyFile.md) command
+* [`CopyTable`](../CopyTable/CopyTable.md) command
+* [`Free`](../Free/Free.md) command

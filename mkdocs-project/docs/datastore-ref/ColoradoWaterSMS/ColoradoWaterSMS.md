@@ -9,11 +9,15 @@
 
 ## Overview ##
 
+**These web services are obsolete and are no longer publicly available.
+This documentation will be retained during the transition to new web services.
+Instead, use the [Colorado HydroBase REST web services](../ColoradoHydroBaseRest/ColoradoHydroBaseRest).**
+
 The State of Colorado’s Satellite Monitoring System (SMS) database stores observations,
 configuration information, processed data, and alarms,
 related to field observations collected from real-time stations throughout the State of Colorado.
 This database has links to HydroBase and HydroBase also includes real-time data
-(see the [HydroBase Input Type Appendix](../CO-HydroBase/CO-HydroBase)).
+(see the [HydroBase Input Type Appendix](../CO-HydroBase/CO-HydroBase.md)).
 However, the HydroBase real-time time series are only available to
 State of Colorado personnel that have access to the State’s internal servers.
 The ColoradoWaterSMS datastore provides internet web service access to real-time data as described here:
@@ -82,7 +86,7 @@ Units are hard-coded for some data types, and are left blank for other data type
 pending clarification from the State.
 * Data – web service requests must be made with a query period.
 A default query period of the most recent 14 days is used to ensure that some data are returned.
-Optionally, use the [`SetInputPeriod`](../../command-ref/SetInputPeriod/SetInputPeriod)
+Optionally, use the [`SetInputPeriod`](../../command-ref/SetInputPeriod/SetInputPeriod.md)
 command in TSTool to specify a longer period.
 Some stations may not report data in off-season periods.
 

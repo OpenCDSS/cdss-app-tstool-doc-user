@@ -49,7 +49,7 @@ Alternatively, the `Lag` can be estimated using the reach length and wave speed 
 Without any other information, `K` can be set to `Lag/2`.
 
 The above discussion applies where the `Lag` and `K` parameters are single values
-(as implemented in the [`LagK` command](../LagK/LagK).
+(as implemented in the [`LagK` command](../LagK/LagK.md).
 However, there are cases where the values vary by flow, which is handled by this command.
 The approach that is implemented is an adaptation of that described in
 National Weather Service River Forecast System LAG/K documentation:
@@ -187,7 +187,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/VariableLagK).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/VariableLagK).
 
 A sample command file is as follows (commands to read time series are omitted, formatted for readability):
 
@@ -227,4 +227,4 @@ VariableLagK(TSID="Inflow",FlowUnits="CMS",LagInterval="Hour",
 
 ## See Also ##
 
-* [`LagK`](../LagK/LagK) command
+* [`LagK`](../LagK/LagK.md) command

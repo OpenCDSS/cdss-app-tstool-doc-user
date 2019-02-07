@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `For` command iterates through a block of commands between `For` and matching
-[`EndFor`](../EndFor/EndFor) commands.
+[`EndFor`](../EndFor/EndFor.md) commands.
 A processor property is set to the value of the iteration property and can be used by other
 commands that support properties, using the `${Property}` notation.
 `For` commands can iterate over:
@@ -33,30 +33,27 @@ This provides increased processing power but errors may not be evident until com
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a list.
-<a href="../For_List.png">See also the full-size image.</a>
 
 ![For_List](For_List.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a List for Iteration Values
+`For` Command Editor Illustrating Using a List for Iteration Values (<a href="../For_List.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a sequence of numbers.
-<a href="../For_Sequence.png">See also the full-size image.</a>
 
 ![For_Sequence](For_Sequence.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a Sequence of Integers for Iteration Values
+`For` Command Editor Illustrating Using a Sequence of Integers for Iteration Values (<a href="../For_Sequence.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over table column values.
-<a href="../For_Table.png">See also the full-size image.</a>
 
 ![For_Table](For_Table.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a Table for Iteration Values
+`For` Command Editor Illustrating Using a Table for Iteration Values (<a href="../For_Table.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -84,11 +81,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/For).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/For).
 
 ### Example to process data for a list of counties ###
 
-The following example illustrates a simple `For` and [`EndFor`](../EndFor/EndFor) usage.
+The following example illustrates a simple `For` and [`EndFor`](../EndFor/EndFor.md) usage.
 In this example the `StationID` column in the input table is used to provide the list of values to iterate over.
 The following input table is a delimited file but could come from another source:
 
@@ -125,7 +122,7 @@ TestFor="Station4"
 
 ## See Also ##
 
-* [`EndFor`](../EndFor/EndFor) command
-* [`ListFiles`](../ListFiles/ListFiles) command
-* [`Message`](../Message/Message) command
-* [`SetProperty`](../SetProperty/SetProperty) command (can be used to set list of strings for iteration)
+* [`EndFor`](../EndFor/EndFor.md) command
+* [`ListFiles`](../ListFiles/ListFiles.md) command
+* [`Message`](../Message/Message.md) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command (can be used to set list of strings for iteration)

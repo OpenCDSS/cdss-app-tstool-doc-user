@@ -13,12 +13,12 @@
 
 The `Add` command adds regular interval time series.
 The receiving time series will be set to the sum of itself and all indicated time series.
-See also the [`NewTimeSeries`](../NewTimeSeries/NewTimeSeries) command, which can create an empty time series to receive a sum.
+See also the [`NewTimeSeries`](../NewTimeSeries/NewTimeSeries.md) command, which can create an empty time series to receive a sum.
 If an ensemble is being processed, another ensemble can be added,
 a single time series can be added to all time series in the ensemble,
 or a list of time series can be added to the ensemble (the number
 in the list must match the number of time series in the ensemble).
-	
+
 This command will generate an error if the time series do not have compatible units.
 If the units are compatible but are not the same (e.g., `IN` and `FT`),
 then the units of the part will be converted to the units of the sum before addition.
@@ -28,12 +28,11 @@ Implications of ignoring missing data should be considered.  Time series being a
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../Add.png">See also the full-size image.</a>
 
 ![Add](Add.png)
 
 **<p style="text-align: center;">
-`Add` Command Editor
+`Add` Command Editor (<a href="../Add.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -51,7 +50,7 @@ Command Parameters
 |--------------|-----------------|-----------------|
 |`TSID`|The time series identifier or alias for the time series to receive the result.  Can be specified using processor `${Property}`.|`TSID` or `EnsembleID` must be specified.|
 |`EnsembleID`|The ensemble to receive the result, if processing an ensemble.  Can be specified using processor `${Property}`.|`TSID` or `EnsembleID` must be specified.|
-|`AddTSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li><li>`SpecifiedTSID` – the specified list of time series given by the `AddTSID` parameter.</li></ul> | `AllTS` (the time series receiving the result will not be added to itself). |
+|`AddTSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li><li>`SpecifiedTSID` – the specified list of time series given by the `AddTSID` parameter.</li></ul> | `AllTS` (the time series receiving the result will not be added to itself). |
 |`AddTSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `AddTSList=*TSID`|
 |`AddEnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `AddTSList=*EnsembleID`.  Use if an ensemble is being added to another ensemble.|
 |`HandleMissingHow`|Indicates how to handle missing data in a time series:<ul><li>`IgnoreMissing` – create a result even if missing data are encountered in one or more time series – this option is not as rigorous as the others</li><li>`SetMissingIfOtherMissing` – set the result missing if any of the other time series values is missing</li><li>`SetMissingIfAnyMissing` – set the result missing if any time series value involved is missing	IgnoreMissing</li></ul>|`IgnoreMissing`|
@@ -61,9 +60,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Add).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Add).
 
-A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```
@@ -79,6 +78,6 @@ AddTSID="0100503.DWR.DivTotal.Month",HandleMissingHow=IgnoreMissing)
 
 ## See Also ##
 
-* [`NewTimeSeries`](../NewTimeSeries/NewTimeSeries) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
-* [`Subtract`](../Subtract/Subtract) command
+* [`NewTimeSeries`](../NewTimeSeries/NewTimeSeries.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`Subtract`](../Subtract/Subtract.md) command

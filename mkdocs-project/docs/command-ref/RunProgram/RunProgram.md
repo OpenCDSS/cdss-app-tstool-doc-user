@@ -34,57 +34,51 @@ Some operating systems may have limitations on command line length.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
-<a href="../RunProgram.png">See also the full-size image.</a>
 
 ![RunProgram](RunProgram.png)
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor when Specifying Command Line in Full
+`RunProgram` Command Editor when Specifying Command Line in Full (<a href="../RunProgram.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying the command line in parts.
-<a href="../RunProgram_Parts.png">See also the full-size image.</a>
 
 ![RunProgram Parts](RunProgram_Parts.png)
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor when Specifying Command Line in Parts
+`RunProgram` Command Editor when Specifying Command Line in Parts (<a href="../RunProgram_Parts.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when using a command shell.
-<a href="../RunProgram_Shell.png">See also the full-size image.</a>
 
 ![RunProgram Shell](RunProgram_Shell.png)
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor showing Command Shell Parameters
+`RunProgram` Command Editor showing Command Shell Parameters (<a href="../RunProgram_Shell.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying timeout parameters.
-<a href="../RunProgram_Timeout.png">See also the full-size image.</a>
 
 ![RunProgram Timeout](RunProgram_Timeout.png)
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor showing Timeout Parameters
+`RunProgram` Command Editor showing Timeout Parameters (<a href="../RunProgram_Timeout.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying exit code parameters.
-<a href="../RunProgram_ExitStatusIndicator.png">See also the full-size image.</a>
 
 ![RunProgram Exit Code](RunProgram_ExitStatusIndicator.png)
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor showing Exit Code Parameters
+`RunProgram` Command Editor showing Exit Code Parameters (<a href="../RunProgram_ExitStatusIndicator.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying output check parameters.
-<a href="../RunProgram_OutputChecks.png">See also the full-size image.</a>
 
 ![RunProgram Exit Code](RunProgram_OutputChecks.png)
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor showing Output Check Parameters
+`RunProgram` Command Editor showing Output Check Parameters (<a href="../RunProgram_OutputChecks.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -114,15 +108,14 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunProgram).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunProgram).
 
 The following figure illustrates the output check table specified by the `OutputCheckTableID` parameter.  
-<a href="../RunProgram_OutputCheckTable.png">See also the full-size image.</a>
 
 ![RunProgram Output Check Example](RunProgram_OutputCheckTable.png)
 
 **<p style="text-align: center;">
-Example Output Check Table
+Example Output Check Table (<a href="../RunProgram_OutputCheckTable.png">see also the full-size image</a>)
 </p>**
 
 The table columns are described below.  The column names must be adhered to.
@@ -161,16 +154,15 @@ WriteCheckFile(OutputFile="Results/Test_RunProgram_CommandLine_echo_OutputCheckT
 ```
 
 The status messages for the `RunProgram` command from the above example are similar to the following.
-<a href="../RunProgram_OutputCheckTable_Status.png">See also the full-size image.</a>
 
 ![RunProgram Output Check Table Status](RunProgram_OutputCheckTable_Status.png)
 
 **<p style="text-align: center;">
-Example Command Status Messages
+Example Command Status Messages (<a href="../RunProgram_OutputCheckTable_Status.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`RunCommands`](../RunCommands/RunCommands) command
+* [`RunCommands`](../RunCommands/RunCommands.md) command

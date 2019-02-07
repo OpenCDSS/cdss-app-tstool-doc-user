@@ -19,7 +19,7 @@ date/times used in the time series, but does not modify the actual date/time val
 For regular-interval time series, date/times are used with period start and end.
 For irregular time series, date/times are also associated with each data value.
 Time zone should typically be used only with hourly and smaller time interval.
-	
+
 Specification of the time zone is important, in particular with respect to daylight savings time,
 in order to retain data integrity and properly represent the time associated with data.
 For example, the time zone `America/Denver` indicates local time with
@@ -37,12 +37,11 @@ with local time zone used for display.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ChangeTimeZone.png">See also the full-size image.</a>
 
 ![ChangeTimeZone](ChangeTimeZone.png)
 
 **<p style="text-align: center;">
-`ChangeTimeZone` Command Editor
+`ChangeTimeZone` Command Editor (<a href="../ChangeTimeZone.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -58,17 +57,17 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`NewTimeZone`|The new time zone.  Can be specified with a processor `${Property}`.  Time zones should agree with the Java `java.time.ZoneId` class.  Possible values are listed on the following site:  [https://garygregory.wordpress.com/2013/06/18/what-are-the-java-timezone-ids/](https://garygregory.wordpress.com/2013/06/18/what-are-the-java-timezone-ids/)|If blank, the time zone will be set to blank.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ChangeTimeZone).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ChangeTimeZone).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

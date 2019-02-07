@@ -13,11 +13,11 @@
 
 The `ReadUsgsNwisInstantaneous` command reads one or more time series from the
 United States Geological Survey (USGS) National Water Information System (NWIS) Instantaneous Values web service
-(see the [UsgsNwisInstantaneous Datastore Appendix](../../datastore-ref/USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous).
+(see the [UsgsNwisInstantaneous Datastore Appendix](../../datastore-ref/USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous.md)).
 The command provides parameters to constrain the web service query and also allows the result to be saved as an output file.
 For example, if WaterML is chosen as the time series format,
-a WaterML file can be saved and can be read later using the [`ReadWaterML`](../ReadWaterML/ReadWaterML) command.
-See also the [`WebGet`](../WebGet/WebGet) command, which also can be used to retrieve data files from the USGS website.
+a WaterML file can be saved and can be read later using the [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command.
+See also the [`WebGet`](../WebGet/WebGet.md) command, which also can be used to retrieve data files from the USGS website.
 
 If WaterML is used as the data transfer format using the Format command parameter,
 a WaterML 1.1 XML response will be returned by the web services.
@@ -54,12 +54,11 @@ Note that some choices are provided as a convenience.
 However, full listing of choices (such as all the thousands of streamflow
 stations that are available) is not provided due to performance issues.
 Additional query features will be enabled as web service integration is enhanced.
-<a href="../ReadUsgsNwisInstantaneous.png">See also the full-size image.</a>
 
 ![ReadUsgsNwisInstantaneous](ReadUsgsNwisInstantaneous.png)
 
 **<p style="text-align: center;">
-`ReadUsgsNwisInstantaneous` Command Editor
+`ReadUsgsNwisInstantaneous` Command Editor (<a href="../ReadUsgsNwisInstantaneous.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -89,21 +88,21 @@ Command Parameters
 |`InputStart`|The start of the period to read data – specify if the period should be different from the global query period.  Can be specified using `${Property}` syntax.|Use the global query period.|
 |`InputEnd`|The end of the period to read data – specify if the period should be different from the global query period.  Can be specified using `${Property}` syntax.|Use the global query period.|
 |`Alias`|The alias to assign to the time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing, as an alternative to the time series identifier (`TSID`).|None – must be specified.|
-|`Format`|The data format for output, one of:<ul><li>`JSON` – JavaScript Object Notation (currently used only for downloads but will not result in time series in TSTool)</li><li>`RDB` – tab-delimited format (also see [`ReadUsgsNwisRdb`](../ReadUsgsNwisRdb/ReadUsgsNwisRdb) command; currently used only for downloads but will not result in time series in TSTool).</li><li>`WaterML` – XML format (also see the [`ReadWaterML`](../ReadWaterML/ReadWaterML) command).</li></ul>|`WaterML`|
+|`Format`|The data format for output, one of:<ul><li>`JSON` – JavaScript Object Notation (currently used only for downloads but will not result in time series in TSTool)</li><li>`RDB` – tab-delimited format (also see [`ReadUsgsNwisRdb`](../ReadUsgsNwisRdb/ReadUsgsNwisRdb.md) command; currently used only for downloads but will not result in time series in TSTool).</li><li>`WaterML` – XML format (also see the [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command).</li></ul>|`WaterML`|
 |`OutputFile`|The name of the output file to create.  The path to the file can be absolute or relative to the working directory.  Can be specified using `${Property}` syntax.|No output file will be created.|
 |`WaterMLInterval`|Indicate the interval for time series when `Format=WaterML`, necessary because the WaterML contents are ambiguous with regard to setting a data interval for instantaneous data.|`Irregular`|
 |`WaterMLRequireDataToMatchInterval`|If true, then all timestamps read from the WaterML file must match the output time series interval specified with `WaterMLInterval`.  This parameter can be set to false to allow reading irregular data into a 15Minute time series, for example, and saving irregular values in the time slot.|`True`|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadUsgsNwisInstantaneous).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadUsgsNwisInstantaneous).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadUsgsNwisDaily`](../ReadUsgsNwisDaily/ReadUsgsNwisDaily) command
-* [`ReadUsgsNwisInstantaneous`](../ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous) command
-* [`ReadUsgsNwisRdb`](../ReadUsgsNwisRdb/ReadUsgsNwisRdb) command
-* [`ReadWaterML`](../ReadWaterML/ReadWaterML) command
-* [`WebGet`](../WebGet/WebGet) command
+* [`ReadUsgsNwisDaily`](../ReadUsgsNwisDaily/ReadUsgsNwisDaily.md) command
+* [`ReadUsgsNwisGroundwater`](../ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater.md) command
+* [`ReadUsgsNwisRdb`](../ReadUsgsNwisRdb/ReadUsgsNwisRdb.md) command
+* [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command
+* [`WebGet`](../WebGet/WebGet.md) command

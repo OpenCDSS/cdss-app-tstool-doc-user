@@ -238,10 +238,10 @@ Common ways of creating comments are:
 
 * Read comments from the original data source - this is ideal; however,
 electronic comments may not be available (e.g., the USGS previously published comments
-for data stations in hard copy water reports; however, comments may not be availabe electronically),
+for data stations in hard copy water reports; however, comments may not be available electronically),
 * Format comments from existing data (e.g.,
 the figure illustrates a standard set of comments for State of Colorado data, using the
-[HydroBase input type](../datastore-ref/CO-HydroBase/CO-HydroBase)).
+[HydroBase input type](../datastore-ref/CO-HydroBase/CO-HydroBase.md)).
 
 In the future, the time series dynamic properties may be used more and text comments less.
  
@@ -306,7 +306,7 @@ enhancements to the history comments are always being considered.
 
 At the bottom of the history list (see ***Read From***) is the input name that was actually used to read the data.
 This input name may or may not be exactly the same as the input name in the time series identifier.
-For example, if reading from a [HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase),
+For example, if reading from a [HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase.md),
 the time series identifier may specify an input type of `HydroBase` and no input name
 (because the software knows from the other parts of the time series identifier which database tables to read).
 However, it is also useful to know the actual table that is read
@@ -332,7 +332,7 @@ All time series are typically assigned a missing data value.
 
 The ***Has Data Flags*** checkbox indicates whether the time series has data flags.
 Data flags will generally be used, based on whether an input type supports data flags.
-The [USGS NWIS RDB file format](../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB) is an example
+The [USGS NWIS RDB file format](../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB.md) is an example
 of an input type that supports data flags (e.g., `e` is used to indicate estimated data).
 The data flags can be displayed as labels on graphs and as superscript (or similar) on tabular data.
 Unfortunately, data flags are not universally consistent and care
@@ -441,17 +441,17 @@ To use the keyboard, first click in the main graph canvas to shift focus to that
 	+ ***>>*** or ***Page Up*** - Scroll the visible window a full page to the right.
 	+ ***>|*** or ***End*** - Scroll the visible window to the end of the period.
 	+ ***Zoom Out*** - Zoom to the full time period.
-* ***Tracker***	- Indicate the main behavior of the mouse tracker.  See also the time series product tracker properties to control features.
+* ***Tracker*** - Indicate the main behavior of the mouse tracker.  See also the time series product tracker properties to control features.
 	+ ***Nearest*** – highlight the nearest point to the mouse.
 	+ ***NearestTime*** – highlight the nearest point to the mouse on each time series, considering only time for proximity.
 	+ ***None*** – do not show tracker.
-* ***Main Buttons***	The bottom row of buttons provides features for displaying other views, printing, and exporting:
+* ***Main Buttons*** The bottom row of buttons provides features for displaying other views, printing, and exporting:
 	+ ***Summary*** Display the summary view for the time series (see the [Time Series Summary View](#time-series-summary-view) section).
 	+ ***Table*** Display the table view for the time series (see the [Time Series Table View](#time-series-table-view) section).
 	+ ***Print*** Print the graph.  Because the physical extents of the printed page are different from the visible window,
 	the printed graph may not exactly match the viewed version (e.g., more or less axis labels may be used).
 	+ ***Save*** Save the graph as a Portable Network Graphic (PNG), JPEG graphic,
-	a [DateValue file](../datastore-ref/DateValue/DateValue) (a useful time series format),
+	a [DateValue file](../datastore-ref/DateValue/DateValue.md) (a useful time series format),
 	Time Series Product file (see the [Time Series Product Reference](#time-series-product-reference) section),
 	or other formats, by selecting from the choices.
 	Depending on the main application, saving to a database as a time series product may also be enabled.
@@ -673,7 +673,7 @@ This also allows the graph window to be compressed vertically, if desired.
 The ***Predicted Value*** graph uses ordinary least squares regression to estimate the
 equation of best fit and then calculates the dependent value for the entire period.
 This plot has limited value because functionality like the TSTool
-[`FillRegression`](../command-ref/FillRegression/FillRegression) command provides
+[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command provides
 parameters to control the calculations,
 but it is difficult to provide all of these options in the graph properties.
 In the future, the predicted value time series may be created by this command
@@ -686,7 +686,7 @@ regression to estimate the equation of best fit, calculates the dependent value 
 and then computes the difference between the actual value and the estimated value,
 to given an indication of errors in the estimate.
 This plot has limited value because functionality like the TSTool
-[`FillRegression`](../command-ref/FillRegression/FillRegression) command provides
+[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command provides
 parameters to control the calculations,
 but it is difficult to provide all of these options in the graph properties.
 In the future, the predicted value time series may be created by this command
@@ -1202,16 +1202,16 @@ Layout Window Menu
 The actions taken by the menus are described below:
 
 * ***Add Graph Above Selected*** - Add a new graph above the selected graph, renumbering the graphs as needed.
-		
+
 * ***Add Graph*** - Add a new graph below the selected graph, renumbering the graphs as needed.
-		
+
 * ***Add Graph at Bottom*** - Add a new graph below all existing graphs, giving the new graph the next number in the sequence.
-		
+
 * ***Remove Graph*** - Remove the selected graph, renumbering the graphs as needed.
-		
+
 * ***Move Graph Up*** - Move the graph up one in the sequence, renumbering the graphs as needed.
 The menu is enabled only when multiple graphs are available.
-		
+
 * ***Move Graph Down*** - Move the graph down one in the sequence, renumbering the graphs as needed.
 The menu is enabled only when multiple graphs are available.
 
@@ -1266,10 +1266,10 @@ The summary view has the following characteristics:
 * The graph view can be displayed using the ***Graph*** button and the table view can be displayed using the ***Table*** button.
 * Each time series interval (e.g., `Month`, `Day`, `Hour`) has a default summary report format suitable for the interval.
 This format may be made more specific if time series are read from specific data types (e.g.,
-if daily diversion time series are read from the [HydroBase input type](../datastore-ref/CO-HydroBase/CO-HydroBase),
+if daily diversion time series are read from the [HydroBase input type](../datastore-ref/CO-HydroBase/CO-HydroBase.md),
 the summary report will use the State of Colorado diversion coding report format).
 * The contents of the view can be printed.
-* The summary can be saved as a text file or [DateValue time series file](../datastore-ref/DateValue/DateValue).
+* The summary can be saved as a text file or [DateValue time series file](../datastore-ref/DateValue/DateValue.md).
 * Limited search capabilities are available to search for a string in the text area.
 
 ### Time Series Table View ###
@@ -1295,7 +1295,7 @@ Characteristics of the table view are:
 For irregular time series the precision will match that of the time series start date/time.
 * If time series with different intervals are selected, multiple tables will be displayed in the window.
 For irregular time series, a separate table will be shown for each date/time precision.
-* The table contents can be saved as delimited or [DateValue file](../datastore-ref/DateValue/DateValue).
+* The table contents can be saved as delimited or [DateValue file](../datastore-ref/DateValue/DateValue.md).
 * Column headings by default indicate alias if set (or location otherwise),
 sequence number (used with ensembles), data type and units.
 If the `TableViewHeaderFormat` time series property is set, it will be used to format the header.
@@ -1541,7 +1541,7 @@ Subproduct (Graph) Properties
 The following table describes the subproduct (report) properties.
 Limited support for report products are currently enabled.
 Reports are defined as any format other than graphical output,
-including raw data formats like delimited and [DateValue files](../command-ref/DateValue/DateValue).
+including raw data formats like delimited and [DateValue files](../datastore-ref/DateValue/DateValue.md).
 The number of properties for reports will continue to be expanded as additional features are enabled.
 An example of a report product file is as follows (in this case for NWSRFS FS5Files input type time series):
 
@@ -1631,7 +1631,7 @@ For example, for a normal time series graph, the x-axis coordinate would be spec
 date/time to the necessary precision and the y-axis coordinate would be specified using data values.
 
 It is envisioned that a notation `+NNN` and `–NNN` will be implemented in the future to allow offsets from the edges of the graph, in data units.
-		
+
 * ***Percent*** - When using the percent coordinate system,
 it is expected that the coordinates used to define the annotation are specified
 as a percent of the graph width or height, with `0` being the lower/left and `100` being the upper/right.
@@ -1733,12 +1733,12 @@ and properties passed as described below.
 If the property is not defined, then the time series are used as is in the following steps with no additional processing.
 4. The resulting processed results are passed to the Freemarker template engine
 to expand the graph template file to a temporary file.
-This step is similar to the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile) TSTool command.
+This step is similar to the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) TSTool command.
 5. The expanded temporary time series product file is used with the time series from step 3 to produce the graph.
 
 Graph templates processed in step 4 from above use the [FreeMarker templating software](http://freemarker.org/docs/index.html).
 Freemarker is also used by the TSTool
-[`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile) command.
+[`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command.
 The main benefit of FreeMarker is that it provides advanced template processing features
 and minimizes the need to develop such features in the TSTool software.
 TSTool currently uses a simple FreeMarker data model to pass data to the Freemarker data model, as follows:

@@ -14,9 +14,9 @@
 ## Overview ##
 
 The `WriteReclamationHDB`() command writes time series to a Reclamation HDB database.
-See the [Reclamation HDB Datastore Reference](../../datastore-ref/ReclamationHDB/ReclamationHDB)
+See the [Reclamation HDB Datastore Reference](../../datastore-ref/ReclamationHDB/ReclamationHDB.md)
 for more information about the database features and limitations.
-See the [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB) command documentation
+See the [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB.md) command documentation
 for information about reading the time series that are written by this command.
 The following time series can be written:
 
@@ -38,7 +38,7 @@ Command functionality includes:
 	+ TSTool uniformly uses the time at the end of the recorded interval for data values
 	(instantaneous time or end of interval for mean and accumulated values),
 	whereas HDB uses the time at the beginning of the recorded interval for hourly data.
-	See the [Reclamation HDB Datastore Reference](../../datastore-ref/ReclamationHDB/ReclamationHDB) for more information.
+	See the [Reclamation HDB Datastore Reference](../../datastore-ref/ReclamationHDB/ReclamationHDB.md) for more information.
 	+ Writing NHour data uses `WRITE_TO_HDB` procedure where the `SAMPLE_END_DATETIME`
 	is set to the TSTool date/time and `SAMPLE_DATE_TIME` is set the TSTool date/time minus NHour.
 	Currently the procedure always stores the difference as one hour but this is being evaluated.
@@ -125,41 +125,37 @@ writing "real" data, in which case model information in the lower panel are not 
 Time series or ensemble to write are specified with shared parameters.
 Currently the `site_name` and `site_common_name` are not required to be unique in HDB and
 therefore specifying the unique `site_datatype_id` (SDI) is the only way to ensure that the proper time series is being selected.
-<a href="../WriteReclamationHDB.png">See also the full-size image.</a>
 
 ![WriteReclamationHDB](WriteReclamationHDB.png)
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for "Real" Time Series
+`WriteReclamationHDB` Command Editor for "Real" Time Series (<a href="../WriteReclamationHDB.png">see also the full-size image</a>)
 </p>**
 
 ### Command Editor for General Parameters and Output Properties ###
 
 The following figure illustrates general command parameters.
-<a href="../WriteReclamationHDB_General.png">See also the full-size image.</a>
 
 ![WriteReclamationHDB_General](WriteReclamationHDB_General.png)
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for General Parameters
+`WriteReclamationHDB` Command Editor for General Parameters (<a href="../WriteReclamationHDB_General.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates output property parameters.
-<a href="../WriteReclamationHDB_OutputProperties.png">See also the full-size image.</a>
 
 ![WriteReclamationHDB_OutputProperties](WriteReclamationHDB_OutputProperties.png)
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for Output Property Parameters
+`WriteReclamationHDB` Command Editor for Output Property Parameters (<a href="../WriteReclamationHDB_OutputProperties.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates developer property parameters.
-<a href="../WriteReclamationHDB_Developer.png">See also the full-size image.</a>
 
 ![WriteReclamationHDB_Developer](WriteReclamationHDB_Developer.png)
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for Developer Property Parameters
+`WriteReclamationHDB` Command Editor for Developer Property Parameters (<a href="../WriteReclamationHDB_Developer.png">see also the full-size image</a>)
 </p>**
 
 ### Command Editor for Single Model Time Series ###
@@ -168,7 +164,6 @@ The following figure illustrates the syntax of the command when writing "model"
 data for a single time series, in which case the model parameters are
 specified via the Single model time series tab.
 The model run identifier can be specified in one of two ways.
-<a href="../WriteReclamationHDB_Model.png">See also the full-size image.</a>
 
 1. Select the MRI from the list at the bottom of the dialog
 2. Select the MRI by specifying multiple values that result in a unique MRI:
@@ -182,7 +177,7 @@ The example in the following shows parameter values for both methods for illustr
 ![WriteReclamationHDB_Model](WriteReclamationHDB_Model.png)
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for Single Model Time Series
+`WriteReclamationHDB` Command Editor for Single Model Time Series (<a href="../WriteReclamationHDB_Model.png">see also the full-size image</a>)
 </p>**
 
 ### Command Editor for Ensemble of Model Time Series ###
@@ -193,12 +188,11 @@ specified via the ***Ensemble of model time series*** tab.
 The TSTool ensemble to write is specified with the `TSList=EnsembleID` and `EnsembleID` parameters.
 In the following example a new ensemble is being written.
 The time series trace number and model run date are both taken from the ensemble time series properties when the command is run.
-<a href="../WriteReclamationHDB_Ensemble.png">See also the full-size image.</a>
 
 ![WriteReclamationHDB_Ensemble](WriteReclamationHDB_Ensemble.png)
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for Ensemble of Model Time Series
+`WriteReclamationHDB` Command Editor for Ensemble of Model Time Series (<a href="../WriteReclamationHDB_Ensemble.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -215,7 +209,7 @@ Command Parameters
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`DataStore`<br>**required**|The identifier for the ReclamationHDB data store to use for the database.|None - must be specified.|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`SiteDataTypeID`|The `site_datatype_id` value to match the time series. If specified, the value will be used instead of the `site_datatype_id` determined from `SiteCommonName` and `DataTypeCommonName`.||
@@ -252,10 +246,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteReclamationHDB).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteReclamationHDB).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB) command
+* [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

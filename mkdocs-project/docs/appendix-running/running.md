@@ -41,7 +41,7 @@ It is assumed that TSTool has been properly installed and configured based on in
 
 Running TSTool in interactive mode using the graphical user interface
 (GUI) is the primary run mode for most users, in particular when editing and running command workflows.
-The [Getting Started chapter](../getting-started/getting-started) and other chapters
+The [Getting Started chapter](../getting-started/getting-started.md) and other chapters
 in the TSTool documentation focus on this run mode and are not discussed further here.
 
 Often as TSTool processing becomes integrated with an organization’s business processes,
@@ -66,7 +66,7 @@ Potential issues with this approach are:
 
 * Error-handling and feedback to the user are more difficult because TSTool
 is not fully integrated with the calling software.
-The [`StartLog`](../command-ref/StartLog/StartLog) command can be used to ensure
+The [`StartLog`](../command-ref/StartLog/StartLog.md) command can be used to ensure
 that a log file is created in a location that is integrated with the overall system.
 * There may be a slight delay displaying the view window because TSTool starts each time.
 To improve performance, a specific configuration for TSTool may be required (see the `–config` command line parameter).
@@ -112,7 +112,7 @@ These paths can be coded into a batch file (`*.bat` on Windows, or shell script 
 (e.g., when TSTool supports the functionality of another application).
 Make sure to evaluate whether the `–nomaingui` parameter is needed in addition to `–commands` (see the previous section).
 * The TSTool default log file under the logs folder of the installation is used when TSTool first starts up.
-If a [`StartLog`](../command-ref/StartLog/StartLog) command is used in the command file,
+If a [`StartLog`](../command-ref/StartLog/StartLog.md) command is used in the command file,
 it will be used when the command file is run.  Refer to the appropriate log file when troubleshooting.
 The following table lists the TSTool command line parameters.
 
@@ -187,21 +187,19 @@ The following references can be consulted for other Windows versions:
 * [Windows 8](http://technet.microsoft.com/en-us/library/cc725745.aspx)
 
 To define a task, first go to the ***System and Security*** subpanel of the ***Control Panel***, then click on ***Schedule tasks***.
-<a href="../RunningTSTool_ScheduleTasks.png">See also the full-size image.</a>
 
 ![RunningTSTool_ScheduleTasks](RunningTSTool_ScheduleTasks.png)
 
 **<p style="text-align: center;">
-Running TSTool – Schedule as a Task
+Running TSTool – Schedule as a Task (<a href="../RunningTSTool_ScheduleTasks.png">see also the full-size image</a>)
 </p>**
 
 A screen showing currently scheduled tasks will appear. Click on the ***Action*** menu in the upper left, and the ***Create Task...*** option.
-<a href="../RunningTSTool_TaskScheduler.png">See also the full-size image.</a>
  
 ![RunningTSTool_TaskScheduler](RunningTSTool_TaskScheduler.png)
 
 **<p style="text-align: center;">
-Running TSTool – Creating a Task in the Task Scheduler
+Running TSTool – Creating a Task in the Task Scheduler (<a href="../RunningTSTool_TaskScheduler.png">see also the full-size image</a>)
 </p>**
 
 A tabbed dialog will appear.  Go to the ***Actions*** tab, and click ***New...*** to create a new task.
@@ -214,12 +212,11 @@ Running TSTool – Create a New Task
 
 Specify the program to run by using the ***Browse...*** button to pick the TSTool executable program, as shown below.
 The example shown on the right is a typical location for the install (specify an appropriate version number).
-<a href="../RunningTSTool_NewTask1.png">See also the full-size image.</a>
 
 ![RunningTSTool_NewTask1](RunningTSTool_NewTask1.png)
 
 **<p style="text-align: center;">
-Running TSTool – Specify Program to Run for Task
+Running TSTool – Specify Program to Run for Task (<a href="../RunningTSTool_NewTask1.png">see also the full-size image</a>)
 </p>**
 
 Specifying the absolute path to the command (starting at the drive) is recommended.
@@ -233,7 +230,7 @@ Running TSTool – Specify Program and Command Line Parameters to Run for Task
 </p>**
 
 TSTool log files will by default be in the logs folder under the TSTool installation.
-Use the [`StartLog`](../command-ref/StartLog/StartLog) command to control the log file location.
+Use the [`StartLog`](../command-ref/StartLog/StartLog.md) command to control the log file location.
 
 To actually run the task, define a trigger in the ***Triggers*** tab of the ***Create Task*** dialog (press ***New...*** to create a trigger):
 
@@ -283,7 +280,7 @@ To run TSTool as a cron process, command should be specified as follows:
 The paths should be specified as absolute path because cron does not necessarily have a home directory.  
 
 The log files will by default be in the logs folder under the TSTool installation.
-The [`StartLog`](../command-ref/StartLog/StartLog) command can be used to configure the log file location.
+The [`StartLog`](../command-ref/StartLog/StartLog.md) command can be used to configure the log file location.
 
 Output files will be overwritten at each execution of the command unless the names are determined dynamically.
 
@@ -306,7 +303,7 @@ Use the `-batchServerHotFolder Folder` command line parameter to specify the hot
 This is an experimental feature.
 
 * Each command file that is copied into the folder will be executed and then removed.
-If necessary, use the [`StartLog`](../command-ref/StartLog/StartLog) command to create a log file in a different folder to troubleshoot.
+If necessary, use the [`StartLog`](../command-ref/StartLog/StartLog.md) command to create a log file in a different folder to troubleshoot.
 * Create a file named stop in the hot folder to cause TSTool to stop processing and exit.
 * In the future additional features will be added.
 

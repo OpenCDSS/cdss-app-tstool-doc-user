@@ -12,24 +12,23 @@
 ## Overview ##
 
 The `Exit` command can be inserted anywhere in a command file and causes the processing of commands to stop at that line.
-An `Exit` command within an [`If`](../If/If) block will only be executed if the [`If`](../If/If) condition is true.
+An `Exit` command within an [`If`](../If/If.md) block will only be executed if the [`If`](../If/If.md) condition is true.
 This is useful for temporarily processing a subset of a long list of commands.
-Multi-line comments ([`/*`](../CommentBlockStart/CommentBlockStart)   [`*/`](../CommentBlockEnd/CommentBlockEnd))
+Multi-line comments ([`/*`](../CommentBlockStart/CommentBlockStart.md)   [`*/`](../CommentBlockEnd/CommentBlockEnd.md))
 can also be used to temporarily disable one or more commands.
 It may also useful to add an `Exit` command at the end of the file so that it is easy to
 insert commands above this command when the end line is selected (rather than having to deselect all commands when editing).
-	
+
 In the future the command may be enhanced to have parameters that more explicitly control processing shut-down.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../Exit.png">See also the full-size image.</a>
 
 ![Exit](Exit.png)
 
 **<p style="text-align: center;">
-`Exit` Command Editor
+`Exit` Command Editor (<a href="../Exit.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -49,10 +48,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Exit).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Exit).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`If`](../If/If) command
+* [`If`](../If/If.md) command

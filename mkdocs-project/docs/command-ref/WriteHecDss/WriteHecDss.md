@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `WriteHecDss` command writes time series to a HEC-DSS file.
-See the [HEC-DSS Input Type Appendix](../../datastore-ref/HEC-DSS/HEC-DSS)
+See the [HEC-DSS Input Type Appendix](../../datastore-ref/HEC-DSS/HEC-DSS.md)
 for information about how time series properties are output to HEC-DSS files.
 Current limitations of the command are:
 	
@@ -49,12 +49,11 @@ The parameter values will apply to all time series being written.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../WriteHecDss.png">See also the full-size image.</a>
 
 ![WriteHecDss](WriteHecDss.png)
 
 **<p style="text-align: center;">
-`WriteHecDss` Command Editor
+`WriteHecDss` Command Editor (<a href="../WriteHecDss.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -72,7 +71,7 @@ Command Parameters
 |--------------|-----------------|-----------------|
 |`OutputFile`|The name of the HEC-DSS file to write.  If the file does not exist it will be created.  Can be specified using `${Property}` notation.|None – must be specified.|
 |`Type`|The HEC-DSS time series type, indicating whether the time series is instantaneous, mean, or accumulated.|None – must be specified.|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`OutputStart`|The date/time for the start of the output.  Can be specified using `${Property}` notation.	Use the global output period or write all available data.|
@@ -89,7 +88,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteHecDss).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteHecDss).
 
 A sample command file is as follows:
 
@@ -101,5 +100,5 @@ WriteHecDss(OutputFile="sample.dss",TYPE=PER-AVER,OutputStart="1992-01-01",Outpu
 
 ## See Also ##
 
-* [`ReadHecDss`](../ReadHecDss/ReadHecDss) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`ReadHecDss`](../ReadHecDss/ReadHecDss.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

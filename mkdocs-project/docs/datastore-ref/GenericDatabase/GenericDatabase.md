@@ -11,15 +11,15 @@
 
 The generic database datastore can be used to provide general access to database tables and views,
 for example with the
-[`ReadTableFromDataStore`](../../command-ref/ReadTableFromDataStore/ReadTableFromDataStore) command.
+[`ReadTableFromDataStore`](../../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command.
 Properly configured, it also will allow reading time series using the
-[`ReadTimeSeriesFromDataStore`](../../command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore) command,
+[`ReadTimeSeriesFromDataStore`](../../command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md) command,
 and writing time series using the
-[`WriteTimeSeriesToDataStore`](../../command-ref/WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore) command.
+[`WriteTimeSeriesToDataStore`](../../command-ref/WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md) command.
 The trade-off for generic datastores is that although tables and views can be accessed in a generic way,
 there is no specific application programming interface (API) to deal with the intricacies of the
 database and converting tables to more complex data objects like time series may be limited.
- See also the [`TableToTimeSeries`](../../command-ref/TableToTimeSeries/TableToTimeSeries) command,
+ See also the [`TableToTimeSeries`](../../command-ref/TableToTimeSeries/TableToTimeSeries.md) command,
 which will convert a table into time series.
 
 The datastore internally corresponds to an Open Database Connectivity (ODBC) connection.
@@ -49,7 +49,7 @@ The following limitations apply to the generic database datastore:
 protected tables may not be visible in software or may generate
 errors if attempts are made to manipulate outside of permissions.
 * An attempt is made in the
-[`ReadTableFromDataStore`](../../command-ref/ReadTableFromDataStore/ReadTableFromDataStore)
+[`ReadTableFromDataStore`](../../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md)
 command to list tables and views for selection.
 However, the ability to filter out system tables is limited because
 some database drivers do not implement required functionality.
@@ -149,7 +149,7 @@ refer to sheet in SQL as `Select * from [Sheet1$]` )
 
 TSTool, which is written in Java, is distributed with the software drivers for the above databases
 only if datastores have been implemented that use a database product.
-For example, the [State of Colorado’s HydroBase database](../CO-HydroBase/CO-HydroBase) is
+For example, the [State of Colorado’s HydroBase database](../CO-HydroBase/CO-HydroBase.md) is
 implemented in SQL Server and consequently the SQL Server driver is distributed with TSTool.
 Other drivers (e.g., Access via ODBC) depend on installation of the database software,
 which typically includes the ODBC drivers.
@@ -217,8 +217,8 @@ SystemPassword = "guest"
 Generic Database Datastore Configuration File Using Database Connection Properties
 </p>**
 
-The [`ReadTimeSeriesFromDataStore`](../../command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore) and
-[`WriteTimeSeriesToDataStore`](../../command-ref/WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore)
+The [`ReadTimeSeriesFromDataStore`](../../command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md) and
+[`WriteTimeSeriesToDataStore`](../../command-ref/WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md)
 commands recognize additional datastore configuration properties,
 which allow the commands to read time series from and write time series to a general database design.
 To use these command, time series metadata in the database are mapped to TSTool time series
@@ -237,12 +237,11 @@ metadata as a list of time series and associated properties.
 For performance reasons, it may also be appropriate to copy the view to a
 “materialized” table and create indexes on the table.
 The following figure illustrates time series metadata from a database view:
-<a href="../Datastore_Generic_TimeSeriesMeta.png">See also the full-size image.</a>
 
 ![Datastore_Generic_TimeSeriesMeta](Datastore_Generic_TimeSeriesMeta.png)
 	
 **<p style="text-align: center;">
-Time Series Metadata View
+Time Series Metadata View (<a href="../Datastore_Generic_TimeSeriesMeta.png">see also the full-size image</a>)
 </p>**
 	
 The following example illustrates datastore properties that are used to describe

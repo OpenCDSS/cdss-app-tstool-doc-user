@@ -28,12 +28,11 @@ but the `AllowMissingCount` and `MinimumSampleSize` parameters control the impac
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../NewStatisticTimeSeries.png">See also the full-size image.</a>
 
 ![NewStatisticTimeSeries](NewStatisticTimeSeries.png)
 
 **<p style="text-align: center;">
-`NewStatisticTimeSeries` Command Editor
+`NewStatisticTimeSeries` Command Editor (<a href="../NewStatisticTimeSeries.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -80,7 +79,7 @@ Available Statistics
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewStatisticTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewStatisticTimeSeries).
 
 The following example command file illustrates how to generate test data and a corresponding statistics time series:
 
@@ -105,4 +104,4 @@ This can be controlled by the `AllowMissingCount` and `MinimumSampleSize` parame
 
 ## See Also ##
 
-* [`RunningStatisticTimeSeries`](../RunningStatisticTimeSeries/RunningStatisticTimeSeries) command
+* [`RunningStatisticTimeSeries`](../RunningStatisticTimeSeries/RunningStatisticTimeSeries.md) command

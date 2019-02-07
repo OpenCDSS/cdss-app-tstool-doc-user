@@ -9,8 +9,12 @@
 
 ## Overview ##
 
+**These web services are obsolete and are no longer publicly available.
+This documentation will be retained during the transition to new web services.
+Instead, use the [Colorado HydroBase REST web services](../ColoradoHydroBaseRest/ColoradoHydroBaseRest).**
+
 The State of Colorado’s HydroBase database is the primary database for water data in Colorado.
-However, using the HydroBase datastore or input type in TSTool (see the [HydroBase Datastore appendix](../CO-HydroBase/CO-HydroBase)
+However, using the HydroBase datastore or input type in TSTool (see the [HydroBase Datastore appendix](../CO-HydroBase/CO-HydroBase.md)
 requires a direct connection to the database,
 and a local installation of the database may not be available.
 The ColoradoWaterHBGuest datastore provides internet web service access to historical data and is described here:
@@ -22,7 +26,7 @@ The ColoradoWaterHBGuest datastore provides internet web service access to histo
 The ColoradoWaterHBGuest datastore provides access to many HydroBase time series
 that are available via the web service, but currently there are some limitations (see below).
 
-The ColoradoWaterSMS datastore (see the [Colorado Water SMS Datastore appendix](../ColoradoWaterSMS/ColoradoWaterSMS)
+The ColoradoWaterSMS datastore (see the [Colorado Water SMS Datastore appendix](../ColoradoWaterSMS/ColoradoWaterSMS.md)
 provides access to real-time data using a web service.
 
 ## Standard Time Series Properties ##
@@ -47,7 +51,7 @@ The additional “Storage” is needed in TSTool to uniquely identify the time s
 * `Interval` is `Day`, `Month`, or `Year`, as requested.
 The interval string is converted from HydroBase conventions of `Daily`, `Monthly`, `Annual`,
 and `Random` (monthly and annual diversion data are stored together in HydroBase and are identified as Annual data).
-Real-time data can be retrieved using the [ColoradoWaterSMS datastore](../ColoradoWaterSMS/ColoradoWaterSMS).
+Real-time data can be retrieved using the [ColoradoWaterSMS datastore](../ColoradoWaterSMS/ColoradoWaterSMS.md).
 * The datastore name (`ColoradoWaterHBGuest` by default) indicates that the data
 are being read from the ColoradoWaterHBGuest web service.
 
@@ -57,7 +61,7 @@ The following limitations of the web service may impact users of the data.
 
 * Data type – the following data types have been implemented, for all available intervals.
 Additional data types will be supported in the future (see the
-[HydroBase Datastore appendix](../CO-HydroBase/CO-HydroBase)
+[HydroBase Datastore appendix](../CO-HydroBase/CO-HydroBase.md)
 for a complete list of available data types).
 Note that creating a complete diversion time series,
 in particular for structures that are not frequently measured,

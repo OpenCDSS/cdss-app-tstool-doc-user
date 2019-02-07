@@ -13,17 +13,16 @@
 
 The `ReadStateCU` command reads all the time series in a StateCU time series file
 (e.g., frost dates) or report file (e.g., IWR, WSL).
-See the [StateCU Input Type Appendix](../../datastore-ref/StateCU/StateCU).
+See the [StateCU Input Type Appendix](../../datastore-ref/StateCU/StateCU.md).
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ReadStateCU.png">See also the full-size image.</a>
 
 ![ReadStateCU](ReadStateCU.png)
 
 **<p style="text-align: center;">
-`ReadStateCU` Command Editor
+`ReadStateCU` Command Editor (<a href="../ReadStateCU.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -49,11 +48,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadStateCU).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadStateCU).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadStateCUB`](../ReadStateCUB/ReadStateCUB) command
-* [`WriteStateCU`](../WriteStateCU/WriteStateCU) command
+* [`ReadStateCUB`](../ReadStateCUB/ReadStateCUB.md) command
+* [`WriteStateCU`](../WriteStateCU/WriteStateCU.md) command

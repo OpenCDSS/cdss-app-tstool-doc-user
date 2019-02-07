@@ -12,19 +12,19 @@
 ## Overview ##
 
 The `FillDayTSFrom2MonthTSAnd1DayTS` command fills a daily time series using the following relationship:
-	
+
 ```
 D1i = D2i*(M1i/M2i)
 ```
 
 where:
-	
+
 `i` = day
 `D1` is the daily data at location 1
 `M1` is the monthly data at location 1 (for the month corresponding to the day)
 `D2` is the daily data at location 2
 `M2` is the monthly data at location 2 (for the month corresponding to the day)
-	
+
 This fill method assumes the monthly time series are filled and reasonably
 correlated and that the daily pattern D2 can be applied at D1.
 For example, use this command to fill daily streamflow where filled
@@ -35,12 +35,11 @@ monthly data are available at nearby locations and filled daily data is availabl
 The following dialog is used to edit the command and illustrates the syntax of the command.
 For all the time series identifiers, the last matching identifier before the command will be matched for processing.
 Currently there is no way to fill multiple time series with one command.
-<a href="../FillDayTSFrom2MonthTSAnd1DayTS.png">See also the full-size image.</a>
 
 ![FillDayTSFrom2MonthTSAnd1DayTS](FillDayTSFrom2MonthTSAnd1DayTS.png)
 
 **<p style="text-align: center;">
-`FillDayTSFrom2MonthTSAnd1DayTS` Command Editor
+`FillDayTSFrom2MonthTSAnd1DayTS` Command Editor (<a href="../FillDayTSFrom2MonthTSAnd1DayTS.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -65,9 +64,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/FillDayTSFrom2MonthTSAnd1DayTS).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FillDayTSFrom2MonthTSAnd1DayTS).
 
-A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows.
 
 ```text
@@ -88,16 +87,15 @@ FillDayTSFrom2MonthTSAnd1DayTS(TSID_D1="08235350.USGS.Streamflow.Day",TSID_M1="0
 ```
 The following graph shows the two daily time series used in the command (zoomed in).
 Note that the shape of the filled time series is similar to the other time series.
-<a href="../FillDayTSFrom2MonthTSAnd1DayTS_Graph.png">See also the full-size image.</a>
 
 ![FillDayTSFrom2MonthTSAnd1DayTS_Graph](FillDayTSFrom2MonthTSAnd1DayTS_Graph.png)
 
 **<p style="text-align: center;">
-Example of Filled Data
+Example of Filled Data (<a href="../FillDayTSFrom2MonthTSAnd1DayTS_Graph.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FillRegression`](../FillRegression/FillRegression) command
+* [`FillRegression`](../FillRegression/FillRegression.md) command

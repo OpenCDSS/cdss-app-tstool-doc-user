@@ -16,17 +16,16 @@ warning/failure messages in a “check file”.
 This file is useful for reviewing results and for quality control.
 The check file is essentially a persistent record of any problems that
 occurred during processing organized by commands, whereas a full log file contains a sequential list of processing.
-See the [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries) command to implement specific data checks.
+See the [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command to implement specific data checks.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../WriteCheckFile.png">See also the full-size image.</a>
 
 ![WriteCheckFile](WriteCheckFile.png)
 
 **<p style="text-align: center;">
-`WriteCheckFile` Command Editor
+`WriteCheckFile` Command Editor (<a href="../WriteCheckFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -48,10 +47,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteCheckFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteCheckFile).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries) command
+* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command

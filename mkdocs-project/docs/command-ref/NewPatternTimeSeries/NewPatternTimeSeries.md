@@ -17,12 +17,11 @@ This command is useful for generating data to test other commands.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../NewPatternTimeSeries.png">See also the full-size image.</a>
 
 ![NewPatternTimeSeries](NewPatternTimeSeries.png)
 
 **<p style="text-align: center;">
-`NewPatternTimeSeries` Command Editor
+`NewPatternTimeSeries` Command Editor (<a href="../NewPatternTimeSeries.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -57,7 +56,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewPatternTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewPatternTimeSeries).
 
 The following example command file illustrates how to create a pattern time series for testing:
 
@@ -70,4 +69,4 @@ WriteDateValue(OutputFile=",Example_NewPatternTimeSeries_out.dv")
 
 ## See Also ##
 
-* [`NewTimeSeries`](../NewTimeSeries/NewTimeSeries) command
+* [`NewTimeSeries`](../NewTimeSeries/NewTimeSeries.md) command

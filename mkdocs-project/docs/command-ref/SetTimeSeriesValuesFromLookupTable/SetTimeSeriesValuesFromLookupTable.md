@@ -13,7 +13,7 @@
 
 The `SetTimeSeriesValuesFromLookupTable` command uses an input time series and lookup
 table to set values in the output time series.  Examples of using this command include:
-	
+
 * Converting reservoir elevation to storage, surface area, seepage, or other values
 * Converting river stage to discharge
 * Converting a time series to category values
@@ -29,30 +29,27 @@ processing so that lookups are performed only on rows with input and output valu
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
-<a href="../SetTimeSeriesValuesFromLookupTable.png">See also the full-size image.</a>
 
 ![SetTimeSeriesValuesFromLookupTable](SetTimeSeriesValuesFromLookupTable.png)
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromLookupTable` Command Editor for Time Series Parameters
+`SetTimeSeriesValuesFromLookupTable` Command Editor for Time Series Parameters (<a href="../SetTimeSeriesValuesFromLookupTable.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for lookup parameters.
-<a href="../SetTimeSeriesValuesFromLookupTable_Lookup.png">See also the full-size image.</a>
 
 ![SetTimeSeriesValuesFromLookupTable_Lookup](SetTimeSeriesValuesFromLookupTable_Lookup.png)
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromLookupTable` Command Editor for Time Series Parameters
+`SetTimeSeriesValuesFromLookupTable` Command Editor for Time Series Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Lookup.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time-related parameters.
-<a href="../SetTimeSeriesValuesFromLookupTable_Time.png">See also the full-size image.</a>
 
 ![SetTimeSeriesValuesFromLookupTable_Time](SetTimeSeriesValuesFromLookupTable_Time.png)
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromLookupTable` Command Editor for Time-related Parameters
+`SetTimeSeriesValuesFromLookupTable` Command Editor for Time-related Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Time.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -92,10 +89,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetTimeSeriesValuesFromLookupTable).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetTimeSeriesValuesFromLookupTable).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SetTimeSeriesValuesFromTable`](../SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable) command
+* [`SetTimeSeriesValuesFromTable`](../SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable.md) command

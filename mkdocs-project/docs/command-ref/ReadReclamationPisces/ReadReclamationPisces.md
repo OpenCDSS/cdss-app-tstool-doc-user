@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `ReadReclamationPisces` command reads one or more time series from the US Bureau of Reclamation Pisces database
-(see the [Reclamation Pisces Datastore Appendix](../../datastore-ref/ReclamationPisces/ReclamationPisces)).
+(see the [Reclamation Pisces Datastore Appendix](../../datastore-ref/ReclamationPisces/ReclamationPisces.md)).
 It is designed to utilize query criteria to process large numbers of time series,
 for example for a specific location and parameter type.
 
@@ -26,12 +26,11 @@ This can greatly shorten command files and simplify command logic, especially wh
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ReadReclamationPisces.png">See also the full-size image.</a>
 
 ![ReadReclamationPisces](ReadReclamationPisces.png)
 
 **<p style="text-align: center;">
-`ReadReclamationPisces` Command Editor
+`ReadReclamationPisces` Command Editor (<a href="../ReadReclamationPisces.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -58,10 +57,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadReclamationPisces).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadReclamationPisces).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB) command
+* [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB.md) command

@@ -12,10 +12,10 @@
 ## Overview ##
 
 The `AnalyzePattern` command creates the pattern file for use with the
-[`FillPattern`](../FillPattern/FillPattern) command (see also
-[`ReadPatternFile`](../ReadPatternFile/ReadPatternFile)).
+[`FillPattern`](../FillPattern/FillPattern.md) command (see also
+[`ReadPatternFile`](../ReadPatternFile/ReadPatternFile.md)).
 Each time series to be processed is analyzed as follows:
-	
+
 1. Create a time series to contain the pattern identifiers for each month (e.g., `DRY`, `AVG`, `WET`).
 2. For each month, determine the monthly values for the
 time series being analyzed (e.g., find all of the January values).
@@ -32,9 +32,9 @@ This command is enabled for monthly data only.
 See below for an example of a fill pattern file.
 One or more patterns can be included in each pattern file,
 similar to StateMod time series files (see the
-[StateMod Input Type Appendix](../../datastore-ref/StateMod/StateMod)).
+[StateMod Input Type Appendix](../../datastore-ref/StateMod/StateMod.md)).
 Multiple pattern files can be used, if appropriate.  
-	
+
 ```
 #  Years Shown = Water Years
 #  Missing monthly data filled by the Mixed Station Method, USGS 1989
@@ -48,22 +48,21 @@ Multiple pattern files can be used, if appropriate.
 1912 09034500         WET     WET     WET     WET     WET     AVG     AVG     WET     WET     WET     WET     WET
 ...ommitted...
 ```
-	
+
 The pattern file will by default contain all available data for the overlapping period
 and will be written in calendar year.  The output period can be set with the
-[`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod) command and the output
+[`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command and the output
 year type can be set with the
-[`SetOutputYearType`](../SetOutputYearType/SetOutputYearType) command.
+[`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md) command.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../AnalyzePattern.png">See also the full-size image.</a>
 
 ![AnalyzePattern](AnalyzePattern.png)
 
 **<p style="text-align: center;">
-`AnalyzePattern` Command Editor
+`AnalyzePattern` Command Editor (<a href="../AnalyzePattern.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -79,7 +78,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`Method`|Method used to determine the patterns.  Currently only `Percentile` is recognized.|`Percentile`|
@@ -92,9 +91,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/AnalyzePattern).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/AnalyzePattern).
 
-A sample command file to analyze streamflow from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to analyze streamflow from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -119,6 +118,6 @@ Statistics from Pattern Analysis
 
 ## See Also ##
 
-* [`FillPattern`](../FillPattern/FillPattern) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
-* [`ReadPatternFile`](../ReadPatternFile/ReadPatternFile) command
+* [`FillPattern`](../FillPattern/FillPattern.md) command
+* [`ReadPatternFile`](../ReadPatternFile/ReadPatternFile.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

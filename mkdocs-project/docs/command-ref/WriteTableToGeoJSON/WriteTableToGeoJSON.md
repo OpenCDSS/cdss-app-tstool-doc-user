@@ -28,68 +28,61 @@ A future enhancement of this command will allow the geometry feature data to be 
 
 The following dialog is used to edit the command and illustrates the syntax of the command for
 point data in separate columns.
-<a href="../WriteTableToGeoJSON.png">See also the full-size image.</a>
 
 ![WriteTableToGeoJSON](WriteTableToGeoJSON.png)
 
 **<p style="text-align: center;">
-`WriteTableToGeoJSON` Command Editor for Point Data Parameters
+`WriteTableToGeoJSON` Command Editor for Point Data Parameters (<a href="../WriteTableToGeoJSON.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for layers specified with a geometry data column.
-<a href="../WriteTableToGeoJSON_WKTGeometry.png">See also the full-size image.</a>
 
 ![WriteTableToGeoJSON_WKTGeometry](WriteTableToGeoJSON_WKTGeometry.png)
 
 **<p style="text-align: center;">
-`WriteTableToGeoJSON` Command Editor for Geometry Data Parameter
+`WriteTableToGeoJSON` Command Editor for Geometry Data Parameter (<a href="../WriteTableToGeoJSON_WKTGeometry.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for coordinate reference system parameter.
-<a href="../WriteTableToGeoJSON_crs.png">See also the full-size image.</a>
 
 ![WriteTableToGeoJSON_crs](WriteTableToGeoJSON_crs.png)
 
 **<p style="text-align: center;">
-`WriteTableToGeoJSON` Command Editor for Coordinate Reference System Parameter
+`WriteTableToGeoJSON` Command Editor for Coordinate Reference System Parameter (<a href="../WriteTableToGeoJSON_crs.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for bounding box parameters.
-<a href="../WriteTableToGeoJSON_bbox.png">See also the full-size image.</a>
 
 ![WriteTableToGeoJSON_bbox](WriteTableToGeoJSON_bbox.png)
 
 **<p style="text-align: center;">
-`WriteTableToGeoJSON` Command Editor for Bounding Box Parameters
+`WriteTableToGeoJSON` Command Editor for Bounding Box Parameters (<a href="../WriteTableToGeoJSON_bbox.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for specifying table columns to include as properties in the GeoJSON output.
-<a href="../WriteTableToGeoJSON_Properties.png">See also the full-size image.</a>
 
 ![WriteTableToGeoJSON_Properties](WriteTableToGeoJSON_Properties.png)
 
 **<p style="text-align: center;">
-`WriteTableToGeoJSON` Command Editor for Property Parameters
+`WriteTableToGeoJSON` Command Editor for Property Parameters (<a href="../WriteTableToGeoJSON_Properties.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for specifying the JavaScript variable for the output object.
-<a href="../WriteTableToGeoJSON_JavaScript.png">See also the full-size image.</a>
 
 ![WriteTableToGeoJSON_JavaScript](WriteTableToGeoJSON_JavaScript.png)
 
 **<p style="text-align: center;">
-`WriteTableToGeoJSON` Command Editor for JavaScript Parameters
+`WriteTableToGeoJSON` Command Editor for JavaScript Parameters (<a href="../WriteTableToGeoJSON_JavaScript.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for specifying inserts before and after the GeoJSON content.
-<a href="../WriteTableToGeoJSON_Inserts.png">See also the full-size image.</a>
 
 ![WriteTableToGeoJSON_Inserts](WriteTableToGeoJSON_Inserts.png)
 
 **<p style="text-align: center;">
-`WriteTableToGeoJSON` Command Editor for Text Insert Parameters
+`WriteTableToGeoJSON` Command Editor for Text Insert Parameters (<a href="../WriteTableToGeoJSON_Inserts.png">see also the full-size image</a>)
 </p>**
-	 
+
 ## Command Syntax ##
 
 The command syntax is as follows:
@@ -117,11 +110,11 @@ Command Parameters
 |`ExcludeColumns`|List of comma-separated table column names to exclude as feature properties.  Can be specified using ${Property} notation.|Exclude no columns.|
 |`JavaScriptVar`|Name of JavaScript variable to assign object to in output.  This parameter will be ignored if `PrependText` or `AppendText` are specified.  Can be specified using `${Property}` notation.|Output GeoJSON object surrounded by `{ }`.|
 |`PrependText`|Provide text to insert before the GeoJSON object, for example to provide custom JavaScript.  Can be specified using `${Property}` notation.|No insert.|
-|`AppendText`|Provide text to append after the GeoJSON object, for example to provide custom JavaScript.  Can be specified using `${Property}` notation.	|
+|`AppendText`|Provide text to append after the GeoJSON object, for example to provide custom JavaScript.  Can be specified using `${Property}` notation.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToGeoJSON).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToGeoJSON).
 
 The following example illustrates a CSV table that specifies WKT for points (see `WKTGeometry` column):
 
@@ -144,6 +137,6 @@ The following example illustrates a CSV table that specifies WKT for polygons:
 
 ## See Also ##
 
-* [`WriteTableToKml`](../WriteTableToKml/WriteTableToKml) command
-* [`WriteTableToShapefile`](../WriteTableToShapefile/WriteTableToShapefile) command
-* [`WriteTimeSeriesToGeoJSON`](../WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON) command
+* [`WriteTableToKml`](../WriteTableToKml/WriteTableToKml.md) command
+* [`WriteTableToShapefile`](../WriteTableToShapefile/WriteTableToShapefile.md) command
+* [`WriteTimeSeriesToGeoJSON`](../WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON.md) command

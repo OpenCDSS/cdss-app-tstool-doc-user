@@ -14,7 +14,7 @@
 The `ReadTableFromExcel` command reads a table from a Microsoft Excel file,
 more specifically from a worksheet in an Excel workbook file.
 A contiguous block of cells (rectangle) must be specified in one of the following ways:
-	
+
 * Specify a range of cells using Excel address notation (e.g., `A1:D10`)
 * Specify the name of an Excel named range.
 * Specify a table name (essentially a named range).
@@ -23,7 +23,7 @@ Table column types (number, text, etc.) are determined from the cells
 in the first data row being read (NOT the column name row) – data types must be consistent
 for all cells in a column, although blanks are allowed.
 Table column names are determined according to the `ExcelColumnNames` command parameter.
-	
+
 TSTool uses the [Apache POI software](http://poi.apache.org) to read the Excel file
 and consequently functionality is constrained by the features of that software package.
 The software reads and writes Excel files.
@@ -32,7 +32,7 @@ are not available, which will generate errors getting values for some cells.
 One solution, for example to create test data in Excel,
 is to copy cells with “paste special” and then paste the values.
 It is expected that updates to POI will continue to add more formula support.
-	
+
 Table columns must contain consistent data types (all strings, all numeric, etc.).
 The following table describes how column types are determined
 and data values are transferred to the table.
@@ -80,48 +80,43 @@ and any data rows that have a first cell value starting with the comment charact
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax for the command when reading the above Excel worksheet.
-<a href="../ReadTableFromExcel_Table.png">See also the full-size image.</a>
 
 ![ReadTableFromExcel](ReadTableFromExcel_Table.png)
 
 **<p style="text-align: center;">
-`ReadTableFromExcel` Command Editor for Table Parameters
+`ReadTableFromExcel` Command Editor for Table Parameters (<a href="../ReadTableFromExcel_Table.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates main Excel parameters.
-<a href="../ReadTableFromExcel_Excel.png">See also the full-size image.</a>
 
 ![ReadTableFromExcel Excel](ReadTableFromExcel_Excel.png)
 
 **<p style="text-align: center;">
-`ReadTableFromExcel` Command Editor for Main Excel Parameters
+`ReadTableFromExcel` Command Editor for Main Excel Parameters (<a href="../ReadTableFromExcel_Excel.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates filter parameters.
-<a href="../ReadTableFromExcel_Filters.png">See also the full-size image.</a>
 
 ![ReadTableFromExcel SQL](ReadTableFromExcel_Filters.png)
 
 **<p style="text-align: center;">
-`ReadTableFromExcel` Command Editor for Filter Parameters
+`ReadTableFromExcel` Command Editor for Filter Parameters (<a href="../ReadTableFromExcel_Filters.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates column type parameters.
-<a href="../ReadTableFromExcel_Types.png">See also the full-size image.</a>
 
 ![ReadTableFromExcel SQL File](ReadTableFromExcel_Types.png)
 
 **<p style="text-align: center;">
-`ReadTableFromExcel` Command Editor for Column Type Parameters
+`ReadTableFromExcel` Command Editor for Column Type Parameters (<a href="../ReadTableFromExcel_Types.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates properties parameters.
-<a href="../ReadTableFromExcel_Properties.png">See also the full-size image.</a>
 
 ![ReadTableFromExcel Properties](ReadTableFromExcel_Properties.png)
 
 **<p style="text-align: center;">
-`ReadTableFromExcel` Command Editor for Properties Parameters
+`ReadTableFromExcel` Command Editor for Properties Parameters (<a href="../ReadTableFromExcel_Properties.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -157,11 +152,11 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromExcel).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromExcel).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command
-* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command

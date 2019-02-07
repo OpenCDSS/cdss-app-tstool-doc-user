@@ -3,7 +3,7 @@
 # Reference: http://www.mkdocs.org/user-guide/configuration/
 #
 site_name: CDSS / TSTool
-pages:
+nav:
 - Home: index.md
 - 1 - Introduction: introduction/introduction.md
 - 2 - Getting Started: getting-started/getting-started.md
@@ -49,9 +49,10 @@ pages:
   - ComputeErrorTimeSeries: command-ref/ComputeErrorTimeSeries/ComputeErrorTimeSeries.md
   - ConfigureLogging: command-ref/ConfigureLogging/ConfigureLogging.md
   - ConvertDataUnits: command-ref/ConvertDataUnits/ConvertDataUnits.md
-  - CopyFile: command-ref/CopyFile/CopyFile.md
   - Copy: command-ref/Copy/Copy.md
   - CopyEnsemble: command-ref/CopyEnsemble/CopyEnsemble.md
+  - CopyFile: command-ref/CopyFile/CopyFile.md
+  - CopyPropertiesToTable: command-ref/CopyPropertiesToTable/CopyPropertiesToTable.md
   - CopyTable: command-ref/CopyTable/CopyTable.md
   - CopyTimeSeriesPropertiesToTable: command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md
   - CreateDataStoreDataDictionary: command-ref/CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md
@@ -68,7 +69,7 @@ pages:
   - DeselectTimeSeries: command-ref/DeselectTimeSeries/DeselectTimeSeries.md
   - Disaggregate: command-ref/Disaggregate/Disaggregate.md
   - Divide: command-ref/Divide/Divide.md
-  - Empty: command-ref/Empty/Empty.md
+  - Empty command line: command-ref/Empty/Empty.md
   - EndFor: command-ref/EndFor/EndFor.md
   - EndIf: command-ref/EndIf/EndIf.md
   - Exit: command-ref/Exit/Exit.md
@@ -101,8 +102,8 @@ pages:
   - InsertTableRow: command-ref/InsertTableRow/InsertTableRow.md
   - InsertTimeSeriesIntoEnsemble: command-ref/InsertTimeSeriesIntoEnsemble/InsertTimeSeriesIntoEnsemble.md
   - JoinTables: command-ref/JoinTables/JoinTables.md
-  - ListFiles: command-ref/ListFiles/ListFiles.md
   - LagK: command-ref/LagK/LagK.md
+  - ListFiles: command-ref/ListFiles/ListFiles.md
   - LookupTimeSeriesFromTable: command-ref/LookupTimeSeriesFromTable/LookupTimeSeriesFromTable.md
   - ManipulateTableString: command-ref/ManipulateTableString/ManipulateTableString.md
   - Message: command-ref/Message/Message.md
@@ -110,16 +111,16 @@ pages:
   - NewDayTSFromMonthAndDayTS: command-ref/NewDayTSFromMonthAndDayTS/NewDayTSFromMonthAndDayTS.md
   - NewDerbyDatabase: command-ref/NewDerbyDatabase/NewDerbyDatabase.md
   - NewEnsemble: command-ref/NewEnsemble/NewEnsemble.md
-  - NewExcelWorkbook: command-ref/NewExcelWorkbook/NewExcelWorkbook.md
   - NewEndOfMonthTSFromDayTS: command-ref/NewEndOfMonthTSFromDayTS/NewEndOfMonthTSFromDayTS.md
+  - NewExcelWorkbook: command-ref/NewExcelWorkbook/NewExcelWorkbook.md
   - NewPatternTimeSeries: command-ref/NewPatternTimeSeries/NewPatternTimeSeries.md
   - NewStatisticEnsemble: command-ref/NewStatisticEnsemble/NewStatisticEnsemble.md
   - NewStatisticMonthTimeSeries: command-ref/NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md
   - NewStatisticTimeSeries: command-ref/NewStatisticTimeSeries/NewStatisticTimeSeries.md
   - NewStatisticTimeSeriesFromEnsemble: command-ref/NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md
   - NewStatisticYearTS: command-ref/NewStatisticYearTS/NewStatisticYearTS.md
-  - NewTimeSeries: command-ref/NewTimeSeries/NewTimeSeries.md
   - NewTable: command-ref/NewTable/NewTable.md
+  - NewTimeSeries: command-ref/NewTimeSeries/NewTimeSeries.md
   - NewTreeView: command-ref/NewTreeView/NewTreeView.md
   - Normalize: command-ref/Normalize/Normalize.md
   - OpenCheckFile: command-ref/OpenCheckFile/OpenCheckFile.md
@@ -137,10 +138,10 @@ pages:
   - ReadHecDss: command-ref/ReadHecDss/ReadHecDss.md
   - ReadHydroBase: command-ref/ReadHydroBase/ReadHydroBase.md
   - ReadMODSIM: command-ref/ReadMODSIM/ReadMODSIM.md
+  - ReadNrcsAwdb: command-ref/ReadNrcsAwdb/ReadNrcsAwdb.md
   - ReadNwsCard: command-ref/ReadNwsCard/ReadNwsCard.md
   - ReadNwsrfsEspTraceEnsemble: command-ref/ReadNwsrfsEspTraceEnsemble/ReadNwsrfsEspTraceEnsemble.md
   - ReadNwsrfsFS5Files: command-ref/ReadNwsrfsFS5Files/ReadNwsrfsFS5Files.md
-  - ReadNrcsAwdb: command-ref/ReadNrcsAwdb/ReadNrcsAwdb.md
   - ReadPatternFile: command-ref/ReadPatternFile/ReadPatternFile.md
   - ReadPropertiesFromExcel: command-ref/ReadPropertiesFromExcel/ReadPropertiesFromExcel.md
   - ReadPropertiesFromFile: command-ref/ReadPropertiesFromFile/ReadPropertiesFromFile.md
@@ -193,8 +194,8 @@ pages:
   - SetExcelCell: command-ref/SetExcelCell/SetExcelCell.md
   - SetExcelWorksheetViewProperties: command-ref/SetExcelWorksheetViewProperties/SetExcelWorksheetViewProperties.md
   - SetFromTS: command-ref/SetFromTS/SetFromTS.md
-  - SetIncludeMissingTS: command-ref/SetIncludeMissingTS/SetIncludeMissingTS.md
   - SetIgnoreLEZero: command-ref/SetIgnoreLEZero/SetIgnoreLEZero.md
+  - SetIncludeMissingTS: command-ref/SetIncludeMissingTS/SetIncludeMissingTS.md
   - SetInputPeriod: command-ref/SetInputPeriod/SetInputPeriod.md
   - SetOutputPeriod: command-ref/SetOutputPeriod/SetOutputPeriod.md
   - SetOutputYearType: command-ref/SetOutputYearType/SetOutputYearType.md
@@ -270,6 +271,7 @@ pages:
 - Reference - Datastores:
   - Overview: datastore-ref/overview.md
   - Colorado HydroBase: datastore-ref/CO-HydroBase/CO-HydroBase.md
+  - Colorado HydroBase (legacy): datastore-ref/CO-HydroBase-legacy/CO-HydroBase-legacy.md
   - Colorado HydroBase REST Web Service: datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md
   - ColoradoWaterHBGuest: datastore-ref/ColoradoWaterHBGuest/ColoradoWaterHBGuest.md
   - ColoradoWaterSMS: datastore-ref/ColoradoWaterSMS/ColoradoWaterSMS.md
@@ -281,6 +283,7 @@ pages:
   - MODSIM: datastore-ref/MODSIM/MODSIM.md
   - NDFD: datastore-ref/NDFD/NDFD.md
   - NRCS AWDB: datastore-ref/NRCS-AWDB/NRCS-AWDB.md
+  - NWS NWSRFS: datastore-ref/NWS-NWSRFS/NWS-NWSRFS.md
   - Plugin: datastore-ref/Plugin/Plugin.md
   - RCC ACIS: datastore-ref/RCC-ACIS/RCC-ACIS.md
   - ReclamationHDB: datastore-ref/ReclamationHDB/ReclamationHDB.md
@@ -298,6 +301,7 @@ pages:
   - USGS NWIS RDB: datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB.md
   - WaterML: datastore-ref/WaterML/WaterML.md
   - WaterML2: datastore-ref/WaterML2/WaterML2.md
+  - WaterOneFlow: datastore-ref/WaterOneFlow/WaterOneFlow.md
 - 'Appendix - Install TSTool': appendix-install/install.md
 - 'Appendix - Release Notes':
   - Release Notes: appendix-release-notes/release-notes.md
@@ -312,17 +316,36 @@ pages:
 - 'Appendix - TSView Time Series Viewing Tools': appendix-tsview/tsview.md
 - 'Appendix - GeoView Mapping Tools': appendix-geoview/geoview.md
 # ------- configuration properties ---------------
-# Use Material theme
-# - installation notes:  https://github.com/squidfunk/mkdocs-material
-theme: material
-# Don't enable the repo URL because irritating edit icons are shown when editing really isn't allowed
-#repo_url:  https://github.com/OpenWaterFoundation/cdss-app-tstool-doc-user
-site_description:  CDSS TSTool
-site_author:  OpenCDSS
-site_favicon:  'images/opencdss-favicon.ico'
-copyright:  Copyright State of Colorado
+# Alphabetize
+# ------------------------------------------------
+copyright:  Copyright Colorado Department of Natural Resources
+# ------------------------------------------------
 # Use extra CSS to customize styles, based on theme
 extra_css:
   - 'css/extra-material-theme.css'
+# ------------------------------------------------
 markdown_extensions:
   - footnotes
+# ------------------------------------------------
+# Favicon is supposed to automatically be found:
+# - in docs/img/favicon.ico
+# - is a copy of docs/images/OWF-Logo-Favicon-32x32.ico
+# - instead, with Material them, have a different approach (see "theme" below)
+# ------------------------------------------------
+# Don't enable the repo URL because irritating edit icons are shown when editing really isn't allowed
+#repo_url:  https://github.com/OpenWaterFoundation/cdss-app-tstool-doc-user
+# ------------------------------------------------
+site_author:  OpenCDSS
+site_description:  CDSS TSTool
+# ------------------------------------------------
+# Use Material theme
+# - installation notes:  https://github.com/squidfunk/mkdocs-material
+theme:
+  name: material
+  favicon: 'img/favicon.ico'
+# ------------------------------------------------
+# The following controls how URLs are created
+# - As of MkDocs 1.0 the default is true meaning URLs to a page ABC is ABC/ rather than something/ABC.html.
+# - see:  https://www.mkdocs.org/user-guide/configuration/#use_directory_urls
+# use_directory_urls: true
+# ------------------------------------------------

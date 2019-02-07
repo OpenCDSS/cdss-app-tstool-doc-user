@@ -17,18 +17,18 @@ datastore table by using one of the following methods:
 * Execute an `SQL DELETE` statement to delete all rows.
 Currently, only the ability to delete all rows is supported (see `DeleteAllRows=True` command parameter).
 In the future functionality will be implemented to delete specific rows using an `SQL WHERE` clause.
-See also the `RunSql()` command, which can be used to execute any SQL statement on a database datastore.
+See also the [`RunSql()`](../RunSql/RunSql.md) command, which can be used to execute any SQL statement on a database datastore.
 * Execute an `SQL TRUNCATE` statement (see `DeleteAllRows=Truncate`).
 Although database software varies, this typically has the effect of resetting auto-number counters.
 
 If database datastore support is not specifically provided by TSTool,
 a generic datastore can be used (see the
-[Generic Database DataStore appendix](../../datastore-ref/GenericDatabase/GenericDatabase)).
+[Generic Database DataStore appendix](../../datastore-ref/GenericDatabase/GenericDatabase.md)).
 This command cannot be used with web service datastores and use with Excel datastores has not been tested.
 This command is useful in particular for bulk data processing such as to
 delete records in a table before (re)loading in bulk (see
-[`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore) and
-[`WriteTimeSeriesToDataStore`](../WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore) commands).
+[`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) and
+[`WriteTimeSeriesToDataStore`](../WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md) commands).
 
 General constraints are as follows:
 
@@ -39,12 +39,11 @@ and/or require using stored procedures)
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../DeleteDataStoreTableRows.png">See also the full-size image.</a>
 
 ![DeleteDataStoreTableRows](DeleteDataStoreTableRows.png)
 
 **<p style="text-align: center;">
-`DeleteDataStoreTableRows` Command Editor
+`DeleteDataStoreTableRows` Command Editor (<a href="../DeleteDataStoreTableRows.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -66,11 +65,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/DeleteDataStoreTableRows).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/DeleteDataStoreTableRows).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore) command
-* [`WriteTimeSeriesToDataStore`](../WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore) command
+* [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command
+* [`WriteTimeSeriesToDataStore`](../WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md) command

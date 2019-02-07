@@ -112,7 +112,7 @@ Because the current TSID convention relies on SDI and MDI,
 text parts of the TSID are not used to look up information in the database
 and the issue of special characters is lessened.
 An alternative to relying on TSID commands is to use the
-[`ReadReclamationHDB`](../../command-ref/ReadReclamationHDB/ReadReclamationHDB) command and assign an alias to time series.
+[`ReadReclamationHDB`](../../command-ref/ReadReclamationHDB/ReadReclamationHDB.md) command and assign an alias to time series.
 * Although data flags are available with data records,
 they currently are not set in time series data during reads.
 A future enhancement may transfer the flags.
@@ -259,24 +259,22 @@ ReclamationHDB Datastore Configuration Parameters
 
 The `SystemLogin` and `SystemPassword` datastore configuration parameters are used to authenticate the database user.
 If either are set to `Prompt` in the configuration file, then the following dialog will be shown when TSTool starts.
-<a href="../ReclamationHDB_login.png">See also the full-size image.</a>
 
 ![ReclamationHDB_login](ReclamationHDB_login.png)
 
 **<p style="text-align: center;">
-ReclamationHDB Datastore Login Dialog for Initial Login
+ReclamationHDB Datastore Login Dialog for Initial Login (<a href="../ReclamationHDB_login.png">see also the full-size image</a>)
 </p>**
 
 Only the login and password can be specified.
 If necessary, change the datastore configuration file to change other parameter values.
 After TSTool starts, the ***File / Open / Reclamation HDB*** menu can be
 used to change a datastore login to a different account, as shown below:
-<a href="../ReclamationHDB_login2.png">See also the full-size image.</a>
 
 ![ReclamationHDB_login2](ReclamationHDB_login2.png)
 
 **<p style="text-align: center;">
-ReclamationHDB Datastore Login Dialog after Startup
+ReclamationHDB Datastore Login Dialog after Startup (<a href="../ReclamationHDB_login2.png">see also the full-size image</a>)
 </p>**
 
 HDB database connections can timeout or drop.
@@ -469,7 +467,7 @@ Within TSTool, timestamps are created in such a way that the time series time zo
 For example, when writing 3Hour data:
 
 1. TSTool DateTime object for interval-end data = 2010-03-13 00 MST (TSTool DateTime object only uses a Java Date object when needed but does not use to store the date/time)
-2. [`WriteReclamationHDB`](../../command-ref/WriteReclamationHDB/WriteReclamationHDB) command:
+2. [`WriteReclamationHDB`](../../command-ref/WriteReclamationHDB/WriteReclamationHDB.md) command:
 	1. converts to Java Date (2010-03-13 00 with time zone MST)
 	2. converts to 1268463600000 ms UNIX time from Java Date object
 	3. shift left 3hours = 3600s*3*1000 = 1268463600000 – 108000000 = 1268452800000 ms because `WRITE_TO_HDB SAMPLE_DATE_TIME` is at the start of the interval
@@ -500,7 +498,7 @@ will result in PST times being shifted to MST times.
 
 Reading from HDB using TSTool involves the following steps:
 
-1. [`ReadReclamationHDB`](../../command-ref/ReadReclamationHDB/ReadReclamationHDB) command:
+1. [`ReadReclamationHDB`](../../command-ref/ReadReclamationHDB/ReadReclamationHDB.md) command:
 	1. JDBC SQL statements are used to query the appropriate time series data table.
 	2. `java.sql.TimeStamp.TimeStamp` returned for HDB time series `SAMPLE_DATE_TIME` include values for MST time zone,
 	although MST is not indicated as the time zone.
@@ -527,7 +525,7 @@ When reading, TSTool may think that these values are valid.
 This is problematic because the values are not at the correct hour and because
 TSTool may assume that the sequence of NHour data starts on the wrong hour.
 To address this issue, the
-[`ReadReclamationHDB`](../../command-ref/ReadReclamationHDB/ReadReclamationHDB) command will confirm that
+[`ReadReclamationHDB`](../../command-ref/ReadReclamationHDB/ReadReclamationHDB.md) command will confirm that
 all data that are read are a multiple of NHour apart, using the
 first record that is read to indicate the initial offset.
 If data are not all spaced according to the NHour interval,
@@ -537,7 +535,7 @@ There are two ways to fix this issue:
 1. Delete the time series data from the database and then reload correctly.
 TSTool does not provide a way to delete time series data so a different tool must be used.
 2. Use the `NHourIntervalOffset` parameter with the
-[`ReadReclamationHDB`](../../command-ref/ReadReclamationHDB/ReadReclamationHDB)
+[`ReadReclamationHDB`](../../command-ref/ReadReclamationHDB/ReadReclamationHDB.md)
 command to tell TSTool that data are expected only on a certain offset,
 and all other data will be ignored.
 This does not clean up the database but does at least ensure that the correct data are read.

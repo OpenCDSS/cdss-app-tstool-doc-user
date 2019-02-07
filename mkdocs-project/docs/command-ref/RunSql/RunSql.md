@@ -16,11 +16,11 @@ This command cannot be used with web service datastores because the
 underlying software relies on a database to execute the SQL statement.
 If database datastore support is not specifically provided by TSTool,
 a generic database datastore can be used (see the
-[Generic Database DataStore appendix](../../datastore-ref/GenericDatabase/GenericDatabase).
+[Generic Database DataStore appendix](../../datastore-ref/GenericDatabase/GenericDatabase.md)).
 For example, use a generic database datastore to configure a connection to a Microsoft Access database.
 See also the
-[`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore),
-[`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore),
+[`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md),
+[`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md),
 and other commands specific to datastores.
 This command is useful when a database task needs to be automated in sequence with other TSTool commands.
 The SQL statement can be specified in the following ways:
@@ -28,11 +28,11 @@ The SQL statement can be specified in the following ways:
 * Specify a SQL statement as a command parameter:
 	+ SQL must be valid for the database (syntax may vary based on database software).
 	+ Use `${Property}` notation to insert processor property values set with
-	[`SetProperty`](../SetProperty/SetProperty).
+	[`SetProperty`](../SetProperty/SetProperty.md).
 	+ SQL syntax is not checked for validity and therefore error messages
 	from the database need to be diagnosed based on familiarity with the database.
 	+ Comments in SQL can be specified using
-	[`/* */`](../CommentBlockStart/CommentBlockStart) notation or `--` (double dash) for end of line comments.
+	[`/* */`](../CommentBlockStart/CommentBlockStart.md) notation or `--` (double dash) for end of line comments.
 	These comments are removed by TSTool for Microsoft Access because Access does not support comments in SQL statements.
 * Specify an SQL select statement in a file:
 	+ Similar to the above option; however, the SQL statement is read from a file.
@@ -50,36 +50,33 @@ should be in place to protect against unintended changes to the database
 * SQL syntax varies between database software so care should be take to use standard SQL if possible.
 * Results from the statement currently are not displayed,
 although errors will be shown and added to the log file.
-Use the [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore)
+Use the [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md)
 command to process statements that return a result set.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax for the command, in this case creating a database index.
-<a href="../RunSql.png">See also the full-size image.</a>
 
 ![RunSql](RunSql.png)
 
 **<p style="text-align: center;">
-`RunSql` Command Editor
+`RunSql` Command Editor (<a href="../RunSql.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax for the command when using a file to specify the SQL statement.
-<a href="../RunSql_File.png">See also the full-size image.</a>
 
 ![RunSql File](RunSql_File.png)
 
 **<p style="text-align: center;">
-`RunSql` Command Editor when Specifying the SQL Statement Using a File
+`RunSql` Command Editor when Specifying the SQL Statement Using a File (<a href="../RunSql_File.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax for the command when running a stored procedure.
-<a href="../RunSql_Procedure.png">See also the full-size image.</a>
 
 ![RunSql Procedure](RunSql_Procedure.png)
 
 **<p style="text-align: center;">
-`RunSql` Command Editor when Specifying a Stored Procedure to Run
+`RunSql` Command Editor when Specifying a Stored Procedure to Run (<a href="../RunSql_Procedure.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -102,12 +99,12 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunSql).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunSql).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore) command
-* [`SetProperty`](../SetProperty/SetProperty) command
-* [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore) command
+* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command
+* [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command

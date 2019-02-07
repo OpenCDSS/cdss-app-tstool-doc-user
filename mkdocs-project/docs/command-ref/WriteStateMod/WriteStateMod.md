@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `WriteStateMod` command writes the time series in memory to the specified StateMod format file.
-See the [StateMod Input Type Appendix](../../datastore-ref/StateMod/StateMod) for more information about the file format.
+See the [StateMod Input Type Appendix](../../datastore-ref/StateMod/StateMod.md) for more information about the file format.
 It is expected that the time series have the same interval.
 The time series identifier location part is written as the identifier,
 even if an alias is assigned to a time series.
@@ -20,12 +20,11 @@ even if an alias is assigned to a time series.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../WriteStateMod.png">See also the full-size image.</a>
 
 ![WriteStateMod](WriteStateMod.png)
 
 **<p style="text-align: center;">
-`WriteStateMod` Command Editor
+`WriteStateMod` Command Editor (<a href="../WriteStateMod.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -41,7 +40,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`OutputFile`<br>**required**|The StateMod file to write.  The path to the file can be absolute or relative to the working directory (command file location).|None – must be specified.|
 |`OutputStart`|The date/time for the start of the output.|Use the global output period.|
@@ -51,9 +50,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteStateMod).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteStateMod).
 
-A sample command file to process time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -69,5 +68,5 @@ WriteStateMod(TSList=AllTS,OutputFile="RioGrande.rih")
 
 ## See Also ##
 
-* [`ReadStateMod`](../ReadStateMod/ReadStateMod) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

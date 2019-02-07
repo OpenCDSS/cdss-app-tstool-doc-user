@@ -17,27 +17,25 @@ need to utilize this information to reference the time series,
 including the location identifier, data source, data type, interval, and scenario.
 Built-in properties are those that are part of the internal time series data object and can be used as `%` format specifiers.
 User-defined properties are handled as a list of properties that can be referenced by other commands using the `${ts:Property} `notation.
-See also the [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable) and
-[`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) commands.  
+See also the [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) and
+[`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) commands.  
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../SetTimeSeriesProperty.png">See also the full-size image.</a>
 
 ![SetTimeSeriesProperty](SetTimeSeriesProperty.png)
 
 **<p style="text-align: center;">
-`SetTimeSeriesProperty` Command Editor for Built-in Properties
+`SetTimeSeriesProperty` Command Editor for Built-in Properties (<a href="../SetTimeSeriesProperty.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for user-defined properties.
-<a href="../SetTimeSeriesProperty_User.png">See also the full-size image.</a>
 
 ![SetTimeSeriesProperty User](SetTimeSeriesProperty_User.png)
 
 **<p style="text-align: center;">
-`SetTimeSeriesProperty` Command Editor for User-defined Properties
+`SetTimeSeriesProperty` Command Editor for User-defined Properties (<a href="../SetTimeSeriesProperty_User.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -53,7 +51,7 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`TSList`|Indicates the list of time series to be processed, one of:<br><br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be modified.</li><li>`AllTS`– all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be modified.</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be modified.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be modified.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.|`AllTS`|
+|`TSList`|Indicates the list of time series to be processed, one of:<br><br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be modified.</li><li>`AllTS`– all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be modified.</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be modified.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be modified.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.|`AllTS`|
 |`TSID`|The time series identifier or alias for the time series to be modified, using the `*` wildcard character to match multiple time series.  Can be specified using processor `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be modified, if processing an ensemble.  Can be specified using processor `${Property}`.|Required if `TSList=EnsembleID`|
 |`Description`|The description to assign to the time series.  Can be specified using processor `${Property}`.|None.|
@@ -65,10 +63,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetTimeSeriesProperty).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetTimeSeriesProperty).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) command.
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.
+* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command.

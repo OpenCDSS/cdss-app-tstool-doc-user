@@ -23,13 +23,13 @@ The following calculations are performed:
 ![equation](equation.png)
 
 where, for days in a month:
-	
+
 * *DayTS2_i* = the daily value being estimated in daily time series 2
 * *MonthTS2* = the monthly value being used for volumes for time series 2, shown in units of ACFT/NDAYS (equivalent to ACFT/Month)
 * *NDAYS*  = the number of days in the month
 * *DayTS1_i* = the daily value for indicator daily time series 1
 * *sum(DayTS1_i)* = the sum of the daily values for indicator time series for a month
-	
+
 In summary, the monthly volume in ACFT/NDAYS is first converted to an average monthly CFS
 rate by multiplying by 43560/86400 (or 1/1.9835),
 and finally the average CFS value is prorated by the ratio of the indicator
@@ -37,14 +37,14 @@ daily time series daily value divided by the total daily flows for the month,
 to give a daily CFS value for each day of the month.
 In this case, the last term is simply a ratio (converting daily average CFS to daily
 ACFT and calculating the ratio would result in the same value).
-	
+
 Days with missing data are excluded from the summation and the estimated values.
 The output period is the global output period from
-[`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod),
+[`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md),
 or if not set the period from the daily time series is used.
-	
+
 For example, consider a monthly total MonthTS2 = 1001.7 ACFT and daily values (CFS) as follows:
-	
+
 ```text
  Day 1 = 14
 14
@@ -78,23 +78,22 @@ For example, consider a monthly total MonthTS2 = 1001.7 ACFT and daily values (C
 17
  Day 31 = 17
 ```
-	
+
 The total is 505 CFS.  The estimated value for day 1 of the second daily time series would then be:
-	
+
 1001.7 * (1/1.9835) * (14/505) = 14 CFS
-	
+
 In this case, the indicator time series was the same as the time series being
 estimated and therefore the estimated value should be the same as the indicator. 
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../NewDayTSFromMonthAndDayTS.png">See also the full-size image.</a>
 
 ![NewDayTSFromMonthAndDayTS](NewDayTSFromMonthAndDayTS.png)
 
 **<p style="text-align: center;">
-`NewDayTSFromMonthAndDayTS` Command Editor
+`NewDayTSFromMonthAndDayTS` Command Editor (<a href="../NewDayTSFromMonthAndDayTS.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -123,9 +122,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewDayTSFromMonthAndDayTS).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewDayTSFromMonthAndDayTS).
 
-A sample command file to process time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -138,17 +137,16 @@ NewDayTSFromMonthAndDayTS(NewTSID="08236000.DWR.Streamflow.Day",MonthTSID="08236
 ```
 A graph of data resulting from this command will look similar to the following.
 Note that the each time series has a similar pattern, but at different levels.
-<a href="../NewDayTSFromMonthAndDayTS_Graph.png">See also the full-size image.</a>
 
 ![NewDayTSFromMonthAndDayTS Graph](NewDayTSFromMonthAndDayTS_Graph.png)
 
 **<p style="text-align: center;">
-Result of `NewDayTSFromMonthAndDayTS` Command
+Result of `NewDayTSFromMonthAndDayTS` Command (<a href="../NewDayTSFromMonthAndDayTS_Graph.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command

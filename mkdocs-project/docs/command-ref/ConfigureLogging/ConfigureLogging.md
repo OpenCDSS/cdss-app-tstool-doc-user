@@ -12,8 +12,8 @@
 ## Overview ##
 
 The `ConfigureLogging` command configures logging features that are not
-otherwise configured by other commands such as [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel).
-The command is particularly useful for disabling [`StartLog`](../StartLog/StartLog) commands
+otherwise configured by other commands such as [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel.md).
+The command is particularly useful for disabling [`StartLog`](../StartLog/StartLog.md) commands
 used with automated testing so that all logging output goes to the main log file.
 
 ## Command Editor ##
@@ -39,16 +39,16 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `StartLogEnabled`| Indicate whether [`StartLog`](../StartLog/StartLog) commands should be enabled:<br><ul><li>`False` - commands will be disabled</li><li>`True` - commands will be enabled</li></ul>. | `True` |
+| `StartLogEnabled`| Indicate whether [`StartLog`](../StartLog/StartLog.md) commands should be enabled:<br><ul><li>`False` - commands will be disabled</li><li>`True` - commands will be enabled</li></ul>. | `True` |
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ConfigureLogging).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ConfigureLogging).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel) command - controls debug output
-* [`SetWarningLevel`](../SetWarningLevel/SetWarningLevel) command - controls warning output
-* [`StartLog`](../StartLog/StartLog) command - controls log file where messages are written
+* [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel.md) command - controls debug output
+* [`SetWarningLevel`](../SetWarningLevel/SetWarningLevel.md) command - controls warning output
+* [`StartLog`](../StartLog/StartLog.md) command - controls log file where messages are written

@@ -15,7 +15,7 @@ The `SetExcelWorksheetViewProperties` command sets view properties associated wi
 for example to facilitate automated creation of Excel workbooks.
 Additional properties will be added in the future.
 Currently the command can set the following properties:
-	
+
 * Freeze pane for rows and columns
 
 TSTool uses the [Apache POI software](http://poi.apache.org) to read/write the Excel file
@@ -24,12 +24,11 @@ and consequently functionality is constrained by the features of that software p
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SetExcelWorksheetViewProperties.png">See also the full-size image.</a>
 
 ![SetExcelWorksheetViewProperties](SetExcelWorksheetViewProperties.png)
 
 **<p style="text-align: center;">
-`SetExcelWorksheetViewProperties` Command Editor
+`SetExcelWorksheetViewProperties` Command Editor (<a href="../SetExcelWorksheetViewProperties.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -43,7 +42,7 @@ SetExcelWorksheetViewProperties(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`OutputFile`<br>**required**|The name of the Excel workbook file (`*.xls` or `*.xlsx`) to write, as an absolute path or relative to the command file location.  The Excel file must have been opened with a previous command.  Can be specified with `${Property}`.|None – must be specified.|
 |`Worksheet`|The name of the worksheet in the workbook to set view properties.  Can be specified with `${Property}`.  Multiple worksheets can be specified by separating the names with commas.  Worksheet names can be specified with `*` wildcard to match multiple worksheets.|If not specified, set properties for the first worksheet.|
@@ -53,11 +52,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetExcelWorksheetViewProperties).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetExcelWorksheetViewProperties).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook) command
-* [`ReadExcelWorkbook`](../ReadExcelWorkbook/ReadExcelWorkbook) command
+* [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook.md) command
+* [`ReadExcelWorkbook`](../ReadExcelWorkbook/ReadExcelWorkbook.md) command

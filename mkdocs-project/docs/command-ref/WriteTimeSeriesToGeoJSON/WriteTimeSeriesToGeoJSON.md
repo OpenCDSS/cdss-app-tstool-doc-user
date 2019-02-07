@@ -27,48 +27,43 @@ A future enhancement of this command will allow the geometry feature data to be 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../WriteTimeSeriesToGeoJSON.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToGeoJSON](WriteTimeSeriesToGeoJSON.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToGeoJSON` Command Editor
+`WriteTimeSeriesToGeoJSON` Command Editor (<a href="../WriteTimeSeriesToGeoJSON.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for layers specified with a WKT geometry property.
-<a href="../WriteTimeSeriesToGeoJSON_WKT.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToGeoJSON_WKT](WriteTimeSeriesToGeoJSON_WKT.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToGeoJSON` Command Editor for WKT Geometry Data Parameters
+`WriteTimeSeriesToGeoJSON` Command Editor for WKT Geometry Data Parameters (<a href="../WriteTimeSeriesToGeoJSON_WKT.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for specifying time series properties to include as properties in the GeoJSON output.
-<a href="../WriteTimeSeriesToGeoJSON_Properties.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToGeoJSON_Properties](WriteTimeSeriesToGeoJSON_Properties.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToGeoJSON` Command Editor for Property Parameters
+`WriteTimeSeriesToGeoJSON` Command Editor for Property Parameters (<a href="../WriteTimeSeriesToGeoJSON_Properties.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for specifying the JavaScript variable for the output.
-<a href="../WriteTimeSeriesToGeoJSON_JavaScriptVar.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToGeoJSON_JavaScriptVar](WriteTimeSeriesToGeoJSON_JavaScriptVar.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToGeoJSON` Command Editor for JavaScript Parameters
+`WriteTimeSeriesToGeoJSON` Command Editor for JavaScript Parameters (<a href="../WriteTimeSeriesToGeoJSON_JavaScriptVar.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for specifying inserts around the GeoJSON content.
-<a href="../WriteTimeSeriesToGeoJSON_Inserts.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToGeoJSON_Inserts](WriteTimeSeriesToGeoJSON_Inserts.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToGeoJSON` Command Editor for Text Insert Parameters
+`WriteTimeSeriesToGeoJSON` Command Editor for Text Insert Parameters (<a href="../WriteTimeSeriesToGeoJSON_Inserts.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -84,7 +79,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`OutputFile`|The GeoJSON output file.  The path to the file can be absolute or relative to the working directory (command file location).  Global properties can be used to specify the filename, using the `${Property}` syntax.|None – must be specified.|
@@ -101,10 +96,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToGeoJSON).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToGeoJSON).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteTimeSeriesToKml`](../WriteTimeSeriesToKml/WriteTimeSeriesToKml) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`WriteTimeSeriesToKml`](../WriteTimeSeriesToKml/WriteTimeSeriesToKml.md) command

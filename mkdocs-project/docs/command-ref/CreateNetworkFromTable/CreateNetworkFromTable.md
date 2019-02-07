@@ -15,18 +15,17 @@ The `CreateNetworkFromTable` command creates a network object from a table.
 Support for network objects is being phased into TSTool to allow processing of
 time series that are related to networks, such as river flow networks.
 
-The following figure is taken from the [`AnalyzeNetworkPointFlow`](../AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow)
+The following figure is taken from the [`AnalyzeNetworkPointFlow`](../AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow.md)
 command documentation for illustration.
 However, the network created by the `CreateNetworkFromTable` command does not have
 knowledge of node type or calculations – this may be enhanced later.
-<a href="../AnalyzeNetworkPointFlow_Diagram.png">See also the full-size image.</a>
 
 ![AnalyzeNetworkPointFlow_Diagram](AnalyzeNetworkPointFlow_Diagram.png)
 
 **<p style="text-align: center;">
-Node-based Network
+Node-based Network (<a href="../AnalyzeNetworkPointFlow_Diagram.png">see also the full-size image</a>)
 </p>**
-	
+
 The network is defined by simple “NodeID” and “DownstreamNodeID” notation and can be applied
 to either point-based networks (such as river networks with stations/sites) or
 area-based networks (such as upstream and downstream basins).
@@ -36,42 +35,38 @@ list of node identifiers with associated properties.
 The `NodeID` and `DownstreamNodeID` columns are used by the command to
 create a navigable network object in program memory.
 The network can then be used with commands such as
-[`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) to select time series that were read for the network.
-<a href="../AnalyzeNetworkPointFlow_InputTable.png">See also the full-size image.</a>
+[`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) to select time series that were read for the network.
 
 ![AnalyzeNetworkPointFlow_InputTable](AnalyzeNetworkPointFlow_InputTable.png)
 
 **<p style="text-align: center;">
-Network Definition Input Table
+Network Definition Input Table (<a href="../AnalyzeNetworkPointFlow_InputTable.png">see also the full-size image</a>)
 </p>**
-	
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
-<a href="../CreateNetworkFromTable_General.png">See also the full-size image.</a>
 
 ![CreateNetworkFromTable_General](CreateNetworkFromTable_General.png)
 
 **<p style="text-align: center;">
-`CreateNetworkFromTable` Command Editor for General Parameters
+`CreateNetworkFromTable` Command Editor for General Parameters (<a href="../CreateNetworkFromTable_General.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters that map table columns to network node types.
-<a href="../CreateNetworkFromTable_Map.png">See also the full-size image.</a>
 
 ![CreateNetworkFromTable_Map](CreateNetworkFromTable_Map.png)
 
 **<p style="text-align: center;">
-`CreateNetworkFromTable` Command Editor for Parameters that Map Table Columns to Network Nodes
+`CreateNetworkFromTable` Command Editor for Parameters that Map Table Columns to Network Nodes (<a href="../CreateNetworkFromTable_Map.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters that define node behavior.
-<a href="../CreateNetworkFromTable_Behavior.png">See also the full-size image.</a>
 
 ![CreateNetworkFromTable_Behavior](CreateNetworkFromTable_Behavior.png)
 
 **<p style="text-align: center;">
-`CreateNetworkFromTable` Command Editor for Parameters that Define Node Behavior
+`CreateNetworkFromTable` Command Editor for Parameters that Define Node Behavior (<a href="../CreateNetworkFromTable_Behavior.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -108,12 +103,12 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CreateNetworkFromTable).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CreateNetworkFromTable).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`AnalyzeNetworkFromTable`](../AnalyzeNetworkFromTable/AnalyzeNetworkFromTable) command
-* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`AnalyzeNetworkPointFlow`](../AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow.md) command
+* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

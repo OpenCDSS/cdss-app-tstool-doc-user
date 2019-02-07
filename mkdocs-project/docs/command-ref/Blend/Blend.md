@@ -16,20 +16,19 @@ extending the first time series period if necessary.
 This is typically used for combining time series for a station that has been
 renamed or to blend historic and real-time data.
 The second (independent time series) will ALWAYS override the first time series.
-See also the [`SetFromTS`](../SetFromTS/SetFromTS) and [`Add`](../Add/Add) commands.
+See also the [`SetFromTS`](../SetFromTS/SetFromTS.md) and [`Add`](../Add/Add.md) commands.
 The `Blend` command ensures that single data values are used whereas
-[`Add`](../Add/Add) will add values if more than one value is available at the same date/time.
-The [`SetFromTS`](../SetFromTS/SetFromTS) does not extend the period.
+[`Add`](../Add/Add.md) will add values if more than one value is available at the same date/time.
+The [`SetFromTS`](../SetFromTS/SetFromTS.md) does not extend the period.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../Blend.png">See also the full-size image.</a>
 
 ![Blend](Blend.png)
 
 **<p style="text-align: center;">
-`Blend` Command Editor
+`Blend` Command Editor (<a href="../Blend.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -51,9 +50,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Blend).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Blend).
 
-A sample command file to blend two time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to blend two time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -68,6 +67,6 @@ Blend(TSID=”08236000.DWR.Streamflow.Month”,IndependentTSID=”08236500.DWR.S
 
 ## See Also ##
 
-* [`Add`](../Add/Add) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
-* [`SetFromTS`](../SetFromTS/SetFromTS) command
+* [`Add`](../Add/Add.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`SetFromTS`](../SetFromTS/SetFromTS.md) command

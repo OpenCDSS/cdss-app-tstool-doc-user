@@ -13,14 +13,14 @@
 
 A time series identifier (TSID) command reads a single time series.
 This is one of the few TSTool commands that does not follow the `Command(ParameterName=ParameterValue,...)` syntax.
-See also the [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries) command,
+See also the [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command,
 which provides parameters to control the read,
-and the [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList) command,
+and the [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command,
 which reads multiple time series given a list of time series in a table.
 In order to read the time series from a persistent format (database, file, or web site),
 the TSID must contain the datastore name (or input type), and if necessary, the input name.
 For example, a TSID command for the
-[State of Colorado’s StateMod model file format](../../datastore-ref/StateMod/StateMod) is of the form:
+[State of Colorado’s StateMod model file format](../../datastore-ref/StateMod/StateMod.md) is of the form:
 
 ```
 LocationID…Month~StateMod~Filename
@@ -31,7 +31,7 @@ The TSTool main interface can be used to interactively format TSIDs in many case
 
 After executing the command, the time series will have the identifier as originally requested,
 with no alias being assigned.
-Use [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries)
+Use [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md)
 command to assign an alias to the time series, or use one of the specific read commands.
 
 ## Command Editor ##
@@ -50,7 +50,7 @@ relative path to allow the files to be moved to another location and run without
 </p>**
 
 The following example is for a TSID for the
-[State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase).
+[State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md).
 In this case the datastore name is specified at the end of the TSID.
 
 ![TSID-HydroBase](TSID-HydroBase.png)
@@ -69,10 +69,10 @@ The command syntax is as follows with the details varying based on the data sour
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general)
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general)
 for various datastores and input types (see `TSID` in folder names).
 
-A sample command file to read a time series from the [State of Colorado’s StateMod](../../datastore-ref/StateMod/StateMod) is as follows.
+A sample command file to read a time series from the [State of Colorado’s StateMod](../../datastore-ref/StateMod/StateMod.md) is as follows.
 In this case the absolute paths have been adjusted to relative paths using the command editor dialog.
 Note also that the data source and data type are not required in this example because this information is not stored in the StateMod file.
 
@@ -81,7 +81,7 @@ Note also that the data source and data type are not required in this example be
 09303400...MONTH~StateMod~whiteT.rih
 ```
 
-A sample command file to read time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase) is as follows:
+A sample command file to read time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md) is as follows:
 
 ```
 # 06754000 - SOUTH PLATTE RIVER NEAR KERSEY
@@ -94,5 +94,5 @@ A sample command file to read time series from the [State of Colorado’s HydroB
 
 ## See Also ##
 
-* [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries) command
-* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList) command
+* [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command
+* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command

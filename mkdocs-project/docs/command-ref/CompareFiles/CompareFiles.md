@@ -16,7 +16,7 @@ For example, the command can be used to compare old and new files produced by a 
 This command is suitable for comparing files that are similar,
 but is not suitable for comparing files that are very different,
 although it may be enhanced in the future to provide more sophisticated comparison features.
-	
+
 Each line in the file is compared.
 By default, lines beginning with `#` are treated as comment lines and are ignored
 (see the `CommentLineChar` parameter to specify the comment indicator).
@@ -24,8 +24,8 @@ Therefore, only non-comment lines are compared.
 Comment lines in the middle of the file are simply discarded.
 Differences and simple statistics are printed to the log file.
 A warning can be generated if a difference is detected or if no differences are detected
-(see also the [`CompareTimeSeries`](../CompareTimeSeries/CompareTimeSeries) and [`CompareTables`](../CompareTables/CompareTables) commands).
-	
+(see also the [`CompareTimeSeries`](../CompareTimeSeries/CompareTimeSeries.md) and [`CompareTables`](../CompareTables/CompareTables.md) commands).
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax for the command.
@@ -34,14 +34,12 @@ the ***View Diff*** button will be enabled to display a visual difference.
 The KDiff3 software is one option for a visual difference program.
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../CompareFiles.png">See also the full-size image.</a>
 
 ![CompareFiles](CompareFiles.png)
 
 **<p style="text-align: center;">
-`CompareFiles` Command Editor
+`CompareFiles` Command Editor (<a href="../CompareFiles.png">see also the full-size image</a>)
 </p>**
-
 
 ## Command Syntax ##
 
@@ -67,11 +65,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CompareFiles).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CompareFiles).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CompareTables`](../CompareTables/CompareTables) command
-* [`CompareTimeSeries`](../CompareTimeSeries/CompareTimeSeries) command
+* [`CompareTables`](../CompareTables/CompareTables.md) command
+* [`CompareTimeSeries`](../CompareTimeSeries/CompareTimeSeries.md) command

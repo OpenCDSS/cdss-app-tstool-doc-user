@@ -22,7 +22,7 @@ with another time series in the list (ignoring itself) using one of the followin
 Typically the location identifiers and possibly data types will be the same in the two lists.
 * Compare two time series directly.
 * Compare time series from two ensembles.
-	
+
 Time series are compared value by value, with the differences computed as the value
 from the second time series minus the value from the first time series.
 The values can be rounded based on a specified precision.
@@ -33,53 +33,48 @@ Values that are different can optionally be tagged with a character flag, for us
 Time series of the differences can optionally be created.
 A warning can be generated if a difference is detected,
 or if no differences are detected.
-See also the [`CompareFiles`](../CompareFiles/CompareFiles) and [`CompareTables`](../CompareTables/CompareTables) commands).
+See also the [`CompareFiles`](../CompareFiles/CompareFiles.md) and [`CompareTables`](../CompareTables/CompareTables.md) commands).
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax when comparing two time series.
-<a href="../CompareTimeSeries_2.png">See also the full-size image.</a>
 
 ![CompareTimeSeries 2](CompareTimeSeries_2.png)
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor Showing Parameters to Compare 2 Time Series
+`CompareTimeSeries` Command Editor Showing Parameters to Compare 2 Time Series (<a href="../CompareTimeSeries_2.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when comparing two ensembles.
-<a href="../CompareTimeSeries_2Ensembles.png">See also the full-size image.</a>
 
 ![CompareTimeSeries 2 Ensembles](CompareTimeSeries_2Ensembles.png)
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor Showing Parameters to Compare 2 Ensembles
+`CompareTimeSeries` Command Editor Showing Parameters to Compare 2 Ensembles (<a href="../CompareTimeSeries_2Ensembles.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when comparing many time series.
-<a href="../CompareTimeSeries_Many.png">See also the full-size image.</a>
 
 ![CompareTimeSeries Many](CompareTimeSeries_Many.png)
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor Showing Parameters to Compare Many Time Series
+`CompareTimeSeries` Command Editor Showing Parameters to Compare Many Time Series (<a href="../CompareTimeSeries_Many.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for analysis parameters.
-<a href="../CompareTimeSeries_Analysis.png">See also the full-size image.</a>
 
 ![CompareTimeSeries Analysis](CompareTimeSeries_Analysis.png)
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor Showing Analysis Parameters
+`CompareTimeSeries` Command Editor Showing Analysis Parameters (<a href="../CompareTimeSeries_Analysis.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for output parameters.
-<a href="../CompareTimeSeries_Output.png">See also the full-size image.</a>
 
 ![CompareTimeSeries Output](CompareTimeSeries_Output.png)
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor showing Output Parameters
+`CompareTimeSeries` Command Editor showing Output Parameters (<a href="../CompareTimeSeries_Output.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -112,7 +107,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CompareTimeSeries).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CompareTimeSeries).
 
 The following example illustrates how time series from two files can be compared.
 For example, use similar commands to compare results from two model runs or two database queries:
@@ -130,7 +125,7 @@ The following example compares matching time series for the full available perio
 CompareTimeSeries(Precision=2,Tolerance="0,.1,.5,1",DiffFlag="x")
 ```
 
-The following example compares data only within the output period, as specified by the [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod) command:
+The following example compares data only within the output period, as specified by the [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command:
 
 ```
 CompareTimeSeries(Precision=2,Tolerance="0,.1,.5,1",
@@ -141,7 +136,7 @@ AnalysisStart="OutputStart",AnalysisEnd="OutputEnd",DiffFlag="x")
 
 ## See Also ##
 
-* [`CompareFiles`](../CompareFiles/CompareFiles) command
-* [`CompareTables`](../CompareTables/CompareTables) command
-* [`RunCommands`](../RunCommands/RunCommands) command
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod) command
+* [`CompareFiles`](../CompareFiles/CompareFiles.md) command
+* [`CompareTables`](../CompareTables/CompareTables.md) command
+* [`RunCommands`](../RunCommands/RunCommands.md) command
+* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command

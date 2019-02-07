@@ -14,7 +14,7 @@
 The `WriteTableToDelimitedFile` command writes a table to a delimited file.
 Currently only the comma is supported as the delimiter.
 This command is the analog to the
-[`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command.
+[`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command.
 It can be used to provide tabular data to other programs, such as spreadsheet programs and geographic information systems.
 
 The default is to write a standard file header using comment lines that start with the # character.
@@ -25,12 +25,11 @@ may include too many digits – this will be addressed in future updates.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../WriteTableToDelimitedFile.png">See also the full-size image.</a>
 
 ![WriteTableToDelimitedFile](WriteTableToDelimitedFile.png)
 
 **<p style="text-align: center;">
-`WriteTableToDelimitedFile` Command Editor
+`WriteTableToDelimitedFile` Command Editor (<a href="../WriteTableToDelimitedFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -57,10 +56,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToDelimitedFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToDelimitedFile).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command

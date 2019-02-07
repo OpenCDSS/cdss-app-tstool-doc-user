@@ -24,12 +24,11 @@ and then remove the command when focusing on data.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SetIncludeMissingTS.png">See also the full-size image.</a>
 
 ![SetIncludeMissingTS](SetIncludeMissingTS.png)
 
 **<p style="text-align: center;">
-`SetIncludeMissingTS` Command Editor
+`SetIncludeMissingTS` Command Editor (<a href="../SetIncludeMissingTS.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -49,7 +48,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetIncludeMissingTS).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetIncludeMissingTS).
 
 ## Troubleshooting ##
 

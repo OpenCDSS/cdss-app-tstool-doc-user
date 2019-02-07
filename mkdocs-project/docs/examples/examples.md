@@ -31,7 +31,7 @@ This section includes examples related to general TSTool use, which may be appro
 
 The following example session illustrates how to query time series data for display, analysis, and viewing.
 
-1. Start TSTool.  If the [State of Colorado's HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase) or other database input types are enabled,
+1. Start TSTool.  If the [State of Colorado's HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase.md) or other database input types are enabled,
 you may need to select a database and provide a login.
 2. To manipulate time series in any way,
 first select the time series of interest in the TSTool main interface.
@@ -39,13 +39,13 @@ Pick appropriate ***Datastore*** or ***Input type***, ***Data type***, ***Time s
 Press ***Get Time Series List*** to list the available time series.
 After pressing ***Get Time Series List***, a list of time series will be shown in the upper-right corner of the interface.
 3. Select one or more time series from the list and transfer to the ***Commands*** list as time series identifiers.
-Time series identifiers are explained in [Introduction](../introduction/introduction).
+Time series identifiers are explained in [Introduction](../introduction/introduction.md).
 4. Press the ***Run All Commands*** button to query the time series.  They should now be listed in the ***Results*** area.
 5. Use the Results and Tools menus to view the time series.  For example, display a line graph
 (using ***Results / Graph - Line***) and then view the time series as a summary or table.
 6. Go back to the ***Commands*** list and use the ***Commands*** menu to add additional commands to manipulate time series.  For example:
-* Insert a [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate) command to fill data
-* Insert a [`Cumulate`](../command-ref/Cumulate/Cumulate) command to transform the data into cumulative values
+* Insert a [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate.md) command to fill data
+* Insert a [`Cumulate`](../command-ref/Cumulate/Cumulate.md) command to transform the data into cumulative values
 7. Repeat steps 4 – 5 to process and view time series.
 
 ### General – Reproducing an Analysis with a Command File ###
@@ -65,7 +65,7 @@ As the above example shows,
 reproducing an analysis consists of saving a command file that can be reused later.
 The main complications in this approach are that the
 environment in which the commands are run may change over time.
-For example if using the [State of Colorado's HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase), the database version,
+For example if using the [State of Colorado's HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase.md), the database version,
 ODBC data source name, database host, or working directory may be differ between computers.
 It is recommended that commands use directories relative to a working directory
 (the folder where the command file is saved) and that the working directory is
@@ -114,23 +114,23 @@ Therefore most updates will generally involve only a few changes.
 
 A number of commands have been added/enhanced to promote
 reuse of command files in both batch and GUI run modes.
-For example, the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct) command
+For example, the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command
 indicates whether the command is active for batch and GUI run modes.
 Choosing the correct setting simplifies exchange of command files between users and operating environments.
 
 When querying time series, select a subset of the commands for
 intermediate work to verify filling or other manipulation.
-General commands (e.g., [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod))
+General commands (e.g., [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md))
 may be required even if a subset of time series is being processed, for example, to ensure that periods overlap.
 
 TSTool by default reads all available data.  However, the
-[`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod) is available to limit the period that is read.
-The [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod) is used to control the period for output products.
+[`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod.md) is available to limit the period that is read.
+The [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) is used to control the period for output products.
 
 ### Modeling – Processing Reservoir Target (Input=HydroBase, Output=StateMod) ###
 
 The following example illustrates how to create a monthly reservoir
-target file for the StateMod model using data from the [State of Colorado’s HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase).
+target file for the StateMod model using data from the [State of Colorado’s HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase.md).
 Note however that end of month data may not always be
 available in HydroBase due to data availability and quality control issues.
 If the data are not available in HydroBase, time series can be read from other sources.
@@ -163,8 +163,7 @@ ExamplesOfUse/Reservoir_EOM/Example_Reservoir_EOM.TSTool
 ### Modeling – Filling Reservoir End of Month Contents with a Pattern File (Input=HydroBase, Output=StateMod) ###
 
 The following example illustrates a command file for creating a
-[StateMod](../datastore-ref/StateMod/StateMod) reservoir historical end of month file, using pattern filling.
-
+[StateMod](../datastore-ref/StateMod/StateMod.md) reservoir historical end of month file, using pattern filling.
 
 ```
 # eom.commands.TSTool
@@ -218,8 +217,8 @@ WriteStateMod(TSList=AllTS,OutputFile="..\statemod\cm2005.eom",Precision=0)
 It may be desirable to read a file containing a list of station/structure
 identifiers and process the corresponding time series.
 The following example illustrates a command file to use a
-list to read time series from the [State of Colorado's HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase)
-and output a [StateMod](../datastore-ref/StateMod/StateMod) data file. 
+list to read time series from the [State of Colorado's HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase.md)
+and output a [StateMod](../datastore-ref/StateMod/StateMod.md) data file. 
 
 
 ```text
@@ -261,11 +260,11 @@ Frost dates are special time series consisting of four dates per year. The dates
 * First day in fall that the temperature was 28 degrees F
 
 These specific dates are currently consistent with the
-[State of Colorado’s HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase) and
-[StateCU](../datastore-ref/StateCU/StateCU) input types.
+[State of Colorado’s HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase.md) and
+[StateCU](../datastore-ref/StateCU/StateCU.md) input types.
 Older versions of TSTool (before version 06.00.00) treated frost dates as a single time series,
 where the four components were internally manipulated as dates.
-The [`Add`](../command-ref/Add/Add) command had a limited number of features
+The [`Add`](../command-ref/Add/Add.md) command had a limited number of features
 supported manipulating frost date time series.
 However, other commands could not be used to process the time series.
 Consequently, display, analysis, and manipulation capabilities were limited.
@@ -279,12 +278,12 @@ all of TSTool’s manipulation tools can be used to fill and analyze frost dates
 This does require each time series to be specified,
 whereas before the four were internally handled with a single time series identifier.
 Because frost dates are internally treated as numerical Julian days, using the generic numerical
-[`Add`](../command-ref/Add/Add) command functionality may result in unexpected output
+[`Add`](../command-ref/Add/Add.md) command functionality may result in unexpected output
 if the time series overlap (Julian days will be added).
 To avoid this situation, use the
-[`FillFromTS`](../command-ref/FillFromTS/FillFromTS),
-[`SetFromTS`](../command-ref/SetFromTS/SetFromTS),
-or [`Blend`](../command-ref/Blend/Blend) commands when merging multiple time series.
+[`FillFromTS`](../command-ref/FillFromTS/FillFromTS.md),
+[`SetFromTS`](../command-ref/SetFromTS/SetFromTS.md),
+or [`Blend`](../command-ref/Blend/Blend.md) commands when merging multiple time series.
 The following example illustrates how to process a frost dates file for StateCU:
 
 ```text
@@ -321,7 +320,7 @@ WriteStateCU(OutputFile="..\StateCU\Frost2002.stm")
 ### Modeling – Filling Streamflow Using MOVE2 (Input=HydroBase) ###
 
 Data filling is an important activity for modeling.
-TSTool provides a number of [data filling commands](../command-ref/overview#fill-time-series-missing-data).
+TSTool provides a number of [data filling commands](../command-ref/overview.md#fill-time-series-missing-data).
 Data filling can be accomplished using varying levels of complexity.
 The approach used for data filling depends on the data type and interval.
 For example, estimating daily precipitation may be difficult because
@@ -331,7 +330,7 @@ Data filling involves a number of steps:
 
 1. Initial review of the data (e.g., using the ***Tools / Report - Data Coverage by Year*** menu, and graphs).
 2. Review of the spatial proximity of gages using the ***TSTool View / Map Interface***
-capability or GIS software (see [Spatial Data Integration](../spatial/spatial) Chapter for limitations of the map interface).
+capability or GIS software (see [Spatial Data Integration](../spatial/spatial.md) Chapter for limitations of the map interface).
 3. Comparison of candidate time series (e.g., using the ***Results / Graph - XY-Scatter*** menu).
 4. Apply data filling commands.
 5. Review final results visually and review time series histories
@@ -339,7 +338,7 @@ capability or GIS software (see [Spatial Data Integration](../spatial/spatial) C
 
 The data filling approach can be simple or complex.
 An example of a complex data filling technique is to use the
-[`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2) command on daily streamflow data.
+[`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2.md) command on daily streamflow data.
 In particular, consider the following case:
 
 * Time series 1 (TS1) has a long period of gaged unregulated data (e.g., a headwater): 1900 to 2000
@@ -378,12 +377,12 @@ ExamplesOfUse/Filling/Example_Filling.TSTool
 ```
 
 The above example illustrates a somewhat complicated situation where data filling is
-facilitated by the features of the [`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2) command.
-If the [`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2) command is not appropriate,
-then the [`FillRegression`](../command-ref/FillRegression/FillRegression) or other commands can be applied.
+facilitated by the features of the [`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2.md) command.
+If the [`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2.md) command is not appropriate,
+then the [`FillRegression`](../command-ref/FillRegression/FillRegression.md) or other commands can be applied.
 In some cases, it may be appropriate to fill different parts of the period using different independent time series.
 A simpler approach may involve only a single filling step (e.g., fill the entire period using a single
-[`FillRegression`](../command-ref/FillRegression/FillRegression) command).
+[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command).
 
 ## Time Series Ensemble Examples ##
 
@@ -449,9 +448,12 @@ Blend(TSID="lobatos_current",IndependentTSID="lobatos_likely",BlendMethod=BlendA
 The results of processing the above commands in TSTool are a list of the traces,
 a weighted time series (based on three traces), and the current daily data,
 all at the same streamflow gage, as shown in the following figure.
-<a href="../Example_LobatosCurrent_TSTool.png">See also the full-size image.</a>
 
 ![Example_LobatosCurrent_TSTool](Example_LobatosCurrent_TSTool.png)
+
+**<p style="text-align: center;">
+Example Graph of Time Series Traces (<a href="../Example_LobatosCurrent_TSTool.png">see also the full-size image</a>)
+</p>**
 
 Any of the time series can be selected and viewed.
 
@@ -461,22 +463,21 @@ The following features are useful for selecting appropriate traces:
 Use the graph properties to turn traces on/off or use symbols to identify different traces.
 2. Use the tools described in Chapter 5 - Tools to evaluate time series and traces.
 For example, the Year to Date report can be used to determine how well different years compare volumetrically.
-The [`NewStatisticYearTS`](../command-ref/NewStatisticYearTS/NewStatisticYearTS) and
-[`NewStatisticTimeSeriesFromEnsemble`](../command-ref/NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble) commands
+The [`NewStatisticYearTS`](../command-ref/NewStatisticYearTS/NewStatisticYearTS.md) and
+[`NewStatisticTimeSeriesFromEnsemble`](../command-ref/NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) commands
 create derived time series that are useful for evaluating ensemble time series.
 
 Key traces and output time series can be selected and graphed, as shown below.
-<a href="../Example_LobatosCurrent_Graph.png">See also the full-size image.</a>
 
 ![Example_LobatosCurrent_Graph](Example_LobatosCurrent_Graph.png)
 
 **<p style="text-align: center;">
-Example Graph of Traces and Combined Real-time/Historical Time Series
+Example Graph of Traces and Combined Real-time/Historical Time Series (<a href="../Example_LobatosCurrent_Graph.png">see also the full-size image</a>)
 </p>**
  
 ## Time Series Product Examples ##
 
-Time series products are described in the [TSView Time Series Viewing Tools appendix](../appendix-tsview/tsview).
+Time series products are described in the [TSView Time Series Viewing Tools appendix](../appendix-tsview/tsview.md).
 In summary, a time series product file uses time series identifiers to indicate data to be processed,
 and includes other properties (e.g., titles) to configure a graph.
 TSTool can process time series products in a number of ways, as illustrated by the following examples.
@@ -491,7 +492,7 @@ reading data from a recognized database or file format.
 This takes advantage of TSTool’s features rather than adding additional features to the application.
 The following example illustrates how to display a graph of
 precipitation and streamflow data in a single graph,
-using data from the [State of Colorado’s HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase).
+using data from the [State of Colorado’s HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase.md).
 TSTool should be started using a command line similar to:
 
 ```text
@@ -526,9 +527,9 @@ The following example shows a typical command file for this run mode:
 ProcessTSProduct(TSProductFile="test.tsp",RunMode=GUIAndBatch,View=True)
 ```
 
-The [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct)
+The [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md)
 command references a time series product file.
-An example of the file is as follows (see the [TSView Time Series Viewing Tools Appendix](../appendix-tsview/tsview)
+An example of the file is as follows (see the [TSView Time Series Viewing Tools Appendix](../appendix-tsview/tsview.md)
 for a full description of time series product file properties):
 
 ```text
@@ -566,16 +567,19 @@ TSID = "08236000.DWR.Streamflow.Month~HydroBase"
 ```
 
 The resulting graph is shown in the following figure.  Pressing ***Close*** will exit TSTool.
-<a href="../Example_NoMainGUI_Graph.png">See also the full-size image.</a>
 
 ![Example_NoMainGUI_Graph](Example_NoMainGUI_Graph.png)
+
+**<p style="text-align: center;">
+Example Stand-alone Graph (<a href="../Example_NoMainGUI_Graph.png">see also the full-size image</a>)
+</p>**
 
 ### Automating Graphs to Compare Observed and Simulated Time Series ###
 
 It often is useful to automate comparison of observed and simulated time series (e.g., during model calibration).
-For example, consider the simulated and observed time series stored in a [DateValue file](../datastore-ref/DateValue/DateValue)
+For example, consider the simulated and observed time series stored in a [DateValue file](../datastore-ref/DateValue/DateValue.md)
 (`results.dv`), as follows (in this example the DateValue file was created by
-reading [`StateMod`](../datastore-ref/StateMod/StateMod) model input and output,
+reading [`StateMod`](../datastore-ref/StateMod/StateMod.md) model input and output,
 and the TSID and DataType lines were hand-edited in the DateValue file to facilitate this example).
 
 ```text
@@ -671,9 +675,12 @@ ProcessTSProduct(TSProductFile="results.tsp",RunMode=GUIAndBatch,View=True,Outpu
 The above commands can be run from the TSTool GUI or in batch mode to produce the following graph
 (note in this example that the x-axis data values are so large that the software is
 having difficulty finding good labels – resize the graph window to improve labeling).
-<a href="../Example_Scatter_Graph.png">See also the full-size image.</a>
 
 ![Example_Scatter_Graph](Example_Scatter_Graph.png)
+
+**<p style="text-align: center;">
+Excample Scatter Graph (<a href="../Example_Scatter_Graph.png">see also the full-size image</a>)
+</p>**
 
 Because this approach relies primarily on the time series identifiers to
 associate the time series data with the time series product,
@@ -686,4 +693,4 @@ larger production either by repeating the example (and changing identifiers)
 or by automatically changing the example to replace strings
 (for example by using `{Property}` notation in a
 [`For`](../command-ref/For/For) or use the
-[`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile) command).
+[`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command).

@@ -71,12 +71,11 @@ Currently all values are added as text.  In the future an XSD file may be used t
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../ReadTableFromXml.png">See also the full-size image.</a>
 
 ![ReadTableFromXml](ReadTableFromXml.png)
 
 **<p style="text-align: center;">
-`ReadTableFromXml` Command Editor
+`ReadTableFromXml` Command Editor (<a href="../ReadTableFromXml.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -99,10 +98,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromXml).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromXml).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command
+* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command

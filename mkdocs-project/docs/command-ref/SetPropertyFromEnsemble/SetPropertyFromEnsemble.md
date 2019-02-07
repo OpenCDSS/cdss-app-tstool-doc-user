@@ -14,19 +14,18 @@
 The `SetPropertyFromEnsemble` command sets the value of a processor property,
 using time series ensemble properties as input.
 The property will be available to subsequent commands that support using `${Property}` notation in parameters,
-for example to specify filenames more dynamically or use with [`If`](../If/If) commands.
-This command should not be confused with the [`SetEnsembleProperty`](../SetEnsembleProperty/SetEnsembleProperty) command,
+for example to specify filenames more dynamically or use with [`If`](../If/If.md) commands.
+This command should not be confused with the [`SetEnsembleProperty`](../SetEnsembleProperty/SetEnsembleProperty.md) command,
 which sets a property on an ensemble.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../SetPropertyFromEnsemble.png">See also the full-size image.</a>
 
 ![SetPropertyFromEnsemble](SetPropertyFromEnsemble.png)
 
 **<p style="text-align: center;">
-`SetPropertyFromEnsemble` Command Editor for General Set Parameters
+`SetPropertyFromEnsemble` Command Editor for General Set Parameters (<a href="../SetPropertyFromEnsemble.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -48,15 +47,15 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetPropertyFromEnsemble).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetPropertyFromEnsemble).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`For`](../For/For) command
-* [`If`](../If/If) command
-* [`SetProperty`](../SetProperty/SetProperty) command
-* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) command
-* [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty) command
-* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile) command
+* [`For`](../For/For.md) command
+* [`If`](../If/If.md) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command
+* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command
+* [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command
+* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md) command

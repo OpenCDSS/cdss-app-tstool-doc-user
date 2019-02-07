@@ -26,7 +26,7 @@ longitude and latitude or Well Known Text (WKT) geometry strings.  See:
 Currently only point and polygon data can be processed but in the future support
 for well-known text for other geometry types will be added.
 Other features that are envisioned in the future include;
-	
+
 * Providing the option to output the time series using the timestamp and timespan KML features.
 * Providing the option to specify style information with a table,
 for example using the data type to indicate the symbol and icon.
@@ -34,58 +34,52 @@ for example using the data type to indicate the symbol and icon.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../WriteTimeSeriesToKml.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToKml](WriteTimeSeriesToKml.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToKml` Command Editor
+`WriteTimeSeriesToKml` Command Editor (<a href="../WriteTimeSeriesToKml.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for point data specified with time series properties.
-<a href="../WriteTimeSeriesToKml_Point.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToKml_Point](WriteTimeSeriesToKml_Point.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToKml` Command Editor for Point Data Parameters
+`WriteTimeSeriesToKml` Command Editor for Point Data Parameters (<a href="../WriteTimeSeriesToKml_Point.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for layers specified with a WKT geometry property.
-<a href="../WriteTimeSeriesToKml_Geometry.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToKml_Geometry](WriteTimeSeriesToKml_Geometry.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToKml` Command Editor for WKT Geometry Data Parameters
+`WriteTimeSeriesToKml` Command Editor for WKT Geometry Data Parameters (<a href="../WriteTimeSeriesToKml_Geometry.png">see also the full-size image</a>)
 </p>**
-	 
+
 The following figure illustrates the command syntax for KML inserts.  This allows KML elements to be inserted in the KML file.
-<a href="../WriteTimeSeriesToKml_KmlInsert.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToKml_KmlInsert](WriteTimeSeriesToKml_KmlInsert.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToKml` Command Editor for KML Insert Parameters
+`WriteTimeSeriesToKml` Command Editor for KML Insert Parameters (<a href="../WriteTimeSeriesToKml_KmlInsert.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for marker style parameters.
-<a href="../WriteTimeSeriesToKml_Styles.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToKml_Styles](WriteTimeSeriesToKml_Styles.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToKml` Command Editor for Marker Style Parameters
+`WriteTimeSeriesToKml` Command Editor for Marker Style Parameters (<a href="../WriteTimeSeriesToKml_Styles.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for time series data parameters.
 In the future this tab will be used to control how time series values are used to animate a KML layer.
-<a href="../WriteTimeSeriesToKml_TimeSeries.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToKml_TimeSeries](WriteTimeSeriesToKml_TimeSeries.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToKml` Command Editor for Time Series Data Parameters
+`WriteTimeSeriesToKml` Command Editor for Time Series Data Parameters (<a href="../WriteTimeSeriesToKml_TimeSeries.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -101,7 +95,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`OutputFile`|The KML output file.  The path to the file can be absolute or relative to the working directory (command file location).  Global properties can be used to specify the filename, using the `${Property}` syntax.|None – must be specified.|
@@ -124,10 +118,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToKml).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToKml).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteTimeSeriesToGeoJSON`](../WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON) command
+* [`WriteTimeSeriesToGeoJSON`](../WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON.md) command

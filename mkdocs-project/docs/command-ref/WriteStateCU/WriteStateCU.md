@@ -13,9 +13,9 @@
 
 The `WriteStateCU` command writes time series to the specified StateCU frost dates format file.
 Currently only the frost dates file can be written with this command.
-See the [`WriteStateMod`](../WriteStateMod/WriteStateMod) command to write StateMod
+See the [`WriteStateMod`](../WriteStateMod/WriteStateMod.md) command to write StateMod
 format files (e.g., for the precipitation, temperature, and diversion time series files used with the StateCU model).
-See the [StateCU Input Type Appendix](../../datastore-ref/StateCU/StateCU) for more information about the file format.
+See the [StateCU Input Type Appendix](../../datastore-ref/StateCU/StateCU.md) for more information about the file format.
 All time series matching the data types `FrostDateL28S`, `FrostDateL32S`,
 `FrostDateF32F`, and `FrostDateF28F` will be written (all other time series will be ignored).
 Other StateCU files may be supported in the future.
@@ -24,12 +24,11 @@ See also the StateDMI software, which processes other StateCU files.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../WriteStateCU.png">See also the full-size image.</a>
 
 ![WriteStateCU](WriteStateCU.png)
 
 **<p style="text-align: center;">
-`WriteStateCU` Command Editor
+`WriteStateCU` Command Editor (<a href="../WriteStateCU.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -51,9 +50,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteStateCU).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteStateCU).
 
-A sample command file to process frost date time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process frost date time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -69,5 +68,5 @@ WriteStateCU(OutputFile="test.stm")
 
 ## See Also ##
 
-* [`ReadStateCU`](../ReadStateCU/ReadStateCU) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`ReadStateCU`](../ReadStateCU/ReadStateCU.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

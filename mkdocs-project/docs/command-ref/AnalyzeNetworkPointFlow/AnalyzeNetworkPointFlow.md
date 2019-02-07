@@ -16,9 +16,9 @@ associates input time series with each node in the network,
 and computes mass balance time series at each node.
 Although the network is intended to represent a physical network such as a stream system,
 it also can represent other flow networks such as transportation or other mass/energy conservation systems.
-	
+
 This command differs from the functionality of other network analysis tools as follows:
-	
+
 * Daily administration tools, such as the State of Colorado’s Colorado Water Rights Administration Tool (CWRAT)
 (**CWRAT is no longer used in production**) perform a point flow analysis for a single day,
 which only requires knowing one day’s input values,
@@ -30,8 +30,8 @@ basic time series manipulations that can be quickly configured.
 
 It may be possible to utilize the network data from tools such as those mentioned above with the `AnalyzeNetworkPointFlow` command.
 For example, the StateMod river network file (`*.rin`) can be read using the TSTool
-[`ReadTableFromFixedFormatFile`](../ReadTableFromFixedFormatFile/ReadTableFromFixedFormatFile) command.
-	
+[`ReadTableFromFixedFormatFile`](../ReadTableFromFixedFormatFile/ReadTableFromFixedFormatFile.md) command.
+
 Limitations to be addressed with future enhancements:
 
 * The command does not handle branching networks in calculations
@@ -45,14 +45,13 @@ can only be computed in non-branching networks – these features and others nec
 to model more complex networks will be added in the future;
 however, this command is not intended to replace more complex models.
 Consequently the command currently is suitable for analysis of a main stem river with no on-channel reservoirs.
-<a href="../AnalyzeNetworkPointFlow_Diagram.png">See also the full-size image.</a>
 
 ![AnalyzeNetworkPointFlow_Diagram](AnalyzeNetworkPointFlow_Diagram.png)
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Network and Node Mass Balance
+`AnalyzeNetworkPointFlow` Network and Node Mass Balance (<a href="../AnalyzeNetworkPointFlow_Diagram.png">see also the full-size image</a>)
 </p>**
-	
+
 There are two main data configuration requirements:
 
 1. Define the node network using node identifiers, node type, and other information that control the analysis.
@@ -74,30 +73,28 @@ identifier to match input time series (because the `TSIDColumn` command paramete
 is not specified and there is no TSID column in the network table).
 In this case, the input time series TSIDs must match the node
 identifier and the data type provided with the `NodeAddDataTypes` and similar command parameters.
-<a href="../AnalyzeNetworkPointFlow_InputTable.png">See also the full-size image.</a>
 
 ![AnalyzeNetworkPointFlow_InputTable](AnalyzeNetworkPointFlow_InputTable.png)
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Network Input Table – Input Time Series Matched with NodeID
+`AnalyzeNetworkPointFlow` Network Input Table – Input Time Series Matched with NodeID (<a href="../AnalyzeNetworkPointFlow_InputTable.png">see also the full-size image</a>)
 </p>**
-	
+
 The following example illustrates how the input time series identifier can be specified in the network data.
 The TSID column in the table in this case contains time series aliases that will be matched with input time series,
 where `%I` will be replaced with the analysis interval specified by the `Interval` command parameter.
  Using an alias for input time series allows a common naming convention for time series to be implemented,
 which can simplify output (the period-delimited time series
 identifier is still used with the time series but the alias takes precedence).
-<a href="../AnalyzeNetworkPointFlow_InputTable_TSID.png">See also the full-size image.</a>
 
 ![AnalyzeNetworkPointFlow_InputTable_TSID](AnalyzeNetworkPointFlow_InputTable_TSID.png)
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Network Input Table – Input Time Series Specified with TSID Column
+`AnalyzeNetworkPointFlow` Network Input Table – Input Time Series Specified with TSID Column (<a href="../AnalyzeNetworkPointFlow_InputTable_TSID.png">see also the full-size image</a>)
 </p>**
-	
+
 In the above examples the network is defined in an Excel file, the
-[`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel) command is used to read the table,
+[`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command is used to read the table,
 and the table is used as input to the `AnalyzeNetworkPointFlow` command
 The network definition table columns from the above figure are as follows
 (note, however, that the column names are user-defined and are specified as
@@ -106,7 +103,7 @@ parameters to the `AnalyzeNetworkPointFlow` command.
 **<p style="text-align: center;">
 `AnalyzeNetworkPointFlow` Network Input Table Column Description
 </p>**
-	
+
 |**Example Network Table Column**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Command Parameter to Indicate Column**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|
 |--|--|--|
 |`NodeID`|`NodeIDColumn`|The location ID for the network node, typically corresponding to the location ID in time series identifiers.|
@@ -116,21 +113,21 @@ parameters to the `AnalyzeNetworkPointFlow` command.
 |`NodeWeight`|`	NodeWeightColumn`|Used when `GainMethod=Weight`.  The weights indicate the relative weight of the reach gain/loss to be distributed between nodes on the reach.  For example, specify a best estimate of the percentage of reach loss that occurs above each node.  Or, specify as a rate of gain/loss when used with `GainMethod=DistanceWeight` (but in this case the distance`*`weight product will be normalized to ensure that the reach gain/loss is equalized between known point flows).|
 |`DownstreamNodeID`|`DownstreamNodeIDColumn`|The location ID for the downstream node, needed to define network connectivity.|
 |`TSID`|`TSIDColumn`|Indicates the time series identifier or alias for the input time series.  The notation `%I` can be used as a place holder that will be replaced with value of the Interval command parameter.  In the future, additional similar columns will be added if multiple input time series are needed with other node types.|
-	
+
 The `AnalyzeNetworkPointFlow` command creates output time series with the
 data types indicated in the following table.
 For example, the time series identifier for the output time series will be
 similar to the following (where the NodeID is taken from the network,
 data source is not used, data type is as listed below,
 and the interval agrees with the `Interval` command parameter):
-	
+
 ```
 NodeID..NodeInflow.Day
 ```
 **<p style="text-align: center;">
 `AnalyzeNetworkPointFlow` Network Input Table Column Description
 </p>**
-	
+
 |**Column**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|
 |--|--|
 |`NodeInflow`|Sum of outflows from upstream nodes, which are consequently inflows to the current node (lagged routing currently is not implemented).|
@@ -144,20 +141,19 @@ NodeID..NodeInflow.Day
 |`NodeStorage`|Storage at the node after additions and subtractions (currently always zero, will enhance in the future to handle on-channel reservoirs).|
 	
 The following figure illustrates the output time series corresponding to the data types listed in the above table:
-<a href="../AnalyzeNetworkPointFlow_OutputTS.png">See also the full-size image.</a>
 
 ![AnalyzeNetworkPointFlow_OutputTS](AnalyzeNetworkPointFlow_OutputTS.png)
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Output Time Series Table
+`AnalyzeNetworkPointFlow` Output Time Series Table (<a href="../AnalyzeNetworkPointFlow_OutputTS.png">see also the full-size image</a>)
 </p>**
-	 
-	
+ 
+
 The following logic is used to analyze the network.
 Currently this logic is performed by navigating the network from most upstream to
 downstream node and processing all timesteps for a node before moving to the next node.
 In the future the entire network may be traversed for each timestep to allow for temporary known flows within a reach.
-	
+
 1. The network is navigated from top to bottom.
 When a confluence is found (a node with more than one upstream node),
 each confluence is processed from the top down to the confluence point.
@@ -170,7 +166,7 @@ because mass balance is enforced at known flow points and gain/loss can be estim
 	The time series must have been read prior to the `AnalyzeNetworkPointFlow` command.
 	For example, use the [`CopyTable`](../CopyTable/CopyTable) command to copy a
 	subset of the network table’s `NodeID` values and then use the
-	[`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList) command with the list of identifiers.
+	[`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command with the list of identifiers.
 	2. Calculate the node’s inflow:
 		1. Node types that set outflow, indicated by the `NodeOutflowDataTypes` parameter (e.g., `StreamGage`):
 			* `NodeInflow` = input time series for node
@@ -248,7 +244,7 @@ It is possible to estimate when this occurs, but the data quality may be low.
 Currently TSTool allows negative flows in this case, which indicates that
 input time series or the simple gain method calculations do not accurately represent the system.
 One option in this case is to use the TSTool
-[`AdjustExtremes`](../AdjustExtremes/AdjustExtremes) command,
+[`AdjustExtremes`](../AdjustExtremes/AdjustExtremes.md) command,
 which maintains mass balance around the extreme values.
 
 It is important to understand that such a point flow analysis represents
@@ -270,39 +266,35 @@ for example monthly instead of daily, in input time series or convert the point 
 
 The following dialog is used to edit the command and illustrates the syntax of the
 command for parameters to map network table columns to network nodes.
-<a href="../AnalyzeNetworkPointFlow.png">See also the full-size image.</a>
 
 ![AnalyzeNetworkPointFlow](AnalyzeNetworkPointFlow.png)
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Command Editor for Parameters to Map Network Table Columns to Network Nodes
+`AnalyzeNetworkPointFlow` Command Editor for Parameters to Map Network Table Columns to Network Nodes (<a href="../AnalyzeNetworkPointFlow.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for node type behavior parameters.
-<a href="../AnalyzeNetworkPointFlow2.png">See also the full-size image.</a>
 
 ![AnalyzeNetworkPointFlow2](AnalyzeNetworkPointFlow2.png)
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Command Editor for Node Type Behavior Parameters
+`AnalyzeNetworkPointFlow` Command Editor for Node Type Behavior Parameters (<a href="../AnalyzeNetworkPointFlow2.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for analysis parameters.
-<a href="../AnalyzeNetworkPointFlow_AnalysisTab.png">See also the full-size image.</a>
 
 ![AnalyzeNetworkPointFlow_AnalysisTab](AnalyzeNetworkPointFlow_AnalysisTab.png)
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Command Editor for Analysis Parameters
+`AnalyzeNetworkPointFlow` Command Editor for Analysis Parameters (<a href="../AnalyzeNetworkPointFlow_AnalysisTab.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
-<a href="../AnalyzeNetworkPointFlow_TSIDTab.png">See also the full-size image.</a>
 
 ![AnalyzeNetworkPointFlow_TSIDTab](AnalyzeNetworkPointFlow_TSIDTab.png)
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Command Editor for Analysis Parameters
+`AnalyzeNetworkPointFlow` Command Editor for Analysis Parameters (<a href="../AnalyzeNetworkPointFlow_TSIDTab.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -342,7 +334,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/AnalyzeNetworkPointFlow).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/AnalyzeNetworkPointFlow).
 
 The following command files illustrate how to implement a point flow analysis.
 In this case the first command file prepares daily time series using the network as input.
@@ -401,7 +393,7 @@ AnalyzeNetworkPointFlow(TableID="Network1",NodeIDColumn="NodeID",NodeNameColumn=
 
 ## See Also ##
 
-* [`AdjustExtremes`](../AdjustExtremes/AdjustExtremes) command
-* [`CopyTable`](../CopyTable/CopyTable) command
-* [`CreateNetworkFromTable`](../CreateNetworkFromTable/CreateNetworkFromTable) command
-* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel) command
+* [`AdjustExtremes`](../AdjustExtremes/AdjustExtremes.md) command
+* [`CopyTable`](../CopyTable/CopyTable.md) command
+* [`CreateNetworkFromTable`](../CreateNetworkFromTable/CreateNetworkFromTable.md) command
+* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command

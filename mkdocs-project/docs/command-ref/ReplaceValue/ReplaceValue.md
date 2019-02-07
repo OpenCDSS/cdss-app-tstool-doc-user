@@ -16,18 +16,17 @@ sets the values to missing, or removes the values (if an irregular time series).
 If the missing value indicator is a number in the range, missing values also will be replaced.
 The time series data flag can be checked in place of or addition to checking the numerical values.
 This command is useful for filtering out erroneous data values.
-See also the [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries) command,
+See also the [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command,
 which provides for a variety of checks and also allows values to be set to missing or removed.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ReplaceValue.png">See also the full-size image.</a>
 
 ![ReplaceValue](ReplaceValue.png)
 
 **<p style="text-align: center;">
-`ReplaceValue` Command Editor
+`ReplaceValue` Command Editor (<a href="../ReplaceValue.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -43,7 +42,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`MinValue`|The minimum value to replace.|The minimum value and/or `MatchFlag` must be specified.|
@@ -60,9 +59,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReplaceValue).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReplaceValue).
 
-A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -75,6 +74,6 @@ ReplaceValue(TSList=AllTS,MinValue=-100000,MaxValue=0,NewValue=0)
 
 ## See Also ##
 
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
-* [`SetConstant`](../SetConstant/SetConstant) command
+* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`SetConstant`](../SetConstant/SetConstant.md) command

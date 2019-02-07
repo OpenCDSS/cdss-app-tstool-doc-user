@@ -13,7 +13,7 @@
 
 The `RunDSSUTL` command runs the Army Corps of Engineers DSSUTL program and other utility programs,
 which are used with HEC-DSS files.
-See also the [HEC-DSS Input Type appendix](../../datastore-ref/HEC-DSS/HEC-DSS).
+See also the [HEC-DSS Input Type appendix](../../datastore-ref/HEC-DSS/HEC-DSS.md).
 This command formats the command line for the program, runs the program, and checks the exit value.
 A non-zero exit value will result in a failure status for the command.
 
@@ -60,12 +60,11 @@ The following dialog is used to edit the command and illustrates the command syn
 Note that the `DSSUTL.EXE` location is in this case not included in the `PATH` environment
 variable and is specified with the `DssutlProgram` parameter, using `${WorkingDir}`.
 The HEC-DSS and input files are relative to the working directory.
-<a href="../RunDSSUTL.png">See also the full-size image.</a>
 
 ![RunDSSUTL](RunDSSUTL.png)
 
 **<p style="text-align: center;">
-`RunDSSUTL` Command Editor when Specifying Command Line
+`RunDSSUTL` Command Editor when Specifying Command Line (<a href="../RunDSSUTL.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -88,10 +87,10 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunDSSUTL).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunDSSUTL).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`RunProgram`](../RunProgram/RunProgram) command
+* [`RunProgram`](../RunProgram/RunProgram.md) command

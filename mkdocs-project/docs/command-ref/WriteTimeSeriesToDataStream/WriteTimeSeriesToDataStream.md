@@ -26,13 +26,13 @@ as shown below (see the `OutputLineFormatFile` parameter):
 The command expands the output format line for each time series value being output, as follows:
 
 * The notation `${Property}` is replaced with the corresponding TSTool global property.
-These properties can be set with [`SetProperty`](../SetProperty/SetProperty),
-[`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty),
-[`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile), and other commands.
+These properties can be set with [`SetProperty`](../SetProperty/SetProperty.md),
+[`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty.md),
+[`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md), and other commands.
 * The notation `${ts:Property}` is replaced with the corresponding property from the time series that is being processed.
 Time series properties are set when a time series is read,
 depending on data that are available from a particular data source.
-The [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable)
+The [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md)
 command can also be used, for example in cases where time series metadata are available in a table.
 * The notation `%L` (for location identifier), etc. also is replaced with standard time series properties.
 See read commands that have Alias parameters for a list of possible values.
@@ -48,57 +48,51 @@ In the future corresponding standard `${ts:Property}` values may be defined.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command, in this case writing time series to an XML file.
-<a href="../WriteTimeSeriesToDataStream.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToDataStream](WriteTimeSeriesToDataStream.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Time Series Parameters
+`WriteTimeSeriesToDataStream` Command Editor for Time Series Parameters (<a href="../WriteTimeSeriesToDataStream.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates output period parameters.
-<a href="../WriteTimeSeriesToDataStream_Period.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToDataStream Period](WriteTimeSeriesToDataStream_Period.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Output Period Parameters
+`WriteTimeSeriesToDataStream` Command Editor for Output Period Parameters (<a href="../WriteTimeSeriesToDataStream_Period.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates output file parameters.
-<a href="../WriteTimeSeriesToDataStream_File.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToDataStream File](WriteTimeSeriesToDataStream_File.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Output File Parameters
+`WriteTimeSeriesToDataStream` Command Editor for Output File Parameters (<a href="../WriteTimeSeriesToDataStream_File.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates output file header parameters.
-<a href="../WriteTimeSeriesToDataStream_Header.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToDataStream Header](WriteTimeSeriesToDataStream_Header.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Output File Header Parameters
+`WriteTimeSeriesToDataStream` Command Editor for Output File Header Parameters (<a href="../WriteTimeSeriesToDataStream_Header.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates data parameters.
-<a href="../WriteTimeSeriesToDataStream_Data.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToDataStream Data](WriteTimeSeriesToDataStream_Data.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Data Parameters
+`WriteTimeSeriesToDataStream` Command Editor for Data Parameters (<a href="../WriteTimeSeriesToDataStream_Data.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates output file footer parameters.
-<a href="../WriteTimeSeriesToDataStream_Footer.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToDataStream Footer](WriteTimeSeriesToDataStream_Footer.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Output File Footer Parameters
+`WriteTimeSeriesToDataStream` Command Editor for Output File Footer Parameters (<a href="../WriteTimeSeriesToDataStream_Footer.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -114,7 +108,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`OutputFile`|The output file.  The path to the file can be absolute or relative to the working directory (command file location).  Global properties can be used to specify the filename, using the `${Property}` syntax.|None – must be specified.|
@@ -136,7 +130,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToDataStream).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToDataStream).
 
 The following example illustrates how to create a simple JSON output file:
 
@@ -160,7 +154,7 @@ var timeseries=[
 
 ## See Also ##
 
-* [`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty) command
-* [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile) command
-* [`SetProperty`](../SetProperty/SetProperty) command
-* [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable) command
+* [`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty.md) command
+* [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command
+* [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command

@@ -185,9 +185,9 @@ is not automatically determined from the data type and interval but must be unde
 
 Diversion data may be retrieved from several tables in HydroBase,
 including daily and monthly detailed records, infrequent values, diversion comments, and currently in use values.
-The TSTool [`ReadHydroBase`](../../command-ref/ReadHydroBase/ReadHydroBase)
+The TSTool [`ReadHydroBase`](../../command-ref/ReadHydroBase/ReadHydroBase.md)
 command provides several options for handling data and the
-[`FillUsingDiversionComments`](../../command-ref/FillUsingDiversionComments/FillUsingDiversionComments)
+[`FillUsingDiversionComments`](../../command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md)
 command can be used to fill with additional zero values.
 When using time series identifiers to read time series, the following defaults are used:
 
@@ -354,7 +354,7 @@ See the following for background.  <a href="../mars-regedit.png">See also the fu
 ### HydroBase HBGuest Account using Generic Database Datastore (No ODBC DSN) ###
 
 The following illustrates the Generic Database datastore configuration file format
-for the HBGuest account NOT using an ODBC DSN (see also the [Generic Database Datastore appendix](../GenericDatabase/GenericDatabase).
+for the HBGuest account NOT using an ODBC DSN (see also the [Generic Database Datastore appendix](../GenericDatabase/GenericDatabase.md).
 The configuration file is located in the same folder as the TSTool configuration file and
 configures a datastore named `HydroBase-HBGuest`.
 The `HBGuest` service account is used for authentication and allows read-only access to the database.
@@ -400,7 +400,7 @@ Generic Database Datastore Configuration File for HydroBase HBGuest Account
 
 The following table lists errors that may result from connecting to or using HydroBase,
 and potential solutions to address the errors.
-See also the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting) section.
+See also the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) section.
 
 **<p style="text-align: center;">
 HydroBase Connection Errors and Possible Solutions

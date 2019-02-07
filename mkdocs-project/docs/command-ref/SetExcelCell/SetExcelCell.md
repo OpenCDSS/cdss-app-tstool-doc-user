@@ -24,57 +24,51 @@ this command is intended for finer resolution control of modifying an Excel work
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel file parameters.
-<a href="../SetExcelCell_File.png">See also the full-size image.</a>
 
 ![SetExcelCell File](SetExcelCell_File.png)
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel File Parameters
+`SetExcelCell` Command Editor for Excel File Parameters (<a href="../SetExcelCell_File.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel address parameters.
-<a href="../SetExcelCell_Address.png">See also the full-size image.</a>
 
 ![SetExcelCell Address](SetExcelCell_Address.png)
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel Address Parameters
+`SetExcelCell` Command Editor for Excel Address Parameters (<a href="../SetExcelCell_Address.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel address parameters.
-<a href="../SetExcelCell_ColumnRow.png">See also the full-size image.</a>
 
 ![SetExcelCell ColumnRow](SetExcelCell_ColumnRow.png)
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel Column/Row Parameters
+`SetExcelCell` Command Editor for Excel Column/Row Parameters (<a href="../SetExcelCell_ColumnRow.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel data values parameters.
-<a href="../SetExcelCell_Value.png">See also the full-size image.</a>
 
 ![SetExcelCell Value](SetExcelCell_Value.png)
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel Data Value Parameters
+`SetExcelCell` Command Editor for Excel Data Value Parameters (<a href="../SetExcelCell_Value.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel comment parameters.
-<a href="../SetExcelCell_Comment.png">See also the full-size image.</a>
 
 ![SetExcelCell Comment](SetExcelCell_Comment.png)
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel Comment Parameters
+`SetExcelCell` Command Editor for Excel Comment Parameters (<a href="../SetExcelCell_Comment.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel formatting parameters.
-<a href="../SetExcelCell_Formatting.png">See also the full-size image.</a>
 
 ![SetExcelCell Formatting](SetExcelCell_Formatting.png)
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel Formatting Parameters
+`SetExcelCell` Command Editor for Excel Formatting Parameters (<a href="../SetExcelCell_Formatting.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -99,7 +93,7 @@ Command Parameters
 |`IncludeColumns`|Names of columns to include when matching cells, separated by commas.  Processor `${Property}` can be used to specify the parameter.|Include all cells unless subset is somehow specified.|
 |`ExcludeColumns`|Names of columns to exclude when matching cells, separated by commas.  Processor `${Property}` can be used to specify the parameter.|Include all cells unless subset is somehow specified.|
 |`Rows`|Row numbers to include, separated by commas.|Include all cells unless subset is somehow specified.|
-|`Value`|Data value to set.	|
+|`Value`|Data value to set.|
 |`PropertyName`|Name of processor property that provides the data value.||
 |`Author`|Author to use when setting comment.||
 |`Comment`|Comment to set.  Processor `${Property}` can be used to specify the parameter.  Newline characters in the comment indicate line breaks.||
@@ -108,10 +102,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetExcelCell).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetExcelCell).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook) command
+* [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook.md) command

@@ -14,9 +14,9 @@
 The `ReadDelimitedFile` command reads one or more time series from a column-oriented delimited file,
 where columns contain date/time and values.
 This command is useful for processing comma-separated-value (CSV) files exported from spreadsheets
-and mining data from the web (see also the [`WebGet`](../WebGet/WebGet) and
-[`FTPGet`](../FTPGet/FTPGet) commands).  The command processes files that include the following types of information:
-	
+and mining data from the web (see also the [`WebGet`](../WebGet/WebGet.md) and
+[`FTPGet`](../FTPGet/FTPGet.md) commands).  The command processes files that include the following types of information:
+
 1. Comments:
 	1. in the header (before data) and embedded in data records (e.g., because bad data values were commented out).
 	2. as non-commented line at the top of the file, which can be skipped
@@ -42,12 +42,11 @@ Examples of use for the two cases are shown in the examples below.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
-<a href="../ReadDelimitedFile.png">See also the full-size image.</a>
 
 ![ReadDelimitedFile](ReadDelimitedFile.png)
 
 **<p style="text-align: center;">
-`ReadDelimitedFile` Command Editor when Specifying Command Line in Full
+`ReadDelimitedFile` Command Editor when Specifying Command Line in Full (<a href="../ReadDelimitedFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -89,7 +88,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadDelimitedFile).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadDelimitedFile).
 
 ### Example of Column Names Assigned with Command Parameter ###
 
@@ -113,22 +112,20 @@ The following dialog is used to edit the command and illustrates the syntax for 
 The column headings are skipped because they are assigned with a command parameter.
 Because the delimiter is a tab, the space between date and time columns is NOT used
 as a delimiter and the date/time information is treated as one column.
-<a href="../ReadDelimitedFile.png">See also the full-size image.</a>
 
 ![ReadDelimitedFile](ReadDelimitedFile.png)
 
 **<p style="text-align: center;">
-`ReadDelimitedFile` Command Editor when Literally Specifying Column Names
+`ReadDelimitedFile` Command Editor when Literally Specifying Column Names (<a href="../ReadDelimitedFile.png">see also the full-size image.</a>)
 </p>
 **
 
 The following dialog is the second data tab.
-<a href="../ReadDelimitedFile2.png">See also the full-size image.</a>
 
 ![ReadDelimitedFile2](ReadDelimitedFile2.png)
 
 **<p style="text-align: center;">
-`ReadDelimitedFile` Command Editor when Literally Specifying Column Names - Second Data Tab
+`ReadDelimitedFile` Command Editor when Literally Specifying Column Names - Second Data Tab (<a href="../ReadDelimitedFile2.png">see also the full-size image</a>)
 </p>**
 
 ### Example of Column Names Read from the File ###
@@ -147,16 +144,15 @@ County,COLORADO,Adams,Alamosa,Arapahoe,Archuleta,Baca,Bent,Boulder,Broomfield,Ch
 ```
 
 The following dialog is used to edit the command and illustrates the syntax for the command when reading column names from the file.
-<a href="../ReadDelimitedFile3.png">See also the full-size image.</a>
 
 ![ReadDelimitedFile3](ReadDelimitedFile3.png)
 
 **<p style="text-align: center;">
-`ReadDelimitedFile` Command Editor when Reading Column Names from the File
+`ReadDelimitedFile` Command Editor when Reading Column Names from the File (<a href="../ReadDelimitedFile3.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteDelimitedFile`](../WriteDelimitedFile/WriteDelimitedFile) command
+* [`WriteDelimitedFile`](../WriteDelimitedFile/WriteDelimitedFile.md) command

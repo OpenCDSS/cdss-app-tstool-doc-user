@@ -17,7 +17,7 @@ however, alternate year definitions may be useful.
 The global output year type is recognized by some common tools and commands that create output.
 Many write commands also allow the year type to be specified for the command.
 Internally, all data are managed using calendar years and are converted to different year types during output or display.
-The [`ChangeInterval`](../ChangeInterval/ChangeInterval) command also allows
+The [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command also allows
 time series to be converted to annual values where the value corresponds to a year type.
 
 The year type for output and analysis theoretically can be defined in many ways.
@@ -32,13 +32,12 @@ For example, `YearMayToApr` would indicate that the output year is May of the ca
 
 The following dialog is used to edit this command and illustrates the syntax of the command.
 Note that the output period should always use calendar month and year,
-even if other than calendar year are used for output (see [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType)).
-<a href="../SetOutputYearType.png">See also the full-size image.</a>
+even if other than calendar year are used for output (see [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md)).
 
 ![SetOutputYearType](SetOutputYearType.png)
 
 **<p style="text-align: center;">
-`SetOutputYearType` Command Editor
+`SetOutputYearType` Command Editor (<a href="../SetOutputYearType.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -58,7 +57,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetOutputYearType).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetOutputYearType).
 
 A sample command file example is as follows:
 
@@ -70,6 +69,6 @@ SetOutputYearType(OutputYearType=Calendar)
 
 ## See Also ##
 
-* [`ChangeInterval`](../ChangeInterval/ChangeInterval) command
-* [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod) command
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod) command
+* [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
+* [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command
+* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command

@@ -20,7 +20,7 @@ Example HydroJSON can be found at:
 
 [Example Army Corps site](http://www.nwd-wc.usace.army.mil/dd/common/web_service/webexec/getjson?query=[%22dwr%20flow%22]&backward=7d)
 
-HydroJSON can be written by the TSTool [`WriteTimeSeriesToHydroJSON`](../../command-ref/WriteTimeSeriesToHydroJSON/WriteTimeSeriesToHydroJSON)
+HydroJSON can be written by the TSTool [`WriteTimeSeriesToHydroJSON`](../../command-ref/WriteTimeSeriesToHydroJSON/WriteTimeSeriesToHydroJSON.md)
 command but currently cannot be browsed within TSTool.  An overview of the format from the TSTool perspective is as follows:
 
 * The file follows standard JSON conventions.
@@ -29,7 +29,7 @@ however, for web data exchange formatting is typically minimized to improve perf
 * JSON does not allow comments.  Refer to the specification to understand the data format.
 * Many HydroJSON data properties in the specification do not directly translate to internal time series properties.
 Therefore software must translate or omit some features.  For example, the TSTool
-[`WriteTimeSeriesToHydroJSON`](../../command-ref/WriteTimeSeriesToHydroJSON/WriteTimeSeriesToHydroJSON)
+[`WriteTimeSeriesToHydroJSON`](../../command-ref/WriteTimeSeriesToHydroJSON/WriteTimeSeriesToHydroJSON.md)
 command provides features to map internal time series data to the HydroJSON specification.
 * The data are organized by stations first, and then time series within the stations.
 

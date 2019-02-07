@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `SetOutputPeriod` command sets the output period for time series.
-See also the [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod) command.
+See also the [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command.
 The period for a time series when read or created will be set to the maximum of the following periods,
 in order to satisfy output and data filling requirements:
 
@@ -27,13 +27,12 @@ Specifying the output period is necessary when creating model files or filling a
 
 The following dialog is used to edit this command and illustrates the syntax of the command.
 Note that the output period should always use calendar month and year,
-even if other than calendar year are used for output (see [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType)).
-<a href="../SetOutputPeriod.png">See also the full-size image.</a>
+even if other than calendar year are used for output (see [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md)).
 
 ![SetOutputPeriod](SetOutputPeriod.png)
 
 **<p style="text-align: center;">
-`SetOutputPeriod` Command Editor
+`SetOutputPeriod` Command Editor (<a href="../SetOutputPeriod.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -72,7 +71,7 @@ CurrentTo* Modifiers
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetOutputPeriod).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetOutputPeriod).
 
 A sample command file example is as follows:
 
@@ -84,5 +83,5 @@ SetOutputPeriod(OutputStart="1950-01",OutputEnd="2002-12")
 
 ## See Also ##
 
-* [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod) command
-* [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType) command
+* [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command
+* [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md) command

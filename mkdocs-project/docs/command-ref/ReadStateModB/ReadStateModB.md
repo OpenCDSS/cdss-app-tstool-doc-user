@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `ReadStateModB` command reads time series from a StateMod binary output time series file.
-See the [StateModB Input Type Appendix](../../datastore-ref/StateModB/StateModB).
+See the [StateModB Input Type Appendix](../../datastore-ref/StateModB/StateModB.md).
 The identifiers (or aliases) from the time series will be available as choices when editing other commands.
 If this causes performance issues due to the large number of time series that may be read,
 limit the time series that are read using the `TSID` parameter.
@@ -20,12 +20,11 @@ limit the time series that are read using the `TSID` parameter.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ReadStateModB.png">See also the full-size image.</a>
 
 ![ReadStateModB](ReadStateModB.png)
 
 **<p style="text-align: center;">
-`ReadStateModB` Command Editor
+`ReadStateModB` Command Editor (<a href="../ReadStateModB.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -50,7 +49,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadStateModB).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadStateModB).
 
 The following example command file illustrates how to read all `Available_Flow`
 time series for identifiers starting with `44` (e.g., to extract all such time series for a water district):
@@ -73,4 +72,5 @@ ReadStateModB(InputFile="COLOFB.B43",Version="09.53")
 
 ## See Also ##
 
-* [`ReadStateMod`](../ReadStateMod/ReadStateMod) command
+* [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command
+* [`WriteStateMod`](../WriteStateMod/WriteStateMod.md) command

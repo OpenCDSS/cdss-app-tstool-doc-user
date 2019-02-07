@@ -14,27 +14,26 @@
 The `TableMath` command performs a simple math operation on columns in a table.
 Although the design of the command could support more advanced cell range addressing schemes,
 it currently processes complete columns of data.
-For example, a table that is populated by the [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic)
+For example, a table that is populated by the [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md)
 command can be manipulated to produce a new column of data.
 This command and related table commands are not an attempt to replace full-feature spreadsheet
 programs but are intended to help automate common data processing tasks.
-	
+
 The input is specified by a table column name (`Input1`) and either a second input
 column name or a constant value (`Input2`), with the result being placed in the output column (`Output`).
 The `ToInteger` operator requires only one input value.
 Output that cannot be computed is set to the `NonValue` value.
 Inputs can be any combination of double precision and integer values.
-	
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the
 command (in this case illustrating how values in a column named `ts1` are added to the number `.1111.`
-<a href="../TableMath.png">See also the full-size image.</a>
 
 ![TableMath](TableMath.png)
 
 **<p style="text-align: center;">
-`TableMath` Command Editor
+`TableMath` Command Editor (<a href="../TableMath.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -59,13 +58,13 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/TableMath).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/TableMath).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic) command
-* [`FormatTableDateTime`](../FormatTableDateTime/FormatDateTime) command
-* [`FormatTableString`](../FormatTableString/FormatTableString) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command
+* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
+* [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime.md) command
+* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command

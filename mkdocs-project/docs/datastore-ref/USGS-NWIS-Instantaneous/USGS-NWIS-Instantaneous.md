@@ -26,10 +26,10 @@ The NWIS instantaneous web service allows data to be retrieved as JavaScript Obj
 tab-delimited (RDB), or WaterML 1.1 (with USGS extensions, called WaterML 1.2).
 Each of these formats has features and limitations that are discussed in more detail in other documentation.
 The UsgsNwisInstantaneous datastore is used with the
-[`ReadUsgsNwisInstantaneous`](../../command-ref/ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous)
+[`ReadUsgsNwisInstantaneous`](../../command-ref/ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous.md)
 command and the data files saved by the command are used with the
-[`ReadUsgsNwisRdb`](../../command-ref/ReadUsgsNwisRdb/ReadUsgsNwisRdb) and
-[`ReadWaterML`](../../command-ref/ReadWaterML/ReadWaterML) commands.h
+[`ReadUsgsNwisRdb`](../../command-ref/ReadUsgsNwisRdb/ReadUsgsNwisRdb.md) and
+[`ReadWaterML`](../../command-ref/ReadWaterML/ReadWaterML.md) commands.h
 
 ## Standard Time Series Properties ##
 

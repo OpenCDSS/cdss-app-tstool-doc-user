@@ -27,30 +27,27 @@ Check the TSTool ***Help / About*** menu for information on the POI version.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ReadPropertiesFromExcel.png">See also the full-size image.</a>
 
 ![ReadPropertiesFromExcel](ReadPropertiesFromExcel.png)
 
 **<p style="text-align: center;">
-`ReadPropertiesFromExcel` Command Editor for Excel Parameters
+`ReadPropertiesFromExcel` Command Editor for Excel Parameters (<a href="../ReadPropertiesFromExcel.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel to properties map.
-<a href="../ReadPropertiesFromExcel_Map.png">See also the full-size image.</a>
 
 ![ReadPropertiesFromExcel Map](ReadPropertiesFromExcel_Map.png)
 
 **<p style="text-align: center;">
-`ReadPropertiesFromExcel` Command Editor for Excel to Properties Map Parameter
+`ReadPropertiesFromExcel` Command Editor for Excel to Properties Map Parameter (<a href="../ReadPropertiesFromExcel_Map.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for properties parameters.
-<a href="../ReadPropertiesFromExcel_Properties.png">See also the full-size image.</a>
 
 ![ReadPropertiesFromExcel Properties](ReadPropertiesFromExcel_Properties.png)
 
 **<p style="text-align: center;">
-`ReadPropertiesFromExcel` Command Editor for Properties Parameters
+`ReadPropertiesFromExcel` Command Editor for Properties Parameters (<a href="../ReadPropertiesFromExcel_Properties.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -76,10 +73,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadPropertiesFromExcel).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadPropertiesFromExcel).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SetProperty`](../SetProperty/SetProperty) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command

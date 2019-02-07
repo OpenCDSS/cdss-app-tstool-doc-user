@@ -13,17 +13,16 @@
 
 The `Multiply` command multiplies one time series by another.
 Missing data in either time series causes the result to be missing.
-See also the [`Scale`](../Scale/Scale) command, which multiplies time series by a numerical value.  
+See also the [`Scale`](../Scale/Scale.md) command, which multiplies time series by a numerical value.  
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../Multiply.png">See also the full-size image.</a>
 
 ![Multiply](Multiply.png)
 
 **<p style="text-align: center;">
-`Multiply` Command Editor
+`Multiply` Command Editor (<a href="../Multiply.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -45,9 +44,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Multiply).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Multiply).
 
-A sample command file to process time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows (not an actual case but for illustration):
 
 ```text
@@ -61,6 +60,6 @@ Multiply(TSID="2184.NOAA.TempMean.Month",MultiplierTSID="5706.NOAA.TempMean.Mont
 
 ## See Also ##
 
-* [`Divide`](../Divide/Divide) command
-* [`Scale`](../Scale/Scale) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`Divide`](../Divide/Divide.md) command
+* [`Scale`](../Scale/Scale.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

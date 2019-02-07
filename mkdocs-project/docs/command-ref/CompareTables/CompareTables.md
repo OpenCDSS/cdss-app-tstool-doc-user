@@ -13,7 +13,7 @@
 
 The `CompareTables` command compares columns from two tables, saving the results in a new table.
 Comparisons are made using the data values formatted as strings based on the precision shown in tables.
-If the table was read with [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile),
+If the table was read with [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md),
 the precision for floating point numbers is set based on the largest
 number of digits after the decimal encountered in the input.
 Optionally, a precision and tolerance can be specified to control the comparison of floating point values.
@@ -24,12 +24,11 @@ The command also allows the comparison table to be output to an HTML file, in wh
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../CompareTables.png">See also the full-size image.</a>
 
 ![CompareTables](CompareTables.png)
 
 **<p style="text-align: center;">
-`CompareTables` Command Editor
+`CompareTables` Command Editor (<a href="../CompareTables.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -59,12 +58,12 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CompareTables).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CompareTables).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CompareFiles`](../CompareFiles/CompareFiles) command
-* [`CompareTimeSeries`](../CompareTimeSeries/CompareTimeSeries) command
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command
+* [`CompareFiles`](../CompareFiles/CompareFiles.md) command
+* [`CompareTimeSeries`](../CompareTimeSeries/CompareTimeSeries.md) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command

@@ -12,21 +12,19 @@
 ## Overview ##
 
 The `StartRegressionTestResultsReport` command starts a report file (and optionally results table) to be written to as regression tests are run.
-The [CreateRegressionTestCommandFile](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile) command automatically
+The [CreateRegressionTestCommandFile](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command automatically
 inserts this command and is the preferred way to set up automated tests.
-The [RunCommands](../RunCommands/RunCommands) commands will write to this file (and optionally results table) if available.
+The [RunCommands](../RunCommands/RunCommands.md) commands will write to this file (and optionally results table) if available.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../StartRegressionTestResultsReport.png">See also the full-size image.</a>
 
 ![StartRegressionTestResultsReport](StartRegressionTestResultsReport.png)
 
 **<p style="text-align: center;">
-`StartRegressionTestResultsReport` Command Editor
+`StartRegressionTestResultsReport` Command Editor (<a href="../StartRegressionTestResultsReport.png">see also the full-size image</a>)
 </p>**
-
 
 ## Command Syntax ##
 
@@ -46,12 +44,12 @@ Command Parameters
 
 ## Examples ##
 
-* See the [command file used to generate tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/blob/master/test/regression/TestSuites/commands_general/create/Create_RunTestSuite_commands_general_IncludeOS%3DWindows.TSTool)
+* See the [command file used to generate tests](https://github.com/OpenCDSS/cdss-app-tstool-test/blob/master/test/regression/TestSuites/commands_general/create/Create_RunTestSuite_commands_general_IncludeOS%3DWindows.TSTool)
 
-See the [Quality Control chapter](../quality-control) for how to set up a regression test.
+See the [Quality Control chapter](../../quality-control/quality-control.md) for how to set up a regression test.
 
 Each of the command files that are run with
-[`RunCommands`](../RunCommands/RunCommands) commands should produce expected time series results, without warnings.
+[`RunCommands`](../RunCommands/RunCommands.md) commands should produce expected time series results, without warnings.
 If any command file unexpectedly produces a warning, a warning will also be visible in TSTool.
 The issue can then be evaluated to determine whether a software or configuration change is necessary.
 An example of the output file is:
@@ -108,6 +106,6 @@ Total          = 18
 
 ## See Also ##
 
-* [`CreateRegressionTestCommandFile`](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile) command
-* [`RunCommands`](../RunCommands/RunCommands) command
-* [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile) command
+* [`CreateRegressionTestCommandFile`](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command
+* [`RunCommands`](../RunCommands/RunCommands.md) command
+* [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile.md) command

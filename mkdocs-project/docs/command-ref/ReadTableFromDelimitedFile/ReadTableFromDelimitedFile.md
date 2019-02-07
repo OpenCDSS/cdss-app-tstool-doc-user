@@ -15,7 +15,7 @@ The `ReadTableFromDelimitedFile` command reads a table from a comma-delimited fi
 Tables are used by other commands when performing lookups of
 information or generating summary information from processing.
 Table files have the following characteristics:
-	
+
 * Comments indicated by lines starting with # are stripped during the read.
 * Extraneous lines in the file can be skipped during the read using the `SkipLines` parameter.
 * Column headings indicated by “quoted” values in the first non-comment
@@ -32,18 +32,17 @@ in the future) – work around by adding an extra delimiter or ensure that the l
 Strings that contain quotes are checked.
 If two sequential quotes are found in input,
 they are converted to one quote in the table values
-(see [comma-separated-value, CSV, standards](http://en.wikipedia.org/wiki/Comma-separated_values).
+(see [comma-separated-value, CSV, standards](http://en.wikipedia.org/wiki/Comma-separated_values)).
 Subsequent writes of the table will re-introduce the repeated quote to indicate an embedded quote.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../ReadTableFromDelimitedFile.png">See also the full-size image.</a>
 
 ![ReadTableFromDelimitedFile](ReadTableFromDelimitedFile.png)
 
 **<p style="text-align: center;">
-`ReadTableFromDelimitedFile` Command Editor
+`ReadTableFromDelimitedFile` Command Editor (<a href="../ReadTableFromDelimitedFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -73,7 +72,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromDelimitedFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromDelimitedFile).
 
 The following example command file illustrates how to read a table from a delimited file:
 
@@ -96,4 +95,4 @@ some junk to be skipped
 
 ## See Also ##
 
-* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command
+* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command

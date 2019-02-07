@@ -11,6 +11,8 @@
 
 ## Overview ##
 
+**This command needs to be updated for Python 3.**
+
 The `RunPython` command runs a Python script, waiting until execution is finished before processing additional commands.
 Python is a powerful scripting language that is widely used ([see http://www.python.org](http://www.python.org)).
 This command allows Python scripts to be run using a variety of Python interpreters, as shown in the following table.
@@ -23,10 +25,10 @@ New versions of Python will reside in similar locations to those shown below.
 
 | **Intepreter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Language, Program Name (Example Install Home)** | **Comments**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|IronPython ([http://ironpython.net](ironpython.net))|.NET, ipy (`C:\Program Files\IronPython 2.6`)|Useful for integrating with .NET applications, in particular to manipulate Microsoft Office software data files.  Can use .NET assembly code (but this code in a Python script is only recognized by IronPython).  Integration can occur within a running .NET application (essentially extending the functionality of the .NET application).  Version 2.6 requires .NET 2.0.  Version 2.6.1 requires .NET 4.0.|
-|Jython ([http://www.jython.org](www.jython.org))|Java, jython (`C:\jython2.5.1`)|Useful for integrating with Java applications, such as TSTool.  Can use Java code (but this code in a Python script is only recognized by Jython).|
-|Jython embedded ([http://www.jython.org](www.jython.org))|Java (`C:\jython2.5.1`, but must use the installer option to create a JAR file in order to embed – this is the file that is distributed with TSTool).|Useful for integrating with Java applications, such as TSTool.  Can use Java code (but this code in a Python script is only recognized by Jython).  Integration can occur within a running Java application (essentially extending the functionality of the Java application).|
-|Python ([http://www.python.org]([www.python.org))|C, python (`C:\Python25, C:\Python27`)|The original Python interpreter, which defines the Python language specification.|
+|IronPython ([http://ironpython.net](http://ironpython.net))|.NET, ipy (`C:\Program Files\IronPython 2.6`)|Useful for integrating with .NET applications, in particular to manipulate Microsoft Office software data files.  Can use .NET assembly code (but this code in a Python script is only recognized by IronPython).  Integration can occur within a running .NET application (essentially extending the functionality of the .NET application).  Version 2.6 requires .NET 2.0.  Version 2.6.1 requires .NET 4.0.|
+|Jython ([http://www.jython.org](http://www.jython.org))|Java, jython (`C:\jython2.5.1`)|Useful for integrating with Java applications, such as TSTool.  Can use Java code (but this code in a Python script is only recognized by Jython).|
+|Jython embedded ([http://www.jython.org](http://www.jython.org))|Java (`C:\jython2.5.1`, but must use the installer option to create a JAR file in order to embed – this is the file that is distributed with TSTool).|Useful for integrating with Java applications, such as TSTool.  Can use Java code (but this code in a Python script is only recognized by Jython).  Integration can occur within a running Java application (essentially extending the functionality of the Java application).|
+|Python ([http://www.python.org](http://www.python.org))|C, python (`C:\Python25, C:\Python27`)|The original Python interpreter, which defines the Python language specification.|
 
 Python implementations have similar file organization, with the main executable
 (or batch file) residing in the main install folder.
@@ -64,12 +66,11 @@ Program InputFile Arguments
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../RunPython.png">See also the full-size image.</a>
 
 ![RunPython](RunPython.png)
 
 **<p style="text-align: center;">
-`RunPython` Command Editor when Specifying Command Line in Full
+`RunPython` Command Editor when Specifying Command Line in Full (<a href="../RunPython.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -94,7 +95,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunPython).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunPython).
 
 The following command example illustrates how to run a Python script.
 
@@ -164,5 +165,5 @@ RunPython(Interpreter="Python",InputFile="mei2csv.py",Arguments="\"InputFile=${W
 
 ## See Also ##
 
-* [`RunCommands`](../RunCommands/RunCommands) command
-* [`RunProgram`](../RunProgram/RunProgram) command
+* [`RunCommands`](../RunCommands/RunCommands.md) command
+* [`RunProgram`](../RunProgram/RunProgram.md) command

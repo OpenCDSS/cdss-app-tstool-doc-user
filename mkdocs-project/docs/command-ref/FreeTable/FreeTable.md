@@ -19,12 +19,11 @@ This command is useful, for example, when looping through blocks of commands whe
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../FreeTable.png">See also the full-size image.</a>
 
 ![FreeTable](FreeTable.png)
 
 **<p style="text-align: center;">
-`FreeTable` Command Editor
+`FreeTable` Command Editor (<a href="../FreeTable.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -44,10 +43,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/FreeTable).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FreeTable).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`NewTable`](../NewTable/NewTable) command
+* [`NewTable`](../NewTable/NewTable.md) command

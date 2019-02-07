@@ -14,12 +14,12 @@
 The `ReadTableFromJSON` command reads a table from a [JavaScript Object Notation (JSON) file](http://www.json.org/).
 An example of JSON returned from a web service is as follows.
 This example illustrates water quality monitoring locations from Colorado’s Data Sharing Network
-web services retrieved with the [`WebGet`](../WebGet/WebGet) command and URI:
+web services retrieved with the [`WebGet`](../WebGet/WebGet.md) command and URI:
 [http://awqmsws.goldsystems.com/api/MonitoringLocationsVer1?StateCode=CO](http://awqmsws.goldsystems.com/api/MonitoringLocationsVer1?StateCode=CO).
 
 ```
 [
-    {	"CountyName":"Adams",
+    {   "CountyName":"Adams",
         "Huc8":"","Huc12":"",
         "MonitoringLocationIdentifier":"NFE",
         "Latitude":"39.812806",
@@ -31,7 +31,7 @@ web services retrieved with the [`WebGet`](../WebGet/WebGet) command and URI:
         "MonitoringLocationType":"Facility Municipal Sewage (POTW)",
         "WaterbodyName":"","WatershedManagementUnit":""
     },
-    {	"CountyName":"Adams",
+    {   "CountyName":"Adams",
         "Huc8":"","Huc12":"",
         "MonitoringLocationIdentifier":"SFE",
         "Latitude":"39.812772",
@@ -129,12 +129,13 @@ The following example shows water quality data retrieve using the following URI:
   }
 ]
 ```
+
 JSON is a hierarchical representation that can have multiple nesting levels.
 Arrays are indicated by `[ ]`, objects are indicated by `{ }` and `name:value` pairs define data for an object.
 However, a table is a flat data structure,
 which requires that some JSON data values are repeated in the output rows.
 The command has the following functionality:
-	
+
 * All JSON names are converted to table columns.
 Currently processing of names is case-independent and redundant names will overwrite (“NAME1” is equivalent to “name1”).
 * Types for table columns are determined by examining the JSON structure:
@@ -162,12 +163,11 @@ processed into output as the only array allowed for top-level objects.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../ReadTableFromJSON.png">See also the full-size image.</a>
 
 ![ReadTableFromJSON](ReadTableFromJSON.png)
 
 **<p style="text-align: center;">
-`ReadTableFromJSON` Command Editor
+`ReadTableFromJSON` Command Editor (<a href="../ReadTableFromJSON.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -181,7 +181,7 @@ ReadTableFromJSON(Parameter="Value",...)
 Command Parameters
 </p>**
 
-| **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 |`TableID`<br>**required**|Identifier to assign to the table that is read, which allows the table data to be used with other commands.  Can be specified using processor `${Property}`.|None – must be specified.|
 |`InputFile`<br>**required**|The name of the file to read, as an absolute path or relative to the command file location.  Can be specified using processor `${Property}`.|None – must be specified.|
@@ -194,11 +194,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromJSON).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromJSON).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WebGet`](../WebGet/WebGet) command
-* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command
+* [`WebGet`](../WebGet/WebGet.md) command
+* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command

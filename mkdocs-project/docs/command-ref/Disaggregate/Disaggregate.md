@@ -15,7 +15,7 @@ The `Disaggregate` command creates a new time series by disaggregating a
 time series with a longer data interval into a time series with a shorter data interval.
 The resulting time series will have the same metadata and
 identifier as the original time series, with a different data interval.
-See also the general [`ChangeInterval`](../ChangeInterval/ChangeInterval) command.
+See also the general [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command.
 
 Converting longer-interval data may cause a perceived shift in the time.
 For example, 1Day data shifted to 24Hour data will result in the
@@ -25,17 +25,16 @@ Plots will also reflect the shift because hours are not considered
 when computing plot positions for daily data.
 It is important to understand how disaggregated data is treated with respect
 to time when using with other applications.  If necessary, use the
-[`ShiftTimeByInterval`](../ShiftTimeByInterval/ShiftTimeByInterval) command to manipulate the resulting output time series.
+[`ShiftTimeByInterval`](../ShiftTimeByInterval/ShiftTimeByInterval.md) command to manipulate the resulting output time series.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../Disaggregate.png">See also the full-size image.</a>
 
 ![Disaggregate](Disaggregate.png)
 
 **<p style="text-align: center;">
-`Disaggregate` Command Editor
+`Disaggregate` Command Editor (<a href="../Disaggregate.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -60,9 +59,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Disaggregate).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Disaggregate).
 
-A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -89,6 +88,6 @@ Daily Input Time Series and 6-Hour Disaggregated Time Series using Ormsbee Metho
 
 ## See Also ##
 
-* [`ChangeInterval`](../ChangeInterval/ChangeInterval) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
-* [`ShiftTimeByInterval`](../ShiftTimeByInterval/ShiftTimeByInterval) command
+* [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`ShiftTimeByInterval`](../ShiftTimeByInterval/ShiftTimeByInterval.md) command

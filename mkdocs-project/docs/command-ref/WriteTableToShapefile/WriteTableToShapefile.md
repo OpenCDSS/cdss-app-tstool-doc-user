@@ -28,30 +28,27 @@ from an existing shapefile or other standard spatial data format.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../WriteTableToShapefile.png">See also the full-size image.</a>
 
 ![WriteTableToShapefile](WriteTableToShapefile.png)
 
 **<p style="text-align: center;">
-`WriteTableToShapefile` Command Editor
+`WriteTableToShapefile` Command Editor (<a href="../WriteTableToShapefile.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for layers specified with a geometry data column.
-<a href="../WriteTableToShapefile_WKT.png">See also the full-size image.</a>
 
 ![WriteTableToShapefile_WKT](WriteTableToShapefile_WKT.png)
 
 **<p style="text-align: center;">
-`WriteTableToShapefile` Command Editor for Geometry Data Parameters
+`WriteTableToShapefile` Command Editor for Geometry Data Parameters (<a href="../WriteTableToShapefile_WKT.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for specifying columns to include as attributes.
-<a href="../WriteTableToShapefile_Attributes.png">See also the full-size image.</a>
 
 ![WriteTableToShapefile_Attributes](WriteTableToShapefile_Attributes.png)
 
 **<p style="text-align: center;">
-`WriteTableToShapefile` Command Editor for Attribute Parameters
+`WriteTableToShapefile` Command Editor for Attribute Parameters (<a href="../WriteTableToShapefile_Attributes.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -78,7 +75,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToShapefile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToShapefile).
 
 The following example illustrates a CSV table that specifies WKT for points (see WKTGeometry column):
 
@@ -101,5 +98,5 @@ The following example illustrates a CSV table that specifies WKT for polygons:
 
 ## See Also ##
 
-* [`WriteTableToGeoJSON`](../WriteTableToGeoJSON/WriteTableToGeoJSON) command
-* [`WriteTableToKml`](../WriteTableToKml/WriteTableToKml) command
+* [`WriteTableToGeoJSON`](../WriteTableToGeoJSON/WriteTableToGeoJSON.md) command
+* [`WriteTableToKml`](../WriteTableToKml/WriteTableToKml.md) command

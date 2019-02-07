@@ -14,9 +14,9 @@
 The `FormatTableString` uses zero or more table columns as input and formats an output table column.
 For example, it may be necessary to concatenate information from several columns to create an identifier.
 It can also be used to assign a literal string to a column.
-See also the [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command.
+See also the [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command.
 Formatting occurs as follows:
-	
+
 * The data types for input columns control the type of formatting that can be done.
 For example, columns containing floating-point numbers must use the format specifiers for floating-point numbers.
 * Format specifiers are consistent with the C programming language.
@@ -26,12 +26,11 @@ For example, columns containing floating-point numbers must use the format speci
 
 The following dialog is used to edit the command and illustrates the syntax of the command
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
-<a href="../FormatTableString.png">See also the full-size image.</a>
 
 ![FormatTableString](FormatTableString.png)
 
 **<p style="text-align: center;">
-`FormatTableString` Command Editor
+`FormatTableString` Command Editor (<a href="../FormatTableString.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -55,11 +54,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/FormatTableString).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FormatTableString).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command
+* [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime.md) command
+* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command

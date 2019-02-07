@@ -13,18 +13,17 @@
 
 The `InsertTableRow` inserts 1+ rows in a table.
 This command has been created to assign blank values for use with the
-[`WriteTableCellsToExcel`](../WriteTableCellsToExcel/WriteTableCellsToExcel) command,
+[`WriteTableCellsToExcel`](../WriteTableCellsToExcel/WriteTableCellsToExcel.md) command,
 for example to clear out named cells in an Excel workbook.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../InsertTableRow.png">See also the full-size image.</a>
 
 ![InsertTableRow](InsertTableRow.png)
 
 **<p style="text-align: center;">
-`InsertTableRow` Command Editor
+`InsertTableRow` Command Editor (<a href="../InsertTableRow.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -47,11 +46,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/InsertTableRow).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/InsertTableRow).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`InsertTableColumn`](../InsertTableColumn/InsertTableColumn) command
-* [`WriteTableCellsToExcel`](../WriteTableCellsToExcel/WriteTableCellsToExcel) command
+* [`InsertTableColumn`](../InsertTableColumn/InsertTableColumn.md) command
+* [`WriteTableCellsToExcel`](../WriteTableCellsToExcel/WriteTableCellsToExcel.md) command

@@ -12,17 +12,16 @@
 ## Overview ##
 
 The `FTPGet` command retrieves one or more files from a remote system using file transfer protocol (FTP).
- The retrieval is not recursive to child folders.
+The retrieval is not recursive to child folders.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../FTPGet.png">See also the full-size image.</a>
 
 ![FTPGet](FTPGet.png)
 
 **<p style="text-align: center;">
-`FTPGet` Command Editor
+`FTPGet` Command Editor (<a href="../FTPGet.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -50,12 +49,12 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/FTPGet).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FTPGet).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ListFiles`](../ListFiles/ListFiles) command
-* [`UnzipFile`](../UnzipFile/UnzipFile) command
-* [`WebGet`](../WebGet/WebGet) command
+* [`ListFiles`](../ListFiles/ListFiles.md) command
+* [`UnzipFile`](../UnzipFile/UnzipFile.md) command
+* [`WebGet`](../WebGet/WebGet.md) command
