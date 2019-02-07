@@ -13,7 +13,7 @@
 
 The `WriteTableToExcel` command writes a table to a worksheet in a Microsoft Excel workbook file.
 A contiguous block of cells (rectangle) must be specified in one of the following ways to receive the table:
-	
+
 * Specify the upper-left cell in a range of cells using Excel address notation (e.g., `A1`)
 * Specify a range of cells using Excel address notation (e.g., `A1:D10`)
 * Specify the name of an Excel named range.
@@ -23,46 +23,42 @@ TSTool uses the Apache POI software ([http://poi.apache.org](http://poi.apache.o
 to read/write the Excel file and consequently functionality is constrained by the features of that software package.
 
 The following are limitations of this command:
-	
+
 * Currently only the upper-left cell is utilized but in the future the range may be used to limit output.
 * Cell data types are determined from the table columns being written.  In the future a parameter may be provided to allow option of using original Excel formatting.
-	
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax for the command.
-<a href="../WriteTableToExcel.png">See also the full-size image.</a>
 
 ![WriteTableToExcel](WriteTableToExcel.png)
 
 **<p style="text-align: center;">
-`WriteTableToExcel` Command Editor
+`WriteTableToExcel` Command Editor (<a href="../WriteTableToExcel.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates Excel output parameters.
-<a href="../WriteTableToExcel_Excel.png">See also the full-size image.</a>
 
 ![WriteTableToExcel Excel](WriteTableToExcel_Excel.png)
 
 **<p style="text-align: center;">
-`WriteTableToExcel` Command Editor for Excel Output Parameters
+`WriteTableToExcel` Command Editor for Excel Output Parameters (<a href="../WriteTableToExcel_Excel.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates Excel formatting parameters.
-<a href="../WriteTableToExcel_ExcelFormat.png">See also the full-size image.</a>
 
 ![WriteTableToExcel Excel Format](WriteTableToExcel_ExcelFormat.png)
 
 **<p style="text-align: center;">
-`WriteTableToExcel` Command Editor for Excel Formatting Parameters
+`WriteTableToExcel` Command Editor for Excel Formatting Parameters (<a href="../WriteTableToExcel_ExcelFormat.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates style formatting parameters.
-<a href="../WriteTableToExcel_Style.png">See also the full-size image.</a>
 
 ![WriteTableToExcel Style](WriteTableToExcel_Style.png)
 
 **<p style="text-align: center;">
-`WriteTableToExcel` Command Editor for Style Formatting Parameters
+`WriteTableToExcel` Command Editor for Style Formatting Parameters (<a href="../WriteTableToExcel_Style.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -105,7 +101,7 @@ However, a more general formatting capability based on styles is being phased in
 and is configured using the ***Style Formatting*** tab.
 Consider the following data table, where the goal is to write the TSTool table to Excel
 and format cells to indicate specific conditions of interest.
-This approach is implemented similarly in the [`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel) command.
+This approach is implemented similarly in the [`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) command.
 
 ![WriteTableToExcel DataTable](WriteTableToExcel_DataTable.png)
 
@@ -207,12 +203,12 @@ Condition Table used with `WriteTableToExcel` Command for a Color Scale
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToExcel).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToExcel).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command
-* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel) command
-* [`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command
+* [`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) command

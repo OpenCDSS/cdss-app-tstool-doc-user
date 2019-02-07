@@ -158,7 +158,7 @@ Common run-time checks include:
 * Data read from a datastore has too much missing data to allow analysis (may or may not be OK).
 
 Some TSTool commands also provide command parameters to allow users to control the level
-of error handling.  For example, the [`RemoveFile`](comand-ref/RemoveFile/RemoveFile)
+of error handling.  For example, the [`RemoveFile`](../command-ref/RemoveFile/RemoveFile.md)
 command provides the ability to ignore the case if the file to be removed does not exist.
 The default behavior is often conservative (warn) and requires the user to make a decision.
 
@@ -185,14 +185,14 @@ for example to try a smaller example before testing a full dataset or more compl
 
 See the TSTool automated tests:
 
-* [TSTool tests GitHub repository](https://github.com/OpenWaterFoundation/cdss-app-tstool-test)
-* [Quality Control chapter of this documentation](quality-control) - explains how to use TSTool for testing
+* [TSTool tests GitHub repository](https://github.com/OpenCDSS/cdss-app-tstool-test)
+* [Quality Control chapter of this documentation](../quality-control/quality-control.md) - explains how to use TSTool for testing
 
 ## TSTool Installation and Version ##
 
 TSTool versions are installed in separate folders,
 which on Windows follows the naming convention `C:\CDSS\TSTool-Version`, such as `C:\CDSS\TSTool-12.00.00`.
-See the [Installation and Configuration appendix](../appendix-install/install) for more information.
+See the [Installation and Configuration appendix](../appendix-install/install.md) for more information.
 Separate installation folders take more disk space and result in more entries in the ***Start*** menu.
 This approach has the following ben:
 
@@ -217,7 +217,7 @@ however, this will require rework of the existing code.
 The log file records data processing actions in the sequence that they are performed.
 The level of messages various depending on software component, software programmer decisions,
 and run-time settings, such as the ***Tools / Diagnostics*** menu and
-[`SetDebugLevel`](../command-ref/SetDebugLevel/SetDebugLevel) command.
+[`SetDebugLevel`](../command-ref/SetDebugLevel/SetDebugLevel.md) command.
 Although log files may be helpful to software developers and technical users,
 they can be difficult for others to understand.
 The log file exists in the following locations and can be edited with a text file editor:
@@ -227,7 +227,7 @@ The log file exists in the following locations and can be edited with a text fil
 	+ Linux:  `/home/user/.tstool/log/tstool_user.log`
 	+ Cygwin:  `/cygdrive/C/Users/user/.tstool/log/tstool.log` (different files from Windows)
 	+ Git Bash (MinGW):  `/c/Users/user/.tstool/log/tstool.log` (same files as Windows)
-* File specified by the TSTool [`StartLog`](../command-ref/StartLog/StartLog) command.
+* File specified by the TSTool [`StartLog`](../command-ref/StartLog/StartLog.md) command.
 * Log file in software installation folder:
 	+ Windows: `C:\CDSS\TSTool-version\logs\tstool_user.log`
 	(this was used in older versions of TSTool and has been phased out because
@@ -323,7 +323,7 @@ Often, an error in an early command leads to additional errors in other
 commands and therefore fixing the first error can resolve multiple problems.
 
 When running the TSTool GUI, major problems will be indicated with an
-icon next to the offending command (see [Getting Started chapter](../getting-started/getting-started)
+icon next to the offending command (see [Getting Started chapter](../getting-started/getting-started.md)
 for a summary of command error handling features).
 When running in batch mode, warnings are only printed to the log file.
 In either case, the log file viewer can be used to pinpoint the source of problems.
@@ -339,9 +339,9 @@ To view TSTool and system information, use the ***Help / About TSTool*** menu an
 ## Errors and Possible Solutions ##
 
 The most common problems are program configuration (see the
-[Installation and Configuration Appendix](../appendix-install/install),
-user input error (see the [Commands Reference](../command-ref/overview) for command syntax),
-and data errors for various [datastores and input types](../datastore-ref/overview).
+[Installation and Configuration Appendix](../appendix-install/install.md),
+user input error (see the [Commands Reference](../command-ref/overview.md) for command syntax),
+and data errors for various [datastores and input types](../datastore-ref/overview.md).
 Other problems may be listed in the following table.
 All other errors should be reported to the TSTool developers.
 You may need to email the log file to support to help determine the nature of a problem.
@@ -350,8 +350,8 @@ The following sections summarizs common errors and their fixes.
 If an error is occurring in batch mode,
 it is useful to run the command file in the graphical user interface to utilize error feedback features.
 Errors specific to a datastore are discussed in the documentation for the datastore
-(see [input type and datastore documentation](../datastore-ref/overview)).
-Specific troubleshooting for commands is discused in the [Command Reference](../command-ref/overview).
+(see [input type and datastore documentation](../datastore-ref/overview.md)).
+Specific troubleshooting for commands is discused in the [Command Reference](../command-ref/overview.md).
 
 ### Issue 1 - Java Virtual Machine launcher error ###
 
@@ -459,7 +459,7 @@ If the `Enabled = True` property is set in the `HydroBase.cfg` datastore configu
 then the HydroBase version indicated in the configuration file will be used for the datastore.
 If a datastore is configured with name `HydroBase`, it will be available in the ***Datastore*** tab of the main window
 and can be used in datastore-enabled commands such as
-[`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore).
+[`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md).
 Datastores can also be listed via the ***View / Datastores*** menu.
 However, there is potential that the HydroBase selected through the dialog may be a different version than
 that configured in the datastore configuration file.
@@ -548,7 +548,7 @@ of MB NNN as appropriate for the amount of memory available on the machine.
 Use a high number to force using hard disk swap space if desired).
 
 **Possible Solution 2** - Another solution is to free memory being used by unneeded resources
-such as temporary time series and tables by using [`Free`](../command-ref/Free/Free) and [`FreeTable`](../command-ref/FreeTable/FreeTable) commands.
+such as temporary time series and tables by using [`Free`](../command-ref/Free/Free.md) and [`FreeTable`](../command-ref/FreeTable/FreeTable.md) commands.
 
 **Possible Solution 3** - TSTool has historically been released using 32-bit Java Runtime Environment (JRE),
 which has a maximum memory limitation of approximately 4 GB.
@@ -637,50 +637,49 @@ If this cannot be resolved, contact TSTool support.
 
 TSTool and the commands that it provides have evolved over time.
 In very early versions, many commands used syntax similar to the following:
-	
+
 ```
 -somecommand parameter
 ```
-	
+
 Later, the function notation with fixed parameter list was adopted, using "camelCase" for readability:
-	
+
 ```
 someCommand(parameter1,parameter2)
 ```
-	
+
 Parameters for such commands were required to be in a specific order and enhancements were
 difficult to implement because the parameter order needed to be maintained.
 Subsequent enhancements added new commands and converted older commands to a new free-format “named parameter” notation,
 where parameter values can be optionally enclosed in double quotes
 to handle intervening whitespace and other special characters.
 The command names were also converted to "MixedCase".
-	
+
 ```
 SomeCommand(Param1=Value1,Param2=Value2)
 ```
-	
+
 The new notation allows parameters to be omitted when using a default value,
 and allows new parameters to be added to commands, as necessary, to enhance existing functionality.
 The above syntax is now standard throughout TSTool.
 Support for the older notation is provided where possible.
-	
+
 Prior to TSTool version 10, some commands that created time series used the syntax:
-	
+
 ```
 TS Alias = Command(...)
 ```
-	
+
 In version 10, this syntax has been made similar to all other commands:
 
-	
 ```
 Command(Alias=”....”,...)
 ```
-	
+
 In most cases, loading an old command file will automatically convert from old to new syntax.
 TSTool provides warnings for commands that are not recognized or are
 out of date and cannot automatically be updated.  The command editor can be used to correct errors.
-	
+
 The following table lists obsolete commands.
 The TSID and alias are generally interchangeable when specifying a time series to process.
  
@@ -690,48 +689,48 @@ TSTool Command Summary – Obsolete Commands
 
 |**Command**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Replacement**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--|--|--|
-|`add(TSID,TSID1,TSID2,...)`|Add the 2nd+ time series to the first time series, retaining the original identifier.  This form of the command is obsolete and should be updated to use the new form described that includes a flag for handling missing data.|[`Add`](../command-ref/Add/Add) command.|
-|`-archive_dbhost HostName`|This legacy option is normally set during installation and is typically not specified in command files.  Specify the Internet host name for the remote HydroBase database server.  This is configured at installation time and will be either `localpc` (for a local Microsoft Access HydroBase database, indicating that no remote server is used) or a machine name for the Informix database server.  To change the defaults from those in the tstool.bat file, specify this option again on the command line or edit the batch file.  See also `-dbhost`.  This option is used in addition to the `-dbhost` information to allow a TSTool user to switch between the local PC and the main database server.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase) configuration information|
-|`-averageperiod MM/YYYY MM/YYYY`|Specify the period to be used to compute averages when the `-fillhistave` option is specified.|[`SetAveragePeriod`](../command-ref/SetAveragePeriod/SetAveragePeriod) command and command parameters for specific commands.|
+|`add(TSID,TSID1,TSID2,...)`|Add the 2nd+ time series to the first time series, retaining the original identifier.  This form of the command is obsolete and should be updated to use the new form described that includes a flag for handling missing data.|[`Add`](../command-ref/Add/Add.md) command.|
+|`-archive_dbhost HostName`|This legacy option is normally set during installation and is typically not specified in command files.  Specify the Internet host name for the remote HydroBase database server.  This is configured at installation time and will be either `localpc` (for a local Microsoft Access HydroBase database, indicating that no remote server is used) or a machine name for the Informix database server.  To change the defaults from those in the tstool.bat file, specify this option again on the command line or edit the batch file.  See also `-dbhost`.  This option is used in addition to the `-dbhost` information to allow a TSTool user to switch between the local PC and the main database server.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md) configuration information|
+|`-averageperiod MM/YYYY MM/YYYY`|Specify the period to be used to compute averages when the `-fillhistave` option is specified.|[`SetAveragePeriod`](../command-ref/SetAveragePeriod/SetAveragePeriod.md) command and command parameters for specific commands.|
 |`-batch`|Indicates to run in batch mode.   This is automatically set if `-commands` is specified.|None – no longer used.|
 |`-browser Path`|This option is normally set during installation and is typically not specified in command files.  Specify the path to the web browser to use for on-line documentation.|None – no longer used.|
-|`CreateTraces()`|Create an ensemble from a time series.|[`NewEnsemble`](../command-ref/NewEnsemble/NewEnsemble) command.|
-|`-cy`|Output in calendar year format.|[`SetOutputYearType`](../command-ref/SetOutputYearType/SetOutputYearType) command|
-|`-d#[,#]`|Set the debug level.  The first number is the debug level for the screen.  The second is for the log file.  If one level is specified, it is applied to the screen and log file output.|[`SetDebugLevel`](../command-ref/SetDebugLevel/SetDebugLevel)|
-|`-data_interval Interval`|Indicate the data interval (e.g., `MONTH`, `DAY`) to use with all structures/stations indicated by the -slist option.  This option is only available in batch mode.|[`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList) and [`CreateFromList`](../command-ref/CreateFromList/CreateFromList) commands|
-|`-datasource ODBCDataSourceName`|Specify an ODBC Data Source Name to use for the HydroBase database.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase) configuration information.|
-|`-data_type Type`|Indicate the data type (e.g., `DivTotal`, `DQME`) to use with all structures/stations indicated by the `-slist` option. This option is only available in batch mode. This command is obsolete.|[`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList) and [`CreateFromList`](../command-ref/CreateFromList/CreateFromList) commands|
-|`day_to_month_reservoir(TSID,ndays,flag)`|Read a daily time series and convert to a monthly time series using the reservoir method. This is generally only applied to reservoir storage.|[`NewEndOfMonthTSFromDayTS`](../command-ref/NewEndOfMonthTSFromDayTS/NewEndOfMonthTSFromDayTS) and [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate) commands|
-|`-dbhost HostName`|This option is normally set during installation and is typically not specified in command files.  Specify the Internet host name for the primary HydroBase database server.  This is configured at installation time and will be either localpc (for a local Microsoft Access database) or a machine name for the Informix database server.  To change the defaults from those in the `tstool.bat` file, specify this option again on the command line or edit the batch file.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase) configuration information.|
+|`CreateTraces()`|Create an ensemble from a time series.|[`NewEnsemble`](../command-ref/NewEnsemble/NewEnsemble.md) command.|
+|`-cy`|Output in calendar year format.|[`SetOutputYearType`](../command-ref/SetOutputYearType/SetOutputYearType.md) command|
+|`-d#[,#]`|Set the debug level.  The first number is the debug level for the screen.  The second is for the log file.  If one level is specified, it is applied to the screen and log file output.|[`SetDebugLevel`](../command-ref/SetDebugLevel/SetDebugLevel.md)|
+|`-data_interval Interval`|Indicate the data interval (e.g., `MONTH`, `DAY`) to use with all structures/stations indicated by the -slist option.  This option is only available in batch mode.|[`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md) and [`CreateFromList`](../command-ref/CreateFromList/CreateFromList.md) commands|
+|`-datasource ODBCDataSourceName`|Specify an ODBC Data Source Name to use for the HydroBase database.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md) configuration information.|
+|`-data_type Type`|Indicate the data type (e.g., `DivTotal`, `DQME`) to use with all structures/stations indicated by the `-slist` option. This option is only available in batch mode. This command is obsolete.|[`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md) and [`CreateFromList`](../command-ref/CreateFromList/CreateFromList.md) commands|
+|`day_to_month_reservoir(TSID,ndays,flag)`|Read a daily time series and convert to a monthly time series using the reservoir method. This is generally only applied to reservoir storage.|[`NewEndOfMonthTSFromDayTS`](../command-ref/NewEndOfMonthTSFromDayTS/NewEndOfMonthTSFromDayTS.md) and [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate.md) commands|
+|`-dbhost HostName`|This option is normally set during installation and is typically not specified in command files.  Specify the Internet host name for the primary HydroBase database server.  This is configured at installation time and will be either localpc (for a local Microsoft Access database) or a machine name for the Informix database server.  To change the defaults from those in the `tstool.bat` file, specify this option again on the command line or edit the batch file.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md) configuration information.|
 |`-detailedheader`|Insert time series creation information in output headers.  This preserves information from the log file that may otherwise be lost.  The default is not to generate detailed headers.|See output command parameters.|
-|`fillCarryForward()`|Fill by repeating value.|[`FillRepeat`](../command-ref/FillRepeat/FillRepeat) command|
-|`fillconst(TSID,Value)`|Fill the time series with a constant value.|[`FillConstant`](../command-ref/FillConstant/FillConstant) command|
-|`-fillData File`|Specify a StateMod format fill pattern file to be used with the `fillpattern()` command.  This command can be repeated for multiple pattern files.|[`ReadPatternFile`](../command-ref/ReadPatternFile/ReadPatternFile) command|
-|`-fillhistave`|Currently only enabled for frost dates and monthly data.  Indicates that the time series should be filled with the historical average values from the output period where data are missing (after filling by other methods).  See also the `-averageperiod` option.|[`FillHistMonthAverage`](../command-ref/FillHistMonthAverage/FillHistMonthAverage) and [`FillHistYearAverage`](../command-ref/FillHistYearAverage/FillHistYearAverage) commands.|
-|`Graph g = newGraph(GraphType,Visibility,TimeSeriesToGraph)`|Create a new graph window. This command is no longer supported.|[`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct) command|
+|`fillCarryForward()`|Fill by repeating value.|[`FillRepeat`](../command-ref/FillRepeat/FillRepeat.md) command|
+|`fillconst(TSID,Value)`|Fill the time series with a constant value.|[`FillConstant`](../command-ref/FillConstant/FillConstant.md) command|
+|`-fillData File`|Specify a StateMod format fill pattern file to be used with the `fillpattern()` command.  This command can be repeated for multiple pattern files.|[`ReadPatternFile`](../command-ref/ReadPatternFile/ReadPatternFile.md) command|
+|`-fillhistave`|Currently only enabled for frost dates and monthly data.  Indicates that the time series should be filled with the historical average values from the output period where data are missing (after filling by other methods).  See also the `-averageperiod` option.|[`FillHistMonthAverage`](../command-ref/FillHistMonthAverage/FillHistMonthAverage.md) and [`FillHistYearAverage`](../command-ref/FillHistYearAverage/FillHistYearAverage.md) commands.|
+|`Graph g = newGraph(GraphType,Visibility,TimeSeriesToGraph)`|Create a new graph window. This command is no longer supported.|[`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command|
 |`-helpindex Path`|This option is normally set during installation and is typically not specified in command files.  Specify the path to help index file for on-line documentation.|No longer used.|
-|`-ignorelezero`|Treat data values <= 0 as missing when computing averages but do not replace when filling.|[`SetIgnoreLEZero`](../command-ref/SetIgnoreLEZero/SetIgnoreLEZero) command|
-|`-include_missing_ts`|If a time series cannot be found, include an empty time series.|[`SetIncludeMissingTS`](../command-ref/SetIncludeMissingTS/SetIncludeMissingTS) command|
+|`-ignorelezero`|Treat data values <= 0 as missing when computing averages but do not replace when filling.|[`SetIgnoreLEZero`](../command-ref/SetIgnoreLEZero/SetIgnoreLEZero.md) command|
+|`-include_missing_ts`|If a time series cannot be found, include an empty time series.|[`SetIncludeMissingTS`](../command-ref/SetIncludeMissingTS/SetIncludeMissingTS.md) command|
 |`-informix`|Indicate that Informix is used for HydroBase.|Not used.|
-|`-missing Value`|Use the specified value for missing data values (StateMod only).  The default is `-999.0`.|[`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod) command|
-|`-fillusingcomments`|This option only applies to diversion time series and causes the diversion comments to be evaluated.  Comments that indicate no diversion in an irrigation year will result in missing data for that year being replaced with zeros.|[`FillUsingDiversionComments`](../command-ref/FillUsingDiversionComments/FillUsingDiversionComments) command|
-|`month1/year1 month2/year2`|Specifies beginning and ending months for period of record - calculations are still based on the entire period of record (i.e., regression values) but the final output is according to these values, if given.  Month 1 is January.  Years are 4-digit.|[`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod) command|
-|`-o outputfile`|Specify output file name.  This is used in conjunction with other `-o` options.|[Output (write) commands](../command-ref/overview#output-time-series)|
-|`-odatevalue`|Output a DateValue format file.|[`WriteDateValue`](../command-ref/WriteDateValue/WriteDateValue) command|
-|`-ostatemod`|Output a StateMod format file.|[`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod) command|
-|`-osummary`|Output a time series summary.|[`WriteSummary`](../command-ref/WriteSummary/WriteSummary) command|
+|`-missing Value`|Use the specified value for missing data values (StateMod only).  The default is `-999.0`.|[`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod.md) command|
+|`-fillusingcomments`|This option only applies to diversion time series and causes the diversion comments to be evaluated.  Comments that indicate no diversion in an irrigation year will result in missing data for that year being replaced with zeros.|[`FillUsingDiversionComments`](../command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md) command|
+|`month1/year1 month2/year2`|Specifies beginning and ending months for period of record - calculations are still based on the entire period of record (i.e., regression values) but the final output is according to these values, if given.  Month 1 is January.  Years are 4-digit.|[`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) command|
+|`-o outputfile`|Specify output file name.  This is used in conjunction with other `-o` options.|[Output (write) commands](../command-ref/overview#output-time-series.md)|
+|`-odatevalue`|Output a DateValue format file.|[`WriteDateValue`](../command-ref/WriteDateValue/WriteDateValue.md) command|
+|`-ostatemod`|Output a StateMod format file.|[`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod.md) command|
+|`-osummary`|Output a time series summary.|[`WriteSummary`](../command-ref/WriteSummary/WriteSummary.md) command|
 |`-osummarynostats`|Output a time series summary without statistics (this is used with the data extension procedure developed by Ayres for CDSS).|No longer supported.|
-|`regress(TSID1,TSID2)`|Performs a linear regression analysis between the two time series, filling missing data of the first time series.  Regression information is printed to the log file.|[`FillRegression`](../command-ref/FillRegression/FillRegression) command|
-|`regress12(TSID1,TSID2)`<br>`regressMonthly(TSID1,TSID2)`|Same as regress() except 12 separate monthly regressions values are calculated.|[`FillRegression`](../command-ref/FillRegression/FillRegression) command|
-|`regresslog(TSID1,TSID2)`|Same as regress() except regressions values are calculated logarithmically.|[`FillRegression`](../command-ref/FillRegression/FillRegression) command|
-|`regresslog12(TSID1,TSID2)`<br>`regressMonthlyLog(TSID1,TSID2)`|Same as regresslog() except 12 monthly regressions values are calculated.|[`FillRegression`](../command-ref/FillRegression/FillRegression) command|
-|`setconst(TSID,Value)`|Set the time series to the given value for all data.  If the time series is not in the database, created an empty time series and then set to a constant value.|[`SetConstant`](../command-ref/SetConstant/SetConstant) command|
-|`setconstbefore(TSID,Value,Date)`|The time series to the given value for all data on and before the specified date (`YYYY-MM` or `MM/YYYY`).|[`SetConstant`](../command-ref/SetConstant/SetConstant) command|
-|`setConstantBefore()`|Set a value constant before a date/time.|[`SetConstant`](../command-ref/SetConstant/SetConstant) command|
-|`SetMissingDataValue()`|Set the missing data value used in a StateMod time series.|[`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod) command|
-|`setQueryPeriod(Start,End)`|Set the global period to query databases and read from files.|[`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod) command|
-|`-sqlserver`|Specify that SQL Server is used for HydroBase.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase) configuration information. SQL Server is now the default because Microsoft Access is no longer supported.|
-|`-slist File`|Create time series from a list file.|[`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList) and [`CreateFromList`](../command-ref/CreateFromList/CreateFromList) commands|
-|`-units value`|Output using the specified units (default is to use database units).|No longer used.  If necessary, units can be converted by a number of commands including the [`ConvertDataUnits`](../command-ref/ConvertDataUnits/ConvertDataUnits) command|
-|`-w#[,#]`|Set the warning level.  The first number is the warning level for the screen.  The second is for the log file.  If one level is specified, it is applied to the screen and log file output.|[`SetWarningLevel`](../command-ref/SetWarningLevel/SetWarningLevel) command|
-|`-wy`|Output in water year format.|[`SetOutputYearType`](../command-ref/SetOutputYearType/SetOutputYearType) command|
+|`regress(TSID1,TSID2)`|Performs a linear regression analysis between the two time series, filling missing data of the first time series.  Regression information is printed to the log file.|[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command|
+|`regress12(TSID1,TSID2)`<br>`regressMonthly(TSID1,TSID2)`|Same as regress() except 12 separate monthly regressions values are calculated.|[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command|
+|`regresslog(TSID1,TSID2)`|Same as regress() except regressions values are calculated logarithmically.|[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command|
+|`regresslog12(TSID1,TSID2)`<br>`regressMonthlyLog(TSID1,TSID2)`|Same as regresslog() except 12 monthly regressions values are calculated.|[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command|
+|`setconst(TSID,Value)`|Set the time series to the given value for all data.  If the time series is not in the database, created an empty time series and then set to a constant value.|[`SetConstant`](../command-ref/SetConstant/SetConstant.md) command|
+|`setconstbefore(TSID,Value,Date)`|The time series to the given value for all data on and before the specified date (`YYYY-MM` or `MM/YYYY`).|[`SetConstant`](../command-ref/SetConstant/SetConstant.md) command|
+|`setConstantBefore()`|Set a value constant before a date/time.|[`SetConstant`](../command-ref/SetConstant/SetConstant.md) command|
+|`SetMissingDataValue()`|Set the missing data value used in a StateMod time series.|[`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod.md) command|
+|`setQueryPeriod(Start,End)`|Set the global period to query databases and read from files.|[`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod.md) command|
+|`-sqlserver`|Specify that SQL Server is used for HydroBase.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md) configuration information. SQL Server is now the default because Microsoft Access is no longer supported.|
+|`-slist File`|Create time series from a list file.|[`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md) and [`CreateFromList`](../command-ref/CreateFromList/CreateFromList.md) commands|
+|`-units value`|Output using the specified units (default is to use database units).|No longer used.  If necessary, units can be converted by a number of commands including the [`ConvertDataUnits`](../command-ref/ConvertDataUnits/ConvertDataUnits.md) command|
+|`-w#[,#]`|Set the warning level.  The first number is the warning level for the screen.  The second is for the log file.  If one level is specified, it is applied to the screen and log file output.|[`SetWarningLevel`](../command-ref/SetWarningLevel/SetWarningLevel.md) command|
+|`-wy`|Output in water year format.|[`SetOutputYearType`](../command-ref/SetOutputYearType/SetOutputYearType.md) command|

@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `ReadColoradoHydroBaseRest` command reads one or more time series from the Colorado HydroBase REST web services
-(see the [ColoradoHydroBaseRest Datastore Appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest)).
+(see the [ColoradoHydroBaseRest Datastore Appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)).
 It is designed to utilize query criteria to process large numbers of time series,
 for example for a specific water district and data type.
 
@@ -28,7 +28,7 @@ running the command can take awhile to complete.
 Data for the location (station, structure, well, etc.) and time series metadata,
 as shown in the main TSTool interface, are set as time series properties, using web service data values.
 These properties can be transferred to a table with the
-[`CopyTimeSeriesPropertiesToTable`](../CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable)
+[`CopyTimeSeriesPropertiesToTable`](../CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md)
 command and processed further with other table commands.
 
 Time series corresponding to diversion records,
@@ -51,8 +51,8 @@ Note that diversion comments should not conflict with more detailed records and 
 However, because such values typically are annual values,
 additional decisions must be made for how to distribute the values to monthly and daily time series.
 These data, if available, are not automatically folded into the diversion records by TSTool.
-4. See the [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage),
-[`FillPattern`](../FillPattern/FillPattern), and other commands,
+4. See the [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md),
+[`FillPattern`](../FillPattern/FillPattern.md), and other commands,
 which can be used to fill (estimate) values in data gaps after the initial time series are read.  
 
 ## Command Editor ##
@@ -61,7 +61,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 Two options are available for matching time series, based on historical software requirements.
 The following example illustrates how to read a single time series by specifying the time series identifier.
 This approach is essentially equivalent to using the
-[`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries) command but offers parameters specific to HydroBase web services.
+[`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command but offers parameters specific to HydroBase web services.
 
 ![ReadColoradoHydroBaseRest TSID](ReadColoradoHydroBaseRest_TSID.png)
 
@@ -92,8 +92,8 @@ Command Parameters
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`DataStore`|The ColoradoHydroBaseRest datastore name to use for the database connection, as per datastore configuration files (see the [ColoradoHydroBaseRest Datastore appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest)).  When using this approach the TSID will end in `~ColoradoHydroBaseRest`.|
-|`DataType`<br>**required**|The data type to be queried, as documented in the [ColoradoHydroBaseRest Datastore appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest).|None – must be specified.|
-|`Interval`<br>**required**|The data interval for the time series, as documented in the [ColoradoHydroBaseRest Datastore appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest) (e.g. `Day`, `Month`, `Year`), consistent with the `DataType` selection.|None – must be specified.|
+|`DataType`<br>**required**|The data type to be queried, as documented in the [ColoradoHydroBaseRest Datastore appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md).|None – must be specified.|
+|`Interval`<br>**required**|The data interval for the time series, as documented in the [ColoradoHydroBaseRest Datastore appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) (e.g. `Day`, `Month`, `Year`), consistent with the `DataType` selection.|None – must be specified.|
 |`TSID`|When reading a single time series, the time series identifier to read.  If specified, this parameter will override the `WhereN` parameters.|Use `WhereN` parameters to read multiple time series.|
 |`WhereN`|When reading 1+ time series, the “where” clauses to be applied.  The filters match the values in the Where fields in the command editor dialog and the TSTool main interface.  The parameters should be named `Where1`, `Where2`, etc., with a gap resulting in the remaining items being ignored.  The format of each value is:<br>`Item;Operator;Value`<br>Where `Item` indicates a data field to be filtered on, `Operator` is the type of constraint, and `Value` is the value to be checked when querying.|If not specified, the query will not be limited and very large numbers of time series may be queried.|
 |`Alias`<br>|The alias to assign to the time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing, as an alternative to the time series identifier (`TSID`).|None – alias not assigned.|
@@ -105,7 +105,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadColoradoHydroBaseRest).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadColoradoHydroBaseRest).
 
 A sample command file is as follows (read all water class time series for structure 0300905):
 
@@ -117,5 +117,5 @@ ReadColoradoHydroBaseRest(DataType="WaterClass",Interval="Month",Where1="Structu
 
 ## See Also ##
 
-* [`CopyTimeSeriesPropertiesToTable`](../CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable) command
-* [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries) command
+* [`CopyTimeSeriesPropertiesToTable`](../CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command
+* [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command

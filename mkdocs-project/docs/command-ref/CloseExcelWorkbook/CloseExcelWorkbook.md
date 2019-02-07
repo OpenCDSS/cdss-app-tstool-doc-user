@@ -17,17 +17,16 @@ for example by using the `KeepOpen=True` command parameter.
 The act of “closing” discards the workbook from program memory and optionally
 causes the workbook to be written to an Excel file.
 Using this command is helpful when multiple commands are manipulating an Excel workbook,
-for example when used in a [`For`](../For/For) loop block.
+for example when used in a [`For`](../For/For.md) loop block.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../CloseExcelWorkbook.png">See also the full-size image.</a>
 
 ![CloseExcelWorkbook](CloseExcelWorkbook.png)
 
 **<p style="text-align: center;">
-`CloseExcelWorkbook` Command Editor
+`CloseExcelWorkbook` Command Editor (<a href="../CloseExcelWorkbook.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -50,10 +49,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CloseExcelWorkbook).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CloseExcelWorkbook).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`For`](../For/For) command
+* [`For`](../For/For.md) command

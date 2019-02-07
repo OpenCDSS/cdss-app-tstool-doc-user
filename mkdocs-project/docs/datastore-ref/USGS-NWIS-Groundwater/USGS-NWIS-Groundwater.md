@@ -23,10 +23,10 @@ The NWIS groundwater web service allows data to be retrieved as JavaScript Objec
 tab-delimited (RDB), or WaterML 1.1 (with USGS extenstions, called WaterML 1.2).
 Each of these formats has features and limitations that are discussed in more detail in other documentation.
 The UsgsNwisGroundwater datastore is used with the
-[`ReadUsgsNwisGroundwater`](../../command-ref/ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater)
+[`ReadUsgsNwisGroundwater`](../../command-ref/ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater.md)
 command and the data files saved by the command are used with the
-[`ReadUsgsNwisRdb`](../../command-ref/ReadUsgsNwisRdb/ReadUsgsNwisRdb) and
-[`ReadWaterML`](../../command-ref/ReadWaterML/ReadWaterML) commands.
+[`ReadUsgsNwisRdb`](../../command-ref/ReadUsgsNwisRdb/ReadUsgsNwisRdb.md) and
+[`ReadWaterML`](../../command-ref/ReadWaterML/ReadWaterML.md) commands.
 
 ## Standard Time Series Properties ##
 

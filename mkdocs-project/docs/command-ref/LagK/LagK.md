@@ -98,7 +98,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/LagK).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/LagK).
 
 A sample command file is as follows (commands to read time series are omitted):
 
@@ -110,4 +110,4 @@ LagK(Alias=”LKPN6routed”,TSID=LKPN6.USGS.QIN.1HOUR,Lag=3,K=2,FillNearest=tru
 
 ## See Also ##
 
-* [`VariableLagK`](../VariableLagK/VariableLagK) command
+* [`VariableLagK`](../VariableLagK/VariableLagK.md) command

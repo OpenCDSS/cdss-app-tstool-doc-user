@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `WeightTraces` command creates a new time series as a weighted sum of time series ensemble traces,
-for example as produced by a [`CreateEnsembleFromOneTimeSeries`](../CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries) command.
+for example as produced by a [`CreateEnsembleFromOneTimeSeries`](../CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md) command.
  If any trace contains missing data for a point, the resulting time series value will also be missing.
 Note that this approach may not be appropriate for some analyses – the user
 should evaluate the implications of whether the weighted result appropriately reflects the (in)dependence of input data.
@@ -20,12 +20,11 @@ should evaluate the implications of whether the weighted result appropriately re
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../WeightTraces.png">See also the full-size image.</a>
 
 ![WeightTraces](WeightTraces.png)
 
 **<p style="text-align: center;">
-`WeightTraces` Command Editor
+`WeightTraces` Command Editor (<a href="../WeightTraces.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -41,7 +40,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`EnsembleID`<br>**required**|The ensemble identifier indicating time series to be processed (e.g., from a [`CreateEnsembleFromOneTimeSeries`](../CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries) command).  Time series matching the years specified by the Weights parameter will be processed.|None – must be specified.|
+|`EnsembleID`<br>**required**|The ensemble identifier indicating time series to be processed (e.g., from a [`CreateEnsembleFromOneTimeSeries`](../CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md) command).  Time series matching the years specified by the Weights parameter will be processed.|None – must be specified.|
 |`NewTSID`<br>**required**|The time series identifier for the new time series that is created.  This typically uses the same information as the original time series, with an added scenario.|None – must be specified.|
 |`Alias`<br>**required**|The alias to assign to the time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing, as an alternative to the time series identifier (TSID).|None – must be specified.|
 |`SpecifyWeightsHow`|Weights are currently only applied as AbsoluteWeights (in the future an option may be added to normalized weights to 1.0 accounting for missing data in the traces).|Must be `AbsoluteWeights`.|
@@ -49,7 +48,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WeightTraces).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WeightTraces).
 
 A sample commands file is as follows:
 
@@ -64,16 +63,15 @@ WeightTraces(Alias=”WeightedTS”,EnsembleID="Ensemble_Jasper",SpecifyWeightsH
 WriteDateValue(OutputFile="Results/WeightTraces_out.dv")
 ```
 The results from the commands are shown in the following graph:
-<a href="../WeightTraces_Graph.png">See also the full-size image.</a>
 
 ![WeightTraces Graph](WeightTraces_Graph.png)
 
 **<p style="text-align: center;">
-Results of the `WeightTraces` Command
+Results of the `WeightTraces` Command (<a href="../WeightTraces_Graph.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CreateEnsembleFromOneTimeSeries`](../CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries) command
+* [`CreateEnsembleFromOneTimeSeries`](../CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md) command

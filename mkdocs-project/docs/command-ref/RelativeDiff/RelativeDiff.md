@@ -22,12 +22,11 @@ The result is set to missing if either time series value is missing or the divis
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../RelativeDiff.png">See also the full-size image.</a>
 
 ![RelativeDiff](RelativeDiff.png)
 
 **<p style="text-align: center;">
-`RelativeDiff` Command Editor
+`RelativeDiff` Command Editor (<a href="../RelativeDiff.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -56,9 +55,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/RelativeDiff).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/RelativeDiff).
 
-A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -90,4 +89,4 @@ Results of `RelativeDiff` Command
 
 ## See Also ##
 
-* [`Normalize`](../Normalize/Normalize) command
+* [`Normalize`](../Normalize/Normalize.md) command

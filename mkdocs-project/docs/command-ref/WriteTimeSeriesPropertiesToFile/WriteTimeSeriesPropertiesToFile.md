@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `WriteTimeSeriesPropertiesToFile` command writes the value of time series properties to a file.
-This command should not be confused with the [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile) command,
+This command should not be confused with the [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md) command,
 which writes processor properties.
 This command is useful for testing whether properties are being set.
 It can also be used to pass information from TSTool to another program.  
@@ -32,12 +32,11 @@ Property File Formats
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../WriteTimeSeriesPropertiesToFile.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesPropertiesToFile](WriteTimeSeriesPropertiesToFile.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesPropertiesToFile` Command Editor
+`WriteTimeSeriesPropertiesToFile` Command Editor (<a href="../WriteTimeSeriesPropertiesToFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -53,7 +52,7 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+| `TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 | `TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 | `EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`OutputFile`<br>**required**| The property file to write, as an absolute path or relative to the command file, can use `${Property}`. | None - must be specified. |
@@ -64,12 +63,12 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WritePropertiesToFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WritePropertiesToFile).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
-* [`SetProperty`](../SetProperty/SetProperty) command
-* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command
+* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command

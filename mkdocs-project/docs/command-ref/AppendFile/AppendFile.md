@@ -18,12 +18,11 @@ This command is useful for appending multiple data files into a single file that
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../AppendFile.png">See also the full-size image.</a>
 
 ![AppendFile](AppendFile.png)
 
 **<p style="text-align: center;">
-`AppendFile` Command Editor
+`AppendFile` Command Editor (<a href="../AppendFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -40,7 +39,7 @@ Command Parameters
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------------|-----------------|----------------- |
 |`InputFile`<br>**required**|The name of one or more files to append, using the following conventions:<ul><li>No `*` in filename – match one file.</li><li>Filename specified as `*`– match all files in input directory (working directory by default).</li><li>Filename specified as `*.ext` – match all files with extension</li></ul><br>More options may be supported in the future when TSTool is updated to use Java 1.7+.  Can specify using processor `${Property}`.|None – must be specified.|
-|`OutputFile`<br>**required**|The output file that will be appended to.  The file is created if it does not exist.  Use the [`RemoveFile`](../RemoveFile/RemoveFile) command to remove the old file.  Can specify using processor `${Property}`.|None – must be specified.|
+|`OutputFile`<br>**required**|The output file that will be appended to.  The file is created if it does not exist.  Use the [`RemoveFile`](../RemoveFile/RemoveFile.md) command to remove the old file.  Can specify using processor `${Property}`.|None – must be specified.|
 |`IncludeText`|A regular expression pattern to include text.  Only the matching lines will be included.  This uses the [Java regular expression syntax](http://en.wikipedia.org/wiki/Regular_expression).|Append all lines.|
 |`ExcludeText`|A regular expression pattern to exclude text.  Matching lines will be excluded from the append.|Append all lines.|
 |`Newline`|Indicate the newline character to use at the end of lines.  Normally the operating system default is ok (`\n` for Linux and for Mac, `\r\n for Windows`), but the newline may need to be specified to ensure cross-platform compatibility.|Operating system default.|
@@ -54,11 +53,11 @@ The following table lists regular expression examples:
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/AppendFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/AppendFile).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CopyFile`](../CopyFile/CopyFile) command
-* [`RemoveFile`](../RemoveFile/RemoveFile) command
+* [`CopyFile`](../CopyFile/CopyFile.md) command
+* [`RemoveFile`](../RemoveFile/RemoveFile.md) command

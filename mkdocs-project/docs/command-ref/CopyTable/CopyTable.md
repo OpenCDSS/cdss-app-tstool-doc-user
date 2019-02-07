@@ -13,7 +13,7 @@
 
 The `CopyTable` command copies all or a subset of the columns and rows from one table to create a new table.
 For example, this is useful to create one-column lists that can be used to expand template files with the
-[`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile) command,
+[`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command,
 or to create a subset of a table to output to a file or write to a database
 (for example filter a large table by geographic area or other criteria).  
 
@@ -21,12 +21,11 @@ or to create a subset of a table to output to a file or write to a database
 
 The following dialog is used to edit the command and illustrates the syntax of the command
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
-<a href="../CopyTable.png">See also the full-size image.</a>
 
 ![CopyTable](CopyTable.png)
 
 **<p style="text-align: center;">
-`CopyTable` Command Editor
+`CopyTable` Command Editor (<a href="../CopyTable.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -49,17 +48,17 @@ Command Parameters
 |`ColumnMap`|The new names for the output columns, using syntax:<br>`OriginalColumn1:NewColumn1, OriginalColumn2:NewColumn2|The column names in the copy will be the same as in the original table.|
 |`ColumnFilters`|Filters that limit the number of rows being copied, using the syntax:<br>`FilterColumn1:FilterPattern1, FilterColumn2:FilterPattern2`<br>Patterns can use `*` to indicate wildcards for matches.  Only string values can be checked (other data types are converted to strings for comparison).  Comparisons are case-independent.  All patterns must be matched in order to copy the row.  Can be specified using processor `${Property}`.|No filtering.|
 |`ColumnExcludeFilters`|Filters that exclude rows being copied, by matching column values:<br>`ColumnExcludeFilter1:FilterPattern1,`<br>`ColumnExcludeFilter2:FilterPattern2`<br>Patterns can use `*` to indicate wildcards for matches.  Only string values can be checked (other data types are converted to strings for comparison).|All patterns must be matched to exclude the row.|
-|`RowCountProperty`|The row count for the copy will be set as a processor property.  This is useful for error-checks (e.g., check that number of time series read with [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList) based on the table list matches the expected count.  Can be specified using processor `${Property}`.	
+|`RowCountProperty`|The row count for the copy will be set as a processor property.  This is useful for error-checks (e.g., check that number of time series read with [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) based on the table list matches the expected count.  Can be specified using processor `${Property}`.	
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CopyTable).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CopyTable).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile) command
-* [`FreeTable`](../FreeTable/FreeTable) command
-* [`NewTable`](../NewTable/NewTable) command
-* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList) command
+* [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command
+* [`FreeTable`](../FreeTable/FreeTable.md) command
+* [`NewTable`](../NewTable/NewTable.md) command
+* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command

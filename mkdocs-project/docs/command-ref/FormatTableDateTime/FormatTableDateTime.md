@@ -15,9 +15,9 @@ The `FormatTableDateTime` command formats a date/time input column from a table 
 For example, it may be necessary to reformat a date/time column into
 an object type that is more suitable for reporting,
 further processing, or export to a spreadsheet.
-See also the [`FormatTableString`](../FormatTableString/FormatTableString) command,
+See also the [`FormatTableString`](../FormatTableString/FormatTableString.md) command,
 which manipulates strings.  Formatting occurs as follows:
-	
+
 1. The date/time input column value is parsed into internal date/time object.
 Currently there is no command parameter to specify the format of the input
 column and consequently standard formats are expected
@@ -41,39 +41,35 @@ Missing values in input will result in blanks (nulls) in output.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing input parameters.
-<a href="../FormatTableDateTime.png">See also the full-size image.</a>
 
 ![FormatTableDateTime](FormatTableDateTime.png)
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor Showing Input Parameters
+`FormatTableDateTime` Command Editor Showing Input Parameters (<a href="../FormatTableDateTime.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing time increment parameters.
-<a href="../FormatTableDateTime_Increment.png">See also the full-size image.</a>
 
 ![FormatTableDateTime](FormatTableDateTime_Increment.png)
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor Showing Increment Parameters
+`FormatTableDateTime` Command Editor Showing Increment Parameters (<a href="../FormatTableDateTime_Increment.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing format parameters.
-<a href="../FormatTableDateTime_Format.png">See also the full-size image.</a>
 
 ![FormatTableDateTime](FormatTableDateTime_Format.png)
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor Showing Format Parameters
+`FormatTableDateTime` Command Editor Showing Format Parameters (<a href="../FormatTableDateTime_Format.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing output parameters.
-<a href="../FormatTableDateTime_Output.png">See also the full-size image.</a>
 
 ![FormatTableDateTime](FormatTableDateTime_Output.png)
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor Showing Output Parameters
+`FormatTableDateTime` Command Editor Showing Output Parameters (<a href="../FormatTableDateTime_Output.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -124,11 +120,11 @@ Supported C (Strftime) Format Specifiers
 |`%y`|Year (`00`-`99`).|
 |`%Y`|Year (`0000`-`9999`).|
 |`%Z`|Time zone (e.g., `MST`).|
-|`${dt:YearForYearType}`|4-digit year for the given OutputYearType.|
+|`${dt:YearForYearType}`|4-digit year for the given `OutputYearType`.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/FormatTableDateTime).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FormatTableDateTime).
 
 The following example illustrates how to convert an input date/time column into
 variations of the date/time, with the following input used to generate the
@@ -142,9 +138,14 @@ OutputYearType=Water
 OutputColumn=WateryearDateTime
 OuputType=DateTime
 ```
-Output is as shown below.  <a href="../FormatTableDateTime_Data.png">See also the full-size image.</a>
+
+Output is as shown below.
 
 ![FormatTableDateTime](FormatTableDateTime_Data.png)
+
+**<p style="text-align: center;">
+Formatted Date/time Output (<a href="../FormatTableDateTime_Data.png">see also the full-size image</a>)
+</p>**
 
 The following example illustrates how to convert increment data into a full date/time column string, with the following input (surrounding quotes will be added automatically by command editor):
 
@@ -156,13 +157,17 @@ DateTimeFormat=%m/%d/%Y %H
 OutputColumn=DateTime
 ```
 
-Output is as shown below.  <a href="../FormatTableDateTime_IncrementData.png">See also the full-size image.</a>
+Output is as shown below.
 
 ![FormatTableDateTime](FormatTableDateTime_IncrementData.png)
+
+**<p style="text-align: center;">
+Formatted Date/time Output for Increment Data (<a href="../FormatTableDateTime_IncrementData.png">See also the full-size image</a>)
+</p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FormatTableString`](../FormatTableString/FormatTableString) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command
+* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command

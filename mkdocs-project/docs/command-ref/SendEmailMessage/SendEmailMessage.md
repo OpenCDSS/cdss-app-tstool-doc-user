@@ -18,12 +18,11 @@ The `SendEmailMessage` command sends an email message.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SendEmailMessage.png">See also the full-size image.</a>
 
 ![SendEmailMessage](SendEmailMessage.png)
 
 **<p style="text-align: center;">
-`SendEmailMessage` Command Editor
+`SendEmailMessage` Command Editor (<a href="../SendEmailMessage.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -43,10 +42,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SendEmailMessage).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SendEmailMessage).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`Message`](../Message/Message) command
+* [`Message`](../Message/Message.md) command

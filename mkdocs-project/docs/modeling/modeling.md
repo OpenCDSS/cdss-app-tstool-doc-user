@@ -1,4 +1,4 @@
-# TSTool / Model Integration #
+# TSTool / Model Framework Integration #
 
 TSTool can integrate with modeling frameworks or serve as a modeling framework.
 This chapter explores various aspects of this integration.
@@ -71,13 +71,13 @@ One or more of these approaches can be used to implement an operational modeling
 	2. Communicate using shared database, files, etc.
 3. Use TSTool as the modeling framework with no dependency on external tools,
 implementing more advanced features in commands as necessary.
-	1. For example, the [`VariableLagK`](../command-ref/VariableLagK/VariableLagK)
+	1. For example, the [`VariableLagK`](../command-ref/VariableLagK/VariableLagK.md)
 	command allows model states to be read at the start of execution and saved at the end of execution.
 	2. Some high-level control of run dates is implemented, for example,
 	using TSTool `${Property}` syntax to move dates forward over time so that commands can respond accordingly.
 4. Use TSTool as the modeling framework with integration to external tools,
 implementing more advanced features in commands as necessary.
-	1. For example, call model framework models using the [`RunProgram`](../command-ref/RunProgram/RunProgram) command,
+	1. For example, call model framework models using the [`RunProgram`](../command-ref/RunProgram/RunProgram.md) command,
 	with appropriate management of dynamic data and model states using TSTool generic features such as tables and naming conventions.
 	2. Some high-level control of run dates is implemented,
 	for example, using TSTool `${Property}` syntax to move dates forward over time so that commands can respond accordingly.
@@ -95,14 +95,14 @@ State management involves reading model states before execution in order to init
 and then saving the states at the end of the execution so that
 a future run can be initialized with those values.
 The general execution sequence is as follows,
-using the [`VariableLagK`](../command-ref/VariableLagK/VariableLagK) command as an example:
+using the [`VariableLagK`](../command-ref/VariableLagK/VariableLagK.md) command as an example:
 
 * **Initialize states**.  TSTool begins to run the command file.
 Global standard properties such as `${OutputStart}` and `${OutputEnd}` may be
 defined to manage the processing period (other date/time objects also may be defined as properties).
 These properties can be overridden by date/times specified in command parameters.
 In this example the `OutputStart` parameter indicates when to read states to initialize the model.
-* **Write states**.  The [`VariableLagK`](../command-ref/VariableLagK/VariableLagK)
+* **Write states**.  The [`VariableLagK`](../command-ref/VariableLagK/VariableLagK.md)
 command uses parameters to indicate when to save states:
 	+ The `StateSaveDateTime` parameter indicates a specific date/time to save states and
 	can be specified using a `${Property}`.  For example, save for `${OutputEnd}`.
@@ -126,7 +126,7 @@ Commands that require state management can then utilize the state table as input
 In this approach, TSTool provides functionality for state management
 but does not define strict requirements for the system.
 The following approach for state management is implemented in the
-[`VariableLagK`](../command-ref/VariableLagK/VariableLagK) command.
+[`VariableLagK`](../command-ref/VariableLagK/VariableLagK.md) command.
 
 ```text
 # Test running a historical simulation for a longer period, saving states,
@@ -178,14 +178,14 @@ Both of these are optional if states are matched only by `DateTime`.
 4. When reading states, read states for the date/time at the start of the input time series
 (default) or the `OutputStart` parameter.
 Other command parameters may be implemented (such as for the
-[`VariableLagK`](../command-ref/VariableLagK/VariableLagK) command) to provide default initial states,
+[`VariableLagK`](../command-ref/VariableLagK/VariableLagK.md) command) to provide default initial states,
 for cases when a table lookup is not use or is not successful.
 5. Write the states table to a persistent format such as a CSV file
-(TSTool [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile) command)
-or Excel worksheet (TSTool [`WriteTableToExcel`](../command-ref/WriteTableToExcel/WriteTableToExcel) command).
+(TSTool [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command)
+or Excel worksheet (TSTool [`WriteTableToExcel`](../command-ref/WriteTableToExcel/WriteTableToExcel.md) command).
 
 The above approach can be tailored as appropriate.
-The [`VariableLagK`](../command-ref/VariableLagK/VariableLagK) command uses a single
+The [`VariableLagK`](../command-ref/VariableLagK/VariableLagK.md) command uses a single
 state variable name for all states, and stores the states in a JSON string,
 which is inserted into the state table.
 This minimizes the need to specify command parameters to map state names to separate columns,

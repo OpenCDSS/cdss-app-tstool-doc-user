@@ -14,7 +14,7 @@
 The `NewEndOfMonthTSFromDayTS` command is typically used to convert a daily
 reservoir storage time series to an end of month reservoir storage time series.
 The command can also be applied to other data types (e.g., measured well levels).
-	
+
 Changing from a daily to an end of month monthly time series is accomplished
 by starting on the month ending day and searching in both directions
 (backward then forward by expanding until the bracket is reached) for a daily measurement.
@@ -22,17 +22,16 @@ The number of days to search in each direction (the bracket)
 should not be so large as to produce unrealistic results.
 It is possible that no value will be found for a particular month, with the given restraints.
 In this case, other fill commands (e.g.,
-[`FillInterpolate`](../FillInterpolate/FillInterpolate)) can be applied to estimate the remaining missing data.
+[`FillInterpolate`](../FillInterpolate/FillInterpolate.md)) can be applied to estimate the remaining missing data.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../NewEndOfMonthTSFromDayTS.png">See also the full-size image.</a>
 
 ![NewEndOfMonthTSFromDayTS](NewEndOfMonthTSFromDayTS.png)
 
 **<p style="text-align: center;">
-`NewEndOfMonthTSFromDayTS` Command Editor
+`NewEndOfMonthTSFromDayTS` Command Editor (<a href="../NewEndOfMonthTSFromDayTS.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -60,9 +59,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewEndOfMonthTSFromDayTS).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewEndOfMonthTSFromDayTS).
 
-A sample command file for estimating reservoir contents, using a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file for estimating reservoir contents, using a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -73,7 +72,7 @@ NewEndOfMonthTSFromDayTS(Alias=”Continental”,DayTSID="2003536.DWR.ResMeasSto
 ```
 
 A sample command file for estimating well levels is:
-	
+
 ```
 # 384549104445101 - SCO1506611ABC
 384549104445101.USGS.WellLevel.Day~HydroBase
@@ -82,16 +81,15 @@ FillInterpolate(TSList=AllMatchingTSID,TSID="WellMonth",MaxIntervals=0,Transform
 ```
 To evaluate the results of this command, it is useful to graph both the input and results,
 changing the graph properties to add symbols to see the individual measurements, as shown in the following figure.
-<a href="../NewEndOfMonthTSFromDayTS_Graph.png">See also the full-size image.</a>
 
 ![NewEndOfMonthTSFromDayTS Graph](NewEndOfMonthTSFromDayTS_Graph.png)
 
 **<p style="text-align: center;">
-Results of `NewEndOfMonthTSFromDayTS` Command
+Results of `NewEndOfMonthTSFromDayTS` Command (<a href="../NewEndOfMonthTSFromDayTS_Graph.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FillInterpolate`](../FillInterpolate/FillInterpolate) command
+* [`FillInterpolate`](../FillInterpolate/FillInterpolate.md) command

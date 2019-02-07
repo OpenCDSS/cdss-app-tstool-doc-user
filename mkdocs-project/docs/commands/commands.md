@@ -1,7 +1,7 @@
 # TSTool / Commands #
 
 This chapter summarizes features in the ***Commands*** menu.
-See also the [Command Reference overview](../command-ref/overview).
+See also the [Command Reference overview](../command-ref/overview.md).
 
 * [Introduction](#introduction)
 * Time Series Commands
@@ -46,7 +46,7 @@ Commands Menu
 </p>**
 
 Commands are organized into the following categories:
-	
+
 |**Command Category**|**Description**|
 |--|--|
 |***Select/Free Time Series***|Select or deselect time series for processing, free time series|
@@ -81,13 +81,13 @@ The plugin feature is under development.
 
 The menus for each category are discussed in the following sections.
 Selecting a command menu item will display a command editor.
-The editor dialog and command syntax are described in detail in the [Command Reference](../command-ref/overview).
+The editor dialog and command syntax are described in detail in the [Command Reference](../command-ref/overview.md).
 Menus are enabled/disabled depending on the state of the application (e.g., whether time series are available).
 When ***OK*** is pressed in the command editor, the command will be inserted before the first selected command.
 If no commands are selected, the command will be added to the end of the command list.
 If necessary, right click on the command list and use ***Deselect All Commands*** –
 this will ensure that commands are added at the end of the list.
-	
+
 The `TSList` command parameter is available for many commands to specify the list of time series to process.
 Criteria can be specified to match the alias and TSID strings.
 The pattern typically can contain wildcards.
@@ -97,7 +97,7 @@ For example, `Command(TSList=AllTS,...)` will process all available time series 
 `Command(TSList=AllMatchingTSID,TSID=”A*”,...)` will process all time series with an alias that starts with `A`.
 Refer to the command reference for a description of available parameters for a specific command.
 The standard values for the `TSList` parameter are as follows:
-	
+
 |**`TSList` Parameter Value**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|
 |--|--|
 |`AllMatchingTSID`|Process all time series that match the TSID parameter value.|
@@ -105,13 +105,13 @@ The standard values for the `TSList` parameter are as follows:
 |`EnsembleID`|Process all time series for the ensemble identifier specified by the `EnsembleID` parameter.|
 |`FirstMatchingTSID`|Process the first time series (from the start of commands to the previous command) that matches the `TSID` parameter.|
 |`LastMatchingTSID`|Process the last (previous to the current command) time series that matches the `TSID` parameter.|
-|`SelectedTS`|Process all time series that have been selected with [`SelectTimeSeries`](../command-ref/SelectTimeSeries/SelectTimeSeries) and [`DeselectTimeSeries`](../command-ref/DeselectTimeSeries/DeselectTimeSeries) commands.|
-|`SpecifiedTSID`|Process all time series in the specified list of time series identifiers (for example when used with the [`Add`](../command-ref/Add/Add) command the` AddTSID` parameter is used to provide the specified identifiers).|
+|`SelectedTS`|Process all time series that have been selected with [`SelectTimeSeries`](../command-ref/SelectTimeSeries/SelectTimeSeries.md) and [`DeselectTimeSeries`](../command-ref/DeselectTimeSeries/DeselectTimeSeries.md) commands.|
+|`SpecifiedTSID`|Process all time series in the specified list of time series identifiers (for example when used with the [`Add`](../command-ref/Add/Add.md) command the` AddTSID` parameter is used to provide the specified identifiers).|
 
 ## Select/Free Time Series ##
 
 The ***Commands / Select, Free, Sort Time Series*** menu inserts commands for selecting, deselecting, freeing, and sorting time series.
-	
+
 ![Menu_Commands_SelectTimeSeries](Menu_Commands_SelectTimeSeries.png)
 
 **<p style="text-align: center;">
@@ -120,58 +120,58 @@ Commands / Select, Free, Sort Time Series Menu
 
 Time series can be selected for specific actions and are processed by using the
 `TSList=SelectedTS` command parameters.
-The [`Free`](../command-ref/Free/Free) command frees time series resources,
+The [`Free`](../command-ref/Free/Free.md) command frees time series resources,
 for example when temporary time series are no longer needed or to free up memory for a large command file.
 
 ## Create Time Series ##
 
 The ***Commands / Create Time Series*** menu inserts commands for creating new time series.
-	
+
 ![Menu_Commands_CreateTimeSeries](Menu_Commands_CreateTimeSeries.png)
 
 **<p style="text-align: center;">
 Commands / Create Time Series Menu
 </p>**
-	 
+
 These commands create new time series from user-supplied data
-(see [`NewTimeSeries`](../command-ref/NewTimeSeries/NewTimeSeries)) or data from input time series.
+(see [`NewTimeSeries`](../command-ref/NewTimeSeries/NewTimeSeries.md)) or data from input time series.
 A time series created from an existing time series is fundamentally different from the original
 and cannot take its place with the same identifier.
 For example, the data interval or identifier is different in the new time series.
 Consequently, the commands force users to provide new TSID and/or alias information to identify the time series.
-	
+
 Commands may create a single or multiple output time series,
 although the trend is to continue enhancing commands to allow multiple time series to be processed.
 TSIDs and/or aliases for new time series are used during the discovery
 phase of command processing to provide identifiers for later commands.
 This allows command editors to provide time series choices even when the commands have not been run.
-	
+
 ## Read Time Series ##
 
 The ***Commands / Read Time Series*** menu inserts commands to read time series from a database, file, or web service (internet).
-	
+
 ![Menu_Commands_ReadTimeSeries](Menu_Commands_ReadTimeSeries.png)
 
 **<p style="text-align: center;">
 Commands / Read Time Series Menu
 </p>**
-	
+
 Read commands are alphabetized and are shown for enabled input types.
 The commands that are shown will depend on the input types and datastores that are enabled.
-See the [Command Reference read time series commands](../command-ref/overview#read-time-series) for a full list of read commands.
+See the [Command Reference read time series commands](../command-ref/overview.md#read-time-series) for a full list of read commands.
 Several commands perform supporting functions, such as setting the input period to read.
 Some data formats allow only a single time series to be read whereas
 other formats allow multiple time series to be read.
 Using read commands rather than TSID commands allows more control over the read,
 such as assigning an alias and converting data units.
-	
-The [`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList)
+
+The [`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md)
 command uses a delimited input file to provide location information and internally creates a list of TSIDs to read.
  
 ## Fill Time Series Missing Data ##
 
 The ***Commands / Fill Time Series Missing Data*** menu inserts commands for filling missing data in time series.
-	
+
 ![Menu_Commands_FillTimeSeries](Menu_Commands_FillTimeSeries.png)
 
 **<p style="text-align: center;">
@@ -201,7 +201,7 @@ original source data (e.g., an `m` or `e` character flag often is used to indica
 TSTool handles missing data by internally assigning a special numeric value where data are missing.
 Different input types may have different missing data values but typically `-999`,
 a similar extreme value, or `NaN` (not a number) is used.
-If the output period is specified using [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod) command
+If the output period is specified using [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) command
 or command parameters,
 then extensions to the available time series period are filled with the missing data value.
 Data flags are supported for some input types.
@@ -219,7 +219,7 @@ Consequently if values have been changed since the initial read (e.g., because o
 the changed values may impact the analysis.
 Basic statistical properties of the original data are saved after the initial read to allow use in later fill commands.
 For example, for monthly time series, the historical monthly averages are
-computed after the initial read to allow use with a [`FillHistMonthAverage`](../command-ref/FillHistMonthAverage/FillHistMonthAverage) command.
+computed after the initial read to allow use with a [`FillHistMonthAverage`](../command-ref/FillHistMonthAverage/FillHistMonthAverage.md) command.
 Fill commands often provide a `FillFlag` parameter, which allows filled values to be annotated.
 The flags can then be displayed in reports and graphs.
 
@@ -227,8 +227,8 @@ The overall period that is being filled is controlled by the time series period
 or analysis period that is specified with fill commands.
 TSTool will not automatically extend the period of a filled time series
 after the time series is initially read.
-Use the [`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod) and
-[`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod) commands to control the time series period.
+Use the [`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod.md) and
+[`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) commands to control the time series period.
 
 The following table lists the fill techniques that are supported by TSTool.
 
@@ -238,27 +238,27 @@ TSTool Fill Techniques and Associated Commands
 
 |**Technique**|**Command**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Typical Use**|
 |--|--|--
-|Constant|[`FillConstant`](../command-ref/FillConstant/FillConstant)|Use when missing data can be estimated as a constant.  For example, if only the early period of a "regulated" (e.g., reservoir) time series is missing, it may be appropriate to set the values to zero.|
-|Monthly total, daily pattern|[`FillDayTSFrom2MonthTSAnd1DayTS`](../command-ref/FillDayTSFrom2MonthTSAnd1DayTS/FillDayTSFrom2MonthTSAnd1DayTS)|Use to estimate a daily time series by applying the pattern of a related daily time series to monthly totals from the related and current time series.  For example, use to estimate daily streamflow from monthly total values.|
-|Fill from time series|[`FillFromTS`](../command-ref/FillFromTS/FillFromTS)|Use non-missing values from a time series to fill missing values in another time series.|
-|Historical Monthly Average|[`FillHistMonthAverage`](../command-ref/FillHistMonthAverage/FillHistMonthAverage)|Use with monthly time series to estimate missing monthly values as the average of historic monthly values.  For example, if applied to monthly precipitation data, a missing July value would be set to the average of observed July precipitation values (zero is an observation).|
-|Historical Year Average|[`FillHistYearAverage`](../command-ref/FillHistYearAverage/FillHistYearAverage)|Use with yearly time series to estimate missing data as the average of annual values.|
-|HydroBase diversion comments|[`FillUsingDiversionComments`](../command-ref/FillUsingDiversionComments/FillUsingDiversionComments)|This command is only available with the [State of Colorado's HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase) and uses diversion comments and the “not in use” flag to set additional diversion amounts to zero.|
-|Interpolation|[`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate)|Use to estimate missing data by interpolating between non-missing values.  For example, use to estimate reservoir level changes.|
-|Mixed Station|[`FillMixedStation`](../command-ref/FillMixedStation/FillMixedStation)|This command tries various combinations of [`FillRegression`](../command-ref/FillRegression/FillRegression) and [`FillMove2`](../command-ref/FillMove2/FillMove2) parameters with time series at different locations, to use the best combination.|
-|Maintenance of Variance|[`FillMOVE1`](../command-ref/FillMOVE1/FillMOVE1)|Use to estimate missing data using the Maintenance of Variance Extension (MOVE.1).  For example, use to estimate unregulated streamflow from a related gage.  **This command is currently not enabled**.|
-|Maintenance of Variance|[`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2)|Use to estimate missing data using the Maintenance of Variance Extension (MOVE.2).  For example, use to estimate unregulated streamflow from a related gage.  This approach has been shown to be slightly better than the MOVE.1 approach.|
-|Historical Pattern Averages|[`FillPattern`](../command-ref/FillPattern/FillPattern)|Similar to filling with historic averages with additional complexity of classifying historic months into categories.  For example, historic averages for wet, dry, and average periods are computed and used as the historic averages.  This command requires that the [`ReadPatternFile`](../command-ref/ReadPatternFile/ReadPatternFile) control command also be used.|
-|Prorate|[`FillProrate`](../command-ref/FillProrate/FillProrate)|Fill a time series by prorating known values with another time series.|
-|Regression|[`FillRegression`](../command-ref/FillRegression/FillRegression)|Use to estimate missing data by using ordinary least squares regression.  For example, use to estimate streamflow from a related gage.|
-|Repeat|[`FillRepeat`](../command-ref/FillRepeat/FillRepeat)|Use when it can be assumed that the last observed value before a missing period is a good estimate for missing data.  For example, use with "forecasted" data where no future value is available for interpolation.|
+|Constant|[`FillConstant`](../command-ref/FillConstant/FillConstant.md)|Use when missing data can be estimated as a constant.  For example, if only the early period of a "regulated" (e.g., reservoir) time series is missing, it may be appropriate to set the values to zero.|
+|Monthly total, daily pattern|[`FillDayTSFrom2MonthTSAnd1DayTS`](../command-ref/FillDayTSFrom2MonthTSAnd1DayTS/FillDayTSFrom2MonthTSAnd1DayTS.md)|Use to estimate a daily time series by applying the pattern of a related daily time series to monthly totals from the related and current time series.  For example, use to estimate daily streamflow from monthly total values.|
+|Fill from time series|[`FillFromTS`](../command-ref/FillFromTS/FillFromTS.md)|Use non-missing values from a time series to fill missing values in another time series.|
+|Historical Monthly Average|[`FillHistMonthAverage`](../command-ref/FillHistMonthAverage/FillHistMonthAverage.md)|Use with monthly time series to estimate missing monthly values as the average of historic monthly values.  For example, if applied to monthly precipitation data, a missing July value would be set to the average of observed July precipitation values (zero is an observation).|
+|Historical Year Average|[`FillHistYearAverage`](../command-ref/FillHistYearAverage/FillHistYearAverage.md)|Use with yearly time series to estimate missing data as the average of annual values.|
+|HydroBase diversion comments|[`FillUsingDiversionComments`](../command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md)|This command is only available with the [State of Colorado's HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase.md) and uses diversion comments and the “not in use” flag to set additional diversion amounts to zero.|
+|Interpolation|[`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate.md)|Use to estimate missing data by interpolating between non-missing values.  For example, use to estimate reservoir level changes.|
+|Mixed Station|[`FillMixedStation`](../command-ref/FillMixedStation/FillMixedStation.md)|This command tries various combinations of [`FillRegression`](../command-ref/FillRegression/FillRegression.md) and [`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2.md) parameters with time series at different locations, to use the best combination.|
+|Maintenance of Variance|[`FillMOVE1`](../command-ref/FillMOVE1/FillMOVE1.md)|Use to estimate missing data using the Maintenance of Variance Extension (MOVE.1).  For example, use to estimate unregulated streamflow from a related gage.  **This command is currently not enabled**.|
+|Maintenance of Variance|[`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2.md)|Use to estimate missing data using the Maintenance of Variance Extension (MOVE.2).  For example, use to estimate unregulated streamflow from a related gage.  This approach has been shown to be slightly better than the MOVE.1 approach.|
+|Historical Pattern Averages|[`FillPattern`](../command-ref/FillPattern/FillPattern.md)|Similar to filling with historic averages with additional complexity of classifying historic months into categories.  For example, historic averages for wet, dry, and average periods are computed and used as the historic averages.  This command requires that the [`ReadPatternFile`](../command-ref/ReadPatternFile/ReadPatternFile.md) control command also be used.|
+|Prorate|[`FillProrate`](../command-ref/FillProrate/FillProrate.md)|Fill a time series by prorating known values with another time series.|
+|Regression|[`FillRegression`](../command-ref/FillRegression/FillRegression.md)|Use to estimate missing data by using ordinary least squares regression.  For example, use to estimate streamflow from a related gage.|
+|Repeat|[`FillRepeat`](../command-ref/FillRepeat/FillRepeat.md)|Use when it can be assumed that the last observed value before a missing period is a good estimate for missing data.  For example, use with "forecasted" data where no future value is available for interpolation.|
 
 Fill commands can be used in sequence (e.g., use
-[`FillRegression`](../command-ref/FillRegression/FillRegression),
-then [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate),
-then [`FillConstant`](../command-ref/FillConstant/FillConstant)).
+[`FillRegression`](../command-ref/FillRegression/FillRegression.md),
+then [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate.md),
+then [`FillConstant`](../command-ref/FillConstant/FillConstant.md)).
 However, the analysis that occurs for each command may be impacted by earlier fill commands.
-If necessary, use the [`SetFromTS`](../command-ref/SetFromTS/SetFromTS) command to
+If necessary, use the [`SetFromTS`](../command-ref/SetFromTS/SetFromTS.md) command to
 piece together the results of independent fill commands into a final time series.
 The ***Results /  Graph – XY-Scatter*** output provides options for selecting different fill techniques and viewing analysis details.
 
@@ -289,7 +289,7 @@ the commands do not result in the creation of a new time series but change the d
 Manipulation commands typically add comments to the time series history,
 which can be viewed with time series properties.
 If it is necessary to create a separate time series to contain the result of a manipulation, use a
-[`Copy`](../command-ref/Copy/Copy), [`NewTimeSeries`](../command-ref/NewTimeSeries/NewTimeSeries),
+[`Copy`](../command-ref/Copy/Copy.md), [`NewTimeSeries`](../command-ref/NewTimeSeries/NewTimeSeries.md),
 or other command to create a “receiving” time series, and then manipulate this new time series.
 
 ## Analyze Time Series ##
@@ -331,9 +331,9 @@ Commands / Output Time Series Menu
 
 Commands that set global configuration values (e.g., output period) are listed at the start of the menu.
 The commands that are shown will depend on the input types and datastores that are enabled.
-See the [Command Reference output time series commands](../command-ref/overview#output-time-series) for a full list of read commands.
+See the [Command Reference output time series commands](../command-ref/overview.md#output-time-series) for a full list of read commands.
 
-The [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct) and other
+The [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) and other
 commands in the ***Commands / Visualization Processing*** menu are used to automate the production of graphs.
 
 Using the output commands allows the results of processing to be saved but does increase processing time.
@@ -344,7 +344,7 @@ the following steps may be taken to increase overall efficiency:
 ***Run / All Commands*** (ignore output commands) or ***Run / Selected Commands*** (ignore output commands).
 Therefore, use this menu choice to ignore the output commands.
 2. Only selected commands are processed.  Therefore select all but the output commands.
-3. Use an [`Exit`](../command-ref/Exit/Exit) control command before output commands to skip the output commands.
+3. Use an [`Exit`](../command-ref/Exit/Exit.md) control command before output commands to skip the output commands.
 This command can then be deleted or commented out when not needed.
 4. Commands can be converted to comments using the ***Commands*** menu or the popup menu that is
 displayed when right-clicking on the Commands list.
@@ -429,7 +429,7 @@ Commands / Template Processing Menu
 
 Templates are text files that can be expanded to reflect dynamic content.
 For example, a template command file can be used to repeat a block of commands for many time series.
-The documentation for the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile)
+The documentation for the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md)
 command provides examples of how templates can be used.
 
 ## Visualization Processing ##
@@ -444,7 +444,7 @@ Commands / Visualization Processing Menu
 
 TSTool lists time series results in the order that time series are created by commands.
 However, this can lead to very long lists of time series that are difficult to review.
-The [`NewTreeView`](../command-ref/NewTreeView/NewTreeView) command allows time series
+The [`NewTreeView`](../command-ref/NewTreeView/NewTreeView.md) command allows time series
 results to be organized in a way that is more appropriate.
 Other views may be implemented in the future to facilitate viewing results.
 
@@ -459,9 +459,9 @@ Commands / General – Comments Menu
 </p>**
 
 Comments are treated as special commands.
-The [`#`](../command-ref/Comment/Comment) character indicates a single-line comment.
-The [`/*`](../commad-ref/CommentBlockStart/CommentBlockStart) and
-[`*/`](../command-ref/CommentBlockEnd/CommentBlockEnd) commands indicate multi-line comments
+The [`#`](../command-ref/Comment/Comment.md) character indicates a single-line comment.
+The [`/*`](../command-ref/CommentBlockStart/CommentBlockStart.md) and
+[`*/`](../command-ref/CommentBlockEnd/CommentBlockEnd.md) commands indicate multi-line comments
 (for example to disable blocks of commands without removing them from the command file).
 The `#@readOnly` comment is used to protect a command file – TSTool will warn if an attempt is made to save the file.
 For example, this special comment is useful to protect old command files that are
@@ -513,15 +513,15 @@ The ***Commands / General – File Handling*** menu provides choices to insert c
 Commands / General – File Handling Menu
 </p>**
  
-The [`RemoveFile`](../command-ref/RemoveFile/RemoveFile) command is often used in testing.
-The [`FTPGet`](../command-ref/FTPGet/FTPGet) and [`WebGet`](../command-ref/WebGet/WebGet)
+The [`RemoveFile`](../command-ref/RemoveFile/RemoveFile.md) command is often used in testing.
+The [`FTPGet`](../command-ref/FTPGet/FTPGet.md) and [`WebGet`](../command-ref/WebGet/WebGet.md)
 commands are used to retrieve files from the internet.
 
 ## General Commands - Logging and Messaging ##
 
 The ***Commands / General – Logging and Messaging*** menu provides choices to insert commands used in logging.
 It is recommended that each command file use a
-[`StartLog`](../command-ref/StartLog/StartLog) command as the first command,
+[`StartLog`](../command-ref/StartLog/StartLog.md) command as the first command,
 to create a log file that can facilitate troubleshooting and reviewing work at a later time.
 Setting the debug and warning level with commands can facilitate troubleshooting specific command logic.
 
@@ -547,7 +547,7 @@ These properties can be set with commands to facilitate overall workflow logic,
 for example to allow configuration information to be defined at the start of a command file,
 and be used by other commands.
 
-The [`RunCommands`](../command-ref/RunCommands/RunCommands) command can be used to create
+The [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command can be used to create
 a “master” command file that runs other command files.
 This approach is used to create test suites to validate the TSTool software.
 Commands also are available to run external programs, Python scripts,
@@ -557,12 +557,12 @@ and the Army Corps of Engineers DSSUTL software, which provides time series proc
 
 The ***Commands / General – Test Processing*** menu provides choices to insert
 commands related to software and process testing.
-See also the [Quality Control chapter](../quality-control/quality-control).
+See also the [Quality Control chapter](../quality-control/quality-control.md).
 A test case can be a simple test (e.g., test of a single command with a specific
 combination of parameters) or a more complex test (e.g., a test of a command file used to process a data set file).
-The [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile)
+The [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md)
 can be used to search a folder and sub-folders for command files matching a pattern (e.g., `Test_*.TSTool`).
-This will create a master command file that includes [`RunCommands`](../command-ref/RunCommands/RunCommands) commands.
+This will create a master command file that includes [`RunCommands`](../command-ref/RunCommands/RunCommands.md) commands.
 These commands are used by software developers to create test suites
 to verify TSTool software functionality and can also be used by software users to
 verify that a process is certified and gives expected results.
@@ -575,7 +575,7 @@ Commands / General – Test Processing Menu
 </p>**
  
 The following is an example command file to run the
-[`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile) command:
+[`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command:
 
 ```text
 #
@@ -592,8 +592,8 @@ OutputFile="..\run\RunRegressionTest_commands_general.TSTool",Append=False)
 
 The following command file is generated from the above and can be run to execute the individual tests.
 Typically each test uses the
-[`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries) or
-[`CompareFiles`](../command-ref/CompareFiles/CompareFiles)
+[`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md) or
+[`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md)
 command to generate a warning if results are not as expected.
 
 ```

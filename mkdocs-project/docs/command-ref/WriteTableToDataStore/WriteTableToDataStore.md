@@ -78,12 +78,11 @@ DataStoreRelatedColumnsMap=”DataTypeID:Abbreviation”
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../WriteTableToDataStore.png">See also the full-size image.</a>
 
 ![WriteTableToDataStore](WriteTableToDataStore.png)
 
 **<p style="text-align: center;">
-`WriteTableToDataStore` Command Editor
+`WriteTableToDataStore` Command Editor (<a href="../WriteTableToDataStore.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -110,7 +109,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToDataStore).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToDataStore).
 
 ### Writing a Table with Foreign Keys ###
 
@@ -218,4 +217,4 @@ In this case, the relationship table will add overhead and potentially confusion
 
 ## See Also ##
 
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore) command
+* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command

@@ -24,13 +24,13 @@ For example, the following figure illustrates annual time series values listed h
 
 This command can split the data into the following representation,
 which is more conducive to time series processing (for example use the
-[`TableToTimeSeries`](../TableToTimeSeries/TableToTimeSeries) command to
+[`TableToTimeSeries`](../TableToTimeSeries/TableToTimeSeries.md) command to
 convert the results to time series that can be processed in TSTool).
 
 ![SplitTableRow Tuple Output](SplitTableRow_TupleOutput.png)
 
 ### Measure Split ###
-	
+
 A measure split is used to split a longer distance into shorter segments.
 Start and end values in the row are used to create segmented row distances.
 For example, this can be used to break a streamflow reach into segments of equal length,
@@ -45,21 +45,19 @@ The start and end columns can be specified in any order but the output is always
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for tuple split.
-<a href="../SplitTableRow_Tuple.png">See also the full-size image.</a>
 
 ![SplitTableRow Tuple](SplitTableRow_Tuple.png)
 
 **<p style="text-align: center;">
-`SplitTableRow` Command Editor for Tuple Split
+`SplitTableRow` Command Editor for Tuple Split (<a href="../SplitTableRow_Tuple.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for measure split.
-<a href="../SplitTableRow.png">See also the full-size image.</a>
 
 ![SplitTableRowTuple](SplitTableRow.png)
 
 **<p style="text-align: center;">
-`SplitTableRow` Command Editor for Measure Split
+`SplitTableRow` Command Editor for Measure Split (<a href="../SplitTableRow.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -90,13 +88,13 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SplitTableRow).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SplitTableRow).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FormatTableString`](../FormatTableString/FormatTableString) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command
-* [`SplitTableColumn`](../SplitTableColumn/SplitTableColumn) command
-* [`TableToTimeSeries`](../TableToTimeSeries/TableToTimeSeries) command
+* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
+* [`SplitTableColumn`](../SplitTableColumn/SplitTableColumn.md) command
+* [`TableToTimeSeries`](../TableToTimeSeries/TableToTimeSeries.md) command

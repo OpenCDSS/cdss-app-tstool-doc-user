@@ -73,7 +73,7 @@ tstool –commands commands.TSTool
 It is customary to name command files with a `.TSTool` file extension.
 It may be necessary to specify a full (absolute) path to the command file when
 running in batch mode in order for TSTool to fully understand the working directory.
-See the [Running TSTool in Various Modes appendix](../appendix-running/running)
+See the [Running TSTool in Various Modes appendix](../appendix-running/running.md)
 for more information about running in batch and other modes.
 
 ## Database Selection and User Authentication ##
@@ -84,7 +84,7 @@ TSTool may display a dialog at startup asking for information.
 This convention is being phased out in favor of database datastores that are configured prior to runtime.
 
 For example, if the HydroBase input type is enabled (see the
-[HydroBase Input Type Appendix](../datastore-ref/CO-HydroBase/CO-HydroBase)),
+[HydroBase Input Type Appendix](../datastore-ref/CO-HydroBase/CO-HydroBase.md)),
 the HydroBase login dialog will be shown when TSTool starts in interactive mode.
 The dialog is used to select a server and database for the State of Colorado’s HydroBase database.
 A HydroBase database can also be selected from the ***File / Open / HydroBase...*** menu.
@@ -100,8 +100,8 @@ HydroBase features will be disabled if the HydroBase login is canceled.
 
 Database connections are often configured using configuration files
 so that the dialog confirmation can be avoided.
-See the [Installation and Configuration appendix](../appendix-install/install)
-and information in the [data store appendices](../datastore-ref/overview).
+See the [Installation and Configuration appendix](../appendix-install/install.md)
+and information in the [data store appendices](../datastore-ref/overview.md).
 The ***Tools / Options*** menu allows input types to be enabled and disabled.
 
 ## Main Interface ##
@@ -110,12 +110,11 @@ The following figure illustrates the main TSTool interface immediately after sta
 A message is displayed in the upper left letting the user know that
 data connections are still being initialized for configured datastores.
 Trying to use commands that depend on data connections that have not been initialized will result in errors.
-<a href="../GUI_MainWait.png">See also the full-size image.</a>
 
 ![GUI_MainWait](GUI_MainWait.png)
 
 **<p style="text-align: center;">
-TSTool At Startup, Waiting for Data Connections to be Initialized
+TSTool At Startup, Waiting for Data Connections to be Initialized (<a href="../GUI_MainWait.png">see also the full-size image</a>)
 </p>**
  
 The following figure illustrates the main TSTool interface after data connections are initialized.
@@ -128,12 +127,11 @@ The interface is divided into three main areas:
 Status and progress information is displayed at the bottom of the main
 window and also in the borders around main panels (e.g.,
 to show how many items are in a list and how many are selected).
-<a href="../GUI_MainBlank.png">See also the full-size image.</a>
 
 ![GUI_MainBlank](GUI_MainBlank.png)
 
 **<p style="text-align: center;">
-Initial TSTool Interface
+Initial TSTool Interface (<a href="../GUI_MainBlank.png">see also the full-size image</a>)
 </p>**
 
 ### Input/Query Options and Time Series List Area ###
@@ -144,7 +142,7 @@ The ***Input/Query Options*** choices help select time series information from d
 The interactive query interface is useful when selecting a time series from a file,
 database, or web service (internet).
 An alternative to the following interactive approach is to use
-read commands from the ***Commands*** menu (see the [Commands chapter](../commands/commands)).
+read commands from the ***Commands*** menu (see the [Commands chapter](../commands/commands.md)).
 To select time series, perform the following steps:
 
 1. **Select the source of the data**.  Select a ***Datastore*** or ***Input type***.
@@ -205,12 +203,11 @@ As TSIDs are inserted, TSTool will attempt to read the time series
 properties to ensure that the TSID is correct,
 and an indicator will be shown for time series that could not be retrieved.
 This may result in a slight pause but helps ensure that commands are functional.
-<a href="../GUI_MainWithCommands.png">See also the full-size image.</a>
 
 ![GUI_MainWithCommands](GUI_MainWithCommands.png)
 
 **<p style="text-align: center;">
-TSTool after Pressing Get Time Series List and selecting from Time Series List
+TSTool after Pressing Get Time Series List and selecting from Time Series List (<a href="../GUI_MainWithCommands.png">see also the full-size image</a>)
 </p>**
 
 ### Command List and Command Error Indicators ###
@@ -218,13 +215,13 @@ TSTool after Pressing Get Time Series List and selecting from Time Series List
 The ***Commands*** list occupies the middle of the main interface and contains:
 
 * time series identifiers corresponding to time series selected from the ***Time Series List***
-* commands inserted using the ***Commands*** menu (see the [Commands chapter](commands/commands)).
+* commands inserted using the ***Commands*** menu (see the [Commands chapter](../commands/commands.md)).
 
 Time series identifiers are added to the ***Commands*** list by selecting items in the
 ***Time Series List*** and copying the identifiers to the ***Commands*** list, as discussed above.
 An alternative to using the ***Time Series List*** to select time series is to use
 specific read commands from the ***Commands*** menu (e.g., use a
-[`ReadDateValue`](../command-ref/ReadDateValue/ReadDateValue) command).
+[`ReadDateValue`](../command-ref/ReadDateValue/ReadDateValue.md) command).
 Using read commands is useful when more control is needed during the
 data read or when processing more than one time series with one command.
 
@@ -252,9 +249,9 @@ A summary of the pop-up menu choices is as follows:
 |***Find Commands(s)***|Find commands in the command list.  This displays a dialog.  Use the right-click in the found items to go to or select found items.|
 |***Select All Commands***|Select all the commands.|
 |***Deselect All Commands***|Deselect all the commands.  This is useful because only selected commands are processed (or all if none are selected).  It is therefore important not to unknowingly have one or a few commands selected during processing.|
-|***Convert Selected Commands to # Comments***|Convert selected commands to [`#`](../command-ref/Comment/Comment) comments.|
+|***Convert Selected Commands to # Comments***|Convert selected commands to [`#`](../command-ref/Comment/Comment.md) comments.|
 |***Convert Selected Commands from # Comments***|Convert # comments to commands.|
-|***Convert TSID command to general ReadTimeSeries() command***|Convert the selected TSID command to a [`ReadTimeSeries`](../command-ref/ReadTimeSeries/ReadTimeSeries) command.  This general command allows an alias to be assigned to the time series.|
+|***Convert TSID command to general ReadTimeSeries() command***|Convert the selected TSID command to a [`ReadTimeSeries`](../command-ref/ReadTimeSeries/ReadTimeSeries.md) command.  This general command allows an alias to be assigned to the time series.|
 |***Convert TSID command to specific Read...() command***|Convert the selected TSID command to a specific `Read...` command.  The TSID is examined to determine a suitable read command.  Specific read commands may provide parameters to control reading the time series, and may also allow multiple time series to be read.|
 |***Run All Commands (create all output)***|Run all commands and create output (e.g., graphs and files).|
 |***Run All Commands (ignore output commands)***|Run all commands but skip any output commands.  This is useful if a batch command file has been read and time series are to be listed in the GUI but output products are not to be generated automatically.|
@@ -315,12 +312,11 @@ The commands in the ***Commands*** list are processed by pressing the
 ***Commands*** list area (or by using the Run menu).
 The time series and other output that result from processing are
 listed in the bottom of the main interface, as shown in the following figure:
-<a href="../GUI_MainWithTS.png">See also the full-size image.</a>
 
 ![GUI_MainWithTS](GUI_MainWithTS.png)
 
 **<p style="text-align: center;">
-TSTool after Running Commands
+TSTool after Running Commands (<a href="../GUI_MainWithTS.png">see also the full-size image</a>)
 </p>**
 
 The time series listed in the ***Time Series Results*** list can then viewed using the
@@ -385,18 +381,17 @@ However, as of version 12.00.00, graph templates have been enabled to allow conf
 The ***Ensembles*** and ***Time Series*** results tabs provide ***Graph with template:*** buttons.
 These buttons can be used to graph an ensemble or time series by
 relaying on a template graph time series product.
-The [TSView Time Series Viewing Tools appendix Time Series Graph Templates](../appendix-tsview/tsview#time-series-graph-templates)
+The [TSView Time Series Viewing Tools appendix Time Series Graph Templates](../appendix-tsview/tsview.md#time-series-graph-templates)
 section provides information about time series products.
 
 The TSTool interface also provides an intermediary step to using
 graph templates specifically for ensembles.
 If ***Graph – Ensemble*** is selected for a time series, the following dialog will be shown.
-<a href="../Menu_Results_Graph_Ensemble.png">See also the full-size image.</a>
 
 ![Menu_Results_Graph_Ensemble](Menu_Results_Graph_Ensemble.png)
 
 **<p style="text-align: center;">
-Results – Graph Ensemble Dialog
+Results – Graph Ensemble Dialog (<a href="../Menu_Results_Graph_Ensemble.png">see also the full-size image</a>)
 </p>**
 
 This dialog provides the ability to indicate how the selected
@@ -404,12 +399,12 @@ time series should be processed into an ensemble,
 and also allows a graph template to be selected,
 which typically provides information about graph properties such as title and legend.
 The ***Output year type*** and ***Reference date*** input are passed
-to the same code as the [`CreateEnsembleFromOneTimeSeries`](../command-ref/CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries) command.
+to the same code as the [`CreateEnsembleFromOneTimeSeries`](../command-ref/CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md) command.
 The ***Statistics*** input allows statistics time series to be calculated and added to the graph,
 and are passed to the same code as the
-[`NewStatisticTimeSeriesFromEnsemble`](../command-ref/NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble) command.
+[`NewStatisticTimeSeriesFromEnsemble`](../command-ref/NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) command.
 Finally, the ***Graph template*** selection specifies a graph template
-and is used similar to the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct) command.
+and is used similar to the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command.
 These steps are necessary for TSTool to be able to generically handle various input and configurations.
 The resulting graph will be shown and will reflect the calculations and configuration properties.
 All input is optional and if omitted will result in default output.
@@ -418,12 +413,11 @@ A similar dialog is used if ***Graph – Line (Ensemble Graph)*** is selected fo
 as shown below.  In this case there is no need to create a new ensemble since it already exists.
 Therefore, input is provided to add statistics time series to the output,
 and specify the graph template to configure the graph.
-<a href="../Menu_Results_Graph_Ensemble.png">See also the full-size image.</a>
 
 ![Menu_Results_Graph_Ensemble](Menu_Results_Graph_Ensemble.png)
 
 **<p style="text-align: center;">
-Results – Graph Ensemble Dialog
+Results – Graph Ensemble Dialog (<a href="../Menu_Results_Graph_Ensemble.png">see also the full-size image</a>)
 </p>**
 
 The remainder of this chapter summarizes the TSTool menus.
@@ -499,7 +493,7 @@ The primary difference between version 9 and later syntax is that the
 
 The ***File / Save / Time Series As*** menu item displays a file chooser
 dialog for saving time series in the ***Time Series Results*** list.
-See the [Input Type Appendices](../datastore-ref/overview) for examples of supported file formats.
+See the [Input Type Appendices](../datastore-ref/overview.md) for examples of supported file formats.
 Only the selected time series in the ***Time Series Results*** list are saved (or all, if none are selected).
 Not all formats are supported because in most cases the write
 commands are used to automate processing of time series and provider greater control.
@@ -519,22 +513,20 @@ File / Properties Menu
  
 The ***File / Properties / Commands Run*** menu item displays information from the
 last time that the commands were run, including global properties that impact results.
-<a href="../Menu_File_PropertiesRun.png">See also the full-size image.</a>
 
 ![Menu_File_PropertiesRun](Menu_File_PropertiesRun.png)
 
 **<p style="text-align: center;">
-Properties of the Last Commands Run
+Properties of the Last Commands Run (<a href="../Menu_File_PropertiesRun.png">see also the full-size image</a>)
 </p>**
 
 This information is useful for troubleshooting processing. 
 The ***File / Properties / TSTool Session*** menu item displays information about the current TSTool session, as follows.
-<a href="../Menu_File_Properties_TSToolSession.png">See also the full-size image.</a>
 
 ![Menu_File_Properties_TSToolSession](Menu_File_Properties_TSToolSession.png)
 
 **<p style="text-align: center;">
-TSTool Session Properties
+TSTool Session Properties (<a href="../Menu_File_Properties_TSToolSession.png">see also the full-size image</a>)
 </p>**
 
 This information is useful for checking the TSTool configuration. 
@@ -544,12 +536,11 @@ including the database that is being used, database version,
 and the water districts that are in the database being queried.
 The water districts are determined from the structure table in HydroBase.
 The information that is shown is consistent with that shown by other State of Colorado tools and is useful for troubleshooting.
-<a href="../Menu_File_Properties_HydroBase.png">See also the full-size image.</a>
 
 ![Menu_File_Properties_HydroBase](Menu_File_Properties_HydroBase.png)
 
 **<p style="text-align: center;">
-HydroBase Properties Dialog
+HydroBase Properties Dialog (<a href="../Menu_File_Properties_HydroBase.png">see also the full-size image</a>)
 </p>**
 
 ### Set Working Directory ###
@@ -562,7 +553,7 @@ with the current setting being defined by the most recent selection:
 1. The startup directory for the TSTool program,
 2. The directory where a command file was opened,
 3. The directory where a command file was saved,
-4. The directory specified by a [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir)
+4. The directory specified by a [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md)
 command (use of this command is discouraged because it hard-codes a system-specific folder in command files),
 5. The directory specified by ***File / Set Working Directory***.
 
@@ -643,15 +634,15 @@ Note that the multi-line `/* */` comment notation can be inserted using the
 ### Convert TSID to Read Commands ###
 
 The ***Edit / Convert TSID command to general ReadTimeSeries() command*** inserts a new
-[`ReadTimeSeries`](../command-ref/ReadTimeSeries/ReadTimeSeries) command using
+[`ReadTimeSeries`](../command-ref/ReadTimeSeries/ReadTimeSeries.md) command using
 the TSID and replaces the original TSID command.
-The [`ReadTimeSeries`](../command-ref/ReadTimeSeries/ReadTimeSeries)
+The [`ReadTimeSeries`](../command-ref/ReadTimeSeries/ReadTimeSeries.md)
 command allows an alias to be specified for the time series.
 
 The ***Edit / Convert TSID command to specific Read…()*** command inserts
 a new read command using the TSID and replaces the original TSID command.
 Specific read commands may not be available for all input types and
-therefore the [`ReadTimeSeries`](../command-ref/ReadTimeSeries/ReadTimeSeries) command may need to be used.
+therefore the [`ReadTimeSeries`](../command-ref/ReadTimeSeries/ReadTimeSeries.md) command may need to be used.
 Alternatively, insert a read command using the ***Commands*** menu choices.
 
 ## View Menu - Display Useful Information and Map Interface ##
@@ -667,13 +658,13 @@ which is useful when troubleshooting whether a data store is properly configured
 Note that some data stores are not listed in the main window Datastore choices but are available for use by commands.
 
 The ***View / Data Units*** menu item displays a list of configured data units,
-which are recognized by the [ConvertDataUnits](../command-ref/ConvertDataUnits/ConvertDataUnits)
+which are recognized by the [ConvertDataUnits](../command-ref/ConvertDataUnits/ConvertDataUnits.md)
 command and other TSTool features that enforce data unit consistency.
 Data units from all data repositories are not automatically understood by TSTool,
 although additional capabilities may be added in the future.
 
 The ***View / Map*** menu displays a map interface in a separate window.
-See the [Spatial Data Integration chapter](../spatial/spatial) for more information.
+See the [Spatial Data Integration chapter](../spatial/spatial.md) for more information.
 
 The ***View / Close All View Windows*** menu closes all visible view windows, including graphs.
 This is useful if the command file has generated many graphs and the user wishes to close them all at once.
@@ -733,8 +724,8 @@ Table commands are organized into the following categories:
 * ***Output Table*** – write tables to various output formats
 * ***Running and Properties*** – manipulate processor properties in and out of tables
 
-The [Commands Chapter](../commands/commands) discusses commands in more detail and the
-[Command Reference Appendix](../command-ref/overview) provides a reference for each command.
+The [Commands Chapter](../commands/commands.md) discusses commands in more detail and the
+[Command Reference Appendix](../command-ref/overview.md) provides a reference for each command.
 
 ## Run Menu – Run Commands ##
 
@@ -776,10 +767,10 @@ menu by right clicking on a command in the ***Commands*** list.
 The ***Run / Process TS Product File*** menu items can be used to
 create time series products by processing time series product definition files.
 The time series identifiers in the files will be run similar to TSID commands.
-The [TSView Time Series Viewing Tools Appendix](../appendix-tsview/tsview) describes the format of these files.
+The [TSView Time Series Viewing Tools Appendix](../appendix-tsview/tsview.md) describes the format of these files.
 Time series product definition files can be saved from graph views using
 ***Save As / Time Series Product***.
-The [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct)
+The [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md)
 command provides equivalent functionality.
 
 ## Results Menu – Display Time Series ##
@@ -799,7 +790,7 @@ Graphing time series results in slightly different viewing options being availab
 depending on the type of graph.
 Three views of time series are generally available: graph, summary, and table.
 Graph properties can be edited by right-clicking on the graph.
-The [TSView Time Series Viewing Tools Appendix](../appendix-tsview/tsview) describes the graphing tools in detail.
+The [TSView Time Series Viewing Tools Appendix](../appendix-tsview/tsview.md) describes the graphing tools in detail.
 The following table summarizes Results menu items.
 
 **<p style="text-align: center;">
@@ -846,7 +837,7 @@ additional analysis is performed to produce the data product.
 Tools Menu
 </p>**
 
-Analysis tools are described in more detail in the [Tools Chapter](../tools/tools).
+Analysis tools are described in more detail in the [Tools Chapter](../tools/tools.md).
 The following sections describe the ***Tools / Options and Tools / Diagnostics*** features.
 Some tools are provided based on enabled input types.
 
@@ -874,12 +865,11 @@ The user settings will override the software installation settings.
 Datastores and input types will not be listed in the user configuration
 file by default and must be added to the file with a text editor.
 Once added, the ***Tools / Options*** editor will allow the settings to be toggled and rewritten to the configuration files.
-<a href="../Menu_Tools_Options_InputTypes.png">See also the full-size image.</a>
 
 ![Menu_Tools_Options_InputTypes](Menu_Tools_Options_InputTypes.png)
 
 **<p style="text-align: center;">
-Datastore and Input Types that are Enabled based on Installation Configuration File
+Datastore and Input Types that are Enabled based on Installation Configuration File (<a href="../Menu_Tools_Options_InputTypes.png">see also the full-size image</a>)
 </p>**
 
 ### Diagnostics ###
@@ -887,7 +877,7 @@ Datastore and Input Types that are Enabled based on Installation Configuration F
 The ***Tools / Diagnostics*** menu displays the diagnostics interface,
 which is used to set message levels and view messages as TSTool processes data.
 The ***Tools / Diagnostics – View Log File*** menu displays the log file viewer.
-These tools are useful for troubleshooting problems.  Refer to the [Tools Chapter](../tools/tools) for more information.
+These tools are useful for troubleshooting problems.  Refer to the [Tools Chapter](../tools/tools.md) for more information.
 
 ## Help Menu ##
 
@@ -896,7 +886,7 @@ These tools are useful for troubleshooting problems.  Refer to the [Tools Chapte
 **<p style="text-align: center;">
 Help Menu
 </p>**
-	 
+
 The ***Help / About TSTool*** menu item displays the program version number,
 for use in troubleshooting and support.
 Information about the software and system can be displayed from the version dialog, to help with troubleshooting.

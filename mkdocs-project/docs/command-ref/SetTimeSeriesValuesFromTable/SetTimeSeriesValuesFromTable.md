@@ -12,28 +12,26 @@
 ## Overview ##
 
 The `SetTimeSeriesValuesFromTable` command sets values in time series by matching the TSID and date/time in a table.  Examples of use are:
-	
+
 * Provide data values from a table to override missing values in the time series
 * Set a stream of values from a table into time series
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing time series parameters.
-<a href="../SetTimeSeriesValuesFromTable.png">See also the full-size image.</a>
 
 ![SetTimeSeriesValuesFromTable](SetTimeSeriesValuesFromTable.png)
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromTable` Command Editor Showing Time Series Parameters
+`SetTimeSeriesValuesFromTable` Command Editor Showing Time Series Parameters (<a href="../SetTimeSeriesValuesFromTable.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing table parameters.
-<a href="../SetTimeSeriesValuesFromTable_Table.png">See also the full-size image.</a>
 
 ![SetTimeSeriesValuesFromTable_Table](SetTimeSeriesValuesFromTable_Table.png)
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromTable` Command Editor Showing Table Parameters
+`SetTimeSeriesValuesFromTable` Command Editor Showing Table Parameters (<a href="../SetTimeSeriesValuesFromTable_Table.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -49,10 +47,10 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
-|`TSIDFormat`|The specification to format the time series identifier to match the TableTSIDColumn column.	None – must be specified.|
+|`TSIDFormat`|The specification to format the time series identifier to match the TableTSIDColumn column.  None – must be specified.|
 |`SetStart`|The date/time to start setting values, or processor `${Property}`.|Set the full period.|
 |`SetEnd`|The date/time to end setting values, or processor `${Property}`.|Set the full period.|
 |`SetFlag`|String to flag values that are set, used for all time series.|No flag.|
@@ -67,11 +65,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetTimeSeriesValuesFromTable).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetTimeSeriesValuesFromTable).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SetTimeSeriesValuesFromLookupTable`](../SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`SetTimeSeriesValuesFromLookupTable`](../SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable.md) command

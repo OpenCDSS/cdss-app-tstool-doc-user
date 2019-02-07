@@ -13,7 +13,7 @@
 
 By default, the time series period is extended to include the output period, if specified,
 when a time series is read.
-See also the [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod) command.
+See also the [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command.
 If the extended period subsequently contains missing data, it can be filled with other commands.
 The `SetAutoExtendPeriod` command can be used to change this
 setting if it is not desirable (e.g., for performance reasons).
@@ -21,12 +21,11 @@ setting if it is not desirable (e.g., for performance reasons).
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SetAutoExtendPeriod.png">See also the full-size image.</a>
 
 ![SetAutoExtendPeriod](SetAutoExtendPeriod.png)
 
 **<p style="text-align: center;">
-`SetAutoExtendPeriod` Command Editor
+`SetAutoExtendPeriod` Command Editor (<a href="../SetAutoExtendPeriod.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -46,10 +45,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetAutoExtendPeriod).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetAutoExtendPeriod).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod) command
+* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command

@@ -14,12 +14,12 @@
 The `SetFromTS` command sets data in a dependent time series by transferring values
 from an independent time series.
 A period and window within the year can be specified to limit the period that is processed.
-See also the [`FillFromTS`](../FillFromTS/FillFromTS) command,
+See also the [`FillFromTS`](../FillFromTS/FillFromTS.md) command,
 which will transfer values only when the dependent time series has missing data.
 Only data values are transferred – time series properties will not be modified.
 If multiple time series or an ensemble is being processed,
 the number of independent time series must be one or the same number as the time series being filled.
-	
+
 It is also possible to use this command to transfer data between time series that have different intervals.
 If the independent time series has a smaller interval,
 then `SetWindowStart` and `SetWindowEnd` parameters should be used to specify a window to
@@ -34,31 +34,28 @@ for the dependent time series (e.g., annual value used for each month).
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SetFromTS.png">See also the full-size image.</a>
 
 ![SetFromTS](SetFromTS.png)
 
 **<p style="text-align: center;">
-`SetFromTS` Command Editor
+`SetFromTS` Command Editor (<a href="../SetFromTS.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the
 command for analysis window and period parameters.
-<a href="../SetFromTS_Period.png">See also the full-size image.</a>
 
 ![SetFromTS Period](SetFromTS_Period.png)
 
 **<p style="text-align: center;">
-`SetFromTS` Command Editor for Period and Window Parameters
+`SetFromTS` Command Editor for Period and Window Parameters (<a href="../SetFromTS_Period.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for control parameters.
-<a href="../SetFromTS_Control.png">See also the full-size image.</a>
 
 ![SetFromTS Control](SetFromTS_Control.png)
 
 **<p style="text-align: center;">
-`SetFromTS` Command Editor for Set Control Parameters
+`SetFromTS` Command Editor for Set Control Parameters (<a href="../SetFromTS_Control.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -74,7 +71,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`IndependentTSList`|Indicates how to determine the list of independent time series (see the explanation of `TSList`).|`AllTS`|
@@ -93,9 +90,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetFromTS).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetFromTS).
 
-A sample command file to process data from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase) is as follows:
+A sample command file to process data from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md) is as follows:
 
 ```text
 # 08241000 - TRINCHERA CREEK ABOVE MOUNTAIN HOME RESERVOIR
@@ -109,5 +106,5 @@ SetFromTS(TSList=AllMatchingTSID,TSID="08241000.DWR.Streamflow.Month",Independen
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
-* [`FillFromTS`](../FillFromTS/FillFromTS) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`FillFromTS`](../FillFromTS/FillFromTS.md) command

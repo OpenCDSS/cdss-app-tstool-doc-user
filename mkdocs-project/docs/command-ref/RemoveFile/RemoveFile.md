@@ -22,12 +22,11 @@ Even read-only files may be removed by this command, depending on how the operat
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../RemoveFile.png">See also the full-size image.</a>
 
 ![RemoveFile](RemoveFile.png)
 
 **<p style="text-align: center;">
-`RemoveFile` Command Editor
+`RemoveFile` Command Editor (<a href="../RemoveFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -48,10 +47,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/RemoveFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/RemoveFile).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CopyFile`](../CopyFile/CopyFile) command
+* [`CopyFile`](../CopyFile/CopyFile.md) command

@@ -54,7 +54,7 @@ CommandName(Parameter1=”Value1”,Parameter2=”Value2”)
 ```
 
 The `CommandName` matches a command from the TSTool Commands menu and as
-documented in the [Command Reference](overview) documentation, which describes command parameters.
+documented in the [Command Reference](overview.md) documentation, which describes command parameters.
 Any parameter value can be surrounded by double quotes to protect
 whitespace and other characters (such as characters used in the command itself
 including equal sign, comma, and parenthesis).
@@ -71,7 +71,7 @@ In some cases this results in an acronym being converted from uppercase to misse
 
 In some cases it is necessary to set one command parameter using the value of another command parameter.
 This capability has been implemented for a small number of commands,
-for example [`NewStatisticEnsemble`](../command-ref/NewStatisticEnsemble/NewStatisticEnsemble).
+for example [`NewStatisticEnsemble`](../command-ref/NewStatisticEnsemble/NewStatisticEnsemble.md).
 To reference a command parameter in another parameter, use the notation:
 
 ```
@@ -87,8 +87,8 @@ similar to how the `ts:` notation provides a scope for time series properties (d
 
 Command files use comments to disable commands without deleting them.
 A [`#`](Comment/Comment) character at the start of a line indicates a one-line comment.
-A group of lines that start with [`/*`](CommentBlockStart/CommentBlockStart) and end with
-[`*/`](CommentBlockEnd/CommentBlockEnd) indicate a block of comments and all intervening commands will be ignored in processing.
+A group of lines that start with [`/*`](CommentBlockStart/CommentBlockStart.md) and end with
+[`*/`](CommentBlockEnd/CommentBlockEnd.md) indicate a block of comments and all intervening commands will be ignored in processing.
 
 ## Commands - Time Series Identifiers ##
 
@@ -118,7 +118,7 @@ The datastore (or “input type” and corresponding filename) allow the softwar
 
 The second form of the TSID is a unique identifier for a time series within TSTool and is used after reading the data.
 In cases where more than one time series will have the same TSID after reading,
-an alias can be assigned (see the [Introduction chapter](../introduction/introduction) and the
+an alias can be assigned (see the [Introduction chapter](../introduction/introduction.md) and the
 [Time Series – Properties](#time-series-properties) section below).
 
 TSIDs may be more complex if, for example, the data type requires the use of multiple parts for uniqueness.
@@ -132,12 +132,12 @@ The processor interacts with all commands and is controlled with properties
 that initially have internal defaults (e.g., the default is to read all
 available data rather than a specified input period).
 Properties that control the processor are set with specific commands (e.g.,
-[`SetInputPeriod`](SetInputPeriod/SetInputPeriod)) and user-supplied
+[`SetInputPeriod`](SetInputPeriod/SetInputPeriod.md)) and user-supplied
 properties can be set with the
-[`SetProperty`](SetProperty/SetProperty) command (e.g., it is common to manage
+[`SetProperty`](SetProperty/SetProperty.md) command (e.g., it is common to manage
 file locations and dates used in processing).
-The [`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile) and
-[`WritePropertiesToFile`](WritePropertiesToFile/WritePropertiesToFile) commands
+The [`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile.md) and
+[`WritePropertiesToFile`](WritePropertiesToFile/WritePropertiesToFile.md) commands
 can be used to save and manage properties outside of TSTool.
 
 Processor properties can be used to specify parameters for commands using the following notation:
@@ -163,7 +163,7 @@ Time series properties are specific to individual time series.
 Some internal properties are handled as specific data values (e.g.,
 data units are a string associated with a time series) whereas
 user-assigned properties are assigned to the time series as a list (see the
-[`SetTimeSeriesProperty`](SetTimeSeriesProperty/SetTimeSeriesProperty) command).
+[`SetTimeSeriesProperty`](SetTimeSeriesProperty/SetTimeSeriesProperty.md) command).
 Time series properties are used by some commands to control the command functionality and output.
 For example, many commands that create time series allow the alias to be assigned using time series properties.
 The following notation is used when dealing with time series properties:
@@ -247,7 +247,7 @@ When this is necessary, the notation utilizes an optional format type prefix and
 formats (this works most of the time).  The default output format is the ISO format.
 * `C:%m%d%y` – Indicates that a C-style format is being used, where the formats match the
 UNIX [strftime() function](http://man7.org/linux/man-pages/man1/date.1.html) syntax.
-See the [`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty) command documentation.
+See the [`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty.md) command documentation.
 * In the future support for Microsoft Excel or other notation may be added (e.g., `MM-YYYY`).
 
 ## Regular Expression - Notation ##
@@ -283,8 +283,8 @@ Metadata is associated with the columns, such as column type,
 width and precision (for data types that support width and precision).
 Very large tables can cause TSTool to run out of memory.
 Consequently, care should be taken when processing tables, such as using the
-[`FreeTable`](FreeTable/FreeTable) command when needed.
-Tables, when used with [`For`](For/For) command,
+[`FreeTable`](FreeTable/FreeTable.md) command when needed.
+Tables, when used with [`For`](For/For.md) command,
 can result in compact command files, meaning that a few commands can perform significant processing work.
 
 ## Table - Identification ##
@@ -313,7 +313,7 @@ Command Parameter Notation Used With Tables
 Template files are used when processing is automated to iterate over one or more lists of input data.
 For example, the same 10 commands may be executed for each of 100 time series.
 TSTool uses the [FreeMarker template library](https://freemarker.apache.org/) to process templates.
-See the [`ExpandTemplateFile`](ExpandTemplateFile/ExpandTemplateFile) command documentation for an explanation of syntax.
+See the [`ExpandTemplateFile`](ExpandTemplateFile/ExpandTemplateFile.md) command documentation for an explanation of syntax.
 
 ## Configuration File - TSTool Configuration File ##
 
@@ -337,7 +337,7 @@ Property = Value
 ```
 
 Comments are lines that start with `#`.  Property values can be surrounded by double quotes.
-The specific property values are described in [TSTool datastore appendices](../datastore-ref/overview).
+The specific property values are described in [TSTool datastore appendices](../datastore-ref/overview.md).
 
 ## Configuration File - Time Series Product Files ##
 
@@ -351,4 +351,4 @@ Property = Value
 
 The `[Section]` notation is internally used as a prefix on the property name (e.g., `Section.Property = Value`).
 Comments are lines that start with `#`.  Property values can be surrounded by double quotes.
-See also the [TSView Time Series Viewing Tools appendix](../appendix-tsview/tsview).
+See also the [TSView Time Series Viewing Tools appendix](../appendix-tsview/tsview.md).

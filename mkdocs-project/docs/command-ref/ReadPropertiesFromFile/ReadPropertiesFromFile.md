@@ -12,11 +12,11 @@
 ## Overview ##
 
 The `ReadPropertiesFromFile` command reads the values of one or more time series processor properties from a file.
-The corresponding [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile)
+The corresponding [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md)
 command can be used to write properties to a file.
 Processor properties include global defaults such as `InputStart`, `InputEnd`,
 `OutputStart`, `OutputEnd`, `OutputYearType`, `WorkingDir`,
-and also user-defined properties set with the [`SetProperty`](../SetProperty/SetProperty) command.
+and also user-defined properties set with the [`SetProperty`](../SetProperty/SetProperty.md) command.
 Internally, properties have a name and a value, which is of a certain type
 (string, integer, date/time, etc.).  Examples of using the command include:
 
@@ -42,12 +42,11 @@ the command detects the format for each property and creates an appropriate obje
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../ReadPropertiesFromFile.png">See also the full-size image.</a>
 
 ![ReadPropertiesFromFile](ReadPropertiesFromFile.png)
 
 **<p style="text-align: center;">
-`ReadPropertiesFromFile` Command Editor
+`ReadPropertiesFromFile` Command Editor (<a href="../ReadPropertiesFromFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -69,12 +68,12 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadPropertiesFromFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadPropertiesFromFile).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SetProperty`](../SetProperty/SetProperty) command
-* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries) command
-* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command
+* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command
+* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md) command

@@ -19,16 +19,16 @@ then the sample that is analyzed will contain 365 or 366 values (depending on le
 Calendar years are used by default; however, the `OutputYearType` parameter can be used to
 specify that different year types are analyzed.
 Other commands (e.g.,
-[`ChangeInterval`](../ChangeInterval/ChangeInterval))
+[`ChangeInterval`](../ChangeInterval/ChangeInterval.md))
 can produce a similar result for a limited number of statistics,
 for example converting a monthly time series to an annual total or mean.
 See also the
-[`NewStatisticMonthTS`](../NewStatisticMonthTS/NewStatisticMonthTS),
-[`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries),
-[`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble),
-[`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic), and
-[`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries) commands.
-	
+[`NewStatisticMonthTimeSeries`](../NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md),
+[`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md),
+[`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md),
+[`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md), and
+[`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
+
 For hourly and finer interval, values are considered to be in a year when the
 year in the date/time matches the year of interested.
 This may lead to some issues if the last value in a year is
@@ -37,39 +37,35 @@ actually recorded at hour 0 or later of the following year.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for input parameters.
-<a href="../NewStatisticYearTS.png">See also the full-size image.</a>
 
 ![NewStatisticYearTS](NewStatisticYearTS.png)
 
 **<p style="text-align: center;">
-`NewStatisticYearTS` Command Editor
+`NewStatisticYearTS` Command Editor (<a href="../NewStatisticYearTS.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for distribution parameters.
-<a href="../NewStatisticYearTS_Distribution.png">See also the full-size image.</a>
 
 ![NewStatisticYearTS Distribution](NewStatisticYearTS_Distribution.png)
 
 **<p style="text-align: center;">
-`NewStatisticYearTS` Command Editor for Distribution Parameters
+`NewStatisticYearTS` Command Editor for Distribution Parameters (<a href="../NewStatisticYearTS_Distribution.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for analysis parameters.
-<a href="../NewStatisticYearTS_Analysis.png">See also the full-size image.</a>
 
 ![NewStatisticYearTS Analysis](NewStatisticYearTS_Analysis.png)
 
 **<p style="text-align: center;">
-`NewStatisticYearTS` Command Editor for Analysis Parameters
+`NewStatisticYearTS` Command Editor for Analysis Parameters (<a href="../NewStatisticYearTS_Analysis.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
-<a href="../NewStatisticYearTS_Output.png">See also the full-size image.</a>
 
 ![NewStatisticYearTS Output](NewStatisticYearTS_Output.png)
 
 **<p style="text-align: center;">
-`NewStatisticYearTS` Command Editor for Output Parameters
+`NewStatisticYearTS` Command Editor for Output Parameters (<a href="../NewStatisticYearTS_Output.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -89,9 +85,9 @@ TS Alias = NewStatisticYearTS (Parameter=value,…)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`Statistic`<br>**required**|See the **Available Statistics** table below.|None – must be specified.|
@@ -120,7 +116,7 @@ where the years correspond to the `OutputYearType`.
 For example, for `OutputYearType=NovToDec`, November 1,
 2000 to October 31, 2001 from the input corresponds to output year 2001.
 
-|**Statistic**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Limitations**
+|**Statistic**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Limitations**
 |--|--|--|
 |`DayOfCentroid`|The day of the year (1-366) that is the centroid of the values, computed as sum(DayOfYear`*`value)/sum(values).|Input time series must be daily or smaller interval.|
 |`DayOfFirstGE`|Julian day of the year (1-366, relative to the start of the `OutputYearType`) for the first data value >= `Value1`.  Searches start at the start of the analysis window and move forward.|Input time series must be daily or smaller interval.|
@@ -163,7 +159,7 @@ For example, for `OutputYearType=NovToDec`, November 1,
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewStatisticYearTS).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewStatisticYearTS).
 
 The following example commands file computes the last spring frost date for
 28 degrees and 32 degrees, searching backwards from June 30 each year,
@@ -186,10 +182,10 @@ WriteStateCU(OutputFile="Results/Test.FrostDates")
 
 ## See Also ##
 
-* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic) command
-* [`ChangeInterval`](../ChangeInterval/ChangeInterval) command
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries) commands.
-* [`NewStatisticMonthTS`](../NewStatisticMonthTS/NewStatisticMonthTS) command
-* [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries) command
-* [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
+* [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
+* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
+* [`NewStatisticMonthTimeSeries`](../NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md) command
+* [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command
+* [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

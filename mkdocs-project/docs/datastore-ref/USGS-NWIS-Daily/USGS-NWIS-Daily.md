@@ -20,10 +20,10 @@ there are a number of limitations, which are discussed below.
 The NWIS web service allows data to be retrieved as JavaScript Object Notation (JSON),
 tab-delimited (RDB), or WaterML 1.1.
 Each of these formats has features and limitations that are discussed in more detail in other documentation.
-The UsgsNwisDaily datastore is used with the [`ReadUsgsNwisDaily`](../../command-ref/ReadUsgsNwisDaily/ReadUsgsNwisDaily)
+The UsgsNwisDaily datastore is used with the [`ReadUsgsNwisDaily`](../../command-ref/ReadUsgsNwisDaily/ReadUsgsNwisDaily.md)
 command and the files saved by the command are used with the
-[`ReadUsgsNwisRdb`](../../command-ref/ReadUsgsNwisRdb/ReadUsgsNwisRdb) and
-[`ReadWaterML`](../../command-ref/ReadWaterML/ReadWaterML) commands.
+[`ReadUsgsNwisRdb`](../../command-ref/ReadUsgsNwisRdb/ReadUsgsNwisRdb.md) and
+[`ReadWaterML`](../../command-ref/ReadWaterML/ReadWaterML.md) commands.
 
 ## Standard Time Series Properties ##
 

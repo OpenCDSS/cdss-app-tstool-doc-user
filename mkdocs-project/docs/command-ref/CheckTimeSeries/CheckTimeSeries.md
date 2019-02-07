@@ -17,59 +17,54 @@ A warning is generated for each match and time series values optionally can be f
 which allows annotation on graphs and reports.
 Values that meet the check criteria also can be removed (if irregular interval), or set to missing.
 Check results can be saved to an output table for output and further processing.
-The [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile) command also can be used to
+The [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile.md) command also can be used to
 write a summary of the warnings based on command messages.
-The [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic)
+The [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md)
 command checks a statistic for the entire time series (e.g., missing value count).
-See also the [`Delta`](../Delta/Delta) command,
+See also the [`Delta`](../Delta/Delta.md) command,
 which creates new time series as the change between each value – this command may be necessary
 in cases where data periodically reset to a starting value, prior to performing a Change> check, for example.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
-<a href="../CheckTimeSeries.png">See also the full-size image.</a>
 
 ![CheckTimeSeries](CheckTimeSeries.png)
 
 **<p style="text-align: center;">
-`CheckTimeSeries` Command Editor for Time Series Parameters
+`CheckTimeSeries` Command Editor for Time Series Parameters (<a href="../CheckTimeSeries.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for criteria and action parameters.
-<a href="../CheckTimeSeries_Criteria.png">See also the full-size image.</a>
 
 ![CheckTimeSeries Criteria](CheckTimeSeries_Criteria.png)
 
 **<p style="text-align: center;">
-`CheckTimeSeries` Command Editor for Check Criteria and Action Parameters
+`CheckTimeSeries` Command Editor for Check Criteria and Action Parameters (<a href="../CheckTimeSeries_Criteria.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for analysis period and window parameters.
-<a href="../CheckTimeSeries_Time.png">See also the full-size image.</a>
 
 ![CheckTimeSeries Time](CheckTimeSeries_Time.png)
 
 **<p style="text-align: center;">
-`CheckTimeSeries` Command Editor for Analysis Period and Window Parameters
+`CheckTimeSeries` Command Editor for Analysis Period and Window Parameters (<a href="../CheckTimeSeries_Time.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output table parameters.
-<a href="../CheckTimeSeries_Table.png">See also the full-size image.</a>
 
 ![CheckTimeSeries Table](CheckTimeSeries_Table.png)
 
 **<p style="text-align: center;">
-`CheckTimeSeries` Command Editor for Output Table Parameters
+`CheckTimeSeries` Command Editor for Output Table Parameters (<a href="../CheckTimeSeries_Table.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output property parameters.
-<a href="../CheckTimeSeries_Properties.png">See also the full-size image.</a>
 
 ![CheckTimeSeries Properties](CheckTimeSeries_Properties.png)
 
 **<p style="text-align: center;">
-`CheckTimeSeries` Command Editor for Output Properties Parameters
+`CheckTimeSeries` Command Editor for Output Properties Parameters (<a href="../CheckTimeSeries_Properties.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -83,9 +78,9 @@ CheckTimeSeries(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`CheckCriteria`|The criteria that is checked, one of the following.  Missing values are skipped except for cases where the statistic is specific to missing values.<ul><li>`AbsChange>` – check for absolute change from one value to the next value > `Value1`</li><li>`AbsChangePercent>` – check for absolute change in percent from one value to the next value > `Value1`.</li><li>`Change>` – check for change > `Value1`.</li><li>`Change<` – check for change < `Value1`.</li><li>`InRange` – check for value >= `Value1` and <= `Value2`.</li><li>`OutOfRange` – check for value < `Value1` or > `Value2`.</li><li>`Missing` – check for missing values.</li><li>`Repeat` – check for Value1 repeating values (i.e., if Value1=2, then the check will detect 2 adjacent values that are the same).  If the flag or action are specified, values Value1+ in the sequence are modified (i.e., if Value1=2, the 2nd and subsequent repeating values will be modified by the action).</li><li>`<` – check for values < Value1.</li><li>`<=` – check for values <= Value1.</li><li>`>` – check for values > Value1.</li><li>`>=` – check for values >= Value1.</li><li>`==` – check for values equal to Value1.</li><ul>|None – must be specified.|
@@ -114,13 +109,13 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CheckTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CheckTimeSeries).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic) command
-* [`Delta`](../Delta/Delta) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
-* [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile) command
+* [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) command
+* [`Delta`](../Delta/Delta.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile.md) command

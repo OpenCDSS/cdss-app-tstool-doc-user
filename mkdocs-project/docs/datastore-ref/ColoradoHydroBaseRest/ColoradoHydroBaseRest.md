@@ -15,7 +15,7 @@ while also leveraging new web service features.**
 ## Overview ##
 
 The State of Colorado’s HydroBase database is the primary database for water data in Colorado.
-However, using the HydroBase datastore or input type in TSTool (see the [HydroBase Datastore appendix](../CO-HydroBase/CO-HydroBase))
+However, using the HydroBase datastore or input type in TSTool (see the [HydroBase Datastore appendix](../CO-HydroBase/CO-HydroBase.md))
 requires a direct connection to the database,
 and a local installation of the database may not be available.
 The ColoradoHydroBaseRest datastore provides internet REST web service access to historical and real-time data and is described on the following page:
@@ -25,8 +25,8 @@ The ColoradoHydroBaseRest datastore provides internet REST web service access to
 See also the following useful information for legacy web services that are being replaced by new REST web services:
 
 * Legacy TSTool datastore documentation:
-	+ [ColoradoWaterHBGuest Datastore appendix](../ColoradoWaterHBGuest/ColoradoWaterHBGuest) - historical data
-	+ [ColoradoWaterSMS Datastore appendix](../ColoradoWaterSMS/ColoradoWaterSMS) - real-time data
+	+ [ColoradoWaterHBGuest Datastore appendix](../ColoradoWaterHBGuest/ColoradoWaterHBGuest.md) - historical data
+	+ [ColoradoWaterSMS Datastore appendix](../ColoradoWaterSMS/ColoradoWaterSMS.md) - real-time data
 * Legacy DWR web service documentation that may be useful:
 	+ [Colorado HBGuest Web Service Documentation](http://www.dwr.state.co.us/HBGuest/Documents/ColoradoHBGuestWebService.pdf)
 	+ [HBGuest Web Service Data Dictionary](http://www.dwr.state.co.us/HBGuest/Documents/HBGuestWebService Objects.pdf)
@@ -76,8 +76,8 @@ and equivalent in local HydroBase database datastore direct connection.
 
 Any of the web services can be called using TSTool `WebGet` command, which retrieves the result of a URL and saves to a local file.
 If the web service supports CSV, the resulting file can be read using commands such as
-[`ReadTableFromDelimitedFile`](../../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) (table) and
-[`ReadDelimitedFile`](../../command-ref/ReadDelimitedFile/ReadDelimitedFile) (time series).
+[`ReadTableFromDelimitedFile`](../../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) (table) and
+[`ReadDelimitedFile`](../../command-ref/ReadDelimitedFile/ReadDelimitedFile.md) (time series).
 Consequently, there is always a way to use the web services, but it is not as tightly integrated into TSTool.
 
 ## Standard Time Series Properties ##
@@ -112,7 +112,7 @@ for example `wellid` for internal database well identifiers and `abbrev` for tel
 	+ `parameter` for telemetry stations
 	+ `WaterLevelDepth` and `WaterLevelElev` for groundwater levels
 	+ `Stage` and `Volume` for `structures/divrec/stagevolume` web services
-	+ Refer to the [HydroBase datastore appendix](../CO-HydroBase/CO-HydroBase) for a full list of time series data available in HydroBase.
+	+ Refer to the [HydroBase datastore appendix](../CO-HydroBase/CO-HydroBase.md) for a full list of time series data available in HydroBase.
 	In some cases, the data type used by TSTool will not exactly match HydroBase.
 	For example, TSTool uses `ResMeasStorage` and HydroBase uses `ResMeas` to indicate reservoir measurements,
 	which can contain several observations.
@@ -125,7 +125,7 @@ are being read from the ColoradoHydroBaseRest web service.
 	+ The diversion comments for the structure are queried.
 	Any irrigation year (Nov to Oct) where diversion comments are available and have `notUsed` values of `A`, `B`, `C`, or `D` 
 	will cause any missing values in the time series for the year to be set to zero and the flag will be set to the `notUsed` value.
-	See also the [`FillUsingDiversionComments`](../../command-ref/FillUsingDiversionComments/FillUsingDiversionComments) command.
+	See also the [`FillUsingDiversionComments`](../../command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md) command.
 	+ Additionally, any daily and monthly diversion records for start of year (Nov 1) until the end of the year (Oct 1) will be set to
 	zero if missing because the State does not fill in zeros at the start of the year.
 
@@ -136,9 +136,9 @@ The following limitations of the web service may impact users of the data.
 * Data type – The goal of the datastore is to provide access to all time series
 that are available in HydroBase.  However, data access is limited by features of the
 web services.
-The following data types were implemented in the legacy [ColoradoWaterHBGuest web services](../ColoradoWaterHBGuest/ColoradoWaterHBGuest), for all available intervals.
+The following data types were implemented in the legacy [ColoradoWaterHBGuest web services](../ColoradoWaterHBGuest/ColoradoWaterHBGuest.md), for all available intervals.
 Additional data types will be supported in the future (see the
-[HydroBase Datastore appendix](../CO-HydroBase/CO-HydroBase)
+[HydroBase Datastore appendix](../CO-HydroBase/CO-HydroBase.md)
 for a complete list of available data types).
 Note that creating a complete diversion time series,
 in particular for structures that are not frequently measured,
@@ -268,5 +268,5 @@ ColoradoHydroBaseRest Datastore Configuration File
 
 ## See Also 
 
-* [`FillUsingDiversionComments`](../../command-ref/FillUsingDiversionComments/FillUsingDiversionComments) command
-* [`ReadColoradoHydroBaseRest`](../../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest) command
+* [`FillUsingDiversionComments`](../../command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md) command
+* [`ReadColoradoHydroBaseRest`](../../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command

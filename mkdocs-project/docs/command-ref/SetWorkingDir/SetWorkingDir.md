@@ -36,12 +36,11 @@ and associated data files can be easily moved from one computer to another.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../SetWorkingDir.png">See also the full-size image.</a>
 
 ![SetWorkingDir](SetWorkingDir.png)
 
 **<p style="text-align: center;">
-`SetWorkingDir` Command Editor
+`SetWorkingDir` Command Editor (<a href="../SetWorkingDir.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -62,10 +61,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetWorkingDir).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetWorkingDir).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`Message`](../Message/Message) command - can be used to output the working directory
+* [`Message`](../Message/Message.md) command - can be used to output the working directory

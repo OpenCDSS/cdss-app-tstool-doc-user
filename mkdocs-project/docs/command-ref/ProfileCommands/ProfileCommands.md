@@ -18,8 +18,8 @@ This command is useful for evaluating which commands are
 slow or use more memory in a command workflow,
 so that software and command file logic improvements can occur.
 The command is usually placed at the end of a command file.  The following apply to command profiling:
-	
-* Currently profiling does not handle commands in [`For`](../For/For) command loops.
+
+* Currently profiling does not handle commands in [`For`](../For/For.md) command loops.
 Only the profile data for the last time the command is run will be saved.
 * Because the command is processed at the time it is encountered in the command list,
 the command itself and any subsequent commands are not included in the analysis.
@@ -38,7 +38,7 @@ Instead, use a subset of the full command list so the `ProfileCommands` command 
 Then evaluate the performance of the commands and determine if the command list logic can be optimized.
 If performance issues appear to be in the software itself,
 contact the developers to evaluate the software code.
-Also consider using the [`Free`](../Free/Free) and [`FreeTable`](../FreeTable/FreeTable) commands to free resources,
+Also consider using the [`Free`](../Free/Free.md) and [`FreeTable`](../FreeTable/FreeTable.md) commands to free resources,
 especially if the results do not need to be available to users via the user interface.
 * The runtime percent for each command is calculated as a percentage of the
 total runtime (ignoring the `ProfileCommands` command and subsequent commands).
@@ -62,7 +62,7 @@ Use the interactive table view to sort by column (this is how the tables were so
 
 If loading or running commands are slow, the following actions might help:
 
-* Use the [`Free`](../Free/Free) and [`FreeTable`](../FreeTable/FreeTable) commands to free resources.
+* Use the [`Free`](../Free/Free.md) and [`FreeTable`](../FreeTable/FreeTable.md) commands to free resources.
 The command will still take up some resources because it has a place in the command list,
 but data resources used by the command will be freed.
 * Review the profiling results to determine if certain commands are major resource users.
@@ -72,7 +72,7 @@ because commands within the latter are still loaded rather than simple comment c
 It may be necessary to run smaller subsets of commands, for example by splitting up lists of input time series.
 * On Windows, use the ***Task Manager*** (run `taskmgr`) to review memory use by the `javaw.exe` program.
 If the memory use approaches the maximum, then the Java Runtime Environment likely will
-be spending time dealing with short memory and runtimes will increase until memory runs out.
+be spending time dealing with short memory and run times will increase until memory runs out.
 If necessary, change the `–Xmx` parameter in the `TSTool.l4j.ini` file located in the
 `system` folder under the software install.
 This parameter indicates the maximum heap memory that can be used by the software.
@@ -83,34 +83,31 @@ however, a number that is too high may not be possible due to memory being used 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
-<a href="../ProfileCommands.png">See also the full-size image.</a>
 
 ![ProfileCommands](ProfileCommands.png)
 
 **<p style="text-align: center;">
-`ProfileCommands` Command Editor
+`ProfileCommands` Command Editor (<a href="../ProfileCommands.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the output summary table.
 Because command execution may be very fast, times are shown in milliseconds (1/1000th of a second).
 The table can be output to a file with other commands.
-<a href="../ProfileCommands_Summary.png">See also the full-size image.</a>
 
 ![ProfileCommands Summary](ProfileCommands_Summary.png)
 
 **<p style="text-align: center;">
-`ProfileCommands` Command Summary Output Table
+`ProfileCommands` Command Summary Output Table (<a href="../ProfileCommands_Summary.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the output detail table.
 Note that the heap memory is increased in blocks by the Java Runtime Environment
 so only large memory footprint commands trigger immediate heap memory increases.
-<a href="../ProfileCommands_Detail.png">See also the full-size image.</a>
 
 ![ProfileCommands Detail](ProfileCommands_Detail.png)
 
 **<p style="text-align: center;">
-`ProfileCommands` Command Detail Output Table
+`ProfileCommands` Command Detail Output Table (<a href="../ProfileCommands_Detail.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -131,7 +128,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ProfileCommands).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ProfileCommands).
 
 ## Troubleshooting ##
 

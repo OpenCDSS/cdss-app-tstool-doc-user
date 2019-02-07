@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `ReadStateCUB` command reads time series from a StateCU binary output time series file.
-See the [StateCUB Input Type Appendix](../../datastore-ref/StateCUB/StateCUB).
+See the [StateCUB Input Type Appendix](../../datastore-ref/StateCUB/StateCUB.md).
 The actual reading occurs as the commands are being processed.
 For this reason and because the number of time series in the binary file is usually large,
 if any other commands reference the StateCU binary file time series,
@@ -23,12 +23,11 @@ Only data types that contain floating point numbers will be read.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ReadStateCUB.png">See also the full-size image.</a>
 
 ![ReadStateCUB](ReadStateCUB.png)
 
 **<p style="text-align: center;">
-`ReadStateCUB` Command Editor
+`ReadStateCUB` Command Editor (<a href="../ReadStateCUB.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -51,7 +50,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadStateCUB).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadStateCUB).
 
 The following example command file illustrates how to read all CU Shortage time series:
 
@@ -71,4 +70,5 @@ ReadStateCUB(InputFile="Data\farmers.BD1")
 
 ## See Also ##
 
-* [`ReadStateCU`](../ReadStateCU/ReadStateCU) command
+* [`ReadStateCU`](../ReadStateCU/ReadStateCU.md) command
+* [`WriteStateCU`](../WriteStateCU/WriteStateCU.md) command

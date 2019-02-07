@@ -13,8 +13,8 @@
 
 The `SetAveragePeriod` command sets
 the period that is used to compute historic averages used with the
-[`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage) and
-[`FillHistYearAverage`](../FillHistYearAverage/FillHistYearAverage) commands.
+[`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) and
+[`FillHistYearAverage`](../FillHistYearAverage/FillHistYearAverage.md) commands.
 If the averaging period is not specified, the available period is used.
 Use a `SetAveragePeriod` command if a subset of the data should be used to compute averages.
 
@@ -24,12 +24,11 @@ Setting a global default with this command can make it more difficult to underst
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SetAveragePeriod.png">See also the full-size image.</a>
 
 ![SetAveragePeriod](SetAveragePeriod.png)
 
 **<p style="text-align: center;">
-`SetAveragePeriod` Command Editor
+`SetAveragePeriod` Command Editor (<a href="../SetAveragePeriod.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -50,11 +49,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetAveragePeriod).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetAveragePeriod).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage) command
-* [`FillHistYearAverage`](../FillHistYearAverage/FillHistYearAverage) command
+* [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
+* [`FillHistYearAverage`](../FillHistYearAverage/FillHistYearAverage.md) command

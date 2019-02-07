@@ -13,7 +13,7 @@
 
 The `LookupTimeSeriesFromTable` command uses an input time series and
 lookup table to create the output time series.  Examples of using this command include:
-	
+
 * Converting reservoir elevation to storage, surface area, seepage, or other values
 * Converting river stage to discharge
 * Converting a time series to category values
@@ -31,12 +31,11 @@ this capability may be added in the future.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../LookupTimeSeriesFromTable.png">See also the full-size image.</a>
 
 ![LookupTimeSeriesFromTable](LookupTimeSeriesFromTable.png)
 
 **<p style="text-align: center;">
-`LookupTimeSeriesFromTable` Command Editor
+`LookupTimeSeriesFromTable` Command Editor (<a href="../LookupTimeSeriesFromTable.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -72,10 +71,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/LookupTimeSeriesFromTable).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/LookupTimeSeriesFromTable).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SetTimeSeriesValuesFromLookupTable`](../SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable) command
+* [`SetTimeSeriesValuesFromLookupTable`](../SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable.md) command

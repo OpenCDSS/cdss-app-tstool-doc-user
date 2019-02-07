@@ -15,7 +15,7 @@ The `ProcessTSProduct` command automates creation of time series data products.
 Products are described in time series product description (`*.tsp`) files,
 which are typically created by using the ***Save / Time Series Product*** choice in graph windows
 (a future enhancements may allow creation of text products from summary or table views).
-See the [**TSView Time Series Viewing Tools**](../../appendix/tsview)
+See the [**TSView Time Series Viewing Tools**](../../appendix-tsview/tsview.md)
 appendix for more information about time series products.
 For example, the following sequence of actions can be used to define and use time series product description files:
 
@@ -77,7 +77,7 @@ then the time series corresponding to the alias must be processed
 by a command file and be available in TSTool’s ***Results*** area.
 
 It is also possible to create a template time series product file and use the
-[`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile) command to automate
+[`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command to automate
 creation of large numbers of graphs, for example to create images for a website.
 
 ## Command Editor ##
@@ -87,12 +87,11 @@ The path to the time series product file can be absolute or relative to the work
 The ***Browse*** button can be used to select the time series product description file
 (if a relative path is desired, delete the leading path after the select or
 use the ***Remove Working Directory from TSP*** button).
-<a href="../ProcessTSProduct.png">See also the full-size image.</a>
 
 ![ProcessTSProduct](ProcessTSProduct.png)
 
 **<p style="text-align: center;">
-`ProcessTSProduct` Command Editor
+`ProcessTSProduct` Command Editor (<a href="../ProcessTSProduct.png">see also the full-size image</a>)
 </p>**
 
 After using the above dialog to edit the command, the time series product can be processed from TSTool as follows:
@@ -107,7 +106,7 @@ The working directory will be set to the directory for the commands file and out
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSProductFile`<br>**required**|The time series product file to process.  The path to the file can be absolute or relative to the working directory.  Can be specified using processor ${Property}.  If this file contains a # comment with @template, the file will be expanded to a temporary file and then used.  Expansion is similar to the functionality of the [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile) command.|None – must be specified.|
+|`TSProductFile`<br>**required**|The time series product file to process.  The path to the file can be absolute or relative to the working directory.  Can be specified using processor ${Property}.  If this file contains a # comment with @template, the file will be expanded to a temporary file and then used.  Expansion is similar to the functionality of the [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command.|None – must be specified.|
 |`RunMode`<br>**required**|Indicate the run mode to process the product, one of:<ul><li>`BatchOnly` – indicates that the product should only be processed in batch mode.</li><li>`GUIOnly` – indicates that the product should only be processed when the TSTool GUI is used (useful when Preview is set to Preview).</li><li>`GUIAndBatch` – indicates that the product should be processed in batch and GUI mode.</li><ul>|None – must be specified.|
 |`View`<br>**required**|Indicates whether the output should be previewed interactively, one of:<ul><li>`True`– display the graph.</li><li>`False` – do not display the graph (specify the output file instead to automate image creation).</li></ul>|None – must be specified.|
 |`OutputFile`|The absolute or relative path to an output file.  Use this parameter with View=False to automate image processing.  If the filename ends in “jpg”, a JPEG image file will be produced.  If the filename ends in “png”, a PNG file will be produced (recommended).  Can be specified using processor `${Property}`.|Graph file will not be created.|
@@ -117,9 +116,9 @@ The working directory will be set to the directory for the commands file and out
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ProcessTSProduct).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ProcessTSProduct).
 
-A sample command file to process a data product using time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase) is as follows:
+A sample command file to process a data product using time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md) is as follows:
 
 ```text
 # 08235350 - ALAMOSA RIVER ABOVE JASPER
@@ -135,4 +134,4 @@ ProcessTSProduct(TSProductFile="Example_ProcessTSProduct.tsp")
 
 ## See Also ##
 
-* [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile) command
+* [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command

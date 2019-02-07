@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `Cumulate` command converts a time series into cumulative values, which is useful for:
-	
+
 * comparing the cumulative trends of related time series
 (e.g., nearby gages or precipitation gages) and can serve as a substitute
 for the double-mass graph, which has difficulty handling missing data
@@ -23,12 +23,11 @@ for the double-mass graph, which has difficulty handling missing data
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../Cumulate.png">See also the full-size image.</a>
 
 ![Cumulate](Cumulate.png)
 
 **<p style="text-align: center;">
-`Cumulate` Command Editor
+`Cumulate` Command Editor (<a href="../Cumulate.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -44,7 +43,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`HandleMissingHow`|Indicate how to handle missing data, one of:<ul><li>`CarryForwardIfMissing` – carry forward the last non-missing value</li><li>`SetMissingIfMissing` – set the result to missing if the original value is missing.</li></ul><br>The only difference in output is that the period of missing data will either be blank or a horizontal line in graphs.|`SetMissingIfMissing`|
@@ -55,9 +54,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Cumulate).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Cumulate).
 
-A sample command file to cumulate time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to cumulate time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -69,16 +68,15 @@ Cumulate(TSList=AllTS,HandleMissingHow=CarryForwardIfMissing)
 ```
 The following graph illustrates cumulative data for two precipitation gages in the same region,
 where missing data results in carrying forward the last known value.
-<a href="../Cumulate_Graph.png">See also the full-size image.</a>
 
 ![Cumulate Graph](Cumulate_Graph.png)
 
 **<p style="text-align: center;">
-Example Graph Showing Results of `Cumulate` Command
+Example Graph Showing Results of `Cumulate` Command (<a href="../Cumulate_Graph.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

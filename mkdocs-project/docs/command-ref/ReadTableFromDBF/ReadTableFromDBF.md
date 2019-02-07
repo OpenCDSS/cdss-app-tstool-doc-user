@@ -22,12 +22,11 @@ In the future additional parameters may be added to control handling of numbers 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../ReadTableFromDBF.png">See also the full-size image.</a>
 
 ![ReadTableFromDBF](ReadTableFromDBF.png)
 
 **<p style="text-align: center;">
-`ReadTableFromDBF` Command Editor
+`ReadTableFromDBF` Command Editor (<a href="../ReadTableFromDBF.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -49,10 +48,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromDBF).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromDBF).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command
+* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command

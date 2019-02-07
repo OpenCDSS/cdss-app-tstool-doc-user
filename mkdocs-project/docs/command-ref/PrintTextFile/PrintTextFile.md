@@ -27,12 +27,11 @@ use `ShowDialog=True` (displaying the dialog will pause command execution).
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax (in this case printing to a Microsoft XPS file).
-<a href="../PrintTextFile.png">See also the full-size image.</a>
 
 ![PrintTextFile](PrintTextFile.png)
 
 **<p style="text-align: center;">
-`PrintTextFile` Command Editor
+`PrintTextFile` Command Editor (<a href="../PrintTextFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -71,32 +70,29 @@ This command can be used to test print features.
 For example, use a printer that outputs to a PDF, XPS, or other format file rather than a physical printer.
 If `ShowDialog=True` and printing to a file is indicated by specifying the OutputFile parameter (such as with Adobe PDF),
 the ***General*** tab on the print dialog will be similar to the following:
-<a href="../PrintTextFile_DialogGeneral.png">See also the full-size image.</a>
 
 ![PrintTextFile General](PrintTextFile_DialogGeneral.png)
 
 **<p style="text-align: center;">
-Print Job Dialog General Properties
+Print Job Dialog General Properties (<a href="../PrintTextFile_DialogGeneral.png">see also the full-size image</a>)
 </p>**
 
 Note that Print to File is checked; however, the name of the file may not be displayed.
 Instead, the output file is specified by pressing Print, which displays the following dialog,
 with the initial choice matching the value of the `OutputFile` parameter:
-<a href="../PrintTextFile_PrintToFile.png">See also the full-size image.</a>
 
 ![PrintTextFile to File](PrintTextFile_PrintToFile.png)
 
 **<p style="text-align: center;">
-Print to File Dialog
+Print to File Dialog (<a href="../PrintTextFile_PrintToFile.png">see also the full-size image</a>)
 </p>**
 
 If running a command to write a PDF file, the following may be displayed:
-<a href="../PrintTextFile_DistillerFontError.png">See also the full-size image.</a>
 
 ![PrintTextFile Distiller Error](PrintTextFile_DistillerFontError.png)
 
 **<p style="text-align: center;">
-Adobe PDF Error
+Adobe PDF Error (<a href="../PrintTextFile_DistillerFontError.png">see also the full-size image</a>)
 </p>**
 
 Unfortunately, there does not seem to be any way to change the printer setting
@@ -108,7 +104,7 @@ in particular for Windows XP](http://www.microsoft.com/download/en/details.aspx?
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/PrintTextFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/PrintTextFile).
 
 ## Troubleshooting ##
 

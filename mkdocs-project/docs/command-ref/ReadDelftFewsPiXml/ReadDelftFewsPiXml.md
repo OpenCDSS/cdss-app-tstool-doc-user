@@ -12,26 +12,24 @@
 ## Overview ##
 
 The `ReadDelftFewsPiXml` command reads all the time series in a Delft FEWS PI XML file.
-See the [Delft FEWS Input Type Appendix](../../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML) for information about the file format.
+See the [Delft FEWS Input Type Appendix](../../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md) for information about the file format.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
-<a href="../ReadDelftFewsPiXml.png">See also the full-size image.</a>
 
 ![ReadDelftFewsPiXml](ReadDelftFewsPiXml.png)
 
 **<p style="text-align: center;">
-`ReadDelftFewsPiXml` Command Editor for Time Series Parameters
+`ReadDelftFewsPiXml` Command Editor for Time Series Parameters (<a href="../ReadDelftFewsPiXml.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for ensemble parameters.
-<a href="../ReadDelftFewsPiXml_Ensemble.png">See also the full-size image.</a>
 
 ![ReadDelftFewsPiXml Ensemble](ReadDelftFewsPiXml_Ensemble.png)
 
 **<p style="text-align: center;">
-`ReadDelftFewsPiXml` Command Editor for Ensemble Parameters
+`ReadDelftFewsPiXml` Command Editor for Ensemble Parameters (<a href="../ReadDelftFewsPiXml_Ensemble.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -50,7 +48,7 @@ Command Parameters
 |`InputFile`<br>**required**|The name of the PI XML input file to read.  Global property values can be used with the syntax `${PropertyName}`.  The file can be a `*.xml`, `*.zip` or `*.gz` file with single compressed file.|None – must be specified.|
 |`Output`|Indicate the output to be generated:<ul><li>`TimeSeries` – individual time series (even if in ensemble)</li><li>`TimeSeriesAndEnsembles` – individual time series and ensemble|`TimeSeriesAndEnsembles`|
 |`TimeZoneOffset`|The desired time zone offset for output.  `0`=GMT,  `7`=US Mountain Standard Time.  The offset will be applied to the time zone shown in the <timeZone> element of the file.|Use file time zone.|
-|`TimeZone`|Time zone string to assign to output date/times, for example MST.  No check is performed on the validity of the value.  The time zone should agree with the result of applying TimeZoneOffset.	Use numerical time zone from file with GMT prefix.|
+|`TimeZone`|Time zone string to assign to output date/times, for example MST.  No check is performed on the validity of the value.  The time zone should agree with the result of applying TimeZoneOffset. Use numerical time zone from file with GMT prefix.|
 |`InputStart`|Starting date/time to read data, in precision consistent with data, for output time zone.  Specify as a date/time string or a processor `${Property}`.|Read all data.|
 |`InputEnd`|Ending date/time to read data, in precision consistent with data, for output time zone.  Specify as a date/time string or a processor `${Property}`.|Read all data.|
 |`DataSource`|Data source to use for time series identifier, for example organization that is running FEWS.  Can specify with ${ts:Property} and time series `%` specifiers.|`FEWS`|
@@ -64,10 +62,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadDelftFewsPiXml).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadDelftFewsPiXml).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteDelftFewsPiXml`](../WriteDelftFewsPiXml/WriteDelftFewsPiXml) command
+* [`WriteDelftFewsPiXml`](../WriteDelftFewsPiXml/WriteDelftFewsPiXml.md) command

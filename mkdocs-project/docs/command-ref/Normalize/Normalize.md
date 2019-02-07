@@ -21,12 +21,11 @@ The alias that is assigned to the time series can be referenced by other command
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../Normalize.png">See also the full-size image.</a>
 
 ![Normalize](Normalize.png)
 
 **<p style="text-align: center;">
-`Normalize` Command Editor
+`Normalize` Command Editor (<a href="../Normalize.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -50,9 +49,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Normalize).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Normalize).
 
-A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -61,17 +60,16 @@ is as follows:
 Normalize(TSID="06730500.USGS.Streamflow.Month",Alias=”NormalizedTS”,MinValueMethod=MinFromTS,MinValue=0.0,MaxValue=1.0)
 ```
 The results are as follows.
-<a href="../Normalize_Graph.png">See also the full-size image.</a>
 
 ![Normalize Graph](Normalize_Graph.png)
 
 **<p style="text-align: center;">
-Results of `Normalize` Command
+Results of `Normalize` Command (<a href="../Normalize_Graph.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`RelativeDiff`](../RelativeDiff/RelativeDiff) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`RelativeDiff`](../RelativeDiff/RelativeDiff.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

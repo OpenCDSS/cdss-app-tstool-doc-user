@@ -14,11 +14,11 @@
 **This command is under development.
 The HydroJSON format is a new open data format that is being developed by USGS, Army Corps, and Reclamation agencies for data exchange.
 It is not clear how much support this format has.**
-	
+
 The `WriteTimeSeriesToHydroJSON` command writes time series to a file using HydroJSON format,
 which adheres to JSON (JavaScript Object Notation) notation.
 The file can be included in a JavaScript script to instantiate data objects.
-Refer to the [HydroJSON Input Type Appendix](../../datastore-ref/HydroJSON/HydroJSON)
+Refer to the [HydroJSON Input Type Appendix](../../datastore-ref/HydroJSON/HydroJSON.md)
 for more information about the format.
 The main complexity with writing the file is that the HydroJSON format has elements that
 cannot be mapped to standard TSTool time series properties.
@@ -29,30 +29,27 @@ The following figures illustrate how such mapping can occur.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
-<a href="../WriteTimeSeriesToHydroJSON_TS.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToHydroJSON TS](WriteTimeSeriesToHydroJSON_TS.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToHydroJSON` Command Editor for Time Series Parameters
+`WriteTimeSeriesToHydroJSON` Command Editor for Time Series Parameters (<a href="../WriteTimeSeriesToHydroJSON_TS.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for station parameters.
-<a href="../WriteTimeSeriesToHydroJSON_Station.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToHydroJSON Station](WriteTimeSeriesToHydroJSON_Station.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToHydroJSON` Command Editor for Station Parameters
+`WriteTimeSeriesToHydroJSON` Command Editor for Station Parameters (<a href="../WriteTimeSeriesToHydroJSON_Station.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
-<a href="../WriteTimeSeriesToHydroJSON_File.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToHydroJSON File](WriteTimeSeriesToHydroJSON_File.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToHydroJSON` Command Editor for Output Parameters
+`WriteTimeSeriesToHydroJSON` Command Editor for Output Parameters (<a href="../WriteTimeSeriesToHydroJSON_File.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -68,7 +65,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`OutputStart`|The date/time for the start of the output. [start_timestep]|Use the global output period.|
@@ -112,10 +109,11 @@ In addition to the HydroJSON properties that can be specified above, the followi
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToHydroJSON).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToHydroJSON).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteTimeSeriesToJson`](../WriteTimeSeriesToJson/WriteTimeSeriesToJson) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`WriteTimeSeriesToJson`](../WriteTimeSeriesToJson/WriteTimeSeriesToJson.md) command

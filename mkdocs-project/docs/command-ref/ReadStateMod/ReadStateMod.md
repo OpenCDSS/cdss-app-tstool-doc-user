@@ -11,9 +11,9 @@
 
 ## Overview ##
 
-The `ReadStateMod command reads all the time series in a StateMod time series file:
-	
-* Standard time series file (see the [StateMod Input Type Appendix](../../datastore-ref/StateMod/StateMod)).
+The `ReadStateMod` command reads all the time series in a StateMod time series file:
+
+* Standard time series file (see the [StateMod Input Type Appendix](../../datastore-ref/StateMod/StateMod.md)).
 Single time series can be read by using time series identifier (TSID) commands.
 * Water rights files can be read and converted to time series,
 which is useful for visualization, water supply analysis, and to test well right processing.
@@ -32,30 +32,27 @@ The data type is set to Operational.  Identifiers that include a period will hav
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
-<a href="../ReadStateMod.png">See also the full-size image.</a>
 
 ![ReadStateMod](ReadStateMod.png)
 
 **<p style="text-align: center;">
-`ReadStateMod` Command Editor
+`ReadStateMod` Command Editor (<a href="../ReadStateMod.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for water right file parameters.
-<a href="../ReadStateMod_Rights.png">See also the full-size image.</a>
 
 ![ReadStateMod Rights](ReadStateMod_Rights.png)
 
 **<p style="text-align: center;">
-`ReadStateMod` Command Editor for Water Right File Parameters
+`ReadStateMod` Command Editor for Water Right File Parameters (<a href="../ReadStateMod_Rights.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output file parameters.
-<a href="../ReadStateMod_X.png">See also the full-size image.</a>
 
 ![ReadStateMod X](ReadStateMod_X.png)
 
 **<p style="text-align: center;">
-`ReadStateMod` Command Editor for Output File Parameters
+`ReadStateMod` Command Editor for Output File Parameters (<a href="../ReadStateMod_X.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -81,10 +78,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadStateMod).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadStateMod).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteStateMod`](../WriteStateMod/WriteStateMod) command
+* [`ReadStateModB`](../ReadStateModB/ReadStateModB.md) command
+* [`WriteStateMod`](../WriteStateMod/WriteStateMod.md) command

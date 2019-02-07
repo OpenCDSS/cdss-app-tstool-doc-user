@@ -24,12 +24,11 @@ Setting a global default with this command can make it more difficult to underst
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SetIgnoreLEZero.png">See also the full-size image.</a>
 
 ![SetIgnoreLEZero](SetIgnoreLEZero.png)
 
 **<p style="text-align: center;">
-`SetIgnoreLEZero` Command Editor
+`SetIgnoreLEZero` Command Editor (<a href="../SetIgnoreLEZero.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -49,10 +48,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetIgnoreLEZero).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetIgnoreLEZero).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage) command
+* [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command

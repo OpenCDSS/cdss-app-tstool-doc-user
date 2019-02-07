@@ -14,7 +14,7 @@
 The `ReadTableFromFixedFormatFile` command reads a table from a fixed-format file,
 for example input files to scientific models.
 Columns are indicated by a column type and width.  Files have the following characteristics:
-	
+
 * Comments indicated by lines starting with `#` are stripped during the read.
 * Extraneous lines in the file can be skipped during the read using the `SkipLines` parameter (**not yet implemented**).
 * Files cannot have header lines (see the `ColumnNames` parameter) – **header lines will be handled in the future**.
@@ -25,12 +25,11 @@ Columns are indicated by a column type and width.  Files have the following char
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../ReadTableFromFixedFormatFile.png">See also the full-size image.</a>
 
 ![ReadTableFromFixedFormatFile](ReadTableFromFixedFormatFile.png)
 
 **<p style="text-align: center;">
-`ReadTableFromFixedFormatFile` Command Editor
+`ReadTableFromFixedFormatFile` Command Editor (<a href="../ReadTableFromFixedFormatFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -55,7 +54,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromFixedFormatFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromFixedFormatFile).
 
 The following example illustrates a fixed-format file.
 In this case the name includes a string name and a “node type” separated by an underscore.
@@ -94,16 +93,16 @@ The `ColumnNames` parameter is used to assign column names to the output table.
 ```
 
 The following table in TSTool illustrates the resulting output:
-<a href="../ReadTableFromFixedFormatFile_Output.png">See also the full-size image.</a>
 
 ![ReadTableFromFixedFormatFile Output](ReadTableFromFixedFormatFile_Output.png)
 
 **<p style="text-align: center;">
-`ReadTableFromFixedFormatFile` Command Output Table Example
+`ReadTableFromFixedFormatFile` Command Output Table Example (<a href="../ReadTableFromFixedFormatFile_Output.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command

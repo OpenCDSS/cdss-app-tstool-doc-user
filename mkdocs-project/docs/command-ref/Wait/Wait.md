@@ -25,12 +25,11 @@ In most cases users will not need to interrupt command workflows that are using 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../Wait.png">See also the full-size image.</a>
 
 ![Wait](Wait.png)
 
 **<p style="text-align: center;">
-`Wait` Command Editor Showing Conditions Test
+`Wait` Command Editor Showing Conditions Test (<a href="../Wait.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -51,10 +50,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Wait).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Wait).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`Exit`](../Exit/Exit) command
+* [`Exit`](../Exit/Exit.md) command

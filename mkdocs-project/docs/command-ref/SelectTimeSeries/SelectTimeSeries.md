@@ -13,9 +13,9 @@
 
 The `SelectTimeSeries` command selects output time series, as if done interactively,
 to indicate which time series should be operated on by following commands.
-The command minimizes the need for the [`Free`](../Free/Free) command because other
+The command minimizes the need for the [`Free`](../Free/Free.md) command because other
 commands that operate on a time series list can use `TSList=SelectedTS`.
-See also the [`DeselectTimeSeries`](../DeselectTimeSeries/DeselectTimeSeries) command.
+See also the [`DeselectTimeSeries`](../DeselectTimeSeries/DeselectTimeSeries.md) command.
 
 ## Command Editor ##
 
@@ -24,39 +24,35 @@ syntax for selecting time series using the `TSList` parameter.
 This parameter provides the initial filter for the list of time series.
 The `TSPosition` parameter is generally not available in other commands - its use is discouraged in
 most cases because time series position in the output list can vary.
-<a href="../SelectTimeSeries.png">See also the full-size image.</a>
 
 ![SelectTimeSeries](SelectTimeSeries.png)
 
 **<p style="text-align: center;">
-`SelectTimeSeries` Command Editor
+`SelectTimeSeries` Command Editor (<a href="../SelectTimeSeries.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates selecting time series by matching a property value.
-<a href="../SelectTimeSeries_Property.png">See also the full-size image.</a>
 
 ![SelectTimeSeries Property](SelectTimeSeries_Property.png)
 
 **<p style="text-align: center;">
-`SelectTimeSeries` Command Editor Specifying a Property to Match
+`SelectTimeSeries` Command Editor Specifying a Property to Match (<a href="../SelectTimeSeries_Property.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates selecting time series by evaluating a time series statistic.
-<a href="../SelectTimeSeries_Statistic.png">See also the full-size image.</a>
 
 ![SelectTimeSeries Statistic](SelectTimeSeries_Statistic.png)
 
 **<p style="text-align: center;">
-`SelectTimeSeries` Command Editor Specifying a Statistic to Check
+`SelectTimeSeries` Command Editor Specifying a Statistic to Check (<a href="../SelectTimeSeries_Statistic.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates selecting time series by matching locations in a network.
-<a href="../SelectTimeSeries_Network.png">See also the full-size image.</a>
 
 ![SelectTimeSeries Network](SelectTimeSeries_Network.png)
 
 **<p style="text-align: center;">
-`SelectTimeSeries` Command Editor Specifying Network Nodes
+`SelectTimeSeries` Command Editor Specifying Network Nodes (<a href="../SelectTimeSeries_Network.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -88,7 +84,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SelectTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SelectTimeSeries).
 
 A sample command file is as follows:
 
@@ -102,5 +98,5 @@ SelectTimeSeries(TSList=AllMatchingTSID,TSID="40*",DeselectAllFirst=True)
 
 ## See Also ##
 
-* [`DeselectTimeSeries`](../DeselectTimeSeries/DeselectTimeSeries) command
-* [`Free`](../Free/Free) command
+* [`DeselectTimeSeries`](../DeselectTimeSeries/DeselectTimeSeries.md) command
+* [`Free`](../Free/Free.md) command

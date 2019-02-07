@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `ReadReclamationHDB` command reads one or more time series from a Reclamation HDB database.
-See the [Reclamation HDB Datastore Reference](../../datastore-ref/ReclamationHDB/ReclamationHDB)
+See the [Reclamation HDB Datastore Reference](../../datastore-ref/ReclamationHDB/ReclamationHDB.md)
 for more information about the database features and limitations.
 Time series are read from:
 
@@ -26,7 +26,7 @@ hese values can be selected directly (from long lists),
 or selected through incremental selection of other data.
 Both options are provided for flexibility where appropriate.
 
-See the [`WriteReclamationHDB`](../WriteReclamationHDB/WriteReclamationHDB) command documentation
+See the [`WriteReclamationHDB`](../WriteReclamationHDB/WriteReclamationHDB.md) command documentation
 for information about writing the time series that are read by this command.
 
 In all cases, the choices presented to the user cascade to allow only valid choices.
@@ -46,21 +46,19 @@ The following dialog is used to edit the command and illustrates the syntax of t
 when reading "real" or "model" data using filters.
 This approach can be used when reading one or more time series in bulk.
 ***Where*** criteria should be specified in sequential order without intervening blank specifiers.
-<a href="../ReadReclamationHDB.png">See also the full-size image.</a>
 
 ![ReadReclamationHDB](ReadReclamationHDB.png)
 
 **<p style="text-align: center;">
-`ReadReclamationHDB` Command Editor when Using Filters to Read 1+ Time Series
+`ReadReclamationHDB` Command Editor when Using Filters to Read 1+ Time Series (<a href="../ReadReclamationHDB.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates reading a single "real" time series (note that the model parameters are not specified).
-<a href="../ReadReclamationHDB_Real.png">See also the full-size image.</a>
 
 ![ReadReclamationHDB_Real](ReadReclamationHDB_Real.png)
 
 **<p style="text-align: center;">
-`ReadReclamationHDB` Command Editor to Read a Single Real Time Series
+`ReadReclamationHDB` Command Editor to Read a Single Real Time Series (<a href="../ReadReclamationHDB_Real.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates reading a single "model" time series,
@@ -76,12 +74,11 @@ to the site and data type parameters. There are two ways to select the MRI:
 	4. Run date (may be blank)
 
 The following figure illustrates both approaches, although normally one or the other would be used. Selecting an MRI directly takes precedence over the other approach.
-<a href="../ReadReclamationHDB_Model.png">See also the full-size image.</a>
 
 ![ReadReclamationHDB_Model](ReadReclamationHDB_Model.png)
 
 **<p style="text-align: center;">
-`ReadReclamationHDB` Command Editor for Single Model Time Series
+`ReadReclamationHDB` Command Editor for Single Model Time Series (<a href="../ReadReclamationHDB_Model.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates reading an ensemble of "model" time series,
@@ -95,12 +92,11 @@ in which case an ensemble name is specified in addition to the SDI. Ensembles ar
 Consequently, in order to list the ensemble names for selection,
 the data table is checked for matching SDI, and additional queries map the data back to the ensemble data,
 which provide the list of ensemble names to choose from.
-<a href="../ReadReclamationHDB_Ensemble.png">See also the full-size image.</a>
 
 ![ReadReclamationHDB_Ensemble](ReadReclamationHDB_Ensemble.png)
 
 **<p style="text-align: center;">
-`ReadReclamationHDB` Command Editor to Read an Ensemble of Model Time Series
+`ReadReclamationHDB` Command Editor to Read an Ensemble of Model Time Series (<a href="../ReadReclamationHDB_Ensemble.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -128,7 +124,7 @@ Command Parameters
 |`DataTypeCommonName`<br>**required**|The data type common name for the time series; used with the site common name to determine the `site_datatype_id` in the database. This approach is discouraged and may be removed in the future because `datatype_common_name` is not unique in HDB.|None - must be specified unless `SiteDataTypeID` is specified.|
 ||**Use the following parameters when reading a single model time series.**||
 |`ModelRunID`|The `model_run_id` value to match the time series. Direct selection using the provided choices is an option to specifying the equivalent multiple parameters described below.||
-|`ModelName`|The model name for the time series; used with the model run name, hydrologic indicator(s), and model run date to determine the `model_run_id` in the database.|None - must be specified unless ModelRunID is specified.|
+|`ModelName`|The model name for the time series; used with the model run name, hydrologic indicator(s), and model run date to determine the `model_run_id` in the database.|None - must be specified unless `ModelRunID` is specified.|
 |`ModelRunName`|The model run name for the time series; used with the model name, hydrologic indicator(s), and model run date to determine the `model_run_id` in the database.|None - must be specified unless `ModelRunID` is specified.|
 |`ModelRunDate`|The model run date (timestamp) to use for the time series; used with the model name, model run name, and hydrologic indicator(s) to determine the` model_run_id` in the database. The run date should be specified using the format `YYYY-MM-DD hh:mm` (zero-padded with hour `0`-`23`, minute `0`-`59`).|None - must be specified unless `ModelRunID` is specified.|
 |`HydrologicIndicator`|The hydrologic indicator(s) to use for the time series; used with the model name, model run name, and model run date to determine the `model_run_id` in the database.|None - must be specified unless `ModelRunID` is specified.|
@@ -143,7 +139,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadReclamationHDB).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadReclamationHDB).
 
 ## Troubleshooting ##
 
@@ -157,7 +153,7 @@ or because multiple time series intervals are written for the same SDI.
 For example, automated tests re-use the same SDI to read and write data
 for different time series intervals. The solution is to do one of the following.
 
-* Delete the bad data records in HDB. For exmaple, use the [`RunSql`](../RunSql/RunSql)
+* Delete the bad data records in HDB. For exmaple, use the [`RunSql`](../RunSql/RunSql.md)
 command with an SQL file similar to the following (however, this does not seem to work.):
 
 ```
@@ -171,24 +167,22 @@ end;
 for the first data value in the hourly time series,
 for the HDB time zone (e.g., MST for ECAO database).
 This tells TSTool to ignore all records that do not align.
-<a href="../ReadReclamationHDB_AlignmentError.png">See also the full-size image.</a>
 
 ![ReadReclamationHDB_AlignmentError](ReadReclamationHDB_AlignmentError.png)
 
 **<p style="text-align: center;">
-Error Generated When Database Records do not Align with NHOur Interval
+Error Generated When Database Records do not Align with NHOur Interval (<a href="../ReadReclamationHDB_AlignmentError.png">see also the full-size image</a>)
 </p>**
 
 The database records are shown below.
-<a href="../ReadReclamationHDB_AlignmentErrorData.png">See also the full-size image.</a>
 
 ![ReadReclamationHDB_AlignmentErrorData](ReadReclamationHDB_AlignmentErrorData.png)
 
 **<p style="text-align: center;">
-HDB `R_HOUR` Table Illustrating Extra Data Records (should have every 3 hour but have every 1 hour)
+HDB `R_HOUR` Table Illustrating Extra Data Records (should have every 3 hour but have every 1 hour) (<a href="../ReadReclamationHDB_AlignmentErrorData.png">see also the full-size image</a>)
 </p>**
 
 ## See Also ##
 
-* [`RunSql`](../RunSql/RunSql) command
-* [`WriteReclamationHDB`](../WriteReclamationHDB/WriteReclamationHDB) command
+* [`RunSql`](../RunSql/RunSql.md) command
+* [`WriteReclamationHDB`](../WriteReclamationHDB/WriteReclamationHDB.md) command

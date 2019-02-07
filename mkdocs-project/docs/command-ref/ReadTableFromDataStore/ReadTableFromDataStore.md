@@ -11,7 +11,7 @@
 
 ## Overview ##
 
-The [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore) command executes
+The `ReadTableFromDataStore` command executes
 a database query for a datastore that is associated with a database,
 and places the result in a TSTool table,
 which can subsequently be processed with other TSTool commands.
@@ -19,7 +19,7 @@ This command cannot be used with web service datastores because the underlying
 software relies on a database to perform the query.
 If database datastore support is not specifically provided by TSTool,
 a generic database datastore can be used (see the
-[Generic Database DataStore appendix](../../datstore-ref/GenericDatabase/GenericDatabase).
+[Generic Database DataStore appendix](../../datastore-ref/GenericDatabase/GenericDatabase.md).
 For example, use a generic database datastore to read data from a Microsoft Access database.
 This command is useful when the database can provide results with a simple query and
 tight integration with TSTool is not required or has not been implemented
@@ -40,7 +40,7 @@ The query can be specified in the following ways:
 	[`SetProperty`](../SetProperty/SetProperty) or other commands.
 	+ SQL syntax is not checked for validity and therefore error messages
 	from the database may be more difficult to interpret.
-	+ Comments can be specified using [`/* */`](../CommentBlockStart/CommentBlockStart)
+	+ Comments can be specified using [`/* */`](../CommentBlockStart/CommentBlockStart.md)
 	notation or - - (double dash) for end of line comments.
 	TSTool removes comments if using Microsoft Access because Access does not support comments in SQL.
 * Specify an SQL select statement in a file:
@@ -70,49 +70,44 @@ Future enhancements will add additional features to intelligently map database r
 
 The following dialog is used to edit the command and illustrates the syntax for the command,
 in this case reading a small table from the State of Colorado’s HydroBase.
-<a href="../ReadTableFromDataStore_Table.png">See also the full-size image.</a>
 
 ![ReadTableFromDataStore](ReadTableFromDataStore_Table.png)
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Querying a Single Table (or View)
+`ReadTableFromDataStore` Command Editor when Querying a Single Table (or View) (<a href="../ReadTableFromDataStore_Table.png">see also the full-size image</a>)
 </p>**
 
 The corresponding output table is as shown below:
-<a href="../ReadTableFromDataStore_Results.png">See also the full-size image.</a>
 
 ![ReadTableFromDataStore Results](ReadTableFromDataStore_Results.png)
 
 **<p style="text-align: center;">
-Example `ReadTableFromDataStore` Command Output Table
+Example `ReadTableFromDataStore` Command Output Table (<a href="../ReadTableFromDataStore_Results.png">see also the full-size image</a>)
 </p>**
 
 The following example illustrates using an SQL query string,
 in this case to read diversion records for a specific structure in the State of Colorado’s HydroBase database:
-<a href="../ReadTableFromDataStore_SQL.png">See also the full-size image.</a>
 
 ![ReadTableFromDataStore SQL](ReadTableFromDataStore_SQL.png)
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specifying an SQL Query String
+`ReadTableFromDataStore` Command Editor when Specifying an SQL Query String (<a href="../ReadTableFromDataStore_SQL.png">see also the full-size image</a>)
 </p>**
 
 The following example illustrates using an SQL file:
-<a href="../ReadTableFromDataStore_SQLFile.png">See also the full-size image.</a>
 
 ![ReadTableFromDataStore SQL File](ReadTableFromDataStore_SQLFile.png)
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specifying an SQL File
+`ReadTableFromDataStore` Command Editor when Specifying an SQL File (<a href="../ReadTableFromDataStore_SQLFile.png">see also the full-size image.</a>)
 </p>**
 
 The following example illustrates using a database procedure:
-<a href="../ReadTableFromDataStore_Procedure.png">See also the full-size image.</a>
 
 ![ReadTableFromDataStore Procedure](ReadTableFromDataStore_Procedure.png)
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specyfing a Procedure
+`ReadTableFromDataStore` Command Editor when Specyfing a Procedure (<a href="../ReadTableFromDataStore_Procedure.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -141,10 +136,10 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromDataStore).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromDataStore).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`RunSql`](../RunSql/RunSql) command
+* [`RunSql`](../RunSql/RunSql.md) command

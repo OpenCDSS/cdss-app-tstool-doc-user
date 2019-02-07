@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `ReadRiverWare` command reads time series from a RiverWare file (see the
-[RiverWare Input Type Appendix](../../datastore-ref/RiverWare/RiverWare)) and assigns an alias to the result.
+[RiverWare Input Type Appendix](../../datastore-ref/RiverWare/RiverWare.md)) and assigns an alias to the result.
 Two types of RiverWare time series files can be read:
 
 ### 1. Single time series format used with DMI slot input (`*.dat` files), similar to the following: ###
@@ -55,41 +55,37 @@ Data are treated as sequential.
 How are leap years handled in the data array (assume sequential based on the specified overlapping run period)?
 
 See the following figure for examples of TSTool time series results when reading RDF ensembles.
-<a href="../ReadRiverWare_RDF_TimeSeries.png">See also the full-size image.</a>
 
 ![ReadRiverWare_RDF_TimeSeries](ReadRiverWare_RDF_TimeSeries.png)
 
 **<p style="text-align: center;">
-`ReadRiverWare` Ensemble Time Series Results
+`ReadRiverWare` Ensemble Time Series Results (<a href="../ReadRiverWare_RDF_TimeSeries.png">see also the full-size image</a>)
 </p>**
 
 See the following figure for examples of TSTool ensemble results when reading RDF ensembles.
-<a href="../ReadRiverWare_RDF_Ensembles.png">See also the full-size image.</a>
 
 ![ReadRiverWare_RDF_Ensembles](ReadRiverWare_RDF_Ensembles.png)
 
 **<p style="text-align: center;">
-`ReadRiverWare` Ensemble Results
+`ReadRiverWare` Ensemble Results (<a href="../ReadRiverWare_RDF_Ensembles.png">see also the full-size image</a>)
 </p>**
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax for a single time series `*.dat` file:
-<a href="../ReadRiverWare.png">See also the full-size image.</a>
 
 ![ReadRiverWare](ReadRiverWare.png)
 
 **<p style="text-align: center;">
-`ReadRiverWare` Command Editor
+`ReadRiverWare` Command Editor (<a href="../ReadRiverWare.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for an RDF file:
-<a href="../ReadRiverWare_RDF.png">See also the full-size image.</a>
 
 ![ReadRiverWare_RDF](ReadRiverWare_RDF.png)
 
 **<p style="text-align: center;">
-`ReadRiverWare` Command Editor for RDF
+`ReadRiverWare` Command Editor for RDF (<a href="../ReadRiverWare_RDF.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -113,7 +109,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadRiverWare).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadRiverWare).
 
 A sample command file is as follows:
 
@@ -125,4 +121,4 @@ ReadRiverWare(Alias=”ts1”,InputFile="OSO.Diversion.dat")
 
 ## See Also ##
 
-* [`WriteRiverWare`](../WriteRiverWare/WriteRiverWare) command
+* [`WriteRiverWare`](../WriteRiverWare/WriteRiverWare.md) command

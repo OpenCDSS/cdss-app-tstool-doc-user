@@ -12,40 +12,37 @@
 ## Overview ##
 
 The `SortTimeSeries` command sorts time series based on the specified criteria:
-	
+
 * the time series identifier or alias
 * a time series property
 * a string formatted from time series properties
-	
+
 This command is useful for ordering time series before writing output or visualization.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SortTimeSeries.png">See also the full-size image.</a>
 
 ![SortTimeSeries](SortTimeSeries.png)
 
 **<p style="text-align: center;">
-`SortTimeSeries` Command Editor Showing Parameters to Sort by TSID or Alias
+`SortTimeSeries` Command Editor Showing Parameters to Sort by TSID or Alias (<a href="../SortTimeSeries.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command when sorting by a property.
-<a href="../SortTimeSeries_Property.png">See also the full-size image.</a>
 
 ![SortTimeSeries Property](SortTimeSeries_Property.png)
 
 **<p style="text-align: center;">
-`SortTimeSeries` Command Editor Showing Parameters to Sort by a Time Series Property
+`SortTimeSeries` Command Editor Showing Parameters to Sort by a Time Series Property (<a href="../SortTimeSeries_Property.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for property formatting.
-<a href="../SortTimeSeries_PropertyFormat.png">See also the full-size image.</a>
 
 ![SortTimeSeries PropertyFormat](SortTimeSeries_PropertyFormat.png)
 
 **<p style="text-align: center;">
-`SortTimeSeries` Command Editor Showing Parameters to Sort by a Time Series Property
+`SortTimeSeries` Command Editor Showing Parameters to Sort by a Time Series Property (<a href="../SortTimeSeries_PropertyFormat.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -68,9 +65,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SortTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SortTimeSeries).
 
-A sample command file using data from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase) is as follows:
+A sample command file using data from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md) is as follows:
 
 ```
 06756500.USGS.Streamflow.Month~HydroBase

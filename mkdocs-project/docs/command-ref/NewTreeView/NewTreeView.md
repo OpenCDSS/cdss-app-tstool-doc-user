@@ -18,7 +18,7 @@ The resulting view is displayed in the Views section of the TSTool ***Results***
 area and provides interactive access to data.  The view is defined using a simple text file, as shown in command editor.
 
 Tree view definition files have the following characteristics:
-	
+
 * Comments are indicated by lines starting with `#`.
 * Indentations indicate the level (branch) in the tree:
 	+ Use the tab character to indicate indentation
@@ -50,12 +50,11 @@ Example of Tree View in TSTool Results
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../NewTreeView.png">See also the full-size image.</a>
 
 ![NewTreeView](NewTreeView.png)
 
 **<p style="text-align: center;">
-`NewTreeView` Command Editor
+`NewTreeView` Command Editor (<a href="../NewTreeView.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -76,10 +75,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewTreeView).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewTreeView).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct) command
+* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command

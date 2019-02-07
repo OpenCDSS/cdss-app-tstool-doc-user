@@ -12,17 +12,16 @@
 ## Overview ##
 
 The `InsertTableColumn` command inserts a column into a table.  An initial value can be set or use the
-[`SetTableValues`](../SetTableValues/SetTableValues) command to set values after inserting the column.
+[`SetTableValues`](../SetTableValues/SetTableValues.md) command to set values after inserting the column.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../InsertTableColumn.png">See also the full-size image.</a>
 
 ![InsertTableColumn](InsertTableColumn.png)
 
 **<p style="text-align: center;">
-`InsertTableColumn` Command Editor
+`InsertTableColumn` Command Editor (<a href="../InsertTableColumn.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -49,10 +48,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/InsertTableColumn).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/InsertTableColumn).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [InsertTableRow](../InsertTableRow/InsertTableRow) command
+* [InsertTableRow](../InsertTableRow/InsertTableRow.md) command

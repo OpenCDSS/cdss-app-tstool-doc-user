@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `WriteDateValue` command writes time series to the specified DateValue format file.
-See the [DateValue Input Type Appendix](../../datastore-ref/DateValue/DateValue)
+See the [DateValue Input Type Appendix](../../datastore-ref/DateValue/DateValue.md)
 for more information about the file format.
 The time series being written must have the same data interval – use
 the `TSList` parameter to select appropriate time series.  
@@ -20,12 +20,11 @@ the `TSList` parameter to select appropriate time series.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../WriteDateValue.png">See also the full-size image.</a>
 
 ![WriteDateValue](WriteDateValue.png)
 
 **<p style="text-align: center;">
-`WriteDateValue` Command Editor
+`WriteDateValue` Command Editor (<a href="../WriteDateValue.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -41,7 +40,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`OutputFile`|The DateValue output file.  The path to the file can be absolute or relative to the working directory (command file location).  Can be specified using processor `${Property}`.|None – must be specified.|
@@ -53,15 +52,15 @@ Command Parameters
 |`OutputStart`|The date/time for the start of the output as a date/time string or `${Property}`.|Use the global output period.|
 |`OutputEnd`|The date/time for the end of the output as a date/time string or `${Property}`.|Use the global output period.|
 |`IrregularInterval`|The interval (e.g., `Day`) used when writing irregular time series, to indicate the precision of date/times.  This may be necessary when it is not possible to automatically determine the date/time precision.  The date/time precision to format output is assumed to be `Minute` if unknown; however, specifying the irregular interval will inform the data processing.|Determined from the period start date/time of each time series, defaulting to `Minute` where the date/time precision is set to “irregular” (unknown).|
-|`Version`|Version of the file to write.  See the [DateValue Input Type appendix](../../datastore-ref/DateValue/DateValue) for information.|Current version.|
+|`Version`|Version of the file to write.  See the [DateValue Input Type appendix](../../datastore-ref/DateValue/DateValue.md) for information.|Current version.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteDateValue).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteDateValue).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadDateValue`](../ReadDateValue/ReadDateValue) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`ReadDateValue`](../ReadDateValue/ReadDateValue.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

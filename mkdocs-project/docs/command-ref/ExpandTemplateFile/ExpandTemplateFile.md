@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `ExpandTemplateFile` command processes a template specified with one of the following methods:
-	
+
 * template file, such as a command file, time series product file, or HTML, but can be any text file
 * input text
 
@@ -23,11 +23,11 @@ and creates a fully-expanded:
 
 Templates facilitate utilizing conditional logic, loops,
 and other dynamic processing functionality that is not provided directly
-by TSTool’s [`If`](../If/If) and [`For`](../For/For) commands.
+by TSTool’s [`If`](../If/If.md) and [`For`](../For/For.md) commands.
 For example, a template can be used to repeat commands for multiple location identifiers.
 One advantage of using the template approach is that problems in the expanded file are clearly indicated,
 whereas a problem in logic that is represented as a loop might be difficult to diagnose.
-	
+
 The [FreeMarker software](http://freemarker.org) is used to implement templates.
 Freemarker 2.3.15 is used prior to TSTool version 11.00.00,
 and Freemarker version 2.3.21 is used as of TSTool version 11.00.00.
@@ -40,7 +40,7 @@ indicators and some command editors may not allow changes to be saved,
 such as when template notation is used for a filename and the command expects a parent folder name to exist.
 TSTool may be enhanced in the future to provide template editing features.
 Examples below illustrate how to use common FreeMarker features.
-	
+
 The FreeMarker built-in `normalizeNewlines` user directive is automatically used to ensure
 that expanded files use newline characters appropriate for the operating system.
 Otherwise the results may have all lines merged together
@@ -50,17 +50,17 @@ which need to be accounted for when interpreting FreeMarker warning messages.
 For example, a FreeMarker warning about line 21 would actually be line 20 in the original template file.
 FreeMarker messages may be difficult to interpret.
 Common errors include variable names spelled incorrectly or incorrect FreeMarker syntax.
-	
+
 The following information is automatically passed from TSTool to the `ExpandTemplateFile` command:
-	
-* Properties set with the [`SetProperty`](../SetProperty/SetProperty) command are passed to the template processor.
+
+* Properties set with the [`SetProperty`](../SetProperty/SetProperty.md) command are passed to the template processor.
 Consequently, the property names can be referenced with `${Property}` in
 the template without using a FreeMarker assign command.
 See also the `StringProperties` command parameter.
 * One-column tables are passed as FreeMarker lists,
 using the table identifier (`TableID`) as the list property name.
 Null values in the table are passed as an empty string so that list have the correct number of items for iteration.
-Use the [`CopyTable`](../CopyTable/CopyTable) command to create a one-column
+Use the [`CopyTable`](../CopyTable/CopyTable.md) command to create a one-column
 table that can be used as a list for template expansion or specify the `TableColumnProperties` command parameter.
 The `UseTables` command parameter can be used to turn off this transfer,
 for example in cases where an `ExpandTemplateFile` command is being repeated many times,
@@ -69,39 +69,35 @@ does not use the tables, and is slowed down by converting the tables to FreeMark
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for input template parameters.
-<a href="../ExpandTemplateFile.png">See also the full-size image.</a>
 
 ![ExpandTemplateFile](ExpandTemplateFile.png)
 
 **<p style="text-align: center;">
-`ExpandTemplateFile` Command Editor for Input Template Parameters
+`ExpandTemplateFile` Command Editor for Input Template Parameters (<a href="../ExpandTemplateFile.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for input property parameters.
-<a href="../ExpandTemplateFile_Properties.png">See also the full-size image.</a>
 
 ![ExpandTemplateFile Properties](ExpandTemplateFile_Properties.png)
 
 **<p style="text-align: center;">
-`ExpandTemplateFile` Command Editor for Input Property Parameters
+`ExpandTemplateFile` Command Editor for Input Property Parameters (<a href="../ExpandTemplateFile_Properties.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for table input property parameters.
-<a href="../ExpandTemplateFile_TableProperties.png">See also the full-size image.</a>
 
 ![ExpandTemplateFile Properties](ExpandTemplateFile_TableProperties.png)
 
 **<p style="text-align: center;">
-`ExpandTemplateFile` Command Editor for Table Input Property Parameters
+`ExpandTemplateFile` Command Editor for Table Input Property Parameters (<a href="../ExpandTemplateFile_TableProperties.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for expanded output parameters.
-<a href="../ExpandTemplateFile_Out.png">See also the full-size image.</a>
 
 ![ExpandTemplateFile Out](ExpandTemplateFile_Out.png)
 
 **<p style="text-align: center;">
-`ExpandTemplateFile` Command Editor for Expanded Output Parameters
+`ExpandTemplateFile` Command Editor for Expanded Output Parameters (<a href="../ExpandTemplateFile_Out.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -124,11 +120,11 @@ Command Parameters
 |`OutputFile`<br>**required**|The name of the expanded output file.  Can be specified using processor `${Property}`.|None – must be specified.|
 |`OutputProperty`|The name of a property to receive the results of the template expansion.  This is appropriate when templates are used to expand single-line text, for example.|No property value will be set.|
 |`UseTables`|Indicate whether 1-column tables should be passed to the template expander.  Doing so is a performance hit and should be avoided if tables are not used in the template.|`True`|
-|`ListInResults`|Indicate whether the results of the expansion should be listed in the TSTool ***Results***area.  This may be undesirable for “worker” files that users will normally not view.|`True`|
+|`ListInResults`|Indicate whether the results of the expansion should be listed in the TSTool ***Results*** area.  This may be undesirable for “worker” files that users will normally not view.|`True`|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ExpandTemplateFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ExpandTemplateFile).
 
 ### Example Using Simple Variable Assignment ###
 
@@ -157,7 +153,7 @@ Because the same notation is used by both software components, care must be take
 TSTool automatically passes all TSTool properties to the `ExpandTemplateFile` command.
 Consequently, one of the main ways to avoid conflicts is to ensure
 that template command files do not use any of the properties defined in TSTool.
-One way to check property names is to insert a [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile)
+One way to check property names is to insert a [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md)
 command at the appropriate line in a command file and review the list of properties that are shown when editing the command.
 
 To utilize TSTool processor properties in a template, do not use the FreeMarker
@@ -275,7 +271,7 @@ NewPatternTimeSeries(Alias="loc4",NewTSID="loc4..Streamflow.Day",SetStart="2000-
 The following example illustrates a template command file that reads the location list from a table.
 Note that the list must be a one-column table.
 If the original table has more than one column, read the original file and then use the
-[`CopyTable`](../CopyTable/CopyTable) command to create a new one-column table.
+[`CopyTable`](../CopyTable/CopyTable.md) command to create a new one-column table.
 A comma-separated-value (CSV) file is used for the list:
 
 ```
@@ -325,7 +321,7 @@ The previous example illustrated how a one-column table can be used to loop over
 However, often it is necessary to loop over one list and access the corresponding items from another list.
 The following example illustrates how a template command file can perform this task.
 Note that each list must be a one-column table in TSTool.
-If the original table has more than one column, use the [`CopyTable`](../CopyTable/CopyTable)
+If the original table has more than one column, use the [`CopyTable`](../CopyTable/CopyTable.md)
 command to create as many one-column tables as are necessary.
 In this example, a comma-separated-value (CSV) file is used for the table:
 
@@ -382,7 +378,7 @@ The following example illustrates how to expand a list into a SQL “in” claus
 which is used to query specific matching records.
 A one-column table with identifier `locList` must have been created to supply the list of identifiers.
 The property set with the `OutputProperty` command parameter can then be used in the SQL statement for the
-[`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore) command.
+[`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command.
 
 ```
 IN (<#list locList as loc><#if (loc_index > 0)>,</#if>'${loc}'</#list>)
@@ -514,7 +510,7 @@ ProcessTSProduct(TSProductFile="loc4.tsp",OutputFile="loc4.tsp)
 ```
 
 Also note that when the expanded command file is first opened in TSTool the
-[`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct) commands will have a failure indicated.
+[`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) commands will have a failure indicated.
 This is because the TSP file being used by the command has
 not yet been created (it is created as the commands are run).
 After the commands are run one time, the files will exist and
@@ -528,16 +524,16 @@ including conditional (“if”) statements.
 However, the more complex the templates become, the more difficult they are to implement, troubleshoot, and maintain.
 Enhancements to TSTool may help with a solution that otherwise might
 require undesirable complexity.
-For example, see the TSTool [`If`](../If/If) and [`For`](../For/For) commands.
+For example, see the TSTool [`If`](../If/If.md) and [`For`](../For/For.md) commands.
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CopyTable`](../CopyTable/CopyTable) command
-* [`For`](../For/For) command
-* [`If`](../If/If) command
-* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct) command
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore) command
-* [`SetProperty`](../SetProperty/SetProperty) command
-* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile) command
+* [`CopyTable`](../CopyTable/CopyTable.md) command
+* [`For`](../For/For.md) command
+* [`If`](../If/If.md) command
+* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
+* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command
+* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md) command

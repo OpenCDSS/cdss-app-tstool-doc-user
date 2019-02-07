@@ -20,21 +20,19 @@ using the `${tsensemble:Property}` notation.  Property names are case-specific.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for built-in properties.
-<a href="../SetEnsembleProperty_BuiltIn.png">See also the full-size image.</a>
 
 ![SetEnsembleProperty BuiltIn](SetEnsembleProperty_BuiltIn.png)
 
 **<p style="text-align: center;">
-`SetEnsembleProperty` Command Editor for Built-in Properties
+`SetEnsembleProperty` Command Editor for Built-in Properties (<a href="../SetEnsembleProperty_BuiltIn.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for user-defined properties.
-<a href="../SetEnsembleProperty_User.png">See also the full-size image.</a>
 
 ![SetEnsembleProperty User](SetEnsembleProperty_User.png)
 
 **<p style="text-align: center;">
-`SetEnsembleProperty` Command Editor for User-defined Properties
+`SetEnsembleProperty` Command Editor for User-defined Properties (<a href="../SetEnsembleProperty_User.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -60,10 +58,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetEnsembleProperty).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetEnsembleProperty).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`NewEnsemble`](../NewEnsemble/NewEnsemble) command
+* [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command

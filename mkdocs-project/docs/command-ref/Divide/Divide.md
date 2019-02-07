@@ -13,19 +13,18 @@
 
 The `Divide` command divides one time series by another.
 This is useful for comparing the relative size of time series values (see also
-[`RelativeDiff`](../RelativeDiff/RelativeDiff)).
+[`RelativeDiff`](../RelativeDiff/RelativeDiff.md)).
 If the divisor is zero or missing, the result is set to missing.
-Use the [`Scale`](../Scale/Scale) command to divide by a numerical value.
+Use the [`Scale`](../Scale/Scale.md) command to divide by a numerical value.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../Divide.png">See also the full-size image.</a>
 
 ![Divide](Divide.png)
 
 **<p style="text-align: center;">
-`Divide` Command Editor
+`Divide` Command Editor (<a href="../Divide.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -47,9 +46,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Divide).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Divide).
 
-A sample command file to process time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -60,18 +59,17 @@ is as follows:
 Divide(TSID="2184.NOAA.TempMean.Month",DivisorTSID="5706.NOAA.TempMean.Month")
 ```
 The resulting graph is as follows:
-<a href="../Divide_Graph.png">See also the full-size image.</a>
 
 ![Divide Graph](Divide_Graph.png)
 
 **<p style="text-align: center;">
-Results from `Divide` Command
+Results from `Divide` Command (<a href="../Divide_Graph.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`RelativeDiff`](../RelativeDiff/RelativeDiff) command
-* [`Scale`](../Scale/Scale) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`RelativeDiff`](../RelativeDiff/RelativeDiff.md) command
+* [`Scale`](../Scale/Scale.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

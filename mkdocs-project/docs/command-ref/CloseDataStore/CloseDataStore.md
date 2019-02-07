@@ -24,23 +24,21 @@ In the future the command may be useful to process many databases in one command
 The status of datastores can be shown in TSTool using the ***View...Datastores***
 menu as shown in the following figure (the Status ***Message*** column on the far right,
 not visible in the figure, provides additional information about the datastore):
-<a href="../CloseDataStore_Status.png">See also the full-size image.</a>
 
 ![CloseDataStore Status](CloseDataStore_Status.png)
 
 **<p style="text-align: center;">
-Datastore Information
+Datastore Information (<a href="../CloseDataStore_Status.png">see also the full-size image</a>)
 </p>**
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../CloseDataStore.png">See also the full-size image.</a>
 
 ![CloseDataStore](CloseDataStore.png)
 
 **<p style="text-align: center;">
-`CloseDataStore` Command Editor
+`CloseDataStore` Command Editor (<a href="../CloseDataStore.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -61,7 +59,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CloseDataStore).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CloseDataStore).
 
 ## Troubleshooting ##
 

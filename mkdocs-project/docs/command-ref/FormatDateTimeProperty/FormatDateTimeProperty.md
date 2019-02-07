@@ -21,12 +21,11 @@ Support for properties varies by command and command documentation should be con
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../FormatDateTimeProperty.png">See also the full-size image.</a>
 
 ![FormatDateTimeProperty](FormatDateTimeProperty.png)
 
 **<p style="text-align: center;">
-`FormatDateTimeProperty` Command Editor
+`FormatDateTimeProperty` Command Editor (<a href="../FormatDateTimeProperty.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -46,7 +45,7 @@ Command Parameters
 |`DateTimePropertyName`|The name of the existing date/time property to be formatted.|None – must be specified.|
 |`FormatterType`|The date/time formatter type, which defines the format specifiers, one of:<ul><li>`C` – the C programming language `strftime()` function, which has been widely copied (described below).</li><li>`MS` – Microsoft convention (currently not supported but may be added in the future).</li></ul>|`C`|
 |`Format`|The format string for the formatter, which defines how date/time data parts are formatted into the new string property.  The string is interpreted by the formatter as follows:<ul><li>`FormatterType=C` – The string can contain literal characters and format specifiers that start with the `%` character.|None – must be specified.|
-|`PropertyType`|Indicate the output property type, which allows the command to create properties other than strings.  The formatted string must have an appropriate value to allow the conversion:<ul><li>`Boolean` – string must be true or false (case-insensitive)</li><li>`DateTime` – string must be a standard date/time format such as supported by [`SetProperty`](../SetProperty/SetProperty)</li><li>`Double` – floating point number</li><li>`Integer` – integer number</li><li>`String` – any text</li></ul>`String`|
+|`PropertyType`|Indicate the output property type, which allows the command to create properties other than strings.  The formatted string must have an appropriate value to allow the conversion:<ul><li>`Boolean` – string must be true or false (case-insensitive)</li><li>`DateTime` – string must be a standard date/time format such as supported by [`SetProperty`](../SetProperty/SetProperty.md)</li><li>`Double` – floating point number</li><li>`Integer` – integer number</li><li>`String` – any text</li></ul>`String`|
 
 The following table lists the supported formatting strings for `FormatterType=C`:
 
@@ -74,7 +73,7 @@ Supported C (strftime) Formatting Specifiers
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/FormatDateTimeProperty).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FormatDateTimeProperty).
 
 A sample command file is as follows:
 
@@ -87,5 +86,5 @@ FormatDateTimeProperty(PropertyName="DateTimePropString",DateTimePropertyName="D
 
 ## See Also ##
 
-* [`FormatStringProperty`](../FormatStringProperty/FormatStringProperty) command
-* [`SetProperty`](../SetProperty/SetProperty) command
+* [`FormatStringProperty`](../FormatStringProperty/FormatStringProperty.md) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command

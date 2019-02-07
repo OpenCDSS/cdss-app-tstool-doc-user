@@ -16,17 +16,16 @@ The default in most cases is to read/query all available data so that all data a
 However, a shorter period may be desirable to increase performance (e.g., when processing real-time data)
 or to force matching a historical period.
 It may be necessary to set the input period if the default for a datastore is very short.
-See also the [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod) command.
+See also the [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command.
 
 ## Command Editor ##
 
 The following dialog is used to edit this command and illustrates the syntax of the command.
-<a href="../SetInputPeriod.png">See also the full-size image.</a>
 
 ![SetInputPeriod](SetInputPeriod.png)
 
 **<p style="text-align: center;">
-`SetInputPeriod` Command Editor
+`SetInputPeriod` Command Editor (<a href="../SetInputPeriod.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -65,11 +64,11 @@ CurrentTo* Modifiers
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetInputPeriod).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetInputPeriod).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod) command
-* [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType) command
+* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
+* [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md) command

@@ -12,9 +12,9 @@
 ## Overview ##
 
 The `ProcessRasterGraph` command automates creation of a raster graph.
-This command is similar to the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct) command,
+This command is similar to the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command,
 but provides features specific to the raster graph.
-See the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct) command
+See the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
 documentation for background on time series product files and editing graphs.
 A raster graph is a visual representation of a single daily or monthly
 time series intended to emphasize trends and patterns.
@@ -32,7 +32,7 @@ Consequently there are essentially three plotting axes.
 using the same color as Feb 28.  This ensures that months align.
 The mouse tracker clearly indicates that the Feb 29 value is not actual.
 * It is also possible to overlay additional information on the raster graph.
-	
+
 It is envisioned that in the future, command parameters will implemented to:
 
 * Create a raster graph without a time series product file,
@@ -46,23 +46,21 @@ This will allow TSTool to be used to create the product, and other tools to visu
 * Specify additional configuration options for selecting the axis (e.g., allow seasonal or weekly display).
 
 The following is an example raster graph.
-<a href="../ProcessRasterGraph_ExampleGraph.png">See also the full-size image.</a>
 
 ![ProcessRasterGraph ExampleGraph](ProcessRasterGraph_ExampleGraph.png)
 
 **<p style="text-align: center;">
-Example Raster Graph
+Example Raster Graph (<a href="../ProcessRasterGraph_ExampleGraph.png">see also the full-size image</a>)
 </p>**
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ProcessRasterGraph.png">See also the full-size image.</a>
 
 ![ProcessRasterGraph](ProcessRasterGraph.png)
 
 **<p style="text-align: center;">
-`ProcessRasterGraph` Command Editor
+`ProcessRasterGraph` Command Editor (<a href="../ProcessRasterGraph.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -87,10 +85,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ProcessRasterGraph).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ProcessRasterGraph).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct) command
+* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command

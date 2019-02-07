@@ -14,7 +14,7 @@
 The `WriteTimeSeriesToExcel` command writes one or more time series to an Excel workbook.  The following functionality is provided:
 	
 * Time series are written in columns (see
-[`WriteTimeSeriesToExcelBlock`](../WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock) for alternate formatting options).
+[`WriteTimeSeriesToExcelBlock`](../WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock.md) for alternate formatting options).
 * The worksheet and position in worksheet can be specified.
 * The output can be created or appended.
 * Separate columns can be written for date/time, date, and/or time.
@@ -27,48 +27,43 @@ and consequently functionality is constrained by the features of that software p
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../WriteTimeSeriesToExcel.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToExcel](WriteTimeSeriesToExcel.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Editor
+`WriteTimeSeriesToExcel` Command Editor (<a href="../WriteTimeSeriesToExcel.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
-<a href="../WriteTimeSeriesToExcel_ExcelOutput.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToExcel ExcelOutput](WriteTimeSeriesToExcel_ExcelOutput.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Editor for Output Parameters
+`WriteTimeSeriesToExcel` Command Editor for Output Parameters (<a href="../WriteTimeSeriesToExcel_ExcelOutput.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for column and cell comment parameters.
-<a href="../WriteTimeSeriesToExcel_CellComments0.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToExcel CellComments0](WriteTimeSeriesToExcel_CellComments0.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Editor for Column and Cell Comments Parameters
+`WriteTimeSeriesToExcel` Command Editor for Column and Cell Comments Parameters (<a href="../WriteTimeSeriesToExcel_CellComments0.png">ee also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for column style formatting parameters.
-<a href="../WriteTimeSeriesToExcel_ColumnStyleFormat.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToExcel ColumnStyleFormat](WriteTimeSeriesToExcel_ColumnStyleFormat.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Editor for Column Style Formatting Parameters
+`WriteTimeSeriesToExcel` Command Editor for Column Style Formatting Parameters (<a href="../WriteTimeSeriesToExcel_ColumnStyleFormat.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for data value cell style formatting parameters.
-<a href="../WriteTimeSeriesToExcel_StyleFormat.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToExcel StyleFormat](WriteTimeSeriesToExcel_StyleFormat.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Editor for Data Value Cell Style Formatting Parameters
+`WriteTimeSeriesToExcel` Command Editor for Data Value Cell Style Formatting Parameters (<a href="../WriteTimeSeriesToExcel_StyleFormat.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -84,7 +79,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`MissingValue`|Value to write to Excel for missing data values.|Original missing value.|
@@ -128,26 +123,24 @@ The ***Style Formatting*** tab provides general formatting capabilities for data
 Consider the following time series data table,
 where the goal is to write the TSTool time series to Excel and format cells to indicate specific conditions of interest.
 This approach is implemented similarly in the
-[`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel) command.
-<a href="../WriteTimeSeriesToExcel_DataTable.png">See also the full-size image.</a>
+[`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command.
 
 ![WriteTimeSeriesToExcel DataTable](WriteTimeSeriesToExcel_DataTable.png)
 
 **<p style="text-align: center;">
-Data Table used with `WriteTimeSeriesToExcel` Command Style Formatting
+Data Table used with `WriteTimeSeriesToExcel` Command Style Formatting (<a href="../WriteTimeSeriesToExcel_DataTable.png">see also the full-size image</a>)
 </p>**
 
 To configure style-based formatting, a style table is defined listing properties for formatting cells.
 This table can be defined as a CSV file, Excel worksheet or other format and read into TSTool using a suitable command.
 The following figure illustrates a basic style table, which can be shared among commands.
-<a href="../WriteTimeSeriesToExcel_StyleTable.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToExcel StyleTable](WriteTimeSeriesToExcel_StyleTable.png)
 
 **<p style="text-align: center;">
-Style Table used with `WriteTimeSeriesToExcel` Command for Specific Checks and Formatting
+Style Table used with `WriteTimeSeriesToExcel` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_StyleTable.png">see also the full-size image</a>)
 </p>**
-	 
+
 The following style table column names are recognized.
 The default values for cell style properties not listed in the table are those provided by Excel.
 
@@ -164,12 +157,11 @@ Recognized Style Table Column Names
 The condition table indicates how the styles are used for time series data.
 The following example indicates that any time series with identifier (or alias)
 starting with `ts` should be processed to evaluate for missing, negative, and zero values.
-<a href="../WriteTimeSeriesToExcel_ConditionTable.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToExcel ConditionTable](WriteTimeSeriesToExcel_ConditionTable.png)
 
 **<p style="text-align: center;">
-Condition Table used with `WriteTimeSeriesToExcel` Command for Specific Checks and Formatting
+Condition Table used with `WriteTimeSeriesToExcel` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_ConditionTable.png">see also the full-size image</a>)
 </p>**
 
 The column names for the condition table must be specified as shown.
@@ -202,21 +194,19 @@ Condition Table Operators
 Multiple conditions can be specified by using AND (surrounded by a single space) between conditions.
 
 The following figure illustrates the output from the above example.
-<a href="../WriteTimeSeriesToExcel_Output.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToExcel Output](WriteTimeSeriesToExcel_Output.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Example Output for Specific Checks and Formatting
+`WriteTimeSeriesToExcel` Command Example Output for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_Output.png">see also the full-size image</a>)
 </p>**
 
 The following example illustrates using multiple conditions to implement a color scale.
-<a href="../WriteTimeSeriesToExcel_StyleTable2.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToExcel StyleTable2](WriteTimeSeriesToExcel_StyleTable2.png)
 
 **<p style="text-align: center;">
-Style Table used with `WriteTimeSeriesToExcel` Command for a Color Scale
+Style Table used with `WriteTimeSeriesToExcel` Command for a Color Scale (<a href="../WriteTimeSeriesToExcel_StyleTable2.png">see also the full-size image</a>)
 </p>**
 
 ![WriteTimeSeriesToExcel ConditionTable2](WriteTimeSeriesToExcel_ConditionTable2.png)
@@ -226,22 +216,21 @@ Condition Table used with `WriteTimeSeriesToExcel` Command for a Color Scale
 </p>**
 
 The following is the output.
-<a href="../WriteTimeSeriesToExcel_Output2.png">See also the full-size image.</a>
 
 ![WriteTimeSeriesToExcel Output2](WriteTimeSeriesToExcel_Output2.png)
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Example Output for Style Formatting
+`WriteTimeSeriesToExcel` Command Example Output for Style Formatting (<a href="../WriteTimeSeriesToExcel_Output2.png">see also the full-size image</a>)
 </p>**
-	 
+
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToExcel).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToExcel).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
-* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel) command
-* [`WriteTimeSeriesToExcelBlock`](../WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command
+* [`WriteTimeSeriesToExcelBlock`](../WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock.md) command

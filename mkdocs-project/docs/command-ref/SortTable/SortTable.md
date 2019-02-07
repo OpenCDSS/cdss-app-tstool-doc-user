@@ -18,12 +18,11 @@ Strings are sorted by ignoring case.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../SortTable.png">See also the full-size image.</a>
 
 ![SortTable](SortTable.png)
 
 **<p style="text-align: center;">
-`SortTable` Command Editor
+`SortTable` Command Editor (<a href="../SortTable.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -45,10 +44,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SortTable).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SortTable).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`NewTable`](../NewTable/NewTable) command
+* [`NewTable`](../NewTable/NewTable.md) command

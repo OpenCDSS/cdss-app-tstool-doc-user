@@ -18,10 +18,10 @@ The workbook is retained in memory and can be manipulated using commands that wr
 Leave placeholders for data sheets.  Refer to the data sheets using named ranges.
 2. Read the Excel workbook template using the `ReadExcelWorkbook` command.
 3. Manipulate the Excel workbook using TSTool commands that write to Excel, for example
-[`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel).
+[`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md).
 If the `KeepOpen=False` parameter is used, the original file will not be re-written.
 Therefore, use `KeepOpen=True` in combination with the following.
-4. Use the [`CloseExcelWorkbook`](../CloseExcelWorkbook/CloseExcelWorkbook) command and specify
+4. Use the [`CloseExcelWorkbook`](../CloseExcelWorkbook/CloseExcelWorkbook.md) command and specify
 `WriteFile=True` to force writing the Excel workbook.
 The `NewOutputFile` parameter can also be specified to write a new output file, leaving the original Excel file intact.
 
@@ -32,12 +32,11 @@ Excel workbooks and consequently functionality is constrained by the features of
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ReadExcelWorkbook.png">See also the full-size image.</a>
 
 ![ReadExcelWorkbook](ReadExcelWorkbook.png)
 
 **<p style="text-align: center;">
-`ReadExcelWorkbook` Command Editor
+`ReadExcelWorkbook` Command Editor (<a href="../ReadExcelWorkbook.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -57,11 +56,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadExcelWorkbook).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadExcelWorkbook).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CloseExcelWorkbook`](../CloseExcelWorkbook/CloseExcelWorkbook) command
-* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel) command
+* [`CloseExcelWorkbook`](../CloseExcelWorkbook/CloseExcelWorkbook.md) command
+* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command

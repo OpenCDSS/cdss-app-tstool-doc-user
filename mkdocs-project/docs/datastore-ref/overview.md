@@ -26,38 +26,38 @@ in which case `Read` command parameters or datastore configuration properties ar
 
 The following datastores (and input types) are listed in alphabetical order by datastore name, with the following explanation:
 
-| **Datastore (link to documentation)**                             | **Technology**         | **Spatial Extent** | **Contents**                                   | **Documentation Status** |
+| **Datastore (link to documentation)**                                        | **Technology**         | **Spatial Extent** | **Contents**                                   | **Documentation Status** |
 |--|--|--|--|--|
-| [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest) | Web service (REST)  | Colorado           | Historical and real-time data                  | New - in process |
-| [Colorado SMS (legacy)](ColoradoSMSDatabase/ColoradoSMSDatabase)  | Database (SQL Server)  | Colorado           | Real-time data                                 | **not yet migrated**     |
-| [ColoradoWaterHBGuest](ColoradoWaterHBGuest/ColoradoWaterHBGuest) | Web service (SOAP)     | Colorado           | Historical data                                | Migrated |
-| [ColoradoWaterSMS](ColoradoWaterSMS/ColoradoWaterSMS)             | Web service (SOAP)     | Colorado           | Real-time data                                 | Migrated |
-| [DateValue](DateValue/DateValue)                                  | File (text)            | No limit           | General time series format                     | Migrated |
-| [Delft FEWS PI XML](Delft-FEWS-PI-XML/Delft-FEWS-PI-XML)          | File (text)            | No limit           | Delft FEWS software file                       | Migrated |
-| [GenericDatabase](GenericDatabase/GenericDatabase)                | Database (any ODBC)    | No limit           | Any SQL database                               | Migrated |
-| [HEC-DSS File](HEC-DSS/HEC-DSS)                                   | File database (binary) | No limit           | General time series database                   | Migrated |
-| [HydroBase](CO-HydroBase/CO-HydroBase)                            | Database (SQL Server)  | Colorado           | Colorado water resources (datastore version)   | Migrated |
-| [HydroBase (legacy)](HydroBase/HydroBase-legacy)                  | Database (SQL Server)  | Colorado           | Colorado water resources (input type version)  | **not yet migrated**     |
-| [HydroJSON](HydroJSON/HydroJSON)                                  | File (text)            | No limit           | HydroJSON time series format                   | Migrated |
-| [MODSIM](MODSIM/MODSIM)                                           | File (text)            | No limit           | MODSIM modeling software data file             | Migrated |
-| [NRCS AWDB](NRCS-AWDB/NRCS-AWDB)                                  | Web service (SOAP)     | USA                | Snow, reservoir, climate, other                | Migrated |
-| [NDFD](NDFD/NDFD)                                                 | File (text)            | No limit           | National Digital Forecast Database.            | **not yet migrated (placeholder)**|
-| [NWS Card](NwsCard/NwsCard)                                       | File (text)            | No limit           | General time series format (hour interval)     | **not yet migrated**     |
-| [NWSRFS ESP Ensemble](NwsrfsEspEnsemble/NwsrfsEspEnsemble)        | File (binary)          | No limit           | Ensembles of time series (hour interval)       | **not yet migrated**     |
-| [NWSRFS FS5Files](NwsrfsFs5files/NwsrfsFs5files)                  | File database (binary) | No limit           | National Weather Service River Forecast System | **not yet migrated**     |
-| [RCC ACIS](RCC-ACIS/RCC-ACIS)                                     | Web service (REST)     | USA                | Precipitation, temperature, other climate      | Migrated |
-| [Reclamation HDB](ReclamationHdb/ReclamationHdb)                  | Database (Oracle)      | USA                | Water resources                                | Migrated |
-| [Reclamation Pisces](ReclamationPisces/ReclamationPisces)         | Database (MySQL)       | USA                | Water resources                                | Migrated |
-| [RiversideDB](RiversideDB/RiversideDB)                            | Database (SQL Server)  | No limit           | Hydrologic modeling database.                  | **not yet migrated (placeholder)**     |
-| [RiverWare](RiverWare/RiverWare)                                  | File (text)            | No limit           | RiverWare modeling software data file          | Migrated |
-| [StateCU](StateCU/StateCU)                                        | File (text)            | No limit           | StateCU modeling software data file            | Migrated |
-| [StateCUB - StateCU Output](StateCUB/StateCUB)                    | File (binary)          | No limit           | StateCU modeling software data file            | Migrated |
-| [StateMod](StateMod/StateMod)                                     | File (text)            | No limit           | StateMod modeling software data file           | Migrated |
-| [StateModB - StateMod Output](StateModB/StateModB)                | File (binary)          | No limit           | StateMod modeling software data file           | Migrated |
-| [USGS NWIS Daily](USGS-NWIS-Daily/USGS-NWIS-Daily)                | Web service (REST)     | No limit           | Water and other data (day interval)            | Migrated |
-| [USGS NWIS Groundwater](USGS-NWIS-Groundwater/USGS-NWIS-Groundwater)| Web service (REST)   | No limit           | Groundwater and other data                     | Migrated |
-| [USGS NWIS Instantaneous](USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous)| Web service (REST)| No limit        | Water and other data (instantaneous interval)  | Migrated |
-| [USGS NWIS RDB](USGS-NWIS-RDB/USGS-NWIS-RDB)                      | File (text)            | No limit           | RDB format for USGS data (see USGS above)      | Migrated |
-| [WaterML](WaterML/WaterML)                                        | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | **not yet migrated (placeholder)**     |
-| [WaterML2](WaterML/WaterML2)                                      | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | **not yet migrated (placeholder)**     |
-| [WaterOneFlow](WaterOneFlow/WaterOneFlow)                         | Web service (SOAP)     | No limit           | Web service for CUAHSI                         | **not yet migrated**     |
+| [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)      | Web service (REST)     | Colorado           | Historical and real-time data                  | New - in process |
+| Colorado SMS (legacy)<br>**OBSOLETE**                                        | Database (SQL Server)  | Colorado           | Real-time data                                 | **not yet migrated** - no longer used |
+| [ColoradoWaterHBGuest](ColoradoWaterHBGuest/ColoradoWaterHBGuest.md)<br>**OBSOLETE**| Web service (SOAP)     | Colorado           | Historical data                         | Migrated |
+| [ColoradoWaterSMS](ColoradoWaterSMS/ColoradoWaterSMS.md)<br>**OBSOLETE**     | Web service (SOAP)     | Colorado           | Real-time data                                 | Migrated |
+| [DateValue](DateValue/DateValue.md)                                          | File (text)            | No limit           | General time series format                     | Migrated |
+| [Delft FEWS PI XML](Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md)                  | File (text)            | No limit           | Delft FEWS software file                       | Migrated |
+| [GenericDatabase](GenericDatabase/GenericDatabase.md)                        | Database (any ODBC)    | No limit           | Any SQL database                               | Migrated |
+| [HEC-DSS File](HEC-DSS/HEC-DSS.md)                                           | File database (binary) | No limit           | General time series database                   | Migrated |
+| [HydroBase](CO-HydroBase/CO-HydroBase.md)                                    | Database (SQL Server)  | Colorado           | Colorado water resources (datastore version)   | Migrated |
+| [HydroBase (legacy)](CO-HydroBase-legacy/CO-HydroBase-legacy.md)             | Database (SQL Server)  | Colorado           | Colorado water resources (input type version)  | Use [HydroBase datastore](CO-HydroBase/CO-HydroBase.md) documentation. |
+| [HydroJSON](HydroJSON/HydroJSON.md)                                          | File (text)            | No limit           | HydroJSON time series format                   | Migrated |
+| [MODSIM](MODSIM/MODSIM.md)                                                   | File (text)            | No limit           | MODSIM modeling software data file             | Migrated |
+| [NRCS AWDB](NRCS-AWDB/NRCS-AWDB.md)                                          | Web service (SOAP)     | USA                | Snow, reservoir, climate, other                | Migrated |
+| [NDFD](NDFD/NDFD.md)                                                         | File (text)            | No limit           | National Digital Forecast Database.            | **not yet migrated (placeholder)**|
+| [NWS Card](NWS-NWSRFS/NWS-NWSRFS.md)<br>**OBSOLETE**                         | File (text)            | No limit           | General time series format (hour interval)     | **not yet migrated - being phased out**     |
+| [NWSRFS ESP Ensemble](NWS-NWSRFS/NWS-NWSRFS.md)<br>**OBSOLETE**              | File (binary)          | No limit           | Ensembles of time series (hour interval)       | **not yet migrated - being phased out**     |
+| [NWSRFS FS5Files](NWS-NWSRFS/NWS-NWSRFS.md)<br>**OBSOLETE**                  | File database (binary) | No limit           | National Weather Service River Forecast System | **not yet migrated - being phased out**     |
+| [RCC ACIS](RCC-ACIS/RCC-ACIS.md)                                             | Web service (REST)     | USA                | Precipitation, temperature, other climate      | Migrated |
+| [Reclamation HDB](ReclamationHDB/ReclamationHDB.md)                          | Database (Oracle)      | USA                | Water resources                                | Migrated |
+| [Reclamation Pisces](ReclamationPisces/ReclamationPisces.md)                 | Database (MySQL)       | USA                | Water resources                                | Migrated |
+| [RiversideDB](RiversideDB/RiversideDB.md)                                    | Database (SQL Server)  | No limit           | Hydrologic modeling database.                  | **not yet migrated (placeholder)**     |
+| [RiverWare](RiverWare/RiverWare.md)                                          | File (text)            | No limit           | RiverWare modeling software data file          | Migrated |
+| [StateCU](StateCU/StateCU.md)                                                | File (text)            | No limit           | StateCU modeling software data file            | Migrated |
+| [StateCUB - StateCU Output](StateCUB/StateCUB.md)                            | File (binary)          | No limit           | StateCU modeling software data file            | Migrated |
+| [StateMod](StateMod/StateMod.md)                                             | File (text)            | No limit           | StateMod modeling software data file           | Migrated |
+| [StateModB - StateMod Output](StateModB/StateModB.md)                        | File (binary)          | No limit           | StateMod modeling software data file           | Migrated |
+| [USGS NWIS Daily](USGS-NWIS-Daily/USGS-NWIS-Daily.md)                        | Web service (REST)     | No limit           | Water and other data (day interval)            | Migrated |
+| [USGS NWIS Groundwater](USGS-NWIS-Groundwater/USGS-NWIS-Groundwater.md)      | Web service (REST)     | No limit           | Groundwater and other data                     | Migrated |
+| [USGS NWIS Instantaneous](USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous.md)| Web service (REST)     | No limit           | Water and other data (instantaneous interval)  | Migrated |
+| [USGS NWIS RDB](USGS-NWIS-RDB/USGS-NWIS-RDB.md)                              | File (text)            | No limit           | RDB format for USGS data (see USGS above)      | Migrated |
+| [WaterML](WaterML/WaterML.md)                                                | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | **not yet migrated (placeholder)**     |
+| [WaterML2](WaterML2/WaterML2.md)                                              | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | **not yet migrated (placeholder)**     |
+| [WaterOneFlow](WaterOneFlow/WaterOneFlow.md)                                 | Web service (SOAP)     | No limit           | Web service for CUAHSI                         | **not yet migrated**     |

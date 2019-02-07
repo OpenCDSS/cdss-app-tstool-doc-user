@@ -72,12 +72,11 @@ Some programs use a GeoView that is embedded in the main application window,
 and some rely on secondary map windows (as shown below).
 If the map is in the main window, the menus at the top of the window will be those
 specific to the software (whereas below the single GeoView ***File ***menu is shown).
-<a href="../GeoView_Frame.png">See also the full-size image.</a>
 
 ![GeoView_Frame](GeoView_Frame.png)
 
 **<p style="text-align: center;">
-Example GeoView Interface (from TSTool)
+Example GeoView Interface (from TSTool) (<a href="../GeoView_Frame.png">see also the full-size image</a>)
 </p>**
 
 The GeoView Panel is a self-contained component that offers a
@@ -101,7 +100,7 @@ GeoView Components
 **<p style="text-align: center;">
 GeoView Tools 
 </p>**
-	
+
 |**Tool Icon**|**Tool**|**Description**|
 |--|--|--|
 |![Print](Tool_Print_Icon.png)|***Print***|Print the visible map.  You will be able to pick the printer and orientation.|
@@ -109,7 +108,7 @@ GeoView Tools
 |![Refresh](Tool_Refresh_Icon.png)|***Refresh***|Refresh the map display by redrawing features in enabled layers that are in the visible window.  This does not re-read the original data.  GeoView normally refreshes automatically as needed.|
 |![Zoom out](Tool_Zoom_Out_Icon.png)|***Zoom Out***|Zoom to the maximum data extents.|
 |![Zoom in](Tool_Zoom_Icon.png) ![Info](Tool_Info_Icon.png) ![Select](Tool_Select_Icon.png)|***Select the Mode as Zoom, Info, or Select***|Select the interaction mode.  The ***Zoom*** mode allows a rectangle to be drawn on the map to zoom to the specified region and is the default mode if no layer is selected.  The ***Info*** mode allows features to be selected (by clicking on or drawing a box around), after which geographic information about the features is displayed.  The ***Select*** mode is similar to ***Info***; however, its purpose is to select features for an additional action (e.g., exporting data or performing a query).  The ***Info*** and ***Select*** modes are only enabled if one or more layers are selected in the table of contents.<br><br>See the next section for more information about using these features.|
-	
+
 The GeoView Panel components work with each other to provide interaction with the maps, as described below.
 
 ## Interacting with the GeoView Map ##
@@ -138,12 +137,11 @@ To view general GeoView properties, right click on the GeoView map and select th
 Some properties are currently view-only.
 Refer to the [GeoView Configuration – the GeoView Project File](#geoview-configuration-the-geoview-project-file)
 section below for a complete list of properties that can be defined in a GeoView Project file.
-<a href="../GeoView_Props.png">See also the full-size image.</a>
 
 ![GeoView_Props](GeoView_Props.png)
 
 **<p style="text-align: center;">
-Main GeoView Properties
+Main GeoView Properties (<a href="../GeoView_Props.png">see also the full-size image</a>)
 </p>**
 
 GeoView properties, as shown in the above figure,
@@ -167,24 +165,22 @@ The tabbed panels are discussed below the each figure.
 
 GeoView layer properties, as shown in the following figure, apply to the input source.
 Currently these properties are used for information purposes and cannot be interactively edited.
-<a href="../GeoView_Props_Layer.png">See also the full-size image.</a>
 
 ![GeoView_Props_Layer](GeoView_Props_Layer.png)
 
 **<p style="text-align: center;">
-GeoView Layer Properties
+GeoView Layer Properties (<a href="../GeoView_Props_Layer.png">see also the full-size image</a>)
 </p>**
 
 Symbol properties, as shown in the following figure, indicate how the layer is to be
 drawn (symbolized) on the map and in the table of contents.
 A sample of the symbol is shown in the dialog, although it may appear slightly different on the map and table of contents.
 Symbol terminology corresponds to standard GIS tools.
-<a href="../GeoView_Props_Symbol.png">See also the full-size image.</a>
 
 ![GeoView_Props_Symbol](GeoView_Props_Symbol.png)
 
 **<p style="text-align: center;">
-Layer View Symbol Properties
+Layer View Symbol Properties (<a href="../GeoView_Props_Symbol.png">see also the full-size image</a>)
 </p>**
 
 Label properties, as shown in the following figure, can be modified to label
@@ -193,12 +189,11 @@ Currently, only point features can be labeled.
 Labels can consist of a combination of attribute values.
 To label features, select the attribute fields from the available choices,
 in the order that they should appear in the label.
-<a href="../GeoView_Props_Label.png">See also the full-size image.</a>
 
 ![GeoView_Props_Label](GeoView_Props_Label.png)
 
 **<p style="text-align: center;">
-Layer View Label Properties
+Layer View Label Properties (<a href="../GeoView_Props_Label.png">see also the full-size image</a>)
 </p>**
  
 The label format, if not specified, defaults to the use the full field with of the attribute.
@@ -219,23 +214,21 @@ Layer application properties as shown in the following figure are used to link a
 This process allows general GeoView features to be used more specifically by specific software programs.
 The [Using GeoView with a Software Application section](#using-geoview-with-a-software-application)
 describes this functionality in more detail.
-<a href="../GeoView_Props_Application.png">See also the full-size image.</a>
 
 ![GeoView_Props_Application](GeoView_Props_Application.png)
 
 **<p style="text-align: center;">
-Application Layer Type
+Application Layer Type (<a href="../GeoView_Props_Application.png">see also the full-size image</a>)
 </p>**
 
 Layer view animation properties, as shown in the following figure, are currently under development.
 Animation properties will define, for example,
 the time series data that are used for symbolization during animation.
-<a href="../GeoView_Props_Animation.png">See also the full-size image.</a>
 
 ![GeoView_Props_Animation](GeoView_Props_Animation.png)
 
 **<p style="text-align: center;">
-Layer View Animation Properties
+Layer View Animation Properties (<a href="../GeoView_Props_Animation.png">see also the full-size image</a>)
 </p>**
 
 ## Viewing a Layer’s Attributes ##
@@ -246,12 +239,11 @@ Each feature also can have attribute data, which are typically represented in a 
 To view the attributes for a layer, first select the layer in the table of contents,
 then right-click and press the ***View Attribute Table*** menu choice.
 A window similar to the following will be shown.
-<a href="../GeoView_Attributes.png">See also the full-size image.</a>
 
 ![GeoView_Attributes](GeoView_Attributes.png)
 
 **<p style="text-align: center;">
-Attributes Table for a Layer
+Attributes Table for a Layer (<a href="../GeoView_Attributes.png">see also the full-size image</a>)
 </p>**
 
 The attributes are displayed in the order and format determined from the input data.
@@ -371,7 +363,7 @@ GeoView Properties (listed alphabetically)
 |`FontStyle`|Font style to use for GeoView components (e.g., buttons).  This property currently can only be set internally with software.|System-specific.|
 |`GeoDataHome`|Directory where the GIS data exist.  This directory will be prepended to layer files if they are not absolute paths already.|If not specified or if specified as `"."`, the directory will be set as the home of the GeoView Project file.|
 |`InitialExtent`|Initial extent of the map display, in data coordinates.  The coordinates should be specified as `"XMIN,YMIN  XMAX,YMAX"`, where the first pair is the lower-left corner of the extents and the second pair is the upper right.  This property has not been implemented.  See the `MaximumExtent` property.|No default.  The initial extent will be the maximum data extent.|
-|`MaximumExtent`|Maximum extent of the map display when zoomed out, in data coordinates.  The coordinates should be specified as `“XMIN,YMIN XMAX,YMAX”`, where the first pair is the lower-left corner of the extents and the second pair is the upper right.	No default.  The maximum extent will be the maximum data extent.|
+|`MaximumExtent`|Maximum extent of the map display when zoomed out, in data coordinates.  The coordinates should be specified as `“XMIN,YMIN XMAX,YMAX”`, where the first pair is the lower-left corner of the extents and the second pair is the upper right. No default.  The maximum extent will be the maximum data extent.|
 |`Projection`|Projection for the GeoView.   The projection definition varies depending on the projection (some projections require more parameters).  The following projections are currently supported:<br><ul><li>`Geographic` - no projection (decimal degrees)</li><li>`HRAP` - used by National Weather Service</li><li>`UTM,Zone[,Datum,FalseEasting],`<br>`[FalseNorthing][,CentralLongitude]`<br>`[,OriginLatitude][,Scale]` - Universal Transverse Mercator.  The Zone is required (e.g., `13` for Colorado).  Datum defaults to `NAD83`.  The `FalseEasting` defaults to `500000`.  The `FalseNorthing` defaults to `0`.  The `CentralLongitude` is computed from the `Zone`.  The `OriginLatitude` defaults to `0`.  The `Scale` defaults to `.9996`.|No default.  All data are assumed to be the same projection.|
 |`ProjectAtRead`|Indicates whether layer features are projected at read-time to the GeoView projection.  This slows down the application initially but increases performance later during map refreshes.|`false` (it is usually best to project all data to a common projection rather than relying on GeoView to do projections)|
 |`SelectColor`|Color to use for selected features.  See the discussion after this table for examples of how to specify colors.|`Yellow`<br>A more distinctly visible magenta/pink color with RGB `255,120,255` is being considered.|

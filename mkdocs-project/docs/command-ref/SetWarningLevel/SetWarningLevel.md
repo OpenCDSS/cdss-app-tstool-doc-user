@@ -29,12 +29,11 @@ Levels are not completely consistent but the following guidelines can be followe
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../SetWarningLevel.png">See also the full-size image.</a>
 
 ![SetWarningLevel](SetWarningLevel.png)
 
 **<p style="text-align: center;">
-`SetWarningLevel` Command Editor Showing Conditions Test
+`SetWarningLevel` Command Editor Showing Conditions Test (<a href="../SetWarningLevel.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -55,11 +54,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetWarningLevel).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetWarningLevel).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel) command
-* [`StartLog`](../StartLog/StartLog) command
+* [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel.md) command
+* [`StartLog`](../StartLog/StartLog.md) command

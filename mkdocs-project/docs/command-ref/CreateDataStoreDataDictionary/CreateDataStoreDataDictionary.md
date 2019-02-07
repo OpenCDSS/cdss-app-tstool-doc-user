@@ -14,7 +14,7 @@
 The `CreateDataStoreDataDictionary` command creates an HTML data dictionary and
 Entity Relationship (ER) Diagram for a database datastore.
 The data dictionary output from the command is an HTML file that provides:
-	
+
 * General database information.
 * A list of tables and views, which link to table details.
 * For each table, the details for the columns in the table, including name, data type,
@@ -37,30 +37,27 @@ although in the future an ability to provide table and column descriptions using
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for table parameters.
-<a href="../CreateDataStoreDataDictionary_Tables.png">See also the full-size image.</a>
 
 ![CreateDataStoreDataDictionary Tables](CreateDataStoreDataDictionary_Tables.png)
 
 **<p style="text-align: center;">
-`CreateDataStoreDataDictionary` Command Editor for Table Parameters
+`CreateDataStoreDataDictionary` Command Editor for Table Parameters (<a href="../CreateDataStoreDataDictionary_Tables.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for data dictionary parameters.
-<a href="../CreateDataStoreDataDictionary.png">See also the full-size image.</a>
 
 ![CreateDataStoreDataDictionary](CreateDataStoreDataDictionary.png)
 
 **<p style="text-align: center;">
-`CreateDataStoreDataDictionary` Command Editor for Data Dictionary Parameters
+`CreateDataStoreDataDictionary` Command Editor for Data Dictionary Parameters (<a href="../CreateDataStoreDataDictionary.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for entity relationship parameters.
-<a href="../CreateDataStoreDataDictionary_ERDiagram.png">See also the full-size image.</a>
 
 ![CreateDataStoreDataDictionary ERDiagram](CreateDataStoreDataDictionary_ERDiagram.png)
 
 **<p style="text-align: center;">
-`CreateDataStoreDataDictionary` Command Editor for Entity Relationship Diagram Parameters
+`CreateDataStoreDataDictionary` Command Editor for Entity Relationship Diagram Parameters (<a href="../CreateDataStoreDataDictionary_ERDiagram.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -74,7 +71,7 @@ CreateDataStoreDataDictionary(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`DataStore`<br>**required**|The name of a database datastore.  Can be specified using `${Property}`.|None – must be specified.|
 |`ReferenceTables`|A comma-separated list of database reference tables.  The content of these tables will be output in their entirety.  Can be specified using `${Property}`.|No reference tables|
@@ -92,19 +89,19 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CreateDataStoreDataDictionary).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CreateDataStoreDataDictionary).
 
 The following is an example of an Excel workbook with ER Diagram layout data, which can be read with the
-[`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel) command.
+[`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command.
 
 ![CreateDataStoreDataDictionary Layout](CreateDataStoreDataDictionary_Layout.png)
 
 **<p style="text-align: center;">
-`CreateDataStoreDataDictionary` Command Editor for Entity Relationship Diagram Parameters
+`CreateDataStoreDataDictionary` Command Editor for Entity Relationship Layout Parameters (<a href="../CreateDataStoreDataDictionary_Layout.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel) command
+* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command

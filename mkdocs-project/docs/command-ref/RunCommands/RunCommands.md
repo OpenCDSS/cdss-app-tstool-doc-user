@@ -37,12 +37,11 @@ More options to hand off logging from one file to another may be implemented in 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../RunCommands.png">See also the full-size image.</a>
 
 ![RunCommands](RunCommands.png)
 
 **<p style="text-align: center;">
-`RunCommands` Command Editor
+`RunCommands` Command Editor (<a href="../RunCommands.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -64,7 +63,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunCommands).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunCommands).
 
 The following example illustrates how the `RunCommands` command can be used to test TSTool software (or any implementation of commands).
 First, individual command files are implemented to test specific functionality,
@@ -88,7 +87,7 @@ RunCommands(InputFile="..\..\..\commands\general\ReadStateMod\Test_ReadStateMod_
 Each of the above command files should produce expected results, without warnings.
 If any command file unexpectedly produces a warning, a warning will also be visible in TSTool.
 The issue can then be evaluated to determine whether a software or configuration change is necessary.
-See the [StartRegressionTestResultsReport](../StartRegressionTestResultsReport/StartRegressionTestResultsReport)
+See the [StartRegressionTestResultsReport](../StartRegressionTestResultsReport/StartRegressionTestResultsReport.md)
 command documentation for an explanation of how to disable a command file with `#@enabled False`
 or indicate its expected status for testing (e.g., `@#expectedStatus Warning`).
 
@@ -96,7 +95,7 @@ or indicate its expected status for testing (e.g., `@#expectedStatus Warning`).
 
 ## See Also ##
 
-* [`CreateRegressionTestCommandFile`](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile) command
-* [`RunProgram`](../RunProgram/RunProgram) command
-* [`StartRegressionTestResultsReport`](../StartRegressionTestResultsReport/StartRegressionTestResultsReport) command
-* [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile) command
+* [`CreateRegressionTestCommandFile`](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command
+* [`RunProgram`](../RunProgram/RunProgram.md) command
+* [`StartRegressionTestResultsReport`](../StartRegressionTestResultsReport/StartRegressionTestResultsReport.md) command
+* [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile.md) command

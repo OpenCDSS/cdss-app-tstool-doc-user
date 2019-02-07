@@ -21,36 +21,36 @@ many time series are associated with a location such as a station, area, or sens
 This chapter discusses the relationship between time series and spatial data and
 provides an overview of using map-related features in TSTool.
 Time series concepts (such as time series identifiers) are discussed in detail in
-[the Introduction chapter](../introduction/introduction).
+[the Introduction chapter](../introduction/introduction.md).
  Information about the built-in map display tool used in TSTool is provided in the
-[GeoView Mapping Tools Appendix](../appendix-geoview/geoview).
+[GeoView Mapping Tools Appendix](../appendix-geoview/geoview.md).
 
 The map capability in the TSTool user interface is limited and has not been fully developed.
 However, commands related to tables can be used to link time series to tables, for example:
 
-* the [`ReadTableFromDBF`](../command-ref/ReadTableFromDBF/ReadTableFromDBF) command can be used to
+* the [`ReadTableFromDBF`](../command-ref/ReadTableFromDBF/ReadTableFromDBF.md) command can be used to
 read the attribute data from an Esri shapefile and attributes can be attached to time series using the
-[`SetTimeSeriesPropertiesFromTable`](../command-ref/SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable) command
+[`SetTimeSeriesPropertiesFromTable`](../command-ref/SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command
 * similarly, it is possible to use commands like
-[`CalculateTimeSeriesStatistic`](../command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic),
+[`CalculateTimeSeriesStatistic`](../command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md),
 save to a table, and then join the table in a spatial data layer using GIS tools
 * time series read from sources that provide location data typically have properties
 set during the read and these properties can be copied to a table with
-[`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable),
+[`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md),
 the table can be written using
-[`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile),
+[`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md),
 and then the file can be used by GIS software as a point layer
 
 It also is often possible to perform selections of time series based on spatial constraints,
 simply by using available attributes.
-For example [USGS NWIS web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily)
+For example [USGS NWIS web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md)
 allow querying by county name and Hydrologic Unit Code.
 Of course, this requires that the locational properties for time series are available.
 
 The remainder of this chapter describes map-related features and concepts.
 Future TSTool enhancements will build on features described in the above paragraph
 in order to allow automated processing of map data and products (similar to how the
-[`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct) command processes time series products).
+[`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command processes time series products).
 
 ## Time Series and Map Layer Relationships ##
 
@@ -119,12 +119,11 @@ For example, use the symbol size and shape, and configure the order of layers
 to ensure that multiple symbols drawing on each other will still allow sufficient visibility of the symbols.
 This can be applied to indicate data types collected at a location, and also data type/interval information.
 The following example shows this approach to indicate station type:
-<a href="../SymbolExample.png">See also the full-size image.</a>
 
 ![SymbolExample](SymbolExample.png)
 
 **<p style="text-align: center;">
-Example of Symbol Layering
+Example of Symbol Layering (<a href="../SymbolExample.png">see also the full-size image</a>)
 </p>**
 
 Using many layers and symbols to indicate time series data interval may not be
@@ -134,12 +133,11 @@ For this reason and because maps usually focus on physical features,
 using symbols to indicate the various data intervals is not common.
 More common are maps that show a layer for real-time data and a layer for historical data,
 as shown in the following figure:
-<a href="../GeoView_StreamSymbols.png">See also the full-size image.</a>
 
 ![GeoView_StreamSymbols](GeoView_StreamSymbols.png)
  
 **<p style="text-align: center;">
-Example Map Showing Real-time and Historical Data Layers
+Example Map Showing Real-time and Historical Data Layers (<a href="../GeoView_StreamSymbols.png">see also the full-size image</a>)
 </p>**
 
 The map is useful because the user and software can determine where
@@ -178,19 +176,19 @@ The following example illustrates the time series to map layer configuration fil
 #
 # TS_InputType - the time series input type, as used in TSTool
 # TS_DataType - the data type shown in TSTool, specific to an input type
-#		For example, TSTool uses "Streamflow" for HydroBase, whereas
-#		for other input types a different data type string may be used.
+#                For example, TSTool uses "Streamflow" for HydroBase, whereas
+#                for other input types a different data type string may be used.
 # TS_Interval - time series interval of interest (e.g.,"Month", "Day", "1Hour"
-#		"Irregular")
+#                "Irregular")
 # Layer_Name - the layer name used in the map layer list
 # Layer_Location - the attribute that is used to identify a location, to be
-#		matched against the time series data location
+#                matched against the time series data location
 # Layer_DataType - the attribute that is used to indicate the data type for a
-#		station's time series (CURRENTLY NOT USED - UNDER EVALUATION)
+#                station's time series (CURRENTLY NOT USED - UNDER EVALUATION)
 # Layer_Interval - the attribute that is used to indicate the interval for a
-#		station's time series
+#                station's time series
 # Layer_DataSource - the attribute that is used to indicate the data source for
-#		a station's time series.
+#                a station's time series.
 #
 # When matching time series in the TSTool time series query list with features
 # on the map, the TS_* values are matched with the time series identifier
@@ -232,24 +230,22 @@ The following sections describe more specifically how to utilize the links betwe
 ## Opening a Map ##
 
 To open a map in TSTool, first select the ***View / Map*** menu item, which will display the following window.
-<a href="../GeoView_Window_Blank.png">See also the full-size image.</a>
 
 ![GeoView_Window_Blank](GeoView_Window_Blank.png)
 
 **<p style="text-align: center;">
-Map (GeoView) Window when First Opened
+Map (GeoView) Window when First Opened (<a href="../GeoView_Window_Blank.png">see also the full-size image</a>)
 </p>**
 
 In this window, select ***File / Open Project*** and select a GeoView Project File (`*.gvp`), as shown below.
-<a href="../GeoView_Window_OpenProject.png">See also the full-size image.</a>
 
 ![GeoView_Window_OpenProject](GeoView_Window_OpenProject.png)
 
 **<p style="text-align: center;">
-Opening a Map (GeoView Project) File
+Opening a Map (GeoView Project) File (<a href="../GeoView_Window_OpenProject.png">see also the full-size image</a>)
 </p>**
 
-The format for a GVP file is described in the [GeoView Mapping Tools Appendix](../appendix-geoview/geoview).
+The format for a GVP file is described in the [GeoView Mapping Tools Appendix](../appendix-geoview/geoview.md).
 The file is a simple text file that can be manually edited.
 Although using an Esri `*.mxd` or other file was considered,
 such file formats have been changing, are binary, and are proprietary in nature.
@@ -262,12 +258,11 @@ After opening the GVP file, a map will be displayed and the TSTool
 To select time series on the map, first select time series in the upper part of the
 TSTool interface and then select the
 ***Tools / Select*** on Map menu item, as illustrated in the following figure:
-<a href="../Menu_Tools_SelectOnMap.png">See also the full-size image.</a>
  
 ![Menu_Tools_SelectOnMap](Menu_Tools_SelectOnMap.png)
 
 **<p style="text-align: center;">
-Example of Selecting Time Series on the Map
+Example of Selecting Time Series on the Map (<a href="../Menu_Tools_SelectOnMap.png">see also the full-size image</a>)
 </p>**
 
 Note that in the above example,
@@ -285,12 +280,11 @@ the attributes indicated by the `Layer_Location` and `Layer_DataSource` lookup f
 (`Layer_Interval` can also optionally be used).
 3. Matching features are selected and the map zooms to highlight the features,
 as shown in the following figure (the arrows have been added for illustration).
-<a href="../Menu_Tools_SelectOnMap2.png">See also the full-size image.</a>
 
 ![Menu_Tools_SelectOnMap2](Menu_Tools_SelectOnMap2.png)
 
 **<p style="text-align: center;">
-Map after Using Time Series to Select Features
+Map after Using Time Series to Select Features (<a href="../Menu_Tools_SelectOnMap2.png">see also the full-size image</a>)
 </p>**
 
 If the lookup file does not include a `Layer_DataSource`, then this value is ignored in the search.

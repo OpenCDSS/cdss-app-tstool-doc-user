@@ -17,12 +17,11 @@ Existing files will be overwritten.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../UnzipFile.png">See also the full-size image.</a>
 
 ![UnzipFile](UnzipFile.png)
 
 **<p style="text-align: center;">
-`UnzipFile` Command Editor
+`UnzipFile` Command Editor (<a href="../UnzipFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -46,10 +45,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/UnzipFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/UnzipFile).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WebGet`](../WebGet/WebGet) command
+* [`WebGet`](../WebGet/WebGet.md) command

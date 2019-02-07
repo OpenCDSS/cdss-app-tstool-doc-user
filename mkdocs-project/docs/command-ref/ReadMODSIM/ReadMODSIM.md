@@ -13,7 +13,7 @@
 
 The `ReadMODSIM` command reads one or more time series from a MODSIM file.
 MODSIM is a node/link model used to simulate river basins
-(see the [MODSIM Input Type Appendix](../../datastore-ref/MODSIM/MODSIM)).
+(see the [MODSIM Input Type Appendix](../../datastore-ref/MODSIM/MODSIM.md)).
 Specify a node/link name and data type to read a single time series – if not
 specified all time series from the file will be read.  An alias can be assigned to each time series.
 
@@ -21,12 +21,11 @@ specified all time series from the file will be read.  An alias can be assigned 
 
 The following dialog is used to edit the command and illustrates the syntax.
 When a file is selected, the available data types are listed, based on the file extension (the types are not read from the file).
-<a href="../ReadMODSIM.png">See also the full-size image.</a>
 
 ![ReadMODSIM](ReadMODSIM.png)
 
 **<p style="text-align: center;">
-`ReadMODSIM` Command Editor
+`ReadMODSIM` Command Editor (<a href="../ReadMODSIM.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -50,7 +49,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadMODSIM).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadMODSIM).
 
 A sample command file is as follows:
 
@@ -62,5 +61,5 @@ ReadMODSIM(Alias=”BIGTOM”,InputFile="BIGTOM17.RES",TSID="GREELEYCBT..STOR_TR
 
 ## See Also ##
 
-* [`ReadStateMod`](../ReadStateMod/ReadStateMod) command
-* [`ReadRiverWare`](../ReadRiverWare/ReadRiverWare) command
+* [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command
+* [`ReadRiverWare`](../ReadRiverWare/ReadRiverWare.md) command

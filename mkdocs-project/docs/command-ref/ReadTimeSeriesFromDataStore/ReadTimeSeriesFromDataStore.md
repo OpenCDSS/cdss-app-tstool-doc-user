@@ -13,7 +13,7 @@
 
 The `ReadTimeSeriesFromDataStore` command reads one or more time series from a
 generic database datastore that has been configured to provide time series data.
-See the [Generic Database Datastore appendix](../../datastore-ref/GenericDatabase/GenericDatabase),
+See the [Generic Database Datastore appendix](../../datastore-ref/GenericDatabase/GenericDatabase.md),
 in particular for information about configuring a data store to support time series queries.
 Such a configuration relies on a simple database design that can be handled in a general way.
 
@@ -22,24 +22,22 @@ Such a configuration relies on a simple database design that can be handled in a
 The following dialog is used to edit the command and illustrates the
 syntax for the command when reading a single time series.
 This is appropriate when a specific location is being processed.
-<a href="../ReadTimeSeriesFromDataStore_Single.png">See also the full-size image.</a>
 
 ![ReadTimeSeriesFromDataStore Single](ReadTimeSeriesFromDataStore_Single.png)
 
 **<p style="text-align: center;">
-`ReadTimeSeriesFromDataStore` Command Editor for Reading Single Time Series
+`ReadTimeSeriesFromDataStore` Command Editor for Reading Single Time Series (<a href="../ReadTimeSeriesFromDataStore_Single.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax
 for the command when reading multiple time series.
 This is appropriate when performing bulk processing.
 Mouse over the Where data entry fields to see information about choices.
-<a href="../ReadTimeSeriesFromDataStore_Multiple.png">See also the full-size image.</a>
 
 ![ReadTimeSeriesFromDataStore Multiple](ReadTimeSeriesFromDataStore_Multiple.png)
 
 **<p style="text-align: center;">
-`ReadTimeSeriesFromDataStore` Command Editor for Reading Multiple Time Series
+`ReadTimeSeriesFromDataStore` Command Editor for Reading Multiple Time Series (<a href="../ReadTimeSeriesFromDataStore_Multiple.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -69,10 +67,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTimeSeriesFromDataStore).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTimeSeriesFromDataStore).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WriteTimeSeriesToDataStore`](../WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore) command
+* [`WriteTimeSeriesToDataStore`](../WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md) command

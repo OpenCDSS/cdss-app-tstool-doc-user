@@ -19,12 +19,11 @@ is enforced by default.  A date or date/time can optionally be added to the log 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../StartLog.png">See also the full-size image.</a>
 
 ![StartLog](StartLog.png)
 
 **<p style="text-align: center;">
-`StartLog` Command Editor
+`StartLog` Command Editor (<a href="../StartLog.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -45,10 +44,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/StartLog).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/StartLog).
 
 A sample command file to process State of Colorado HydroBase data is as follows
-(the [`Add`](../Add/Add) command will generate an error because the units of the time series are incompatible):
+(the [`Add`](../Add/Add.md) command will generate an error because the units of the time series are incompatible):
 
 ```
 StartLog(LogFile="Example_StartLog.log")
@@ -63,4 +62,4 @@ Add(TSID="06753400.USGS.Streamflow.Month",AddTSList=AllTS,HandleMissingHow="Igno
 
 ## See Also ##
 
-* [`Message`](../Message/Message) command - can be used to write messages to the log file
+* [`Message`](../Message/Message.md) command - can be used to write messages to the log file

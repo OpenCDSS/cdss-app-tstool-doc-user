@@ -25,12 +25,11 @@ In other words, no gaps are retained, and no data are discarded due to leap year
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../CreateEnsembleFromOneTimeSeries.png">See also the full-size image.</a>
 
 ![CreateEnsembleFromOneTimeSeries](CreateEnsembleFromOneTimeSeries.png)
 
 **<p style="text-align: center;">
-`CreateEnsembleFromOneTimeSeries` Command Editor
+`CreateEnsembleFromOneTimeSeries` Command Editor (<a href="../CreateEnsembleFromOneTimeSeries.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -44,7 +43,7 @@ CreateEnsembleFromOneTimeSeries(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`TSID`<br>**required**|The time series identifier or alias for the time series used to create the ensemble.  Can be specified using `${Property}`.|None – must be specified.|
 |`InputStart`|The date/time to start transferring data from the time series.  Can be specified using `${Property}`.|Use all data.|
@@ -60,9 +59,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CreateEnsembleFromOneTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CreateEnsembleFromOneTimeSeries).
 
-A sample command file to read a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to read a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 and create an ensemble from the time series is as follows:
 
 ```text
@@ -72,15 +71,15 @@ CreateEnsembleFromOneTimeSeries(TSID="09019500.USGS.Streamflow.Day",TraceLength=
 ```
 
 The following figure illustrates a graph of the resulting ensemble:
-<a href="../CreateEnsembleFromOneTimeSeries_Graph.png">See also the full-size image.</a>
 
 ![CreateEnsembleFromOneTimeSeries Graph](CreateEnsembleFromOneTimeSeries_Graph.png)
 
 **<p style="text-align: center;">
-`CreateEnsembleFromOneTimeSeries` Example Graph
+`CreateEnsembleFromOneTimeSeries` Example Graph (<a href="../CreateEnsembleFromOneTimeSeries_Graph.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##
 
 ## See Also ##
 
+* [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command

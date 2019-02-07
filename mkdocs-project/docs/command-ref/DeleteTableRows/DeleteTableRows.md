@@ -11,17 +11,16 @@
 
 ## Overview ##
 
-The `DeleteTableRows` deletes a specified row from a table.
+The `DeleteTableRows` command deletes a specified row from a table.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../DeleteTableRows.png">See also the full-size image.</a>
 
 ![DeleteTableRows](DeleteTableRows.png)
 
 **<p style="text-align: center;">
-`DeleteTableRows` Command Editor
+`DeleteTableRows` Command Editor (<a href="../DeleteTableRows.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -42,9 +41,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/DeleteTableRows).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/DeleteTableRows).
 
-A simple comma-separated-value data as follows can be read with [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile):
+A simple comma-separated-value data as follows can be read with [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md):
 
 ```
 # Simple table for testing
@@ -66,5 +65,5 @@ DeleteTableRows(TableID="Table1",DeleteRowNumbers="last")
 
 ## See Also ##
 
-* [`DeleteTableColumns`](../DeleteTableColumns/DeleteTableColumns) command
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command
+* [`DeleteTableColumns`](../DeleteTableColumns/DeleteTableColumns.md) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command

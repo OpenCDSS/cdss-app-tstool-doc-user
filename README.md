@@ -3,25 +3,25 @@
 This repository contains the user documentation for Colorado's Decision Support Systems (CDSS) TSTool software.
 
 See the deployed [CDSS / TSTool](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/) documentation.
-This documentation is currently hosted on Open Water Foundation website but is expected to
-be integrated into the CDSS website.  See the following online resources:
+This documentation is currently hosted on the Open Water Foundation website
+while the OpenCDSS server is being configured.  See the following online resources:
 
-* [CDSS](http://cdss.state.co.us)
-* [OpenCDSS](http://learn.openwaterfoundation.org/cdss-website-opencdss/)
-* [TSTool software main repository](https://github.com/OpenWaterFoundation/cdss-app-tstool-main)
-* [TSTool Developer Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-dev/)
+* [Colorado's Decision Support Systems (CDSS)](http://cdss.state.co.us)
+* [OpenCDSS](http://learn.openwaterfoundation.org/cdss-website-opencdss/) - currently hosted on Open Water Foundation website while OpenCDSS server is configured
+* [TSTool software main repository](https://github.com/OpenCDSS/cdss-app-tstool-main)
+* [TSTool Developer Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-dev/) - currently hosted on Open Water Foundation website while OpenCDSS server is configured
 
-See the following sections on this page.
+See the following sections on this page:
 
 * [TSTool Software Overview](#tstool-software-overview)
 * [Repository Contents](#repository-contents)
 * [Development Environment](#development-environment)
 * [Editing and Viewing Content](#editing-and-viewing-content)
+* [Deploying the Documentation](#deploying-the-documentation)
 * [Style Guide](#style-guide)
 * [License](#license)
 * [Contributing](#contributing)
 * [Maintainers](#maintainers)
-* [Contributors](#contributors)
 * [Release Notes](#release-notes)
 
 ---------------------------
@@ -31,7 +31,7 @@ See the following sections on this page.
 The TSTool software is a Java application that automates time series processing:
 
 1. Command-based workflow language.
-2. General commands including as file manipulation, logic controls such as `For` and `If` commands,
+2. General commands including file manipulation, logic controls such as `For` and `If` commands,
 and support for processor properties to allow dynamic scripting.
 3. Time series data processing commands for:
 	1. Reading time series from files, databases, and web services
@@ -56,7 +56,7 @@ and support for processor properties to allow dynamic scripting.
 	3. Network
 	4. Spatial data
 	5. Spreadsheet
-	6. Template
+	6. Templates
 	7. Visualization
 6. General commands
 	1. Comments
@@ -84,6 +84,7 @@ mkdocs-project/       Typical MkDocs project for this documentation.
   mkdocs.yml          MkDocs configuration file for website.
   docs/               Folder containing source Markdown and other files for website.
     css/              Custom CSS to augment MkDocs theme.
+    markdown files    Files and folders containing Markdown documentation.
   site/               Folder created by MkDocs containing the static website - ignored using .gitignore.
 
 ```
@@ -119,20 +120,32 @@ C:\Users\user\                            Windows:  User's files.
 
 The development environment for contributing to this documentation requires
 installation of Python, MkDocs, and Material MkDocs theme.
-Python 2 has been used for development.
+Python 3 and Markdown 1+ has been used for development.
 See the [OWF / Learn MkDocs](http://learn.openwaterfoundation.org/owf-learn-mkdocs/)
-documentation for information about installing these tools.
-
-Python 3 with MkDocs and Material theme can also be used,
-given that the source documentation files are the same.
+documentation for information about installing MkDocs.
 
 ## Editing and Viewing Content ##
 
 If the development environment is properly configured, edit and view content as follows:
 
 1. Edit content in the `mkdocs-project/docs` folder and update `mkdocs-project/mkdocs.yml` as appropriate.
-2. Run the `build-util/run-mkdocs-serve-8000.sh` script (Cygwin/Linux) or equivalent.
+2. Run the `build-util/run-mkdocs-serve-8000.sh` script (Git Bash/Cygwin/Linux) or equivalent.
+Any issues should be resolved by updating the run script to support as many environments as possible.
 3. View content in a web browser using URL `http://localhost:8000`.
+
+## Deploying the Documentation ##
+
+The documentation is currently deployed to two locations by running the following scripts in
+Git Bash:
+
+1. `build-util/copy-to-co-dnr-gcp.sh` - copies the MkDocs-generated static website
+to the State of Colorado's Google Cloud Platform, currently being configured.
+This requires installing the Google Cloud Platform `gcloud` command line tool and being authenticated.
+2. `build-util/old-build-util/copy-to-owf-amazon-s3.sh` - copies the MkDocs-generated
+static website to
+[TSTool Developer Documentation on the Open Water Foundation website](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/).
+This requires installing the Amazon Web Services command line tool and being authenticated.
+Use the `-l` option with the script to also copy to the latest version (default is to copy to version folder).
 
 ## Style Guide ##
 
@@ -145,33 +158,29 @@ with the goal of keeping formatting simple in favor of focusing on useful conten
 * Where a source file can be linked to in GitHub, provide a link so that the most current file can be viewed.
 * Use triple-tick formatting for code blocks, with language specifier.
 * Use ***bold italics*** when referencing UI components such as menus.
-* Use slashes to indicate ***Menu / SubMenu***.
+* Use slashes surrounded by spaces to indicate ***Menu / SubMenu*** (slashes in
+	menus can be indicated with no surrounding spaces).
 * Images are handled as follows:
 	+ Where narrative content pages are sufficiently separated into folders,
 	image files exist in those folder with names that match the original TSTool Word documentation.
-	This approach has been used for the most part.
-	+ If necessary, place images in a folder with the same name as the content file and include
-	`-images` at the end of the folder name at the same level (for example `x.md` and `x-images/`)
-	or include an `images` folder under the content folder.
-	+ When using images in the documents, consider providing a link to look at the full-sized
-	image, as follows (normal MkDocs approach does not seem to work?):
-
-```text
-The following figure illustrates the ***Mixed Station Analysis*** tool.
-<a href="../Menu_Tools_Analysis_MixedStationAnalysis.png">See also the full-size image.</a>
-
-![Menu_Tools_Analysis_MixedStationAnalysis](Menu_Tools_Analysis_MixedStationAnalysis.png)
-```
+	This approach has been used for the most part, for example command reference.
+	+ If necessary, place images in an `images` folder.
+	+ When using images in the documents, consider providing a link to view the full-sized
+	image (see [examples in this command reference document](https://github.com/OpenCDSS/cdss-app-tstool-doc-user/blob/master/mkdocs-project/docs/command-ref/NewTimeSeries/NewTimeSeries.md)).
 * Minimize the use of inlined HTML elements, but use it where Markdown formatting is limited.
-* Although the Material them provides site and page navigation sidebars,
+* Although the Material theme provides site and page navigation sidebars,
 provide in-line table of contents on pages, where appropriate, to facilitate review of page content.
-Use a simple list with links to sections on the page.
+Use a simple list at the top of the page with links to sections on the page.
 
 ## License ##
 
-This documentation license is under review.  The
-[Creative Commons Attribution 2.0 Generic License](https://creativecommons.org/licenses/by/2.0/)
-license has been recommended.
+This documentation is copyrighted by the Colorado Department of Natural Resources.
+
+This TSTool documentation is licensed using the
+[Creative Commons Attribution International 4.0 (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/).
+
+The TSTool software is licensed using the GPL 3 license.
+See the [TSTool software repository](https://github.com/OpenCDSS/cdss-app-tstool-main).
 
 ## Contributing ##
 
@@ -186,15 +195,15 @@ Fill out the template issue.
 
 This repository is maintained by the OpenCDSS team.
 
-## Contributors ##
-
-* Steve Malers, Open Water Foundation (@smalers)
-
 ## Release Notes ##
 
-The following release notes indicate the update history for documentation, with GitHub repository issue indicated,
-if applicable (links to issues via README.md are not cleanly supported by GitHub so use the repository issues page to find).
+The following release notes indicate major updates for the documentation.
+Refer to the [GitHub issues](https://github.com/OpenCDSS/cdss-app-tstool-doc-user/issues)
+for change history and see also the
+[TSTool release notes](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/appendix-release-notes/release-notes/).
 
+* 2019-01-06 - Update documentation for full OpenCDSS release and MkDocs 1.
 * 2018-09-14 - Review documentation for TSTool 12.06.00 release.
-* 2018-04-22 - Majority of content transferred except for a few commands and datastores.
-* 2018-03-16 - Initial content.
+* 2018-04-22 - Majority of content transferred from Word/PDF to Markdown/MkDocs
+except for a few commands and datastores.
+* 2018-03-16 - Initial content in Markdown/MkDocs format.

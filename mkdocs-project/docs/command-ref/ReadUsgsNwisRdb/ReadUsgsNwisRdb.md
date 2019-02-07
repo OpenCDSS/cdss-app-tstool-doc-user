@@ -12,24 +12,23 @@
 ## Overview ##
 
 The `ReadUsgsNwisRdb` command reads a single time series from a USGS NWIS RDB file
-(see the [UsgsNwisRdb Input Type Appendix](../../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB))
+(see the [UsgsNwisRdb Input Type Appendix](../../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB.md))
 and assigns an alias to the result.
 This command replaces the older `ReadUsgsNwis` command – legacy `ReadUsgsNwis` commands
 are automatically translated to `ReadUsgsNwisRdb` commands.
 RDB files do not have complete metadata (such as indicating the data interval)
 and therefore command parameters are required.
-See also the [`WebGet`](../WebGet/WebGet) command,
+See also the [`WebGet`](../WebGet/WebGet.md) command,
 which can be used to retrieve data files from the USGS website.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ReadUsgsNwisRdb.png">See also the full-size image.</a>
 
 ![ReadUsgsNwisRdb](ReadUsgsNwisRdb.png)
 
 **<p style="text-align: center;">
-`ReadUsgsNwisRdb` Command Editor
+`ReadUsgsNwisRdb` Command Editor (<a href="../ReadUsgsNwisRdb.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -61,10 +60,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadUsgsNwisRdb).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadUsgsNwisRdb).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WebGet`](../WebGet/WebGet) command
+* [`WebGet`](../WebGet/WebGet.md) command

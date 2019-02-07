@@ -26,50 +26,45 @@ support for well-known text for other geometry types will be added.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
-<a href="../WriteTableToKml.png">See also the full-size image.</a>
 
 ![WriteTableToKml](WriteTableToKml.png)
 
 **<p style="text-align: center;">
-`WriteTableToKml` Command Editor for General Parameters
+`WriteTableToKml` Command Editor for General Parameters (<a href="../WriteTableToKml.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for point data in separate columns.
-<a href="../WriteTableToKml_Point.png">See also the full-size image.</a>
 
 ![WriteTableToKml_Point](WriteTableToKml_Point.png)
 
 **<p style="text-align: center;">
-`WriteTableToKml` Command Editor for Point Data Parameters
+`WriteTableToKml` Command Editor for Point Data Parameters (<a href="../WriteTableToKml_Point.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for layers specified with a geometry data column.
-<a href="../WriteTableToKml_Geometry.png">See also the full-size image.</a>
 
 ![WriteTableToKml_Geometry](WriteTableToKml_Geometry.png)
 
 **<p style="text-align: center;">
-`WriteTableToKml` Command Editor for Geometry Data Parameters
+`WriteTableToKml` Command Editor for Geometry Data Parameters (<a href="../WriteTableToKml_Geometry.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for KML inserts.  This allows KML elements to be inserted in the KML file.
-<a href="../WriteTableToKml_KmlInsert.png">See also the full-size image.</a>
 
 ![WriteTableToKml_KmlInsert](WriteTableToKml_KmlInsert.png)
 
 **<p style="text-align: center;">
-`WriteTableToKml` Command Editor for KML Insert Parameters
+`WriteTableToKml` Command Editor for KML Insert Parameters (<a href="../WriteTableToKml_KmlInsert.png">see also the full-size image</a>)
 </p>**
-	
+
 The following figure illustrates the command syntax for marker style parameters.
-<a href="../WriteTableToKml_Styles.png">See also the full-size image.</a>
 
 ![WriteTableToKml_Styles](WriteTableToKml_Styles.png)
 
 **<p style="text-align: center;">
-`WriteTableToKml` Command Editor for Marker Style Parameters
+`WriteTableToKml` Command Editor for Marker Style Parameters (<a href="../WriteTableToKml_Styles.png">see also the full-size image</a>)
 </p>**
-	 
+
 ## Command Syntax ##
 
 The command syntax is as follows:
@@ -81,7 +76,7 @@ WriteTableToKml(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`TableID`|Identifier for the table to write.|None – must be specified.|
 |`OutputFile`|The name of the KML file to write, as an absolute path or relative to the command file location.|None – must be specified.|
@@ -100,7 +95,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToKml).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToKml).
 
 The following is an example of a style insert file (refer to KML reference documentation for explanation).  The last style is for polygons.
 
@@ -191,5 +186,5 @@ The following example illustrates a CSV table that specifies WKT for polygons:
 
 ## See Also ##
 
-* [`WriteTableToGeoJSON`](../WriteTableToGeoJSON/WriteTableToGeoJSON) command
-* [`WriteTableToShapefile`](../WriteTableToShapefile/WriteTableToShapefile) command
+* [`WriteTableToGeoJSON`](../WriteTableToGeoJSON/WriteTableToGeoJSON.md) command
+* [`WriteTableToShapefile`](../WriteTableToShapefile/WriteTableToShapefile.md) command

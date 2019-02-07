@@ -15,19 +15,18 @@ The `SetTableValues` command sets values in a table.
 It does so by first optionally matching rows by filtering on column values (see `ColumnFilters` parameter),
 and then setting values in specified columns (see `ColumnValues` parameter).
 For example, this command can be used to set or override table values that were not included in the original data.
-See also the [`FormatTableString`](../FormatTableString/FormatTableString) and
-[`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) commands.
+See also the [`FormatTableString`](../FormatTableString/FormatTableString.md) and
+[`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) commands.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
-<a href="../SetTableValues.png">See also the full-size image.</a>
 
 ![SetTableValues](SetTableValues.png)
 
 **<p style="text-align: center;">
-`SetTableValues` Command Editor
+`SetTableValues` Command Editor (<a href="../SetTableValues.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -49,11 +48,11 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetTableValues).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SetTableValues).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FormatTableString`](../FormatTableString/FormatTableString) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command
+* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command

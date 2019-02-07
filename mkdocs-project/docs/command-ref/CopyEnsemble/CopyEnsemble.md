@@ -19,12 +19,11 @@ The copy is an exact copy except that the ensemble identifier is different
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../CopyEnsemble.png">See also the full-size image.</a>
 
 ![CopyEnsemble](CopyEnsemble.png)
 
 **<p style="text-align: center;">
-`CopyEnsemble` Command Editor
+`CopyEnsemble` Command Editor (<a href="../CopyEnsemble.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -47,9 +46,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CopyEnsemble).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CopyEnsemble).
 
-A sample command file to read a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase),
+A sample command file to read a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md),
 create an ensemble from the time series, and make a copy is as follows:
 
 ```text
@@ -63,4 +62,5 @@ CopyEnsemble(NewEnsembleID="Ensemble_2",NewEnsembleName="Test ensemble 2",NewTSI
 
 ## See Also ##
 
-* [`Copy`](../Copy/Copy) command, to copy a time series
+* [`Copy`](../Copy/Copy.md) command, to copy a time series
+* [`CopyTable`](../CopyTable/CopyTable.md) command

@@ -15,15 +15,15 @@ The `TableToTimeSeries` command creates time series from a table.
 This command can be used when a command to read time series from a specific file format
 or datastore has not been implemented or parsing the table is easier.
 The table typically is read using one of the following commands:
-	
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore) – for example,
+
+* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) – for example,
 define an ODBC DSN connection to a database and query time series using an SQL statement.
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) – for example,
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) – for example,
 read time series from a comma-separated-value (CSV) file.
-* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel) – for example, read time series from a comma-separated-value (CSV) file
-* [`ReadTableFromHTML`](../ReadTableFromHTML/ReadTableFromHTML) – envisioned for the future.
-* [`ReadTableFromXML`](../ReadTableFromXML/ReadTableFromXML) – under development.
-	
+* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) – for example, read time series from a comma-separated-value (CSV) file
+* `ReadTableFromHTML` – envisioned for the future.
+* `ReadTableFromXML` – under development.
+
 TSTool internally represents tables as a collection of columns,
 where a column contains values of a consistent data type (e.g., integer, string, double).
 A time series table requires at a minimum a date/time column (or separate date and time columns),
@@ -49,12 +49,12 @@ Consequently, although this command will create time series when run,
 it does not produce time series information in discovery mode and the
 time series will not be listed in later command editors.
 This limitation may be addressed in future TSTool updates.
-	
+
 Care must be taken when processing very large tables because TSTool may run out of memory.
 A solution is to process smaller tables and also use the
-[`FreeTable`](../FreeTable/FreeTable) command.
+[`FreeTable`](../FreeTable/FreeTable.md) command.
 Other commands that do not require the intermediate table can also be used.
-	
+
 The data values can be taken from a column of type integer, double, or string.
 Data needed to form the time series identifier is stripped of periods (`.`)
 because periods interfere with the TSID convention.
@@ -62,43 +62,40 @@ because periods interfere with the TSID convention.
 ## Command Editor ##
 
 ### Example 1: Single Column for Time Series Values with Time Series Identifier Information Specified by Command Parameters ###
-	
+
 An example of a table with single data value column with flags is shown in the
 following figure (note that a column is used for the location identifier
 and that the location is different for the topmost and bottommost records).
-<a href="../TableToTimeSeries_Single_DataTable.png">See also the full-size image.</a>
 
 ![TableToTimeSeries Single DataTable](TableToTimeSeries_Single_DataTable.png)
 
 **<p style="text-align: center;">
-Simple Table with Data Values in a Single Column
+Simple Table with Data Values in a Single Column (<a href="../TableToTimeSeries_Single_DataTable.png">see also the full-size image</a>)
 </p>**
-	 
+
 In the above example, the list of unique time series is determined by examining the location column contents.
 Other time series metadata such as data source and units can be assigned using the `DataSource`, `Units`, and similar parameters.
 
 The following dialog is used to edit the command and illustrates the command syntax
 when processing single-column data from the above example.
 Note that time series metadata are specified with command parameters (see Example 1 below).
-<a href="../TableToTimeSeries_Single.png">See also the full-size image.</a>
 
 ![TableToTimeSeries Single](TableToTimeSeries_Single.png)
 
 **<p style="text-align: center;">
-`TableToTimeSeries` Command Editor for Table with Data in a Single Column
+`TableToTimeSeries` Command Editor for Table with Data in a Single Column (<a href="../TableToTimeSeries_Single.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for data parameters.
-<a href="../TableToTimeSeries_Single_Data.png">See also the full-size image.</a>
 
 ![TableToTimeSeries Single Data](TableToTimeSeries_Single_Data.png)
 
 **<p style="text-align: center;">
-`TableToTimeSeries` Command Editor for Data Parameters
+`TableToTimeSeries` Command Editor for Data Parameters (<a href="../TableToTimeSeries_Single_Data.png">see also the full-size image</a>)
 </p>**
 
 ### Example 2: Single Column for Time Series Values with Time Series Identifier Information Specified in Table ###
-	
+
 The following example is also treated as single-column because a single column of data values is present.
 However, metadata are taken from other columns.
 This data format is consistent with a database query where several tables have been joined together.
@@ -106,96 +103,86 @@ Although not efficient because time series metadata is repeated for every row,
 the format is convenient for data translation.
 Use the `DataSourceColumn`, `UnitsColumn` and similar parameters to specify metadata.
 The unique list of time series will be determined from the combinations of location identifier and other metadata.
-<a href="../TableToTimeSeries_SingleMeta_DataTable.png">See also the full-size image.</a>
 
 ![TableToTimeSeries SingleMeta DataTable](TableToTimeSeries_SingleMeta_DataTable.png)
 
 **<p style="text-align: center;">
-Table with Data Values in a Single Column and Metadata Provided in Other Columns
+Table with Data Values in a Single Column and Metadata Provided in Other Columns (<a href="../TableToTimeSeries_SingleMeta_DataTable.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates syntax when
 processing single-column data from the above example.
 Time series metadata are specified with command parameters.
 The ***ValueColumn*** parameter in the ***Data*** tab is specified as “Value”.
-<a href="../TableToTimeSeries_SingleMeta.png">See also the full-size image.</a>
 
 ![TableToTimeSeries SingleMeta](TableToTimeSeries_SingleMeta.png)
 
 **<p style="text-align: center;">
-`TableToTimeSeries` Command Editor for Table with Single Data Column and Metadata Columns
+`TableToTimeSeries` Command Editor for Table with Single Data Column and Metadata Columns (<a href="../TableToTimeSeries_SingleMeta.png">see also the full-size image</a>)
 </p>**
 
 ### Example 3: Multiple Columns for Time Series Values with Time Series Identifier Information Specified in Command Parameters ###
-	
+
 An example of multi-column data with flags for each time series is shown in the following figure:
-<a href="../TableToTimeSeries_Multiple_DataTable.png">See also the full-size image.</a>
 
 ![TableToTimeSeries Multiple DataTable](TableToTimeSeries_Multiple_DataTable.png)
 
 **<p style="text-align: center;">
-Table with Data Values in Multiple Data Columns
+Table with Data Values in Multiple Data Columns (<a href="../TableToTimeSeries_Multiple_DataTable.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates
 the syntax for the command when processing multi-column data from the above table.
-<a href="../TableToTimeSeries_Multiple.png">See also the full-size image.</a>
 
 ![TableToTimeSeries Multiple](TableToTimeSeries_Multiple.png)
 
 **<p style="text-align: center;">
-`TableToTimeSeries` Command Editor for Table with Data in Multiple Columns
+`TableToTimeSeries` Command Editor for Table with Data in Multiple Columns (<a href="../TableToTimeSeries_Multiple.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates editing the corresponding data parameters.
-<a href="../TableToTimeSeries_Multiple_Data.png">See also the full-size image.</a>
 
 ![TableToTimeSeries Multiple Data](TableToTimeSeries_Multiple_Data.png)
 
 **<p style="text-align: center;">
-`TableToTimeSeries` Command Editor for Table with Data in Multiple Columns, Data Tab
+`TableToTimeSeries` Command Editor for Table with Data in Multiple Columns, Data Tab (<a href="../TableToTimeSeries_Multiple_Data.png">see also the full-size image</a>)
 </p>**
 
 ### Example 4: Time Series Values Specified in a Block ###
-	
-The following data example illustrates monthly time series values specified in a block.
 
-<a href="../TableToTimeSeries_Block_DataTable.png">See also the full-size image.</a>
+The following data example illustrates monthly time series values specified in a block.
 
 ![TableToTimeSeries Block DataTable](TableToTimeSeries_Block_DataTable.png)
 
 **<p style="text-align: center;">
-Table with Block Data Format
+Table with Block Data Format (<a href="../TableToTimeSeries_Block_DataTable.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the
 syntax for the command when processing block data from the above table.
-<a href="../TableToTimeSeries_Block.png">See also the full-size image.</a>
 
 ![TableToTimeSeries Block](TableToTimeSeries_Block.png)
 
 **<p style="text-align: center;">
-`TableToTimeSeries` Command Editor for Table with Data in Block Format
+`TableToTimeSeries` Command Editor for Table with Data in Block Format (<a href="../TableToTimeSeries_Block.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the
 syntax for block format, `LocationID` parameter.
-<a href="../TableToTimeSeries_Block_Location.png">See also the full-size image.</a>
 
 ![TableToTimeSeries Block_Location](TableToTimeSeries_Block_Location.png)
 
 **<p style="text-align: center;">
-`TableToTimeSeries` Command Editor for Table with Data in Block Format, LocationID Parameter
+`TableToTimeSeries` Command Editor for Table with Data in Block Format, LocationID Parameter (<a href="../TableToTimeSeries_Block_Location.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the
 syntax for block format, data parameter.
-<a href="../TableToTimeSeries_Block_Block.png">See also the full-size image.</a>
 
 ![TableToTimeSeries Block_Block](TableToTimeSeries_Block_Block.png)
 
 **<p style="text-align: center;">
-`TableToTimeSeries` Command Editor for Table with Data in Block Format, Block Parameters
+`TableToTimeSeries` Command Editor for Table with Data in Block Format, Block Parameters (<a href="../TableToTimeSeries_Block_Block.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -220,8 +207,8 @@ Command Parameters
 |`LocationTypeColumn`|Used with single data column table. The name of the column containing the location type.|Do not assign a location type.|
 |`LocationColumn`|Used with single data column table. The name of the column containing the location identifier.|None – must be specified for single column data tables.|
 |`DataSourceColumn`|Used with single data column table. The name of the column containing the data source.|Use the `DataSource` parameter, which can be blank.|
-|`DataTypeColumn`|Used with single data column table. The name of the column containing the data type.	Use the `DataType` parameter, which can be blank.|
-|`ScenarioColumn`|Used with single data column table. The name of the column containing the scenario.	Use the `Scenario` parameter, which can be blank.|
+|`DataTypeColumn`|Used with single data column table. The name of the column containing the data type.  Use the `DataType` parameter, which can be blank.|
+|`ScenarioColumn`|Used with single data column table. The name of the column containing the scenario.  Use the `Scenario` parameter, which can be blank.|
 |`ScenarioColumn`|Used with single data column table. The name of the column containing the sequence identifier, which is used with ensembles to uniquely identify trace time series in the ensemble.|Use the `SequenceID` parameter, which can be blank.|
 |`UnitsColumn`|Used with single data column table. The name of the column containing the data units.|Use the `Units` parameter, which can be blank.|
 |`LocationType`|The location type(s) to assign to time series for each of the value columns (or specify one value to apply to all columns).|No location type will be assigned.|
@@ -246,7 +233,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/TableToTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/TableToTimeSeries).
 
 Examples were also shown in the [Command Editor section above](#command-editor)
 
@@ -254,7 +241,7 @@ Examples were also shown in the [Command Editor section above](#command-editor)
 
 ## See Also ##
 
-* [`FreeTable`](../FreeTable/FreeTable) command
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore) command
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command
-* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel) command
+* [`FreeTable`](../FreeTable/FreeTable.md) command
+* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command

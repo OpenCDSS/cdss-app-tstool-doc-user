@@ -13,8 +13,8 @@
 
 The `CreateRegressionTestCommandFile` command is used for software testing and validation of workflow processes.
 The command creates a command file that includes a
-[StartRegressionTestResultsReport](../StartRegressionTestResultsReport/StartRegressionTestResultsReport) and multiple
-[RunCommands](../RunCommands/RunCommands) commands.
+[StartRegressionTestResultsReport](../StartRegressionTestResultsReport/StartRegressionTestResultsReport.md) and multiple
+[RunCommands](../RunCommands/RunCommands.md) commands.
 A starting search folder is provided and all files that match the given pattern (by convention `Test_*.TSTool`)
 are assumed to be command files that can be run to test the software.
 The resulting command file is a test suite comprised of all the individual tests and can be used
@@ -43,14 +43,12 @@ Property File Formats
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../CreateRegressionTestCommandFile.png">See also the full-size image.</a>
 
 ![CreateRegressionTestCommandFile](CreateRegressionTestCommandFile.png)
 
 **<p style="text-align: center;">
-`CreateRegressionTestCommandFile` Command Editor
+`CreateRegressionTestCommandFile` Command Editor (<a href="../CreateRegressionTestCommandFile.png">see also the full-size image</a>)
 </p>**
-
 
 ## Command Syntax ##
 
@@ -73,13 +71,13 @@ Command Parameters
 | `Append` | Indicate whether to append to the output file (`True`) or overwrite (`False`).  This allows multiple directory trees to be searched for tests, where the first command typically specifies `False` and additional commands specify `True`. | `True` |
 | `IncludeTestSuite` |If `*`, all tests that match `FilenamePattern` and `IncludeOS` are included.  If a test suite is specified, only include tests that have `@testSuite` tag values that match a value in `IncludeTestSuite`.  One or more tags can be specified, separated by commas.| `*` - include all test cases.|
 | `IncludeOS` |If `*`, all tests that match `FilenamePattern` and `IncludeTestSuite` are included.  If an OS is specified, only include tests that have `@os` tag values that match a value in `IncludeTestSuite`.  This tag is typically specified once or not at all. | `*` - include all test cases. |
-| `TestResultsTableID` |The identifier of an output table to be created.  The table will be passed to the [`StartRegressionTestResultsReport`](../StartRegressionTestResultsReport/StartRegressionTestResultsReport) command. | No table will be output. |
+| `TestResultsTableID` |The identifier of an output table to be created.  The table will be passed to the [`StartRegressionTestResultsReport`](../StartRegressionTestResultsReport/StartRegressionTestResultsReport.md) command. | No table will be output. |
 
 ## Examples ##
 
-* See the [command file used to generate tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/blob/master/test/regression/TestSuites/commands_general/create/Create_RunTestSuite_commands_general_IncludeOS%3DWindows.TSTool)
+* See the [command file used to generate tests](https://github.com/OpenCDSS/cdss-app-tstool-test/blob/master/test/regression/TestSuites/commands_general/create/Create_RunTestSuite_commands_general_IncludeOS%3DWindows.TSTool)
 
-See the [Quality Control chapter](../quality-control) for how to set up a regression test.
+See the [Quality Control chapter](../../quality-control/quality-control.md) for how to set up a regression test.
 
 An example of the output file from running the tests is:
 
@@ -135,6 +133,6 @@ Total          = 18
 
 ## See Also ##
 
-* [`RunCommands`](../RunCommands/RunCommands) command
-* [`StartRegressionTestResultsReport`](../StartRegressionTestResultsReport/StartRegressionTestResultsReport) command
-* [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile) command
+* [`RunCommands`](../RunCommands/RunCommands.md) command
+* [`StartRegressionTestResultsReport`](../StartRegressionTestResultsReport/StartRegressionTestResultsReport.md) command
+* [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile.md) command

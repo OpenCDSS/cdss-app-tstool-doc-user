@@ -18,7 +18,7 @@ If an ensemble is being processed, another ensemble can be subtracted,
 a single time series can be subtracted from all time series in the ensemble,
 or a list of time series can be subtracted from the ensemble
 (the number in the list must match the number of time series in the ensemble).
-	
+
 This command will generate an error if the time series do not have compatible units.
 If the units are compatible but are not the same (e.g., IN and FT),
 then the units of the part will be converted to the units of the result before subtraction.
@@ -30,12 +30,11 @@ Time series being subtracted must have the same data interval.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../Subtract.png">See also the full-size image.</a>
 
 ![Subtract](Subtract.png)
 
 **<p style="text-align: center;">
-`Subtract` Command Editor
+`Subtract` Command Editor (<a href="../Subtract.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -53,7 +52,7 @@ Command Parameters
 |--------------|-----------------|-----------------|
 |`TSID`|The time series identifier or alias for the time series to receive the result.  Can be specified using processor `${Property}`.|`TSID` or `EnsembleID` must be specified.|
 |`EnsembleID`|The ensemble to receive the result, if processing an ensemble.  Can be specified using processor `${Property}`.|`TSID` or `EnsembleID` must be specified.|
-|`SubtractTSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li><li>`SpecifiedTSID` – the specified list of time series given by the `SubtractTSID` parameter.  **If using version 8.02.00 or earlier, use `SpecifiedTS`**.</li></ul> | `AllTS` (the time series receiving the result will not be subtracted from itself). |
+|`SubtractTSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li><li>`SpecifiedTSID` – the specified list of time series given by the `SubtractTSID` parameter.  **If using version 8.02.00 or earlier, use `SpecifiedTS`**.</li></ul> | `AllTS` (the time series receiving the result will not be subtracted from itself). |
 |`SubtractTSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `SubtractTSList=*TSID`|
 |`SubtractEnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `SubtractTSList=*EnsembleID`.  Use if an ensemble is being subtracted from another ensemble.|
 |`HandleMissingHow`|Indicates how to handle missing data in a time series:<ul><li>`IgnoreMissing` – create a result even if missing data are encountered in one or more time series – this option is not as rigorous as the others</li><li>`SetMissingIfOtherMissing` – set the result missing if any of the other time series values is missing</li><li>`SetMissingIfAnyMissing` – set the result missing if any time series value involved is missing	IgnoreMissing</li></ul>|`IgnoreMissing`|
@@ -62,9 +61,9 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/Subtract).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Subtract).
 
-A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase)
+A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text
@@ -79,5 +78,5 @@ Subtract(TSID="0100501.DWR.DivTotal.Month",SubtractTSList=SpecifiedTSID,Subtract
 
 ## See Also ##
 
-* [`Add`](../Add/Add) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`Add`](../Add/Add.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

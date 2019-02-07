@@ -12,10 +12,10 @@
 ## Overview ##
 
 The `ListFiles` command lists files in a folder and saves the list to a table.
-The table can then be used to drive processes, such as looping with [`For`](../For/For) command
+The table can then be used to drive processes, such as looping with [`For`](../For/For.md) command
 and working with a template.
 The resulting table will include the following columns:
-	
+
 * `FileName` – name of the file without leading path
 * `RelativePath` – name of the file as a relative path (relative to the command file working directory)
 * `AbsolutePath` – name of the file as the full absolute path
@@ -23,12 +23,11 @@ The resulting table will include the following columns:
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../ListFiles.png">See also the full-size image.</a>
 
 ![ListFiles](ListFiles.png)
 
 **<p style="text-align: center;">
-`ListFiles` Command Editor Showing Conditions Test
+`ListFiles` Command Editor Showing Conditions Test (<a href="../ListFiles.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -52,10 +51,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ListFiles).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ListFiles).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`For`](../For/For) command
+* [`For`](../For/For.md) command

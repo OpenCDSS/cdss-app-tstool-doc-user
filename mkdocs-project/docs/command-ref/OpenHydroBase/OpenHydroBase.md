@@ -12,12 +12,12 @@
 ## Overview ##
 
 **This command will be phased out in the future.
-Instead, define HydroBase datastores (see the [HydroBase Datastore appendix](../../datastore-ref/CO-HydroBase/CO-HydroBase)),
+Instead, define HydroBase datastores (see the [HydroBase Datastore appendix](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)),
 where the datastore name is equivalent to the InputName parameter.**
 
 The `OpenHydroBase` command opens a connection to a HydroBase database,
 allowing data to be read from the database (e.g., with
-[`ReadHydroBase`](../ReadHydroBase/ReadHydroBase) commands and time series identifiers that have `~HydroBase` input types).
+[`ReadHydroBase`](../ReadHydroBase/ReadHydroBase.md) commands and time series identifiers that have `~HydroBase` input types).
 This command is not typically used for interactive sessions but may be
 inserted to run in batch only mode to allow a specific database and commands files to be distributed.
 It may also be used in cases where time series are read from different HydroBase databases,
@@ -28,12 +28,11 @@ If both fail, a warning will be shown.
 ## Command Editor ##
 
 The following dialog is used to edit this command and illustrates the command syntax.
-<a href="../OpenHydroBase.png">See also the full-size image.</a>
 
 ![OpenHydroBase](OpenHydroBase.png)
 
 **<p style="text-align: center;">
-`OpenHydroBase` Command Editor
+`OpenHydroBase` Command Editor (<a href="../OpenHydroBase.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -59,7 +58,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/OpenHydroBase).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/OpenHydroBase).
 
 The following example command file illustrates how to connect to a SQL Server database running on a machine named “sopris”:
 
@@ -89,4 +88,4 @@ OpenHydroBase(RunMode=GUIAndBatch,OdbcDsn="HydroBase_DIV1_20030701")
 
 ## See Also ##
 
-* [`ReadHydroBase`](../ReadHydroBase/ReadHydroBase) command
+* [`ReadHydroBase`](../ReadHydroBase/ReadHydroBase.md) command

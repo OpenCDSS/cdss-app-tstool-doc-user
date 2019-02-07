@@ -12,8 +12,8 @@
 ## Overview ##
 
 The `If` command evaluates a conditional statement and if true will result in the commands between
-`If` and matching [`EndIf`](../EndIf/EndIf) being executed. Matching `Name` parameter for the `If` and
-[`EndIf`](../EndIf/EndIf)
+`If` and matching [`EndIf`](../EndIf/EndIf.md) being executed. Matching `Name` parameter for the `If` and
+[`EndIf`](../EndIf/EndIf.md)
 commands defines a block of commands. Currently, there is no “else if” or “else” syntax and nested
 `If` commands must be used to evaluate complex conditions. The syntax for the conditional statement
 is restricted to a simple comparison:
@@ -37,12 +37,12 @@ future). For Booleans, False is less than True. For strings, A is less than Z, e
 * `!contains` (only for string comparison)
 
 All nested `If` commands must evaluate to true to execute the commands within the deepest level of
-nesting. Some commands, including [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) and
-[`CopyTable`](../CopyTable/CopyTable) set a property that
+nesting. Some commands, including [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) and
+[`CopyTable`](../CopyTable/CopyTable.md) set a property that
 can be used for checks, for example to see if the number of rows in a table or time series in a list is non-zero.
-It is helpful to use the [`Message`](../../Message/Message) command to print a message to the log file and help control whether
+It is helpful to use the [`Message`](../Message/Message.md) command to print a message to the log file and help control whether
 a warning or failure status should occur as the result of the `If`.
-The [`SetProperty`](../SetProperty/SetProperty) command can also be used to set a property to indicate
+The [`SetProperty`](../SetProperty/SetProperty.md) command can also be used to set a property to indicate
 the result of evaluating an `If` block.
 
 Future enhancements to the `If` command may include:
@@ -54,33 +54,30 @@ Future enhancements to the `If` command may include:
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../If.png">See also the full-size image.</a>
 
 ![If](If.png)
 
 **<p style="text-align: center;">
-`If` Command Editor Showing Conditions Test
+`If` Command Editor Showing Conditions Test (<a href="../If.png">see also the full-size image</a>)
 </p>**
 
 The following illustrates checking for a property to make sure it is defined and not empty.
 This is useful for detecting logic and data problems.
-<a href="../If_PropDefined.png">See also the full-size image.</a>
 
 ![If Property Defined](If_PropDefined.png)
 
 **<p style="text-align: center;">
-`If` Command Editor Showing Check for Whether a Property is Not Defined or is Empty
+`If` Command Editor Showing Check for Whether a Property is Not Defined or is Empty (<a href="../If_PropDefined.png">see also the full-size image</a>)
 </p>**
 
 The following illustrates how to detect if a time series exists.
 This is useful for executing only blocks of commands that operate on the time series
 (and avoiding those steps and related warning/failure messages when the time series does not exist).
-<a href="../If_TS.png">See also the full-size image.</a>
 
 ![If Time Series Exists](If_TS.png)
 
 **<p style="text-align: center;">
-`If` Command Editor Showing Check for Time Series Existance
+`If` Command Editor Showing Check for Time Series Existance (<a href="../If_TS.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -96,7 +93,7 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `Name`<br>**required** | The name of the `If` command, which will be matched with the name of an [`EndIf`](../Endif/Endif) command to indicate the block of commands in the if condition. | None - must be specified. |
+| `Name`<br>**required** | The name of the `If` command, which will be matched with the name of an [`EndIf`](../EndIf/EndIf.md) command to indicate the block of commands in the if condition. | None - must be specified. |
 | `Condition`<br>**required** | The conditional statement to evaluate. | `Condition` and/or `TSExists` and/or `PropertyIsNotDefinedOrIsEmpty` must be specified. |
 | `CompareAsStrings` | If `True`, the comparison will be done as strings even if the values could be treated as numbers or Booleans. | `False` |
 | `PropertyIsNotDefinedOrIsEmpty` | Causes the command to evaluate to `True` if the specified parameter (a property name) is not defined or has a value of null, `NaN` (floating point numbers), or is an empty string. | `Condition` and/or `TSExists` and/or `PropertyIsNotDefinedOrIsEmpty` must be specified. |
@@ -104,7 +101,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/If).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/If).
 
 ### Example to Check Number Against Property ###
 
@@ -118,7 +115,7 @@ EndIf(Name="ExampleIf")
 
 ### Example to Check that a Sample Size is Sufficient ###
 
-The following example illustrates combinations of `If` and [`Message`](../Message/Message) commands (indentation indicates line continuation).
+The following example illustrates combinations of `If` and [`Message`](../Message/Message.md) commands (indentation indicates line continuation).
 In these examples processor properties are used to provide condition values.
 
 ```
@@ -146,6 +143,6 @@ EndIf(Name="SampleSizeCheck3Outer")
 
 ## See Also ##
 
-* [`EndIf`](../EndIf/EndIf) command
-* [`Message`](../Message/Message) command
-* [`SetProperty`](../SetProperty/SetProperty) command
+* [`EndIf`](../EndIf/EndIf.md) command
+* [`Message`](../Message/Message.md) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command

@@ -19,13 +19,13 @@ determined from the data sample from the corresponding month in the original tim
 For example, if the original time series has a daily time step,
 then the sample that is analyzed will contain 28-31 values (depending on leap year and month).
 Other commands (e.g.,
-[`ChangeInterval`](../ChangeInterval/ChangeInterval)) can produce a similar result for a limited number of statistics,
+[`ChangeInterval`](../ChangeInterval/ChangeInterval.md)) can produce a similar result for a limited number of statistics,
 for example converting a monthly time series to an annual total or mean.  See also the
-[`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries),
-[`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble),
-[`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic),
-[`NewStatisticYearTS`](../NewStatisticYearTS/NewStatisticYearTS), and
-[`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries) commands.
+[`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md),
+[`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md),
+[`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md),
+[`NewStatisticYearTS`](../NewStatisticYearTS/NewStatisticYearTS.md), and
+[`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
 	
 For hourly and finer interval, values are considered to be in a month when the
 month in the date/time matches the month of interested.
@@ -35,12 +35,11 @@ hour 0 or later of the following month.  **Handling other than daily data is not
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../NewStatisticMonthTimeSeries.png">See also the full-size image.</a>
 
 ![NewStatisticMonthTimeSeries](NewStatisticMonthTimeSeries.png)
 
 **<p style="text-align: center;">
-`NewStatisticMonthTimeSeries` Command Editor
+`NewStatisticMonthTimeSeries` Command Editor (<a href="../NewStatisticMonthTimeSeries.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -105,15 +104,15 @@ Available Statistics
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewStatisticMonthTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewStatisticMonthTimeSeries).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic) command
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries) commands.
-* [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries) command
-* [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble) command
-* [`NewStatisticYearTS`](../NewStatisticYearTS/NewStatisticYearTS) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
+* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
+* [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command
+* [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) command
+* [`NewStatisticYearTS`](../NewStatisticYearTS/NewStatisticYearTS.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

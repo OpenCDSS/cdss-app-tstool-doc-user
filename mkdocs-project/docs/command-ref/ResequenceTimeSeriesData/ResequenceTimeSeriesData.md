@@ -37,18 +37,17 @@ the resequenced data will also be in a time series with a period 1937 to 1997.
 The `OutputStart` parameter can be used to shift the start year of output.
 	
 The command is designed to work with a table that provides sequence information.
-For example, see the [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile)
+For example, see the [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md)
 command and the example shown below.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ResequenceTimeSeriesData.png">See also the full-size image.</a>
 
 ![ResequenceTimeSeriesData](ResequenceTimeSeriesData.png)
 
 **<p style="text-align: center;">
-`ResequenceTimeSeries` Command Editor
+`ResequenceTimeSeries` Command Editor (<a href="../ResequenceTimeSeriesData.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -64,29 +63,29 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
-|`TableID`<br>**required**|The identifier for the sequence table to use, which indicates the dates to use when resequencing data (e.g., list of years for data sequence).  For example, see the [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command.  The years should be consistent with the `OutputYearType`.|None – must be specified.|
+|`TableID`<br>**required**|The identifier for the sequence table to use, which indicates the dates to use when resequencing data (e.g., list of years for data sequence).  For example, see the [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command.  The years should be consistent with the `OutputYearType`.|None – must be specified.|
 |`TableColumn`<br>**required**|The column name containing the sequence information.  Note that the input table must have column names in a header record.|None – must be specified.|
 |`TableRowStart`|The first data row number (1+) containing the first year in the new sequence.|Use all rows.|
 |`TableRowEnd`|The last data row number (1+) containing the first year in the new sequence.|Use all rows.|
 |`OutputYearType`|The output year type, indicating the year extent for the resequencing, one of:<ul><li>`Calendar` – January to December</li><li>`NovToDec` – November of previous calendar year to October of current year.</li><li>`Water` – October of previous calendar year to September of current year.</li></ul>|`Calendar`|
 |`OutputStart`|The output start as a four-digit year that is consistent with `OutputYearType`.  For example, if processing water years, the `OutputStart` would be the first water year in the output (and start in October of the previous calendar year).  The output end is relative to the output start and includes the number of years in the sequence.|Same as the original input data or use the global output start if specified.  The output months will be adjusted for the output year type.|
 |`NewScenario`|The new scenario to assign to the created time series, resulting in a unique TSID.|Not specified, but a new scenario and/or alias must be specified.|
-|`Alias`|Alias to assign to the output time series.  See the `LegendFormat` property described in the [TSView Time Series Viewing Tools appendix](../../appendix/tsview).  For example, `%L` is full location, `%T` is data type, `%I` is interval, and `%Z` is scenario.|Not specified, but a new scenario and/or alias must be specified.|
+|`Alias`|Alias to assign to the output time series.  See the `LegendFormat` property described in the [TSView Time Series Viewing Tools appendix](../../appendix-tsview/tsview.md).  For example, `%L` is full location, `%T` is data type, `%I` is interval, and `%Z` is scenario.|Not specified, but a new scenario and/or alias must be specified.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ResequenceTimeSeriesData).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ResequenceTimeSeriesData).
 
 The following example:
-	
+
 1. Reads a list of time series from a StateMod model file.
 2. Reads a sequence of years from a delimited file.
 3. Resequences the StateMod time series data.
 4. Writes the resequenced file to a new StateMod file.
-	
+
 ```
 # Read all demand time series…
 ReadStateMod(InputFile=”..\StateMod\gunnC2005.xbm”)
@@ -98,9 +97,9 @@ TableColumn=”Trace1”,NewScenario=”KNN0101”,Alias=”%L-KNN0101”)
 # Write the resequenced data for StateMod
 WriteStateMod(TSList=AllMatchingTSID,TSID=”*KNN*”,OutputFile=”..\StateMod0101\gunnC2005.xbm”)
 ```
-	
+
 The year sequence is specified in a file similar to the following.
-	
+
 ```
 # Some comments
 “Trace1”,”Trace2”,…
@@ -114,5 +113,5 @@ Variations on the example can be implemented, for example, to process output pro
 
 ## See Also ##
 
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

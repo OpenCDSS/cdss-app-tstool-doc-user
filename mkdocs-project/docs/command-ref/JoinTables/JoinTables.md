@@ -22,12 +22,11 @@ The functionality of the command is similar to database SQL join statements usin
 
 The following dialog is used to edit the command and illustrates the syntax of the command
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
-<a href="../JoinTables.png">See also the full-size image.</a>
 
 ![JoinTables](JoinTables.png)
 
 **<p style="text-align: center;">
-`JoinTables` Command Editor
+`JoinTables` Command Editor (<a href="../JoinTables.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -54,14 +53,14 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/JoinTables).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/JoinTables).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`AppendTable`](../AppendTable/AppendTable) command
-* [`CopyTable`](../CopyTable/CopyTable) command
-* [`FreeTable`](../FreeTable/FreeTable) command
-* [`NewTable`](../NewTable/NewTable) command
-* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList) command
+* [`AppendTable`](../AppendTable/AppendTable.md) command
+* [`CopyTable`](../CopyTable/CopyTable.md) command
+* [`FreeTable`](../FreeTable/FreeTable.md) command
+* [`NewTable`](../NewTable/NewTable.md) command
+* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command

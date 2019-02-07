@@ -22,12 +22,11 @@ each determined using the appropriate `*TSList` parameter.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../ComputeErrorTimeSeries.png">See also the full-size image.</a>
 
 ![ComputeErrorTimeSeries](ComputeErrorTimeSeries.png)
 
 **<p style="text-align: center;">
-`ComputeErrorTimeSeries` Command Editor
+`ComputeErrorTimeSeries` Command Editor (<a href="../ComputeErrorTimeSeries.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -43,7 +42,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`ObservedTSList`|Indicates the list of observed time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`ObservedTSList`|Indicates the list of observed time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`ObservedTSID`|The time series identifier or alias for the observed time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `ObservedTSList=*TSID`|
 |`ObservedEnsembleID`|The observed ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `ObservedTSList=*EnsembleID`|
 |`SimulatedTSList`|Indicates how to determine the list of simulated time series (see the explanation of `ObservedTSList`).|`AllTS`|
@@ -54,7 +53,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ComputeErrorTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ComputeErrorTimeSeries).
 
 A sample command file is as follows (in this case using contrived data):
 
@@ -73,4 +72,4 @@ CompareFiles(InputFile1="Results\Test_ComputeErrorTimeSeries_1_out.dv",InputFile
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

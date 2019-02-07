@@ -19,12 +19,11 @@ can be split to produce the result in the second figure.  Several options for sp
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../SplitTableColumn.png">See also the full-size image.</a>
 
 ![SplitTableColumn](SplitTableColumn.png)
 
 **<p style="text-align: center;">
-`SplitTableColumn` Command Editor
+`SplitTableColumn` Command Editor (<a href="../SplitTableColumn.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -50,17 +49,16 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/SplitTableColumn).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SplitTableColumn).
 
 ![SplitTableColumn](SplitTableColumn_Table1a.png)
 
 ![SplitTableColumn](SplitTableColumn_Table1b.png)
 
-
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`FormatTableString`](../FormatTableString/FormatTableString) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString) command
-* [`SplitTableRow`](../SplitTableRow/SplitTableRow) command
+* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
+* [`SplitTableRow`](../SplitTableRow/SplitTableRow.md) command

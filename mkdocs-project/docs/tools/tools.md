@@ -50,22 +50,21 @@ Tools / Analysis Menu
 
 The ***Mixed Station Analysis*** tool is under development and not ready for production use.
 Instead, use the
-[`FillMixedStation`](../command-ref/FillMixedStation/FillMixedStation) and
-[`FillRegression`](../command-ref/FillRegression/FillRegression) commands,
+[`FillMixedStation`](../command-ref/FillMixedStation/FillMixedStation.md) and
+[`FillRegression`](../command-ref/FillRegression/FillRegression.md) commands,
 which provide most of the functionality envisioned by the interactive tool.
 The following  documentation is retained for discussion purposes and to guide future enhancements.
 
 The ***Mixed Station Analysis*** tool is an interactive tool that tries to find the best
 combination of time series necessary to fill data using regression or the MOVE2 method.
 The optimal results can then optionally be used as parameters for the
-[`FillMixedStation`](../command-ref/FillMixedStation/FillMixedStation) command.
+[`FillMixedStation`](../command-ref/FillMixedStation/FillMixedStation.md) command.
 The following figure illustrates the ***Mixed Station Analysis*** tool.
-<a href="../Menu_Tools_Analysis_MixedStationAnalysis.png">See also the full-size image.</a>
 
 ![Menu_Tools_Analysis_MixedStationAnalysis](Menu_Tools_Analysis_MixedStationAnalysis.png)
 
 **<p style="text-align: center;">
-Mixed Station Analysis Interface
+Mixed Station Analysis Interface (<a href="../Menu_Tools_Analysis_MixedStationAnalysis.png">see also the full-size image</a>)
 </p>**
 
 ## Report Tools ##
@@ -85,12 +84,11 @@ that have been selected and produces a report similar to the following (abbrevia
 This report is useful, in particular, for evaluating data availability for multiple time series over a period.
 Although effort has been taken to make the report as compact as possible,
 it may need to be printed in landscape format on a large paper size.
-<a href="../Menu_Tools_Report_DataCoverage.png">See also the full-size image.</a>
 
 ![Menu_Tools_Report_DataCoverage](Menu_Tools_Report_DataCoverage.png)
 
 **<p style="text-align: center;">
-Data Coverage by Year Report
+Data Coverage by Year Report (<a href="../Menu_Tools_Report_DataCoverage.png">see also the full-size image</a>)
 </p>**
  
 ### Data Limits Summary Report ###
@@ -102,12 +100,11 @@ This report is useful, in particular, for evaluating data availability for speci
 Currently, only monthly time series have detailed summaries.
 All other data intervals shown overall period summaries.
 The value `-999` is used to indicate missing data.
-<a href="../Menu_Tools_Report_DataLimits.png">See also the full-size image.</a>
 
 ![Menu_Tools_Report_DataLimits](Menu_Tools_Report_DataLimits.png)
 
 **<p style="text-align: center;">
-Data Limits Summary Report
+Data Limits Summary Report (<a href="../Menu_Tools_Report_DataLimits.png">see also the full-size image</a>)
 </p>**
  
 ### Month Summary Reports ###
@@ -122,12 +119,11 @@ For example, use total for precipitation and means for average flows or daily te
 The daily values are then further accumulated to produce monthly values, again using means or totals.
 The report includes a header for the time series, the report, and footnotes.
 Values are only shown if full data are available for a month and statistics are computed using only complete months.
-<a href="../Menu_Tools_Report_MonthSummary_DailyMean.png">See also the full-size image.</a>
 
 ![Menu_Tools_Report_MonthSummary_DailyMean](Menu_Tools_Report_MonthSummary_DailyMean.png)
 
 **<p style="text-align: center;">
-Monthly Summary (Daily Mean) Report
+Monthly Summary (Daily Mean) Report (<a href="../Menu_Tools_Report_MonthSummary_DailyMean.png">see also the full-size image</a>)
 </p>**
  
 ### Year to Date Total Report ###
@@ -140,16 +136,15 @@ The year-to-date volumes are sorted; to find a particular year, use the ***Searc
 The report information can then be used, for example, to select time series traces for analysis and output.
 Currently, this report can only be used to process daily CFS data.
 Real-time data can be analyzed by first converting to a daily interval using the
-[`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval) command.
+[`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval.md) command.
 Warning: some years may have no data at the beginning of a year and the
 corresponding year-to-date totals will consequently be zero.
 Refer to the data coverage and data limit reports for more detail.
-<a href="../Menu_Tools_Report_YearToDateTotal.png">See also the full-size image.</a>
 
 ![Menu_Tools_Report_YearToDateTotal](Menu_Tools_Report_YearToDateTotal.png)
 
 **<p style="text-align: center;">
-Year to Date Total Report
+Year to Date Total Report (<a href="../Menu_Tools_Report_YearToDateTotal.png">see also the full-size image</a>)
 </p>**
  
 ## Map Tools ##
@@ -157,14 +152,14 @@ Year to Date Total Report
 The ***Tools / Select on Map*** menu button is enabled when a map is displayed (using ***View / Map***)
 and time series are listed in the upper right part of the main window.
 The locations corresponding to selected time series or all time series in this
-list can be displayed on the map.  See the [Spatial Data Integration](../spatial) chapter for more information.
+list can be displayed on the map.  See the [Spatial Data Integration](../spatial/spatial.md) chapter for more information.
 Map features are implemented at only a basic level.
 
 ## TSTool Options ##
 
 The ***Tools / Options*** menu provides a way to set TSTool options during the session.
 Minimal capabilities are provided.  Instead, the TSTool environment is typically configured
-in its configuration file (see the [Installation and Configuration appendix](../appendix-install/install)),
+in its configuration file (see the [Installation and Configuration appendix](../appendix-install/install.md)),
 data store configuration files, and with commands.
 
 ## Diagnostics ##
@@ -185,12 +180,11 @@ If results are not as expected, also review the messages in the status bar at th
 The ***Tools / Diagnostics*** menu item displays the ***Diagnostics*** dialog,
 which is used to set message levels and view messages as the application runs.
 The ***Diagnostics*** dialog (see the following figure) can be used to evaluate a problem.
-<a href="../Diagnostics.png">See also the full-size image.</a>
 
 ![Diagnostics](Diagnostics.png)
 
 **<p style="text-align: center;">
-Diagnostics Interface
+Diagnostics Interface (<a href="../Diagnostics.png">see also the full-size image</a>)
 </p>**
 
 The settings at the top of the dialog are used to specify the level of detail
@@ -219,12 +213,11 @@ The ***Diagnostics*** interface features are as follows:
 The ***Tools / Diagnostics – View Log File*** menu item displays the integrated log file viewer.
 Selecting this menu item is equivalent to selecting the View Log File button in the ***Diagnostics*** dialog.
 The log file viewer will be displayed in a window as shown in the following figure.
-<a href="../Diagnostics_ViewLog.png">See also the full-size image.</a>
 
 ![Diagnostics_ViewLog](Diagnostics_ViewLog.png)
 
 **<p style="text-align: center;">
-Log File Viewer Window
+Log File Viewer Window (<a href="../Diagnostics_ViewLog.png">see also the full-size image</a>)
 </p>**
 
 The log file messages can be scrolled.

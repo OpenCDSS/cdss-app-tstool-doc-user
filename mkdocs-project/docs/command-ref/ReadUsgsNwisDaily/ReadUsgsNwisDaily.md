@@ -13,13 +13,13 @@
 
 The `ReadUsgsNwisDaily` command reads one or more time series from the
 United States Geological Survey (USGS) National Water Information System (NWIS)
-Daily Value web service (see the [UsgsNwisDaily Data Store Appendix](../../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily)).
+Daily Value web service (see the [UsgsNwisDaily Data Store Appendix](../../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md)).
 The command provides parameters to constrain the web service query
 and also allows the result to be saved as an output file.
 For example, if WaterML is chosen as the time series format,
 a WaterML file can be saved and can be read later using the
-[`ReadWaterML`](../ReadWaterML/ReadWaterML) command.
-See also the [`WebGet`](../WebGet/WebGet) command, which also can be used to retrieve data files from the USGS website.
+[`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command.
+See also the [`WebGet`](../WebGet/WebGet.md) command, which also can be used to retrieve data files from the USGS website.
 
 The USGS NWIS web service allows station and time series data type information to be filtered,
 both as a convenience and to maintain reasonable web service performance.
@@ -44,12 +44,11 @@ Note that some choices are provided as a convenience.
 However, full listing of choices (such as all the thousands of streamflow stations
 that are available) is not provided due to performance issues.
 Additional query features will be enabled as web service integration is enhanced.
-<a href="../ReadUsgsNwisDaily.png">See also the full-size image.</a>
 
 ![ReadUsgsNwisDaily](ReadUsgsNwisDaily.png)
 
 **<p style="text-align: center;">
-`ReadUsgsNwisDaily` Command Editor
+`ReadUsgsNwisDaily` Command Editor (<a href="../ReadUsgsNwisDaily.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -79,19 +78,19 @@ Command Parameters
 |`InputStart`|The start of the period to read data – specify if the period should be different from the global query period.  Can be specified using `${Property}` syntax.|Use the global query period.|
 |`InputEnd`|The end of the period to read data – specify if the period should be different from the global query period.  Can be specified using `${Property}` syntax.|Use the global query period.|
 |`Alias`|The alias to assign to the time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing, as an alternative to the time series identifier (`TSID`).|None – must be specified.|
-|`Format`|The data format for output, one of:<ul><li>`JSON` – JavaScript Object Notation (currently used only for downloads but will not result in time series in TSTool)</li><li>`RDB` – tab-delimited format (also see [`ReadUsgsNwisRdb`](../ReadUsgsNwisRdb/ReadUsgsNwisRdb) command; currently used only for downloads but will not result in time series in TSTool).</li><li>`WaterML` – XML format (also see the [`ReadWaterML`](../ReadWaterML/ReadWaterML) command).</li></ul>|`WaterML`|
+|`Format`|The data format for output, one of:<ul><li>`JSON` – JavaScript Object Notation (currently used only for downloads but will not result in time series in TSTool)</li><li>`RDB` – tab-delimited format (also see [`ReadUsgsNwisRdb`](../ReadUsgsNwisRdb/ReadUsgsNwisRdb.md) command; currently used only for downloads but will not result in time series in TSTool).</li><li>`WaterML` – XML format (also see the [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command).</li></ul>|`WaterML`|
 |`OutputFile`|The name of the output file to create.  The path to the file can be absolute or relative to the working directory.  Can be specified using `${Property}` syntax.|No output file will be created.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadUsgsNwisDaily).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadUsgsNwisDaily).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadUsgsNwisGroundwater`](../ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater) command
-* [`ReadUsgsNwisInstantaneous`](../ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous) command
-* [`ReadUsgsNwisRdb`](../ReadUsgsNwisRdb/ReadUsgsNwisRdb) command
-* [`ReadWaterML`](../ReadWaterML/ReadWaterML) command
-* [`WebGet`](../WebGet/WebGet) command
+* [`ReadUsgsNwisGroundwater`](../ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater.md) command
+* [`ReadUsgsNwisInstantaneous`](../ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous.md) command
+* [`ReadUsgsNwisRdb`](../ReadUsgsNwisRdb/ReadUsgsNwisRdb.md) command
+* [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command
+* [`WebGet`](../WebGet/WebGet.md) command

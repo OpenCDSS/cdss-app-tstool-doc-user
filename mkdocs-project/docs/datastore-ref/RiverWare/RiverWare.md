@@ -32,7 +32,7 @@ values to result in the specified units.
 For example, a data value of `1.5` with units of `cfs` and a scale of `1000` will result of a value of `1500 cfs` in memory.
 * Optional `set_units` and `set_scale` keywords may be used similar to units and scale to
 indicate the units and scale to be converted to when data are read.
-These properties can be written by TSTool’s [`WriteRiverWare`](../../command-ref/WriteRiverWare/WriteRiverWare)
+These properties can be written by TSTool’s [`WriteRiverWare`](../../command-ref/WriteRiverWare/WriteRiverWare.md)
 command but currently are not evaluated by TSTool when reading data.
 
 The following example illustrates the format of a RiverWare file.
@@ -84,7 +84,7 @@ RiverWare files have the following limitations:
 
 * RiverWare time series files require that units be spelled exactly as required by RiverWare,
 including upper/lower case.  TSTool currently does not know about RiverWare units and
-therefore commands like [`WriteRiverWare`](../../command-ref/WriteRiverWare/WriteRiverWare)
+therefore commands like [`WriteRiverWare`](../../command-ref/WriteRiverWare/WriteRiverWare.md)
 must be used to verify that the units are correct for RiverWare.
 * Only one time series can be saved in a file (other RiverWare files support multiple time series and may be supported in the future).
 * RiverWare files do not store the data type or location information for the time series.

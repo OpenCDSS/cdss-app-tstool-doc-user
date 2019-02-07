@@ -16,12 +16,11 @@ The `CopyFile` command copies a source file to a destination.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../CopyFile.png">See also the full-size image.</a>
 
 ![CopyFile](CopyFile.png)
 
 **<p style="text-align: center;">
-`CopyFile` Command Editor
+`CopyFile` Command Editor (<a href="../CopyFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -43,10 +42,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/CopyFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CopyFile).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`RemoveFile`](../RemoveFile/RemoveFile) command
+* [`RemoveFile`](../RemoveFile/RemoveFile.md) command

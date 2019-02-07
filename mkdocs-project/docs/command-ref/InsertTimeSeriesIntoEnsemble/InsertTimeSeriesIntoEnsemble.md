@@ -18,12 +18,11 @@ For example, use the command to insert scenario time series into an ensemble.
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../InsertTimeSeriesIntoEnsemble.png">See also the full-size image.</a>
 
 ![InsertTimeSeriesIntoEnsemble](InsertTimeSeriesIntoEnsemble.png)
 
 **<p style="text-align: center;">
-`InsertTimeSeriesIntoEnsemble` Command Editor
+`InsertTimeSeriesIntoEnsemble` Command Editor (<a href="../InsertTimeSeriesIntoEnsemble.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -39,14 +38,14 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command.</li></ul> | `AllTS` |
+|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble from which to retrieve time series, if inserting time series from an ensemble.|Required when `TSList=EnsembleID`.|
 |`EnsembleID2`<br>**required**|The identifier for the ensemble that is receiving the time series.|None – must be specified.|
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/InsertTimeSeriesIntoEnsemble).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/InsertTimeSeriesIntoEnsemble).
 
 A sample command file to create an ensemble from user-defined time series is as follows:
 
@@ -62,5 +61,5 @@ InsertTimeSeriesIntoEnsemble(Ensemble2=”TestEnsemble”)
 
 ## See Also ##
 
-* [`NewEnsemble`](../NewEnsemble/NewEnsemble) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries) command
+* [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command
+* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

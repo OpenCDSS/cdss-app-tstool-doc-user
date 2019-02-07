@@ -13,7 +13,7 @@
 
 The `ReadNrcsAwdb` command reads one or more time series from the Natural Resources Conservation Service (NRCS)
 Air and Water Database (AWDB) web service
-(see the [NRCS AWDB Datastore Appendix](../../datastore-ref/NRCS-AWDB/NRCS-AWDB)),
+(see the [NRCS AWDB Datastore Appendix](../../datastore-ref/NRCS-AWDB/NRCS-AWDB.md)),
 including SNOTEL and Snow Course data and other data.
 Data from other sources is available within the NRCS naming convention.
  
@@ -26,7 +26,6 @@ Specifying a list of elements (separated by commas) will return only stations an
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax for general parameters.
-<a href="../ReadNrcsAwdb.png">See also the full-size image.</a>
 
 * Some choices are provided as a convenience.  However, full listing of choices
 (such as all the thousands of HUCs) are not provided due to performance issues.
@@ -38,18 +37,17 @@ and then modify to converge on an appropriate set of filters for optimal perform
 ![ReadNrcsAwdb](ReadNrcsAwdb.png)
 
 **<p style="text-align: center;">
-`ReadNrcsAwdb` Command Editor for General Command Parameters
+`ReadNrcsAwdb` Command Editor for General Command Parameters (<a href="../ReadNrcsAwdb.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the ***Reservoirs*** tab of the dialog.
 No additional parameters are provided; however, the notes explain that reservoir data are
 available only from the BOR network and appropriate network element codes must be selected.
-<a href="../ReadNrcsAwdb_Reservoir.png">See also the full-size image.</a>
 
 ![ReadNrcsAwdb_Reservoir](ReadNrcsAwdb_Reservoir.png)
 
 **<p style="text-align: center;">
-`ReadNrcsAwdb` Command Editor for Reservoir Query Parameters
+`ReadNrcsAwdb` Command Editor for Reservoir Query Parameters (<a href="../ReadNrcsAwdb_Reservoir.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the Forecasts tab of the dialog.
@@ -57,23 +55,21 @@ Forecasts are available for several element codes but mainly `SRVO` (stream volu
 Because it is possible to read normal time series and forecasts,
 the `ReadForecast` parameter is provided to specifically indicate that a forecast is being requested.
 The forecast is uniquely identified by the forecast period and publication date (typically the first day of a month).
-<a href="../ReadNrcsAwdb_Forecast.png">See also the full-size image.</a>
 
 ![ReadNrcsAwdb_Forecast](ReadNrcsAwdb_Forecast.png)
 
 **<p style="text-align: center;">
-`ReadNrcsAwdb` Command Editor for Forecast Query Parameters
+`ReadNrcsAwdb` Command Editor for Forecast Query Parameters (<a href="../ReadNrcsAwdb_Forecast.png">see also the full-size image</a>)
 </p>**
 
 The resulting forecast table, as shown in the following figure,
 includes all the relevant information about the forecast.
 Use table processing commands to filter the table for a specific station and publication date.
-<a href="../ReadNrcsAwdb_ForecastTable.png">See also the full-size image.</a>
 
 ![ReadNrcsAwdb_ForecastTable](ReadNrcsAwdb_ForecastTable.png)
 
 **<p style="text-align: center;">
-`ReadNrcsAwdb` Command Output Forecast Table
+`ReadNrcsAwdb` Command Output Forecast Table (<a href="../ReadNrcsAwdb_ForecastTable.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -112,10 +108,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadNrcsAwdb).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadNrcsAwdb).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`WebGet`](../WebGet/WebGet) command, use to test web service queries
+* [`WebGet`](../WebGet/WebGet.md) command, use to test web service queries

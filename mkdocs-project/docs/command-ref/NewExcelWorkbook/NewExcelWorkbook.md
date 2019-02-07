@@ -21,12 +21,11 @@ and consequently functionality is constrained by the features of that software p
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
-<a href="../NewExcelWorkbook.png">See also the full-size image.</a>
 
 ![NewExcelWorkbook](NewExcelWorkbook.png)
 
 **<p style="text-align: center;">
-`NewExcelWorkbook` Command Editor
+`NewExcelWorkbook` Command Editor (<a href="../NewExcelWorkbook.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -48,9 +47,10 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenWaterFoundation/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewExcelWorkbook).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewExcelWorkbook).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
+* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command
