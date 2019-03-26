@@ -324,6 +324,12 @@ copyright:  Copyright Colorado Department of Natural Resources
 extra_css:
   - 'css/extra-material-theme.css'
 # ------------------------------------------------
+# Google Analytics
+# - see:  https://squidfunk.github.io/mkdocs-material/getting-started/#google-analytics
+google_analytics:
+ - 'UA-43023264-1'
+ - auto
+# ------------------------------------------------
 markdown_extensions:
   - footnotes
 # ------------------------------------------------
