@@ -78,7 +78,7 @@ In late 2016, the Open Water Foundation began the effort to move TSTool and othe
 and establish open source software projects, referred to as "OpenCDSS".
 The OpenCDSS project is resulting in a significant evolution in how CDSS software development occurs,
 such as implementing version control with Git/GitHub and modernizing the development environment and documentation.
-See the [OpenCDSS Website](http://learn.openwaterfoundation.org/cdss-website-opencdss/) for more information.
+See the [OpenCDSS Website](http://opencdss.state.co.us/opencdss/) for more information.
 
 ## About the Open Water Foundation ##
 
@@ -105,4 +105,4 @@ in order to facilitate contributions by non-programmers.
 
 ## Release Notes ##
 
-See the [release notes](appendix-release-notes/release-notes) section of this documentation for information about TSTool software changes.
+See the [release notes](appendix-release-notes/release-notes.md) section of this documentation for information about TSTool software changes.
