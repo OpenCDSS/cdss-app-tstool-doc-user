@@ -2,14 +2,13 @@
 
 This repository contains the user documentation for Colorado's Decision Support Systems (CDSS) TSTool software.
 
-See the deployed [CDSS / TSTool](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/) documentation.
-This documentation is currently hosted on the Open Water Foundation website
-while the OpenCDSS server is being configured.  See the following online resources:
+See the deployed [CDSS / TSTool](http://opencdss.state.co.us/tstool/latest/doc-user/) documentation.
+See the following online resources:
 
 * [Colorado's Decision Support Systems (CDSS)](http://cdss.state.co.us)
-* [OpenCDSS](http://learn.openwaterfoundation.org/cdss-website-opencdss/) - currently hosted on Open Water Foundation website while OpenCDSS server is configured
+* [OpenCDSS](http://opencdss.state.co.us/opencdss/)
 * [TSTool software main repository](https://github.com/OpenCDSS/cdss-app-tstool-main)
-* [TSTool Developer Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-dev/) - currently hosted on Open Water Foundation website while OpenCDSS server is configured
+* [TSTool Developer Documentation](http://opencdss.state.co.us/tstool/latest/doc-dev/)
 
 See the following sections on this page:
 
@@ -200,8 +199,9 @@ This repository is maintained by the OpenCDSS team.
 The following release notes indicate major updates for the documentation.
 Refer to the [GitHub issues](https://github.com/OpenCDSS/cdss-app-tstool-doc-user/issues)
 for change history and see also the
-[TSTool release notes](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/appendix-release-notes/release-notes/).
+[TSTool release notes](http://opencdss.state.co.us/tstool/latest/doc-user/appendix-release-notes/release-notes/).
 
+* 2019-01-26 - Update documentation links to use opencdss.state.co.us.
 * 2019-01-06 - Update documentation for full OpenCDSS release and MkDocs 1.
 * 2018-09-14 - Review documentation for TSTool 12.06.00 release.
 * 2018-04-22 - Majority of content transferred from Word/PDF to Markdown/MkDocs
