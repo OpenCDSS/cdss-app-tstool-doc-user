@@ -9,6 +9,9 @@ in different technologies that are maintained at different locations (other comp
 Consequently, errors can occur in various software components.
 The following are general suggestions for troubleshooting issues.
 Specific troubleshooting guidance is also provided in the documentation for each command.
+**If it is difficult to find a troubleshooting topic using the section headers,
+use the search feature of this documentation or browser page search to facilitate
+finding information on a troubleshooting topic.**
 
 * [Background and Terminology](#background-and-terminology)
 	+ [Automated Testing](#automated-testing)
@@ -30,6 +33,7 @@ Specific troubleshooting guidance is also provided in the documentation for each
 	+ [Issue 8 - HEC-DSS features are unavailable](#issue-8-hec-dss-features-are-unavailable)
 	+ [Issue 9 - Time series data type for data source is unavailable](#issue-9-time-series-data-type-for-data-source-is-unavailable)
 	+ [Issue 10 - Unexpected failure](#issue-10-unexpected-failure)
+	+ [Issue 11 - TSTool text (fonts) are small](#issue-11-tstool-text-fonts-are-small)
 * [Obsolete Commands](#obsolete-commands)
 
 ------------------
@@ -632,6 +636,40 @@ If the log file does not offer insight, contact support.
 
 **Possible Solution** - Make sure that the version of Java being used is new enough to run TSTool.
 If this cannot be resolved, contact TSTool support.
+
+## Issue 11 - TSTool text (fonts) are small ##
+
+**Scope** – Any computer and in particular when using a high resolution monitor
+
+**Behavior** – text is difficult to read because fonts are small
+
+**Possible Cause** – TSTool uses Java Swing for the user interface and this package
+does not automatically handle display DPI (dots per inch).
+The fundamental issue is that that graphical interfaces need to scale their content
+based on internal direction from the software (e.g., specifying font size)
+and the display resolution of the hardware.
+
+**Possible Solution** - A solution that does not require user action may be possible but will
+require TSTool software developers to update to Java 9 or later,
+and as of TSTool 12.06.00 Java 8 is used.
+Use the TSTool ***Help / About TSTool / Show Software/System Details*** menu to determine the Java version being used.
+
+Until Java can be updated and tested, a workaround requires user action.  See the
+[Stack Overflow article - "How do I run Java apps upscaled on a high-DPI display?](https://superuser.com/questions/988379/how-do-i-run-java-apps-upscaled-on-a-high-dpi-display/1207925).
+The answer by "Elderry", May 10, 2017, has been demonstrated to work and is summarized below.
+The following instructions are for Windows 10.
+This solution should work on any Java software.
+
+1. For the TSTool version that is being run,
+use a file browser to navigate to the Java Runtime Environment software folder,
+typically something like `C:\CDSS\TSTool-12.06.00\jre_18\bin`.
+Repeat the following For the `java.exe` and `javaw.exe` programs.
+2. Right-click on the file and select ***Properties***.
+3. Select the ***Compatibility*** tab.
+4. Select the ***Change high DPI settings*** button.
+5. Change the ***Override high DPI scaling behavior.  Scaling performed by:  System***.
+The initial choice was probably ***Application***.
+6. Restart TSTool.  If successful, text should use a size that is typical for Windows applications.
 
 ## Obsolete Commands ##
 

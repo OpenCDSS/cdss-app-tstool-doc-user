@@ -155,6 +155,7 @@ syncFiles() {
 	echo ""
 	echo "Copying the documentation to the versioned folder..."
 	gsutil.cmd -m rsync -d -r ${dryrun} $siteFolder ${gsFolderVersion}
+	exitStat=$?
 	if [ $exitStat -ne 0 ]; then
 		return $exitStat
 	fi
