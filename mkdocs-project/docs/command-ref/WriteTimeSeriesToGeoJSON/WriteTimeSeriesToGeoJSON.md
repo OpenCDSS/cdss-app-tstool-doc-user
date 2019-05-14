@@ -14,7 +14,7 @@
 The `WriteTimeSeriesToGeoJSON` command writes time series to a GeoJSON file,
 which is a spatial data format that can be viewed in geographic information system (GIS) software and other visualization tools.  See:
 
-* [GeoJSON specification](http://geojson.org/geojson-spec.html)
+* [GeoJSON RFC7946 Specification](https://tools.ietf.org/html/rfc7946)
 
 The time series must have properties for longitude and latitude or Well Known Text (WKT) geometry string.  See:
 
@@ -86,6 +86,7 @@ Command Parameters
 |`Append`|Indicate whether to append the GeoJSON content to the output file, `True` or `False`.|`False`|
 |`LongitudeProperty`|The name of the time series property containing the longitude to use for the GeoJSON.  Can be specified using `${Property}`.|Required unless WKT geometry is specified.|
 |`LatitudeProperty`|The name of the time series property containing the latitude to use for the GeoJSON.  Can be specified using `${Property}`.|Required unless WKT geometry is specified.|
+|`CoordinatePrecision`|The number of digits to output after the decimal, for coordinates and bounding box.|Precision is based on each data value.|
 |`ElevationProperty`|The name of the time series property containing the elevation to use for the GeoJSON.  Can be specified using `${Property}`.|Omitted|
 |`WKTGeometryProperty`|The name of the time series property that contains Well Known Text (WKT) geometry strings.  Can be specified using `${Property}`.|Will use point data properties|
 |`IncludeColumns`|List of comma-separated time series property names to include as feature properties, using * for wildcard.  Can be specified using `${Property}`.|Include all columns.|
@@ -103,4 +104,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 ## See Also ##
 
 * [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+* [`WriteTableToGeoJSON`](../WriteTableToGeoJSON/WriteTableToGeoJSON.md) command
 * [`WriteTimeSeriesToKml`](../WriteTimeSeriesToKml/WriteTimeSeriesToKml.md) command

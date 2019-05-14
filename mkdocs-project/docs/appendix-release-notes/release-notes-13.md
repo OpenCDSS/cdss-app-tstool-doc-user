@@ -13,4 +13,12 @@ datastores because the services are no longer available from the State of Colora
 in `*.xop` time series files.
 * ![change](change.png) [13.00.00] Enhance the
 [`ManipulateTableString`](../command-ref/ManipulateTableString/ManipulateTableString.md) command
-to allow `$` in replace and remove by using `\$'.  The `$` alone represents end of line.
+to allow `$` for replace and remove actions using `\$'.
+The `$` without escape alone represents end of line, as previously implemented.
+* ![change](change.png) [13.00.00] Enhance the
+[`WriteTableToGeoJSON`](../command-ref/WriteTableToGeoJSON/WriteTableToGeoJSON.md) command
+to specify the GeoJSON version (default is RFC7946) via new `Version` parameter.
+Also add the `CoordinatePrecision` parameter to control precision on coordinates and bounding box.
+* ![change](change.png) [13.00.00] Enhance the
+[`WriteTimeSeriesToGeoJSON`](../command-ref/WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON.md) command
+by adding the `CoordinatePrecision` parameter to control precision on coordinates and bounding box.

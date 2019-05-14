@@ -14,7 +14,8 @@
 The `WriteTableToGeoJSON` command writes a table to a GeoJSON file,
 which is a spatial data format that can be viewed in geographic information system (GIS) software and other visualization tools.  See:
 
-* [GeoJSON Specification](http://geojson.org/geojson-spec.html)
+* [GeoJSON RFC7946 Specification](https://tools.ietf.org/html/rfc7946) - use `Version=RFC7946` parameter, which is the default if not specified
+* [GeoJSON 1.0 Specification](http://geojson.org/geojson-spec.html) - use `Version=1.0` parameter
 
 The table must include columns for longitude and latitude or a column containing Well Known Text (WKT) geometry strings.  See:
 
@@ -94,16 +95,18 @@ WriteTableToGeoJSON(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`TableID`|Identifier for the table to write.  Can be specified using `${Property}` notation.|None – must be specified.|
 |`OutputFile`|The name of the GeoJSON file to write, as an absolute path or relative to the command file location.  Can be specified using `${Property}` notation.|None – must be specified.|
+|`Version`|GeoJSON version to write:<ul><li>`RFC7946` - the current specification</li><li>`1.0` - original specification (obsolete)</li></ul>|`RFC4976`|
 |`Append`|Indicate whether to append the GeoJSON content to the output file, `True` or `False`.|`False`|
 |`LongitudeColumn`|The name of the table column that contains longitude. Can be specified using `${Property}` notation.|None – must be specified.|
 |`LatitudeColumn`|The name of the table column that contains latitude.  Can be specified using `${Property}` notation.|None – must be specified.|
+|`CoordinatePrecision`|The number of digits to output after the decimal, for coordinates and bounding box.|Precision is based on each data value.|
 |`ElevationColumn`|The name of the table column that contains elevation.  Can be specified using `${Property}` notation.|Elevation is omitted.|
 |`WKTGeometryColumn`|The name of the table column that contains Well Known Text (WKT) geometry strings.  Can be specified using `${Property}` notation.||
-|`CRSText`|Full text to define the coordinate reference system using the `crs` GeoJSON property.  The text will be inserted at the top level of the GeoJSON.  This should be used when other than geographic coordinates are used.  For more information, see:<br><ul><li>[GeoJSON CRS specification](http://geojson.org/geojson-spec.html#named-crs)</li><li>[Spatial Reference System](https://en.wikipedia.org/wiki/Spatial_reference_system)</li><li>[spatialreference.org](http://spatialreference.org/)|No `crs` property is included which means that GeoJSON defaults to `EPSG:4326` (geographic).|
+|`CRSText`|**Only used if `Version` is `1.0`** - Full text to define the coordinate reference system using the `crs` GeoJSON property.  The text will be inserted at the top level of the GeoJSON.  This should be used when other than geographic coordinates are used.  For more information, see:<br><ul><li>[GeoJSON CRS specification](http://geojson.org/geojson-spec.html#named-crs)</li><li>[Spatial Reference System](https://en.wikipedia.org/wiki/Spatial_reference_system)</li><li>[spatialreference.org](http://spatialreference.org/)|No `crs` property is included which means that GeoJSON defaults to `WGS84` (Version 1.0 default was `EPSG:4326`, geographic).|
 |`IncludeBBox`|Indicate whether to include bbox GeoJSON property for the full layer.|`True`|
 |`IncludeFeatureBBox`|Indicate whether to include `bbox` GeoJSON property for each feature.|`True`|
 |`IncludeColumns`|List of comma-separated table column names to include as feature properties.  Can be specified using ${Property} notation.|Include all columns.|
