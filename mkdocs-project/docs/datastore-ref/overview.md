@@ -1,15 +1,25 @@
 # TSTool / Datastore Reference / Overview #
 
+* [Introduction](#introduction)
+* [Datastore List](#datastore-list)
+* [Datastore Configuration](#datastore-configuration)
+
+-----
+
+## Introduction ##
+
 This reference section of the documentation provides information about datastores:
 
 * databases - must be accessible via ODBC/JDBC connection
-* file databases - typically optimized for a use, such as HEC-DSS
-* files - simple files, including model files
+* file databases - typically optimized for a use, such as HEC-DSS used with Army Corps and other software
+* files - simple files, including model files such as the State of Colorado's StateMod model
 * web services - SOAP and REST web services
 
-A "datastore" is where time series and other data are saved and can be accessed.
-TSTool originally used the term "input type" for some formats,
-For example, newer databases and web services are treated as "datastores",
+A "datastore" is a data management component that
+saves time series and other data.
+TSTool originally used the term "input type" for some formats such as data files and HydroBase database.
+However, the newer "datastore" design has since been implemented to provide more flexibility in configuring data access.
+Newer databases and web services are treated as "datastores",
 whereas older files are treated as "input types".
 The "input type" notation is retained in the software,
 pending migration to datastores - datastores and input types
@@ -24,7 +34,9 @@ a datastore and result in an automatic data read from the datastore.
 However, some datastores have specific characteristics that are difficult to support in a general way,
 in which case `Read` command parameters or datastore configuration properties are used to control software behavior.
 
-The following datastores (and input types) are listed in alphabetical order by datastore name, with the following explanation:
+## Datastore List ##
+
+The following datastores (and input types) are listed in alphabetical order by datastore name.
 
 | **Datastore (link to documentation)**                                        | **Technology**         | **Spatial Extent** | **Contents**                                   | **Documentation Status** |
 |--|--|--|--|--|
@@ -48,7 +60,7 @@ The following datastores (and input types) are listed in alphabetical order by d
 | [RCC ACIS](RCC-ACIS/RCC-ACIS.md)                                             | Web service (REST)     | USA                | Precipitation, temperature, other climate      | Migrated |
 | [Reclamation HDB](ReclamationHDB/ReclamationHDB.md)                          | Database (Oracle)      | USA                | Water resources                                | Migrated |
 | [Reclamation Pisces](ReclamationPisces/ReclamationPisces.md)                 | Database (MySQL)       | USA                | Water resources                                | Migrated |
-| [RiversideDB](RiversideDB/RiversideDB.md)                                    | Database (SQL Server)  | No limit           | Hydrologic modeling database.                  | **not yet migrated (placeholder)**     |
+| [RiversideDB](RiversideDB/RiversideDB.md)                                    | Database (SQL Server)  | No limit           | Hydrologic modeling database.                  | **Has been removed from TSTool as of version 13**     |
 | [RiverWare](RiverWare/RiverWare.md)                                          | File (text)            | No limit           | RiverWare modeling software data file          | Migrated |
 | [StateCU](StateCU/StateCU.md)                                                | File (text)            | No limit           | StateCU modeling software data file            | Migrated |
 | [StateCUB - StateCU Output](StateCUB/StateCUB.md)                            | File (binary)          | No limit           | StateCU modeling software data file            | Migrated |
@@ -61,3 +73,27 @@ The following datastores (and input types) are listed in alphabetical order by d
 | [WaterML](WaterML/WaterML.md)                                                | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | **not yet migrated (placeholder)**     |
 | [WaterML2](WaterML2/WaterML2.md)                                              | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | **not yet migrated (placeholder)**     |
 | [WaterOneFlow](WaterOneFlow/WaterOneFlow.md)                                 | Web service (SOAP)     | No limit           | Web service for CUAHSI                         | **not yet migrated**     |
+
+## Datastore Configuration ##
+
+Datastores are configured using datastore configuration files, which are described in the specific appendix.
+The `system/TSTool.cfg` file located in the software installation folder provides properties to enable/disable
+datastores globally, which turns off software features (such as ***Commands*** menu for commands
+related to the datastore).
+A similar file can be created in the users's `.tstool/NN/system` folder to configure TSTool for each major version.
+
+Built-in (default) datastore configuration files are located in the software installation `system` folder.
+User datastore configuration files are located in the `.tstool/NN/datastores` folder.
+The user configuration files override the installation configuration files.
+For example, a datastore configuration file for datastore named `abc` will take precedence over
+a built-in datastore that is also named `abc`.
+This allows, for example, providing a more specific configuration for:
+
+* database version for [HydroBase datastore](CO-HydroBase/CO-HydroBase.md) database installed on user's computer
+* API key for [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) web services for
+the specific user
+
+Use the ***View / Datastores*** menu in TSTool to view datastores that are enabled.
+
+Use the ***Tools / Options*** menu in TSTool to change TSTool configuration.
+If necessary, edit configuration files with a text editor.

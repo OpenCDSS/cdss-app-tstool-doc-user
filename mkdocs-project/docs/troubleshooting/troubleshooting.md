@@ -34,6 +34,7 @@ finding information on a troubleshooting topic.**
 	+ [Issue 9 - Time series data type for data source is unavailable](#issue-9-time-series-data-type-for-data-source-is-unavailable)
 	+ [Issue 10 - Unexpected failure](#issue-10-unexpected-failure)
 	+ [Issue 11 - TSTool text (fonts) are small](#issue-11-tstool-text-fonts-are-small)
+	+ [Issue 12 - Datastore is (not) available](#issue-12-datastore-is-not-available)
 * [Obsolete Commands](#obsolete-commands)
 
 ------------------
@@ -670,6 +671,47 @@ Repeat the following For the `java.exe` and `javaw.exe` programs.
 5. Change the ***Override high DPI scaling behavior.  Scaling performed by:  System***.
 The initial choice was probably ***Application***.
 6. Restart TSTool.  If successful, text should use a size that is typical for Windows applications.
+
+## Issue 12 - Datastore is (not) available ##
+
+**Scope** – typically TSTool 12 or later
+
+**Behavior** – a datastore that has been configured is not available,
+or a datastore has been disabled but is still showing in TSTool
+
+**Possible Cause** – TSTool version 12 and later supports "out of the box" installation datastores,
+and user-configured datastores that overrides the installation configuration.
+Versions 12 and later are phasing in these features but may require manually editing configuration files
+until software features can be implemented to streamline configuration.
+Datastore issues typically involve configuration file issues.
+
+**Possible Solution** - The following is a possible solution, using HydroBase datastore on Windows as an example.
+Edit the configuration files appropriately to enable/disable the HydroBase datastore.
+
+1. The `C:\Users\user\CDSS\TSTool-Version\system\TSTool.cfg` file sets configuration properties to
+globally enable/disable a datastore by type,
+which controls the ***Commands*** menus that are shown for a datastore.
+The file can be edited with a text editor or use the ***Tools / Options*** menu.
+Set the `HydroBaseEnabled` property to `true` to enable or `false` to disable.
+2. The `C:\Users\user\.tstool\NN\system\TSTool.cfg` file can be created to 
+override the installation `TSTool.cfg` configuration file.
+Make sure to include the `[TSTool]` line before specific properties.
+Set the `HydroBaseEnabled` property to `true` to enable or `false` to disable.
+3. TSTool will look for installation datastore configuration files in the `C:\Users\user\CDSS\TSTool-Version\system` folder.
+Check to see whether a configuration file exists called `HydroBase.cfg` and that the `Enabled = true` property is set.
+Also specify the HydroBase database version for the database that is installed on the computer,
+consistent with the HydroBase that was installed with the HydroBase Database Manager.
+If uncertain, the HydroBase selector dialog shown when TSTool starts should provide a list of databases.
+If databases are not listed when TSTool starts,
+see [Issue 3 - No HydroBase databases are listed in HydroBase selection dialog](#issue-3-no-hydrobase-databases-are-listed-in-hydrobase-selection-dialog).
+**A common mistake is a typo in the HydroBase database name.**
+4. Alternatively, copy the `HydroBase.cfg` file described above into the folder `C:\Users\user\.tstool\NN\datastores` and edit
+to enable or disable the datastore.
+5. Restart TSTool.  If successful, the HydroBase datastore will be listed in the ***Datastore*** tab in the upper left.
+Note that this is separate from the HydroBase ***Input Type***, which is configured by selecting a HydroBase
+from the login dialog shown when TSTool starts.
+A unified HydroBase datastore and input type will be implemented in the future.
+Use the ***View / Datastores*** menu to check the datastore status and configuration errors.
 
 ## Obsolete Commands ##
 
