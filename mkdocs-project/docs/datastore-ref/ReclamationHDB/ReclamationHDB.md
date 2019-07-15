@@ -165,25 +165,22 @@ A datastore is configured by enabling ReclamationHDB datastores in the main `TST
 configuration file, and creating a datastore configuration file for each datastore connection.
 Configurations are processed at software startup.
 An example of the TSTool configuration file is shown below.
-Multiple datastores can be defined using the [DataStore:DataStoreName] syntax.
 Properties for each datastore are specified in an accompanying configuration file described below.
 
 ```
 # Configuration file for TSTool
-[TSTool]
-ReclamationHDBEnabled = true
 
-# Startup datastores (note that datastore name in config file takes precedence)
-[DataStore:HDB]
-ConfigFile = "HDB.cfg"
+[TSTool]
+
+ReclamationHDBEnabled = true
 ```
 **<p style="text-align: center;">
 TSTool Configuration File with ReclamationHDB Datastore Properties
 </p>**
 
-The following illustrates the ReclamationHDB datastore configuration file format,
-which in this example is located in the same folder as the TSTool configuration
-file and configures the “HDB” datastore.
+The following illustrates the ReclamationHDB datastore configuration file format.
+When installed on a Linux system, the file is typically located in the installation files `datastores` folder.
+This example configures the “HDB” datastore.
 Authentication for writing data to the database is checked based on the account login and password.
 
 ```
@@ -210,6 +207,7 @@ Authentication for writing data to the database is checked based on the account 
 #
 # Use the syntax Env:EnvVarName to retrieve values from the environment.
 # Use the syntax SysProp:SysPropName to retrieve values from the JRE system environment.
+# Use the syntax Prompt to prompt the user
 
 Type = "ReclamationHDBDataStore"
 Name = "HDB"
@@ -217,8 +215,8 @@ Description = "Reclamation Test Database"
 DatabaseServer = "xxx"
 DatabaseName = "xxx"
 DatabasePort = 1521
-SystemLogin = "xxx" (for example app_user)
-SystemPassword = "xxx"
+SystemLogin = "Prompt"
+SystemPassword = "Prompt"
 # See documentation below for meaning of the following
 TSIDStyle = SDI_MRI
 ReadNHourEndDateTime = StartDateTimePlusInterval

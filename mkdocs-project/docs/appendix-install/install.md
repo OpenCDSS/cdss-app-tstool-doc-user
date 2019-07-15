@@ -4,11 +4,20 @@ This appendix describes how to install TSTool.
 TSTool was originally developed for [CDSS (Colorado's Decision Support Systems)](http://cdss.state.co.us)
 to process water resources data for modeling and analysis.
 However, TSTool can be used outside of CDSS and also can be used to analyze data other than water resources.
+In all cases, it is recommended to install in the default location to avoid confusion.
 
 * [Overview](#overview)
 * [File Locations](#file-locations)
+	+ [Installation Files](#installation-files)
+	+ [User Files](#user-files)
 * [Installing TSTool](#installing-tstool)
+	+ [Install TSTool on Windows](#install-tstool-on-windows)
+	+ [Install TSTool on a Windows File Server](#install-tstool-on-a-windows-file-server)
+	+ [Install TSTool from the “HydroBase data set Analysis Query Tools DVD”](#install-tstool-from-the-hydrobase-data-set-analysis-query-tools-dvd)
+	+ [Install TSTool on Linux](#install-tstool-on-linux)
 * [Uninstalling TSTool Software](#uninstalling-tstool-software)
+	+ [Uninstall TSTool on Windows](#uninstall-tstool-on-windows)
+	+ [Uninstall TSTool on Linux](#uninstall-tstool-on-linux)
 * [Running TSTool](#running-tstool)
 * [TSTool Configuration](#tstool-configuration)
 * [Map Configuration](#map-configuration)
@@ -27,14 +36,21 @@ TSTool can also be installed on Linux, typically in `/opt/TSTool-Version`.
 ## File Locations ##
 
 Standard locations of TSTool software files are as follows.
-Files are normally installed on Windows on the `C:` drive but can be installed in a shared location on a server.
+
+### Installation Files ###
+
+These files are referred to the "installation files".
+
+TSTool software is normally installed on Windows on the `C:` drive but can be installed in a shared location on a server
+if the software is provided in a shared environment (in this case it is recommended to install in `C:` first and
+then copy the `TSTool-Version` folder to the server).
 Note that the following list of software `*.jar` files may be different from the current TSTool version.
 In the future separate documentation may be provided explaining software components and licenses.
 
 ```
-C:\CDSS\TSTool-Version                      Windows top-level install directory.
-/opt/TSTool-version                         Linux top-level install directory.
-  bin/                                      Software program files directory.
+C:\CDSS\TSTool-Version                      Windows top-level install folder.
+/opt/TSTool-version                         Linux top-level install folder.
+  bin/                                      Software program files folder.
     Blowfish*.jar                           Used for encryption/security.
     cdss*.jar                               CDSS components.
     h2*.jar                                 H2 embedded database.
@@ -51,11 +67,17 @@ C:\CDSS\TSTool-Version                      Windows top-level install directory.
     TSTool.exe                              Executable program to run TSTool using the JRE software, recommended over batch file.
     TSTool.l4j.ini                          Configuration file for TSTool.exe launcher.
     TSTool*.jar                             TSTool program components.
-  doc/TSTool/UserManual/                    Main documentation directory for TSTool.
+  datastores/                               Datastore configuration files for databases and web services.
+                                            Note that in versions before 13.00.00 these files were located in the "system" folder.
+    *.cfg                                   See also user files below.
+  doc/TSTool/UserManual/                    Main documentation folder for TSTool.
     TSTool.pdf                              TSTool documentation as PDF.
   examples/                                 Example data and command files.
   jre*\                                     Java Runtime Environment used by TSTool
   logs/                                     Folder for TSTool log files (should be writable).  See also user files below.
+  plugins/                                  Plugins for datastores and commands.
+    plugin-folder/                          Folder for plugin files.
+      *.jar                                 Jar file for plugin.
   system/                                   Folder for system files.
     CDSS.cfg                                CDSS configuration file for HydroBase database configuration.
     DATAUNIT                                Data units file.
@@ -63,72 +85,65 @@ C:\CDSS\TSTool-Version                      Windows top-level install directory.
     *.cfg                                   Shared datastore configuration files. See also user files below.
 ```
 
+### User Files ###
+
+These files are referred to the "user files".
+
 In addition to the software installation files above,
 user files are saved in a `.tstool` folder under the user’s home folder and
 provide user-specific customization of the TSTool installation.
-Folders names beginning with a period are by default hidden on Linux computers.
-These files apply to all versions of TSTool and therefore allow settings to
-persist even when newer TSTool software versions are installed.
+Folder names beginning with a period are by default hidden on Linux computers.
+As of TSTool TSTool 13.00.00, the user files are separated by major TSTool version,
+meaning that files for version 13.00.00, 13.00.01, 13.01.00, etc. are all stored under `.tstool/13`.
+This allows sharing of configuration file in major version while allowing TSTool features and configuration files to evolve over time.
 User configuration files will override the installation configuration
-file settings when configuration setting values are found in both places.
+file settings when configuration setting values are found in both places, in particular:
 
-![Config_UserFiles](Config_UserFiles.png)
+* user `.tstool/N/system/TSTool.cfg` properties will override install `system/TSTool.cfg`
+* user `.tstool/N/datastores/*.cfg` datastore configuration files will override install `datastores/*.cfg`
 
-**<p style="text-align: center;">
-TSTool User Configuration Files (<a href="../Config_UserFiles.png">see also the full-size image</a>)
-</p>**
-
-**The following design has been implemented in TSTool 12.xx.xx in order to
-enable plugin datastores and commands.
-The initial design envisioned that configuration and plugins could be used across all installed TSTool versions.
-However, based on experience, it is likely that future TSTool updates will
-user versioned user files, for example consistent within a major version.
-In this case, files might be moved across versions through "import" functionality,
-which will be implemented in the TSTool user interface.**
+The following design was implemented in TSTool 13.00.00, with partial implementation in 12.06.00 and earlier versions.
 
 TSTool user configuration files:
 
 ```
-C:\Users\UserID\.tstool\                Windows user TSTool configuration files.
-/home/UserID/.tstool/                   Linux user TSTool configuration files.
-  batchServerHotFolder/                 If TSTool is run with -batchServer and -batchServerHotFolder FolderName,
-                                        TSTool will look for command files in this folder, process them, and then delete the files.
-  command-file-history.txt              History of opened command files, used to populate choices in the File / Open / Command file menu.
-  ui-state.txt                          Properties describing the user interface state, such as last selected choices.
-  log/*.log                             Startup log file, which will be used until StartLog commands specify a different log file.
-  datastore/
-    *.cfg                               User’s datastore configuration files.  Unlike the installation datastore files (in TSTool system folder),
-                                        these files stand on their own and do not require a reference in the TSTool.cfg file.
-                                        Use the Enabled=True property in a datastore configuration file to enable the datastore and
-                                        Enabled=False to disable the datastore.  Other options to disable the datastore are
-                                        delete the datastore file or move out of the ./tstool/datastore folder.
-  plugin-command/                       Plugin commands.
-    CommandName/                        CommandName matching the command name in TSTool.
-      bin/                              Contains a jar file with code for plugin command (see plugin developer documentation).
-      bin-depend/                       Contains jar file(s) needed by plugin.
-      doc/                              Contains command documentation as HTML, which is accessed from plugin command editors.
-        images/
-          *.png, etc.
-        include/
-          *.css, etc.
-        CommandName.html
-  plugin-datastore/                     Plugin datastores.
-    DatastoreName/                      DatastoreName matching the datastore type TSTool, which is the value of the Type property in the datastore configuration file.
-      bin/                              Contains jar file with code for plugin datastore (see plugin developer documentation).
-      bin-depend/                       Contains jar file(s) needed by plugin.
-      doc/                              Contains command documentation as HTML, which is accessed from the TSTool user interface.
-        images/
-          *.png, etc.
-        include/
-          *.css, etc.
-          CommandName.html
-  system/
-    TSTool.cfg                          User’s TSTool configuration settings.  This file is mainly used to enable/disable datastore types that are of interest to the user.  See the example below. 
-  template-graph/                       Folder containing template graphs, which are shown in the lower right of the ensemble and time series results next to the Graph with template: buttons.
+C:\Users\user\.tstool\          Windows user TSTool configuration files.
+/home/user/.tstool/             Linux user TSTool configuration files.
+  N/                            TSTool major version, e.g., 13
+    batchServerHotFolder/       If TSTool is run with -batchServer and -batchServerHotFolder FolderName,
+                                TSTool will look for command files in this folder, process them, and then delete the files.
+    command-file-history.txt    History of opened command files, used to populate choices in the File / Open / Command file menu.
+    datastores/
+      *.cfg                     User’s datastore configuration files.
+                                Use the Enabled=True property in a datastore configuration file to enable the datastore and
+                                Enabled=False to disable the datastore.  Other options to disable the datastore are
+                                delete the datastore file or move out of the ./tstool/datastores folder.
+    logs/*.log                  Startup log file, which will be used until StartLog commands specify a different log file.
+    plugins/                    Plugin datastores nd commands.
+      PluginName/               Folder to differentiate plugins.
+        bin/                    Contains a jar file with code for plugin (see plugin developer documentation).
+        bin-depend/             Contains jar file(s) needed by plugin.
+        doc/                    Contains command documentation as Markdown, which is accessed from plugin command editors.
+                                This is being evaluated.
+          images/
+            *.png, etc.
+          include/
+            *.css, etc.
+          CommandName.md
+    system/
+      TSTool.cfg                User’s TSTool configuration settings.  This file is mainly used to enable/disable
+                                datastore types that are of interest to the user.  See the example below. 
+    template-graph/             Folder containing template graphs, which are shown in the lower right of the
+                                ensemble and time series results next to the Graph with template: buttons.
+    ui-state.txt                Properties describing the user interface state, such as last selected choices.
 ```
 
+The following is an example user `TSTool.cfg` configuration file and is discussed more in the
+[TSTool Configuration](#tstool-configuration) section.
+
+
 ```
-# ./tstool/system/TSTool.cfg
+# ./tstool/N/system/TSTool.cfg
 #
 # TSTool configuration file containing user settings, shared between TSTool versions
 # This file indicates which datastore software features should be enabled.
@@ -143,44 +158,67 @@ ReclamationHDBEnabled = true
 
 ## Installing TSTool ##
 
-TSTool can be installed either as part of the HydroBase Tools DVD installation, or as a separate installation.
-In both cases, is recommended that the normal CDSS file structure be used.
+TSTool can be installed in various environments, including:
 
-### Installing TSTool from the “HydroBase data set Analysis Query Tools DVD” ###
+1. on a Windows desktop computer, using the CDSS TSTool installer
+2. on a Windows server, using the CDSS TSTool installer
+3. on Linux, using the CDSS TSTool installer
+4. as part of the HydroBase Tools DVD installation, used in the past but typically not currently used.
 
-If you acquired a HydroBase DVD or downloaded the image, TSTool will be installed during the DVD install process.
-Refer to the installation instructions for that distribution.
-The version that is installed may be older than the version available on the CDSS web site;
-however, multiple TSTool versions can be installed and run independently.
+In all cases, is recommended that the normal installation file structure is used.
+The following sections describe installation in various environments.
 
-### Installing TSTool from the TSTool Setup File ###
+### Install TSTool on Windows ###
 
-Use the following instructions to install TSTool using the `TSTool_CDSS_Version_Setup.exe` installer program,
-for example if TSTool software was downloaded from the [CDSS web site](http://cdss.state.co.us):
+Use the following instructions to install TSTool on Windows using the `TSTool_CDSS_Version_Setup.exe` installer program,
+for example if TSTool software was downloaded from the [CDSS website](https://www.colorado.gov/pacific/cdss/tstool)
+or [OpenCDSS website](http://opencdss.state.co.us/tstool/):
 
 #### 1. Run the `TSTool_CDSS_Version_Setup.exe` file by selecting from Windows Explorer, the ***Start / Run...***  menu, or from a command shell. ####
 
 You must be logged into the computer using an account with administrator privileges.
-Otherwise, the following warning will be displayed:
+Otherwise, the following warning will be displayed.
+Administrator privileges are required to set registry settings to facilitate normal Windows uninstall
+(this may be changed in the future).
 
+**<p style="text-align: center;">
 ![Install_AdministratorWarning](Install_AdministratorWarning.png)
+</p>**
 
 If you have administrative privileges, the following welcome will be displayed, and the installation can continue:
 
+**<p style="text-align: center;">
 ![Install_Welcome](Install_Welcome.png)
+</p>**
+
+**<p style="text-align: center;">
+TSTool Install - Welcome (<a href="../Install_Welcome.png">see also the full-size image</a>)
+</p>**
 
 Press ***Next*** to continue with the installation.
  
-![Install_Disclaimer](Install_Disclaimer.png)
+**<p style="text-align: center;">
+![Install_License](Install_License.png)
+</p>**
 
-TSTool is distributed with CDSS with no license restrictions.  However the disclaimer must be acknowledged.
+**<p style="text-align: center;">
+TSTool Install - License Agreement (<a href="../Install_License.png">see also the full-size image</a>)
+</p>**
+
+TSTool is distributed with CDSS with GPL v3+ license.
 Press ***I Agree*** to continue with the installation.
  
 #### 2. Several components can be selected for the install as shown in the following dialog. ####
 
 Position the mouse over a component to see its description.
 
+**<p style="text-align: center;">
 ![Install_SelectComponents](Install_SelectComponents.png)
+</p>**
+
+**<p style="text-align: center;">
+TSTool Install - Choose Components (<a href="../Install_SelectComponents.png">see also the full-size image</a>)
+</p>**
 
 Select the components to install and press ***Next***.
 
@@ -189,7 +227,13 @@ Select the components to install and press ***Next***.
 Multiple versions of TSTool can be installed and there are no dependencies between the versions.
 It is recommended that the default install location shown is used.
 
+**<p style="text-align: center;">
 ![Install_SelectFolder](Install_SelectFolder.png)
+</p>**
+
+**<p style="text-align: center;">
+TSTool Install - Choose Install Location (<a href="../Install_SelectFolder.png">see also the full-size image</a>)
+</p>**
 
 After selecting the install location, press ***Next***.
 
@@ -198,21 +242,39 @@ Note that this location will be saved as a Windows registry setting
 to allow future updates to check for and default to the same install location,
 and to allow the standard software uninstall procedure to work correctly.
 
-#### 4. The following dialog will be shown to select the menu for the software: ####
+#### 4. The following dialog will be shown to select the Start menu for the software: ####
 
+**<p style="text-align: center;">
 ![Install_StartMenuFolder](Install_StartMenuFolder.png)
+</p>**
+
+**<p style="text-align: center;">
+TSTool Install - Choose Start Menu Folder (<a href="../Install_StartMenuFolder.png">see also the full-size image</a>)
+</p>**
 
 After selecting the folder, press ***Install***.
 
 #### 5. The following dialog will show the progress of the installation:####
 
+**<p style="text-align: center;">
 ![Install_Complete](Install_Complete.png)
+</p>**
+
+**<p style="text-align: center;">
+TSTool Install - Installation Complete (<a href="../Install_Complete.png">see also the full-size image</a>)
+</p>**
 
 Press ***Show details*** to see the files that were installed or press Next to continue.
 
 #### 6. If the CDSS Base Components were selected for install, the following dialog will be displayed: ####
 
+**<p style="text-align: center;">
 ![Install_HydroBaseQuestion](Install_HydroBaseQuestion.png)
+</p>**
+
+**<p style="text-align: center;">
+TSTool Setup - HydroBase Configuration Question (<a href="../Install_HydroBaseQuestion.png">see also the full-size image</a>)
+</p>**
 
 TSTool and other CDSS software can utilize HydroBase running on the local computer as well as other computers.
 Press ***Yes*** if HydroBase has been installed on another computer in the
@@ -227,25 +289,40 @@ server in choices and defaults to HydroBase on the local computer.
 The dialog will initially show previous settings from the `\CDSS\TSTool-Version\system\CDSS.cfg`
 file and settings typically only need to be changed after installing a new HydroBase version.
 
+**<p style="text-align: center;">
 ![Install_HydroBaseConfiguration](Install_HydroBaseConfiguration.png)
+</p>**
+
+**<p style="text-align: center;">
+TSTool Setup - Configure HydroBase Settings (<a href="../Install_HydroBaseConfiguration.png">see also the full-size image</a>)
+</p>**
 
 After entering the name of a HydroBase server and the default server to use, press ***Done***.
 
-#### 8. The following dialog will then be shown asking whether the TSTool software should be run: ####
+#### 8. The following dialog will then be shown indicating how to run the software: ####
 
-![Install_RunTSToolQuestion](Install_RunTSToolQuestion.png)
+**<p style="text-align: center;">
+![Install_RunTSToolInstructions](Install_RunTSToolInstructions.png)
+</p>**
+
+**<p style="text-align: center;">
+TSTool Setup - Run Software Instructions (<a href="../Install_RunTSToolInstructions.png">see also the full-size image</a>)
+</p>**
 
 Press ***Yes*** to run the software or ***No*** to exit the installation procedure.
 
 #### 9. Import Old CDSS Configuration File ####
 
 TSTool is distributed with a default configuration for CDSS.
-If you have edited the configuration properties, you can import the old configuration file using the
+If the configuration file properties have been edited in a previous release,
+the properties can be imported from the old configuration file using the
 ***Help / Import Configuration...*** menu.  See also the TSTool ***Tools / Options*** menu.
 
-## Installing TSTool on a File Server ##
+**This feature will be updated in the future to handle configuration files with the 13.00.00+ file structure.**
 
-TSTool can be installed on a file server, which allows software updates to be made in one location,
+### Install TSTool on a Windows File Server ###
+
+TSTool can be installed on a Windows file server, which allows software updates to be made in one location,
 thereby eliminating the need to install software on individual machines.
 As of TSTool 11.09.00 user configuration files will be saved under the user’s folder to
 facilitate persistence of user settings between software updates.
@@ -258,10 +335,8 @@ perform the following (this is typically performed by system administrators):
 1. Run the `TSTool_CDSS_Version_Setup.exe` installer as described above.
 During installation specify the TSTool installation home using a drive letter and
 path for the server or specify a Universal Naming Convention (UNC) path (e.g., `\\ServerName\CDSS\TSTool-Version`).
-2. Or...Copy the files from a local installation to a network location.
+2. Or...Copy the `C:\Users\user\CDSS\TSTool-Version` files from a local installation to a network location.
 The TSTool software will detect the file location when run using the `TSTool.exe` file.
-If the `TSTool.bat` file is used to run the software,
-it may need to be modified to specify the location of files on the server.
 
 The menus and shortcuts will only be configured for the computer from which the installation was run.
 Therefore, menus and shortcuts for other computers will need to be manually configured.
@@ -270,27 +345,44 @@ If TSTool has been installed on a local computer and it is also available on the
 the network version can be run by running the software in the `ServerName\CDSS\TSTool-Version\bin folder`.
 The software will expect that file locations use the same drives as when the software was installed.
 
+### Install TSTool from the “HydroBase data set Analysis Query Tools DVD” ###
+
+If you acquired a HydroBase DVD or downloaded the DVD image,
+TSTool will be installed during the DVD install process.
+Refer to the installation instructions for that distribution.
+The version that is installed may be older than the version available on the CDSS web site;
+however, multiple TSTool versions can be installed and run independently.
+
+### Install TSTool on Linux ###
+
+This documentation needs to be completed.
+
 ## Uninstalling TSTool Software ##
 
 The process to uninstall TSTool changed as of TSTool 12.06.00.
-First make sure that TSTool is not running.
 
-### Uninstall TSTool 12.06.00 and Later ###
+### Uninstall TSTool on Windows ###
+
+#### Uninstall TSTool 12.06.00 and Later from Windows ####
 
 As of TSTool 12.06.00, the software uninstall process has been simplified
-to take advantage of Windows features.
+to take advantage of Windows features.  Make sure that TSTool is not running.
 
 The first way to uninstall is to right-click on the TSTool software version in the ***Start***
 menu and select the ***Uninstall*** menu, as shown in the following image.
 The next steps are similar to those described below.
 
+**<p style="text-align: center;">
 ![uninstall-start-menu](uninstall-start-menu.png)
+</p>**
 
 The second way to uninstall TSTool is as follow.
 Use the windows ***Run*** search field (lower left of desktop).
 Enter `uninstall`.  This should display an option to open ***Add or remove programs***.
 
+**<p style="text-align: center;">
 ![uninstall-apps-and-features1](uninstall-apps-and-features1.png)
+</p>**
 
 Search for `TSTool` as shown above.
 Select the version of TSTool to uninstall and press ***Uninstall***.
@@ -302,20 +394,12 @@ However, any files that exist in the users' files will remain.
 This allows datastore configurations, plugins, and other user-configured files to be shared with
 other TSTool version installations.
 
-### Uninstall TSTool 12.05.00 and Earlier ###
+#### Uninstall TSTool 12.05.00 and Earlier from Windows ####
 
 To uninstall TSTool 12.05.00 and earlier versions, select the ***CDSS / Uninstall / TSTool*** from the ***Start*** menu and confirm the uninstall.
 CDSS components that are used by other software (e.g., CDSS Base component software) as well as user data will remain installed.
 
-![Uninstall_Confirmation](Uninstall_Confirmation.png)
-
-Press ***Uninstall*** to uninstall the software.
-
-The following dialog shows the status of the uninstall process.
-
-![Uninstall_Complete](Uninstall_Complete.png)
-
-Press ***Show details*** to see the list of files that were removed.  Press ***Done*** to exit the uninstall.
+### Uninstall TSTool on Linux ###
 
 ## Running TSTool ##
 
@@ -343,19 +427,41 @@ In this case it may be necessary to specify the absolute path to the command fil
 
 TSTool requires minimal configuration after installation.
 This section describes TSTool configuration files that can be customized for a system.
-Configuration is specified for each TSTool installation and as of TSTool 11.09.00 several user configuration files.
+Configuration is specified by installation files for each TSTool installation.
+As of TSTool version 11.09.00, user configuration files are also saved in the user's `.tstool` folder,
+which allows overriding the installation files configuration files.
 
 ### TSTool Configuration File ###
 
-The `system\TSTool.cfg` file under the main installation directory contains top-level configuration information for TSTool.  The format of the file is as follows:
+The `system\TSTool.cfg` file can be specified in the following two locations on Windows:
+
+* Installation files:
+	+ Windows:  `C:\CDSS\TSTool-Version\system\TSTool.cfg`
+	+ Linux:  `/opt/TSTool-Version/system/TSTool.cfg`
+* User files (`N` below is the TSTool major version number, e.g., `13`):
+	+ Windows:  `C:\Users\user\.tstool\N\system\TSTool.cfg`
+	+ Linux:  `/home/user/.tstool/N/system/TSTool.cfg`
+
+The `TSTool.cfg` file installation folder contains top-level configuration information for TSTool.
+User file configuration properties take precedence over the installation configuration properties.
+The format of the file is as follows:
 
 ```
 #
 # Configuration file for TSTool
+# - sets controlling configuration properties
+# - see also the "../datastores" folder for datastore configuration
+# - properties in this file can be overridden by user's ".tstool/N/system/TSTool.cfg" file
+# - the "CDSS.cfg" file provides configuration information for HydroBase selection/login dialog
+# - HydroBase configuration will move to a datastore at some point
 
 [TSTool]
 
-ColoradoSMSEnabled = true
+# Enable/disable datastores and input types globally, which will turn on/off software features.
+# - if properties are not specified then internal defaults will apply
+# - defaults generally support use in Colorado because of historical use of the software
+# - see documentation for datastores for more information
+
 DateValueEnabled = true
 HydroBaseEnabled = true
 RiverWareEnabled = true
@@ -369,36 +475,13 @@ StateModEnabled = true
 # to a different program.
 DiffProgram = "C:\Program Files\KDiff3\kdiff3.exe"
 
-# Set for the user interface look and feel.  Default is SystemLookAndFeel.  See:
-#    http://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-# For example, the following can be used on Linux if Motif is not desired
-#UILookAndFeel = "com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
-
-MapLayerLookupFile = "\cdss\gis\co\TimeSeriesMapLookup.csv"
-
-################################################################################
-# Begin configuration of data stores that will be opened when TSTool starts
-#  - the data store name in the data store configuration (*.cfg)
-#    file takes precedence; by convention the names should match
-#  - the data stores will be opened only if the data store type is enabled above
-#  - alphabetize the data stores by type below
-#  - also see the "Enabled" property in the configuration files, for finer
-#    control
-#  - see also user configuration files for datastores
-################################################################################
-
-# Data store for Colorado Water HBGuest web service
-#(active if ColoradoWaterHBGuestEnabled=true above)
-[DataStore:ColoradoWaterHBGuest]
-ConfigFile = "ColoradoWaterHBGuest.cfg"
-
-# The license information will be removed as TSTool moves to open source licensing
-
-LicenseOwner = "CDSS"
-LicenseType = CDSS
-LicenseCount = NoLimit
-LicenseExpires = Never
-LicenseKey = 00-77960bdfb1dde707-1dd052fe0327a332-a07266ee645e8845-7560192d374235c5-1dd052fe0327a332
+# Online documentation home.
+# - the first is the primary documentation root for the latest software version
+# - the second is a backup and allows transition from one server to another
+# - the documentation viewer will first try using the specific software version rather than 'latest'
+#   and if not found will use 'latest'
+UserDocumentationUri = "http://opencdss.state.co.us/tstool/latest/doc-user/"
+UserDocumentationUri2 = "http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/"
 ```
 **<p style="text-align: center;">
 Example TSTool Installation Configuration File
@@ -406,13 +489,9 @@ Example TSTool Installation Configuration File
 
 The example illustrates the format of the file.
 The `*Enabled` properties can be used to enable/disable input types.
-Common formats are enabled by default and more specialized formats are disabled by default,
-if not specified in the file.
+Common formats are enabled by default and more specialized formats are disabled by default.
 For example, use `HydroBaseEnabled = false` to disable the automatic HydroBase login that
 occurs with the HydroBase input type (e.g., if HydroBase is unavailable for some reason).
-Each input type can have additional properties,
-although only a few currently do, as described below.
-Use the ***Tools / Options*** menu for a dialog that helps with editing the `*Enabled` properties.
 
 The optional `MapLayerLookupFile` property indicates the name
 of the time series to map layer lookup file.
@@ -438,13 +517,12 @@ Example TSTool User Configuration File
 
 ### Data Units File ###
 
-The `system\DATAUNIT` file under the main installation directory contains data unit
+The `system\DATAUNIT` file under the main installation folder contains data unit
 information that defines conversions and output precision.
 In most cases the default file can be used but additional units may need to be added for a
 user's needs (in this case please notify the developers so the units can be
 added to the default file distributed with installations).
-Currently, the `DATAUNIT` file is the only source for units information – in
-the future units may be determined from the various input sources.
+Currently, the `DATAUNIT` file is the only source for units information.
 
 ### HydroBase Configuration ###
 
@@ -466,7 +544,7 @@ TSTool HydroBase Configuration Properties
 
 By default, TSTool will automatically look for HydroBase databases on the current (local) machine and the State servers.
 State server databases are typically only accessible to State of Colorado computers.
-If SQL Server or MSDE HydroBase versions have been installed on a different machine,
+If SQL Server HydroBase versions have been installed on a different machine,
 the `\cdss\TSTool-Version\system\CDSS.cfg` file can be used to indicate the database servers.
 An example of the configuration file is as follows.
 These properties may be moved to a HydroBase datastore configuration file in the future.
@@ -477,22 +555,13 @@ These properties may be moved to a HydroBase datastore configuration file in the
 ServerNames="ServerName,local"
 DefaultServerName="ServerName"
 DefaultDatabaseName="HydroBase_CO_20080730"
-
-[ColoradoSMS]
-
-ServerNames="ServerName,local"
-DefaultServerName="ServerName"
-DefaultDatabaseName="RealtimeStreamflow"
-UserLogin="UserLogin"
 ```
 
-The ColoradoSMS input type is being used to support annotation of
-real-time data graphs with alert information, within the State of Colorado’s offices.
-
 Properties can be specified on the TSTool command line using the notation `Property=Value`
-and will in some cases override the values in the configuration file.  These features are under development as necessary.
+and will in some cases override the values in the configuration file.
+New properties are added as necessary.
 
-The CDSS configuration properties are described in the following tables:
+The CDSS configuration properties are described in the following table:
 
 **<p style="text-align: center;">
 CDSS HydroBase Database Configuration Properties
@@ -509,26 +578,6 @@ CDSS HydroBase Database Configuration Properties
 |`SystemLogin`|Reserved for internal use.||
 |`SystemPassword`|Reserved for internal use.||
 |`UserLogin`|Reserved for internal use.||
-
-**<p style="text-align: center;">
-CDSS Satellite Monitoring System (ColoradoSMS) Database Configuration Properties
-</p>**
-
-|**Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**|
-|--|--|--|
-|`ServerNames`|A comma-separated list of server names to list in the SMS login dialog.|The state server is listed.|
-|`DefaultServerName`|The default SMS database server name to use.  This allows the SMS login dialog to preselect a default that applies to most users in the system.  If TSTool is run in batch mode and the ColoradoSMS input type is enabled, use this property to make a default connection to the SMS database, for use with other commands in the batch run.|`greenmtn.state.co.us`|
-|`DefaultDatabaseName`|The default SMS database name to use.  This allows the SMS login dialog to preselect a default that applies to most users in the system.  If TSTool is run in batch mode and the ColoradoSMS input type is enabled, use this property to make a default connection to the SMS database, for use with other commands in the batch run.||
-|`DatabaseEngine`|Reserved for internal use.||
-|`DatabaseName`|The database name to use for the initial connection.  This overrides the default server.||
-|`DatabaseServer`|The server name to use for the initial connection.  This overrides the default server.||
-|`SystemLogin`|Reserved for internal use.||
-|`SystemPassword`|Reserved for internal use.||
-|`UserLogin`|The user login, for use with TSTool batch runs.  The ColoradoSMS.UserLogin parameter can be specified on the command line and will be used when making the initial SMS database connection.||
-
- 
-The SMS database cannot currently be opened with a login dialog.
-Therefore, correct information must be specified in the CDSS configuration file and the TSTool command line.
 
 ## Map Configuration ##
 

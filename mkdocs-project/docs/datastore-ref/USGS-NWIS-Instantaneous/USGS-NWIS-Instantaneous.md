@@ -104,7 +104,7 @@ A datastore is configured by enabling UsgsNwisInstantaneous datastores in the ma
 and creating a datastore configuration file for each datastore.
 Configurations are processed at software startup.
 An example of the TSTool configuration file is shown below.
-Multiple datastores can be defined using the `[DataStore:DataStoreName]` syntax.
+Multiple datastores can be defined.
 For NWIS, this would allow, for example, accessing different versions of the web services.
 
 ```
@@ -113,20 +113,15 @@ For NWIS, this would allow, for example, accessing different versions of the web
 [TSTool]
 
 UsgsNwisInstantaneousEnabled = true
-
-# Startup datastores (note that datastore name in config file takes precedence)
-
-[DataStore:UsgsNwisInstantaneous]
-
-ConfigFile = "UsgsNwisInstantaneous.cfg"
 ```
 
 **<p style="text-align: center;">
 TSTool Configuration File with UsgsNwisInstantaneous Datastore Properties
 </p>**
 
-Properties for each datastore are specified in an accompanying datastore configuration file (see below),
-which in the following example is located in the same folder as the TSTool configuration file and configures a datastore named “UsgsNwisInstantaneous”.
+Properties for each datastore are specified in an accompanying datastore configuration file (see below).
+TSTool installation files include a datastore configuration file for USGS instantaneous data located in the
+`datastores` folder, which configures a datastore named “UsgsNwisInstantaneous”.
 
 ```
 # Configuration information for "UsgsNwisInstantaneous" datastore,

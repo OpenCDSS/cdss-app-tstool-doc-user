@@ -70,27 +70,12 @@ precision of zero is treated as having a precision of 6 digits after the decimal
 
 ## Datastore Configuration Files ##
 
-A datastore is configured by enabling the datastore in the main `TSTool.cfg`
-configuration file and creating a datastore configuration file for the connection.
+A datastore is configured by creating a datastore configuration file for the connection.
 Configurations are processed at software startup to enable datastores.
-An example of the TSTool configuration file is shown below.
-Multiple datastores can be defined using the `[DataStore:DataStoreName]` syntax.
-Properties for each datastore are specified in an accompanying configuration file described below.
-
-```
-# Configuration file for TSTool
-
-...properties omitted...
-
-### Startup datastores (note that datastore name in config file takes precedence) ###
-
-[DataStore:SomeDatabaseDataStore]
-ConfigFile = "SomeDatabaseDataStore.cfg"
-```
-TSTool Configuration File with Generic Database Datastore Properties
 
 The following illustrates the generic database datastore configuration file format,
-which in this example is located in the same folder as the TSTool configuration file.
+which in this example is a file named `C:/Users/user/.tstool/N/datastores/GenericExample.cfg`
+(replace `N` with TSTool major version).
 
 ```
 # Configuration information for "SomeDatabaseDataStore" datastore (connection).
@@ -225,12 +210,12 @@ To use these command, time series metadata in the database are mapped to TSTool 
 identifiers (`LocationType:Location.DataSource.DataType.Interval.Scenario`) and other
 key properties can be provided (e.g., data units).
 Core tables in a compatible database design contain the following data:
-	
+
 * Definitions, such as data types, data units, data source (providers)
 * Locations
 * Time series metadata (typically relationships to the above)
 * Time series data records (associated with a time series metadata record)
-	
+
 Relationships between the above tables that use database keys can be complicated to configure.
 Consequently, it is recommended that a database view be configured to provide time series
 metadata as a list of time series and associated properties.
@@ -238,12 +223,14 @@ For performance reasons, it may also be appropriate to copy the view to a
 “materialized” table and create indexes on the table.
 The following figure illustrates time series metadata from a database view:
 
+**<p style="text-align: center;">
 ![Datastore_Generic_TimeSeriesMeta](Datastore_Generic_TimeSeriesMeta.png)
-	
+</p>**
+
 **<p style="text-align: center;">
 Time Series Metadata View (<a href="../Datastore_Generic_TimeSeriesMeta.png">see also the full-size image</a>)
 </p>**
-	
+
 The following example illustrates datastore properties that are used to describe
 the database design so that TSTool can read and write time series.
 If configured, TSTool also will provide time series browsing features in the main window.

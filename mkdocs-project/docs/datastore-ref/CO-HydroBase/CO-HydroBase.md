@@ -223,11 +223,11 @@ Users much understand how to interpret the data, in particular when changing the
 
 ## Datastore Configuration File ##
 
-A datastore is configured by enabling a HydroBase datastore in the main `TSTool.cfg` configuration
+A datastore is configured by enabling HydroBase datastores in the main `TSTool.cfg` configuration
 file and creating a datastore configuration file for each connection.
 Configurations are processed at software startup to enable datastores.
 An example of the TSTool configuration file is shown below.
-Multiple datastores can be defined using the `[DataStore:DataStoreName]` syntax.
+Multiple datastores can be configured.
 Properties for each datastore are specified in an
 accompanying configuration file described after the following example.
 
@@ -236,18 +236,6 @@ accompanying configuration file described after the following example.
 [TSTool]
 
 HydroBaseEnabled = true
-
-# Startup datastores (note that datastore name in config file takes precedence)
-
-# Datastore for Colorado’s HydroBase database, CDSS account
-# (active if HydroBaseEnabled=true above)
-[DataStore:HydroBase2012]
-ConfigFile = "HydroBase2012.cfg"
-
-# Datastore for Colorado's HydroBase database, HBGuest account
-# (active if HydroBaseEnabled=true above)
-[DataStore:HydroBase-HBGuest]
-ConfigFile = "HydroBase-HBGuest.cfg"
 ```
 **<p style="text-align: center;">
 TSTool Configuration File with HydroBase Properties
@@ -257,8 +245,11 @@ TSTool Configuration File with HydroBase Properties
 
 The following illustrates the HydroBase datastore configuration file format
 for the CDSS account NOT using an ODBC DSN.
-The configuration file is located in the same folder as the TSTool configuration file
-and configures a datastore named `HydroBase`.
+The configuration file is typically named as follows:
+
+* `C:\CDSS\TSTool-Version\datastores\HydroBase.cfg` - default configuration
+* `C:\Users\user\.tstool\datastores\HydroBase.cfg` - user's HydroBase configuration, depending on local HydroBase installation
+
 The default `cdss` service account is used for authentication and allows read-only access to the database.
 
 ```text
@@ -287,7 +278,9 @@ Name = "HydroBase"
 Description = "HydroBase Datastore"
 DatabaseEngine = "SqlServer"
 # Local SQL Server Express installation...
-DatabaseServer = "amazon\CDSS"
+DatabaseServer = "localhost\CDSS"
+# Or a specific server...
+#DatabaseServer = "amazon\CDSS"
 DatabaseName = "HydroBase_CO_20120722"
 ```
 **<p style="text-align: center;">
@@ -349,7 +342,9 @@ See the following for background.  <a href="../mars-regedit.png">See also the fu
 
 * [ODBC (SQL Server): How do I turn on Multiple Active Result Sets(MARS) for a System DSN?](http://serverfault.com/questions/302169/odbc-sql-server-how-do-i-turn-on-multiple-active-result-setsmars-for-a-syst)
 
+**<p style="text-align: center;">
 ![mars-regedit](mars-regedit.png)
+</p>**
 
 ### HydroBase HBGuest Account using Generic Database Datastore (No ODBC DSN) ###
 

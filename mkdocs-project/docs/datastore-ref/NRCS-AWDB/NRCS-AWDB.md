@@ -92,10 +92,9 @@ This may lead to warnings when instantaneous data are actually not available.
 ## Datastore Configuration File ##
 
 A datastore is configured by enabling NRCS AWDB datastores in the main `TSTool.cfg` configuration file,
-and creating a datastore configuration file for each datastore.
+and creating a datastore configuration file the datastore.
+A configured datastore is distributed with TSTool installation files and should not require additional configuration.
 Configurations are processed at software startup.  An example of the TSTool configuration file is shown below.
-Multiple data stores can be defined using the `[DataStore:DataStoreName]` syntax.
-For example, this can be used to access different versions of the web services.
 
 ```
 # Configuration file for TSTool
@@ -103,19 +102,13 @@ For example, this can be used to access different versions of the web services.
 [TSTool]
 
 NrcsAwdbEnabled = true
-
-# Startup datastores (note that datastore name in config file takes precedence)
-
-[DataStore:NrcsAwdb]
-
-ConfigFile = "NrcsAwdb.cfg"
 ```
 **<p style="text-align: center;">
 TSTool Configuration File with NRCS AWDB Datastore Properties
 </p>**
 
-Properties for each datastore are specified in an accompanying data store configuration file (see below),
-which in the following example is located in the same folder as the TSTool configuration file and configures a data store named `NrcsAwdb`.
+Properties for each datastore are specified in an accompanying data store configuration file in the installation files `datastores` folder,
+which in the following example configures a data store named `NrcsAwdb`.
 
 ```
 # Configuration information for NRCS AWDB web service data store.

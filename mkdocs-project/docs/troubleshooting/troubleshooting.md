@@ -228,10 +228,10 @@ they can be difficult for others to understand.
 The log file exists in the following locations and can be edited with a text file editor:
 
 * User's home folder TSTool files, for example:
-	+ Windows: `C:\Users\user\.tstool\log\tstool_user.log`
-	+ Linux:  `/home/user/.tstool/log/tstool_user.log`
-	+ Cygwin:  `/cygdrive/C/Users/user/.tstool/log/tstool.log` (different files from Windows)
-	+ Git Bash (MinGW):  `/c/Users/user/.tstool/log/tstool.log` (same files as Windows)
+	+ Windows: `C:\Users\user\.tstool\logs\tstool_user.log`
+	+ Linux:  `/home/user/.tstool/logs/tstool_user.log`
+	+ Cygwin:  `/cygdrive/C/Users/user/.tstool/logs/tstool.log` (different files from Windows)
+	+ Git Bash (MinGW):  `/c/Users/user/.tstool/logs/tstool.log` (same files as Windows)
 * File specified by the TSTool [`StartLog`](../command-ref/StartLog/StartLog.md) command.
 * Log file in software installation folder:
 	+ Windows: `C:\CDSS\TSTool-version\logs\tstool_user.log`
@@ -314,7 +314,7 @@ Status[2](StartLog_Command.runCommand): Logfile full path is "C:\Users\sam\cdss-
 
 TSTool can run in interactive mode with a graphical user interface (GUI) and in batch mode.
 In both cases a log file contains messages from the program.
-For TSTool 12.x and later, the log file is created in the `.tstool/log` folder under the user's
+For TSTool 12.x and later, the log file is created in the `.tstool/logs` folder under the user's
 home folder, and older versions of TSTool
 create a log file in the `logs` directory under the main installation directory.
 It is recommended that the [`StartLog`](../command-ref/StartLog/StartLog)
@@ -680,7 +680,7 @@ The initial choice was probably ***Application***.
 or a datastore has been disabled but is still showing in TSTool
 
 **Possible Cause** – TSTool version 12 and later supports "out of the box" installation datastores,
-and user-configured datastores that overrides the installation configuration.
+and user-configured datastores that override the installation configuration.
 Versions 12 and later are phasing in these features but may require manually editing configuration files
 until software features can be implemented to streamline configuration.
 Datastore issues typically involve configuration file issues.
