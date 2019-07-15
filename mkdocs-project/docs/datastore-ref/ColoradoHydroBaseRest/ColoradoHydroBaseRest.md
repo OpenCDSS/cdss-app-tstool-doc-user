@@ -200,12 +200,15 @@ Caching will be phased in over time as resources are made available to enhance s
 
 ## Datastore Configuration File ##
 
-A datastore is configured by one or both of the following options:
+A datastore is typically configured by one or both of the following options:
 
 1. Enable ColoradoHydroBaseRest datastores in the installation `system/TSTool.cfg` configuration file
-and create a datastore configuration file for each datastore connection in the installation files.
-2. Create a datastore configuration file for each datastore connection in the user's `.tstool/NN/datastores` folder.
-If found, this will override the configuration in option 1.
+and create a datastore configuration file `datastores/HydroBaseWeb.cfg` to configure the datastore.
+TSTool is distributed with a default file that does not define the `ApiKey` property.
+2. Create a datastore configuration file in the user's `.tstool/NN/datastores` folder.
+The installation configuration file can be copied and modified.
+Typically, the `ApiKey` can be specified to increase the amount of data that can be queried.
+If found, this configuration file will override the configuration in option 1.
 
 Configurations are processed at software startup.
 An example of the TSTool configuration file is shown below.
@@ -249,9 +252,9 @@ Enabled = True
 Type = "ColoradoHydroBaseRestDataStore"
 Name = "ColoradoHydroBaseRest"
 Description = "Colorado HydroBase REST Web Service"
-ServiceRootURI = "https://dwrweb.state.co.us/DWR/DwrApiService/api/v2"
+ServiceRootURI = "https://dwr.state.co.us/Rest/GET/api/v2"
 ApiKey = "thekey..."
-ServiceApiDocumentationUri = "https://dnrweb.state.co.us/DWR/DwrApiService/Help"
+ServiceApiDocumentationUri = "https://dwr.state.co.us/Rest/GET/Help"
 ```
 
 **<p style="text-align: center;">

@@ -107,7 +107,7 @@ A datastore is configured by enabling UsgsNwisGroundwater datastores in the main
 and creating a datastore configuration file for each datastore.
 Configurations are processed at software startup.
 An example of the TSTool configuration file is shown below.
-Multiple datastores can be defined using the `[DataStore:DataStoreName]` syntax.
+Multiple datastores can be defined.
 For NWIS, this would allow, for example, accessing different versions of the web services.
 
 ```
@@ -116,21 +116,15 @@ For NWIS, this would allow, for example, accessing different versions of the web
 [TSTool]
 
 UsgsNwisGroundwaterEnabled = true
-
-# Startup datastores (note that datastore name in config file takes precedence)
-
-[DataStore:UsgsNwisGroundwater]
-
-ConfigFile = "UsgsNwisGroundwater.cfg"
 ```
 
 **<p style="text-align: center;">
 TSTool Configuration File with UsgsNwisGroundwater Datastore Properties
 </p>**
 
-Properties for each datastore are specified in an accompanying datastore configuration file (see below),
-which in the following example is located in the same folder as the TSTool
-configuration file and configures a datastore named `UsgsNwisGroundwater`.
+Properties for each datastore are specified in an accompanying datastore configuration file (see below).
+TSTool is distributed with installation files that configure a USGS groundwater datastore in the `datastores` folder,
+named `UsgsNwisGroundwater`.
 
 ```
 # Configuration information for "UsgsNwisGroundwater" datastore,

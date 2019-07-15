@@ -124,12 +124,13 @@ For example, reduced data include monthly values computed from daily values.  So
 
 ## Datastore Configuration File ##
 
-A datastore is configured by enabling RCC ACIS data stores in the main `TSTool.cfg` configuration file,
+A datastore is configured by enabling RCC ACIS datastores in the main `TSTool.cfg` configuration file,
 and creating a datastore configuration file for each datastore connection.
 Configurations are processed at software startup.
 An example of the TSTool configuration file is shown below.
-Multiple datastores can be defined using the `[DataStore:DataStoreName]` syntax.
-For ACIS, this would allow, for example, accessing systems at different RCC or different versions of the web services.
+Multiple datastores can be defined.
+For ACIS, this would allow, for example, accessing systems at different regional climate centers or
+different versions of the web services.
 
 ```text
 # Configuration file for TSTool
@@ -137,21 +138,16 @@ For ACIS, this would allow, for example, accessing systems at different RCC or d
 [TSTool]
 
 RCCACISEnabled = true
-
-Startup datastores (note that data store name in config file takes precedence)
-
-[DataStore:RCC-ACIS]
-
-ConfigFile = "RCC-ACIS.cfg"
 ```
 **<p style="text-align: center;">
 TSTool Configuration File with RCC ACIS Datastore Properties
 </p>**
 
 Properties for each datastore are specified in an accompanying configuration file described below.
+TSTool is distributed with a configuration file for RCC-ACIS datatstore.
 
 The following illustrates the RCC ACIS datastore configuration file format,
-which in this example is located in the same folder as the TSTool configuration file and configures a datastore named “RCC-ACIS”.
+which in this example is located in the TSTool installation files `daastores` folder and configures a datastore named “RCC-ACIS”.
 
 ```text
 # Configuration information for "RCC-ACIS" datastore.

@@ -109,24 +109,21 @@ A datastore is configured by enabling ReclamationPisces datastores in the main `
 and creating a datastore configuration file for each datastore connection.
 Configurations are processed at software startup.
 An example of the TSTool configuration file is shown below.
-Multiple datastores can be defined using the `[DataStore:DataStoreName]` syntax.
+Multiple datastores can be defined.
 Properties for each datastore are specified in an accompanying configuration file described below.
 
 ```
 [TSTool]
-ReclamationPiscesEnabled = true
 
-# Startup datastores (note that datastore name in config file takes precedence)
-[DataStore:ReclamationPisces]
-ConfigFile = " ReclamationPisces.cfg"
+ReclamationPiscesEnabled = true
 ```
 **<p style="text-align: center;">
 TSTool Configuration File with ReclamationPisces Datastore Properties
 </p>**
 
 The following illustrates the ReclamationPisces datastore configuration file format,
-which in this example is located in the same folder as the TSTool
-configuration file and configures the `ReclamationPisces` datastore.
+which in this example is located in the user files `datastores/ReclamationPisces.cfg` file
+and configures the `ReclamationPisces` datastore.
 Authentication for writing data to the database is checked based on the account login and password –
 typically a read-only account should be used for web access to Pisces.
 
