@@ -201,6 +201,7 @@ Refer to the [GitHub issues](https://github.com/OpenCDSS/cdss-app-tstool-doc-use
 for change history and see also the
 [TSTool release notes](http://opencdss.state.co.us/tstool/latest/doc-user/appendix-release-notes/release-notes/).
 
+* 2019-07-12 - Update for version 13.00.00 release.
 * 2019-01-26 - Update documentation links to use opencdss.state.co.us.
 * 2019-01-06 - Update documentation for full OpenCDSS release and MkDocs 1.
 * 2018-09-14 - Review documentation for TSTool 12.06.00 release.
