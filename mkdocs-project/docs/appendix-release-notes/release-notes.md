@@ -76,12 +76,12 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|13.00.00|First public OpenCDSS open source license release.|2019-02-08|
-|12.07.00|Improve plugin datastore support. |2018-09-19|
-|12.06.00|Update all editor dialogs to link to documentation and other editor improvements.|2018-09-14|
-|12.05.00|Various enhancements and cleanup based on open source migration, preliminary HydroBase REST web services implementation.|2018-07-03|
-|12.04.00|Enhance support for [datastore plugins](../datastore-ref/Plugin/Plugin.md).  Add network object.  Add initial [WaterML 2.0](../datastore-ref/WaterML2/WaterML2.md) support.|2017-07-13|
-|12.00.00|Update to use Java 8 including using Java 8 language standards.  Add new graphing features including y-axis zoom, and graph template feature.  Many other minor enhancements.|2017-04-24|
+|[13.00.00](release-notes-13.md)|First major release with OpenCDSS open source license.|2019-07-12|
+|[12.07.00](release-notes-12.md)|Improve plugin datastore support. |2018-09-19|
+|[12.06.00](release-notes-12.md)|Update all editor dialogs to link to documentation and other editor improvements.|2018-09-14|
+|[12.05.00](release-notes-12.md)|Various enhancements and cleanup based on open source migration, preliminary HydroBase REST web services implementation.|2018-07-03|
+|[12.04.00](release-notes-12.md)|Enhance support for [datastore plugins](../datastore-ref/Plugin/Plugin.md).  Add network object.  Add initial [WaterML 2.0](../datastore-ref/WaterML2/WaterML2.md) support.|2017-07-13|
+|[12.00.00](release-notes-12.md)|Update to use Java 8 including using Java 8 language standards.  Add new graphing features including y-axis zoom, and graph template feature.  Many other minor enhancements.|2017-04-24|
 |11.11.00 – 11.13.00|Improve Excel integration, enhance [`For`](../command-ref/For/For.md) command support for various commands.  Enhance [`VariableLagK`](../command-ref/VariableLagK/VariableLagK.md) command to read and save states.  Add graph mouse tracker and time series select/highlight.|2017-03-07|
 |11.09.00 – 11.10.01|TSTool configuration files have been added to the user’s home folder in addition to the installation files.  Windows are positioned on TSTool screen, handling multiple monitors.  Begin prototyping HTML command documentation.  Initial version of [plugin datastore](../datastore-ref/Plugin/Plugin.md) and [plugin command](../command-ref/Plugin/Plugin.md) features.|2016-05-02|
 |11.08.00 – 11.08.01|Enhancements to write tables and time series to additional spatial formats.  Add support for [Delft FEWS Pi XML format](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md), which is used by the National Weather Service.  Update additional commands to recognize properties as input.|2016-02-14|
