@@ -1724,8 +1724,9 @@ Or, the command file can be more complex, as needed for a workflow process.
 area and the ***Graph*** with template button is used, with a corresponding graph template.
 The graph template is a time series product file (`*.tsp`) containing properties described in the previous sections,
 but typically will also contain Freemarker template syntax as described below.
-Graph templates need to be stored in the .tstool/template-graph folder under the user’s files
-(`/home/user` on Linux or `C:\Users\user` on Windows).
+Graph templates need to be stored in the folder in the user's files (`/home/user` on Linux or `C:\Users\user` on Windows).
+	* TSTool 13+:  `.tstool/NN/template-graphs` folder under the user’s files, where `NN` is the TSTool major version
+	* TSTool 13+:  `.tstool/template-graph` folder under the user’s files
 3. If the specified graph template includes a `TemplatePreprocessCommandFile` property,
 then the specified command file will be run with the selected time series as input
 (all other time series in TSTool’s main interface will NOT be used),
@@ -1766,14 +1767,15 @@ The above data can be referenced in Freemarker templates using its variable synt
 
 The following sections provide examples of using the graph templates.
 These examples (or similar versions) are available in the TSTool software installation folder
-under the `examples/template-graph` folder and can be copied to the `./tstool/template-graph` folder under the user’s files.
+under the `examples/template-graphs` folder (version 13 and later, and `examples/template-graph` for version 12)
+and can be copied to the user’s files as described above.
 
 ### Time Series Graph Template ###
 
 The following example illustrates the configuration of a graph template for a single time series,
 in order to create a standard time series graph.
 
-The following graph template file `.tstool/template-graph/TSDefault.tsp` describes the graph for a single time series,
+The following graph template file `.tstool/template-graphs/TSDefault.tsp` describes the graph for a single time series,
 serving mainly to pick a proper title and y-axis label.
 
 ```text
@@ -1832,7 +1834,7 @@ Example Time Series Graph Created using Graph Template
 The following example illustrates the configuration of a graph template for a single time series,
 converted to an ensemble, in order to create a standard ensemble graph.
 
-The following graph template file `.tstool/template-graph/TSAsEnsembleCalcStatsDefault.tsp`
+The following graph template file `.tstool/template-graphs/TSAsEnsembleCalcStatsDefault.tsp`
 describes the ensemble graph for a single time series,
 serving mainly to pick a proper title and y-axis label, and legend position.
 
@@ -1881,7 +1883,7 @@ TSAlias = "${TemplateTSAlias}"
 ```
 
 Note in the above case that the `TemplatePreprocessCommandFile` is specified.
-Consequently, the file `./tstool/template-graph/TSAsEnsembleCalcStatsDefaul.TSTool` (shown below)
+Consequently, the file `./tstool/template-graphs/TSAsEnsembleCalcStatsDefaul.TSTool` (shown below)
 must exist and will be run to preprocess the graph time series into an ensemble that is used by the template.
 Note also that the following command file uses commands to set processor properties that are useful to the template.
 The following command file calculates mean and median statistic time series for use in the graph product.
@@ -1945,7 +1947,7 @@ Example Ensemble Graph Created using Graph Template
 
 The following example illustrates the configuration of a graph template for a single ensemble, in order to create a standard ensemble graph.
 
-The following graph template file `.tstool/template-graph/EnsembleCalcStatsDefault.tsp`
+The following graph template file `.tstool/template-graphs/EnsembleCalcStatsDefault.tsp`
 describes the ensemble graph for a single time series, serving mainly to pick a proper title and y-axis label, and legend position.
 
 ```text
