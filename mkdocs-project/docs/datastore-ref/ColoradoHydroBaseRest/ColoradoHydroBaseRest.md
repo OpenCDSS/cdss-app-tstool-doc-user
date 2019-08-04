@@ -158,6 +158,10 @@ TSTool is designed to utilize caching to store lists of time series metadata,
 grouped by water district, data type, and interval. The cache can be populated based on user requests.
 Caching will be phased in over time as resources are made available to enhance software.
 
+**<p style="text-align: center;">
+List of ColoradoHydroBaseRest Time Series Compared to Previous ColoradoWaterHBGuest Web Services
+</p>**
+
 |**ColoradoWaterHBGuest web service data type**|**Available in ColoradoHydroBaseRest web service?**|**Comments**|
 |--|--|--|
 |`AdminFlow – AdminFlow`|Not yet||
@@ -194,6 +198,10 @@ Caching will be phased in over time as resources are made available to enhance s
 |`Well - WellLevelElev` – treated as a daily time series with many gaps|Yes|Implemented|
 |`Well - WellLevelDepth` – treated as a daily time series with many gaps|Yes|Implemented|
 
+**<p style="text-align: center;">
+List of ColoradoHydroBaseRest Time Series Compared to Previous ColoradoWaterSMS Web Services
+</p>**
+
 |**ColoradoWaterSMS web service data type**|**Available in ColoradoHydroBaseREST web service?**|**Comments**|
 |--|--|--|
 |Any (`DISCHRG`)|Yes|Implemented using telemetry station web services.|
@@ -205,20 +213,20 @@ A datastore is typically configured by one or both of the following options:
 1. Enable ColoradoHydroBaseRest datastores in the installation `system/TSTool.cfg` configuration file
 and create a datastore configuration file `datastores/HydroBaseWeb.cfg` to configure the datastore.
 TSTool is distributed with a default file that does not define the `ApiKey` property.
-2. Create a datastore configuration file in the user's `.tstool/NN/datastores` folder.
+2. Create a user datastore configuration `.tstool/NN/datastores/HydroBaseWeb.cfg`,
+for example by copying and modifying the installation datastore configuation file.
 The installation configuration file can be copied and modified.
 Typically, the `ApiKey` can be specified to increase the amount of data that can be queried.
 If found, this configuration file will override the configuration in option 1.
 
 Configurations are processed at software startup.
 An example of the TSTool configuration file is shown below.
-Multiple datastores can be defined using the `[DataStore:DataStoreName]` syntax.
-For ColoradoHydroBaseRest, this allows, for example, accessing different versions of the web services should they be available.
 
 ```
 # Configuration file for TSTool
 
 [TSTool]
+
 ColoradoHydroBaseRestEnabled = true
 ```
 
@@ -228,11 +236,10 @@ TSTool Configuration File with ColoradHydroBaseRest Datastore Properties
 
 Properties for each datastore are specified in an accompanying configuration file described below.
 
-The following illustrates the ColoradoHydroBaseRest datastore configuration file format,
-which in this example is located in the same folder as the TSTool
-configuration file and configures a datastore named `ColoradoHydroBaseRest`.
-This file is typically copied to `.tstool/datastore` folder under the user's files and edited as needed
-in order to provide user-specific API key.
+The following illustrates the ColoradoHydroBaseRest datastore configuration file format
+and configures a datastore named `HydroBaseWeb`.
+This file is typically copied from installation files to `.tstool/NN/datastores/HydroBaseWeb.cfg`
+and edited to provide user-specific API key.
 The API Key can be requested from Colorado DWR web services page to increase web service query limits.
 
 ```
@@ -250,7 +257,7 @@ The API Key can be requested from Colorado DWR web services page to increase web
 
 Enabled = True
 Type = "ColoradoHydroBaseRestDataStore"
-Name = "ColoradoHydroBaseRest"
+Name = "HydroBaseWeb"
 Description = "Colorado HydroBase REST Web Service"
 ServiceRootURI = "https://dwr.state.co.us/Rest/GET/api/v2"
 ApiKey = "thekey..."

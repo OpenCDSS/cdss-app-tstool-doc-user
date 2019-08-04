@@ -240,7 +240,7 @@ nav:
   - WriteDelimitedFile: command-ref/WriteDelimitedFile/WriteDelimitedFile.md
   - WriteHecDss: command-ref/WriteHecDss/WriteHecDss.md
   - WriteNwsCard: command-ref/WriteNwsCard/WriteNwsCard.md
-  - WriteNWSRFSESPTraceEnsemble: command-ref/WriteNWSRFSESPTraceEnsemble/WriteNWSRFSESPTraceEnsemble.md
+  - WriteNwsrfsEspTraceEnsemble: command-ref/WriteNwsrfsEspTraceEnsemble/WriteNwsrfsEspTraceEnsemble.md
   - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
   - WriteReclamationHDB: command-ref/WriteReclamationHDB/WriteReclamationHDB.md
   - WriteRiversideDB: command-ref/WriteRiversideDB/WriteRiversideDB.md
@@ -283,7 +283,9 @@ nav:
   - MODSIM: datastore-ref/MODSIM/MODSIM.md
   - NDFD: datastore-ref/NDFD/NDFD.md
   - NRCS AWDB: datastore-ref/NRCS-AWDB/NRCS-AWDB.md
-  - NWS NWSRFS: datastore-ref/NWS-NWSRFS/NWS-NWSRFS.md
+  - NWSCard: datastore-ref/NWSCard/NWSCard.md
+  - NWSRFS ESP Trace Ensemble: datastore-ref/NWSRFSEspTraceEnsemble/NWSRFSEspTraceEnsemble.md
+  - NWSRFS FS5Files: datastore-ref/NWSRFS-FS5Files/NWSRFS-FS5Files.md
   - Plugin: datastore-ref/Plugin/Plugin.md
   - RCC ACIS: datastore-ref/RCC-ACIS/RCC-ACIS.md
   - ReclamationHDB: datastore-ref/ReclamationHDB/ReclamationHDB.md

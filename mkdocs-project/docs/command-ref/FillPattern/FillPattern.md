@@ -47,7 +47,9 @@ Multiple pattern files can be used, if appropriate.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![FillPattern](FillPattern.png)
+</p>**
 
 **<p style="text-align: center;">
 `FillPattern` Command Editor (<a href="../FillPattern.png">see also the full-size image</a>)
