@@ -1,6 +1,8 @@
 # cdss-app-tstool-doc-user #
 
 This repository contains the user documentation for Colorado's Decision Support Systems (CDSS) TSTool software.
+A repository separate from the code repository is used due to the large size of documentation,
+different development environment, and potential for non-coders to contribute to documentation.
 
 See the deployed [CDSS / TSTool](http://opencdss.state.co.us/tstool/latest/doc-user/) documentation.
 See the following online resources:
@@ -108,7 +110,6 @@ C:\Users\user\                            Windows:  User's files.
         cdss-lib-common-java/             Shared general utility code.
         cdss-lib-dmi-hydrobase-java/      State of Colorado's HydroBase API.
         cdss-lib-dmi-nwsrfs-java/         Legacy National Weather Service API.
-        cdss-lib-dmi-riversidedb-java/    Legacy RiversideDB database API.
         cdss-lib-dmi-satmonsys-java/      Colorado Satellite Monitoring System API.
         cdss-lib-models-java/             CDSS StateCU and StateMod model API.
         cdss-lib-processor-ts-java/       Core TSTool processing library.
@@ -128,6 +129,13 @@ documentation for information about installing MkDocs.
 If the development environment is properly configured, edit and view content as follows:
 
 1. Edit content in the `mkdocs-project/docs` folder and update `mkdocs-project/mkdocs.yml` as appropriate.
+	+ Markdown is used as much as possible.
+	+ Some Markdown documents are accompanied by Word, PowerPoint,
+	and other files that provide formatting that is difficult
+	to achieve in Markdown - for example, complex equations are maintained in Word,
+	exported as an image, and the image is used in Markdown.
+	+ Screen shot mages are typically created using Gimp or similar software,
+	using small PNG files if possible to ensure good performance.
 2. Run the `build-util/run-mkdocs-serve-8000.sh` script (Git Bash/Cygwin/Linux) or equivalent.
 Any issues should be resolved by updating the run script to support as many environments as possible.
 3. View content in a web browser using URL `http://localhost:8000`.
@@ -201,6 +209,7 @@ Refer to the [GitHub issues](https://github.com/OpenCDSS/cdss-app-tstool-doc-use
 for change history and see also the
 [TSTool release notes](http://opencdss.state.co.us/tstool/latest/doc-user/appendix-release-notes/release-notes/).
 
+* 2019-08-03 - Migrate remaining Word files to Markdown.
 * 2019-07-12 - Update for version 13.00.00 release.
 * 2019-01-26 - Update documentation links to use opencdss.state.co.us.
 * 2019-01-06 - Update documentation for full OpenCDSS release and MkDocs 1.

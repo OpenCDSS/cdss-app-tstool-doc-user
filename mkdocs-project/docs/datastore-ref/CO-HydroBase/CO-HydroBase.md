@@ -1,6 +1,8 @@
 # TSTool / Datastore Reference / Colorado HydroBase #
 
 * [Overview](#overview)
+	+ [Database Contents](#database-contents)
+	+ [Database Connections](#database-connections)
 * [Standard Time Series Properties](#standard-time-series-properties)
 * [Limitations](#limitations)
 * [Datastore Configuration File](#datastore-configuration-file)
@@ -22,84 +24,31 @@
 
 This appendix describes the HydroBase datastore,
 which is being phased in to replace the HydroBase “input type”.
-The newer datastore design is more flexible.
-Some issues remain before moving completely to the datastore concept and consequently
-the configuration of a HydroBase datastore is an optional feature that is not enabled by default (to enable,
-remove the `Enabled=False` property in the example configuration files provided with the software).
-Technical issues mainly involve how to change the traditional HydroBase
-login dialog and best practices for naming datastores when dealing with dated versions of HydroBase.
 
-The HydroBase database contains stored procedures and views suitable for the following users (accounts):
-
-* CDSS user (SQL Server login `cdss`, password `cdss%tools`) is a service account that exposes
-HydroBase data through stored procedures and views appropriate for decision support system projects.
-HydroBase CDSS view names have the prefix `vw_CDSS` (e.g., structures are in a view or table `vw_CDSS_Structure`).
-This is the default account when using the HydroBase datastore.
-* HBGuest user (SQL Server login `HBGuest`, password `1HBGuest`)
-is a read-only service account that exposes HydroBase data through stored procedures
-and views appropriate for general database users.
-HydroBase HBGuest view names do not have the prefix `vw_CDSS` (e.g., structures are in a view or table `structure`).
-See the [HBGuest User Manual](http://www.dwr.state.co.us/HBGuest/Documents/ColoradoHBGuestWebService.pdf)
-for an overview of HBGuest configuration and database access.
-
-A general rule of thumb is that the CDSS account should be used for full TSTool functionality;
-however, the HBGuest account can be used to query views that are not available via the
-CDSS account (e.g., the `vw_HBGuest_StructureAssocWDID` table provides
-information about augmentation plans and other structure groups).
-
-TSTool connections for the above HydroBase accounts can be figured in several ways:
-
-* CDSS user:
-	+ Configure as the HydroBase “input type”.
-	This is the default legacy behavior when HydroBase is enabled,
-	and relies on the user selecting a HydroBase database via the HydroBase selection dialog.
-	This approach may be phased out in the future in favor of the more generic datastore approach.
-	+ Configure a HydroBase CDSS datastore using a configuration file and
-	NO Open Database Connectivity (ODBC) Data Source Name (DSN).
-	If the datastore name is configured as “HydroBase”,
-	this connection will supersede the “input type” when encountered in time series identifiers.
-	The account will default to the CDSS service account.
-	An example configuration file is shown in the [Datastore Configuration File](#datastore-configuration-file) section below.
-	+ Configure a HydroBase CDSS datastore using a configuration file with an ODBC DSN.
-	In this case, the ODBC DSN must be configured using a SQL Server driver
-	with login `cdss` and password `cdss%tools`.
-	An example configuration file is shown in the [Datastore Configuration File](#datastore-configuration-file) section below.
-* HBGuest user:
-	+ Configure a Generic Database datastore using a configuration file
-	and NO Open Database Connectivity (ODBC) Data Source Name (DSN).
-	See the [Datastore Configuration File](#datastore-configuration-file) section below).
-	This approach may be needed if the ODBC DSN configuration (next item) results in errors,
-	and the text configuration file may be more transparent than the ODBC DSN.
-	+ Configure a HydroBase datastore using a configuration file with an ODBC DSN.
-	In this case, the ODBC DSN must be configured using a SQL Server
-	driver with login HBGuest and password 1HBGuest.
-	See the example for the CDSS account in the [Datastore Configuration File](#datastore-configuration-file) section below.
+### Database Contents ###
 
 The State of Colorado’s HydroBase database stores a variety of time series data.
 The time series conventions described here, in particular for time series identifiers,
-are consistent for major CDSS software components including TSTool, StateView/CWRAT, StateDMI, and StateMod GUI.
+are consistent for major CDSS software components including TSTool, StateDMI, StateView/CWRAT, and StateMod GUI.
 This allows for consistent features and sharing of data between software tools.
 
 The current database design splits time series into three main categories:
 
-1. Data related to structures or administrative data maintained by the State of Colorado (e.g., diversions, reservoirs).
+1. **Data related to structures or administrative data** maintained by the State of Colorado (e.g., diversions, reservoirs).
 Structure locations are typically identified using a water district identifier (WDID),
 consisting of a two-digit State of Colorado water district number
 and a trailing structure identifier (which in the past was four digits
 but has been increased to five or more digits to support longer identifiers).
 Although a single WDID identifier is used when identifying time series,
-the separate WD and ID fields are generally needed to find information in HydroBase.
-2. Data for stations, consisting mainly of location information and time series (e.g.,
+the separate WD and ID fields are generally also available in HydroBase.
+2. **Data for stations**, consisting mainly of location information and time series (e.g.,
 NOAA precipitation data, USGS streamflow).
 Station locations are typically identified using a station identifier from the data source.
 For example, stations can use a USGS identifier,
 a State of Colorado Satellite Monitoring System abbreviation, or other identifier.
-3. Data recorded at locations that are not stations or structures.
-For example, Water Information Sheet (WIS) are daily spreadsheets used to administer water.
-Although WIS contain data values for structures an stations,
-the time series are extracted from database tables that are not directly associated
-with structure or station database tables.
-Other examples include Colorado and national agricultural crop statistics.
+3. **Data recorded at locations that are not stations or structures**.
+For example, well permits that do not have WDID identifiers and county data such as
+agricultural statistics.
 
 A structure or station may have more than one identifier depending on the number of agencies
 involved with data collection, etc.
@@ -113,10 +62,97 @@ For example, a streamflow station may have a partial time series record with a
 with a “DWR” (Division of Water Resources) data source and identifier – the
 user must recognize that this may be the same station, under different management at different times.
 
-HydroBase downloads are officially updated for release to the public at least once per year,
+HydroBase downloads are updated for release to the public at least once per year,
 although internal updates occur year-round.
 Time series are used with CDSS (Colorado's Decision Support Systems)
 applications and follow basic time series standards when used by TSTool and other software.
+See the [Available Time Series by Data Type Categories](#available-time-series-by-data-type-categories)
+section for a list of available time series.
+
+### Database Connections ###
+
+The newer datastore design is more flexible than older input type design.
+The HydroBase datastore is a direct database connection that requires installing HydroBase on a local computer
+(such as for StateCU and StateMod modelers)
+or server that is accessible in a local network (such as for State of Colorado offices).
+This datastore provides the fastest performance and most flexibility when processing HydroBase data because the
+[ColoradoHydroBaseRest web service datastore](../ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) is limited by internet technologies performance and may not provide
+services for all HydroBase database tables and views.
+
+Some issues remain before moving completely to the datastore concept and consequently
+the configuration of a HydroBase datastore is an optional feature that is not enabled by default.
+To enable, it is recommended to:
+
+1. Copy the installation datastore configuration file (`C:/CDSS/TSTool-NN.NN.NN/datastores/HydroBase.cfg`) to
+user datastore configuration file (`C:/Users/user/.tstool/NN/datastores/HydroBase.cfg`).
+The configuration file distributed with the software uses `Enabled=False` so it will not result in a database connection.
+This only needs to be done for each major TSTool version (first number in version).
+2. In the user configuration file (`C:/Users/user/.tstool/NN/datastores/HydroBase.cfg`):
+	1. Comment out the `Enabled=False` property or change to `Enabled=True`.
+	2. Edit the `DatabaseName=HydroBase_CO_YYYYMMDD` property to match the HydroBase version that has been installed with
+	HydroBase Database Manager tool.
+	The connection to this database will be made automatically when TSTool starts.
+	If the configuration is incorrect, see ***View / Datastores*** for troubleshooting information.
+	This connection is independent of the HydroBase selector dialog shown at startup.
+	Use the HydroBase selector to list HydroBase names that are available.
+	See also the [Datastore Configuration File](#datastore-configuration-file) section.
+
+The database selected with the HydroBase selector when TSTool starts results
+in a separate database connection using the `cdss` login (HydroBase logins are explained below) and is listed as an ***Input type***.
+Commands such as `ReadHydroBase` and time series identifiers ending in `~HydroBase` will first
+search for a datastore named `HydroBase` and if not found will use the database connection
+from the selector dialog (input type).
+Consequently, a `HydroBase` datastore will take precedence over the database connection
+from the interactive HydroBase selection at TSTool startup.
+
+Technical issues with fully moving to datastore include how to change the traditional HydroBase
+login dialog and implement best practices for naming datastores when dealing with dated versions of HydroBase.
+
+The HydroBase database contains stored procedures and views suitable for the following users (accounts):
+
+* **CDSS user** (SQL Server login `cdss`, password `cdss%tools`) - is a service account that exposes
+HydroBase data through stored procedures and views appropriate for decision support system projects.
+HydroBase CDSS view names have the prefix `vw_CDSS` (e.g., structures are in a view or table `vw_CDSS_Structure`).
+This is the default account when using the HydroBase datastore.
+* **HBGuest user** (SQL Server login `HBGuest`, password `1HBGuest`) - 
+is a read-only service account that exposes HydroBase data through stored procedures
+and views appropriate for general database users.
+HydroBase HBGuest view names do not have the prefix `vw_CDSS` (e.g., structures are in a view or table `structure`).
+See the [HBGuest User Manual](http://www.dwr.state.co.us/HBGuest/Documents/ColoradoHBGuestWebService.pdf)
+for an overview of HBGuest configuration and database access.
+
+A general rule of thumb is that the CDSS account should be used for full TSTool functionality;
+however, the HBGuest account can be used to query views that are not available via the
+CDSS account (e.g., the `vw_HBGuest_StructureAssocWDID` table provides
+information about augmentation plans and other structure groups).
+
+TSTool connections for the above HydroBase accounts can be figured in several ways.
+Refer to the recommended approach at the top of this section and details in the
+[Datastore Configuration File](#datastore-configuration-file) section.
+
+* CDSS user:
+	+ Configure as the HydroBase “input type”.
+	This is the default legacy behavior when HydroBase is enabled,
+	and relies on the user selecting a HydroBase database via the HydroBase selection dialog.
+	This approach may be phased out in the future in favor of the more generic datastore approach.
+	+ Configure a HydroBase CDSS datastore using a HydroBase datastore configuration file.
+	If the datastore name is configured as “HydroBase”,
+	this connection will supersede the “input type” when encountered in time series identifiers.
+	The account will default to the CDSS service account.
+	An example configuration file is shown in the [Datastore Configuration File](#datastore-configuration-file) section below.
+	+ Configure a HydroBase CDSS datastore using a configuration file with an ODBC DSN.
+	In this case, the ODBC DSN must be configured using a SQL Server driver
+	with login `cdss` and password `cdss%tools`.
+	An example configuration file is shown in the [Datastore Configuration File](#datastore-configuration-file) section below.
+* HBGuest user:
+	+ Configure a Generic Database datastore using a HydroBase datastore configuration file.
+	See the [Datastore Configuration File](#datastore-configuration-file) section below).
+	This approach may be needed if the ODBC DSN configuration (next item) results in errors,
+	and the text configuration file may be more transparent than the ODBC DSN.
+	+ Configure a HydroBase datastore using a configuration file with an ODBC DSN.
+	In this case, the ODBC DSN must be configured using a SQL Server
+	driver with login HBGuest and password 1HBGuest.
+	See the example for the CDSS account in the [Datastore Configuration File](#datastore-configuration-file) section below.
 
 ## Standard Time Series Properties ##
 
@@ -223,16 +259,19 @@ Users much understand how to interpret the data, in particular when changing the
 
 ## Datastore Configuration File ##
 
-A datastore is configured by enabling HydroBase datastores in the main `TSTool.cfg` configuration
+A datastore is configured by enabling HydroBase features in the main `TSTool.cfg` configuration
 file and creating a datastore configuration file for each connection.
 Configurations are processed at software startup to enable datastores.
 An example of the TSTool configuration file is shown below.
+Use the `HydroBaseEnabled` property to enable/disable HydroBase features in TSTool,
+such as commands shown in interface menus.
 Multiple datastores can be configured.
 Properties for each datastore are specified in an
 accompanying configuration file described after the following example.
 
 ```
 # Configuration file for TSTool
+
 [TSTool]
 
 HydroBaseEnabled = true
@@ -241,14 +280,14 @@ HydroBaseEnabled = true
 TSTool Configuration File with HydroBase Properties
 </p>**
 
-### HydroBase CDSS Account (No ODBC DSN) ###
+### HydroBase Datastore Using CDSS Account ###
 
 The following illustrates the HydroBase datastore configuration file format
-for the CDSS account NOT using an ODBC DSN.
+for the CDSS account.
 The configuration file is typically named as follows:
 
-* `C:\CDSS\TSTool-Version\datastores\HydroBase.cfg` - default configuration
-* `C:\Users\user\.tstool\datastores\HydroBase.cfg` - user's HydroBase configuration, depending on local HydroBase installation
+* `C:\CDSS\TSTool-Version\datastores\HydroBase.cfg` - installation HydroBase datastore configuration
+* `C:\Users\user\.tstool\NN\datastores\HydroBase.cfg` - user's HydroBase datastore configuration
 
 The default `cdss` service account is used for authentication and allows read-only access to the database.
 
@@ -287,7 +326,7 @@ DatabaseName = "HydroBase_CO_20120722"
 HydroBase Datastore Configuration File for Default CDSS Account (no ODBC DSN)
 </p>**
 
-### HydroBase CDSS Account Using ODBC DSN ###
+### HydroBase Datastore Using CDSS Account and ODBC DSN ###
 
 The following illustrates the HydroBase datastore configuration file format for the CDSS account using an ODBC DSN.
 The configuration file is located in the same folder as the TSTool configuration file and
@@ -346,7 +385,7 @@ See the following for background.  <a href="../mars-regedit.png">See also the fu
 ![mars-regedit](mars-regedit.png)
 </p>**
 
-### HydroBase HBGuest Account using Generic Database Datastore (No ODBC DSN) ###
+### HydroBase Datastore Using HBGuest Account and Generic Database Datastore ###
 
 The following illustrates the Generic Database datastore configuration file format
 for the HBGuest account NOT using an ODBC DSN (see also the [Generic Database Datastore appendix](../GenericDatabase/GenericDatabase.md).
@@ -403,7 +442,7 @@ HydroBase Connection Errors and Possible Solutions
 
 |**Error**|**Possible solutions**|
 |--|--|
-|A HydroBase datastore configuration generates errors.|<ol><li>Verify that the configuration information specified in the HydroBase datastore configuration file is correct by using another tool to connect to the database:<ol><li>Sequel Server Management Studio (SSMS)</li><li>Create an Open Database Connectivity Data Source Name (ODBC DSN).</li><li>Use a database tools such as [SQuirreL](http://squirrel-sql.sourceforge.net/).</li></ol><li>If the DatabaseServer has been specified with an instance name (e.g., `ServerName\CDSS`, then the server computer (even if the local computer) must be running the SQL Server Browser process.  Otherwise, the port number cannot be determined from the instance name.  The SQL Server Browser process is started as a service under ***Windows Control Panel / Administrative Tools / Services***.  Locate the ***Sql Server Browser*** entry, edit its properties, and set the ***Startup type*** to ***Automatic*** and press ***Start*** to start the service.  You must have administrator privileges to make this change.</li></ol>|
+|A HydroBase datastore configuration generates errors.|<ol><li>Use the ***View / Datastores*** menu to display datastore information, including configuration error and location of configuration file.  Resolve issues based on provided information.</li><li>If the DatabaseServer has been specified with an instance name (e.g., `ServerName\CDSS`, then the server computer (even if the local computer) must be running the SQL Server Browser process.  Otherwise, the port number cannot be determined from the instance name.  The SQL Server Browser process is started as a service under ***Windows Control Panel / Administrative Tools / Services***.  Locate the ***Sql Server Browser*** entry, edit its properties, and set the ***Startup type*** to ***Automatic*** and press ***Start*** to start the service.  You must have administrator privileges to make this change.</li><li>Verify that the configuration information specified in the HydroBase datastore configuration file is correct by using another tool to connect to the database:<ol><li>Sequel Server Management Studio (SSMS)</li><li>Create an Open Database Connectivity Data Source Name (ODBC DSN).</li><li>Use a database tools such as [SQuirreL](http://squirrel-sql.sourceforge.net/).</li></ol></ol>|
 |A specific requested time series is not returned from the HydroBase database.|Time series in HydroBase are associated with the data source (e.g., `USGS`).  These data source abbreviations or their handling by software may have changed over time and a data source in a time series identifier may not be valid.  Current software requires the data source for HydroBase time series, if a data source is used with the data type in HydroBase.  Try interactively querying the time series to see if the data source has changed.|
 
 ## Available Time Series by Data Type Categories ##

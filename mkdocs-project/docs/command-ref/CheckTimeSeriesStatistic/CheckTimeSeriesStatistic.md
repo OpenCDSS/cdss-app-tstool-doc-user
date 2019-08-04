@@ -11,7 +11,7 @@
 
 ## Overview ##
 
-The CheckTimeSeriesStatistic() command checks a time series statistic against criteria,
+The `CheckTimeSeriesStatistic` command checks a time series statistic against criteria,
 for example to perform quality control using full-period statistics.
 This command is essentially a combination of the
 [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md)
@@ -26,7 +26,9 @@ The [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile.md) command can be used 
 The following dialog is used to edit the command and illustrates the command syntax,
 in this case to check for time series that have >= 5% missing data values.
 
+**<p style="text-align: center;">
 ![CheckTimeSeriesStatistic](CheckTimeSeriesStatistic.png)
+</p>**
 
 **<p style="text-align: center;">
 `CheckTimeSeriesStatistic` Command Editor for Statistic Parameters (<a href="../CheckTimeSeriesStatistic.png">see also the full-size image</a>)
@@ -35,7 +37,9 @@ in this case to check for time series that have >= 5% missing data values.
 The following parameters will output the location part of the TSID to a
 column named TSID and the missing percentage to a column named `MissingPercent` in the output table named `Table1`.
 
+**<p style="text-align: center;">
 ![CheckTimeSeriesStatistic Output](CheckTimeSeriesStatistic_Output.png)
+</p>**
 
 **<p style="text-align: center;">
 `CheckTimeSeriesStatistic` Command Editor for Output Parameters (<a href="../CheckTimeSeriesStatistic_Output.png">see also the full-size image</a>)
@@ -44,7 +48,9 @@ column named TSID and the missing percentage to a column named `MissingPercent` 
 The percentage of missing values is then checked to see if `>= 10` and if so the command will
 fail and the time series will have a property set `MissingPercentCheck=Fail`.
 
+**<p style="text-align: center;">
 ![CheckTimeSeriesStatistic Criteria](CheckTimeSeriesStatistic_Criteria.png)
+</p>**
 
 **<p style="text-align: center;">
 `CheckTimeSeriesStatistic` Command Editor for Criteria and Action Parameters (<a href="../CheckTimeSeriesStatistic_Output.png">see also the full-size image</a>)
@@ -92,7 +98,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md)
+* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
 * [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
 * [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
 * [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile.md) command

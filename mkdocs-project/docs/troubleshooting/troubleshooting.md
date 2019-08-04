@@ -35,6 +35,7 @@ finding information on a troubleshooting topic.**
 	+ [Issue 10 - Unexpected failure](#issue-10-unexpected-failure)
 	+ [Issue 11 - TSTool text (fonts) are small](#issue-11-tstool-text-fonts-are-small)
 	+ [Issue 12 - Datastore is (not) available](#issue-12-datastore-is-not-available)
+	+ [Issue 13 - Slow startup](#issue-13-slow-startup)
 * [Obsolete Commands](#obsolete-commands)
 
 ------------------
@@ -712,6 +713,37 @@ Note that this is separate from the HydroBase ***Input Type***, which is configu
 from the login dialog shown when TSTool starts.
 A unified HydroBase datastore and input type will be implemented in the future.
 Use the ***View / Datastores*** menu to check the datastore status and configuration errors.
+
+## Issue 13 - Slow Startup ##
+
+**Scope** – any version
+
+**Behavior** – TSTool starts slowly and shows the message ***Wait...initializing data connections...*** for longer than desired
+
+**Possible Causes** – The following are possible causes
+
+1. TSTool is distributed with a number of datastores configured, which access databases and web services.
+In some cases, such as for the State of Colorado, a number of datastores have been made obsolete.
+However, TSTool software updates may lag and during this time the software may repeatedly attempt
+to connect to a datastore that is unavailable, causing slow startup.
+Old configurations may also need to be updated.
+2. One or more datastores are misconfigured and TSTool attempts repeatedly to connect,
+again causing slow startup.
+
+**Possible Solution** - The following is an approach to troubleshooting.
+
+1. Use the ***View / Datastores*** menu to list datastores that are enabled.
+Errors with datastores should be highlighted in yellow and an error message will be shown.
+Often the error is due to a typo in configuration information.
+2. Use the ***Tools / View Log File*** menus to view log file messages.
+Search for `Exception`, `Error`, `Warning`, etc. to see additional information.
+3. Based on the above information remove datastore configuration files or use the `Enabled=False` property in
+datastore configuration files to disable.
+Also remove or disable datastores that are not needed.
+4. It may also be necessary to disable datastores and input types that are distributed with the software
+but may not be relevant.  For example TSTool was developed for the State of Colorado and defaults to having
+HydroBase database being enabled.  However, a HydroBase database may not be available.
+In this case, to disable, edit the `TSTool.cfg` file and set `HydroBaseEnabled=False`.
 
 ## Obsolete Commands ##
 
