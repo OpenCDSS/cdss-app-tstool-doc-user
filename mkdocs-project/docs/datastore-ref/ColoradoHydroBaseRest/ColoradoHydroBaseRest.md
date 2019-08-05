@@ -127,6 +127,10 @@ are being read from the ColoradoHydroBaseRest web service.
 
 The following limitations of the web service may impact users of the data.
 
+* The REST web services are under development and enhancements continue to be made
+as services are integrated with CDSS software tools.
+See the [repository issues](https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-rest-java/issues) for more information,
+although additional issues may exist.
 * Data type – The goal of the datastore is to provide access to all time series
 that are available in HydroBase.  However, data access is limited by features of the
 web services.
@@ -144,6 +148,7 @@ currently may not available from the web service.
 This information will be displayed as blank in the time series listing.
 Additional data will be added as web services are enhanced.
 * Water Classes - The REST web services provide water classes using new diversion coding.
+The same functionality is not yet implemented in HydroBase direct database connection.
 * Roundoff – a comparison of data values read directly from HydroBase and from the web
 service may show very slight differences when values are rounded.
 This is due to numbers being read and formatted during processing.  The differences should not be large enough to significantly impact final results.
@@ -204,7 +209,7 @@ List of ColoradoHydroBaseRest Time Series Compared to Previous ColoradoWaterSMS 
 
 |**ColoradoWaterSMS web service data type**|**Available in ColoradoHydroBaseREST web service?**|**Comments**|
 |--|--|--|
-|Any (`DISCHRG`)|Yes|Implemented using telemetry station web services.|
+|Any (for example `DISCHRG`)|Yes|Implemented using telemetry station web services.|
 
 ## Datastore Configuration File ##
 
@@ -259,9 +264,9 @@ Enabled = True
 Type = "ColoradoHydroBaseRestDataStore"
 Name = "HydroBaseWeb"
 Description = "Colorado HydroBase REST Web Service"
-ServiceRootURI = "https://dwr.state.co.us/Rest/GET/api/v2"
+ServiceRootURI = "https://dwr.state.co.us/rest/get/api/v2"
 ApiKey = "thekey..."
-ServiceApiDocumentationUri = "https://dwr.state.co.us/Rest/GET/Help"
+ServiceApiDocumentationUri = "https://dwr.state.co.us/rest/get/help"
 ```
 
 **<p style="text-align: center;">

@@ -4,14 +4,16 @@
 
 ----------
 
-## Changes in Versions 13.00.00 - 13.00.01##
+## Changes in Versions 13.00.00 - 13.01.00 ##
 
 * ![remove](remove.png) [13.00.00] Remove RiversideDB datastore built-in features.
 The features can be added later as a plugin if necessary.
+* ![bug](bug.png) [13.01.00] Fix bug where highlighting line on graph by clicking on legend was not working.
 * ![bug](bug.png) [13.00.00] Fix bug where StateMod binary files over 2GB could not be read.
 * ![bug](bug.png) [13.00.00] Fix bug to allow StateMod time series to have up to 1500 years
 in `*.xop` time series files, to support climate change modeling.
 * ![change](change.png) [13.01.00] Improve datastore information for HydroBase to facilitate troubleshooting.
+* ![change](change.png) [13.01.00] Finish converting Word documentation to online format for remaining commands and datastores.
 * ![change](change.png) [13.00.00] Enable open source licenses for software and documentation.
 * ![change](change.png) [13.00.00] Migrate to new configuration folders:
 	+ Installation files now include `datastores` and `plugins` folders, consistent with user files.
@@ -24,7 +26,7 @@ datastores because the services are no longer available from the State of Colora
 * ![change](change.png) [13.00.00] Improve
 [`ColoradoHydroBaseRest` web services](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) features:
 	+ Display additional information in the time series list.
-	+ The query period has been enabled for all time series.
+	+ The query period has been enabled for all supported time series data types.
 	+ Time series properties are set for station, structure, and other object data.
 	+ The `dataUrl` property is set to allow accessing data on the website.
 * ![change](change.png) [13.00.00] Enhance the
