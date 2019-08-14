@@ -636,7 +636,7 @@ except for the indicated commands (blank indicates has been migrated)
 |[`ReadMODSIM`](ReadMODSIM/ReadMODSIM.md)                                                                        |Read time series from [MODSIM model file](../datastore-ref/MODSIM/MODSIM.md).|||
 |[`ReadNrcsAwdb`](ReadNrcsAwdb/ReadNrcsAwdb.md)                                                                  |Read time series from [NRCS AWDB web services](../datastore-ref/NRCS-AWDB/NRCS-AWDB.md)|||
 |[`ReadNwsCard`](ReadNwsCard/ReadNwsCard.md)                                                                     |Read time series from [NWS Card file](../datastore-ref/NWSCard/NWSCard.md)|||
-|[`ReadNwsrfsEspTraceEnsemble`](ReadNwsrfsEspTraceEnsemble/ReadNwsrfsEspTraceEnsemble.md)                        |Read time series from [NWSRFS ESP trace ensemble file](../NWSRFSEspTraceEnsemble/NWSRFSEspTraceEnsemble.md)|||
+|[`ReadNwsrfsEspTraceEnsemble`](ReadNwsrfsEspTraceEnsemble/ReadNwsrfsEspTraceEnsemble.md)                        |Read time series from [NWSRFS ESP trace ensemble file](../datastore-ref/NWSRFSEspTraceEnsemble/NWSRFSEspTraceEnsemble.md)|||
 |[`ReadNwsrfsFS5Files`](ReadNwsrfsFS5Files/ReadNwsrfsFS5Files.md)                                                |Read time series from [NWSRFS FS5 Files](../datastore-ref/NWSRFS-FS5Files/NWSRFS-FS5Files.md)|||
 |[`ReadPatternFile`](ReadPatternFile/ReadPatternFile.md)                                                         |Read time series used by [`ReadPatternFile`](ReadPatternFile/ReadPatternFile.md)|||
 |[`ReadPropertiesFromExcel`](ReadPropertiesFromExcel/ReadPropertiesFromExcel.md)                                 |Read processor properties from Excel.|||
