@@ -1,13 +1,26 @@
 # TSTool / Release Notes / Version 13 #
 
+* [Changes in Version 13.02.00](#changes-in-version-130200)
 * [Changes in Version 13.00.00 - 13.01.00](#changes-in-version-130000-130100)
 
 ----------
+
+## Changes in Versions 13.02.00 ##
+
+* ![change](change.png) [13.02.00] The table ***Manipulate Table Values*** command menu has been resorted to facilitate use,
+with commands grouped by column, row, and other manipulation functionality.
+* ![change](change.png) [13.02.00] The [`AppendTable`](../command-ref/AppendTable/AppendTable.md) command
+has been updated with new `ColumnData` parameter to set constant data on appended rows.
+* ![change](change.png) [13.02.00] The [`DeleteTableColumns`](../command-ref/DeleteTableColumns/DeleteTableColumns.md) command
+has been updated with new `KeepColumns` parameter to streamline indicating which columns should be deleted.
+* ![change](change.png) [13.02.00] The [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command
+has been updated with new `Condition` parameter to filter which rows are deleted.
 
 ## Changes in Versions 13.00.00 - 13.01.00 ##
 
 * ![remove](remove.png) [13.00.00] Remove RiversideDB datastore built-in features.
 The features can be added later as a plugin if necessary.
+* ![bug](bug.png) [13.01.01] Fix bug where ***Find Command(s)*** popup menu was not working.
 * ![bug](bug.png) [13.01.00] Fix bug where highlighting line on graph by clicking on legend was not working.
 * ![bug](bug.png) [13.00.00] Fix bug where StateMod binary files over 2GB could not be read.
 * ![bug](bug.png) [13.00.00] Fix bug to allow StateMod time series to have up to 1500 years

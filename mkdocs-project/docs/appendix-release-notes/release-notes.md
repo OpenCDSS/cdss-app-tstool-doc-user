@@ -76,6 +76,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[13.02.00](release-notes-13.md)|Improve table processing commands.|2019-08-12|
 |[13.01.00](release-notes-13.md)|Improve troubleshooting feedback for HydroBase datastore configuration, streamline Linux installer.|2019-08-04|
 |[13.00.00](release-notes-13.md)|First major release with OpenCDSS open source license.|2019-07-12|
 |[12.07.00](release-notes-12.md)|Improve plugin datastore support. |2018-09-19|
