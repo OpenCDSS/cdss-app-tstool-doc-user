@@ -23,7 +23,9 @@ The functionality of the command is similar to database SQL join statements usin
 The following dialog is used to edit the command and illustrates the syntax of the command
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
 
+**<p style="text-align: center;">
 ![JoinTables](JoinTables.png)
+</p>**
 
 **<p style="text-align: center;">
 `JoinTables` Command Editor (<a href="../JoinTables.png">see also the full-size image</a>)

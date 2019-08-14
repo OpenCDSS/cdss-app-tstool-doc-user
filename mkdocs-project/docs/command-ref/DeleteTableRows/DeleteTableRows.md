@@ -11,16 +11,26 @@
 
 ## Overview ##
 
-The `DeleteTableRows` command deletes a specified row from a table.
+The `DeleteTableRows` command deletes specified rows from a table.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
-![DeleteTableRows](DeleteTableRows.png)
+**<p style="text-align: center;">
+![DeleteTableRows_Condition](DeleteTableRows_Condition.png)
+</p>**
 
 **<p style="text-align: center;">
-`DeleteTableRows` Command Editor (<a href="../DeleteTableRows.png">see also the full-size image</a>)
+`DeleteTableRows` Command Editor for Condition Parameter (<a href="../DeleteTableRows_Condition.png">see also the full-size image</a>)
+</p>**
+
+**<p style="text-align: center;">
+![DeleteTableRows_RowNum](DeleteTableRows_RowNum.png)
+</p>**
+
+**<p style="text-align: center;">
+`DeleteTableRows` Command Editor for Row Number Parameter (<a href="../DeleteTableRows_RowNum.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -37,7 +47,28 @@ Command Parameters
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 |`TableID`<br>**required**|The table identifier for the table to process. Can specify with `${Property}`.|None - must be specified.|
-|`DeleteRowNumbers`<br>**required**|The row number (1+) or last to delete the last row. Can use `${Property}` to specify row number.|None - must be specified.|
+|`Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information below.|Condition or row number must be specified.|
+|`DeleteRowNumbers`|The row number (1+) or last to delete the last row. Can use `${Property}` to specify row number.|Condition or row number must be specified.|
+
+The `Condition` parameter, if specified, is restricted to a simple comparison:
+
+```
+ColumnName operator Value
+```
+
+The values can be integers, floating point numbers, strings, or processor properties
+specified with `${Property}` that
+evaluate to primitive types. The operator is one of the following (more functionality will be added in the
+future). For strings, A is less than Z, etc.
+
+* `<`
+* `<=`
+* `>`
+* `>=`
+* `==` (use this to test equality – do not use a single equal sign)
+* `!=`
+* `contains` (only for string comparison)
+* `!contains` (only for string comparison)
 
 ## Examples ##
 
