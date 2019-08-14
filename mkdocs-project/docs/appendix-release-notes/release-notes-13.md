@@ -15,6 +15,7 @@ has been updated with new `ColumnData` parameter to set constant data on appende
 has been updated with new `KeepColumns` parameter to streamline indicating which columns should be deleted.
 * ![change](change.png) [13.02.00] The [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command
 has been updated with new `Condition` parameter to filter which rows are deleted.
+* ![new](new.png) [13.02.00] Add [`RenameTableColumns`](../command-ref/RenameTableColumns/RenameTableColumns.md) command.
 
 ## Changes in Versions 13.00.00 - 13.01.00 ##
 
