@@ -69,6 +69,7 @@ future). For strings, A is less than Z, etc.
 * `!=`
 * `contains` (only for string comparison)
 * `!contains` (only for string comparison)
+* `isempty` (only for string comparison, and does not require `Value` in condition)
 
 ## Examples ##
 
