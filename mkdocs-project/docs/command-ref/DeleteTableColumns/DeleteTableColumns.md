@@ -12,12 +12,16 @@
 ## Overview ##
 
 The `DeleteTableColumns` deletes specified columns from a table.
+The list of column names to delete is is determined from the `DeleteColumns` parameter,
+except that any columns specified by the `KeepColumns` are not deleted.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![DeleteTableColumns](DeleteTableColumns.png)
+</p>**
 
 **<p style="text-align: center;">
 `DeleteTableColumns` Command Editor (<a href="../DeleteTableColumns.png">see also the full-size image</a>)
@@ -37,7 +41,8 @@ Command Parameters
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 |`TableID`<br>**required**|The table identifier for the table to process. Can specify with `${Property}`.|None - must be specified.|
-|`DeleteRowNumbers`<br>**required**|The names of columns to delete, separated by commas. Can use `${Property}` to specify column names.|None - must be specified.|
+|`KeepColumns`<br>**required**|The names of columns to keep, separated by commas. Can use `${Property}` to specify column names.  Each column name can also contain `*` wildcard.|None - must be specified.|
+|`DeleteColumns`<br>**required**|The names of columns to delete, separated by commas. Can use `${Property}` to specify column names.  Each column name can also contain `*` wildcard.|None - must be specified.|
 
 ## Examples ##
 
@@ -67,3 +72,4 @@ DeleteTableColumns(TableID="Table1",DeleteColumns="double1,integer1")
 
 * [`DeleteTableRows`](../DeleteTableRows/DeleteTableRows.md) command
 * [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+* [`RenameTableColumns`](../RenameTableColumns/RenameTableColumns.md) command
