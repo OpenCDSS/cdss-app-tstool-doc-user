@@ -11,7 +11,7 @@
 
 ## Overview ##
 
-The `RunSql` command executes a Structured Query Language (SQL) statement on the specified database datastore.
+The `RunSql` command executes a Structured Query Language (SQL) statement or procedure/function on the specified database datastore.
 This command cannot be used with web service datastores because the
 underlying software relies on a database to execute the SQL statement.
 If database datastore support is not specifically provided by TSTool,
@@ -38,8 +38,9 @@ The SQL statement can be specified in the following ways:
 	+ Similar to the above option; however, the SQL statement is read from a file.
 	+ Useful if the SQL statement is also used by other tools.
 * Specify a procedure to run:
-	+ Available procedures are listed and can be selected.
-	+ Currently, only procedures that do not require parameters can be run.
+	+ Available procedures are listed and can be selected
+	+ Procedure parameters, if required, are specified with `ProcedureParameters` parameter.
+	+ Procedure return status, if available, can be saved as a property with `ProcedureReturnProperty` parameter.
 
 General constraints on executing the statement are as follows:
 
@@ -57,7 +58,9 @@ command to process statements that return a result set.
 
 The following dialog is used to edit the command and illustrates the syntax for the command, in this case creating a database index.
 
+**<p style="text-align: center;">
 ![RunSql](RunSql.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunSql` Command Editor (<a href="../RunSql.png">see also the full-size image</a>)
@@ -65,7 +68,9 @@ The following dialog is used to edit the command and illustrates the syntax for 
 
 The following dialog is used to edit the command and illustrates the syntax for the command when using a file to specify the SQL statement.
 
+**<p style="text-align: center;">
 ![RunSql File](RunSql_File.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunSql` Command Editor when Specifying the SQL Statement Using a File (<a href="../RunSql_File.png">see also the full-size image</a>)
@@ -73,7 +78,9 @@ The following dialog is used to edit the command and illustrates the syntax for 
 
 The following dialog is used to edit the command and illustrates the syntax for the command when running a stored procedure.
 
+**<p style="text-align: center;">
 ![RunSql Procedure](RunSql_Procedure.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunSql` Command Editor when Specifying a Stored Procedure to Run (<a href="../RunSql_Procedure.png">see also the full-size image</a>)
@@ -90,12 +97,14 @@ RunSql(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`DataStore`<br>**required**|The name of a database datastore.|None – must be specified.|
 |`Sql`|The SQL statement text that will be executed, optionally using `${Property}` notation to insert processor property values.  If specified, do not specify `SqlFile` or `DataStoreProcedure`.|None.|
 |`SqlFile`|The name of the file containing an SQL statement to execute, optionally using `${Property}` notation in the SQL file contents to insert processor property values.  If specified, do not specify `Sql` or `DataStoreProcedure`.|None.|
-|`DataStoreProcedure`|The name of the database procedure to run.  Currently, only procedures that do not require parameters can be run.  If specified, do not specify `Sql` or `SqlFile`.|None.|
+|`DataStoreProcedure`|The name of the database procedure to run.  If specified, do not specify `Sql` or `SqlFile`.|None.|
+|`ProcedureParameters`|Parameters for procedure/function, in order that is required.  Use the ***Edit*** button to see the list of parameters and their type.||
+|`ProcedureReturnProperty`|Property name for procedure return value.||
 
 ## Examples ##
 

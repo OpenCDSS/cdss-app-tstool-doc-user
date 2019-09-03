@@ -48,7 +48,8 @@ The query can be specified in the following ways:
 	+ Useful if the SQL statement is also used by other tools
 * Specify a procedure to run:
 	+ Available procedures are listed and can be selected
-	+ Currently, only procedures that do not require parameters can be run
+	+ Procedure parameters, if required, are specified with `ProcedureParameters` parameter.
+	+ Procedure return status, if available, can be saved as a property with `ProcedureReturnProperty` parameter.
 
 General constraints on the query are as follows:
 
@@ -71,7 +72,9 @@ Future enhancements will add additional features to intelligently map database r
 The following dialog is used to edit the command and illustrates the syntax for the command,
 in this case reading a small table from the State of Colorado’s HydroBase.
 
+**<p style="text-align: center;">
 ![ReadTableFromDataStore](ReadTableFromDataStore_Table.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableFromDataStore` Command Editor when Querying a Single Table (or View) (<a href="../ReadTableFromDataStore_Table.png">see also the full-size image</a>)
@@ -79,7 +82,9 @@ in this case reading a small table from the State of Colorado’s HydroBase.
 
 The corresponding output table is as shown below:
 
+**<p style="text-align: center;">
 ![ReadTableFromDataStore Results](ReadTableFromDataStore_Results.png)
+</p>**
 
 **<p style="text-align: center;">
 Example `ReadTableFromDataStore` Command Output Table (<a href="../ReadTableFromDataStore_Results.png">see also the full-size image</a>)
@@ -88,7 +93,9 @@ Example `ReadTableFromDataStore` Command Output Table (<a href="../ReadTableFrom
 The following example illustrates using an SQL query string,
 in this case to read diversion records for a specific structure in the State of Colorado’s HydroBase database:
 
+**<p style="text-align: center;">
 ![ReadTableFromDataStore SQL](ReadTableFromDataStore_SQL.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableFromDataStore` Command Editor when Specifying an SQL Query String (<a href="../ReadTableFromDataStore_SQL.png">see also the full-size image</a>)
@@ -96,7 +103,9 @@ in this case to read diversion records for a specific structure in the State of 
 
 The following example illustrates using an SQL file:
 
+**<p style="text-align: center;">
 ![ReadTableFromDataStore SQL File](ReadTableFromDataStore_SQLFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableFromDataStore` Command Editor when Specifying an SQL File (<a href="../ReadTableFromDataStore_SQLFile.png">see also the full-size image.</a>)
@@ -104,7 +113,9 @@ The following example illustrates using an SQL file:
 
 The following example illustrates using a database procedure:
 
+**<p style="text-align: center;">
 ![ReadTableFromDataStore Procedure](ReadTableFromDataStore_Procedure.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableFromDataStore` Command Editor when Specyfing a Procedure (<a href="../ReadTableFromDataStore_Procedure.png">see also the full-size image</a>)
@@ -121,7 +132,7 @@ ReadTableFromDataStore(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Query Method**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|**Query Method**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------------|-----------------|-----------------|----|
 |All|`DataStore`<br>**required**|The name of a database datastore to read.|None – must be specified.|
 |Table/view|`DataStoreTable`|The name of the database table or view to read when querying a single table or view.  If specified, do not specify `Sql` or `SqlFile`.|None.|
@@ -130,7 +141,9 @@ Command Parameters
 |Table/view|`Top`|Indicate that Top rows should be returned.  This functionality may not be implemented for all databases (SQL is not fully standardized for this feature).  This parameter is useful to determine the columns for a table prior to using the `Sql` or `SqlFile` parameters.|Return all rows.|
 |SQL string|`Sql`|The SQL string that will be used to query the database, optionally using `${Property}` notation to insert processor property values.  If specified, do not specify `DataStoreTable` or `SqlFile`.|None.|
 |SQL file|`SqlFile`|The name of the file containing an SQL string to execute, optionally using `${Property}` notation in the SQL file contents to insert processor property values.  If specified, do not specify `DataStoreTable` or `Sql`.|None.|
-|Procedure|`DataStoreProcedure`|The name of the database procedure to run.  Currently, only procedures that do not require parameters can be run.|None.|
+|Procedure|`DataStoreProcedure`|The name of the database procedure to run. |None.|
+|Procedure|`ProcedureParameters`|Parameters for procedure/function, in order that is required.  Use the ***Edit*** button to see the list of parameters and their type.||
+|Procedure|`ProcedureReturnProperty`|Property name for procedure return value.||
 |All|`TableID`<br>**required**|Identifier to assign to the output table in TSTool, which allows the table data to be used with other commands.  A new table will be created.  Can be specified with `${Property}`.|None – must be specified.|
 |All|`RowCountProperty`|The name of the processor property that will be set to the row count, optionally using `${Property}` notation to specify the name.|Property is not set.|
 

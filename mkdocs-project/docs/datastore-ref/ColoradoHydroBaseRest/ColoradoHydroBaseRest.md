@@ -33,6 +33,7 @@ The following time series data types have been enabled in TSTool:
 	+ real-time (see telemetry stations below)
 	+ historical (not yet implemented)
 * structures:
+	+ diversion comments (`DivComment`)
 	+ diversion total (`DivTotal`)
 	+ parcel use time series (not yet implemented)
 	+ release total (`RelTotal`)
@@ -60,9 +61,9 @@ and equivalent in local HydroBase database datastore direct connection.
 | Analysis Services            | Currently none.            | Not currently integrated into TSTool. |
 | Dam Safety                   | Currently none.            | Not currently integrated into TSTool. |
 | Groundwater Geophysical Logs | Currently none.            | Not currently integrated into TSTool. |
-| Groundwater Levels           | See<br><ul><li>***Well - WaterLevelDepth***</li><li>***Well - WaterLevelElev***</li></ul> data type below. | Comparable HydroBase TSIDs are `402930104414301.DWR.WellLevelDepth.Day~ColoradoWaterHBGuest` and `402930104414301.DWR.WellLevelElev.Day~ColoradoWaterHBGuest`.  **Must use point graph to see data points since sparce.**|
+| Groundwater Levels           | See<br><ul><li>***Well - WaterLevelDepth***</li><li>***Well - WaterLevelElev***</li></ul> data type below. | Comparable HydroBase TSIDs are `402930104414301.DWR.WellLevelDepth.Day~HydroBase` and `402930104414301.DWR.WellLevelElev.Day~HydroBase`.  **Must use point graph to see data points since sparce.**|
 | Parcel Use TS                | Need to review.            | Not currently integrated into TSTool, may be implemented in StateDMI software first. |
-| Structures                   | See<br><ul><li>***Structure - DivTotal***</li><li>***Structure - RelTotal***</li><li>***Structure - Stage***</li><li>***Structure - WaterClass***</li><li>***Structure - Volume***</li></ul> data type below.| Comparable HydroBase TSIDs are<ul><li>`0300905.DWR.DivTotal.Month~ColoradoWaterHBGuest`</li><li>`0300503.DWR.DivClass-S:6 F:0300934 U:Q T:0 G:.Month~HydroBase`</li><li>`0303732.DWR.ResMeasElev.Day~HydroBase`</li><li>`0303732.DWR.ResMeasStorage.Day~HydroBase`</li>**Note that web services support new water classes with account and `To` coding.  Any water class that includes periods is enclosed in single quotes.** |
+| Structures                   | See<br><ul><li>***Structure - DivCommment***</li><li>***Structure - DivTotal***</li><li>***Structure - RelTotal***</li><li>***Structure - Stage***</li><li>***Structure - WaterClass***</li><li>***Structure - Volume***</li></ul> data type below.| Comparable HydroBase TSIDs are<ul><li>`0300905.DWR.DivComment.Year~HydroBase`</li><li>`0300905.DWR.DivTotal.Month~HydroBase`</li><li>`0300503.DWR.DivClass-S:6 F:0300934 U:Q T:0 G:.Month~HydroBase`</li><li>`0303732.DWR.ResMeasElev.Day~HydroBase`</li><li>`0303732.DWR.ResMeasStorage.Day~HydroBase`</li>**Note that web services support new water classes with account and `To` coding.  Any water class that includes periods is enclosed in single quotes.** |
 | Telemetry Stations           | See<br>***Telemetry Station - Parameter*** data type below. | Real-time stations (satellite monitoring stations). |
 | Water Rights                 | Currently none.            | Not currently integrated into TSTool.  Could treat water rights as time series to allow accumulation. |
 | Well Permits                 | Currently none.            | Not currently integrated into TSTool. |
@@ -82,11 +83,12 @@ Location.DataSource.DataType.Interval~DataStoreName
 LocType:Location.DataSource.DataType.Interval~DataStoreName
 ```
 
-The standard time series identifier format for ColoradoHydroBaseRest time series is of the form:
+The standard time series identifier format for ColoradoHydroBaseRest time series is of the following form,
+where `HydroBaseWeb` is the default datastore name for HydroBase web services:
 
 ```
-Location.DataSource.DataType.Interval~ColoradoHydroBaseRest
-LocType:Location.DataSource.DataType.Interval~ColoradoHydroBaseRest
+Location.DataSource.DataType.Interval~HydroBaseWeb
+LocType:Location.DataSource.DataType.Interval~HydroBaseWeb
 ```
 
 The meaning of the parts is as follows:
@@ -112,7 +114,7 @@ This avoids ambiguity in interpreting identifiers.
 	which can contain several observations.
 	The additional “Storage” is needed in TSTool to uniquely identify the time series for the specific data type.
 * `Interval` is `Day`, `Month`, or `Year`, as requested, and `15Min` for raw telemetry data.
-* The datastore name (`ColoradoHydroBaseRest` by default) indicates that the data
+* The datastore name (`HydroBaseWeb` by default) indicates that the data
 are being read from the ColoradoHydroBaseRest web service.
 * For structure diversion records, additional zero values are added to facilitate data use, as follows:
 	+ First, the diversion records for the appropriate interval are queried and set in time series
@@ -188,6 +190,7 @@ List of ColoradoHydroBaseRest Time Series Compared to Previous ColoradoWaterHBGu
 |`Climate – VaporPressure`|Not yet||
 |`Climate - Wind`|Not yet||
 |`Structure - DivClass`| Yes | Implemented as `WaterClass`|
+|`Structure - DivComment`| Yes | Implemented as `DivComment` - **web service does not provide acres irrigated, which is what HydroBase version uses for data values** |
 |`Structure - DivTotal`|Yes| Implemented|
 |`Structure - IDivTotal`|Not yet||
 |`Structure - RelTotal`|Yes| Implemented|
