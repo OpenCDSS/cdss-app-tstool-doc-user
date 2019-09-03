@@ -63,7 +63,7 @@ and equivalent in local HydroBase database datastore direct connection.
 | Groundwater Geophysical Logs | Currently none.            | Not currently integrated into TSTool. |
 | Groundwater Levels           | See<br><ul><li>***Well - WaterLevelDepth***</li><li>***Well - WaterLevelElev***</li></ul> data type below. | Comparable HydroBase TSIDs are `402930104414301.DWR.WellLevelDepth.Day~HydroBase` and `402930104414301.DWR.WellLevelElev.Day~HydroBase`.  **Must use point graph to see data points since sparce.**|
 | Parcel Use TS                | Need to review.            | Not currently integrated into TSTool, may be implemented in StateDMI software first. |
-| Structures                   | See<br><ul><li>***Structure - DivCommment***</li><li>***Structure - DivTotal***</li><li>***Structure - RelTotal***</li><li>***Structure - Stage***</li><li>***Structure - WaterClass***</li><li>***Structure - Volume***</li></ul> data type below.| Comparable HydroBase TSIDs are<ul><li>`0300905.DWR.DivComment.Year~HydroBase`</li><li>`0300905.DWR.DivTotal.Month~HydroBase`</li><li>`0300503.DWR.DivClass-S:6 F:0300934 U:Q T:0 G:.Month~HydroBase`</li><li>`0303732.DWR.ResMeasElev.Day~HydroBase`</li><li>`0303732.DWR.ResMeasStorage.Day~HydroBase`</li>**Note that web services support new water classes with account and `To` coding.  Any water class that includes periods is enclosed in single quotes.** |
+| Structures                   | See<br><ul><li>***Structure - DivComment***</li><li>***Structure - DivTotal***</li><li>***Structure - RelTotal***</li><li>***Structure - Stage***</li><li>***Structure - WaterClass***</li><li>***Structure - Volume***</li></ul> data type below.| Comparable HydroBase TSIDs are<ul><li>`0300905.DWR.DivComment.Year~HydroBase`</li><li>`0300905.DWR.DivTotal.Month~HydroBase`</li><li>`0300503.DWR.DivClass-S:6 F:0300934 U:Q T:0 G:.Month~HydroBase`</li><li>`0303732.DWR.ResMeasElev.Day~HydroBase`</li><li>`0303732.DWR.ResMeasStorage.Day~HydroBase`</li>**Note that web services support new water classes with account and `To` coding.  Any water class that includes periods is enclosed in single quotes.** |
 | Telemetry Stations           | See<br>***Telemetry Station - Parameter*** data type below. | Real-time stations (satellite monitoring stations). |
 | Water Rights                 | Currently none.            | Not currently integrated into TSTool.  Could treat water rights as time series to allow accumulation. |
 | Well Permits                 | Currently none.            | Not currently integrated into TSTool. |
@@ -190,7 +190,7 @@ List of ColoradoHydroBaseRest Time Series Compared to Previous ColoradoWaterHBGu
 |`Climate – VaporPressure`|Not yet||
 |`Climate - Wind`|Not yet||
 |`Structure - DivClass`| Yes | Implemented as `WaterClass`|
-|`Structure - DivComment`| Yes | Implemented as `DivComment` - **web service does not provide acres irrigated, which is what HydroBase version uses for data values** |
+|`Structure - DivComment`| Yes | Implemented as `DivComment` - **HydroBase database provided irrigated acres, but this approach was discontinued in 2010 due to significant data quality issues.  Therefore, web services use zero (no diversion) where zeros can be estimated.  Refer to CDSS irrigated acreage values from GIS.** |
 |`Structure - DivTotal`|Yes| Implemented|
 |`Structure - IDivTotal`|Not yet||
 |`Structure - RelTotal`|Yes| Implemented|
