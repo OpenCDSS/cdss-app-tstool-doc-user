@@ -1,6 +1,7 @@
 # TSTool / Command / ReadHydroBase #
 
 * [Overview](#overview)
+	+ [Diversion Records](#diversion-records)
 * [Command Editor](#command-editor)
 * [Command Syntax](#command-syntax)
 * [Examples](#examples)
@@ -38,10 +39,26 @@ These properties can be transferred to a table with the
 [`CopyTimeSeriesPropertiesToTable`](../CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md)
 command and processed further with other table commands.
 
-Time series corresponding to diversion records,
-which also include observations for reservoirs and wells, are handled as follows:
+### Diversion Records ###
 
-1. Daily diversion (`DivTotal` and `DivClass`) and reservoir release (`RelTotal` and `RelClass`)
+Time series corresponding to diversion records,
+which include observations for ditches, reservoirs, wells, and other "structures", are handled as follows:
+
+1. In general, diversion record values correspond to observations and estimates determined by
+the State of Colorado and other entities.
+The accuracy of values is higher for well-maintained measuring devices and
+lower (or less certain) for third-party data submission.
+Diversion records are stored in various forms, based on historical approach and to facilitate
+data collection with limited resources.
+For example, long-term daily records may be available at large diversion structures
+whereas structures that are small and have infrequent diversions may
+have infrequent data records and/or diversion comments.
+Records for smaller interval (e.g., day) are accumulated to larger interval (month and year).
+The observations available in diversion records can be further processed to provide additional
+data values, as described below.
+Diversion records consist of date, value, and flag, which can be viewed in TSTool.
+2. If `FillDivRecordsCarryForward=True` (current default),
+daily diversion (`DivTotal` and `DivClass`) and reservoir release (`RelTotal` and `RelClass`)
 time series have their values automatically carried forward to fill
 data within irrigation years (November to October).
 HydroBase only stores full months of daily diversion record data when non-zero
@@ -49,18 +66,21 @@ observations or non-zero filled values occur in a month.
 Therefore, this filling action should only provide additional zero values
 in an irrigation year where a diversion or release was recorded.
 Irrigation years with no observations remain as missing after the read.
-2. Daily, monthly, and yearly diversion and reservoir release time series
-optionally can be filled by the `ReadHydroBase` command using diversion comments,
-which indicate when irritation years should be treated as missing.
-See the `FillUsingDivComments` parameter below.
-Note that diversion comments should not conflict with more detailed records and provide additional information.
+**This behavior is different from the [`ReadColoradoHydroBaseRest`](../ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command,
+which does not apply this approach by default.**
+3. If `FillUsingDivComments=True`, daily, monthly, and yearly `DivTotal`, `RelTotal`, and `DivClass` time series
+are filled using annual irrigation year (November-October) diversion comments,
+which indicate when irritation years should be treated as additional zero values.
+Diversion comments provide additional information but may not always be consistent with diversion records.
+For example, diversion comments may indicate that a structure did not divert water in a year whereas
+daily and monthly records show diversions in all or some months.
 The separate [`FillUsingDiversionComments`](../FillUsingDiversionComments/FillUsingDiversionComments.md) command also
 is available for filling but may be phased out in the future.
-3. It also may be appropriate to use infrequent data types (`IDivTotal`, `IDivClass`, `IRelTotal`, and `IRelClass`) to supply data;
+4. It also may be appropriate to use infrequent data types (`IDivTotal`, `IDivClass`, `IRelTotal`, and `IRelClass`) to supply data;
 however, because such values typically are annual values,
 additional decisions must be made for how to distribute the values to monthly and daily time series.
 These data, if available, are not automatically folded into the diversion records by TSTool.
-4. See the [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md),
+5. See the [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md),
 [`FillPattern`](../FillPattern/FillPattern.md), and other commands,
 which can be used to fill (estimate) values in data gaps after the initial time series are read.  
 
@@ -74,8 +94,13 @@ This approach is essentially equivalent to using the
 [`FillUsingDiversionComments`](../FillUsingDiversionComments/FillUsingDiversionComments.md),
 which are not available in the more general
 [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command.
+Specifying a TSID can be used for simple data types such as `DivTotal` where the data type matches one time series.
+The `DivClass` data type can match multiple time series and therefore cannot (at this time)
+be queried using a single `TSID`.
 
+**<p style="text-align: center;">
 ![ReadHydroBase TSID](ReadHydroBase_TSID.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadHydroBase` Command Editor to Read a Single Time Series (<a href="../ReadHydroBase_TSID.png">see also the full-size image</a>)
@@ -83,7 +108,9 @@ which are not available in the more general
 
 The following figure illustrates how to query multiple time series.
 
+**<p style="text-align: center;">
 ![ReadHydroBase Multiple](ReadHydroBase_Multiple.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadHydroBase` Command Editor to Read Multiple Time Series (<a href="../ReadHydroBase_Multiple.png">see also the full-size image</a>)
@@ -106,7 +133,7 @@ TS Alias = ReadHydroBase(Parameter=Value,...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`InputName`|The HydroBase database connection input name to use for the database connection, as initialized by the HydroBase login dialog shown when TSTool starts.  When using this approach the TSID will end in `~HydroBase~InputName`.  The input name approach for specifying a HydroBase database connection may be phased out in the future in favor of the datastore approach.|Use the default HydroBase connection.|
 |`DataStore`|The HydroBase datastore name to use for the database connection, as per datastore configuration files (see the [HydroBase Datastore appendix](../../datastore-ref/CO-HydroBase/CO-HydroBase.md).  When using this approach the TSID will end in `~DataStore`.  The datastore approach is being phased in as a more flexible design.  Configuring a datastore with name HydroBase will take precedence over `InputName=HydroBase`.|Use the default (legacy `InputName`) HydroBase connection, if available.|
@@ -117,19 +144,15 @@ Command Parameters
 |`Alias`<br>**required**|The alias to assign to the time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing, as an alternative to the time series identifier (`TSID`).|None – must be specified.|
 |`InputStart`|Start of the period to query, specified as a date/time with a precision that matches the requested data interval.|Read all available data.|
 |`InputEnd`|End of the period to query, specified as a date/time with a precision that matches the requested data interval.|Read all available data.|
+|`FillDivRecordsCarryForward`|Indicate whether to fill daily `DivTotal`, `RelTotal`, and `DivClass` time series using carry forward approach:<ul><li>Irrigation years (November to October) to fill must have at least one value.</li><li>Missing values at the beginning of the irrigation year (November-October) will be filled with zero until the first value is encountered.</li><li>Missing values within the year are filled by carrying forward the last observation.</li><li>Missing values at the end of the year are carried forward, using the last observed value.</li><li>Filled values are flagged with the `FillDivRecordsCarryForwardFlag` value.|`True`|
+|`FillDivRecordsCarryForwardFlag`|Data flag set when values are filled if `FillDivRecordsCarryForward=True` .  The flag can then be used later to label graphs, etc.| `c` |
 |`FillUsingDivComments`|Indicate whether to fill diversion and reservoir release time series using diversion comments.|`False`|
-|`FillUsingDivCommentsFlag`|If specified as a single character, data flags will be enabled for the time series and each filled value will be tagged with the specified character.  The flag can then be used later to label graphs, etc.  The flag will be appended to existing flags if necessary.|No flag is assigned.|
+|`FillUsingDivCommentsFlag`|If specified as a single character, data flags will be enabled for the time series and each filled value will be tagged with the specified character.  The flag can then be used later to label graphs, etc.  The flag will be appended to existing flags if necessary.|"not used" value from diversion comment.|
 |`IfMissing`|Indicate the action to be taken if the requested time series is missing, one of:<ul><li>`Ignore` – ignore the time series (do not warn and the time series will not be available)</li><li>`Warn` – generate a failure for the command</li></ul>|`Warn`|
 
 ## Examples ##
 
 See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadHydroBase).
-
-A sample command file is as follows (read all reservoir releases to structure 0300905):
-
-```text
-ReadHydroBase(DataType="DivClass",Interval="Day",Where1="District;Equals;3",Where2="Structure ID;Equals;905",Where3="SFUT;Contains;s:2")
-```
 
 ## Troubleshooting ##
 
@@ -139,4 +162,5 @@ ReadHydroBase(DataType="DivClass",Interval="Day",Where1="District;Equals;3",Wher
 * [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
 * [`FillPattern`](../FillPattern/FillPattern.md) command
 * [`FillUsingDiversionComments`](../FillUsingDiversionComments/FillUsingDiversionComments.md) command
+* [`ReadColoradoHydroBaseRest`](../ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command
 * [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command
