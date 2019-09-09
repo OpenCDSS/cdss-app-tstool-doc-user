@@ -4,13 +4,9 @@ This reference section of the documentation provides information about TSTool co
 listed in groups consistent with the TSTool software menus.
 If necessary, use the documentation ***Search*** tool or the ***Find*** tool for the
 web browser to find a specific command or topic.
-
-**Reference documentation for commands is being transferred from the original Word versions.
-The current Word "Chapter 4 - Commmands" can likely merge into this page since content
-is just screen shots of menus and overview comments about command groups.
-Refer to the PDF documentation distributed with TSTool and available online if
-documentation is not available below.
-Commands that don't have a description after the name do not have documentation included here.**
+The commands in the **Reference - Commands** section in the table of comments
+are listed alphabetically with several general commands including
+[`TSID`](TSID/TSID.md) listed at the top.
 
 * [Command Syntax Overview](#command-syntax-overview)
 * [Command List](#command-list) - alphabetical list of commands (**is at the end of this section**)

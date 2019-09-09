@@ -13,10 +13,19 @@
 
 A time series identifier (TSID) command reads a single time series.
 This is one of the few TSTool commands that does not follow the `Command(ParameterName=ParameterValue,...)` syntax.
-See also the [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command,
-which provides parameters to control the read,
-and the [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command,
+Time series are read using one of the following commands:
+
+* `TSID` - implicitly reads time series consistent with the datastore or data type specified by the `~datastore`
+at the end of the TSID.
+* [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command,
+which provides general parameters to control the read, such as alias to assign.
+* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command,
 which reads multiple time series given a list of time series in a table.
+* Specific `Read....` command consistent with the TSID, in order to provide controlling parameters
+specific to the datastore.
+For example, the [`ReadColoradoHydroBaseRest`](../ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command
+provides parameters to control filling additional missing values with zeros.
+
 In order to read the time series from a persistent format (database, file, or web site),
 the TSID must contain the datastore name (or input type), and if necessary, the input name.
 For example, a TSID command for the
