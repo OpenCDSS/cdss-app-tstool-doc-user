@@ -24,6 +24,7 @@ set the return status as a property.
 [`ReadColoradoHydroBaseRest`](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md)
 commands have been updated to provide `FillDivRecordsCarryForward` parameter to allow control (rather than default).
 A number of usability issues have also been fixed.
+The `WaterClass` parameter has been added to allow matching a specific water class.
 * ![change](change.png) [13.02.00] The [`ReadColoradoHydroBaseRest`](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md)
 command now reads `DivComment` time series, to facilitate troubleshooting diversion records.
 * ![change](change.png) [13.02.00] The [`StartLog`](../command-ref/StartLog/StartLog.md) command

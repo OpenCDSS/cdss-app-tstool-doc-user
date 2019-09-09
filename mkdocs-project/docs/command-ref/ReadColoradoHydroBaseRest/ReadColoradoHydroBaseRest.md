@@ -16,6 +16,7 @@ The `ReadColoradoHydroBaseRest` command reads one or more time series from the C
 (see the [ColoradoHydroBaseRest Datastore Appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)).
 It is designed to utilize web service query criteria to process large numbers of time series,
 for example for a specific water district and data type.
+The default parameter values match the results of TSID for the datastore.
 Web service queries have slower performance than local database queries used with
 [HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md),
 but do not require local database installation and configuration.
@@ -38,34 +39,40 @@ command and processed further with other table commands.
 ### Diversion Records ###
 
 Time series corresponding to diversion records,
-which include observations for ditches, reservoirs, wells, and other "structures", are handled as follows:
+which include observations for ditches, reservoirs, wells, and other "structures", are handled as follows.
+Note that reading diversion records with TSTool will provide additional zero data values compared
+to directly querying web services on the State of Colorado's website.
+TSTool's behavior is consistent with traditional engineering use of the data.
 
 1. In general, diversion record values correspond to observations and estimates determined by
 the State of Colorado and other entities.
 The accuracy of values is higher for well-maintained measuring devices and
-lower (or less certain) for third-party data submission.
-Diversion records are stored in various forms, based on historical approach and to facilitate
-data collection with limited resources.
+lower (less accurate and possibly unverified) for third-party data submission.
+Diversion records are stored in various forms including daily diversion records and infrequent measurements.
 For example, long-term daily records may be available at large diversion structures
-whereas structures that are small and have infrequent diversions may
-have infrequent data records and/or diversion comments.
+whereas other structures may have infrequent data records and/or annual diversion comments.
 Records for smaller interval (e.g., day) are accumulated to larger interval (month and year).
-The observations available in diversion records can be further processed to provide additional
+The HydroBase observations available in diversion records can be further processed to provide additional
 data values, as described below.
-Diversion records consist of date, value, and flag, which can be viewed in TSTool.
-2. If `FillDivRecordsCarryForward=True`,
+The WaterClass web service indicates `availableIntervals` for diversion records and
+those with only monthly or annual measurements indicate "infrequent" measurements.
+Diversion record observations have `measInterval` that indicates whether the value was
+derived from daily, monthly, or annual data,
+with monthly and annual indicating infrequent measurements.
+Diversion records consist of date, value, and flag (observation code), which can be viewed in TSTool.
+2. If `FillDivRecordsCarryForward=True` (the default),
 daily total diversion (`DivTotal`), daily total reservoir release (`RelTotal`),
-and daily `WaterClass` time series have their values carried forward to fill
-data within irrigation years (November to October).
-This technique has been used when processing data for CDSS modeling.
-Web services by default only return HydroBase diversion record data for observations without additional filling.
+and daily `WaterClass` time series have their values carried forward to fill additional zero
+data values within irrigation years (November to October).
 The Division of Water Resources does implement some data filling by carrying forward non-zero daily values,
 indicated with corresponding data flags.
+In practice, it is common to interpret diversion records by filling in additional zeros and TSTool automates this approach.
+This technique has been used when processing data for CDSS modeling.
+Web services by default only return HydroBase diversion record data for observations without additional zero-filling.
 Therefore, this filling action should only provide additional zero values
 in an irrigation year where a diversion or release was recorded sometime in the year.
 Irrigation years with no observations remain as missing after the read.
-**This optional behavior is different from the [`ReadHydroBase`](../ReadHydroBase/ReadHydroBase.md) command,
-which currently applies this approach by default.**
+**The default behavior is the same as the [`ReadHydroBase`](../ReadHydroBase/ReadHydroBase.md) command.**
 3.  If `FillUsingDivComments=True`, daily, monthly, and yearly `DivTotal`, `RelTotal`, and `WaterClass` time series
 are filled using annual irrigation year (November-October) diversion comments,
 which indicate when irritation years should be treated as additional zero values.
@@ -74,11 +81,7 @@ For example, diversion comments may indicate that a structure did not divert wat
 daily and monthly records show diversions in all or some months.
 The separate [`FillUsingDiversionComments`](../FillUsingDiversionComments/FillUsingDiversionComments.md) command also
 is available for filling but may be phased out in the future.
-4. It also may be appropriate to use infrequent diversion data records.
-However, because such values typically are annual values,
-additional decisions must be made for how to distribute the values to monthly and daily time series.
-These data, if available, are not automatically folded into the diversion records by TSTool.
-5. See the [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md),
+4. See the [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md),
 [`FillPattern`](../FillPattern/FillPattern.md), and other commands,
 which can be used to fill (estimate) values in data gaps after the initial time series are read.  
 
@@ -90,8 +93,8 @@ The following example illustrates how to read a single time series by specifying
 This approach is essentially equivalent to using the
 [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command but offers parameters specific to HydroBase web services.
 Specifying a TSID can be used for simple data types such as `DivTotal` where the data type matches one time series.
-The `WaterClass` data type can match multiple time series and therefore cannot (at this time)
-be queried using a single `TSID`.
+The `WaterClass` data type can match multiple time series and therefore requires that the `WaterClass`
+parameter is specified if a single time series should be matched.
 
 **<p style="text-align: center;">
 ![ReadColoradoHydroBaseRest TSID](ReadColoradoHydroBaseRest_TSID.png)
@@ -101,7 +104,8 @@ be queried using a single `TSID`.
 `ReadColoradoHydroBaseRest` Command Editor to Read a Single Time Series (<a href="../ReadColoradoHydroBaseRest_TSID.png">see also the full-size image)</a>
 </p>**
 
-The following figure illustrates how to query multiple time series.
+The following figure illustrates how to query multiple time series,
+in this case all available water class time series for the specified structure WDID.
 
 **<p style="text-align: center;">
 ![ReadColoradoHydroBase Multiple](ReadColoradoHydroBaseRest_Multiple.png)
@@ -125,15 +129,16 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`DataStore`|The ColoradoHydroBaseRest datastore name to use for the database connection, as per datastore configuration files (see the [ColoradoHydroBaseRest Datastore appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)).  When using this approach the TSID will end in `~ColoradoHydroBaseRest`.|
+|`DataStore`<br>**required**|The ColoradoHydroBaseRest datastore name to use for the database connection, as per datastore configuration files (see the [ColoradoHydroBaseRest Datastore appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)).  When using this approach the TSID will end in `~ColoradoHydroBaseRest`.| None - must be specified. |
 |`DataType`<br>**required**|The data type to be queried, as documented in the [ColoradoHydroBaseRest Datastore appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md).|None – must be specified.|
+|`WaterClass`|The water class if only a single water class should be returned, used when `DataType=WaterClass`.  Specify as the full string including leading WDID as returned when querying all water classes, for example:  `0300909 S:2 F:0303732 U:Q T:7 G: To:`. | All matching water classes. |
 |`Interval`<br>**required**|The data interval for the time series, as documented in the [ColoradoHydroBaseRest Datastore appendix](../../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) (e.g. `Day`, `Month`, `Year`), consistent with the `DataType` selection.|None – must be specified.|
 |`TSID`|When reading a single time series, the time series identifier to read.  If specified, this parameter will override the `WhereN` parameters.|Use `WhereN` parameters to read multiple time series.|
 |`WhereN`|When reading 1+ time series, the “where” clauses to be applied.  The filters match the values in the Where fields in the command editor dialog and the TSTool main interface.  The parameters should be named `Where1`, `Where2`, etc., with a gap resulting in the remaining items being ignored.  The format of each value is:<br>`Item;Operator;Value`<br>Where `Item` indicates a data field to be filtered on, `Operator` is the type of constraint, and `Value` is the value to be checked when querying.|If not specified, the query will not be limited and very large numbers of time series may be queried.|
 |`Alias`<br>|The alias to assign to the time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing, as an alternative to the time series identifier (`TSID`).|None – alias not assigned.|
 |`InputStart`|Start of the period to query, specified as a date/time with a precision that matches the requested data interval.|Read all available data.|
 |`InputEnd`|End of the period to query, specified as a date/time with a precision that matches the requested data interval.|Read all available data.|
-|`FillDivRecordsCarryForward`|Indicate whether to fill daily `DivTotal`, `RelTotal`, and `WaterClass` time series using carry forward approach:<ul><li>Irrigation years (November to October) to fill must have at least one value.</li><li>Missing values at the beginning of the irrigation year (November-October) will be filled with zero until the first value is encountered.</li><li>Missing values within the year are filled by carrying forward the last observation.</li><li>Missing values at the end of the year are carried forward, using the last observed value.</li><li>Filled values are flagged with the `FillDivRecordsCarryForwardFlag` value.|`False`|
+|`FillDivRecordsCarryForward`|Indicate whether to fill daily `DivTotal`, `RelTotal`, and `WaterClass` time series using carry forward approach:<ul><li>Irrigation years (November to October) to fill must have at least one value.</li><li>Missing values at the beginning of the irrigation year (November-October) will be filled with zero until the first value is encountered.</li><li>Missing values within the year are filled by carrying forward the last observation - **only zero value is carried forward.**.</li><li>Missing values at the end of the year are carried forward, using the last observed value - **only zero value is carried forward.**.</li><li>Filled values are flagged with the `FillDivRecordsCarryForwardFlag` value.|`True`|
 |`FillDivRecordsCarryForwardFlag`|Data flag set when values are filled if `FillDivRecordsCarryForward=True` .  The flag can then be used later to label graphs, etc.| `c` |
 |`FillUsingDivComments`|Indicate whether to fill `DivTotal`, `RelTotal`, and `WaterClass` time series using diversion comments.  The parameter can be used for day, month, and year interval data.  Additional zeros will result for irrigation years (November-October) where the diversion comment indicates that water was not taken. |`False`|
 |`FillUsingDivCommentsFlag`|Data flag set when values are filled if `FillUsingDivComments=True`.  The flag can then be used later to label graphs, etc.  The flag will be appended to existing flags if necessary.|Value from `notUsed` flag in data.|
