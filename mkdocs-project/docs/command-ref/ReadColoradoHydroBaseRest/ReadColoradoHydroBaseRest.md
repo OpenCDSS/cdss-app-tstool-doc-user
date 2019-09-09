@@ -39,10 +39,20 @@ command and processed further with other table commands.
 ### Diversion Records ###
 
 Time series corresponding to diversion records,
-which include observations for ditches, reservoirs, wells, and other "structures", are handled as follows.
+which include observations for ditches, reservoirs, wells, and other "structures", are handled as described below.
 Note that reading diversion records with TSTool will provide additional zero data values compared
-to directly querying web services on the State of Colorado's website.
+to directly querying web services on the State of Colorado's website,
+due to TSTool's default value for `FillDivRecordsCarryForward` command parameter.
 TSTool's behavior is consistent with traditional engineering use of the data.
+
+**Note also that daily diversion records read from HydroBase database
+may have more zeros than data read from web services.
+This is because the HydroBase `vw_CDSS_DailyAmt` and `vw_CDSS_DailyWC` views often provide
+zero values where data may have been missing, due to how the view is created.
+These values typically are zero and have no observation code (obseration code is used for the data value flag in TSTool).
+This design approach is being evaluated and in the future HydroBase may be distributed with fewer zero values,
+in which case the fill carry forward default algorithm in TSTool should fill many of those zeros,
+especially at the start of the irrigation year.**
 
 1. In general, diversion record values correspond to observations and estimates determined by
 the State of Colorado and other entities.
