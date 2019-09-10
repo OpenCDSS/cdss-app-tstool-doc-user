@@ -353,7 +353,7 @@ site_description:  CDSS TSTool
 # - installation notes:  https://github.com/squidfunk/mkdocs-material
 theme:
   name: material
-  favicon: 'img/favicon.ico'
+  favicon: 'images/NewCOLogo32x32.gif'
 # ------------------------------------------------
 # The following controls how URLs are created
 # - As of MkDocs 1.0 the default is true meaning URLs to a page ABC is ABC/ rather than something/ABC.html.

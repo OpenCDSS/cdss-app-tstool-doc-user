@@ -9,7 +9,7 @@
 
 * ![change](change.png) [13.02.00] Most menu items now have tooltips that provide additional information to users.
 The tooltips will be modified as feedback on their interpretation is received.
-* ![change](change.png) [13.02.00] The table ***Manipulate Table Values*** command menu has been resorted to facilitate use,
+* ![change](change.png) [13.02.00] The table command menu ***Manipulate Table Values*** has been resorted to facilitate use,
 with commands grouped by column, row, and other manipulation functionality.
 * ![change](change.png) [13.02.00] The [`AppendTable`](../command-ref/AppendTable/AppendTable.md) command
 has been updated with new `ColumnData` parameter to set constant data on appended rows.
@@ -17,22 +17,26 @@ has been updated with new `ColumnData` parameter to set constant data on appende
 has been updated with new `KeepColumns` parameter to streamline indicating which columns should be deleted.
 * ![change](change.png) [13.02.00] The [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command
 has been updated with new `Condition` parameter to filter which rows are deleted.
-* ![change](change.png) [13.02.00] The [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) and
-[`RunSql`](../command-ref/RunSql/RunSql.md) commands have been updated to run procedures that have parameters and
-set the return status as a property.
+* ![change](change.png) [13.02.00] The [`ReadColoradoHydroBaseRest`](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md)
+command now reads `DivComment` time series, to facilitate troubleshooting diversion records.
+The data value is set to zero if no water was taken in a year.
 * ![change](change.png) [13.02.00] The [`ReadHydroBase`](../command-ref/ReadHydroBase/ReadHydroBase.md) and
 [`ReadColoradoHydroBaseRest`](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md)
 commands have been updated to provide `FillDivRecordsCarryForward` parameter to allow control (rather than default).
-A number of usability issues have also been fixed.
+The behavior of both commands is consistent in terms of default parameter values.
 The `WaterClass` parameter has been added to allow matching a specific water class.
-* ![change](change.png) [13.02.00] The [`ReadColoradoHydroBaseRest`](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md)
-command now reads `DivComment` time series, to facilitate troubleshooting diversion records.
+A number of usability issues have also been fixed.
+* ![change](change.png) [13.02.00] The [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) and
+[`RunSql`](../command-ref/RunSql/RunSql.md) commands have been updated to run procedures that have parameters and
+set the return status as a property.
+Procedures that have the same name with different parameters are not yet handled.
 * ![change](change.png) [13.02.00] The [`StartLog`](../command-ref/StartLog/StartLog.md) command
 has been updated to write log messages to clarify the hand-off between closed and newly opened log file.
 * ![new](new.png) [13.02.00] Add [`RenameTableColumns`](../command-ref/RenameTableColumns/RenameTableColumns.md) command.
 * ![new](new.png) [13.02.00] Dialogs related to saving command files have been updated to provide an option to
 compare the in-memory (unsaved) command file with latest command file saved to disk.
 The ***View / Command File Diff*** tool has been implemented to show differences.
+This is useful when deciding whether to save or discard command file edits.
 
 ## Changes in Versions 13.00.00 - 13.01.00 ##
 
