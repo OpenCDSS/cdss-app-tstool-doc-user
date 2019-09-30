@@ -7,6 +7,10 @@
 
 ## Changes in Versions 13.02.00 ##
 
+* ![new](new.png) [13.03.00] Add [`RunR`](../command-ref/RunR/RunR.md) command to run `R` scripts.
+
+## Changes in Versions 13.02.00 ##
+
 * ![change](change.png) [13.02.00] Most menu items now have tooltips that provide additional information to users.
 The tooltips will be modified as feedback on their interpretation is received.
 * ![change](change.png) [13.02.00] The table command menu ***Manipulate Table Values*** has been resorted to facilitate use,

@@ -167,3 +167,4 @@ RunPython(Interpreter="Python",InputFile="mei2csv.py",Arguments="\"InputFile=${W
 
 * [`RunCommands`](../RunCommands/RunCommands.md) command
 * [`RunProgram`](../RunProgram/RunProgram.md) command
+* [`RunR`](../RunR/RunR.md) command
