@@ -380,6 +380,7 @@ handling processor properties (used with `${Property}`), and control commands su
 * [`RunCommands`](RunCommands/RunCommands.md) - run a TSTool command file
 * [`RunProgram`](RunProgram/RunProgram.md) - run a program
 * [`RunPython`](RunPython/RunPython.md) - run a Python a program
+* [`RunR`](RunR/RunR.md) - run an R script
 * [`RunDSSUTL`](RunDSSUTL/RunDSSUTL.md) - run HEC-DSS DSSUTL program
 * [`If`](If/If.md) - test a condition to control logic flow
 * [`EndIf`](EndIf/EndIf.md) - end of an [`If`](If/If.md) block of commands
@@ -672,7 +673,8 @@ except for the indicated commands (blank indicates has been migrated)
 |`RunningAverage`                                                                                                |Replaced by [`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries.md)|||
 |[`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries.md)                        |Create time series containing statistic from moving "running" sample.|||
 |[`RunProgram`](RunProgram/RunProgram.md)                                                                        |Run a program.                   |||
-|[`RunPython`](RunPython/RunPython.md)                                                                           |Run a python program.            |||
+|[`RunPython`](RunPython/RunPython.md)                                                                           |Run a Python program.            |||
+|[`RunR`](RunR/RunR.md)                                                                                          |Run an R script.                 |||
 |[`RunSql`](RunSql/RunSql.md)                                                                                    |Run an SQL statement on a datastore.|||
 |[`Scale`](Scale/Scale.md)                                                                                       |Scale time series values.        |||
 |[`SelectTimeSeries`](SelectTimeSeries/SelectTimeSeries.md)                                                      |Select output time series for processing.|||

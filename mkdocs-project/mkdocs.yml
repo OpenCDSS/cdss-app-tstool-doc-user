@@ -183,6 +183,7 @@ nav:
   - RunningStatisticTimeSeries: command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries.md
   - RunProgram: command-ref/RunProgram/RunProgram.md
   - RunPython: command-ref/RunPython/RunPython.md
+  - RunR: command-ref/RunR/RunR.md
   - RunSql: command-ref/RunSql/RunSql.md
   - Scale: command-ref/Scale/Scale.md
   - SelectTimeSeries: command-ref/SelectTimeSeries/SelectTimeSeries.md
