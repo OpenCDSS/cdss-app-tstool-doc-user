@@ -132,7 +132,7 @@ Command Parameters
 | --------------|-----------------|----------------- |
 |`RProgram`<br>|The name of the `R` program to run as abolute path or program name, can be specified with `${Property}` syntax.|`Rscript`, found in `PATH` environment variable folder or in standard installation location folder. |
 |`ROptions`|Commaand line options to pass to `RProgram`, separated by spaces.  Can be specified using `${Property}` syntax.|No options will be used.|
-|`ScriptFile` <b>**required**|`R` script to run.  Can be specified using `${Property}` syntax.|None - must be specified.|
+|`ScriptFile`<br>**required**|`R` script to run.  Can be specified using `${Property}` syntax.|None - must be specified.|
 |`ScriptArguments`|Arguments to pass to the script, such as the names of files to process.  Use the `${WorkingDirPortable}` property to specify the location of the TSTool command file.  Use `\”` to surround arguments that include spaces.  Separate arguments by a space.  Can be specified using `${Property}` syntax.||
 
 ## Examples ##

@@ -1,13 +1,21 @@
 # TSTool / Release Notes / Version 13 #
 
+* [Changes in Version 13.03.00](#changes-in-version-130300)
 * [Changes in Version 13.02.00](#changes-in-version-130200)
 * [Changes in Version 13.00.00 - 13.01.00](#changes-in-version-130000-130100)
 
 ----------
 
-## Changes in Versions 13.02.00 ##
+## Changes in Versions 13.03.00 ##
 
-* ![new](new.png) [13.03.00] Add [`RunR`](../command-ref/RunR/RunR.md) command to run `R` scripts.
+* ![change](change.png) [13.03.00] Fix a number of issues where table arrays were not cleanly supported.
+* ![change](change.png) [13.03.00] Update the [`NewTable`](../command-ref/NewTable/NewTable.md) command to support arrays.
+* ![change](change.png) [13.03.00] Update the [`SetTableValues`](../command-ref/SetTableValues/SetTableValues.md) command to
+add `Column` and `Value` parameters to set a single column value, useful for complex values such as arrays
+* ![change](change.png) [13.03.00] Update the [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md)
+command parameters to provide more flexibility in controlling the file format and support array columns.
+Also enhance performance of the command.
+* ![new](new.png) [13.03.00] Add the [`RunR`](../command-ref/RunR/RunR.md) command to run `R` scripts.
 
 ## Changes in Versions 13.02.00 ##
 
