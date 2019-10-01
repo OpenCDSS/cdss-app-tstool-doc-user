@@ -76,7 +76,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|[13.03.00](release-notes-13.md)|Add initial `R` integration.|2019-09-28|
+|[13.03.00](release-notes-13.md)|Add initial `R` integration, improve table array support.|2019-09-30|
 |[13.02.00](release-notes-13.md)|Improve table processing commands, clarify HydroBase read commands, improve support for stored procedures with parameters.|2019-09-10|
 |[13.01.00](release-notes-13.md)|Improve troubleshooting feedback for HydroBase datastore configuration, streamline Linux installer.|2019-08-04|
 |[13.00.00](release-notes-13.md)|First major release with OpenCDSS open source license.|2019-07-12|
