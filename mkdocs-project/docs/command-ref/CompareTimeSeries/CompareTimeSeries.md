@@ -23,17 +23,38 @@ Typically the location identifiers and possibly data types will be the same in t
 * Compare two time series directly.
 * Compare time series from two ensembles.
 
-Time series are compared value by value, with the differences computed as the value
+Time series are compared value by value for each date/time in the analysis period,
+with the differences computed as the value
 from the second time series minus the value from the first time series.
 The values can be rounded based on a specified precision.
-It may be important to read each set of time series from files to ensure that final round off is consistent.
+If necessary, read each set of time series from files to ensure that final round off is consistent.
 The checks occur by comparing the difference to one or more specified tolerances.
 Differences and simple statistics are printed to the log file.
-Values that are different can optionally be tagged with a character flag, for use with the graphing package.
-Time series of the differences can optionally be created.
-A warning can be generated if a difference is detected,
-or if no differences are detected.
-See also the [`CompareFiles`](../CompareFiles/CompareFiles.md) and [`CompareTables`](../CompareTables/CompareTables.md) commands).
+Values that are different can optionally be indicated using the following:
+
+* set a character flag, for use with the graphing package
+* create a time series of the differences
+* generate a command warning if a difference is detected, or if no differences are detected
+* create a table record listing the difference, which can viewed or output with other commands
+
+Date/time in time series is handled as follows:
+
+* In order to compare time series, it is important that the date/times for data values align.
+Lack of alignment can result in differences.
+**There is currently no command feature to accept date/time differences within a tolerance.**
+* The precision of the time series should be the same.
+For regular-interval time series, the interval base and date/time precision are the same (e.g., 5Min interval
+has a precision of minute).
+For irregular interval time series the time series interval may be `irregular` and the precision must
+be determined from the period date/times.
+TSTool is being updated over time to support irregular interval with base (e.g., "irregDay") but this is not universal.
+* To help ensure alignment of time series, the following approach is taken:
+	+ Regular interval time series:  Are compared as usual because the times should line up.
+	+ Irregular interval time series:  If at least one of the two time series are irregular interval,
+	the date/times for both time series are added to a sorted list, which is used to retrieve data from
+	both time series.  Any date/times that result in only one value will result in a difference.
+
+See also the [`CompareFiles`](../CompareFiles/CompareFiles.md) and [`CompareTables`](../CompareTables/CompareTables.md) commands.
 
 ## Command Editor ##
 
