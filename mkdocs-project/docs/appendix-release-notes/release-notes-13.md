@@ -10,7 +10,8 @@
 
 * ![change](change.png) [13.03.00] Fix a number of issues where table arrays were not cleanly supported.
 * ![change](change.png) [13.03.00] Update the [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md)
-command to better support comparing irregular time series.
+command to better support comparing irregular time series,
+add `CompareFlags` to control whether data flags are also compared..
 * ![change](change.png) [13.03.00] Update the [`NewTable`](../command-ref/NewTable/NewTable.md) command to support arrays.
 * ![change](change.png) [13.03.00] Update the [`SetTableValues`](../command-ref/SetTableValues/SetTableValues.md) command to
 add `Column` and `Value` parameters to set a single column value, useful for complex values such as arrays
