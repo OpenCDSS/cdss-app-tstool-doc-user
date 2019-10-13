@@ -3,12 +3,18 @@
 * [Changes in Version 13.03.00](#changes-in-version-130300)
 * [Changes in Version 13.02.00](#changes-in-version-130200)
 * [Changes in Version 13.00.00 - 13.01.00](#changes-in-version-130000-130100)
+* [Release notes for all versions](release-notes.md)
 
 ----------
 
 ## Changes in Versions 13.03.00 ##
 
+* ![bug](bug.png) [13.03.00] Change so that user's `TSTool.cfg` file properties are recognized whether or not `[TSTool]` is at top of the file.
+* ![bug](bug.png) [13.03.00] Update the [`RunProgram`](../command-ref/RunProgram/RunProgram.md) command to work on Linux.
+Also add the `EnvVars`, `IfNonZeroExitCode`, `StderrFile`, and `StdoutFile` parameters.
 * ![change](change.png) [13.03.00] Fix a number of issues where table arrays were not cleanly supported.
+* ![change](change.png) [13.03.00] Update the [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command to
+check the full length of each file when computing the number of different lines.
 * ![change](change.png) [13.03.00] Update the [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md)
 command to better support comparing irregular time series,
 add `CompareFlags` to control whether data flags are also compared..

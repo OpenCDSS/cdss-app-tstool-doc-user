@@ -140,7 +140,9 @@ C:\Users\user\.tstool\          Windows user TSTool configuration files.
 
 The following is an example user `TSTool.cfg` configuration file and is discussed more in the
 [TSTool Configuration](#tstool-configuration) section.
-
+Before 13.03.00 the `[TSTool]` was not used.
+For versions 13.03.00 and later, the `[TSTool]` line can be used to be consistent with main configuration file,
+or can be omitted.
 
 ```
 # ./tstool/N/system/TSTool.cfg
@@ -150,6 +152,8 @@ The following is an example user `TSTool.cfg` configuration file and is discusse
 # Disabling datastore types that are not used can improve TSTool performance and simplifies the user interface.
 # Refer to the TSTool.cfg file under the software installation folder for global configuration properties.
 # User settings in this file will override the installation settings.
+
+[TSTool]
 
 HydroBaseEnabled = true
 #HydroBaseEnabled = false
@@ -498,7 +502,10 @@ of the time series to map layer lookup file.
 See the [Map Configuration](#map-configuration) section below.
 
 The user configuration file `./tstool/system/TSTool.cfg` under the user’s home folder provides additional configuration,
-for example to disable datastores based on the user’s preferences:
+for example to disable datastores based on the user’s preferences.
+Before 13.03.00 the `[TSTool]` was not used.
+For versions 13.03.00 and later, the `[TSTool]` line can be used to be consistent with main configuration file,
+or can be omitted.
 
 ```
 # TSTool configuration file containing user settings, shared between TSTool versions
@@ -508,6 +515,8 @@ for example to disable datastores based on the user’s preferences:
 # Refer to the TSTool.cfg file under the software installation folder for global 
 # configuration properties.
 # User settings in this file will override the installation settings.
+
+[TSTool]
 
 HydroBaseEnabled = true
 ```
