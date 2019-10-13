@@ -15,11 +15,13 @@ The `RunProgram` command runs an external program,
 given the full command line or individual command line parts,
 and waits until the program is finished before processing additional commands.
 The TSTool command will indicate a failure if the exit status from the program being run is non-zero.
-It is therefore possible to call an external program that reads
-and/or writes recognized time series formats to perform processing that TSTool cannot.
+
+The `RunProgram` command can be used to call an external program that 
+performs processing that TSTool cannot.
 One use of this command is to create a calibration environment where a model is run and
 then the results are read and displayed using TSTool.
 It is also useful to use TSTool’s testing features to implement quality control checks for other software tools.
+See also the [`RunR`](../RunR/RunR.md) and [`RunPython`](../RunPython/RunPython.md) commands.
 
 TSTool internally maintains a working folder (directory) that is used to
 convert relative paths to absolute paths to locate files.
@@ -31,11 +33,27 @@ the external software’s data files exist, use absolute paths to files, or use 
 property in the command line.  Use `\”` in the command line or arguments to surround whitespace.
 Some operating systems may have limitations on command line length.
 
+The following are guidelines for using this command:
+
+1. A program can be run with our without using a command shell (see the ***Command shell*** tab).
+Using a command shell that is consistent for the operating system is the default,
+and can help ensure that the environment is properly handled.
+However, programs can often be run without a shell.
+2. It is generally easiest to specify the command line in full rather than parts.
+However, if quoting or or other syntax is complex, try specifying the command by its parts.
+3. Program output is printed to standard output (stdout) and standard error (stderr).
+It is possible to use shell redirection (`>`) to create an output file from stdout or stderr.
+However, this requires that a shell be used that recognizes the redirection.
+Alternatively, use the `StdoutFile` and `StderrFile` parameters to save output to files,
+which avoids the need to run in a shell.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
 
+**<p style="text-align: center;">
 ![RunProgram](RunProgram.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunProgram` Command Editor when Specifying Command Line in Full (<a href="../RunProgram.png">see also the full-size image</a>)
@@ -43,7 +61,9 @@ The following dialog is used to edit the command and illustrates the command syn
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying the command line in parts.
 
+**<p style="text-align: center;">
 ![RunProgram Parts](RunProgram_Parts.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunProgram` Command Editor when Specifying Command Line in Parts (<a href="../RunProgram_Parts.png">see also the full-size image</a>)
@@ -51,15 +71,30 @@ The following dialog is used to edit the command and illustrates the command syn
 
 The following dialog is used to edit the command and illustrates the command syntax when using a command shell.
 
+**<p style="text-align: center;">
 ![RunProgram Shell](RunProgram_Shell.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunProgram` Command Editor showing Command Shell Parameters (<a href="../RunProgram_Shell.png">see also the full-size image</a>)
 </p>**
 
+The following dialog is used to edit the command and illustrates the command syntax when specifying additional environment variables.
+The variables are defined in addition to the parent (TSTool) process environment.
+
+**<p style="text-align: center;">
+![RunProgram Environment](RunProgram_Environment.png)
+</p>**
+
+**<p style="text-align: center;">
+`RunProgram` Command Editor showing Command Environment Variable Parameters (<a href="../RunProgram_Environment.png">see also the full-size image</a>)
+</p>**
+
 The following dialog is used to edit the command and illustrates the command syntax when specifying timeout parameters.
 
+**<p style="text-align: center;">
 ![RunProgram Timeout](RunProgram_Timeout.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunProgram` Command Editor showing Timeout Parameters (<a href="../RunProgram_Timeout.png">see also the full-size image</a>)
@@ -67,15 +102,30 @@ The following dialog is used to edit the command and illustrates the command syn
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying exit code parameters.
 
+**<p style="text-align: center;">
 ![RunProgram Exit Code](RunProgram_ExitStatusIndicator.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunProgram` Command Editor showing Exit Code Parameters (<a href="../RunProgram_ExitStatusIndicator.png">see also the full-size image</a>)
 </p>**
 
+The following dialog is used to edit the command and illustrates the command syntax when specifying output files for
+standard output and standard error.
+
+**<p style="text-align: center;">
+![RunProgram Output Files](RunProgram_OutputFiles.png)
+</p>**
+
+**<p style="text-align: center;">
+`RunProgram` Command Editor showing Output File Parameters (<a href="../RunProgram_OutputFiles.png">see also the full-size image</a>)
+</p>**
+
 The following dialog is used to edit the command and illustrates the command syntax when specifying output check parameters.
 
+**<p style="text-align: center;">
 ![RunProgram Exit Code](RunProgram_OutputChecks.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunProgram` Command Editor showing Output Check Parameters (<a href="../RunProgram_OutputChecks.png">see also the full-size image</a>)
@@ -98,10 +148,14 @@ Command Parameters
 | `Program` | The name of the program to run.  Program arguments are specified using the `ProgramArg#` parameter(s).  See the `CommandLine` parameter for more information about parameter formatting and locating the executable.  Can specify with `${Property}`. | Must be specified if the `CommandLine` parameter is not specified.|
 | `ProgramArg1,`<br>`ProgramArg2,`<br>etc. | Command line arguments used with `Program`.  If necessary, use `${WorkingDir}` to specify the working directory to locate files.  Can specify with `${Property}`. | No arguments will be used with `Program`.|
 | `UseCommandShell` | If specified as `True`, the program will be run using a command shell.  A command shell is needed if the program is a script (batch file), a shell command, or uses `>`, `|`, etc. | `False`. |
-| `CommandShell` | The command shell program to run for example on Windows:  `cmd /c`.  Make sure that the shell is specified with an option to exit when the program completes (such as `/c`); otherwise, the process will hang.  Can specify with `${Property}`. | Determine automatically based on operating system.|
+| `CommandShell` | The command shell program to run for example on Windows:  `cmd /c`.  Make sure that the shell is specified with an option to exit when the program completes (such as `/c`); otherwise, the process will hang.  Can specify with `${Property}`. | Determine automatically based on operating system:<ul><li>Windows:  `cmd.exe /C`</li><li>Linux:  `/bin/sh -c`</li></ul>.|
+| `EnvVars` | Specify environment variables to be visible to the program, using syntax `EnvVar1:Value1,EnvVar2:value2`.  Can specify with `${Property}`. | The parent process environment variables are available to the program.|
 | `Timeout` | The timeout in seconds – if the program has not yet returned, the process will be ended.  Zero indicates no timeout.  **This behavior varies and needs to be enhanced**.|No timeout.|
+| `IfNonZeroExitCode` | Indicate the action to be taken if a non-zero exit code is detected:  `Ignore`, `Fail`, or `Warn`.| `Warn` |
 | `ExitStatusIndicator` | This parameter may be phased out.  Instead, use The `OutputCheckTableID` with a file of stdout and/or `ExitCodeProperty`.  By default, the program exit status is determined from the process that is run.  Normally `0` means success and non-zero indicates an error.  However, the program may not exit with a non-zero exit status when an error occurs.  If the program instead uses an output string like `STOP 3` to indicate the status, use this parameter to indicate the leading string, which is followed by the exit status (e.g., `STOP`).|Determine the exit status from the process exit value.|
 | `ExitCodeProperty` | Name of the processor property to set as the exit code from the program being run.  Can specify with `${Property}`. | Property is not set.|
+| `StdoutFile` | File to save standard output messages.  Can specify with `${Property}`. | Output is printed to console/terminal. |
+| `StderrFile` | File to save standard error messages.  Can specify with `${Property}`. | Output is printed to console/terminal. |
 | `OutputCheckTableID` | Table identifier for table containing output check patterns.  Output file content can be scanned for patterns to detect success, warning, and errors.  See the example file below for syntax of the table.  Can specify with `${Property}`. | Output is not checked.|
 | `OutputCheckWarningCountProperty` | Name of the processor property to set as the count of warning messages generated from the output table checks.  Can specify with `${Property}`. | Property is not set.|
 | `OutputCheckFailureCountProperty` | Name of the processor property to set as the count of failure messages generated from the output table checks.  Can specify with `${Property}`. | Property is not set.|
@@ -112,7 +166,9 @@ Command Parameters
 
 The following figure illustrates the output check table specified by the `OutputCheckTableID` parameter.  
 
+**<p style="text-align: center;">
 ![RunProgram Output Check Example](RunProgram_OutputCheckTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Output Check Table (<a href="../RunProgram_OutputCheckTable.png">see also the full-size image</a>)
@@ -155,7 +211,9 @@ WriteCheckFile(OutputFile="Results/Test_RunProgram_CommandLine_echo_OutputCheckT
 
 The status messages for the `RunProgram` command from the above example are similar to the following.
 
+**<p style="text-align: center;">
 ![RunProgram Output Check Table Status](RunProgram_OutputCheckTable_Status.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Command Status Messages (<a href="../RunProgram_OutputCheckTable_Status.png">see also the full-size image</a>)
@@ -166,3 +224,5 @@ Example Command Status Messages (<a href="../RunProgram_OutputCheckTable_Status.
 ## See Also ##
 
 * [`RunCommands`](../RunCommands/RunCommands.md) command
+* [`RunPython`](../RunPython/RunPython.md) command
+* [`RunR`](../RunR/RunR.md) command
