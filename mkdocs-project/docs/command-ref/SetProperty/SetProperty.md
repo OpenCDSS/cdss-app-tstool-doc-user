@@ -12,8 +12,11 @@
 ## Overview ##
 
 The `SetProperty` command sets the value of a property used by the time series processor.
+Processor properties are similar to variables in programming languages and TSTool processor properties have
+a name, type (e.g., integer, string), and value.
 The property will be available to subsequent commands that support using `${Property}` notation in parameters,
 for example to specify filenames more dynamically or use with [`If`](../If/If.md) commands.
+The documentation for each command indicates which command parameters can be specified as a property.
 This command should not be confused with the [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command,
 which sets a property on specific time series.  The following functionality is provided:
 
@@ -23,13 +26,17 @@ which sets a property on specific time series.  The following functionality is p
 Care should be taken to understand the implications of removing a property.
 For example, if the property is used in later commands, then removing will cause the processor to not find the property.
 It may be more appropriate, for example, to set a string property to an empty string rather than removing.
-* Set a property by modifying a previous global property using basic manipulations.
+* Set a property by modifying a previous processor property using basic math manipulations.
+In this case, specify the initial property value with `${Property}` and then use the ***Math*** tab parameters
+to manipulate the initial value.
 
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax for general parameters.
 
+**<p style="text-align: center;">
 ![SetProperty](SetProperty.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetProperty` Command Editor for General Set Parameters (<a href="../SetProperty.png">see also the full-size image</a>)
@@ -37,7 +44,9 @@ The following dialog is used to edit the command and illustrates the command syn
 
 The following dialog is used to edit the command and illustrates the command syntax for special value parameters.
 
+**<p style="text-align: center;">
 ![SetProperty](SetProperty_Special.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetProperty` Command Editor for Special Value Parameters (<a href="../SetProperty_Special.png">see also the full-size image</a>)
@@ -45,7 +54,9 @@ The following dialog is used to edit the command and illustrates the command syn
 
 The following dialog is used to edit the command and illustrates the command syntax for removing a property.
 
+**<p style="text-align: center;">
 ![SetProperty](SetProperty_Remove.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetProperty` Command Editor for Removing a Property (<a href="../SetProperty_Remove.png">see also the full-size image</a>)
@@ -57,7 +68,9 @@ The `PropertyValue` parameter must specify the name of an existing property usin
 This causes the old value to be retrieved and then the math operation is performed.
 A common operation would be to increment a property’s value in a [`For`](../For/For.md) loop.
 
+**<p style="text-align: center;">
 ![SetProperty](SetProperty_Math1.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetProperty` Command Editor for Performing Math showing Main Property Parameters (<a href="../SetProperty_Math1.png">see also the full-size image</a>)
@@ -65,7 +78,9 @@ A common operation would be to increment a property’s value in a [`For`](../Fo
 
 The following illustrates the math input parameters.
 
+**<p style="text-align: center;">
 ![SetProperty](SetProperty_Math2.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetProperty` Command Editor for Performing Math showing Math Input (<a href="../SetProperty_Math2.png">see also the full-size image</a>)
@@ -91,10 +106,10 @@ Command Parameters
 | `SetNaN`|If specified as `True`, the Double property will be set to the special “not a number” (`NaN`) value.|The `PropertyValue` parameter will be used.|
 | `SetNull`|If specified as True, the property will be set to null (not specified).|The PropertyValue parameter will be used.|
 | `RemoveProperty`|If specified as `True`, the property will be removed and will be unavailable to the processor.  Only user-defined properties can be removed (not important internal properties).|The `PropertyValue` parameter will be used.|
-| `Add`|Value to add to the property value:<br><br><ul><li>Double or Integer property value will be incremented by `Add`.</li><li>String property value will have `Add` appended.</li><li>DateTime property value will be shifted forward in time by `Add` (e.g., `Add=1Day`).</li></ul>|No addition.|
-| `Subtract`|Value to subtract from the property value:<br><br><ul><li>Double or Integer property value will be decremented by `Subtract`.</li><li>String property value will have `Subtract` removed for all occurrences.</li><li>DateTime property value will be shifted back in time by `Subtract` (e.g., `Subtract=1Day`).</li></ul>|No subtraction.|
-| `Multiply`|Value to multiply the property value:<br><br><ul><li>Double or Integer property value will be multiplied by `Multiply.`</li></ul>|No multiplication.|
-| `Divide`|Value to divide the property value:<br><br><ul><li>Double or Integer property value will be divided by `Divide`.  Dividing by zero will set the result to `NaN` for Double and null for Integer.|No division.|
+| `Add`|Value to add to the property value, can be specified using `${Property}`:<br><br><ul><li>Double or Integer property value will be incremented by `Add`.</li><li>String property value will have `Add` appended.</li><li>DateTime property value will be shifted forward in time by `Add` (e.g., `Add=1Day`).</li></ul>|No addition.|
+| `Subtract`|Value to subtract from the property value, can be specified using `${Property}`:<br><br><ul><li>Double or Integer property value will be decremented by `Subtract`.</li><li>String property value will have `Subtract` removed for all occurrences.</li><li>DateTime property value will be shifted back in time by `Subtract` (e.g., `Subtract=1Day`).</li></ul>|No subtraction.|
+| `Multiply`|Value to multiply the property value, can be specified using `${Property}`:<br><br><ul><li>Double or Integer property value will be multiplied by `Multiply.`</li></ul>|No multiplication.|
+| `Divide`|Value to divide the property value, can be specified using `${Property}`:<br><br><ul><li>Double or Integer property value will be divided by `Divide`.  Dividing by zero will set the result to `NaN` for Double and null for Integer.|No division.|
 
 ## Examples ##
 

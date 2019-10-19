@@ -27,8 +27,10 @@ add `CompareFlags` to control whether data flags are also compared.
 [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md)
 command to support multiple patterns to match files.
 * ![change](change.png) [13.03.00] Update the [`NewTable`](../command-ref/NewTable/NewTable.md) command to support arrays.
+* ![change](change.png) [13.03.00] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command to allow math parameters to be specified as properties.
 * ![change](change.png) [13.03.00] Update the [`SetTableValues`](../command-ref/SetTableValues/SetTableValues.md) command to
 add `Column` and `Value` parameters to set a single column value, useful for complex values such as arrays
+* ![change](change.png) [13.03.00] Update the [`Wait`](../command-ref/Wait/Wait.md) command to allow parameters to be specified as properties.
 * ![change](change.png) [13.03.00] Update the [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md)
 command parameters to provide more flexibility in controlling the file format and support array columns.
 Also enhance performance of the command.
