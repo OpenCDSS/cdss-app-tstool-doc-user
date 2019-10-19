@@ -26,7 +26,9 @@ In most cases users will not need to interrupt command workflows that are using 
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![Wait](Wait.png)
+</p>**
 
 **<p style="text-align: center;">
 `Wait` Command Editor Showing Conditions Test (<a href="../Wait.png">see also the full-size image</a>)
@@ -45,8 +47,8 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`WaitTime`<br>**required**|The number of seconds to wait.|None – must be specified.|
-|`ProgressIncrement`|The number of seconds between progress updates in the main TSTool progress indicator.|`WaitTime` divided by ten.|
+|`WaitTime`<br>**required**|The number of seconds to wait, can be specified using `${Property}`.|None – must be specified.|
+|`ProgressIncrement`|The number of seconds between progress updates in the main TSTool progress indicator, can be specified using `${Property}`.|`WaitTime` divided by ten.|
 
 ## Examples ##
 
