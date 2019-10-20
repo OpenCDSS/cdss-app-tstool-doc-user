@@ -92,6 +92,7 @@ nav:
   - FillUsingDiversionComments: command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md
   - For: command-ref/For/For.md
   - FormatDateTimeProperty: command-ref/FormatDateTimeProperty/FormatDateTimeProperty.md
+  - FormatFile: command-ref/FormatFile/FormatFile.md
   - FormatStringProperty: command-ref/FormatStringProperty/FormatStringProperty.md
   - FormatTableDateTime: command-ref/FormatTableDateTime/FormatTableDateTime.md
   - FormatTableString: command-ref/FormatTableString/FormatTableString.md
