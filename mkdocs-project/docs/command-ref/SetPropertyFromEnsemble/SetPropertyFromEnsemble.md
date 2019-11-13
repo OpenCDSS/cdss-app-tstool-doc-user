@@ -22,7 +22,9 @@ which sets a property on an ensemble.
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![SetPropertyFromEnsemble](SetPropertyFromEnsemble.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetPropertyFromEnsemble` Command Editor for General Set Parameters (<a href="../SetPropertyFromEnsemble.png">see also the full-size image</a>)

@@ -84,7 +84,9 @@ however, a number that is too high may not be possible due to memory being used 
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
 
+**<p style="text-align: center;">
 ![ProfileCommands](ProfileCommands.png)
+</p>**
 
 **<p style="text-align: center;">
 `ProfileCommands` Command Editor (<a href="../ProfileCommands.png">see also the full-size image</a>)
@@ -94,7 +96,9 @@ The following figure illustrates the output summary table.
 Because command execution may be very fast, times are shown in milliseconds (1/1000th of a second).
 The table can be output to a file with other commands.
 
+**<p style="text-align: center;">
 ![ProfileCommands Summary](ProfileCommands_Summary.png)
+</p>**
 
 **<p style="text-align: center;">
 `ProfileCommands` Command Summary Output Table (<a href="../ProfileCommands_Summary.png">see also the full-size image</a>)
@@ -104,7 +108,9 @@ The following figure illustrates the output detail table.
 Note that the heap memory is increased in blocks by the Java Runtime Environment
 so only large memory footprint commands trigger immediate heap memory increases.
 
+**<p style="text-align: center;">
 ![ProfileCommands Detail](ProfileCommands_Detail.png)
+</p>**
 
 **<p style="text-align: center;">
 `ProfileCommands` Command Detail Output Table (<a href="../ProfileCommands_Detail.png">see also the full-size image</a>)

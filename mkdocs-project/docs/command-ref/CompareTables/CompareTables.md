@@ -25,7 +25,9 @@ The command also allows the comparison table to be output to an HTML file, in wh
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![CompareTables](CompareTables.png)
+</p>**
 
 **<p style="text-align: center;">
 `CompareTables` Command Editor (<a href="../CompareTables.png">see also the full-size image</a>)

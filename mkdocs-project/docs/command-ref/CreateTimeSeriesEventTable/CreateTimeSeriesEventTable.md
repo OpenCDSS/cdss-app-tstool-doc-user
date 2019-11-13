@@ -31,7 +31,9 @@ The column names do not need to be as shown.
 Location data can be specified in multiple columns,
 as shown in the far right of the figure, where non-blank values indicate the locations that are applicable for a location type.
 
+**<p style="text-align: center;">
 ![CreateTimeSeriesEventTable InputTable](CreateTimeSeriesEventTable_InputTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Event Data before Relating to Time Series (<a href="../CreateTimeSeriesEventTable_InputTable.png">see also the full-size image</a>)
@@ -45,7 +47,9 @@ be processed to create a time series event table).
 It is envisioned that additional methods will be enabled in the future to create time series events,
 for example to estimate extreme events from data.
 
+**<p style="text-align: center;">
 ![CreateTimeSeriesEventTable](CreateTimeSeriesEventTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateTimeSeriesEventTable` Command Editor (<a href="../CreateTimeSeriesEventTable.png">see also the full-size image</a>)
@@ -92,7 +96,9 @@ which results in 21 of the 55 input rows being used in the output time series ev
 The results can then be used when processing time series products to
 annotate the graphs (see the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command).
 
+**<p style="text-align: center;">
 ![CreateTimeSeriesEventTable OutputTable](CreateTimeSeriesEventTable_OutputTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Event Data after Relating to Time Series (<a href="../CreateTimeSeriesEventTable_OutputTable.png">see also the full-size image</a>)

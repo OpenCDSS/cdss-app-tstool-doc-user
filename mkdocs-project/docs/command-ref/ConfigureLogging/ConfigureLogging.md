@@ -20,7 +20,9 @@ used with automated testing so that all logging output goes to the main log file
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![ConfigureLogging](ConfigureLogging.png)
+</p>**
 
 **<p style="text-align: center;">
 `ConfigureLogging` Command Editor Showing Conditions Test (<a href="../ConfigureLogging.png">see also the full-size image</a>)

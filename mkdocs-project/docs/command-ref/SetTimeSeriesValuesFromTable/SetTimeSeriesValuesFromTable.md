@@ -20,7 +20,9 @@ The `SetTimeSeriesValuesFromTable` command sets values in time series by matchin
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing time series parameters.
 
+**<p style="text-align: center;">
 ![SetTimeSeriesValuesFromTable](SetTimeSeriesValuesFromTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetTimeSeriesValuesFromTable` Command Editor Showing Time Series Parameters (<a href="../SetTimeSeriesValuesFromTable.png">see also the full-size image</a>)
@@ -28,7 +30,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing table parameters.
 
+**<p style="text-align: center;">
 ![SetTimeSeriesValuesFromTable_Table](SetTimeSeriesValuesFromTable_Table.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetTimeSeriesValuesFromTable` Command Editor Showing Table Parameters (<a href="../SetTimeSeriesValuesFromTable_Table.png">see also the full-size image</a>)

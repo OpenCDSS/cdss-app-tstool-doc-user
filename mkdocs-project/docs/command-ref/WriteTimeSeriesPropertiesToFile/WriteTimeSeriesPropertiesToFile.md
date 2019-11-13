@@ -33,7 +33,9 @@ Property File Formats
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesPropertiesToFile](WriteTimeSeriesPropertiesToFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesPropertiesToFile` Command Editor (<a href="../WriteTimeSeriesPropertiesToFile.png">see also the full-size image</a>)

@@ -73,7 +73,9 @@ and some rely on secondary map windows (as shown below).
 If the map is in the main window, the menus at the top of the window will be those
 specific to the software (whereas below the single GeoView ***File ***menu is shown).
 
+**<p style="text-align: center;">
 ![GeoView_Frame](GeoView_Frame.png)
+</p>**
 
 **<p style="text-align: center;">
 Example GeoView Interface (from TSTool) (<a href="../GeoView_Frame.png">see also the full-size image</a>)
@@ -138,7 +140,9 @@ Some properties are currently view-only.
 Refer to the [GeoView Configuration – the GeoView Project File](#geoview-configuration-the-geoview-project-file)
 section below for a complete list of properties that can be defined in a GeoView Project file.
 
+**<p style="text-align: center;">
 ![GeoView_Props](GeoView_Props.png)
+</p>**
 
 **<p style="text-align: center;">
 Main GeoView Properties (<a href="../GeoView_Props.png">see also the full-size image</a>)
@@ -166,7 +170,9 @@ The tabbed panels are discussed below the each figure.
 GeoView layer properties, as shown in the following figure, apply to the input source.
 Currently these properties are used for information purposes and cannot be interactively edited.
 
+**<p style="text-align: center;">
 ![GeoView_Props_Layer](GeoView_Props_Layer.png)
+</p>**
 
 **<p style="text-align: center;">
 GeoView Layer Properties (<a href="../GeoView_Props_Layer.png">see also the full-size image</a>)
@@ -177,7 +183,9 @@ drawn (symbolized) on the map and in the table of contents.
 A sample of the symbol is shown in the dialog, although it may appear slightly different on the map and table of contents.
 Symbol terminology corresponds to standard GIS tools.
 
+**<p style="text-align: center;">
 ![GeoView_Props_Symbol](GeoView_Props_Symbol.png)
+</p>**
 
 **<p style="text-align: center;">
 Layer View Symbol Properties (<a href="../GeoView_Props_Symbol.png">see also the full-size image</a>)
@@ -190,7 +198,9 @@ Labels can consist of a combination of attribute values.
 To label features, select the attribute fields from the available choices,
 in the order that they should appear in the label.
 
+**<p style="text-align: center;">
 ![GeoView_Props_Label](GeoView_Props_Label.png)
+</p>**
 
 **<p style="text-align: center;">
 Layer View Label Properties (<a href="../GeoView_Props_Label.png">see also the full-size image</a>)
@@ -215,7 +225,9 @@ This process allows general GeoView features to be used more specifically by spe
 The [Using GeoView with a Software Application section](#using-geoview-with-a-software-application)
 describes this functionality in more detail.
 
+**<p style="text-align: center;">
 ![GeoView_Props_Application](GeoView_Props_Application.png)
+</p>**
 
 **<p style="text-align: center;">
 Application Layer Type (<a href="../GeoView_Props_Application.png">see also the full-size image</a>)
@@ -225,7 +237,9 @@ Layer view animation properties, as shown in the following figure, are currently
 Animation properties will define, for example,
 the time series data that are used for symbolization during animation.
 
+**<p style="text-align: center;">
 ![GeoView_Props_Animation](GeoView_Props_Animation.png)
+</p>**
 
 **<p style="text-align: center;">
 Layer View Animation Properties (<a href="../GeoView_Props_Animation.png">see also the full-size image</a>)
@@ -240,7 +254,9 @@ To view the attributes for a layer, first select the layer in the table of conte
 then right-click and press the ***View Attribute Table*** menu choice.
 A window similar to the following will be shown.
 
+**<p style="text-align: center;">
 ![GeoView_Attributes](GeoView_Attributes.png)
+</p>**
 
 **<p style="text-align: center;">
 Attributes Table for a Layer (<a href="../GeoView_Attributes.png">see also the full-size image</a>)

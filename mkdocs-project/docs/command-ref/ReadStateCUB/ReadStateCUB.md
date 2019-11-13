@@ -24,7 +24,9 @@ Only data types that contain floating point numbers will be read.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ReadStateCUB](ReadStateCUB.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadStateCUB` Command Editor (<a href="../ReadStateCUB.png">see also the full-size image</a>)

@@ -12,10 +12,10 @@
 ## Overview ##
 
 **This command is under development.**
-	
+
 The `WriteTimeSeriesToExcelBlock` command writes one or more time series to an Excel
 workbook with output being in block layout.  The following functionality is provided:
-	
+
 * Time series are written in blocks (see
 [`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) for simple column output).
 * The worksheet and position in worksheet can be specified.
@@ -29,7 +29,9 @@ consequently functionality is constrained by the features of that software packa
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock TimeSeries](WriteTimeSeriesToExcelBlock_TimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcelBlock` Command Editor for Time Series Parameters (<a href="../WriteTimeSeriesToExcelBlock_TimeSeries.png">see also the full-size image</a>)
@@ -37,7 +39,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel output parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock ExcelOutput](WriteTimeSeriesToExcelBlock_ExcelOutput.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcelBlock` Command Editor for Excel Output Parameters (<a href="../WriteTimeSeriesToExcelBlock_ExcelOutput.png">See also the full-size image</a>)
@@ -45,7 +49,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Layout parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock Layout](WriteTimeSeriesToExcelBlock_Layout.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcelBlock` Command Editor for Layout Parameters (<a href="../WriteTimeSeriesToExcelBlock_Layout.png">see also the full-size image</a>)
@@ -53,7 +59,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Statistics parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock Statistics](WriteTimeSeriesToExcelBlock_Statistics.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcelBlock` Command Editor for Statistics Parameters (<a href="../WriteTimeSeriesToExcelBlock_Statistics.png">See also the full-size image</a>)
@@ -61,7 +69,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for cell comment (data flag) parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock DataFlags](WriteTimeSeriesToExcelBlock_DataFlags.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcelBlock` Command Editor for Cell Comment (Data Flag) Parameters (<a href="../WriteTimeSeriesToExcelBlock_DataFlags.png">see also the full-size image</a>)
@@ -69,7 +79,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for style formatting parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock Style](WriteTimeSeriesToExcelBlock_Style.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcelBlock` Command Editor for Style Parameters (<a href="../WriteTimeSeriesToExcelBlock_Style.png">see also the full-size image</a>)
@@ -114,7 +126,9 @@ time series to Excel and format cells to indicate specific conditions of interes
 This approach is implemented similarly in the
 [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock DataTable](WriteTimeSeriesToExcelBlock_DataTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Data Table used with `WriteTimeSeriesToExcelBlock` Command Style Formatting (<a href="../WriteTimeSeriesToExcelBlock_DataTable.png">see also the full-size image</a>)
@@ -125,7 +139,9 @@ This table can be defined as a CSV file, Excel worksheet or other format
 and read into TSTool using a suitable command.
 The following figure illustrates a basic style table, which can be shared among commands.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock StyleTable](WriteTimeSeriesToExcelBlock_StyleTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Style Table used with `WriteTimeSeriesToExcelBlock` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcelBlock_StyleTable.png">see also the full-size image</a>)
@@ -148,7 +164,9 @@ The condition table indicates how the styles are used for time series data.
 The following example indicates that any time series with identifier (or alias)
 starting with `ts` should be processed to evaluate for missing, negative, and zero values.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock ConditionTable](WriteTimeSeriesToExcelBlock_ConditionTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Condition Table used with `WriteTimeSeriesToExcelBlock` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcelBlock_ConditionTable.png">see also the full-size image</a>)
@@ -181,7 +199,9 @@ Multiple conditions can be specified by using AND (surrounded by a single space)
 The ***Display*** column in the condition table is optional and provides test to use in the legend.
 If the ***Display*** column is not provided, the ***Condition*** column contents will be used for the legend.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock Output](WriteTimeSeriesToExcelBlock_Output.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcelBlock` Command Example Output for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcelBlock_Output.png">see also the full-size image</a>)
@@ -189,13 +209,17 @@ If the ***Display*** column is not provided, the ***Condition*** column contents
 
 The following example illustrates using multiple conditions to implement a color scale.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock StyleTable2](WriteTimeSeriesToExcelBlock_StyleTable2.png)
+</p>**
 
 **<p style="text-align: center;">
 Style Table used with `WriteTimeSeriesToExcelBlock` Command for a Color Scale
 </p>**
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock ConditionTable2](WriteTimeSeriesToExcelBlock_ConditionTable2.png)
+</p>**
 
 **<p style="text-align: center;">
 Condition Table used with `WriteTimeSeriesToExcelBlock` Command for a Color Scale
@@ -203,7 +227,9 @@ Condition Table used with `WriteTimeSeriesToExcelBlock` Command for a Color Scal
 
 The resulting output is as shown below.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcelBlock Output2](WriteTimeSeriesToExcelBlock_Output2.png)
+</p>**
  
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcelBlock` Command Example Output for Style Formatting (<a href="../WriteTimeSeriesToExcelBlock_Output.png">see also the full-size image</a>)

@@ -21,7 +21,9 @@ using the `${tsensemble:Property}` notation.  Property names are case-specific.
 
 The following dialog is used to edit the command and illustrates the syntax of the command for built-in properties.
 
+**<p style="text-align: center;">
 ![SetEnsembleProperty BuiltIn](SetEnsembleProperty_BuiltIn.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetEnsembleProperty` Command Editor for Built-in Properties (<a href="../SetEnsembleProperty_BuiltIn.png">see also the full-size image</a>)
@@ -29,7 +31,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for user-defined properties.
 
+**<p style="text-align: center;">
 ![SetEnsembleProperty User](SetEnsembleProperty_User.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetEnsembleProperty` Command Editor for User-defined Properties (<a href="../SetEnsembleProperty_User.png">see also the full-size image</a>)

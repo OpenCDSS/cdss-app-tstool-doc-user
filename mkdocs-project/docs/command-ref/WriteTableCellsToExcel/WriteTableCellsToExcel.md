@@ -24,7 +24,9 @@ Excel file and consequently functionality is constrained by the features of that
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteTableCellsToExcel](WriteTableCellsToExcel.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableCellsToExcel` Command Editor (<a href="../WriteTableCellsToExcel.png">see also the full-size image</a>)

@@ -20,7 +20,9 @@ The [RunCommands](../RunCommands/RunCommands.md) commands will write to this fil
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![StartRegressionTestResultsReport](StartRegressionTestResultsReport.png)
+</p>**
 
 **<p style="text-align: center;">
 `StartRegressionTestResultsReport` Command Editor (<a href="../StartRegressionTestResultsReport.png">see also the full-size image</a>)

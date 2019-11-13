@@ -30,7 +30,9 @@ A future enhancement of this command will allow the geometry feature data to be 
 The following dialog is used to edit the command and illustrates the syntax of the command for
 point data in separate columns.
 
+**<p style="text-align: center;">
 ![WriteTableToGeoJSON](WriteTableToGeoJSON.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToGeoJSON` Command Editor for Point Data Parameters (<a href="../WriteTableToGeoJSON.png">see also the full-size image</a>)
@@ -38,7 +40,9 @@ point data in separate columns.
 
 The following figure illustrates the command syntax for layers specified with a geometry data column.
 
+**<p style="text-align: center;">
 ![WriteTableToGeoJSON_WKTGeometry](WriteTableToGeoJSON_WKTGeometry.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToGeoJSON` Command Editor for Geometry Data Parameter (<a href="../WriteTableToGeoJSON_WKTGeometry.png">see also the full-size image</a>)
@@ -46,7 +50,9 @@ The following figure illustrates the command syntax for layers specified with a 
 
 The following figure illustrates the command syntax for coordinate reference system parameter.
 
+**<p style="text-align: center;">
 ![WriteTableToGeoJSON_crs](WriteTableToGeoJSON_crs.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToGeoJSON` Command Editor for Coordinate Reference System Parameter (<a href="../WriteTableToGeoJSON_crs.png">see also the full-size image</a>)
@@ -54,7 +60,9 @@ The following figure illustrates the command syntax for coordinate reference sys
 
 The following figure illustrates the command syntax for bounding box parameters.
 
+**<p style="text-align: center;">
 ![WriteTableToGeoJSON_bbox](WriteTableToGeoJSON_bbox.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToGeoJSON` Command Editor for Bounding Box Parameters (<a href="../WriteTableToGeoJSON_bbox.png">see also the full-size image</a>)
@@ -62,7 +70,9 @@ The following figure illustrates the command syntax for bounding box parameters.
 
 The following figure illustrates the command syntax for specifying table columns to include as properties in the GeoJSON output.
 
+**<p style="text-align: center;">
 ![WriteTableToGeoJSON_Properties](WriteTableToGeoJSON_Properties.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToGeoJSON` Command Editor for Property Parameters (<a href="../WriteTableToGeoJSON_Properties.png">see also the full-size image</a>)
@@ -70,7 +80,9 @@ The following figure illustrates the command syntax for specifying table columns
 
 The following figure illustrates the command syntax for specifying the JavaScript variable for the output object.
 
+**<p style="text-align: center;">
 ![WriteTableToGeoJSON_JavaScript](WriteTableToGeoJSON_JavaScript.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToGeoJSON` Command Editor for JavaScript Parameters (<a href="../WriteTableToGeoJSON_JavaScript.png">see also the full-size image</a>)
@@ -78,7 +90,9 @@ The following figure illustrates the command syntax for specifying the JavaScrip
 
 The following figure illustrates the command syntax for specifying inserts before and after the GeoJSON content.
 
+**<p style="text-align: center;">
 ![WriteTableToGeoJSON_Inserts](WriteTableToGeoJSON_Inserts.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToGeoJSON` Command Editor for Text Insert Parameters (<a href="../WriteTableToGeoJSON_Inserts.png">see also the full-size image</a>)

@@ -43,7 +43,9 @@ information to software that processes the commands, using notation similar to t
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![Comment](Comment.png)
+</p>**
 
 **<p style="text-align: center;">
 `#` Command Editor (<a href="../Comment.png">see also the full-size image</a>)

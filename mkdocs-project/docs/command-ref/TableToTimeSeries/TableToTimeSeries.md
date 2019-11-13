@@ -67,7 +67,9 @@ An example of a table with single data value column with flags is shown in the
 following figure (note that a column is used for the location identifier
 and that the location is different for the topmost and bottommost records).
 
+**<p style="text-align: center;">
 ![TableToTimeSeries Single DataTable](TableToTimeSeries_Single_DataTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Simple Table with Data Values in a Single Column (<a href="../TableToTimeSeries_Single_DataTable.png">see also the full-size image</a>)
@@ -80,7 +82,9 @@ The following dialog is used to edit the command and illustrates the command syn
 when processing single-column data from the above example.
 Note that time series metadata are specified with command parameters (see Example 1 below).
 
+**<p style="text-align: center;">
 ![TableToTimeSeries Single](TableToTimeSeries_Single.png)
+</p>**
 
 **<p style="text-align: center;">
 `TableToTimeSeries` Command Editor for Table with Data in a Single Column (<a href="../TableToTimeSeries_Single.png">see also the full-size image</a>)
@@ -88,7 +92,9 @@ Note that time series metadata are specified with command parameters (see Exampl
 
 The following dialog is used to edit the command and illustrates the command syntax for data parameters.
 
+**<p style="text-align: center;">
 ![TableToTimeSeries Single Data](TableToTimeSeries_Single_Data.png)
+</p>**
 
 **<p style="text-align: center;">
 `TableToTimeSeries` Command Editor for Data Parameters (<a href="../TableToTimeSeries_Single_Data.png">see also the full-size image</a>)
@@ -104,7 +110,9 @@ the format is convenient for data translation.
 Use the `DataSourceColumn`, `UnitsColumn` and similar parameters to specify metadata.
 The unique list of time series will be determined from the combinations of location identifier and other metadata.
 
+**<p style="text-align: center;">
 ![TableToTimeSeries SingleMeta DataTable](TableToTimeSeries_SingleMeta_DataTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Table with Data Values in a Single Column and Metadata Provided in Other Columns (<a href="../TableToTimeSeries_SingleMeta_DataTable.png">see also the full-size image</a>)
@@ -115,7 +123,9 @@ processing single-column data from the above example.
 Time series metadata are specified with command parameters.
 The ***ValueColumn*** parameter in the ***Data*** tab is specified as “Value”.
 
+**<p style="text-align: center;">
 ![TableToTimeSeries SingleMeta](TableToTimeSeries_SingleMeta.png)
+</p>**
 
 **<p style="text-align: center;">
 `TableToTimeSeries` Command Editor for Table with Single Data Column and Metadata Columns (<a href="../TableToTimeSeries_SingleMeta.png">see also the full-size image</a>)
@@ -125,7 +135,9 @@ The ***ValueColumn*** parameter in the ***Data*** tab is specified as “Value�
 
 An example of multi-column data with flags for each time series is shown in the following figure:
 
+**<p style="text-align: center;">
 ![TableToTimeSeries Multiple DataTable](TableToTimeSeries_Multiple_DataTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Table with Data Values in Multiple Data Columns (<a href="../TableToTimeSeries_Multiple_DataTable.png">see also the full-size image</a>)
@@ -134,7 +146,9 @@ Table with Data Values in Multiple Data Columns (<a href="../TableToTimeSeries_M
 The following dialog is used to edit the command and illustrates
 the syntax for the command when processing multi-column data from the above table.
 
+**<p style="text-align: center;">
 ![TableToTimeSeries Multiple](TableToTimeSeries_Multiple.png)
+</p>**
 
 **<p style="text-align: center;">
 `TableToTimeSeries` Command Editor for Table with Data in Multiple Columns (<a href="../TableToTimeSeries_Multiple.png">see also the full-size image</a>)
@@ -142,7 +156,9 @@ the syntax for the command when processing multi-column data from the above tabl
 
 The following figure illustrates editing the corresponding data parameters.
 
+**<p style="text-align: center;">
 ![TableToTimeSeries Multiple Data](TableToTimeSeries_Multiple_Data.png)
+</p>**
 
 **<p style="text-align: center;">
 `TableToTimeSeries` Command Editor for Table with Data in Multiple Columns, Data Tab (<a href="../TableToTimeSeries_Multiple_Data.png">see also the full-size image</a>)
@@ -152,7 +168,9 @@ The following figure illustrates editing the corresponding data parameters.
 
 The following data example illustrates monthly time series values specified in a block.
 
+**<p style="text-align: center;">
 ![TableToTimeSeries Block DataTable](TableToTimeSeries_Block_DataTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Table with Block Data Format (<a href="../TableToTimeSeries_Block_DataTable.png">see also the full-size image</a>)
@@ -161,7 +179,9 @@ Table with Block Data Format (<a href="../TableToTimeSeries_Block_DataTable.png"
 The following dialog is used to edit the command and illustrates the
 syntax for the command when processing block data from the above table.
 
+**<p style="text-align: center;">
 ![TableToTimeSeries Block](TableToTimeSeries_Block.png)
+</p>**
 
 **<p style="text-align: center;">
 `TableToTimeSeries` Command Editor for Table with Data in Block Format (<a href="../TableToTimeSeries_Block.png">see also the full-size image</a>)
@@ -170,7 +190,9 @@ syntax for the command when processing block data from the above table.
 The following dialog is used to edit the command and illustrates the
 syntax for block format, `LocationID` parameter.
 
+**<p style="text-align: center;">
 ![TableToTimeSeries Block_Location](TableToTimeSeries_Block_Location.png)
+</p>**
 
 **<p style="text-align: center;">
 `TableToTimeSeries` Command Editor for Table with Data in Block Format, LocationID Parameter (<a href="../TableToTimeSeries_Block_Location.png">see also the full-size image</a>)
@@ -179,7 +201,9 @@ syntax for block format, `LocationID` parameter.
 The following dialog is used to edit the command and illustrates the
 syntax for block format, data parameter.
 
+**<p style="text-align: center;">
 ![TableToTimeSeries Block_Block](TableToTimeSeries_Block_Block.png)
+</p>**
 
 **<p style="text-align: center;">
 `TableToTimeSeries` Command Editor for Table with Data in Block Format, Block Parameters (<a href="../TableToTimeSeries_Block_Block.png">see also the full-size image</a>)

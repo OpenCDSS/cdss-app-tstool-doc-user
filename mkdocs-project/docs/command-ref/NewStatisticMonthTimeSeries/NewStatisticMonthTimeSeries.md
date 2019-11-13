@@ -36,7 +36,9 @@ hour 0 or later of the following month.  **Handling other than daily data is not
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![NewStatisticMonthTimeSeries](NewStatisticMonthTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewStatisticMonthTimeSeries` Command Editor (<a href="../NewStatisticMonthTimeSeries.png">see also the full-size image</a>)

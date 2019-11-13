@@ -56,7 +56,9 @@ How are leap years handled in the data array (assume sequential based on the spe
 
 See the following figure for examples of TSTool time series results when reading RDF ensembles.
 
+**<p style="text-align: center;">
 ![ReadRiverWare_RDF_TimeSeries](ReadRiverWare_RDF_TimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadRiverWare` Ensemble Time Series Results (<a href="../ReadRiverWare_RDF_TimeSeries.png">see also the full-size image</a>)
@@ -64,7 +66,9 @@ See the following figure for examples of TSTool time series results when reading
 
 See the following figure for examples of TSTool ensemble results when reading RDF ensembles.
 
+**<p style="text-align: center;">
 ![ReadRiverWare_RDF_Ensembles](ReadRiverWare_RDF_Ensembles.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadRiverWare` Ensemble Results (<a href="../ReadRiverWare_RDF_Ensembles.png">see also the full-size image</a>)
@@ -74,7 +78,9 @@ See the following figure for examples of TSTool ensemble results when reading RD
 
 The following dialog is used to edit the command and illustrates the command syntax for a single time series `*.dat` file:
 
+**<p style="text-align: center;">
 ![ReadRiverWare](ReadRiverWare.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadRiverWare` Command Editor (<a href="../ReadRiverWare.png">see also the full-size image</a>)
@@ -82,7 +88,9 @@ The following dialog is used to edit the command and illustrates the command syn
 
 The following dialog is used to edit the command and illustrates the command syntax for an RDF file:
 
+**<p style="text-align: center;">
 ![ReadRiverWare_RDF](ReadRiverWare_RDF.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadRiverWare` Command Editor for RDF (<a href="../ReadRiverWare_RDF.png">see also the full-size image</a>)

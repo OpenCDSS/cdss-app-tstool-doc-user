@@ -19,7 +19,9 @@ For example, use the command to insert scenario time series into an ensemble.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![InsertTimeSeriesIntoEnsemble](InsertTimeSeriesIntoEnsemble.png)
+</p>**
 
 **<p style="text-align: center;">
 `InsertTimeSeriesIntoEnsemble` Command Editor (<a href="../InsertTimeSeriesIntoEnsemble.png">see also the full-size image</a>)

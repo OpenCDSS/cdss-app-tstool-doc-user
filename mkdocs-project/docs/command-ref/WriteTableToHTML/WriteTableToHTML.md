@@ -22,7 +22,9 @@ Default styles are written at the top of the HTML.  In the future the command ma
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![WriteTableToHTML](WriteTableToHTML.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToHTML` Command Editor (<a href="../WriteTableToHTML.png">see also the full-size image</a>)

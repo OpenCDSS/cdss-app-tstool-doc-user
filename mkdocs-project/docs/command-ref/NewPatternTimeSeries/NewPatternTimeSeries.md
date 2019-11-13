@@ -18,7 +18,9 @@ This command is useful for generating data to test other commands.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![NewPatternTimeSeries](NewPatternTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewPatternTimeSeries` Command Editor (<a href="../NewPatternTimeSeries.png">see also the full-size image</a>)

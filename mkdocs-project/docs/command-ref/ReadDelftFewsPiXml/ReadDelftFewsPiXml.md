@@ -18,7 +18,9 @@ See the [Delft FEWS Input Type Appendix](../../datastore-ref/Delft-FEWS-PI-XML/D
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
+**<p style="text-align: center;">
 ![ReadDelftFewsPiXml](ReadDelftFewsPiXml.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadDelftFewsPiXml` Command Editor for Time Series Parameters (<a href="../ReadDelftFewsPiXml.png">see also the full-size image</a>)
@@ -26,7 +28,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for ensemble parameters.
 
+**<p style="text-align: center;">
 ![ReadDelftFewsPiXml Ensemble](ReadDelftFewsPiXml_Ensemble.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadDelftFewsPiXml` Command Editor for Ensemble Parameters (<a href="../ReadDelftFewsPiXml_Ensemble.png">see also the full-size image</a>)

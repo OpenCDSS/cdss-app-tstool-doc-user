@@ -23,7 +23,9 @@ This command is useful for ordering time series before writing output or visuali
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SortTimeSeries](SortTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `SortTimeSeries` Command Editor Showing Parameters to Sort by TSID or Alias (<a href="../SortTimeSeries.png">see also the full-size image</a>)
@@ -31,7 +33,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command when sorting by a property.
 
+**<p style="text-align: center;">
 ![SortTimeSeries Property](SortTimeSeries_Property.png)
+</p>**
 
 **<p style="text-align: center;">
 `SortTimeSeries` Command Editor Showing Parameters to Sort by a Time Series Property (<a href="../SortTimeSeries_Property.png">see also the full-size image</a>)
@@ -39,7 +43,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for property formatting.
 
+**<p style="text-align: center;">
 ![SortTimeSeries PropertyFormat](SortTimeSeries_PropertyFormat.png)
+</p>**
 
 **<p style="text-align: center;">
 `SortTimeSeries` Command Editor Showing Parameters to Sort by a Time Series Property (<a href="../SortTimeSeries_PropertyFormat.png">see also the full-size image</a>)

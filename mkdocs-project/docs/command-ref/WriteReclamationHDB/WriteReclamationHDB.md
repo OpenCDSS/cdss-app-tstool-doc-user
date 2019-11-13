@@ -126,7 +126,9 @@ Time series or ensemble to write are specified with shared parameters.
 Currently the `site_name` and `site_common_name` are not required to be unique in HDB and
 therefore specifying the unique `site_datatype_id` (SDI) is the only way to ensure that the proper time series is being selected.
 
+**<p style="text-align: center;">
 ![WriteReclamationHDB](WriteReclamationHDB.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteReclamationHDB` Command Editor for "Real" Time Series (<a href="../WriteReclamationHDB.png">see also the full-size image</a>)
@@ -136,7 +138,9 @@ therefore specifying the unique `site_datatype_id` (SDI) is the only way to ensu
 
 The following figure illustrates general command parameters.
 
+**<p style="text-align: center;">
 ![WriteReclamationHDB_General](WriteReclamationHDB_General.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteReclamationHDB` Command Editor for General Parameters (<a href="../WriteReclamationHDB_General.png">see also the full-size image</a>)
@@ -144,7 +148,9 @@ The following figure illustrates general command parameters.
 
 The following figure illustrates output property parameters.
 
+**<p style="text-align: center;">
 ![WriteReclamationHDB_OutputProperties](WriteReclamationHDB_OutputProperties.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteReclamationHDB` Command Editor for Output Property Parameters (<a href="../WriteReclamationHDB_OutputProperties.png">see also the full-size image</a>)
@@ -152,7 +158,9 @@ The following figure illustrates output property parameters.
 
 The following figure illustrates developer property parameters.
 
+**<p style="text-align: center;">
 ![WriteReclamationHDB_Developer](WriteReclamationHDB_Developer.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteReclamationHDB` Command Editor for Developer Property Parameters (<a href="../WriteReclamationHDB_Developer.png">see also the full-size image</a>)
@@ -174,7 +182,9 @@ The model run identifier can be specified in one of two ways.
 The example in the following shows parameter values for both methods for illustration;
 	however, the directly selected `ModelRunID` will be used in this case.
 
+**<p style="text-align: center;">
 ![WriteReclamationHDB_Model](WriteReclamationHDB_Model.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteReclamationHDB` Command Editor for Single Model Time Series (<a href="../WriteReclamationHDB_Model.png">see also the full-size image</a>)
@@ -189,7 +199,9 @@ The TSTool ensemble to write is specified with the `TSList=EnsembleID` and `Ense
 In the following example a new ensemble is being written.
 The time series trace number and model run date are both taken from the ensemble time series properties when the command is run.
 
+**<p style="text-align: center;">
 ![WriteReclamationHDB_Ensemble](WriteReclamationHDB_Ensemble.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteReclamationHDB` Command Editor for Ensemble of Model Time Series (<a href="../WriteReclamationHDB_Ensemble.png">see also the full-size image</a>)

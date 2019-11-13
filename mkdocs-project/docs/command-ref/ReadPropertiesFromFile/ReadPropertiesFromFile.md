@@ -43,7 +43,9 @@ the command detects the format for each property and creates an appropriate obje
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![ReadPropertiesFromFile](ReadPropertiesFromFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadPropertiesFromFile` Command Editor (<a href="../ReadPropertiesFromFile.png">see also the full-size image</a>)

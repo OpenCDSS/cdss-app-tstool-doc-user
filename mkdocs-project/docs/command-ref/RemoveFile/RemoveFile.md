@@ -23,7 +23,9 @@ Even read-only files may be removed by this command, depending on how the operat
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![RemoveFile](RemoveFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `RemoveFile` Command Editor (<a href="../RemoveFile.png">see also the full-size image</a>)

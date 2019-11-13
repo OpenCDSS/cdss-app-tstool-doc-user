@@ -29,7 +29,9 @@ Missing values in the time series generally will not be updated, although the as
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![TableTimeSeriesMath](TableTimeSeriesMath.png)
+</p>**
 
 **<p style="text-align: center;">
 `TableTimeSeriesMath` Command Editor (<a href="../TableTimeSeriesMath.png">see also the full-size image</a>)

@@ -23,7 +23,9 @@ In the future additional parameters may be added to control handling of numbers 
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![ReadTableFromDBF](ReadTableFromDBF.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableFromDBF` Command Editor (<a href="../ReadTableFromDBF.png">see also the full-size image</a>)

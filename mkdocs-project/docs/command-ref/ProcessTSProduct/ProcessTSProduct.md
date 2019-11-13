@@ -88,7 +88,9 @@ The ***Browse*** button can be used to select the time series product descriptio
 (if a relative path is desired, delete the leading path after the select or
 use the ***Remove Working Directory from TSP*** button).
 
+**<p style="text-align: center;">
 ![ProcessTSProduct](ProcessTSProduct.png)
+</p>**
 
 **<p style="text-align: center;">
 `ProcessTSProduct` Command Editor (<a href="../ProcessTSProduct.png">see also the full-size image</a>)

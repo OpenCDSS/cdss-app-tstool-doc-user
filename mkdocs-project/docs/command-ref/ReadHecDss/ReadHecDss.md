@@ -25,7 +25,9 @@ However, TSTool will convert this to `0000` of the next day.  Year, month, and d
 The following dialog is used to edit the command and illustrates the syntax of the command.
 In the future, it is envisioned that choices for A – F parts will be made available using data from the file.
 
+**<p style="text-align: center;">
 ![ReadHecDss](ReadHecDss.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadHecDss` Command Editor (<a href="../ReadHecDss.png">see also the full-size image</a>)

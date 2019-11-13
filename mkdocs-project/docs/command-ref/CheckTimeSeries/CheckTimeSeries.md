@@ -29,7 +29,9 @@ in cases where data periodically reset to a starting value, prior to performing 
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
+**<p style="text-align: center;">
 ![CheckTimeSeries](CheckTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `CheckTimeSeries` Command Editor for Time Series Parameters (<a href="../CheckTimeSeries.png">see also the full-size image</a>)
@@ -37,7 +39,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for criteria and action parameters.
 
+**<p style="text-align: center;">
 ![CheckTimeSeries Criteria](CheckTimeSeries_Criteria.png)
+</p>**
 
 **<p style="text-align: center;">
 `CheckTimeSeries` Command Editor for Check Criteria and Action Parameters (<a href="../CheckTimeSeries_Criteria.png">see also the full-size image</a>)
@@ -45,7 +49,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for analysis period and window parameters.
 
+**<p style="text-align: center;">
 ![CheckTimeSeries Time](CheckTimeSeries_Time.png)
+</p>**
 
 **<p style="text-align: center;">
 `CheckTimeSeries` Command Editor for Analysis Period and Window Parameters (<a href="../CheckTimeSeries_Time.png">see also the full-size image</a>)
@@ -53,7 +59,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output table parameters.
 
+**<p style="text-align: center;">
 ![CheckTimeSeries Table](CheckTimeSeries_Table.png)
+</p>**
 
 **<p style="text-align: center;">
 `CheckTimeSeries` Command Editor for Output Table Parameters (<a href="../CheckTimeSeries_Table.png">see also the full-size image</a>)
@@ -61,7 +69,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output property parameters.
 
+**<p style="text-align: center;">
 ![CheckTimeSeries Properties](CheckTimeSeries_Properties.png)
+</p>**
 
 **<p style="text-align: center;">
 `CheckTimeSeries` Command Editor for Output Properties Parameters (<a href="../CheckTimeSeries_Properties.png">see also the full-size image</a>)

@@ -27,7 +27,9 @@ support for well-known text for other geometry types will be added.
 
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
 
+**<p style="text-align: center;">
 ![WriteTableToKml](WriteTableToKml.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToKml` Command Editor for General Parameters (<a href="../WriteTableToKml.png">see also the full-size image</a>)
@@ -35,7 +37,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following figure illustrates the command syntax for point data in separate columns.
 
+**<p style="text-align: center;">
 ![WriteTableToKml_Point](WriteTableToKml_Point.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToKml` Command Editor for Point Data Parameters (<a href="../WriteTableToKml_Point.png">see also the full-size image</a>)
@@ -43,7 +47,9 @@ The following figure illustrates the command syntax for point data in separate c
 
 The following figure illustrates the command syntax for layers specified with a geometry data column.
 
+**<p style="text-align: center;">
 ![WriteTableToKml_Geometry](WriteTableToKml_Geometry.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToKml` Command Editor for Geometry Data Parameters (<a href="../WriteTableToKml_Geometry.png">see also the full-size image</a>)
@@ -51,7 +57,9 @@ The following figure illustrates the command syntax for layers specified with a 
 
 The following figure illustrates the command syntax for KML inserts.  This allows KML elements to be inserted in the KML file.
 
+**<p style="text-align: center;">
 ![WriteTableToKml_KmlInsert](WriteTableToKml_KmlInsert.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToKml` Command Editor for KML Insert Parameters (<a href="../WriteTableToKml_KmlInsert.png">see also the full-size image</a>)
@@ -59,7 +67,9 @@ The following figure illustrates the command syntax for KML inserts.  This allow
 
 The following figure illustrates the command syntax for marker style parameters.
 
+**<p style="text-align: center;">
 ![WriteTableToKml_Styles](WriteTableToKml_Styles.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToKml` Command Editor for Marker Style Parameters (<a href="../WriteTableToKml_Styles.png">see also the full-size image</a>)

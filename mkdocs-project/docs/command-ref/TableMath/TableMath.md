@@ -30,7 +30,9 @@ Inputs can be any combination of double precision and integer values.
 The following dialog is used to edit the command and illustrates the syntax of the
 command (in this case illustrating how values in a column named `ts1` are added to the number `.1111.`
 
+**<p style="text-align: center;">
 ![TableMath](TableMath.png)
+</p>**
 
 **<p style="text-align: center;">
 `TableMath` Command Editor (<a href="../TableMath.png">see also the full-size image</a>)
@@ -49,11 +51,11 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`TableID`|The identifier for the table to process.|None – must be specified.|
-|`Input1`|First input column name.|None – must be specified.|
+|`TableID`|The identifier for the table to process, can be specified with `${Property}`.|None – must be specified.|
+|`Input1`|First input column name, can be specified with `${Property}`.|None – must be specified.|
 |`Operator`|The operator to be applied as follows:<br>`Input1 Operator Input2 = Output`<br>For example: `Input1 * Input2 = Output`|None – must be specified.|
-|`Input2`|Second input column name, or a constant value to use as input.|Required for some operators.  Not required for `ToInteger`.|
-|`Output`|Output column name.  If the column is not found it will be added to the table and will contain the results of processing.|None – must be specified.|
+|`Input2`|Second input column name, or a constant value to use as input, can be specified with `${Property}`.|Required for some operators.  Not required for `ToInteger`.|
+|`Output`|Output column name.  If the column is not found it will be added to the table and will contain the results of processing, can be specified with `${Property}`.|None – must be specified.|
 |`NonValue`|The value to use in cases where an output result could not be computed (missing input, division by zero).  Null will result in blanks in output whereas NaN may be shown in some output products, depending on the specifications for the format.|Null|
 
 ## Examples ##

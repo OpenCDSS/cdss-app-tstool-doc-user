@@ -36,6 +36,7 @@ nav:
   - AppendTable: command-ref/AppendTable/AppendTable.md
   - ARMA: command-ref/ARMA/ARMA.md
   - Blend: command-ref/Blend/Blend.md
+  - Break: command-ref/Break/Break.md
   - CalculateTimeSeriesStatistic: command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md
   - ChangeInterval: command-ref/ChangeInterval/ChangeInterval.md
   - ChangePeriod: command-ref/ChangePeriod/ChangePeriod.md
@@ -49,6 +50,7 @@ nav:
   - CompareTimeSeries: command-ref/CompareTimeSeries/CompareTimeSeries.md
   - ComputeErrorTimeSeries: command-ref/ComputeErrorTimeSeries/ComputeErrorTimeSeries.md
   - ConfigureLogging: command-ref/ConfigureLogging/ConfigureLogging.md
+  - Continue: command-ref/Continue/Continue.md
   - ConvertDataUnits: command-ref/ConvertDataUnits/ConvertDataUnits.md
   - Copy: command-ref/Copy/Copy.md
   - CopyEnsemble: command-ref/CopyEnsemble/CopyEnsemble.md

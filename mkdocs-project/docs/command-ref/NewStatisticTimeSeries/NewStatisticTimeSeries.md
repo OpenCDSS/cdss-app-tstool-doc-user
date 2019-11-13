@@ -29,7 +29,9 @@ but the `AllowMissingCount` and `MinimumSampleSize` parameters control the impac
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![NewStatisticTimeSeries](NewStatisticTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewStatisticTimeSeries` Command Editor (<a href="../NewStatisticTimeSeries.png">see also the full-size image</a>)
@@ -98,7 +100,9 @@ The following figure illustrates the results.
 Note that by default the statistic is computed even if missing values exist in the sample.
 This can be controlled by the `AllowMissingCount` and `MinimumSampleSize` parameters.
 
+**<p style="text-align: center;">
 ![NewStatisticTimeSeries Table](NewStatisticTimeSeries_Table.png)
+</p>**
 
 ## Troubleshooting ##
 

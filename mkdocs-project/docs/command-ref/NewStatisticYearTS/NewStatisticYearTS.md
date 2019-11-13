@@ -38,7 +38,9 @@ actually recorded at hour 0 or later of the following year.
 
 The following dialog is used to edit the command and illustrates the syntax of the command for input parameters.
 
+**<p style="text-align: center;">
 ![NewStatisticYearTS](NewStatisticYearTS.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewStatisticYearTS` Command Editor (<a href="../NewStatisticYearTS.png">see also the full-size image</a>)
@@ -46,7 +48,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for distribution parameters.
 
+**<p style="text-align: center;">
 ![NewStatisticYearTS Distribution](NewStatisticYearTS_Distribution.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewStatisticYearTS` Command Editor for Distribution Parameters (<a href="../NewStatisticYearTS_Distribution.png">see also the full-size image</a>)
@@ -54,7 +58,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for analysis parameters.
 
+**<p style="text-align: center;">
 ![NewStatisticYearTS Analysis](NewStatisticYearTS_Analysis.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewStatisticYearTS` Command Editor for Analysis Parameters (<a href="../NewStatisticYearTS_Analysis.png">see also the full-size image</a>)
@@ -62,7 +68,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
 
+**<p style="text-align: center;">
 ![NewStatisticYearTS Output](NewStatisticYearTS_Output.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewStatisticYearTS` Command Editor for Output Parameters (<a href="../NewStatisticYearTS_Output.png">see also the full-size image</a>)

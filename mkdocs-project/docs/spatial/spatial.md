@@ -120,7 +120,9 @@ to ensure that multiple symbols drawing on each other will still allow sufficien
 This can be applied to indicate data types collected at a location, and also data type/interval information.
 The following example shows this approach to indicate station type:
 
+**<p style="text-align: center;">
 ![SymbolExample](SymbolExample.png)
+</p>**
 
 **<p style="text-align: center;">
 Example of Symbol Layering (<a href="../SymbolExample.png">see also the full-size image</a>)
@@ -134,7 +136,9 @@ using symbols to indicate the various data intervals is not common.
 More common are maps that show a layer for real-time data and a layer for historical data,
 as shown in the following figure:
 
+**<p style="text-align: center;">
 ![GeoView_StreamSymbols](GeoView_StreamSymbols.png)
+</p>**
  
 **<p style="text-align: center;">
 Example Map Showing Real-time and Historical Data Layers (<a href="../GeoView_StreamSymbols.png">see also the full-size image</a>)
@@ -231,7 +235,9 @@ The following sections describe more specifically how to utilize the links betwe
 
 To open a map in TSTool, first select the ***View / Map*** menu item, which will display the following window.
 
+**<p style="text-align: center;">
 ![GeoView_Window_Blank](GeoView_Window_Blank.png)
+</p>**
 
 **<p style="text-align: center;">
 Map (GeoView) Window when First Opened (<a href="../GeoView_Window_Blank.png">see also the full-size image</a>)
@@ -239,7 +245,9 @@ Map (GeoView) Window when First Opened (<a href="../GeoView_Window_Blank.png">se
 
 In this window, select ***File / Open Project*** and select a GeoView Project File (`*.gvp`), as shown below.
 
+**<p style="text-align: center;">
 ![GeoView_Window_OpenProject](GeoView_Window_OpenProject.png)
+</p>**
 
 **<p style="text-align: center;">
 Opening a Map (GeoView Project) File (<a href="../GeoView_Window_OpenProject.png">see also the full-size image</a>)
@@ -259,7 +267,9 @@ To select time series on the map, first select time series in the upper part of 
 TSTool interface and then select the
 ***Tools / Select*** on Map menu item, as illustrated in the following figure:
  
+**<p style="text-align: center;">
 ![Menu_Tools_SelectOnMap](Menu_Tools_SelectOnMap.png)
+</p>**
 
 **<p style="text-align: center;">
 Example of Selecting Time Series on the Map (<a href="../Menu_Tools_SelectOnMap.png">see also the full-size image</a>)
@@ -281,7 +291,9 @@ the attributes indicated by the `Layer_Location` and `Layer_DataSource` lookup f
 3. Matching features are selected and the map zooms to highlight the features,
 as shown in the following figure (the arrows have been added for illustration).
 
+**<p style="text-align: center;">
 ![Menu_Tools_SelectOnMap2](Menu_Tools_SelectOnMap2.png)
+</p>**
 
 **<p style="text-align: center;">
 Map after Using Time Series to Select Features (<a href="../Menu_Tools_SelectOnMap2.png">see also the full-size image</a>)
@@ -335,7 +347,10 @@ This capability is therefore useful for identifying available data for an area.
 
 If not all selected features in a layer correspond to time series, a warning similar to the following may be shown:
  
+**<p style="text-align: center;">
 ![GeoView_SelectLayer_Warning](GeoView_SelectLayer_Warning.png)
+</p>**
+
 **<p style="text-align: center;">
 Selection Warning
 </p>**

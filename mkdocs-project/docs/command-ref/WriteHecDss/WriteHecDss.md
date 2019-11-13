@@ -15,7 +15,7 @@ The `WriteHecDss` command writes time series to a HEC-DSS file.
 See the [HEC-DSS Input Type Appendix](../../datastore-ref/HEC-DSS/HEC-DSS.md)
 for information about how time series properties are output to HEC-DSS files.
 Current limitations of the command are:
-	
+
 * Irregular time series are not supported – the focus of initial development has been regular interval time series.
 * 24-hour time series in TSTool cannot be written to HEC-DSS because HEC-DSS only supports 1DAY interval.
 Therefore, the time series must be converted to a daily time series before writing.
@@ -33,9 +33,9 @@ in order to minimize performance degradation for multiple write commands.
 However, this will lock the HEC-DSS file so that other commands or programs cannot perform file manipulation, such as removing the file.
 The connections will automatically time out after several minutes.
 A future enhancement will ensure that the file connections can be closed.  See the Close command parameter.
-	
+
 The A-F parts of the HEC-DSS time series pathname by default are taken from the time series properties, as follows:
-	
+
 * The A part is taken from the time series location type.
 * The B part is taken from the time series location.
 * The C part is taken from the time series data type.
@@ -50,7 +50,9 @@ The parameter values will apply to all time series being written.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteHecDss](WriteHecDss.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteHecDss` Command Editor (<a href="../WriteHecDss.png">see also the full-size image</a>)

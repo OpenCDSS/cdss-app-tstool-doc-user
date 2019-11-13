@@ -90,7 +90,9 @@ The dialog is used to select a server and database for the State of Colorado’s
 A HydroBase database can also be selected from the ***File / Open / HydroBase...*** menu.
 The following example illustrates using HydroBase on a local computer.
 
+**<p style="text-align: center;">
 ![Menu_Open_HydroBase](Menu_Open_HydroBase.png)
+</p>**
 
 **<p style="text-align: center;">
 Select HydroBase Database Dialog
@@ -111,7 +113,9 @@ A message is displayed in the upper left letting the user know that
 data connections are still being initialized for configured datastores.
 Trying to use commands that depend on data connections that have not been initialized will result in errors.
 
+**<p style="text-align: center;">
 ![GUI_MainWait](GUI_MainWait.png)
+</p>**
 
 **<p style="text-align: center;">
 TSTool At Startup, Waiting for Data Connections to be Initialized (<a href="../GUI_MainWait.png">see also the full-size image</a>)
@@ -128,7 +132,9 @@ Status and progress information is displayed at the bottom of the main
 window and also in the borders around main panels (e.g.,
 to show how many items are in a list and how many are selected).
 
+**<p style="text-align: center;">
 ![GUI_MainBlank](GUI_MainBlank.png)
+</p>**
 
 **<p style="text-align: center;">
 Initial TSTool Interface (<a href="../GUI_MainBlank.png">see also the full-size image</a>)
@@ -204,7 +210,9 @@ properties to ensure that the TSID is correct,
 and an indicator will be shown for time series that could not be retrieved.
 This may result in a slight pause but helps ensure that commands are functional.
 
+**<p style="text-align: center;">
 ![GUI_MainWithCommands](GUI_MainWithCommands.png)
+</p>**
 
 **<p style="text-align: center;">
 TSTool after Pressing Get Time Series List and selecting from Time Series List (<a href="../GUI_MainWithCommands.png">see also the full-size image</a>)
@@ -263,7 +271,9 @@ The command list also includes left and right gutters to display graphics that h
 The following figure illustrates a command with an error (the first time series
 identifier has been edited to include an x, resulting in an invalid identifier). 
 
+**<p style="text-align: center;">
 ![CommandListError](CommandListError.png)
+</p>**
 
 **<p style="text-align: center;">
 Command List Illustrating Error
@@ -313,7 +323,9 @@ The commands in the ***Commands*** list are processed by pressing the
 The time series and other output that result from processing are
 listed in the bottom of the main interface, as shown in the following figure:
 
+**<p style="text-align: center;">
 ![GUI_MainWithTS](GUI_MainWithTS.png)
+</p>**
 
 **<p style="text-align: center;">
 TSTool after Running Commands (<a href="../GUI_MainWithTS.png">see also the full-size image</a>)
@@ -388,7 +400,9 @@ The TSTool interface also provides an intermediary step to using
 graph templates specifically for ensembles.
 If ***Graph – Ensemble*** is selected for a time series, the following dialog will be shown.
 
+**<p style="text-align: center;">
 ![Menu_Results_Graph_Ensemble](Menu_Results_Graph_Ensemble.png)
+</p>**
 
 **<p style="text-align: center;">
 Results – Graph Ensemble Dialog (<a href="../Menu_Results_Graph_Ensemble.png">see also the full-size image</a>)
@@ -414,7 +428,9 @@ as shown below.  In this case there is no need to create a new ensemble since it
 Therefore, input is provided to add statistics time series to the output,
 and specify the graph template to configure the graph.
 
+**<p style="text-align: center;">
 ![Menu_Results_Graph_Ensemble](Menu_Results_Graph_Ensemble.png)
+</p>**
 
 **<p style="text-align: center;">
 Results – Graph Ensemble Dialog (<a href="../Menu_Results_Graph_Ensemble.png">see also the full-size image</a>)
@@ -427,7 +443,9 @@ The remainder of this chapter summarizes the TSTool menus.
 The File menu provides standard input and output features as described below.
 Some menus are visible only when certain input types are enabled or when time series have been processed.
 
+**<p style="text-align: center;">
 ![Menu_File](Menu_File.png)
+</p>**
 
 **<p style="text-align: center;">
 File Menu
@@ -440,7 +458,9 @@ A new command file name will be requested when the commands are saved.
 
 ### File / Open – Open Command File or Databases ###
 
+**<p style="text-align: center;">
 ![Menu_File_Open](Menu_File_Open.png)
+</p>**
 
 **<p style="text-align: center;">
 File / Open Menu
@@ -472,7 +492,9 @@ however, the menus are useful for development and troubleshooting.
 
 ### File / Save – Save Command File, and Time Series ###
 
+**<p style="text-align: center;">
 ![Menu_File_Save](Menu_File_Save.png)
+</p>**
 
 **<p style="text-align: center;">
 File / Save Menu
@@ -505,7 +527,9 @@ This is useful when editing and troubleshooting commands.
 
 ### Properties for Commands Run, TSTool Session, and Input Types ###
 
+**<p style="text-align: center;">
 ![Menu_File_Properties](Menu_File_Properties.png)
+</p>**
 
 **<p style="text-align: center;">
 File / Properties Menu
@@ -514,7 +538,9 @@ File / Properties Menu
 The ***File / Properties / Commands Run*** menu item displays information from the
 last time that the commands were run, including global properties that impact results.
 
+**<p style="text-align: center;">
 ![Menu_File_PropertiesRun](Menu_File_PropertiesRun.png)
+</p>**
 
 **<p style="text-align: center;">
 Properties of the Last Commands Run (<a href="../Menu_File_PropertiesRun.png">see also the full-size image</a>)
@@ -523,7 +549,9 @@ Properties of the Last Commands Run (<a href="../Menu_File_PropertiesRun.png">se
 This information is useful for troubleshooting processing. 
 The ***File / Properties / TSTool Session*** menu item displays information about the current TSTool session, as follows.
 
+**<p style="text-align: center;">
 ![Menu_File_Properties_TSToolSession](Menu_File_Properties_TSToolSession.png)
+</p>**
 
 **<p style="text-align: center;">
 TSTool Session Properties (<a href="../Menu_File_Properties_TSToolSession.png">see also the full-size image</a>)
@@ -537,7 +565,9 @@ and the water districts that are in the database being queried.
 The water districts are determined from the structure table in HydroBase.
 The information that is shown is consistent with that shown by other State of Colorado tools and is useful for troubleshooting.
 
+**<p style="text-align: center;">
 ![Menu_File_Properties_HydroBase](Menu_File_Properties_HydroBase.png)
+</p>**
 
 **<p style="text-align: center;">
 HydroBase Properties Dialog (<a href="../Menu_File_Properties_HydroBase.png">see also the full-size image</a>)
@@ -573,7 +603,9 @@ Edit options are enabled and disabled depending on the status of the ***Commands
 Specific edit features are described below.
 Right clicking over the ***Commands*** list provides a popup menu with choices similar to those described below.
 
+**<p style="text-align: center;">
 ![Menu_Edit](Menu_Edit.png)
+</p>**
 
 **<p style="text-align: center;">
 Edit Menu
@@ -647,7 +679,9 @@ Alternatively, insert a read command using the ***Commands*** menu choices.
 
 ## View Menu - Display Useful Information and Map Interface ##
 
+**<p style="text-align: center;">
 ![Menu_View](Menu_View.png)
+</p>**
 
 **<p style="text-align: center;">
 View Menu
@@ -673,7 +707,9 @@ This is useful if the command file has generated many graphs and the user wishes
 
 The ***Commands*** menu provides several menus (as shown in the following figure), which insert commands into the Commands list.
 
+**<p style="text-align: center;">
 ![Menu_Commands](Menu_Commands.png)
+</p>**
 
 **<p style="text-align: center;">
 Commands Menu
@@ -707,7 +743,9 @@ Time series commands are organized into the following categories:
 
 The ***Commands(Table)*** menu provides commands for table processing.
 
+**<p style="text-align: center;">
 ![Menu_CommandsTable](Menu_CommandsTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Commands(Table) Menu
@@ -731,7 +769,9 @@ The [Commands Chapter](../commands/commands.md) discusses commands in more detai
 
 The ***Run menu*** processes the ***Commands*** list to generate results.
 
+**<p style="text-align: center;">
 ![Menu_Run](Menu_Run.png)
+</p>**
 
 **<p style="text-align: center;">
 Run Menu
@@ -780,7 +820,9 @@ The ***Results*** menu displays time series that are listed in the
 right-clicking on results in the ***Time Series Results*** area.
 The time series can be viewed multiple times, using the same time series results.
 
+**<p style="text-align: center;">
 ![Menu_Results](Menu_Results.png)
+</p>**
 
 **<p style="text-align: center;">
 Results Menu
@@ -831,7 +873,9 @@ time series that are selected in the ***Time Series Results*** list.
 These features are similar to the ***Results*** features in that a level of
 additional analysis is performed to produce the data product.
 
+**<p style="text-align: center;">
 ![Menu_Tools](Menu_Tools.png)
+</p>**
 
 **<p style="text-align: center;">
 Tools Menu
@@ -866,7 +910,9 @@ Datastores and input types will not be listed in the user configuration
 file by default and must be added to the file with a text editor.
 Once added, the ***Tools / Options*** editor will allow the settings to be toggled and rewritten to the configuration files.
 
+**<p style="text-align: center;">
 ![Menu_Tools_Options_InputTypes](Menu_Tools_Options_InputTypes.png)
+</p>**
 
 **<p style="text-align: center;">
 Datastore and Input Types that are Enabled based on Installation Configuration File (<a href="../Menu_Tools_Options_InputTypes.png">see also the full-size image</a>)
@@ -881,7 +927,9 @@ These tools are useful for troubleshooting problems.  Refer to the [Tools Chapte
 
 ## Help Menu ##
 
+**<p style="text-align: center;">
 ![Menu_Help](Menu_Help.png)
+</p>**
 
 **<p style="text-align: center;">
 Help Menu

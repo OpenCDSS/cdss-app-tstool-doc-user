@@ -26,7 +26,9 @@ additional enhancements may be needed for other intervals and data types.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteSHEF](WriteSHEF.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteSHEF` Command Editor (<a href="../WriteSHEF.png">see also the full-size image</a>)

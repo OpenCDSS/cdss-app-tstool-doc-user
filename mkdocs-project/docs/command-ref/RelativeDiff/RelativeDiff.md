@@ -23,7 +23,9 @@ The result is set to missing if either time series value is missing or the divis
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![RelativeDiff](RelativeDiff.png)
+</p>**
 
 **<p style="text-align: center;">
 `RelativeDiff` Command Editor (<a href="../RelativeDiff.png">see also the full-size image</a>)
@@ -71,7 +73,9 @@ RelativeDiff(TSID1="DelNorte",TSID2="Alamosa",Divisor=DivideByTS1,Alias=”Relat
 ```
 The input time series for the command are shown in the following figure:
 
+**<p style="text-align: center;">
 ![RelativeDiff GraphData](RelativeDiff_GraphData.png)
+</p>**
 
 **<p style="text-align: center;">
 Data for the `RelativeDiff` Command
@@ -79,7 +83,9 @@ Data for the `RelativeDiff` Command
 
 The results of processing the commands are shown in the following figure:
 
+**<p style="text-align: center;">
 ![RelativeDiff Graph](RelativeDiff_Graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Results of `RelativeDiff` Command

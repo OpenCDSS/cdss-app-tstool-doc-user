@@ -22,7 +22,9 @@ Lag and K routing is a common routing method that combines the concepts of:
 1. Lagging the inflow to simulate travel time in a reach and,
 2. Attenuating the wave to simulate the storage-outflow relationship for the reach (see figure below).
 
+**<p style="text-align: center;">
 ![VariableLagK-graph](VariableLagK-graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Lag and K Routing (<a href="../VariableLagK.png">see also the full-size image</a>)
@@ -32,16 +34,22 @@ At its fundamental level, the method solves the continuity equation using an app
 to Muskingum routing (assuming that the Muskingum parameter representing wave storage is negligible).
 The governing equation for this routing method is given as:
 
+**<p style="text-align: center;">
 ![VariableLagK-equation1](VariableLagK-equation1.png)
+</p>**
 
 The relationship assumes an outflow-storage relationship of the form:
 
+**<p style="text-align: center;">
 ![VariableLagK-equation2](VariableLagK-equation2.png)
+</p>**
 
 To ensure accurate results, *k* should be larger or equal to *&Delta;t/2*.
 For discrete time steps these relationships translate into:
 
+**<p style="text-align: center;">
 ![VariableLagK-equation3](VariableLagK-equation3.png)
+</p>**
 
 Values for `Lag` and `K` can usually be
 established by comparing routed flows to downstream observations.
@@ -112,37 +120,49 @@ is used to retrieve states that have been previously saved to the state table.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![VariableLagK](VariableLagK.png)
+</p>**
 
 **<p style="text-align: center;">
 `VariableLagK` Command Editor Showing Input Time Series Parameters (<a href="../VariableLagK.png">see also the full-size image</a>)
 </p>**
 
+**<p style="text-align: center;">
 ![VariableLagK-Analysis](VariableLagK-Analysis.png)
+</p>**
 
 **<p style="text-align: center;">
 `VariableLagK` Command Editor Showing Analysis Parameters (<a href="../VariableLagK-Analysis.png">see also the full-size image</a>)
 </p>**
 
+**<p style="text-align: center;">
 ![VariableLagK-StatesInput](VariableLagK-StatesInput.png)
+</p>**
 
 **<p style="text-align: center;">
 `VariableLagK` Command Editor Showing Input State Parameters (<a href="../VariableLagK-StatesInput.png">see also the full-size image</a>)
 </p>**
 
+**<p style="text-align: center;">
 ![VariableLagK-StatesOutput](VariableLagK-StatesOutput.png)
+</p>**
 
 **<p style="text-align: center;">
 `VariableLagK` Command Editor Showing Output State Parameters (<a href="../VariableLagK-StatesOutput.png">see also the full-size image</a>)
 </p>**
 
+**<p style="text-align: center;">
 ![VariableLagK-StatesTable](VariableLagK-StatesTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `VariableLagK` Command Editor Showing State Table Parameters (<a href="../VariableLagK-StatesTable.png">see also the full-size image</a>)
 </p>**
 
+**<p style="text-align: center;">
 ![VariableLagK-Output](VariableLagK-Output.png)
+</p>**
 
 **<p style="text-align: center;">
 `VariableLagK` Command Editor Showing Output Time Series Parameters (<a href="../VariableLagK-Output.png">see also the full-size image</a>)
@@ -217,7 +237,9 @@ VariableLagK(TSID="Inflow",FlowUnits="CMS",LagInterval="Hour",
   NewTSID="TestLoc..SQIN.3Hour.routed",Alias="Outflow")
 ```
 
+**<p style="text-align: center;">
 ![VariableLagK-StateTable-Out](VariableLagK-StateTable-Out.png)
+</p>**
 
 **<p style="text-align: center;">
 `VariableLagK` Command Editor Showing Output Parameters (<a href="../VariableLagK-StateTable-Out.png">see also the full-size image</a>)

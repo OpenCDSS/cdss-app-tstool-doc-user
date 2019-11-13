@@ -22,7 +22,9 @@ See also the [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command.
 
 The following dialog is used to edit this command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SetInputPeriod](SetInputPeriod.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetInputPeriod` Command Editor (<a href="../SetInputPeriod.png">see also the full-size image</a>)

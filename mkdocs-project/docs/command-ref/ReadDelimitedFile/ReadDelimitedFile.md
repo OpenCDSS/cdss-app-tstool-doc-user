@@ -43,7 +43,9 @@ Examples of use for the two cases are shown in the examples below.
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
 
+**<p style="text-align: center;">
 ![ReadDelimitedFile](ReadDelimitedFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadDelimitedFile` Command Editor when Specifying Command Line in Full (<a href="../ReadDelimitedFile.png">see also the full-size image</a>)
@@ -113,7 +115,9 @@ The column headings are skipped because they are assigned with a command paramet
 Because the delimiter is a tab, the space between date and time columns is NOT used
 as a delimiter and the date/time information is treated as one column.
 
+**<p style="text-align: center;">
 ![ReadDelimitedFile](ReadDelimitedFile.png)
+</p>
 
 **<p style="text-align: center;">
 `ReadDelimitedFile` Command Editor when Literally Specifying Column Names (<a href="../ReadDelimitedFile.png">see also the full-size image.</a>)
@@ -122,7 +126,9 @@ as a delimiter and the date/time information is treated as one column.
 
 The following dialog is the second data tab.
 
+**<p style="text-align: center;">
 ![ReadDelimitedFile2](ReadDelimitedFile2.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadDelimitedFile` Command Editor when Literally Specifying Column Names - Second Data Tab (<a href="../ReadDelimitedFile2.png">see also the full-size image</a>)
@@ -145,7 +151,9 @@ County,COLORADO,Adams,Alamosa,Arapahoe,Archuleta,Baca,Bent,Boulder,Broomfield,Ch
 
 The following dialog is used to edit the command and illustrates the syntax for the command when reading column names from the file.
 
+**<p style="text-align: center;">
 ![ReadDelimitedFile3](ReadDelimitedFile3.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadDelimitedFile` Command Editor when Reading Column Names from the File (<a href="../ReadDelimitedFile3.png">see also the full-size image</a>)

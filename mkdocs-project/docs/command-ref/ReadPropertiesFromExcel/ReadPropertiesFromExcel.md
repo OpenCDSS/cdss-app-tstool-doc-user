@@ -28,7 +28,9 @@ Check the TSTool ***Help / About*** menu for information on the POI version.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ReadPropertiesFromExcel](ReadPropertiesFromExcel.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadPropertiesFromExcel` Command Editor for Excel Parameters (<a href="../ReadPropertiesFromExcel.png">see also the full-size image</a>)
@@ -36,7 +38,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel to properties map.
 
+**<p style="text-align: center;">
 ![ReadPropertiesFromExcel Map](ReadPropertiesFromExcel_Map.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadPropertiesFromExcel` Command Editor for Excel to Properties Map Parameter (<a href="../ReadPropertiesFromExcel_Map.png">see also the full-size image</a>)
@@ -44,7 +48,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for properties parameters.
 
+**<p style="text-align: center;">
 ![ReadPropertiesFromExcel Properties](ReadPropertiesFromExcel_Properties.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadPropertiesFromExcel` Command Editor for Properties Parameters (<a href="../ReadPropertiesFromExcel_Properties.png">see also the full-size image</a>)

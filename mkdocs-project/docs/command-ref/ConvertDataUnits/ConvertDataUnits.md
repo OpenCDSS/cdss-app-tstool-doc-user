@@ -19,7 +19,9 @@ See also the [`Scale`](../Scale/Scale.md) command, which allows units of output 
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ConvertDataUnits](ConvertDataUnits.png)
+</p>**
 
 **<p style="text-align: center;">
 `ConvertDataUnits` Command Editor (<a href="../ConvertDataUnits.png">see also the full-size image</a>)

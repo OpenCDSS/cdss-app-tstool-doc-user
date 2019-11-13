@@ -67,7 +67,9 @@ Program InputFile Arguments
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![RunPython](RunPython.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunPython` Command Editor when Specifying Command Line in Full (<a href="../RunPython.png">see also the full-size image</a>)

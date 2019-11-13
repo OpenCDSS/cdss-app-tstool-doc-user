@@ -20,7 +20,9 @@ and a daily pattern is known at a related gage.
 The new time series is assigned the given identifier and alias.
 The following calculations are performed:
 
+**<p style="text-align: center;">
 ![equation](equation.png)
+</p>**
 
 where, for days in a month:
 
@@ -90,7 +92,9 @@ estimated and therefore the estimated value should be the same as the indicator.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![NewDayTSFromMonthAndDayTS](NewDayTSFromMonthAndDayTS.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewDayTSFromMonthAndDayTS` Command Editor (<a href="../NewDayTSFromMonthAndDayTS.png">see also the full-size image</a>)
@@ -138,7 +142,9 @@ NewDayTSFromMonthAndDayTS(NewTSID="08236000.DWR.Streamflow.Day",MonthTSID="08236
 A graph of data resulting from this command will look similar to the following.
 Note that the each time series has a similar pattern, but at different levels.
 
+**<p style="text-align: center;">
 ![NewDayTSFromMonthAndDayTS Graph](NewDayTSFromMonthAndDayTS_Graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Result of `NewDayTSFromMonthAndDayTS` Command (<a href="../NewDayTSFromMonthAndDayTS_Graph.png">see also the full-size image</a>)

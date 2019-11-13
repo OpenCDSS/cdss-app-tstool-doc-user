@@ -22,7 +22,9 @@ The alias that is assigned to the time series can be referenced by other command
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![Normalize](Normalize.png)
+</p>**
 
 **<p style="text-align: center;">
 `Normalize` Command Editor (<a href="../Normalize.png">see also the full-size image</a>)
@@ -61,7 +63,9 @@ Normalize(TSID="06730500.USGS.Streamflow.Month",Alias=”NormalizedTS”,MinValu
 ```
 The results are as follows.
 
+**<p style="text-align: center;">
 ![Normalize Graph](Normalize_Graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Results of `Normalize` Command (<a href="../Normalize_Graph.png">see also the full-size image</a>)

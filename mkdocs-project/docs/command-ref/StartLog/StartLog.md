@@ -20,7 +20,9 @@ is enforced by default.  A date or date/time can optionally be added to the log 
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![StartLog](StartLog.png)
+</p>**
 
 **<p style="text-align: center;">
 `StartLog` Command Editor (<a href="../StartLog.png">see also the full-size image</a>)
@@ -40,6 +42,7 @@ Command Parameters
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 | `LogFile`<br>**required** | The name of the file to write.  The extension of `.log` will automatically be added, if not specified.  Can be specified using `${Property}`. | None - must be specified. |
+| `MaxSize` | Maximum log file size in bytes, useful when the log file can be very large and the size needs to be restricted. | No limit to file size. |
 | `Suffix` | Indicates that a suffix will be added before the `.log` extension, one of:<br><br><ul><li>`Date` – add a date suffix of the form `YYYYMMDD`.</li><li>`DateTime` – add a date/time suffix of the form `YYYYMMDD_HHMMSS`.</li></ul><br><br>This is useful for automatically archiving logs corresponding to commands files, to allow checking the output at a later time.  However, generating date/time stamped log files can increase the amount of disk space that is used. |
 
 ## Examples ##

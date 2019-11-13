@@ -37,7 +37,9 @@ and associated data files can be easily moved from one computer to another.
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![SetWorkingDir](SetWorkingDir.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetWorkingDir` Command Editor (<a href="../SetWorkingDir.png">see also the full-size image</a>)

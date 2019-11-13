@@ -37,7 +37,9 @@ Alternatively, the time series can be filled in one direction first and then fil
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![FillProrate](FillProrate.png)
+</p>**
 
 **<p style="text-align: center;">
 `FillProrate` Command Editor (<a href="../FillProrate.png">see also the full-size image</a>)

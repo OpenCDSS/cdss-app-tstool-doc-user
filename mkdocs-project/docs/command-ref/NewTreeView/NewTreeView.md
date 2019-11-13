@@ -41,7 +41,9 @@ Or, right-click on time series product nodes in the tree to process the product.
 Consequently, the view allows the results of processing to be presented in a way that is more customized than a simple list.
 It is envisioned that additional functionality will be implemented, for example to output the view as HTML with navigation links.
 
+**<p style="text-align: center;">
 ![NewTreeView_Results](NewTreeView_Results.png)
+</p>**
 
 **<p style="text-align: center;">
 Example of Tree View in TSTool Results
@@ -51,7 +53,9 @@ Example of Tree View in TSTool Results
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![NewTreeView](NewTreeView.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewTreeView` Command Editor (<a href="../NewTreeView.png">see also the full-size image</a>)

@@ -42,7 +42,9 @@ Missing values in input will result in blanks (nulls) in output.
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing input parameters.
 
+**<p style="text-align: center;">
 ![FormatTableDateTime](FormatTableDateTime.png)
+</p>**
 
 **<p style="text-align: center;">
 `FormatTableDateTime` Command Editor Showing Input Parameters (<a href="../FormatTableDateTime.png">see also the full-size image</a>)
@@ -50,7 +52,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing time increment parameters.
 
+**<p style="text-align: center;">
 ![FormatTableDateTime](FormatTableDateTime_Increment.png)
+</p>**
 
 **<p style="text-align: center;">
 `FormatTableDateTime` Command Editor Showing Increment Parameters (<a href="../FormatTableDateTime_Increment.png">see also the full-size image</a>)
@@ -58,7 +62,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing format parameters.
 
+**<p style="text-align: center;">
 ![FormatTableDateTime](FormatTableDateTime_Format.png)
+</p>**
 
 **<p style="text-align: center;">
 `FormatTableDateTime` Command Editor Showing Format Parameters (<a href="../FormatTableDateTime_Format.png">see also the full-size image</a>)
@@ -66,7 +72,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing output parameters.
 
+**<p style="text-align: center;">
 ![FormatTableDateTime](FormatTableDateTime_Output.png)
+</p>**
 
 **<p style="text-align: center;">
 `FormatTableDateTime` Command Editor Showing Output Parameters (<a href="../FormatTableDateTime_Output.png">see also the full-size image</a>)
@@ -141,7 +149,9 @@ OuputType=DateTime
 
 Output is as shown below.
 
+**<p style="text-align: center;">
 ![FormatTableDateTime](FormatTableDateTime_Data.png)
+</p>**
 
 **<p style="text-align: center;">
 Formatted Date/time Output (<a href="../FormatTableDateTime_Data.png">see also the full-size image</a>)
@@ -159,7 +169,9 @@ OutputColumn=DateTime
 
 Output is as shown below.
 
+**<p style="text-align: center;">
 ![FormatTableDateTime](FormatTableDateTime_IncrementData.png)
+</p>**
 
 **<p style="text-align: center;">
 Formatted Date/time Output for Increment Data (<a href="../FormatTableDateTime_IncrementData.png">See also the full-size image</a>)

@@ -24,7 +24,9 @@ See also the [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFrom
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![SetTimeSeriesProperty](SetTimeSeriesProperty.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetTimeSeriesProperty` Command Editor for Built-in Properties (<a href="../SetTimeSeriesProperty.png">see also the full-size image</a>)
@@ -32,7 +34,9 @@ The following dialog is used to edit the command and illustrates the command syn
 
 The following dialog is used to edit the command and illustrates the command syntax for user-defined properties.
 
+**<p style="text-align: center;">
 ![SetTimeSeriesProperty User](SetTimeSeriesProperty_User.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetTimeSeriesProperty` Command Editor for User-defined Properties (<a href="../SetTimeSeriesProperty_User.png">see also the full-size image</a>)

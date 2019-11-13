@@ -25,7 +25,9 @@ Setting a global default with this command can make it more difficult to underst
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SetAveragePeriod](SetAveragePeriod.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetAveragePeriod` Command Editor (<a href="../SetAveragePeriod.png">see also the full-size image</a>)

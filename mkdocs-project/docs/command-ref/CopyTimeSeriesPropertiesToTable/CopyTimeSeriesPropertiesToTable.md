@@ -24,7 +24,9 @@ Time series properties typically are set in the following ways:
 The following dialog is used to edit the command and illustrates the command syntax
 (in this case the location part of the time series identifier is used to match the contents of the “loc” column in the table).
 
+**<p style="text-align: center;">
 ![CopyTimeSeriesPropertiesToTable](CopyTimeSeriesPropertiesToTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `CopyTimeSeriesPropertiesToTable` Command Editor (<a href="../CopyTimeSeriesPropertiesToTable.png">see also the full-size image</a>)

@@ -22,7 +22,9 @@ The following dialog is used to edit the command and illustrates the command syn
 (in this case the location part of the time series identifier is used to
 match the contents of the “loc” column in the table).
 
+**<p style="text-align: center;">
 ![SetTimeSeriesPropertiesFromTable](SetTimeSeriesPropertiesFromTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetTimeSeriesPropertiesFromTable` Command Editor (<a href="../SetTimeSeriesPropertiesFromTable.png">see also the full-size image</a>)

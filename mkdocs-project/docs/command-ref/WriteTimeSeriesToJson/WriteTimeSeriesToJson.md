@@ -96,7 +96,9 @@ JSON files can be viewed/edited by online tools such as [http://jsoneditoronline
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToJson](WriteTimeSeriesToJson.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToJson` Command Editor (<a href="../WriteTimeSeriesToJson.png">see also the full-size image</a>)

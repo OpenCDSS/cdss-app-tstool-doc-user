@@ -28,7 +28,9 @@ Levels are not completely consistent but the following guidelines can be followe
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![SetDebugLevel](SetDebugLevel.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetDebugLevel` Command Editor Showing Conditions Test (<a href="../SetDebugLevel.png">see also the full-size image</a>)

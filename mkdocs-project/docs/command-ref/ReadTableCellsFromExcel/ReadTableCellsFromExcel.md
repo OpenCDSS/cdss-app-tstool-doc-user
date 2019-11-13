@@ -25,7 +25,9 @@ the Excel file and consequently functionality is constrained by the features of 
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing Excel file parameters.
 
+**<p style="text-align: center;">
 ![ReadTableCellsFromExcel](ReadTableCellsFromExcel_Excel.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableCellsFromExcel` Command Editor Showing Excel File Parameters (<a href="../ReadTableCellsFromExcel_Excel.png">see also the full-size image</a>)
@@ -33,7 +35,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing Excel cell map parameters.
 
+**<p style="text-align: center;">
 ![ReadTableCellsFromExcel Map](ReadTableCellsFromExcel_Map.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableCellsFromExcel` Command Editor Showing Excel Cell Map Parameters (<a href="../ReadTableCellsFromExcel_Map.png">see also the full-size image</a>)
@@ -41,7 +45,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing table parameters.
 
+**<p style="text-align: center;">
 ![ReadTableCellsFromExcel Table](ReadTableCellsFromExcel_Table.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableCellsFromExcel` Command Editor Showing Table Parameters (<a href="../ReadTableCellsFromExcel_Table.png">see also the full-size image</a>)

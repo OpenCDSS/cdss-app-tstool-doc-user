@@ -28,7 +28,9 @@ enhancement may be made in the future to address this issue.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![FillFromTS](FillFromTS.png)
+</p>**
 
 **<p style="text-align: center;">
 `FillFromTS` Command Editor (<a href="../FillFromTS.png">see also the full-size image</a>)

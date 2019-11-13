@@ -20,7 +20,9 @@ units – a parameter may be added in the future to allow more flexibility.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteSummary](WriteSummary.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteSummary` Command Editor (<a href="../WriteSummary.png">see also the full-size image</a>)

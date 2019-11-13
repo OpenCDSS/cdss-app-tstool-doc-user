@@ -27,7 +27,9 @@ For example, columns containing floating-point numbers must use the format speci
 The following dialog is used to edit the command and illustrates the syntax of the command
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
 
+**<p style="text-align: center;">
 ![FormatTableString](FormatTableString.png)
+</p>**
 
 **<p style="text-align: center;">
 `FormatTableString` Command Editor (<a href="../FormatTableString.png">see also the full-size image</a>)

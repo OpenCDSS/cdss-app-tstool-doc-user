@@ -39,7 +39,9 @@ Property File Formats
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![WritePropertiesToFile](WritePropertiesToFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `WritePropertiesToFile` Command Editor (<a href="../WritePropertiesToFile.png">see also the full-size image</a>)

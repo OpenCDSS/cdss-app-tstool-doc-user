@@ -18,7 +18,9 @@ The `InsertTableColumn` command inserts a column into a table.  An initial value
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![InsertTableColumn](InsertTableColumn.png)
+</p>**
 
 **<p style="text-align: center;">
 `InsertTableColumn` Command Editor (<a href="../InsertTableColumn.png">see also the full-size image</a>)

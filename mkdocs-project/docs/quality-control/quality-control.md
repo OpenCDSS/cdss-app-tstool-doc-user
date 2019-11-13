@@ -257,7 +257,9 @@ An example of the TSTool main window after running the test suite is shown in th
 Note the warnings and errors, which should be addressed before releasing the
 software (in some cases commands are difficult to test and more development on the test framework is needed).
 
+**<p style="text-align: center;">
 ![GUI_MainRegressionTest](GUI_MainRegressionTest.png)
+</p>**
 
 **<p style="text-align: center;">
 TSTool Main Interface Showing Regression Test Results (<a href="../GUI_MainRegressionTest.png">see also the full-size image</a>)

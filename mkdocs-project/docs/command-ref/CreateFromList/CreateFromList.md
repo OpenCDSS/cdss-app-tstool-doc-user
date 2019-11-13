@@ -51,7 +51,9 @@ In summary, the `CreateFromList` command is useful with databases but performanc
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![CreateFromList](CreateFromList.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateFromList` Command Editor (<a href="../CreateFromList.png">see also the full-size image</a>)

@@ -61,7 +61,9 @@ Note that the `DSSUTL.EXE` location is in this case not included in the `PATH` e
 variable and is specified with the `DssutlProgram` parameter, using `${WorkingDir}`.
 The HEC-DSS and input files are relative to the working directory.
 
+**<p style="text-align: center;">
 ![RunDSSUTL](RunDSSUTL.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunDSSUTL` Command Editor when Specifying Command Line (<a href="../RunDSSUTL.png">see also the full-size image</a>)

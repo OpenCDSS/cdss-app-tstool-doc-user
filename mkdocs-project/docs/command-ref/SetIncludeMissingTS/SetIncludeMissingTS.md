@@ -25,7 +25,9 @@ and then remove the command when focusing on data.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SetIncludeMissingTS](SetIncludeMissingTS.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetIncludeMissingTS` Command Editor (<a href="../SetIncludeMissingTS.png">see also the full-size image</a>)

@@ -22,7 +22,9 @@ specified all time series from the file will be read.  An alias can be assigned 
 The following dialog is used to edit the command and illustrates the syntax.
 When a file is selected, the available data types are listed, based on the file extension (the types are not read from the file).
 
+**<p style="text-align: center;">
 ![ReadMODSIM](ReadMODSIM.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadMODSIM` Command Editor (<a href="../ReadMODSIM.png">see also the full-size image</a>)

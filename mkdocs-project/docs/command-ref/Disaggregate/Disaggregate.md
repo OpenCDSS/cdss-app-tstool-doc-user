@@ -31,7 +31,9 @@ to time when using with other applications.  If necessary, use the
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![Disaggregate](Disaggregate.png)
+</p>**
 
 **<p style="text-align: center;">
 `Disaggregate` Command Editor (<a href="../Disaggregate.png">see also the full-size image</a>)
@@ -72,13 +74,17 @@ Disaggregate(TSID="DayTS",Alias=”HourTS”,Method=Ormsbee,NewInterval=6Hour)
 
 Examples of graphs for the original and disaggregated data are shown below, for the two disaggregation methods:
 
+**<p style="text-align: center;">
 ![Disaggregate SameValue](Disaggregate_SameValue.png)
+</p>**
 
 **<p style="text-align: center;">
 Daily Input Time Series and 6-Hour Disaggregated Time Series using SameValue Method
 </p>**
 
+**<p style="text-align: center;">
 ![Disaggregate Ormsbee](Disaggregate_Ormsbee.png)
+</p>**
 
 **<p style="text-align: center;">
 Daily Input Time Series and 6-Hour Disaggregated Time Series using Ormsbee Method

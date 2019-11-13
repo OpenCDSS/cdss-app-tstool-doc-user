@@ -189,7 +189,9 @@ therefore, some tabbed panels are not completely filled.
 
 ### Time Series Properties - General ###
 
+**<p style="text-align: center;">
 ![TSView_TSProps_General](TSView_TSProps_General.png)
+</p>**
 
 **<p style="text-align: center;">
 Time Series Properties - General
@@ -214,7 +216,9 @@ The units may have been converted from the original.
 
 ### Time Series Properties - (Dynamic) Properties ###
  
+**<p style="text-align: center;">
 ![TSView_TSProps_Properties](TSView_TSProps_Properties.png)
+</p>**
 
 **<p style="text-align: center;">
 Time Series Properties – (Dynamic) Properties
@@ -227,7 +231,9 @@ from the original data source, or based on quality control or other analysis.
 
 ### Time Series Properties - Comments ###
 
+**<p style="text-align: center;">
 ![TSView_TSProps_Comments](TSView_TSProps_Comments.png)
+</p>**
 
 **<p style="text-align: center;">
 Time Series Properties - Comments
@@ -247,7 +253,9 @@ In the future, the time series dynamic properties may be used more and text comm
  
 ### Time Series Properties - Period ###
 
+**<p style="text-align: center;">
 ![TSView_TSProps_Period](TSView_TSProps_Period.png)
+</p>**
 
 **<p style="text-align: center;">
 Time Series Properties - Period
@@ -267,7 +275,9 @@ The data points may include missing data – see the data limits for additional 
  
 ### Time Series Properties - Limits ###
  
+**<p style="text-align: center;">
 ![TSView_TSProps_Limits](TSView_TSProps_Limits.png)
+</p>**
 
 **<p style="text-align: center;">
 Time Series Properties - Limits
@@ -292,7 +302,9 @@ Consequently, the limits are currently computed in a basic fashion on the raw da
 
 ### Time Series Properties - History ###
 
+**<p style="text-align: center;">
 ![TSView_TSProps_History](TSView_TSProps_History.png)
+</p>**
 
 **<p style="text-align: center;">
 Time Series Properties - History
@@ -316,7 +328,9 @@ however, the input name in the time series identifier may only include a relativ
  
 ### Time Series Properties - Data Flags ###
 
+**<p style="text-align: center;">
 ![TSView_TSProps_DataFlags](TSView_TSProps_DataFlags.png)
+</p>**
 
 **<p style="text-align: center;">
 Time Series Properties - Data Flags
@@ -351,7 +365,9 @@ and generating a series of output traces, in order to produce probabilistic simu
 The power of using traces is that a large amount of data can be used to
 visualize and study statistical qualities of the data, as shown in the following figure.
 
+**<p style="text-align: center;">
 ![Graph_Traces](Graph_Traces.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph for Time Series Traces
@@ -408,7 +424,9 @@ In many applications, the graph type often defaults to a line graph.
 The following figure illustrates a line graph for two monthly streamflow time series showing the default appearance.
 Additional properties such as titles can be defined by editing product properties.
 
+**<p style="text-align: center;">
 ![TSView_Graph_MonthFlow](TSView_Graph_MonthFlow.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Line Graph for Monthly Streamflow
@@ -548,7 +566,9 @@ is most suitable for cases where the first time series has values that are large
 An alternative to the area graph is a bar graph where `BarOverlap=True`
 (by default multiple time series in a bar graph shows bars that are parallel at a point in time).
 
+**<p style="text-align: center;">
 ![TSView_Graph_Area_MonthFlow](TSView_Graph_Area_MonthFlow.png)
+</p>**
  
 #### Area (Stacked) Graph ####
 
@@ -560,13 +580,17 @@ The time series are drawn in the order that they are specified (first on bottom)
 The legend order agrees with the representation of the graph.
 The following example is for reservoir storage and also indicates data issues on the right side.
 
+**<p style="text-align: center;">
 ![TSView_Graph_AreaStacked_YearReservoir](TSView_Graph_AreaStacked_YearReservoir.png)
+</p>**
  
 #### Bar Graph ####
 
 The bar graph type by default produces a graph with parallel vertical bars, as shown in the following example:
 
+**<p style="text-align: center;">
 ![TSView_Graph_Bar_Day_Precip](TSView_Graph_Bar_Day_Precip.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Bar Graph showing Daily Precipitation
@@ -603,7 +627,9 @@ which can be viewed in a line graph.  Double mass graphs may be enabled in the f
 
 A duration graph indicates the range of values in a time series and how often they occur, as shown in the following example:
 
+**<p style="text-align: center;">
 ![TSView_Graph_Duration_MaxDay_Temp](TSView_Graph_Duration_MaxDay_Temp.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Duration Graph showing Maximum Daily Air Temperatures
@@ -630,14 +656,17 @@ Line graph features have been illustrated in previous discussion.
 The line graph type is also used to generate graphs with only points by setting the
 line style to `None` (for example, software that displays daily data where gaps are expected may default to using symbols and no line).
 
+**<p style="text-align: center;">
 ![TSView_Graph_MonthFlow](TSView_Graph_MonthFlow.png)
+</p>**
  
 #### Line Graph (Log Y Axis) ####
 
 Log-axis line graphs are similar to simple line graphs. The following figure illustrates a typical graph.
 
+**<p style="text-align: center;">
 ![TSView_Graph_Line_Log_MonthFlow](TSView_Graph_Line_Log_MonthFlow.png)
-
+</p>**
 
 **<p style="text-align: center;">
 Example Log Y Axis Graph showing Monthly Streamflow
@@ -652,7 +681,9 @@ Characteristics of the log plot are:
 
 The period of record graph is used to display the availability of data over a period, as shown in the following figure:
 
+**<p style="text-align: center;">
 ![TSView_Graph_PeriodOfRecord_MonthFlow](TSView_Graph_PeriodOfRecord_MonthFlow.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Period of Record Graph showing Monthly Streamflow
@@ -703,7 +734,9 @@ The following are characteristics of the raster graph:
 * The colors represent time series values.  The default is to use decile values.
 Additional functionality will be enabled in the future to control the legend scale.
 
+**<p style="text-align: center;">
 ![TSView_Graph_Raster_DayFlow](TSView_Graph_Raster_DayFlow.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Raster Graph showing Daily Streamflow
@@ -727,7 +760,9 @@ In this case, a single dependent time series may be compared with multiple indep
 Currently the XY-Scatter graph can have only a single dependent time series
 but can have one or more independent time series.  The following figure shows a typical graph.
 
+**<p style="text-align: center;">
 ![TSView_Graph_XYScatter_MonthFlow](TSView_Graph_XYScatter_MonthFlow.png)
+</p>**
 
 **<p style="text-align: center;">
 Example XY Scatter Graph showing Monthly Streamflow
@@ -749,7 +784,9 @@ however, a property to force the values to be the same will be added.
 * Two or more time series must be specified and must have the same interval.
 * Confidence intervals can be turned on, as shown in the following figure:
  
+**<p style="text-align: center;">
 ![TSView_Graph_XYConfidence](TSView_Graph_XYConfidence.png)
+</p>**
 
 The confidence intervals provide a useful way for assessing the quality of a point estimate.
 When a regression line is of interest, the confidence interval on the line as a
@@ -760,13 +797,17 @@ The equations used to plot the confidence intervals are shown below (note that
 because the curves depend on the data points, the shape and smoothness of the curves will depend on the number of points;
 the points are sorted to generate a continuous line).
 
+**<p style="text-align: center;">
 ![TSView_Graph_XYConfidence_Equation](TSView_Graph_XYConfidence_Equation.png)
+</p>**
 
 * The best-fit line can be turned off.
 * Right-clicking on the graph displays the ***Analysis Details*** menu, that,
 if selected, displays curve fit information about the time series, as illustrated in the following figure:
 
+**<p style="text-align: center;">
 ![TSView_Graph_XYScatter_Details](TSView_Graph_XYScatter_Details.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Analysis Details
@@ -804,7 +845,9 @@ The following figure illustrates a time series product that has two graphs (see 
 [Time Series Product Reference](#time-series-product-reference) section for
 information about how to define time series product files, which can be used to save a product).
 
+**<p style="text-align: center;">
 ![TSView_Graph_PrecipAndFlow](TSView_Graph_PrecipAndFlow.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Product showing Precipitation and Streamflow
@@ -829,7 +872,9 @@ This is used to indicate which graphs should zoom together.  Currently, all grap
 Right clicking on a graph and pressing the ***Properties*** item in the popup menu will display the properties for the graph.
 The following figures illustrate the properties tabbed panel:
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_All](TSView_TSProduct_Props_All.png)
+</p>**
 
 **<p style="text-align: center;">
 Tabbed Panel to Edit Time Series Product Properties
@@ -863,7 +908,9 @@ The text-based properties that are displayed in the panels are described in the
 
 #### Product Properties - General ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Product_General](TSView_TSProduct_Props_Product_General.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Product General Properties
@@ -876,7 +923,9 @@ The ***Product Name*** is also used to when displaying lists of products.
 
 #### Product Properties - Titles ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Product_Titles](TSView_TSProduct_Props_Product_Titles.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Product Title Properties
@@ -888,7 +937,9 @@ the product titles are often only used when multiple graphs are included on a pa
 
 #### Product Properties - Layout ####
  
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Product_Layout](TSView_TSProduct_Props_Product_Layout.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Product Layout Properties
@@ -902,7 +953,9 @@ The relative size of each graph on the page is controlled by using the
 
 #### Product Properties - Developer ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Product_Developer](TSView_TSProduct_Props_Product_Developer.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Product Developer Properties
@@ -916,7 +969,9 @@ Product ***Developer*** properties provide useful tools for software developers:
 
 #### Graph Properties - General ####
  
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_General](TSView_TSProduct_Props_Graph_General.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph General Properties
@@ -928,7 +983,9 @@ The vertical size of the graph on the page (percent) can also be specified (the 
 
 #### Graph Properties - Graph Type ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_GraphType](TSView_TSProduct_Props_Graph_GraphType.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Graph Type Properties
@@ -943,7 +1000,9 @@ Use time series properties to indicate which axis is associated with the time se
 
 #### Graph Properties - Titles ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_Titles](TSView_TSProduct_Props_Graph_Titles.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Title Properties
@@ -954,7 +1013,9 @@ Font properties can also be specified.  After applying a change to the main titl
 
 #### Graph Properties - X Axis ####
  
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_XAxis_Bottom](TSView_TSProduct_Props_Graph_XAxis_Bottom.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph X Axis (Bottom) Properties
@@ -966,7 +1027,9 @@ which then fill in the text field with the given color selection.
 
 #### Graph Properties - Y Axis ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_YAxis_Left](TSView_TSProduct_Props_Graph_YAxis_Left.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Y Axis (Left) Properties
@@ -986,7 +1049,9 @@ If time series with incompatible units are graphed, ***Ignore Units*** will be c
 
 #### Graph Properties - Y Axis (Right) ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_YAxis_Right](TSView_TSProduct_Props_Graph_YAxis_Right.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Y Axis (Right) Properties
@@ -1007,7 +1072,9 @@ If time series with incompatible units are graphed, ***Ignore Units*** will be c
 
 #### Graph Properties - Data Point Label ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_DataPointLabel](TSView_TSProduct_Props_Graph_DataPointLabel.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Data Point Label Properties
@@ -1023,7 +1090,9 @@ See the ***DataLabel*** properties in the
 
 #### Graph Properties - Legend ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_Legend](TSView_TSProduct_Props_Graph_Legend.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Legend Properties
@@ -1037,7 +1106,9 @@ The right legend will only be drawn if the Graph Type properties specify that th
  
 #### Graph Properties - Zoom ####
  
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_Zoom](TSView_TSProduct_Props_Graph_Zoom.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Zoom Properties
@@ -1050,7 +1121,9 @@ related graphs on a page are zoomed and currently defaults to 1 for all graphs.
 
 #### Graph Properties - Analysis ####
  
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_Analysis](TSView_TSProduct_Props_Graph_Analysis.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Analysis Properties
@@ -1062,7 +1135,9 @@ For help with input, place the mouse cursor over a field and a tool tip will be 
 
 #### Graph Properties - Annotations ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_Annotations](TSView_TSProduct_Props_Graph_Annotations.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Annotation Properties
@@ -1082,7 +1157,9 @@ for example to draw a horizontal line for a critical level, and a second annotat
 
 #### Graph Properties - Developer ####
  
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_Graph_Developer](TSView_TSProduct_Props_Graph_Developer.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Developer Properties
@@ -1092,7 +1169,9 @@ Graph ***Developer*** properties are currently view-only and provide information
 
 #### Time Series Properties - General ####
  
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_TS_General](TSView_TSProduct_Props_TS_General.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Time Series General Properties
@@ -1102,7 +1181,9 @@ Time series ***General*** properties are currently view-only and indicate whethe
 
 #### Time Series Properties - Graph Type ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_TS_GraphType](TSView_TSProduct_Props_TS_GraphType.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Time Series Graph Type Properties
@@ -1115,7 +1196,9 @@ in particular for area (stacked) graphs.
 
 #### Time Series Properties - Axes ####
  
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_TS_Axes](TSView_TSProduct_Props_TS_Axes.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Time Series Axes Properties
@@ -1126,7 +1209,9 @@ Currently only bottom x-axis is allowed but the time series can be associated wi
 
 #### Time Series Properties - Symbol ####
  
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_TS_Symbol](TSView_TSProduct_Props_TS_Symbol.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Time Series Symbol Properties
@@ -1137,7 +1222,9 @@ Properties are enabled/disabled based on the graph type (e.g., the ***Symbol Sty
 
 #### Time Series Properties - Data Point Label ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_TS_DataPointLabel](TSView_TSProduct_Props_TS_DataPointLabel.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Time Series Label Properties
@@ -1154,7 +1241,9 @@ See the DataLabel properties in the
 
 #### Time Series Properties - Legend ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_TS_Legend](TSView_TSProduct_Props_TS_Legend.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Time Series Legend Properties
@@ -1168,7 +1257,9 @@ See the `LegendFormat` property in the
 
 #### Time Series Properties - Analysis ####
 
+**<p style="text-align: center;">
 ![TSView_TSProduct_Props_TS_Analysis](TSView_TSProduct_Props_TS_Analysis.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Analysis Properties
@@ -1182,7 +1273,9 @@ type of analysis to produce the result (e.g., curve fitting).
 The default page layout for graphs is to display all time series in one graph.
 In this configuration, the layout area at the top-left corner of the time series product window will display as shown below:
 
+**<p style="text-align: center;">
 ![TSView_Layout_1Graph](TSView_Layout_1Graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Layout Window Showing One Graph
@@ -1193,7 +1286,9 @@ For example, two graphs may be needed because of different units, time step, or 
 Left clicking on a graph in the layout area will select the graph – the selected graph is shown in gray.
 Right clicking on the layout area displays a menu with available options:
 
+**<p style="text-align: center;">
 ![TSView_Layout_Menu](TSView_Layout_Menu.png)
+</p>**
 
 **<p style="text-align: center;">
 Layout Window Menu
@@ -1255,7 +1350,9 @@ Additionally, applications that use the TSView package may allow displaying a su
 A time series summary view can usually be produced quickly, whereas the table view uses more resources.
 The following figure illustrates a typical summary view.
 
+**<p style="text-align: center;">
 ![TSView_Summary_MonthFlow](TSView_Summary_MonthFlow.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Summary View showing Monthly Streamflow
@@ -1281,7 +1378,9 @@ A time series table view for a long period or many time series may require extra
 to display (especially if irregular interval time series), but usually only a few seconds are required.
 The following figure illustrates a typical table view.
 
+**<p style="text-align: center;">
 ![TSView_Table_MonthFlow](TSView_Table_MonthFlow.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Table View showing Monthly Streamflow
@@ -1713,7 +1812,9 @@ The TSTool features can be implemented similarly in other software that uses the
 The following discussion focuses on TSTool as an example of graph template implementation.
 For example, assume that one or more time series have been generated and are listed in the ***Time Series Results*** area, as shown below.
 
+**<p style="text-align: center;">
 ![TSTool_Results_GraphWithTemplate](TSTool_Results_GraphWithTemplate.png)
+</p>**
 
 Graph templates utilizes the following process:
 
@@ -1823,7 +1924,9 @@ single time series is already in a form that can be directly used to produce the
 The lists that are passed in are used to reference properties using array notation [0],
 since Freemarker lists use 0-index reference.  The following is an example of the resulting graph.
 
+**<p style="text-align: center;">
 ![TSTool_Results_GraphWithTemplate_TS](TSTool_Results_GraphWithTemplate_TS.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Time Series Graph Created using Graph Template
@@ -1936,8 +2039,9 @@ Free(TSList=TSPosition,TSPosition=1)
 
 The following is an example of the resulting graph:
 
- 
+**<p style="text-align: center;">
 ![TSTool_Results_GraphWithTemplate_EnsembleGraph](TSTool_Results_GraphWithTemplate_EnsembleGraph.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Ensemble Graph Created using Graph Template

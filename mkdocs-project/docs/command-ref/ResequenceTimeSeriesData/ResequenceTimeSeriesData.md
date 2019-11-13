@@ -35,7 +35,7 @@ For a daily data interval, several technical issues must be resolved before the 
 For example, if the original data are 1937 to 1997,
 the resequenced data will also be in a time series with a period 1937 to 1997.
 The `OutputStart` parameter can be used to shift the start year of output.
-	
+
 The command is designed to work with a table that provides sequence information.
 For example, see the [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md)
 command and the example shown below.
@@ -44,7 +44,9 @@ command and the example shown below.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ResequenceTimeSeriesData](ResequenceTimeSeriesData.png)
+</p>**
 
 **<p style="text-align: center;">
 `ResequenceTimeSeries` Command Editor (<a href="../ResequenceTimeSeriesData.png">see also the full-size image</a>)

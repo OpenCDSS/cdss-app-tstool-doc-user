@@ -79,7 +79,9 @@ DataStoreRelatedColumnsMap=”DataTypeID:Abbreviation”
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![WriteTableToDataStore](WriteTableToDataStore.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToDataStore` Command Editor (<a href="../WriteTableToDataStore.png">see also the full-size image</a>)

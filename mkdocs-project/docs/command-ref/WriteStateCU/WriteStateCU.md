@@ -25,7 +25,9 @@ See also the StateDMI software, which processes other StateCU files.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteStateCU](WriteStateCU.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteStateCU` Command Editor (<a href="../WriteStateCU.png">see also the full-size image</a>)

@@ -29,7 +29,9 @@ If both fail, a warning will be shown.
 
 The following dialog is used to edit this command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![OpenHydroBase](OpenHydroBase.png)
+</p>**
 
 **<p style="text-align: center;">
 `OpenHydroBase` Command Editor (<a href="../OpenHydroBase.png">see also the full-size image</a>)

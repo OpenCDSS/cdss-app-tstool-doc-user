@@ -38,7 +38,9 @@ with local time zone used for display.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ChangeTimeZone](ChangeTimeZone.png)
+</p>**
 
 **<p style="text-align: center;">
 `ChangeTimeZone` Command Editor (<a href="../ChangeTimeZone.png">see also the full-size image</a>)

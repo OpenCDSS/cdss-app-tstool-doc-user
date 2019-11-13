@@ -39,7 +39,9 @@ Subsequent writes of the table will re-introduce the repeated quote to indicate 
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![ReadTableFromDelimitedFile](ReadTableFromDelimitedFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableFromDelimitedFile` Command Editor (<a href="../ReadTableFromDelimitedFile.png">see also the full-size image</a>)

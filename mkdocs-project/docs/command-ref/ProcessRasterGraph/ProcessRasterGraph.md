@@ -47,7 +47,9 @@ This will allow TSTool to be used to create the product, and other tools to visu
 
 The following is an example raster graph.
 
+**<p style="text-align: center;">
 ![ProcessRasterGraph ExampleGraph](ProcessRasterGraph_ExampleGraph.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Raster Graph (<a href="../ProcessRasterGraph_ExampleGraph.png">see also the full-size image</a>)
@@ -57,7 +59,9 @@ Example Raster Graph (<a href="../ProcessRasterGraph_ExampleGraph.png">see also 
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ProcessRasterGraph](ProcessRasterGraph.png)
+</p>**
 
 **<p style="text-align: center;">
 `ProcessRasterGraph` Command Editor (<a href="../ProcessRasterGraph.png">see also the full-size image</a>)

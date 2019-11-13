@@ -23,7 +23,9 @@ for example when used in a [`For`](../For/For.md) loop block.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![CloseExcelWorkbook](CloseExcelWorkbook.png)
+</p>**
 
 **<p style="text-align: center;">
 `CloseExcelWorkbook` Command Editor (<a href="../CloseExcelWorkbook.png">see also the full-size image</a>)

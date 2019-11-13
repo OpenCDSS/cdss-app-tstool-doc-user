@@ -18,7 +18,9 @@ for example to extend the time series.  A longer period will be filled with miss
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ChangePeriod](ChangePeriod.png)
+</p>**
 
 **<p style="text-align: center;">
 `ChangePeriod` Command Editor (<a href="../ChangePeriod.png">see also the full-size image</a>)

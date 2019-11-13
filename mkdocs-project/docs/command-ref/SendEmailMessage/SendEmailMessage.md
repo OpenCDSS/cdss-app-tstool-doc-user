@@ -19,7 +19,9 @@ The `SendEmailMessage` command sends an email message.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SendEmailMessage](SendEmailMessage.png)
+</p>**
 
 **<p style="text-align: center;">
 `SendEmailMessage` Command Editor (<a href="../SendEmailMessage.png">see also the full-size image</a>)

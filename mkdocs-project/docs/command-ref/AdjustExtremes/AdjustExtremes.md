@@ -31,7 +31,9 @@ extreme value and the maximum number of values allowed for consideration on each
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![AdjustExtremes](AdjustExtremes.png)
+</p>**
 
 **<p style="text-align: center;">
 `AdjustExtremes` Command Editor (<a href="../AdjustExtremes.png">see also the full-size image</a>)
@@ -66,7 +68,9 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 The following example shows results using the above command editor values (adjusted on left, original on right):
 
+**<p style="text-align: center;">
 ![AdjustExtremes Table](AdjustExtremes_Table.png)
+</p>**
 
 **<p style="text-align: center;">
 Results from `AdjustExtremes` Command

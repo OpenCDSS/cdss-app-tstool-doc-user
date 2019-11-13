@@ -52,7 +52,9 @@ will issue a warning if unable to read the data.
 Time series identifiers that include filenames should typically be adjusted to a
 relative path to allow the files to be moved to another location and run without errors.
 
+**<p style="text-align: center;">
 ![TSID-StateMod](TSID-StateMod.png)
+</p>**
 
 **<p style="text-align: center;">
 `TSID` Command Editor for a Time Series Read from a StateMod File (<a href="../TSID-StateMod.png">see also the full-size image</a>)
@@ -62,7 +64,9 @@ The following example is for a TSID for the
 [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md).
 In this case the datastore name is specified at the end of the TSID.
 
+**<p style="text-align: center;">
 ![TSID-HydroBase](TSID-HydroBase.png)
+</p>**
 
 **<p style="text-align: center;">
 `TSID` Command Editor for a Time Series Read from a HydroBase Database (<a href="../TSID-HydroBase.png">see also the full-size image</a>)

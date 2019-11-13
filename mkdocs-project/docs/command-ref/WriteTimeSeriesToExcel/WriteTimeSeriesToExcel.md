@@ -28,7 +28,9 @@ and consequently functionality is constrained by the features of that software p
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel](WriteTimeSeriesToExcel.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcel` Command Editor (<a href="../WriteTimeSeriesToExcel.png">see also the full-size image</a>)
@@ -36,7 +38,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel ExcelOutput](WriteTimeSeriesToExcel_ExcelOutput.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcel` Command Editor for Output Parameters (<a href="../WriteTimeSeriesToExcel_ExcelOutput.png">see also the full-size image</a>)
@@ -44,7 +48,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for column and cell comment parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel CellComments0](WriteTimeSeriesToExcel_CellComments0.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcel` Command Editor for Column and Cell Comments Parameters (<a href="../WriteTimeSeriesToExcel_CellComments0.png">ee also the full-size image</a>)
@@ -52,7 +58,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for column style formatting parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel ColumnStyleFormat](WriteTimeSeriesToExcel_ColumnStyleFormat.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcel` Command Editor for Column Style Formatting Parameters (<a href="../WriteTimeSeriesToExcel_ColumnStyleFormat.png">see also the full-size image</a>)
@@ -60,7 +68,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for data value cell style formatting parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel StyleFormat](WriteTimeSeriesToExcel_StyleFormat.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcel` Command Editor for Data Value Cell Style Formatting Parameters (<a href="../WriteTimeSeriesToExcel_StyleFormat.png">see also the full-size image</a>)
@@ -125,7 +135,9 @@ where the goal is to write the TSTool time series to Excel and format cells to i
 This approach is implemented similarly in the
 [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel DataTable](WriteTimeSeriesToExcel_DataTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Data Table used with `WriteTimeSeriesToExcel` Command Style Formatting (<a href="../WriteTimeSeriesToExcel_DataTable.png">see also the full-size image</a>)
@@ -135,7 +147,9 @@ To configure style-based formatting, a style table is defined listing properties
 This table can be defined as a CSV file, Excel worksheet or other format and read into TSTool using a suitable command.
 The following figure illustrates a basic style table, which can be shared among commands.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel StyleTable](WriteTimeSeriesToExcel_StyleTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Style Table used with `WriteTimeSeriesToExcel` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_StyleTable.png">see also the full-size image</a>)
@@ -158,7 +172,9 @@ The condition table indicates how the styles are used for time series data.
 The following example indicates that any time series with identifier (or alias)
 starting with `ts` should be processed to evaluate for missing, negative, and zero values.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel ConditionTable](WriteTimeSeriesToExcel_ConditionTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Condition Table used with `WriteTimeSeriesToExcel` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_ConditionTable.png">see also the full-size image</a>)
@@ -195,7 +211,9 @@ Multiple conditions can be specified by using AND (surrounded by a single space)
 
 The following figure illustrates the output from the above example.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel Output](WriteTimeSeriesToExcel_Output.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcel` Command Example Output for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_Output.png">see also the full-size image</a>)
@@ -203,13 +221,17 @@ The following figure illustrates the output from the above example.
 
 The following example illustrates using multiple conditions to implement a color scale.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel StyleTable2](WriteTimeSeriesToExcel_StyleTable2.png)
+</p>**
 
 **<p style="text-align: center;">
 Style Table used with `WriteTimeSeriesToExcel` Command for a Color Scale (<a href="../WriteTimeSeriesToExcel_StyleTable2.png">see also the full-size image</a>)
 </p>**
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel ConditionTable2](WriteTimeSeriesToExcel_ConditionTable2.png)
+</p>**
 
 **<p style="text-align: center;">
 Condition Table used with `WriteTimeSeriesToExcel` Command for a Color Scale
@@ -217,7 +239,9 @@ Condition Table used with `WriteTimeSeriesToExcel` Command for a Color Scale
 
 The following is the output.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToExcel Output2](WriteTimeSeriesToExcel_Output2.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToExcel` Command Example Output for Style Formatting (<a href="../WriteTimeSeriesToExcel_Output2.png">see also the full-size image</a>)

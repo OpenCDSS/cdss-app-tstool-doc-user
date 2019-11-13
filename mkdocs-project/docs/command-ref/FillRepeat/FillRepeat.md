@@ -21,7 +21,9 @@ such as some reservoir and diversion time series.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![FillRepeat](FillRepeat.png)
+</p>**
 
 **<p style="text-align: center;">
 `FillRepeat` Command Editor (<a href="../FillRepeat.png">see also the full-size image</a>)

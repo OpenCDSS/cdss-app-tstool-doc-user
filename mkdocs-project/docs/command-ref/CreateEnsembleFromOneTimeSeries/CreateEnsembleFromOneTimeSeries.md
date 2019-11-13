@@ -26,7 +26,9 @@ In other words, no gaps are retained, and no data are discarded due to leap year
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![CreateEnsembleFromOneTimeSeries](CreateEnsembleFromOneTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateEnsembleFromOneTimeSeries` Command Editor (<a href="../CreateEnsembleFromOneTimeSeries.png">see also the full-size image</a>)
@@ -72,7 +74,9 @@ CreateEnsembleFromOneTimeSeries(TSID="09019500.USGS.Streamflow.Day",TraceLength=
 
 The following figure illustrates a graph of the resulting ensemble:
 
+**<p style="text-align: center;">
 ![CreateEnsembleFromOneTimeSeries Graph](CreateEnsembleFromOneTimeSeries_Graph.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateEnsembleFromOneTimeSeries` Example Graph (<a href="../CreateEnsembleFromOneTimeSeries_Graph.png">see also the full-size image</a>)

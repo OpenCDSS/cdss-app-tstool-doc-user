@@ -27,7 +27,9 @@ The output column can be the same as an existing table column.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ManipulateTableString](ManipulateTableString.png)
+</p>**
 
 **<p style="text-align: center;">
 `ManipulateTableString` Command Editor (<a href="../ManipulateTableString.png">see also the full-size image</a>)

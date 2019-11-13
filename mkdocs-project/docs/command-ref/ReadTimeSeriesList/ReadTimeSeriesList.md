@@ -54,7 +54,9 @@ Use the [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command to set t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series identifier parts.
 
+**<p style="text-align: center;">
 ![ReadTimeSeriesList](ReadTimeSeriesList.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTimeSeriesList` Command Editor for Time Series Identifier Parts Parameters (<a href="../ReadTimeSeriesList.png">see also the full-size image</a>)
@@ -62,7 +64,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series properties.
 
+**<p style="text-align: center;">
 ![ReadTimeSeriesList TimeSeriesProperties](ReadTimeSeriesList_TimeSeriesProperties.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTimeSeriesList` Command Editor for Time Series Propeties Parameters (<a href="../ReadTimeSeriesList_TimeSeriesProperties.png">see also the full-size image</a>)
@@ -70,7 +74,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters if the time series is not found.
 
+**<p style="text-align: center;">
 ![ReadTimeSeriesList IfNotFound](ReadTimeSeriesList_IfNotFound.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTimeSeriesList` Command Editor for Parameters if Time Series is Not Found (<a href="../ReadTimeSeriesList_IfNotFound.png">see also the full-size image</a>)
@@ -78,7 +84,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters used in checks.
 
+**<p style="text-align: center;">
 ![ReadTimeSeriesList Check](ReadTimeSeriesList_Check.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTimeSeriesList` Command Editor for Parameters Used in Checks (<a href="../ReadTimeSeriesList_Check.png">see also the full-size image</a>)

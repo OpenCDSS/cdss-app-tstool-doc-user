@@ -21,7 +21,9 @@ should evaluate the implications of whether the weighted result appropriately re
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WeightTraces](WeightTraces.png)
+</p>**
 
 **<p style="text-align: center;">
 `WeightTraces` Command Editor (<a href="../WeightTraces.png">see also the full-size image</a>)
@@ -64,7 +66,9 @@ WriteDateValue(OutputFile="Results/WeightTraces_out.dv")
 ```
 The results from the commands are shown in the following graph:
 
+**<p style="text-align: center;">
 ![WeightTraces Graph](WeightTraces_Graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Results of the `WeightTraces` Command (<a href="../WeightTraces_Graph.png">see also the full-size image</a>)

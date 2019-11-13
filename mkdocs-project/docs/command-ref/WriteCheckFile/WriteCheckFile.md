@@ -22,7 +22,9 @@ See the [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command to im
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteCheckFile](WriteCheckFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteCheckFile` Command Editor (<a href="../WriteCheckFile.png">see also the full-size image</a>)
