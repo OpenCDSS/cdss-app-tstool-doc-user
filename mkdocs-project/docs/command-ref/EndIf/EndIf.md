@@ -21,7 +21,9 @@ start and end of the block.
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![EndIf](EndIf.png)
+</p>**
 
 **<p style="text-align: center;">
 `EndIf` Command Editor (<a href="../EndIf.png">see also the full-size image</a>)

@@ -64,7 +64,9 @@ the main function of TSTool is to automate data processing using a workflow of c
 The following figure illustrates overall data flow concepts.
 <a href="../TSTool_DataFlow.png">See also the full-size image.</a>
 
+**<p style="text-align: center;">
 ![TSTool_DataFlow](TSTool_DataFlow.png)
+</p>**
 
 **<p style="text-align: center;">
 TSTool Data  Flow Concepts
@@ -586,7 +588,9 @@ or other unique identifier.
 The following figure illustrates an ensemble of annual time series created from a long historical time series.
 <a href="../TSView_Graph_Traces.png">See also the full-size image.</a>
 
+**<p style="text-align: center;">
 ![TSView_Graph_Traces](TSView_Graph_Traces.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Ensemble Plot Showing Historical Years

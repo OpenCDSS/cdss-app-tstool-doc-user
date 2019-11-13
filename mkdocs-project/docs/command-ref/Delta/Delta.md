@@ -49,7 +49,9 @@ missing values inserted at appropriate locations to maintain consistent data poi
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![Delta](Delta.png)
+</p>**
 
 **<p style="text-align: center;">
 `Delta` Command Editor (<a href="../Delta.png">see also the full-size image</a>)

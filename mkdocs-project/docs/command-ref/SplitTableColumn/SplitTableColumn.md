@@ -20,7 +20,9 @@ can be split to produce the result in the second figure.  Several options for sp
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SplitTableColumn](SplitTableColumn.png)
+</p>**
 
 **<p style="text-align: center;">
 `SplitTableColumn` Command Editor (<a href="../SplitTableColumn.png">see also the full-size image</a>)
@@ -51,9 +53,13 @@ Command Parameters
 
 See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SplitTableColumn).
 
+**<p style="text-align: center;">
 ![SplitTableColumn](SplitTableColumn_Table1a.png)
+</p>**
 
+**<p style="text-align: center;">
 ![SplitTableColumn](SplitTableColumn_Table1b.png)
+</p>**
 
 ## Troubleshooting ##
 

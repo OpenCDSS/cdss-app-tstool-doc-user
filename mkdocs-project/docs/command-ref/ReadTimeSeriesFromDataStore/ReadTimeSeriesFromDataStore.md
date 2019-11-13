@@ -23,7 +23,9 @@ The following dialog is used to edit the command and illustrates the
 syntax for the command when reading a single time series.
 This is appropriate when a specific location is being processed.
 
+**<p style="text-align: center;">
 ![ReadTimeSeriesFromDataStore Single](ReadTimeSeriesFromDataStore_Single.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTimeSeriesFromDataStore` Command Editor for Reading Single Time Series (<a href="../ReadTimeSeriesFromDataStore_Single.png">see also the full-size image</a>)
@@ -34,7 +36,9 @@ for the command when reading multiple time series.
 This is appropriate when performing bulk processing.
 Mouse over the Where data entry fields to see information about choices.
 
+**<p style="text-align: center;">
 ![ReadTimeSeriesFromDataStore Multiple](ReadTimeSeriesFromDataStore_Multiple.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTimeSeriesFromDataStore` Command Editor for Reading Multiple Time Series (<a href="../ReadTimeSeriesFromDataStore_Multiple.png">see also the full-size image</a>)

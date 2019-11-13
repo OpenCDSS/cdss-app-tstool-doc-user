@@ -25,7 +25,9 @@ In the future the command may be enhanced to have parameters that more explicitl
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![Exit](Exit.png)
+</p>**
 
 **<p style="text-align: center;">
 `Exit` Command Editor (<a href="../Exit.png">see also the full-size image</a>)

@@ -31,7 +31,9 @@ The following are limitations of this command:
 
 The following dialog is used to edit the command and illustrates the syntax for the command.
 
+**<p style="text-align: center;">
 ![WriteTableToExcel](WriteTableToExcel.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToExcel` Command Editor (<a href="../WriteTableToExcel.png">see also the full-size image</a>)
@@ -39,7 +41,9 @@ The following dialog is used to edit the command and illustrates the syntax for 
 
 The following dialog is used to edit the command and illustrates Excel output parameters.
 
+**<p style="text-align: center;">
 ![WriteTableToExcel Excel](WriteTableToExcel_Excel.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToExcel` Command Editor for Excel Output Parameters (<a href="../WriteTableToExcel_Excel.png">see also the full-size image</a>)
@@ -47,7 +51,9 @@ The following dialog is used to edit the command and illustrates Excel output pa
 
 The following dialog is used to edit the command and illustrates Excel formatting parameters.
 
+**<p style="text-align: center;">
 ![WriteTableToExcel Excel Format](WriteTableToExcel_ExcelFormat.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToExcel` Command Editor for Excel Formatting Parameters (<a href="../WriteTableToExcel_ExcelFormat.png">see also the full-size image</a>)
@@ -55,7 +61,9 @@ The following dialog is used to edit the command and illustrates Excel formattin
 
 The following dialog is used to edit the command and illustrates style formatting parameters.
 
+**<p style="text-align: center;">
 ![WriteTableToExcel Style](WriteTableToExcel_Style.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToExcel` Command Editor for Style Formatting Parameters (<a href="../WriteTableToExcel_Style.png">see also the full-size image</a>)
@@ -103,7 +111,9 @@ Consider the following data table, where the goal is to write the TSTool table t
 and format cells to indicate specific conditions of interest.
 This approach is implemented similarly in the [`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) command.
 
+**<p style="text-align: center;">
 ![WriteTableToExcel DataTable](WriteTableToExcel_DataTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Data Table used with `WriteTableToExcel` Command
@@ -114,7 +124,9 @@ This table can be defined as a CSV file,
 Excel worksheet or other format and read into TSTool using a suitable command.
 The following figure illustrates a basic style table, which can be shared among commands.
 
+**<p style="text-align: center;">
 ![WriteTableToExcel StyleTable](WriteTableToExcel_StyleTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Style Table used with `WriteTableToExcel` Command
@@ -137,7 +149,9 @@ The condition table indicates how table values should be evaluated to determine 
 The following example indicates that any columns with names starting with `ts`
 should be processed to evaluate for missing, negative, and zero values.
 
+**<p style="text-align: center;">
 ![WriteTableToExcel ConditionTable](WriteTableToExcel_ConditionTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Condition Table used with `WriteTableToExcel` Command for Specific Checks and Formatting
@@ -175,7 +189,9 @@ If the ***Display*** column is not provided, the ***Condition*** column contents
 
 The following figure illustrates the output from the above example.
 
+**<p style="text-align: center;">
 ![WriteTableToExcel Output](WriteTableToExcel_Output.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToExcel` Command Example Output for Specific Checks and Formatting
@@ -183,19 +199,25 @@ The following figure illustrates the output from the above example.
 
 The following example illustrates using multiple conditions to implement a color scale.
 
+**<p style="text-align: center;">
 ![WriteTableToExcel StyleTable2](WriteTableToExcel_StyleTable2.png)
+</p>**
 
 **<p style="text-align: center;">
 Style Table used with `WriteTableToExcel` Command for a Color Scale
 </p>**
 
+**<p style="text-align: center;">
 ![WriteTableToExcel ConditionTable2](WriteTableToExcel_ConditionTable2.png)
+</p>**
 
 **<p style="text-align: center;">
 Condition Table used with `WriteTableToExcel` Command for a Color Scale
 </p>**
 
+**<p style="text-align: center;">
 ![WriteTableToExcel Output2](WriteTableToExcel_Output2.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTableToExcel` Command Example Output for a Color Scale

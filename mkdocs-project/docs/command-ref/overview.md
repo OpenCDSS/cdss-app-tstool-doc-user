@@ -386,6 +386,8 @@ handling processor properties (used with `${Property}`), and control commands su
 * [`EndIf`](EndIf/EndIf.md) - end of an [`If`](If/If.md) block of commands
 * [`For`](For/For.md) - iterate over items in a loop
 * [`EndFor`](EndFor/EndFor.md) - end of a [`For`](For/For.md) loop block of commands
+* [`Break`](Break/Break.md) - break out of a [`For`](For/For.md) loop block of commands
+* [`Continue`](Continue/Continue.md) - continue to end of a [`For`](For/For.md) loop block of commands
 * [`Exit`](Exit/Exit.md) - stop processing commands
 * [`Wait`](Wait/Wait.md) - wait for a time before continuing
 * [`SetWorkingDir`](SetWorkingDir/SetWorkingDir.md) - set the working directory (folder) for following commands
@@ -528,6 +530,7 @@ except for the indicated commands (blank indicates has been migrated)
 |[`AppendTable`](AppendTable/AppendTable.md)                                                                     |Append a table to another table. |||
 |[`ARMA`](ARMA/ARMA.md)                                                                                          |Autoregressive moving average.   |||
 |[`Blend`](Blend/Blend.md)                                                                                       |Blend one time series into another.|||
+|[`Break`](Break/Break.md)                                                                                       |Break out of `For` command loop.|||
 |[`CalculateTimeSeriesStatistic`](CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md)                  |Calculate a single-value statistic for a time series. | ||
 |[`ChangeInterval`](ChangeInterval/ChangeInterval.md)                                                            |Change time series interval.     |||
 |[`ChangePeriod`](ChangePeriod/ChangePeriod.md)                                                                  |Change time series data period.  |||
@@ -541,6 +544,7 @@ except for the indicated commands (blank indicates has been migrated)
 |[`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries.md)                                                   |Compare time series to detect whether they are the same or different.|||
 |[`ComputeErrorTimeSeries`](ComputeErrorTimeSeries/ComputeErrorTimeSeries.md)                                    |Compute the error between two time series.|||
 |[`ConfigureLogging`](ConfigureLogging/ConfigureLogging.md)                                                      |Configure logging.               |||
+|[`Continue`](Continue/Continue.md)                                                                              |Jump to end of `For` command loop.|||
 |[`ConvertDataUnits`](ConvertDataUnits/ConvertDataUnits.md)                                                      |Convert time series data units.  |||
 |[`Copy`](Copy/Copy.md)                                                                                          |Copy a time series.              |||
 |[`CopyEnsemble`](CopyEnsemble/CopyEnsemble.md)                                                                  |Copy an ensemble to a new ensemble.|||

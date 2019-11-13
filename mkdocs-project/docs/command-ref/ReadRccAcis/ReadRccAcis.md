@@ -23,7 +23,9 @@ and then perform additional processing using the local data.
 
 The following dialog is used to edit the command and illustrates the syntax of the command for reading a single time series.
 
+**<p style="text-align: center;">
 ![ReadRccAcis Single](ReadRccAcis_Single.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadRccAcis` Command Editor for Reading a Single Time Series (<a href="../ReadRccAcis_Single.png">see also the full-size image</a>)
@@ -34,7 +36,9 @@ syntax for the command when reading multiple time series.
 This is appropriate when performing bulk processing.
 Mouse over the ***Where*** data entry fields to see information about choices.
 
+**<p style="text-align: center;">
 ![ReadRccAcis Multiple](ReadRccAcis_Multiple.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadRccAcis` Command Editor for Reading Multiple Time Series (<a href="../ReadRccAcis_Multiple.png">see also the full-size image</a>)

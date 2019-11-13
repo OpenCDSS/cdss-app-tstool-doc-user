@@ -19,7 +19,9 @@ See also the [`Scale`](../Scale/Scale.md) command, which multiplies time series 
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![Multiply](Multiply.png)
+</p>**
 
 **<p style="text-align: center;">
 `Multiply` Command Editor (<a href="../Multiply.png">see also the full-size image</a>)

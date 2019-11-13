@@ -17,7 +17,9 @@ The `SetConstant` command sets the values of a time series to a single or monthl
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SetConstant](SetConstant.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetConstant` Command Editor (<a href="../SetConstant.png">see also the full-size image</a>)

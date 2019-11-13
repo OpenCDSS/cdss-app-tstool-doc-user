@@ -32,7 +32,9 @@ whereas this command is designed to facilitate creating multiple output time ser
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![NewStatisticEnsemble](NewStatisticEnsemble.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewStatisticEnsemble` Command Editor (<a href="../NewStatisticEnsemble.png">see also the full-size image</a>)

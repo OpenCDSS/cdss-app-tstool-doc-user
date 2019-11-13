@@ -24,7 +24,9 @@ the property name cannot be dynamically changed (for example by using `${Propert
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![SetPropertyFromTimeSeries](SetPropertyFromTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetPropertyFromTimeSeries` Command Editor (<a href="../SetPropertyFromTimeSeries.png">see also the full-size image</a>)

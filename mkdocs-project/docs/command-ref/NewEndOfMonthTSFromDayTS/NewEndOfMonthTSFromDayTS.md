@@ -28,7 +28,9 @@ In this case, other fill commands (e.g.,
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![NewEndOfMonthTSFromDayTS](NewEndOfMonthTSFromDayTS.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewEndOfMonthTSFromDayTS` Command Editor (<a href="../NewEndOfMonthTSFromDayTS.png">see also the full-size image</a>)
@@ -82,7 +84,9 @@ FillInterpolate(TSList=AllMatchingTSID,TSID="WellMonth",MaxIntervals=0,Transform
 To evaluate the results of this command, it is useful to graph both the input and results,
 changing the graph properties to add symbols to see the individual measurements, as shown in the following figure.
 
+**<p style="text-align: center;">
 ![NewEndOfMonthTSFromDayTS Graph](NewEndOfMonthTSFromDayTS_Graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Results of `NewEndOfMonthTSFromDayTS` Command (<a href="../NewEndOfMonthTSFromDayTS_Graph.png">see also the full-size image</a>)

@@ -27,7 +27,9 @@ the ensemble will reflect the changes.  Overcoming this issue will require desig
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![NewEnsemble](NewEnsemble.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewEnsemble` Command Editor (<a href="../NewEnsemble.png">see also the full-size image</a>)

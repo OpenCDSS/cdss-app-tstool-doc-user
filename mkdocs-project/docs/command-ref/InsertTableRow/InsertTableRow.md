@@ -20,7 +20,9 @@ for example to clear out named cells in an Excel workbook.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![InsertTableRow](InsertTableRow.png)
+</p>**
 
 **<p style="text-align: center;">
 `InsertTableRow` Command Editor (<a href="../InsertTableRow.png">see also the full-size image</a>)

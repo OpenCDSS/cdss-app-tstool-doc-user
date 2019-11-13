@@ -21,7 +21,9 @@ limit the time series that are read using the `TSID` parameter.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ReadStateModB](ReadStateModB.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadStateModB` Command Editor (<a href="../ReadStateModB.png">see also the full-size image</a>)

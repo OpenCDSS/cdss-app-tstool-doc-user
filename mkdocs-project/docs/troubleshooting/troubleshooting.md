@@ -365,7 +365,9 @@ Specific troubleshooting for commands is discused in the [Command Reference](../
 
 **Behavior** – The following error is displayed when trying to start TSTool:
 
+**<p style="text-align: center;">
 ![could-not-create-vm](could-not-create-vm.png)
+</p>**
 
 **Possible Cause** – TSTool was updated from Java 6 to Java 7 as of version 11.00.00.
 The Java Runtime Environment (JRE) provides a “sandbox” to run Java programs like TSTool.
@@ -489,7 +491,9 @@ Microsoft SQL Server database and driver compatibility:
 
 **Behavior** – when starting TSTool, the following is displayed:
 
+**<p style="text-align: center;">
 ![Troubleshooting_LaunchError](Troubleshooting_LaunchError.png)
+</p>**
 
 **Possible Cause 1** – This error may be shown if software files have been manually moved.
 To help diagnose errors, try running the `TSTool.exe` from a command prompt rather

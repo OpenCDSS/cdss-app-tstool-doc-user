@@ -20,7 +20,9 @@ result in data being set at the desired hours) and to perform simple routing.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ShiftTimeByInterval](ShiftTimeByInterval.png)
+</p>**
 
 **<p style="text-align: center;">
 `ShiftTimeByInterval` Command Editor (<a href="../ShiftTimeByInterval.png">see also the full-size image</a>)
@@ -59,7 +61,9 @@ ShiftTimeByInterval(TSList=AllMatchingTSID,TSID="08213500.DWR.Streamflow.Day",Sh
 ```
 The following is the result.
 
+**<p style="text-align: center;">
 ![ShiftTimeByInterval Graph](ShiftTimeByInterval_Graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Results from `ShiftTimeByInterval` Command (<a href="../ShiftTimeByInterval_Graph.png">see also the full-size image</a>)

@@ -33,7 +33,9 @@ The data type is set to Operational.  Identifiers that include a period will hav
 
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
 
+**<p style="text-align: center;">
 ![ReadStateMod](ReadStateMod.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadStateMod` Command Editor (<a href="../ReadStateMod.png">see also the full-size image</a>)
@@ -41,7 +43,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for water right file parameters.
 
+**<p style="text-align: center;">
 ![ReadStateMod Rights](ReadStateMod_Rights.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadStateMod` Command Editor for Water Right File Parameters (<a href="../ReadStateMod_Rights.png">see also the full-size image</a>)
@@ -49,7 +53,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output file parameters.
 
+**<p style="text-align: center;">
 ![ReadStateMod X](ReadStateMod_X.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadStateMod` Command Editor for Output File Parameters (<a href="../ReadStateMod_X.png">see also the full-size image</a>)

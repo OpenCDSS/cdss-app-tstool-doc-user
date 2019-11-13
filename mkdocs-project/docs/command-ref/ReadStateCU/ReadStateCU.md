@@ -19,7 +19,9 @@ See the [StateCU Input Type Appendix](../../datastore-ref/StateCU/StateCU.md).
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ReadStateCU](ReadStateCU.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadStateCU` Command Editor (<a href="../ReadStateCU.png">see also the full-size image</a>)

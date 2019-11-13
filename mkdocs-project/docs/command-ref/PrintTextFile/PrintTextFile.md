@@ -28,7 +28,9 @@ use `ShowDialog=True` (displaying the dialog will pause command execution).
 
 The following dialog is used to edit the command and illustrates the command syntax (in this case printing to a Microsoft XPS file).
 
+**<p style="text-align: center;">
 ![PrintTextFile](PrintTextFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `PrintTextFile` Command Editor (<a href="../PrintTextFile.png">see also the full-size image</a>)
@@ -71,7 +73,9 @@ For example, use a printer that outputs to a PDF, XPS, or other format file rath
 If `ShowDialog=True` and printing to a file is indicated by specifying the OutputFile parameter (such as with Adobe PDF),
 the ***General*** tab on the print dialog will be similar to the following:
 
+**<p style="text-align: center;">
 ![PrintTextFile General](PrintTextFile_DialogGeneral.png)
+</p>**
 
 **<p style="text-align: center;">
 Print Job Dialog General Properties (<a href="../PrintTextFile_DialogGeneral.png">see also the full-size image</a>)
@@ -81,7 +85,9 @@ Note that Print to File is checked; however, the name of the file may not be dis
 Instead, the output file is specified by pressing Print, which displays the following dialog,
 with the initial choice matching the value of the `OutputFile` parameter:
 
+**<p style="text-align: center;">
 ![PrintTextFile to File](PrintTextFile_PrintToFile.png)
+</p>**
 
 **<p style="text-align: center;">
 Print to File Dialog (<a href="../PrintTextFile_PrintToFile.png">see also the full-size image</a>)
@@ -89,7 +95,9 @@ Print to File Dialog (<a href="../PrintTextFile_PrintToFile.png">see also the fu
 
 If running a command to write a PDF file, the following may be displayed:
 
+**<p style="text-align: center;">
 ![PrintTextFile Distiller Error](PrintTextFile_DistillerFontError.png)
+</p>**
 
 **<p style="text-align: center;">
 Adobe PDF Error (<a href="../PrintTextFile_DistillerFontError.png">see also the full-size image</a>)

@@ -29,7 +29,9 @@ The output period is adjusted to ensure that actual endpoints found in the time 
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![WriteDelimitedFile](WriteDelimitedFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteDelimitedFile` Command Editor (<a href="../WriteDelimitedFile.png">see also the full-size image</a>)

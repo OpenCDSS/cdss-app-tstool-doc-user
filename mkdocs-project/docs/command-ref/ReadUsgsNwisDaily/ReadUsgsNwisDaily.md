@@ -45,7 +45,9 @@ However, full listing of choices (such as all the thousands of streamflow statio
 that are available) is not provided due to performance issues.
 Additional query features will be enabled as web service integration is enhanced.
 
+**<p style="text-align: center;">
 ![ReadUsgsNwisDaily](ReadUsgsNwisDaily.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadUsgsNwisDaily` Command Editor (<a href="../ReadUsgsNwisDaily.png">see also the full-size image</a>)

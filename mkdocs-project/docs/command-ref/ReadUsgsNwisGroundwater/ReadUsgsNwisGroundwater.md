@@ -52,7 +52,9 @@ However, full listing of choices (such as all the thousands of wells that are av
 is not provided due to performance issues.
 Additional query features will be enabled as web service integration is enhanced.
 
+**<p style="text-align: center;">
 ![ReadUsgsNwisGroundwater](ReadUsgsNwisGroundwater.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadUsgsNwisGroundwater` Command Editor (<a href="../ReadUsgsNwisGroundwater.png">see also the full-size image</a>)

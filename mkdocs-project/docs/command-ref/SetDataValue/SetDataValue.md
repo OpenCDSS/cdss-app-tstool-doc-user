@@ -21,7 +21,9 @@ See also the [`SetConstant`](../SetConstant/SetConstant.md) command.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SetDataValue](SetDataValue.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetDataValue` Command Editor (<a href="../SetDataValue.png">see also the full-size image</a>)

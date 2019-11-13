@@ -23,7 +23,9 @@ however, the Alias parameter can be used to assign a new alias as the file is re
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ReadDateValue](ReadDateValue.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadDateValue` Command Editor (<a href="../ReadDateValue.png">see also the full-size image</a>)

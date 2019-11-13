@@ -20,7 +20,9 @@ This command is useful, for example, when looping through blocks of commands whe
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![FreeTable](FreeTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `FreeTable` Command Editor (<a href="../FreeTable.png">see also the full-size image</a>)

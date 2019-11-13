@@ -22,7 +22,9 @@ Support for properties varies by command and command documentation should be con
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![FormatDateTimeProperty](FormatDateTimeProperty.png)
+</p>**
 
 **<p style="text-align: center;">
 `FormatDateTimeProperty` Command Editor (<a href="../FormatDateTimeProperty.png">see also the full-size image</a>)

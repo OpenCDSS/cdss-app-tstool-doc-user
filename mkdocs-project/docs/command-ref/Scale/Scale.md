@@ -19,7 +19,9 @@ monthly values, or special values that indicate to scale by the number of days i
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![Scale](Scale.png)
+</p>**
 
 **<p style="text-align: center;">
 `Scale` Command Editor (<a href="../Scale.png">see also the full-size image</a>)

@@ -21,7 +21,9 @@ Lag and K routing is a common routing method that combines the concepts of:
 1. Lagging the inflow to simulate travel time in a reach and,
 2. Attenuating the wave to simulate the storage-outflow relationship for the reach (see figure below).
 
+**<p style="text-align: center;">
 ![LagK-graph](LagK-graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Lag and K Routing (<a href="../LagK.png">see also the full-size image</a>)
@@ -31,16 +33,22 @@ At its fundamental level, the method solves the continuity equation using an app
 to Muskingum routing (assuming that the Muskingum parameter representing wave storage is negligible).
 The governing equation for this routing method is given as:
 
+**<p style="text-align: center;">
 ![LagK-equation1](LagK-equation1.png)
+</p>**
 
 The relationship assumes an outflow-storage relationship of the form:
 
+**<p style="text-align: center;">
 ![LagK-equation2](LagK-equation2.png)
+</p>**
 
 To ensure accurate results, *k* should be larger or equal to *&Delta;t/2*.
 For discrete time steps these relationships translate into:
 
+**<p style="text-align: center;">
 ![LagK-equation3](LagK-equation3.png)
+</p>**
 
 In the case that either *I_1* , *I_2* or *O_1* are missing, these values will be set in the following order:
 
@@ -60,7 +68,9 @@ Without any other information, `K` can be set to `Lag`/2.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![LagK](LagK.png)
+</p>**
 
 **<p style="text-align: center;">
 `LagK` Command Editor (<a href="../LagK.png">see also the full-size image</a>)

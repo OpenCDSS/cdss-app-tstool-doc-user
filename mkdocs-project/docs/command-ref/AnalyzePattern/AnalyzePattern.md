@@ -59,7 +59,9 @@ year type can be set with the
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![AnalyzePattern](AnalyzePattern.png)
+</p>**
 
 **<p style="text-align: center;">
 `AnalyzePattern` Command Editor (<a href="../AnalyzePattern.png">see also the full-size image</a>)
@@ -108,7 +110,9 @@ AnalyzePattern(TSList=AllTS,Method=Percentile,Percentile="0.25,0.75",PatternID="
 The following figure illustrates the resulting statistics:
 <a href="../AnalyzePattern_Table.png">See also the full-size image.</a>
 
+**<p style="text-align: center;">
 ![AnalyzePattern Table](AnalyzePattern_Table.png)
+</p>**
 
 **<p style="text-align: center;">
 Statistics from Pattern Analysis

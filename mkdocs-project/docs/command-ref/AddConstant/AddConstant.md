@@ -23,7 +23,9 @@ Missing data values will remain missing in the result.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![AddConstant](AddConstant.png)
+</p>**
 
 **<p style="text-align: center;">
 `AddConstant` Command Editor (<a href="../AddConstant.png">see also the full-size image</a>)

@@ -38,7 +38,9 @@ More options to hand off logging from one file to another may be implemented in 
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![RunCommands](RunCommands.png)
+</p>**
 
 **<p style="text-align: center;">
 `RunCommands` Command Editor (<a href="../RunCommands.png">see also the full-size image</a>)

@@ -33,7 +33,9 @@ Excel workbooks and consequently functionality is constrained by the features of
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ReadExcelWorkbook](ReadExcelWorkbook.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadExcelWorkbook` Command Editor (<a href="../ReadExcelWorkbook.png">see also the full-size image</a>)

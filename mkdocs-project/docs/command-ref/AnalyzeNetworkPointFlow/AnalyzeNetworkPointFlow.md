@@ -46,7 +46,9 @@ to model more complex networks will be added in the future;
 however, this command is not intended to replace more complex models.
 Consequently the command currently is suitable for analysis of a main stem river with no on-channel reservoirs.
 
+**<p style="text-align: center;">
 ![AnalyzeNetworkPointFlow_Diagram](AnalyzeNetworkPointFlow_Diagram.png)
+</p>**
 
 **<p style="text-align: center;">
 `AnalyzeNetworkPointFlow` Network and Node Mass Balance (<a href="../AnalyzeNetworkPointFlow_Diagram.png">see also the full-size image</a>)
@@ -74,7 +76,9 @@ is not specified and there is no TSID column in the network table).
 In this case, the input time series TSIDs must match the node
 identifier and the data type provided with the `NodeAddDataTypes` and similar command parameters.
 
+**<p style="text-align: center;">
 ![AnalyzeNetworkPointFlow_InputTable](AnalyzeNetworkPointFlow_InputTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `AnalyzeNetworkPointFlow` Network Input Table – Input Time Series Matched with NodeID (<a href="../AnalyzeNetworkPointFlow_InputTable.png">see also the full-size image</a>)
@@ -87,7 +91,9 @@ where `%I` will be replaced with the analysis interval specified by the `Interva
 which can simplify output (the period-delimited time series
 identifier is still used with the time series but the alias takes precedence).
 
+**<p style="text-align: center;">
 ![AnalyzeNetworkPointFlow_InputTable_TSID](AnalyzeNetworkPointFlow_InputTable_TSID.png)
+</p>**
 
 **<p style="text-align: center;">
 `AnalyzeNetworkPointFlow` Network Input Table – Input Time Series Specified with TSID Column (<a href="../AnalyzeNetworkPointFlow_InputTable_TSID.png">see also the full-size image</a>)
@@ -267,7 +273,9 @@ for example monthly instead of daily, in input time series or convert the point 
 The following dialog is used to edit the command and illustrates the syntax of the
 command for parameters to map network table columns to network nodes.
 
+**<p style="text-align: center;">
 ![AnalyzeNetworkPointFlow](AnalyzeNetworkPointFlow.png)
+</p>**
 
 **<p style="text-align: center;">
 `AnalyzeNetworkPointFlow` Command Editor for Parameters to Map Network Table Columns to Network Nodes (<a href="../AnalyzeNetworkPointFlow.png">see also the full-size image</a>)
@@ -275,7 +283,9 @@ command for parameters to map network table columns to network nodes.
 
 The following dialog is used to edit the command and illustrates the syntax of the command for node type behavior parameters.
 
+**<p style="text-align: center;">
 ![AnalyzeNetworkPointFlow2](AnalyzeNetworkPointFlow2.png)
+</p>**
 
 **<p style="text-align: center;">
 `AnalyzeNetworkPointFlow` Command Editor for Node Type Behavior Parameters (<a href="../AnalyzeNetworkPointFlow2.png">see also the full-size image</a>)
@@ -283,7 +293,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for analysis parameters.
 
+**<p style="text-align: center;">
 ![AnalyzeNetworkPointFlow_AnalysisTab](AnalyzeNetworkPointFlow_AnalysisTab.png)
+</p>**
 
 **<p style="text-align: center;">
 `AnalyzeNetworkPointFlow` Command Editor for Analysis Parameters (<a href="../AnalyzeNetworkPointFlow_AnalysisTab.png">see also the full-size image</a>)
@@ -291,7 +303,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
+**<p style="text-align: center;">
 ![AnalyzeNetworkPointFlow_TSIDTab](AnalyzeNetworkPointFlow_TSIDTab.png)
+</p>**
 
 **<p style="text-align: center;">
 `AnalyzeNetworkPointFlow` Command Editor for Analysis Parameters (<a href="../AnalyzeNetworkPointFlow_TSIDTab.png">see also the full-size image</a>)

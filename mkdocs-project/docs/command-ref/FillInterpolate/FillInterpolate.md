@@ -19,7 +19,9 @@ The command currently will not extrapolate past end points.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![FillInterpolate](FillInterpolate.png)
+</p>**
 
 **<p style="text-align: center;">
 `FillInterpolate` Command Editor (<a href="../FillInterpolate.png">see also the full-size image</a>)

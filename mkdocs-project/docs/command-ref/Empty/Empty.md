@@ -17,7 +17,9 @@ The `Empty` command is a placeholder for empty (blank) lines, which contain only
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![Empty](Empty.png)
+</p>**
 
 **<p style="text-align: center;">
 `Empty` Command Editor (<a href="../Empty.png">see also the full-size image</a>)

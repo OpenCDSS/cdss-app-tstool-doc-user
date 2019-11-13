@@ -27,7 +27,9 @@ Additional command capabilities may be implemented to help handle these issues.
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![WebGet](WebGet.png)
+</p>**
 
 **<p style="text-align: center;">
 `WebGet` Command Editor (<a href="../WebGet.png">see also the full-size image</a>)

@@ -24,7 +24,9 @@ The resulting table will include the following columns:
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![ListFiles](ListFiles.png)
+</p>**
 
 **<p style="text-align: center;">
 `ListFiles` Command Editor Showing Conditions Test (<a href="../ListFiles.png">see also the full-size image</a>)

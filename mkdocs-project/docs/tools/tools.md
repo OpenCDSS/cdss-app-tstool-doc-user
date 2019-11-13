@@ -11,7 +11,9 @@ Tools are interactive, whereas commands can be used in automated processing.
 Tools are therefore appropriate for one-off interactive data viewing,
 and commands should be used to automate processing on large datasets.
 
+**<p style="text-align: center;">
 ![Menu_Tools](Menu_Tools.png)
+</p>**
 
 **<p style="text-align: center;">
 Tools Menu
@@ -40,7 +42,9 @@ Where possible, TSTool functionality is included in commands to facilitate autom
 
 Analysis tools analyze time series and typically produce an output report.
 
+**<p style="text-align: center;">
 ![Menu_Tools_Analysis](Menu_Tools_Analysis.png)
+</p>**
 
 **<p style="text-align: center;">
 Tools / Analysis Menu
@@ -61,7 +65,9 @@ The optimal results can then optionally be used as parameters for the
 [`FillMixedStation`](../command-ref/FillMixedStation/FillMixedStation.md) command.
 The following figure illustrates the ***Mixed Station Analysis*** tool.
 
+**<p style="text-align: center;">
 ![Menu_Tools_Analysis_MixedStationAnalysis](Menu_Tools_Analysis_MixedStationAnalysis.png)
+</p>**
 
 **<p style="text-align: center;">
 Mixed Station Analysis Interface (<a href="../Menu_Tools_Analysis_MixedStationAnalysis.png">see also the full-size image</a>)
@@ -71,7 +77,9 @@ Mixed Station Analysis Interface (<a href="../Menu_Tools_Analysis_MixedStationAn
 
 Report tools analyze time series, typically creating a summary report.  
  
+**<p style="text-align: center;">
 ![Menu_Tools_Report](Menu_Tools_Report.png)
+</p>**
 
 **<p style="text-align: center;">
 Tools / Report Menu
@@ -85,7 +93,9 @@ This report is useful, in particular, for evaluating data availability for multi
 Although effort has been taken to make the report as compact as possible,
 it may need to be printed in landscape format on a large paper size.
 
+**<p style="text-align: center;">
 ![Menu_Tools_Report_DataCoverage](Menu_Tools_Report_DataCoverage.png)
+</p>**
 
 **<p style="text-align: center;">
 Data Coverage by Year Report (<a href="../Menu_Tools_Report_DataCoverage.png">see also the full-size image</a>)
@@ -101,7 +111,9 @@ Currently, only monthly time series have detailed summaries.
 All other data intervals shown overall period summaries.
 The value `-999` is used to indicate missing data.
 
+**<p style="text-align: center;">
 ![Menu_Tools_Report_DataLimits](Menu_Tools_Report_DataLimits.png)
+</p>**
 
 **<p style="text-align: center;">
 Data Limits Summary Report (<a href="../Menu_Tools_Report_DataLimits.png">see also the full-size image</a>)
@@ -120,7 +132,9 @@ The daily values are then further accumulated to produce monthly values, again u
 The report includes a header for the time series, the report, and footnotes.
 Values are only shown if full data are available for a month and statistics are computed using only complete months.
 
+**<p style="text-align: center;">
 ![Menu_Tools_Report_MonthSummary_DailyMean](Menu_Tools_Report_MonthSummary_DailyMean.png)
+</p>**
 
 **<p style="text-align: center;">
 Monthly Summary (Daily Mean) Report (<a href="../Menu_Tools_Report_MonthSummary_DailyMean.png">see also the full-size image</a>)
@@ -141,7 +155,9 @@ Warning: some years may have no data at the beginning of a year and the
 corresponding year-to-date totals will consequently be zero.
 Refer to the data coverage and data limit reports for more detail.
 
+**<p style="text-align: center;">
 ![Menu_Tools_Report_YearToDateTotal](Menu_Tools_Report_YearToDateTotal.png)
+</p>**
 
 **<p style="text-align: center;">
 Year to Date Total Report (<a href="../Menu_Tools_Report_YearToDateTotal.png">see also the full-size image</a>)
@@ -167,7 +183,9 @@ data store configuration files, and with commands.
 Diagnostics features are useful for troubleshooting.
 When an error occurs, a small warning dialog may be displayed, as shown in the following figure:
 
+**<p style="text-align: center;">
 ![Diagnostics_Warning](Diagnostics_Warning.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Warning Message Dialog
@@ -181,7 +199,9 @@ The ***Tools / Diagnostics*** menu item displays the ***Diagnostics*** dialog,
 which is used to set message levels and view messages as the application runs.
 The ***Diagnostics*** dialog (see the following figure) can be used to evaluate a problem.
 
+**<p style="text-align: center;">
 ![Diagnostics](Diagnostics.png)
+</p>**
 
 **<p style="text-align: center;">
 Diagnostics Interface (<a href="../Diagnostics.png">see also the full-size image</a>)
@@ -214,7 +234,9 @@ The ***Tools / Diagnostics – View Log File*** menu item displays the integrate
 Selecting this menu item is equivalent to selecting the View Log File button in the ***Diagnostics*** dialog.
 The log file viewer will be displayed in a window as shown in the following figure.
 
+**<p style="text-align: center;">
 ![Diagnostics_ViewLog](Diagnostics_ViewLog.png)
+</p>**
 
 **<p style="text-align: center;">
 Log File Viewer Window (<a href="../Diagnostics_ViewLog.png">see also the full-size image</a>)

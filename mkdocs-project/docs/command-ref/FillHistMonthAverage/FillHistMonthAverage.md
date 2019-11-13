@@ -20,7 +20,9 @@ immediately after the time series is read and are then applied when this command
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![FillHistMonthAverage](FillHistMonthAverage.png)
+</p>**
 
 **<p style="text-align: center;">
 `FillHistMonthAverage` Command Editor (<a href="../FillHistMonthAverage.png">see also the full-size image</a>)

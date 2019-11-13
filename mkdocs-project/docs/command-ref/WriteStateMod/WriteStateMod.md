@@ -21,7 +21,9 @@ even if an alias is assigned to a time series.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteStateMod](WriteStateMod.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteStateMod` Command Editor (<a href="../WriteStateMod.png">see also the full-size image</a>)

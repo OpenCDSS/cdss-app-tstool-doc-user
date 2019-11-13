@@ -19,7 +19,9 @@ Strings are sorted by ignoring case.
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![SortTable](SortTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `SortTable` Command Editor (<a href="../SortTable.png">see also the full-size image</a>)

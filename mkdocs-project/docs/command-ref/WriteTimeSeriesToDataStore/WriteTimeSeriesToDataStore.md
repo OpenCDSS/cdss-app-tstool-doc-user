@@ -24,7 +24,9 @@ initialization and when tight integration with TSTool is not required or has not
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToDataStore](WriteTimeSeriesToDataStore.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToDataStore` Command Editor (<a href="../WriteTimeSeriesToDataStore.png">see also the full-size image</a>)

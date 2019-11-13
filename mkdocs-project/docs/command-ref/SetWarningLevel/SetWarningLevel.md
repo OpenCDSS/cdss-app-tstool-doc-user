@@ -30,7 +30,9 @@ Levels are not completely consistent but the following guidelines can be followe
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![SetWarningLevel](SetWarningLevel.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetWarningLevel` Command Editor Showing Conditions Test (<a href="../SetWarningLevel.png">see also the full-size image</a>)

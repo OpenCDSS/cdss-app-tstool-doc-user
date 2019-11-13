@@ -19,7 +19,9 @@ This command is useful for appending multiple data files into a single file that
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![AppendFile](AppendFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `AppendFile` Command Editor (<a href="../AppendFile.png">see also the full-size image</a>)

@@ -72,7 +72,9 @@ Currently all values are added as text.  In the future an XSD file may be used t
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![ReadTableFromXml](ReadTableFromXml.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableFromXml` Command Editor (<a href="../ReadTableFromXml.png">see also the full-size image</a>)

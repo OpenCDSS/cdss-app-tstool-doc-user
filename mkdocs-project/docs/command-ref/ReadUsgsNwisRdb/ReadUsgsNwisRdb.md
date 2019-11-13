@@ -25,7 +25,9 @@ which can be used to retrieve data files from the USGS website.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ReadUsgsNwisRdb](ReadUsgsNwisRdb.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadUsgsNwisRdb` Command Editor (<a href="../ReadUsgsNwisRdb.png">see also the full-size image</a>)

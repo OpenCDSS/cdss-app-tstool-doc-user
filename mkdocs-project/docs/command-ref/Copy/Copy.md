@@ -25,7 +25,9 @@ Parameters are available to control how much of the original data are copied.
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![Copy](Copy.png)
+</p>**
 
 **<p style="text-align: center;">
 `Copy` Command Editor (<a href="../Copy.png">see also the full-size image</a>)

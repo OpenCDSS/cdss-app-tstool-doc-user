@@ -70,7 +70,9 @@ does not use the tables, and is slowed down by converting the tables to FreeMark
 
 The following dialog is used to edit the command and illustrates the syntax of the command for input template parameters.
 
+**<p style="text-align: center;">
 ![ExpandTemplateFile](ExpandTemplateFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `ExpandTemplateFile` Command Editor for Input Template Parameters (<a href="../ExpandTemplateFile.png">see also the full-size image</a>)
@@ -78,7 +80,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for input property parameters.
 
+**<p style="text-align: center;">
 ![ExpandTemplateFile Properties](ExpandTemplateFile_Properties.png)
+</p>**
 
 **<p style="text-align: center;">
 `ExpandTemplateFile` Command Editor for Input Property Parameters (<a href="../ExpandTemplateFile_Properties.png">see also the full-size image</a>)
@@ -86,7 +90,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for table input property parameters.
 
+**<p style="text-align: center;">
 ![ExpandTemplateFile Properties](ExpandTemplateFile_TableProperties.png)
+</p>**
 
 **<p style="text-align: center;">
 `ExpandTemplateFile` Command Editor for Table Input Property Parameters (<a href="../ExpandTemplateFile_TableProperties.png">see also the full-size image</a>)
@@ -94,7 +100,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for expanded output parameters.
 
+**<p style="text-align: center;">
 ![ExpandTemplateFile Out](ExpandTemplateFile_Out.png)
+</p>**
 
 **<p style="text-align: center;">
 `ExpandTemplateFile` Command Editor for Expanded Output Parameters (<a href="../ExpandTemplateFile_Out.png">see also the full-size image</a>)

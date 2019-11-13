@@ -18,7 +18,9 @@ The retrieval is not recursive to child folders.
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![FTPGet](FTPGet.png)
+</p>**
 
 **<p style="text-align: center;">
 `FTPGet` Command Editor (<a href="../FTPGet.png">see also the full-size image</a>)

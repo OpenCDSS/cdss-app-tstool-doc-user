@@ -25,7 +25,9 @@ This parameter provides the initial filter for the list of time series.
 The `TSPosition` parameter is generally not available in other commands - its use is discouraged in
 most cases because time series position in the output list can vary.
 
+**<p style="text-align: center;">
 ![SelectTimeSeries](SelectTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `SelectTimeSeries` Command Editor (<a href="../SelectTimeSeries.png">see also the full-size image</a>)
@@ -33,7 +35,9 @@ most cases because time series position in the output list can vary.
 
 The following dialog is used to edit the command and illustrates selecting time series by matching a property value.
 
+**<p style="text-align: center;">
 ![SelectTimeSeries Property](SelectTimeSeries_Property.png)
+</p>**
 
 **<p style="text-align: center;">
 `SelectTimeSeries` Command Editor Specifying a Property to Match (<a href="../SelectTimeSeries_Property.png">see also the full-size image</a>)
@@ -41,7 +45,9 @@ The following dialog is used to edit the command and illustrates selecting time 
 
 The following dialog is used to edit the command and illustrates selecting time series by evaluating a time series statistic.
 
+**<p style="text-align: center;">
 ![SelectTimeSeries Statistic](SelectTimeSeries_Statistic.png)
+</p>**
 
 **<p style="text-align: center;">
 `SelectTimeSeries` Command Editor Specifying a Statistic to Check (<a href="../SelectTimeSeries_Statistic.png">see also the full-size image</a>)
@@ -49,7 +55,9 @@ The following dialog is used to edit the command and illustrates selecting time 
 
 The following dialog is used to edit the command and illustrates selecting time series by matching locations in a network.
 
+**<p style="text-align: center;">
 ![SelectTimeSeries Network](SelectTimeSeries_Network.png)
+</p>**
 
 **<p style="text-align: center;">
 `SelectTimeSeries` Command Editor Specifying Network Nodes (<a href="../SelectTimeSeries_Network.png">see also the full-size image</a>)

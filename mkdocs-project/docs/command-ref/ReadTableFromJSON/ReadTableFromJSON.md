@@ -164,7 +164,9 @@ processed into output as the only array allowed for top-level objects.
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![ReadTableFromJSON](ReadTableFromJSON.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableFromJSON` Command Editor (<a href="../ReadTableFromJSON.png">see also the full-size image</a>)

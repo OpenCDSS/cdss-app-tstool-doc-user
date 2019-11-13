@@ -22,7 +22,9 @@ and consequently functionality is constrained by the features of that software p
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![NewExcelWorkbook](NewExcelWorkbook.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewExcelWorkbook` Command Editor (<a href="../NewExcelWorkbook.png">see also the full-size image</a>)

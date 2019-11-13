@@ -35,7 +35,9 @@ for the dependent time series (e.g., annual value used for each month).
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SetFromTS](SetFromTS.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetFromTS` Command Editor (<a href="../SetFromTS.png">see also the full-size image</a>)
@@ -44,7 +46,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the
 command for analysis window and period parameters.
 
+**<p style="text-align: center;">
 ![SetFromTS Period](SetFromTS_Period.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetFromTS` Command Editor for Period and Window Parameters (<a href="../SetFromTS_Period.png">see also the full-size image</a>)
@@ -52,7 +56,9 @@ command for analysis window and period parameters.
 
 The following dialog is used to edit the command and illustrates the syntax of the command for control parameters.
 
+**<p style="text-align: center;">
 ![SetFromTS Control](SetFromTS_Control.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetFromTS` Command Editor for Set Control Parameters (<a href="../SetFromTS_Control.png">see also the full-size image</a>)

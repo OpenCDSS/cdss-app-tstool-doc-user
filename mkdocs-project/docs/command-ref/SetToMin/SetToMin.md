@@ -19,7 +19,9 @@ See also the [`SetToMax`](../SetToMax/SetToMax.md) command.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SetToMin](SetToMin.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetToMin` Command Editor (<a href="../SetToMin.png">see also the full-size image</a>)

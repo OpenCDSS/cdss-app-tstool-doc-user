@@ -24,7 +24,9 @@ for the double-mass graph, which has difficulty handling missing data
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![Cumulate](Cumulate.png)
+</p>**
 
 **<p style="text-align: center;">
 `Cumulate` Command Editor (<a href="../Cumulate.png">see also the full-size image</a>)
@@ -69,7 +71,9 @@ Cumulate(TSList=AllTS,HandleMissingHow=CarryForwardIfMissing)
 The following graph illustrates cumulative data for two precipitation gages in the same region,
 where missing data results in carrying forward the last known value.
 
+**<p style="text-align: center;">
 ![Cumulate Graph](Cumulate_Graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Showing Results of `Cumulate` Command (<a href="../Cumulate_Graph.png">see also the full-size image</a>)

@@ -258,7 +258,9 @@ ReclamationHDB Datastore Configuration Parameters
 The `SystemLogin` and `SystemPassword` datastore configuration parameters are used to authenticate the database user.
 If either are set to `Prompt` in the configuration file, then the following dialog will be shown when TSTool starts.
 
+**<p style="text-align: center;">
 ![ReclamationHDB_login](ReclamationHDB_login.png)
+</p>**
 
 **<p style="text-align: center;">
 ReclamationHDB Datastore Login Dialog for Initial Login (<a href="../ReclamationHDB_login.png">see also the full-size image</a>)
@@ -269,7 +271,9 @@ If necessary, change the datastore configuration file to change other parameter 
 After TSTool starts, the ***File / Open / Reclamation HDB*** menu can be
 used to change a datastore login to a different account, as shown below:
 
+**<p style="text-align: center;">
 ![ReclamationHDB_login2](ReclamationHDB_login2.png)
+</p>**
 
 **<p style="text-align: center;">
 ReclamationHDB Datastore Login Dialog after Startup (<a href="../ReclamationHDB_login2.png">see also the full-size image</a>)

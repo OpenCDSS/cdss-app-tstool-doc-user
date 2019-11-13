@@ -19,7 +19,9 @@ determine the start and end of the block.
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![EndFor](EndFor.png)
+</p>**
 
 **<p style="text-align: center;">
 `EndFor` Command Editor (<a href="../EndFor.png">see also the full-size image</a>)

@@ -25,7 +25,9 @@ The status of datastores can be shown in TSTool using the ***View...Datastores**
 menu as shown in the following figure (the Status ***Message*** column on the far right,
 not visible in the figure, provides additional information about the datastore):
 
+**<p style="text-align: center;">
 ![CloseDataStore Status](CloseDataStore_Status.png)
+</p>**
 
 **<p style="text-align: center;">
 Datastore Information (<a href="../CloseDataStore_Status.png">see also the full-size image</a>)
@@ -35,7 +37,9 @@ Datastore Information (<a href="../CloseDataStore_Status.png">see also the full-
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![CloseDataStore](CloseDataStore.png)
+</p>**
 
 **<p style="text-align: center;">
 `CloseDataStore` Command Editor (<a href="../CloseDataStore.png">see also the full-size image</a>)

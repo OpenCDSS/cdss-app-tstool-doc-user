@@ -19,7 +19,9 @@ for more information about the file format.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteRiverWare](WriteRiverWare.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteRiverWare` Command Editor (<a href="../WriteRiverWare.png">see also the full-size image</a>)

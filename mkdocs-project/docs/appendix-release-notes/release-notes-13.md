@@ -30,10 +30,16 @@ command to support multiple patterns to match files.
 * ![change](change.png) [13.03.00] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command to allow math parameters to be specified as properties.
 * ![change](change.png) [13.03.00] Update the [`SetTableValues`](../command-ref/SetTableValues/SetTableValues.md) command to
 add `Column` and `Value` parameters to set a single column value, useful for complex values such as arrays
+* ![change](change.png) [13.03.00] Update the [`StartLog`](../command-ref/StartLog/StartLog.md) command to have `MaxSize` parameter to limit log file size.
+* ![change](change.png) [13.03.00] Update the [`TableMath`](../command-ref/TableMath/TableMath.md) command input and output parameters to support properties.
 * ![change](change.png) [13.03.00] Update the [`Wait`](../command-ref/Wait/Wait.md) command to allow parameters to be specified as properties.
 * ![change](change.png) [13.03.00] Update the [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md)
 command parameters to provide more flexibility in controlling the file format and support array columns.
 Also enhance performance of the command.
+* ![new](new.png) [13.03.00] Add the [`Break`](../command-ref/Break/Break.md) command to break out of 
+[`For`](../command-ref/For/For.md) loop block
+* ![new](new.png) [13.03.00] Add the [`Continue`](../command-ref/Continue/Continue.md) command to jump to end of 
+[`For`](../command-ref/For/For.md) loop block
 * ![new](new.png) [13.03.00] Add the [`FormatFile`](../command-ref/FormatFile/FormatFile.md) command to format a file for output,
 including for web
 * ![new](new.png) [13.03.00] Add the [`RunR`](../command-ref/RunR/RunR.md) command to run `R` scripts.

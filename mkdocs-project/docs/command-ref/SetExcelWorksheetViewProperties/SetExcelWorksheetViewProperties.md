@@ -25,7 +25,9 @@ and consequently functionality is constrained by the features of that software p
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![SetExcelWorksheetViewProperties](SetExcelWorksheetViewProperties.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetExcelWorksheetViewProperties` Command Editor (<a href="../SetExcelWorksheetViewProperties.png">see also the full-size image</a>)

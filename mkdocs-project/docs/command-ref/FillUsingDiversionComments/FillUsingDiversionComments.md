@@ -114,7 +114,9 @@ for more information about diversion time series.
 
 The following dialog is used to edit the command and illustrates the syntax of the command for diversion comment parameters.
 
+**<p style="text-align: center;">
 ![FillUsingDiversionComments](FillUsingDiversionComments.png)
+</p>**
 
 **<p style="text-align: center;">
 `FillUsingDiversionComments` Command Editor for Diversion Comment Parameters (<a href="../FillUsingDiversionComments.png">see also the full-size image</a>)
@@ -122,7 +124,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for CIU parameters.
 
+**<p style="text-align: center;">
 ![FillUsingDiversionComments_CIU](FillUsingDiversionComments_CIU.png)
+</p>**
 
 **<p style="text-align: center;">
 `FillUsingDiversionComments` Command Editor for CIU Parameters (<a href="../FillUsingDiversionComments_CIU.png">see also the full-size image</a>)
@@ -183,7 +187,9 @@ The corresponding graph created with data flags as labels is shown below (note t
 It may be necessary to change the graph properties to display the
 data labels above the point in order to see labels at the bottom of the graph.
 
+**<p style="text-align: center;">
 ![FillUsingDiversionComments_Graph](FillUsingDiversionComments_Graph.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Graph Showing Fill Flag (D labels indicate additional zero values) (<a href="../FillUsingDiversionComments_Graph.png">see also the full-size image</a>)
@@ -191,7 +197,9 @@ Example Graph Showing Fill Flag (D labels indicate additional zero values) (<a h
 
 The following figure illustrates how data flags can be displayed in the table view.
 
+**<p style="text-align: center;">
 ![FillUsingDiversionComments_Table](FillUsingDiversionComments_Table.png)
+</p>**
 
 **<p style="text-align: center;">
 Example Table Showing Fill Flags (<a href="../FillUsingDiversionComments_Table.png">see also the full-size image</a>)

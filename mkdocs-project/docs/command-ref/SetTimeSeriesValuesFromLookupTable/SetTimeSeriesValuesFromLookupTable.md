@@ -30,7 +30,9 @@ processing so that lookups are performed only on rows with input and output valu
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
+**<p style="text-align: center;">
 ![SetTimeSeriesValuesFromLookupTable](SetTimeSeriesValuesFromLookupTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetTimeSeriesValuesFromLookupTable` Command Editor for Time Series Parameters (<a href="../SetTimeSeriesValuesFromLookupTable.png">see also the full-size image</a>)
@@ -38,7 +40,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for lookup parameters.
 
+**<p style="text-align: center;">
 ![SetTimeSeriesValuesFromLookupTable_Lookup](SetTimeSeriesValuesFromLookupTable_Lookup.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetTimeSeriesValuesFromLookupTable` Command Editor for Time Series Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Lookup.png">see also the full-size image</a>)
@@ -46,7 +50,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time-related parameters.
 
+**<p style="text-align: center;">
 ![SetTimeSeriesValuesFromLookupTable_Time](SetTimeSeriesValuesFromLookupTable_Time.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetTimeSeriesValuesFromLookupTable` Command Editor for Time-related Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Time.png">see also the full-size image</a>)

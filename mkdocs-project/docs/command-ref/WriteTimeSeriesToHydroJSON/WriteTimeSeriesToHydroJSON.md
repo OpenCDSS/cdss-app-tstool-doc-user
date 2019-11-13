@@ -30,7 +30,9 @@ The following figures illustrate how such mapping can occur.
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToHydroJSON TS](WriteTimeSeriesToHydroJSON_TS.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToHydroJSON` Command Editor for Time Series Parameters (<a href="../WriteTimeSeriesToHydroJSON_TS.png">see also the full-size image</a>)
@@ -38,7 +40,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for station parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToHydroJSON Station](WriteTimeSeriesToHydroJSON_Station.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToHydroJSON` Command Editor for Station Parameters (<a href="../WriteTimeSeriesToHydroJSON_Station.png">see also the full-size image</a>)
@@ -46,7 +50,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToHydroJSON File](WriteTimeSeriesToHydroJSON_File.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToHydroJSON` Command Editor for Output Parameters (<a href="../WriteTimeSeriesToHydroJSON_File.png">see also the full-size image</a>)
@@ -98,7 +104,6 @@ Command Parameters
 |`PrintNice`|If `True`, format HydroJSON with line breaks so that output is human-readable. If `False`, minimal formatting occurs, suitable for website products.|`False`|
 
 In addition to the HydroJSON properties that can be specified above, the following values are automatically calculated:
-
 
 |**HydroJSON Value**|**Description**|
 |--|--|

@@ -18,7 +18,9 @@ This fill technique is useful for filling missing data with zeros, perhaps as th
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![FillConstant](FillConstant.png)
+</p>**
 
 **<p style="text-align: center;">
 `FillConstant` Command Editor (<a href="../FillConstant.png">see also the full-size image</a>)

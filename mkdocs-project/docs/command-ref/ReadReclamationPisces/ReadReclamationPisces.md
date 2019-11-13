@@ -27,7 +27,9 @@ This can greatly shorten command files and simplify command logic, especially wh
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ReadReclamationPisces](ReadReclamationPisces.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadReclamationPisces` Command Editor (<a href="../ReadReclamationPisces.png">see also the full-size image</a>)

@@ -21,7 +21,9 @@ with other commands that use a time series list based on selected time series
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![DeselectTimeSeries](DeselectTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `DeselectTimeSeries` Command Editor (<a href="../DeselectTimeSeries.png">see also the full-size image</a>)

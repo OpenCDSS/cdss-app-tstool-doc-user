@@ -25,7 +25,9 @@ See also the [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md)
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ReadTimeSeries](ReadTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTimeSeries` Command Editor (<a href="../ReadTimeSeries.png">see also the full-size image</a>)

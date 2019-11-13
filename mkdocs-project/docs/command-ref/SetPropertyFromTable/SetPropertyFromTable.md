@@ -23,7 +23,9 @@ Filters are used to match one or more rows.  The first matched row is used to se
 
 The following dialog is used to edit the command and illustrates the command syntax for general parameters.
 
+**<p style="text-align: center;">
 ![SetPropertyFromTable](SetPropertyFromTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetPropertyFromTable` Command Editor for General Set Parameters (<a href="../SetPropertyFromTable.png">see also the full-size image</a>)
@@ -55,7 +57,9 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 The command shown in the editor dialog, used with the following table, will set `StringProp=“Abba”`
 
+**<p style="text-align: center;">
 ![SetPropertyFromTable table](SetPropertyFromTable_table.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetPropertyFromTable` Input Example (<a href="../SetPropertyFromTable_table.png">see also the full-size image</a>)

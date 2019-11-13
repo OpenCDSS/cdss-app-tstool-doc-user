@@ -51,6 +51,10 @@ Future enhancements to the `If` command may include:
 * Test whether a time series value is non-missing.
 * Compare time series properties with other properties and values.
 
+See also the [`Break`](../Break/Break.md) and
+[`Continue`](../Continue/Continue.md) commands,
+which can be used within an `If` block to control logic in a [`For`](../For/For.md) loop.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
@@ -64,7 +68,9 @@ The following dialog is used to edit the command and illustrates the command syn
 The following illustrates checking for a property to make sure it is defined and not empty.
 This is useful for detecting logic and data problems.
 
+**<p style="text-align: center;">
 ![If Property Defined](If_PropDefined.png)
+</p>**
 
 **<p style="text-align: center;">
 `If` Command Editor Showing Check for Whether a Property is Not Defined or is Empty (<a href="../If_PropDefined.png">see also the full-size image</a>)
@@ -74,7 +80,9 @@ The following illustrates how to detect if a time series exists.
 This is useful for executing only blocks of commands that operate on the time series
 (and avoiding those steps and related warning/failure messages when the time series does not exist).
 
+**<p style="text-align: center;">
 ![If Time Series Exists](If_TS.png)
+</p>**
 
 **<p style="text-align: center;">
 `If` Command Editor Showing Check for Time Series Existance (<a href="../If_TS.png">see also the full-size image</a>)
@@ -143,6 +151,8 @@ EndIf(Name="SampleSizeCheck3Outer")
 
 ## See Also ##
 
+* [`Break`](../Break/Break.md) command
+* [`Continue`](../Continue/Continue.md) command
 * [`EndIf`](../EndIf/EndIf.md) command
 * [`Message`](../Message/Message.md) command
 * [`SetProperty`](../SetProperty/SetProperty.md) command

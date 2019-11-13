@@ -36,7 +36,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 For all the time series identifiers, the last matching identifier before the command will be matched for processing.
 Currently there is no way to fill multiple time series with one command.
 
+**<p style="text-align: center;">
 ![FillDayTSFrom2MonthTSAnd1DayTS](FillDayTSFrom2MonthTSAnd1DayTS.png)
+</p>**
 
 **<p style="text-align: center;">
 `FillDayTSFrom2MonthTSAnd1DayTS` Command Editor (<a href="../FillDayTSFrom2MonthTSAnd1DayTS.png">see also the full-size image</a>)

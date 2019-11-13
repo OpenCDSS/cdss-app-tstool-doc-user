@@ -26,7 +26,9 @@ Columns are indicated by a column type and width.  Files have the following char
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![ReadTableFromFixedFormatFile](ReadTableFromFixedFormatFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableFromFixedFormatFile` Command Editor (<a href="../ReadTableFromFixedFormatFile.png">see also the full-size image</a>)
@@ -94,7 +96,9 @@ The `ColumnNames` parameter is used to assign column names to the output table.
 
 The following table in TSTool illustrates the resulting output:
 
+**<p style="text-align: center;">
 ![ReadTableFromFixedFormatFile Output](ReadTableFromFixedFormatFile_Output.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadTableFromFixedFormatFile` Command Output Table Example (<a href="../ReadTableFromFixedFormatFile_Output.png">see also the full-size image</a>)

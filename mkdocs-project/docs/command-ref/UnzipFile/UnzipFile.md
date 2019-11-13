@@ -18,7 +18,9 @@ Existing files will be overwritten.
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![UnzipFile](UnzipFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `UnzipFile` Command Editor (<a href="../UnzipFile.png">see also the full-size image</a>)

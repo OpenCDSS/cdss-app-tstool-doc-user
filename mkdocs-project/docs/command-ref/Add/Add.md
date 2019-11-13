@@ -29,7 +29,9 @@ Implications of ignoring missing data should be considered.  Time series being a
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![Add](Add.png)
+</p>**
 
 **<p style="text-align: center;">
 `Add` Command Editor (<a href="../Add.png">see also the full-size image</a>)

@@ -20,7 +20,9 @@ The copy is an exact copy except that the ensemble identifier is different
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![CopyEnsemble](CopyEnsemble.png)
+</p>**
 
 **<p style="text-align: center;">
 `CopyEnsemble` Command Editor (<a href="../CopyEnsemble.png">see also the full-size image</a>)

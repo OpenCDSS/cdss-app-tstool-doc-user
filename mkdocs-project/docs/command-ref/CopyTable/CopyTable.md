@@ -22,7 +22,9 @@ or to create a subset of a table to output to a file or write to a database
 The following dialog is used to edit the command and illustrates the syntax of the command
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
 
+**<p style="text-align: center;">
 ![CopyTable](CopyTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `CopyTable` Command Editor (<a href="../CopyTable.png">see also the full-size image</a>)

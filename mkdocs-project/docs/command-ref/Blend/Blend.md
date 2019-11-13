@@ -25,7 +25,9 @@ The [`SetFromTS`](../SetFromTS/SetFromTS.md) does not extend the period.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![Blend](Blend.png)
+</p>**
 
 **<p style="text-align: center;">
 `Blend` Command Editor (<a href="../Blend.png">see also the full-size image</a>)

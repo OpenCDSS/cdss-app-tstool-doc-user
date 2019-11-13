@@ -18,7 +18,9 @@ See the [Delft FEWS Input Type Appendix](../../datastore-ref/Delft-FEWS-PI-XML/D
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteDelftFewsPiXml](WriteDelftFewsPiXml.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteDelftFewsPiXml` Command Editor (<a href="../WriteDelftFewsPiXml.png">see also the full-size image</a>)

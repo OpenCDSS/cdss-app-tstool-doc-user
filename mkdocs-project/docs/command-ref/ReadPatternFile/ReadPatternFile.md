@@ -38,7 +38,9 @@ See also the [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern.md) command, wh
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ReadPatternFile](ReadPatternFile.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadPatternFile` Command Editor (<a href="../ReadPatternFile.png">see also the full-size image</a>)

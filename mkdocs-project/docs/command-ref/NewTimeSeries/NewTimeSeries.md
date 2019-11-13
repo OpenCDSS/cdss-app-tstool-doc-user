@@ -28,7 +28,9 @@ The following dialog is used to edit the command and illustrates the syntax for 
 The new time series identifier, which provides critical information including the data interval,
 is edited by pressing the ***Edit*** button.
 
+**<p style="text-align: center;">
 ![NewTimeSeries](NewTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `NewTimeSeries` Command Editor (<a href="../NewTimeSeries.png">see also the full-size image</a>)

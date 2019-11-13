@@ -32,7 +32,9 @@ this capability may be added in the future.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![LookupTimeSeriesFromTable](LookupTimeSeriesFromTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `LookupTimeSeriesFromTable` Command Editor (<a href="../LookupTimeSeriesFromTable.png">see also the full-size image</a>)

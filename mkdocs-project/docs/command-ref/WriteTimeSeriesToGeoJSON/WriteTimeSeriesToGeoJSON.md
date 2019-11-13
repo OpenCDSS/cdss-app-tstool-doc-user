@@ -28,7 +28,9 @@ A future enhancement of this command will allow the geometry feature data to be 
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToGeoJSON](WriteTimeSeriesToGeoJSON.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToGeoJSON` Command Editor (<a href="../WriteTimeSeriesToGeoJSON.png">see also the full-size image</a>)
@@ -36,7 +38,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following figure illustrates the command syntax for layers specified with a WKT geometry property.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToGeoJSON_WKT](WriteTimeSeriesToGeoJSON_WKT.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToGeoJSON` Command Editor for WKT Geometry Data Parameters (<a href="../WriteTimeSeriesToGeoJSON_WKT.png">see also the full-size image</a>)
@@ -44,7 +48,9 @@ The following figure illustrates the command syntax for layers specified with a 
 
 The following figure illustrates the command syntax for specifying time series properties to include as properties in the GeoJSON output.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToGeoJSON_Properties](WriteTimeSeriesToGeoJSON_Properties.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToGeoJSON` Command Editor for Property Parameters (<a href="../WriteTimeSeriesToGeoJSON_Properties.png">see also the full-size image</a>)
@@ -52,7 +58,9 @@ The following figure illustrates the command syntax for specifying time series p
 
 The following figure illustrates the command syntax for specifying the JavaScript variable for the output.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToGeoJSON_JavaScriptVar](WriteTimeSeriesToGeoJSON_JavaScriptVar.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToGeoJSON` Command Editor for JavaScript Parameters (<a href="../WriteTimeSeriesToGeoJSON_JavaScriptVar.png">see also the full-size image</a>)
@@ -60,7 +68,9 @@ The following figure illustrates the command syntax for specifying the JavaScrip
 
 The following figure illustrates the command syntax for specifying inserts around the GeoJSON content.
 
+**<p style="text-align: center;">
 ![WriteTimeSeriesToGeoJSON_Inserts](WriteTimeSeriesToGeoJSON_Inserts.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteTimeSeriesToGeoJSON` Command Editor for Text Insert Parameters (<a href="../WriteTimeSeriesToGeoJSON_Inserts.png">see also the full-size image</a>)

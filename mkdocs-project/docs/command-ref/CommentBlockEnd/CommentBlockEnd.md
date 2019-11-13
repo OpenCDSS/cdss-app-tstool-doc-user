@@ -21,7 +21,9 @@ See the [`#`](../Comment/Comment.md) comment documentation for information about
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![CommentBlockEnd](CommentBlockEnd.png)
+</p>**
 
 **<p style="text-align: center;">
 `*/` Command Editor (<a href="../CommentBlockEnd.png">see also the full-size image</a>)

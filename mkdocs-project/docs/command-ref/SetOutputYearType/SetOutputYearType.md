@@ -34,7 +34,9 @@ The following dialog is used to edit this command and illustrates the syntax of 
 Note that the output period should always use calendar month and year,
 even if other than calendar year are used for output (see [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md)).
 
+**<p style="text-align: center;">
 ![SetOutputYearType](SetOutputYearType.png)
+</p>**
 
 **<p style="text-align: center;">
 `SetOutputYearType` Command Editor (<a href="../SetOutputYearType.png">see also the full-size image</a>)

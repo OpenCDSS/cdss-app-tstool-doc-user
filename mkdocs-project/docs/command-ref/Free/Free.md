@@ -27,7 +27,9 @@ The `Free` command is useful if a block of commands is used with [`For`](../For/
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
+**<p style="text-align: center;">
 ![Free](Free.png)
+</p>**
 
 **<p style="text-align: center;">
 `Free` Command Editor (<a href="../Free.png">see also the full-size image</a>)

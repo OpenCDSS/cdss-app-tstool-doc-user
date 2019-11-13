@@ -34,7 +34,9 @@ Additional query features such as cascading choices may be enabled as web servic
 It is recommended that filters be used to constrain the query,
 and then modify to converge on an appropriate set of filters for optimal performance.
 
+**<p style="text-align: center;">
 ![ReadNrcsAwdb](ReadNrcsAwdb.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadNrcsAwdb` Command Editor for General Command Parameters (<a href="../ReadNrcsAwdb.png">see also the full-size image</a>)
@@ -44,7 +46,9 @@ The following figure illustrates the ***Reservoirs*** tab of the dialog.
 No additional parameters are provided; however, the notes explain that reservoir data are
 available only from the BOR network and appropriate network element codes must be selected.
 
+**<p style="text-align: center;">
 ![ReadNrcsAwdb_Reservoir](ReadNrcsAwdb_Reservoir.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadNrcsAwdb` Command Editor for Reservoir Query Parameters (<a href="../ReadNrcsAwdb_Reservoir.png">see also the full-size image</a>)
@@ -56,7 +60,9 @@ Because it is possible to read normal time series and forecasts,
 the `ReadForecast` parameter is provided to specifically indicate that a forecast is being requested.
 The forecast is uniquely identified by the forecast period and publication date (typically the first day of a month).
 
+**<p style="text-align: center;">
 ![ReadNrcsAwdb_Forecast](ReadNrcsAwdb_Forecast.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadNrcsAwdb` Command Editor for Forecast Query Parameters (<a href="../ReadNrcsAwdb_Forecast.png">see also the full-size image</a>)
@@ -66,7 +72,9 @@ The resulting forecast table, as shown in the following figure,
 includes all the relevant information about the forecast.
 Use table processing commands to filter the table for a specific station and publication date.
 
+**<p style="text-align: center;">
 ![ReadNrcsAwdb_ForecastTable](ReadNrcsAwdb_ForecastTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadNrcsAwdb` Command Output Forecast Table (<a href="../ReadNrcsAwdb_ForecastTable.png">see also the full-size image</a>)

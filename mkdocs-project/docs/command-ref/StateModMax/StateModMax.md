@@ -33,7 +33,9 @@ After the time series have been processed, they can be viewed or written out as 
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![StateModMax](StateModMax.png)
+</p>**
 
 **<p style="text-align: center;">
 `StateModMax` Command Editor (<a href="../StateModMax.png">see also the full-size image</a>)

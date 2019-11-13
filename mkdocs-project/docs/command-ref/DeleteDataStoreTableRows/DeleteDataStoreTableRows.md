@@ -40,7 +40,9 @@ and/or require using stored procedures)
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![DeleteDataStoreTableRows](DeleteDataStoreTableRows.png)
+</p>**
 
 **<p style="text-align: center;">
 `DeleteDataStoreTableRows` Command Editor (<a href="../DeleteDataStoreTableRows.png">see also the full-size image</a>)

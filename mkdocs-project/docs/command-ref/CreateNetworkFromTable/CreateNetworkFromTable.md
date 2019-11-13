@@ -20,7 +20,9 @@ command documentation for illustration.
 However, the network created by the `CreateNetworkFromTable` command does not have
 knowledge of node type or calculations – this may be enhanced later.
 
+**<p style="text-align: center;">
 ![AnalyzeNetworkPointFlow_Diagram](AnalyzeNetworkPointFlow_Diagram.png)
+</p>**
 
 **<p style="text-align: center;">
 Node-based Network (<a href="../AnalyzeNetworkPointFlow_Diagram.png">see also the full-size image</a>)
@@ -37,7 +39,9 @@ create a navigable network object in program memory.
 The network can then be used with commands such as
 [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) to select time series that were read for the network.
 
+**<p style="text-align: center;">
 ![AnalyzeNetworkPointFlow_InputTable](AnalyzeNetworkPointFlow_InputTable.png)
+</p>**
 
 **<p style="text-align: center;">
 Network Definition Input Table (<a href="../AnalyzeNetworkPointFlow_InputTable.png">see also the full-size image</a>)
@@ -47,7 +51,9 @@ Network Definition Input Table (<a href="../AnalyzeNetworkPointFlow_InputTable.p
 
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
 
+**<p style="text-align: center;">
 ![CreateNetworkFromTable_General](CreateNetworkFromTable_General.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateNetworkFromTable` Command Editor for General Parameters (<a href="../CreateNetworkFromTable_General.png">see also the full-size image</a>)
@@ -55,7 +61,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters that map table columns to network node types.
 
+**<p style="text-align: center;">
 ![CreateNetworkFromTable_Map](CreateNetworkFromTable_Map.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateNetworkFromTable` Command Editor for Parameters that Map Table Columns to Network Nodes (<a href="../CreateNetworkFromTable_Map.png">see also the full-size image</a>)
@@ -63,7 +71,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters that define node behavior.
 
+**<p style="text-align: center;">
 ![CreateNetworkFromTable_Behavior](CreateNetworkFromTable_Behavior.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateNetworkFromTable` Command Editor for Parameters that Define Node Behavior (<a href="../CreateNetworkFromTable_Behavior.png">see also the full-size image</a>)

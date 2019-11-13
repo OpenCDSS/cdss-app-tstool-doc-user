@@ -30,6 +30,12 @@ identifiers and other command parameters as `${Property}` values,
 rather than actual data, because the values get expanded at run-time.
 This provides increased processing power but errors may not be evident until commands run.
 
+See also the
+[`Break`](../Break/Break.md) and
+[`Continue`](../Continue/Continue.md) commands,
+which can be used with
+[`If`](../If/If.md) command to skip some commands in a `For` loop.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a list.
@@ -122,6 +128,8 @@ TestFor="Station4"
 
 ## See Also ##
 
+* [`Break`](../Break/Break.md) command
+* [`Continue`](../Continue/Continue.md) command
 * [`EndFor`](../EndFor/EndFor.md) command
 * [`ListFiles`](../ListFiles/ListFiles.md) command
 * [`Message`](../Message/Message.md) command

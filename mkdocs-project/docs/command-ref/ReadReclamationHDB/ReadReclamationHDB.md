@@ -47,7 +47,9 @@ when reading "real" or "model" data using filters.
 This approach can be used when reading one or more time series in bulk.
 ***Where*** criteria should be specified in sequential order without intervening blank specifiers.
 
+**<p style="text-align: center;">
 ![ReadReclamationHDB](ReadReclamationHDB.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadReclamationHDB` Command Editor when Using Filters to Read 1+ Time Series (<a href="../ReadReclamationHDB.png">see also the full-size image</a>)
@@ -55,7 +57,9 @@ This approach can be used when reading one or more time series in bulk.
 
 The following figure illustrates reading a single "real" time series (note that the model parameters are not specified).
 
+**<p style="text-align: center;">
 ![ReadReclamationHDB_Real](ReadReclamationHDB_Real.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadReclamationHDB` Command Editor to Read a Single Real Time Series (<a href="../ReadReclamationHDB_Real.png">see also the full-size image</a>)
@@ -75,7 +79,9 @@ to the site and data type parameters. There are two ways to select the MRI:
 
 The following figure illustrates both approaches, although normally one or the other would be used. Selecting an MRI directly takes precedence over the other approach.
 
+**<p style="text-align: center;">
 ![ReadReclamationHDB_Model](ReadReclamationHDB_Model.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadReclamationHDB` Command Editor for Single Model Time Series (<a href="../ReadReclamationHDB_Model.png">see also the full-size image</a>)
@@ -93,7 +99,9 @@ Consequently, in order to list the ensemble names for selection,
 the data table is checked for matching SDI, and additional queries map the data back to the ensemble data,
 which provide the list of ensemble names to choose from.
 
+**<p style="text-align: center;">
 ![ReadReclamationHDB_Ensemble](ReadReclamationHDB_Ensemble.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadReclamationHDB` Command Editor to Read an Ensemble of Model Time Series (<a href="../ReadReclamationHDB_Ensemble.png">see also the full-size image</a>)
@@ -168,7 +176,9 @@ for the first data value in the hourly time series,
 for the HDB time zone (e.g., MST for ECAO database).
 This tells TSTool to ignore all records that do not align.
 
+**<p style="text-align: center;">
 ![ReadReclamationHDB_AlignmentError](ReadReclamationHDB_AlignmentError.png)
+</p>**
 
 **<p style="text-align: center;">
 Error Generated When Database Records do not Align with NHOur Interval (<a href="../ReadReclamationHDB_AlignmentError.png">see also the full-size image</a>)
@@ -176,7 +186,9 @@ Error Generated When Database Records do not Align with NHOur Interval (<a href=
 
 The database records are shown below.
 
+**<p style="text-align: center;">
 ![ReadReclamationHDB_AlignmentErrorData](ReadReclamationHDB_AlignmentErrorData.png)
+</p>**
 
 **<p style="text-align: center;">
 HDB `R_HOUR` Table Illustrating Extra Data Records (should have every 3 hour but have every 1 hour) (<a href="../ReadReclamationHDB_AlignmentErrorData.png">see also the full-size image</a>)

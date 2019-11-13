@@ -38,7 +38,9 @@ although in the future an ability to provide table and column descriptions using
 
 The following dialog is used to edit the command and illustrates the syntax of the command for table parameters.
 
+**<p style="text-align: center;">
 ![CreateDataStoreDataDictionary Tables](CreateDataStoreDataDictionary_Tables.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateDataStoreDataDictionary` Command Editor for Table Parameters (<a href="../CreateDataStoreDataDictionary_Tables.png">see also the full-size image</a>)
@@ -46,7 +48,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for data dictionary parameters.
 
+**<p style="text-align: center;">
 ![CreateDataStoreDataDictionary](CreateDataStoreDataDictionary.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateDataStoreDataDictionary` Command Editor for Data Dictionary Parameters (<a href="../CreateDataStoreDataDictionary.png">see also the full-size image</a>)
@@ -54,7 +58,9 @@ The following dialog is used to edit the command and illustrates the syntax of t
 
 The following dialog is used to edit the command and illustrates the syntax of the command for entity relationship parameters.
 
+**<p style="text-align: center;">
 ![CreateDataStoreDataDictionary ERDiagram](CreateDataStoreDataDictionary_ERDiagram.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateDataStoreDataDictionary` Command Editor for Entity Relationship Diagram Parameters (<a href="../CreateDataStoreDataDictionary_ERDiagram.png">see also the full-size image</a>)
@@ -94,7 +100,9 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 The following is an example of an Excel workbook with ER Diagram layout data, which can be read with the
 [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command.
 
+**<p style="text-align: center;">
 ![CreateDataStoreDataDictionary Layout](CreateDataStoreDataDictionary_Layout.png)
+</p>**
 
 **<p style="text-align: center;">
 `CreateDataStoreDataDictionary` Command Editor for Entity Relationship Layout Parameters (<a href="../CreateDataStoreDataDictionary_Layout.png">see also the full-size image</a>)

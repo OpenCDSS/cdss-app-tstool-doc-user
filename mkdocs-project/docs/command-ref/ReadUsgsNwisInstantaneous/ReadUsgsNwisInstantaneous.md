@@ -55,7 +55,9 @@ However, full listing of choices (such as all the thousands of streamflow
 stations that are available) is not provided due to performance issues.
 Additional query features will be enabled as web service integration is enhanced.
 
+**<p style="text-align: center;">
 ![ReadUsgsNwisInstantaneous](ReadUsgsNwisInstantaneous.png)
+</p>**
 
 **<p style="text-align: center;">
 `ReadUsgsNwisInstantaneous` Command Editor (<a href="../ReadUsgsNwisInstantaneous.png">see also the full-size image</a>)

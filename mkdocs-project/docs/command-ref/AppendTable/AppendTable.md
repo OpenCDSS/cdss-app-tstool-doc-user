@@ -23,7 +23,9 @@ For appended rows:
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![AppendTable](AppendTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `AppendTable` Command Editor (<a href="../AppendTable.png">see also the full-size image</a>)
@@ -56,19 +58,25 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 The following figures show the input tables and results (modified first table) corresponding to the parameters shown in the editor dialog figure above.
 Note that the column names for “Table2” have a “2”.
 
+**<p style="text-align: center;">
 ![AppendTable1](AppendTable_Table1.png)
+</p>**
 
 **<p style="text-align: center;">
 Table Corresponding to TableID in Command Editor
 </p>**
 
+**<p style="text-align: center;">
 ![AppendTable2](AppendTable_Table2.png)
+</p>**
 
 **<p style="text-align: center;">
 Table Corresponding to AppendTableID in Command Editor
 </p>**
 
+**<p style="text-align: center;">
 ![AppendTable results](AppendTable_Table1Appended.png)
+</p>**
 
 **<p style="text-align: center;">
 Table Corresponding to Results from Parameters in Command Editor

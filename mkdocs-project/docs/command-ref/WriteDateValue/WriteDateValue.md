@@ -21,7 +21,9 @@ the `TSList` parameter to select appropriate time series.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![WriteDateValue](WriteDateValue.png)
+</p>**
 
 **<p style="text-align: center;">
 `WriteDateValue` Command Editor (<a href="../WriteDateValue.png">see also the full-size image</a>)

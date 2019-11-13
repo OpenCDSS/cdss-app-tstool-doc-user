@@ -52,7 +52,9 @@ The following dialog is used to edit the command and illustrates the syntax
 of the command when writing a multi-column data table while also outputting data flags.
 Note that the value columns can be specified using time series properties.
 
+**<p style="text-align: center;">
 ![TimeSeriesToTable](TimeSeriesToTable.png)
+</p>**
 
 **<p style="text-align: center;">
 `TimeSeriesToTable` Command Editor to Create Multi-Column Data Table (<a href="../TimeSeriesToTable.png">see also the full-size image</a>)
@@ -110,7 +112,9 @@ WriteTableToDelimitedFile(TableID="TestTable",OutputFile="Results\Test_TimeSerie
 The resulting table will be listed in the Tables area of the TSTool interface and clicking on
 the TestTable identifier will display the table similar to the following:
 
+**<p style="text-align: center;">
 ![TimeSeriesToTable results](TimeSeriesToTable2.png)
+</p>**
 
 **<p style="text-align: center;">
 `TimeSeriesToTable` Multi-Column Data Table (<a href="../TimeSeriesToTable2.png">see also the full-size image</a>)
@@ -123,7 +127,9 @@ Because a single column is being used for data,
 the data value and corresponding data flag column names are specified literally (not as time series properties).
 The column and format for the TSID also must be specified.
 
+**<p style="text-align: center;">
 ![TimeSeriesToTable Single](TimeSeriesToTable_Single.png)
+</p>**
 
 **<p style="text-align: center;">
 `TimeSeriesToTable` Command Editor to Create Single Data Column Table (<a href="../TimeSeriesToTable_Single.png">see also the full-size image</a>)
@@ -131,7 +137,9 @@ The column and format for the TSID also must be specified.
 
 The resulting table is as shown in the following figure
 
+**<p style="text-align: center;">
 ![TimeSeriesToTable Single2](TimeSeriesToTable_Single2.png)
+</p>**
 
 **<p style="text-align: center;">
 Single Data Column Table (<a href="../TimeSeriesToTable_Single2.png">see also the full-size image</a>)

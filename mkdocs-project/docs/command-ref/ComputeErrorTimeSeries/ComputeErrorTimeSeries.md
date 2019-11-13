@@ -23,7 +23,9 @@ each determined using the appropriate `*TSList` parameter.
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
+**<p style="text-align: center;">
 ![ComputeErrorTimeSeries](ComputeErrorTimeSeries.png)
+</p>**
 
 **<p style="text-align: center;">
 `ComputeErrorTimeSeries` Command Editor (<a href="../ComputeErrorTimeSeries.png">see also the full-size image</a>)
