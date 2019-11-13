@@ -48,7 +48,7 @@ Command Parameters
 | --------------|-----------------|----------------- |
 |`TableID`<br>**required**|The table identifier for the table to process. Can specify with `${Property}`.|None - must be specified.|
 |`Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information below.|Condition or row number must be specified.|
-|`DeleteRowNumbers`|The row number (1+) or last to delete the last row. Can use `${Property}` to specify row number.|Condition or row number must be specified.|
+|`DeleteRowNumbers`|The row number(s) to delete:<ul><li>Comma-separated list of row numbers (1+)</li><li>`last` to delete the last row</li><li>`*` to delete all rows.</li></ul><br> Can use `${Property}`.|Condition or row number must be specified.|
 
 The `Condition` parameter, if specified, is restricted to a simple comparison:
 

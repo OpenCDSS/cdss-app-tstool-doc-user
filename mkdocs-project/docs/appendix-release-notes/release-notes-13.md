@@ -18,6 +18,8 @@ Also add the `EnvVars`, `IfNonZeroExitCode`, `StderrFile`, and `StdoutFile` para
 * ![change](change.png) [13.03.00] Lowercase command file extension `tstool` is now included in file selectors and is the default
 enforced when saving.  Mixed case `TSTool` extension is still supported.
 * ![change](change.png) [13.03.00] Fix a number of issues where table arrays were not cleanly supported.
+* ![change](change.png) [13.03.00] Update the [`AppendTable`](../command-ref/AppendTable/AppendTable.md) command to
+accept property notation in the `ColumnFilters` parameter.
 * ![change](change.png) [13.03.00] Update the [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command to
 check the full length of each file when computing the number of different lines.
 * ![change](change.png) [13.03.00] Update the [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md)
@@ -26,6 +28,7 @@ add `CompareFlags` to control whether data flags are also compared.
 * ![change](change.png) [13.03.00] Update the
 [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md)
 command to support multiple patterns to match files.
+* ![change](change.png) [13.03.00] Update the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command to allow `*` to delete all rows.
 * ![change](change.png) [13.03.00] Update the [`NewTable`](../command-ref/NewTable/NewTable.md) command to support arrays.
 * ![change](change.png) [13.03.00] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command to allow math parameters to be specified as properties.
 * ![change](change.png) [13.03.00] Update the [`SetTableValues`](../command-ref/SetTableValues/SetTableValues.md) command to
