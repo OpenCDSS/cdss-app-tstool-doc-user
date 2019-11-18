@@ -11,7 +11,13 @@
 
 ## Overview ##
 
-The `DeleteTableRows` command deletes specified rows from a table.
+The `DeleteTableRows` command deletes specified rows from a table using one of the following approaches:
+
+* ***Condition***
+	+ delete rows where a column value matches a condition
+* ***Row Number***
+	+ delete specific row numbers
+	+ delete all rows
 
 ## Command Editor ##
 
@@ -56,10 +62,9 @@ The `Condition` parameter, if specified, is restricted to a simple comparison:
 ColumnName operator Value
 ```
 
-The values can be integers, floating point numbers, strings, or processor properties
-specified with `${Property}` that
-evaluate to primitive types. The operator is one of the following (more functionality will be added in the
-future). For strings, A is less than Z, etc.
+The `Value` will be taken from the indicated `ColumnName` and can be integer, floating point number, string, or processor property
+specified with `${Property}` that evaluates to a primitive type.
+The operator is one of the following.
 
 * `<`
 * `<=`
@@ -69,7 +74,14 @@ future). For strings, A is less than Z, etc.
 * `!=`
 * `contains` (only for string comparison)
 * `!contains` (only for string comparison)
-* `isempty` (only for string comparison, and does not require `Value` in condition)
+* `isempty` (only for string comparison, and `Value` should not be specified)
+* `!isempty` (only for string comparison, and `Value` should not be specified)
+
+Additional criteria for strings is:
+
+* For `<` and `>` comparisons, `A` is less than `Z`, etc. as per the [ASCII table](http://www.asciitable.com/).
+* Comparisons are case-specific.  Support for case-independent comparisons will be added in the future.
+* Null string is treated as empty string for `isempty` and `!isempty` operators.
 
 ## Examples ##
 
