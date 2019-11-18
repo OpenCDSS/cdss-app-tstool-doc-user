@@ -17,7 +17,9 @@ dBASE files are self-contained binary database files.
 
 Handling of dBASE files is limited and support for newer features may not be included.
 An attempt is made to properly convert dBASE internal data representations to appropriate equivalents.
-In the future additional parameters may be added to control handling of numbers and dates.
+Use available command parameters to convert default column data types to other types.
+For example, integers may be represented in the DBF file as a number with zero precision (digits after decimal)
+and may need to be converted to integer type.
 
 ## Command Editor ##
 
@@ -46,6 +48,9 @@ Command Parameters
 | --------------|-----------------|----------------- |
 |`TableID`<br>**required**|Identifier to assign to the table that is read, which allows the table data to be used with other commands.  Can be specified with `${Property}.`|None – must be specified.|
 |`InputFile`<br>**required**|The name of the file to read, as an absolute path or relative to the command file location.  Can be specified with `${Property}`.|None – must be specified.|
+|`DoubleColumns`|Name(s) of columns that should be converted to double data type, separated by commas.  Column names can contain `*` as a wildcard and can be specified with `${Property}`.||
+|`IntegerColumns`|Name(s) of columns that should be converted to integer data type, separated by commas.  Column names can contain `*` as a wildcard and can be specified with `${Property}`.||
+|`TextColumns`|Name(s) of columns that should be converted to text data type, separated by commas.  Column names can contain `*` as a wildcard and can be specified with `${Property}`.||
 |`Top`|If specified, the top number of rows specified by the parameter will be read.|Return all data.|
 
 ## Examples ##
