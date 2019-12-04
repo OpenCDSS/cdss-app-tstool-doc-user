@@ -15,7 +15,7 @@ In all cases, it is recommended to install in the default location to avoid conf
 	+ [Install TSTool on a Windows File Server](#install-tstool-on-a-windows-file-server)
 	+ [Install TSTool from the “HydroBase data set Analysis Query Tools DVD”](#install-tstool-from-the-hydrobase-data-set-analysis-query-tools-dvd)
 	+ [Install TSTool on Linux](#install-tstool-on-linux)
-* [Uninstalling TSTool Software](#uninstalling-tstool-software)
+* [Uninstalling TSTool](#uninstalling-tstool)
 	+ [Uninstall TSTool on Windows](#uninstall-tstool-on-windows)
 	+ [Uninstall TSTool on Linux](#uninstall-tstool-on-linux)
 * [Running TSTool](#running-tstool)
@@ -93,7 +93,7 @@ In addition to the software installation files above,
 user files are saved in a `.tstool` folder under the user’s home folder and
 provide user-specific customization of the TSTool installation.
 Folder names beginning with a period are by default hidden on Linux computers.
-As of TSTool TSTool 13.00.00, the user files are separated by major TSTool version,
+As of TSTool 13.00.00, the user files are separated by major TSTool version,
 meaning that files for version 13.00.00, 13.00.01, 13.01.00, etc. are all stored under `.tstool/13`.
 This allows sharing of configuration file in major version while allowing TSTool features and configuration files to evolve over time.
 User configuration files will override the installation configuration
@@ -119,7 +119,7 @@ C:\Users\user\.tstool\          Windows user TSTool configuration files.
                                 Enabled=False to disable the datastore.  Other options to disable the datastore are
                                 delete the datastore file or move out of the ./tstool/datastores folder.
     logs/*.log                  Startup log file, which will be used until StartLog commands specify a different log file.
-    plugins/                    Plugin datastores nd commands.
+    plugins/                    Plugin datastores and commands.
       PluginName/               Folder to differentiate plugins.
         bin/                    Contains a jar file with code for plugin (see plugin developer documentation).
         bin-depend/             Contains jar file(s) needed by plugin.
@@ -178,7 +178,7 @@ Use the following instructions to install TSTool on Windows using the `TSTool_CD
 for example if TSTool software was downloaded from the [CDSS website](https://www.colorado.gov/pacific/cdss/tstool)
 or [OpenCDSS website](http://opencdss.state.co.us/tstool/):
 
-#### 1. Run the `TSTool_CDSS_Version_Setup.exe` file by selecting from Windows Explorer, the ***Start / Run...***  menu, or from a command shell. ####
+#### 1. Run the `TSTool_CDSS_Version_Setup.exe` file by selecting from Windows Explorer, the ***Start / Run /***  menu, or from a command shell. ####
 
 You must be logged into the computer using an account with administrator privileges.
 Otherwise, the following warning will be displayed.
@@ -268,7 +268,7 @@ After selecting the folder, press ***Install***.
 TSTool Install - Installation Complete (<a href="../Install_Complete.png">see also the full-size image</a>)
 </p>**
 
-Press ***Show details*** to see the files that were installed or press Next to continue.
+Press ***Show details*** to see the files that were installed or press ***Next*** to continue.
 
 #### 6. If the CDSS Base Components were selected for install, the following dialog will be displayed: ####
 
@@ -288,7 +288,7 @@ HydroBase name must be specified in configuration files.  Otherwise, press ***No
 
 #### 7. The following dialog allows additional HydroBase servers to be specified for use by CDSS software
 
-The example below configures CDSS software to list the dwrappsdb HydroBase
+The example below configures CDSS software to list the `dwrappsdb` HydroBase
 server in choices and defaults to HydroBase on the local computer.
 The dialog will initially show previous settings from the `\CDSS\TSTool-Version\system\CDSS.cfg`
 file and settings typically only need to be changed after installing a new HydroBase version.
@@ -361,7 +361,7 @@ however, multiple TSTool versions can be installed and run independently.
 
 This documentation needs to be completed.
 
-## Uninstalling TSTool Software ##
+## Uninstalling TSTool ##
 
 The process to uninstall TSTool changed as of TSTool 12.06.00.
 
@@ -380,7 +380,7 @@ The next steps are similar to those described below.
 ![uninstall-start-menu](uninstall-start-menu.png)
 </p>**
 
-The second way to uninstall TSTool is as follow.
+The second way to uninstall TSTool is as follows.
 Use the windows ***Run*** search field (lower left of desktop).
 Enter `uninstall`.  This should display an option to open ***Add or remove programs***.
 
@@ -394,7 +394,7 @@ A confirmation will be requested.
 The uninstall will then continue as shown in images in the next section.
 
 After uninstalling, the software files will have been removed from `C:\CDSS\TSTool-Version`.
-However, any files that exist in the users' files will remain.
+However, any files that exist in the user's files will remain.
 This allows datastore configurations, plugins, and other user-configured files to be shared with
 other TSTool version installations.
 
@@ -432,7 +432,7 @@ In this case it may be necessary to specify the absolute path to the command fil
 TSTool requires minimal configuration after installation.
 This section describes TSTool configuration files that can be customized for a system.
 Configuration is specified by installation files for each TSTool installation.
-As of TSTool version 11.09.00, user configuration files are also saved in the user's `.tstool` folder,
+As of TSTool version 11.09.00, user configuration files are saved in the user's `.tstool` folder,
 which allows overriding the installation files configuration files.
 
 ### TSTool Configuration File ###
