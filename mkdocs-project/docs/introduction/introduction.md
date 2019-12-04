@@ -31,31 +31,45 @@ The documentation is divided into the following volumes:
 
 This User Manual documentation is divided into the following chapters:
 
-Chapter 2 – Introduction (this chapter) provides background information on time series concepts and how TSTool processes time series.
+Chapter 1 – Introduction (this chapter) provides background information on time series concepts and how TSTool processes time series.
 
-[Chapter 3 – Getting Started](../getting-started/getting-started) provides an overview of TSTool interface features.
+[Chapter 2 – Getting Started](../getting-started/getting-started.md) provides an overview of TSTool interface features.
 
-[Chapter 4 – Commands](../commands/commands) provides a summary of time series processing commands.
+[Chapter 3 – Commands](../commands/commands.md) provides a summary of time series processing commands.
 
-[Chapter 5 – Tools](../tools/tools) provides information about analysis tools.
+[Chapter 4 – Tools](../tools/tools.md) provides information about analysis tools.
 
-[Chapter 6 – Examples of Use](../examples/examples) provides examples of how TSTool is commonly used.
+[Chapter 5 – Examples of Use](../examples/examples.md) provides examples of how TSTool is commonly used.
 
-[Chapter 7 – Spatial Data Integration](../spatial/spatial) provides information about using the map interface to link time series with spatial data.
+[Chapter 6 – Quality Control](../quality-control/quality-control.md) provides guidelines and examples for using TSTool to quality control software and data processing workflows.
 
-[Chapter 8 – Troubleshooting](../troubleshooting/troubleshooting) provides troubleshooting information, including a list of obsolete commands.
+[Chapter 7 – Spatial Data Integration](../spatial/spatial.md) provides information about using the map interface to link time series with spatial data.
 
-[Chapter 9 – Quality Control](../quality-control/quality-control) provides guidelines and examples for using TSTool to quality control data processing.
+[Chapter 8 – Spreadsheet Integration](../spreadsheet/spreadsheet.md) provides information about using TSTool with spreadsheet software.
 
-[Chapter 10 – Spreadsheet Integration](../spreadsheet/spreadsheet) provides information about using TSTool with spreadsheet software.
+[Chapter 9 – Model Framework Integration](../modeling/modeling.md) provides information about model integration
 
-The [Installation and Configuration appendix](../appendix-install/install) provides information about installing and configuring TSTool.
+[Chapter 10 – Troubleshooting](../troubleshooting/troubleshooting.md) provides troubleshooting information, including a list of obsolete commands.
 
-The [Release Notes appendix](../appendix-release-notes/release-notes) summarizes TSTool changes over time.
+[Chapter 11 – Best Practices](../best-practices/best-practices.md) describes best practices for workflows
 
-The [TSView Time Series Viewing Tools appendix](../appendix-tsview/tsview) provides a general reference for time series viewing features.  These features are used throughout TSTool.
+[Chapter 12 – Resources](../resources/resources.md) lists additional informational resources
 
-The [GeoView Mapping Tools appendix](../appendix-geoview/geoview) provides a general reference for the GeoView map interface.  The mapping interface is being phased in.
+[Lessons ](../lessons/overview.md) - provides training lessons
+
+[Reference - Commands ](../command-ref/overview.md) provides a full list of commands in groups and alphabetical list
+
+[Reference - Datastores ](../datastore-ref/overview.md) provides a full list of datastores supported by TSTool
+
+[Appendix - Install TSTool](../appendix-install/install.md) provides information about installing and configuring TSTool.
+
+[Appendix - Release Notes](../appendix-release-notes/release-notes.md) summarizes TSTool changes over time.
+
+[Appendix - Running TSTool in Various Modes](../appendix-running/running.md) summarizes how to run TSTool in various modes
+
+[Appendix - TSView Time Series Viewing Tools](../appendix-tsview/tsview.md) provides a general reference for time series viewing features.  These features are used throughout TSTool.
+
+[Appendix - GeoView Mapping Tools](../appendix-geoview/geoview.md) provides a general reference for the GeoView map interface
 
 ## TSTool Data Flow Concepts ##
 
