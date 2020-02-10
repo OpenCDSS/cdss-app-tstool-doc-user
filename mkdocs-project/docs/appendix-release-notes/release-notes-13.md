@@ -15,6 +15,10 @@ properties are recognized whether or not `[TSTool]` is at the top of the file.
 ***Visual Diff*** feature to work when files use property in the name.
 * ![bug](bug.png) [13.03.00] Update the [`RunProgram`](../command-ref/RunProgram/RunProgram.md) command to work on Linux.
 Also add the `EnvVars`, `IfNonZeroExitCode`, `StderrFile`, and `StdoutFile` parameters.
+* ![change](change.png) [13.03.00] All command editors have been updated to implement ***...***, ***Abs***, and ***Rel***
+buttons to select files and folders and switch between absolute and relative paths,
+with default being to use relative path.
+The command reference documentation has been updated accordingly.
 * ![change](change.png) [13.03.00] Lowercase command file extension `tstool` is now included in file selectors and is the default
 enforced when saving.  Mixed case `TSTool` extension is still supported.
 * ![change](change.png) [13.03.00] Fix a number of issues where table arrays were not cleanly supported.
@@ -41,6 +45,7 @@ add `Column` and `Value` parameters to set a single column value, useful for com
 * ![change](change.png) [13.03.00] Update the [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md)
 command parameters to provide more flexibility in controlling the file format and support array columns.
 Also enhance performance of the command.
+* ![change](change.png) [13.03.00] Update the PostgreSQL JDBC driver to version 42.2.9.
 * ![new](new.png) [13.03.00] Add the [`Break`](../command-ref/Break/Break.md) command to break out of 
 [`For`](../command-ref/For/For.md) loop block
 * ![new](new.png) [13.03.00] Add the [`Continue`](../command-ref/Continue/Continue.md) command to jump to end of 
