@@ -11,6 +11,8 @@
 
 ## Overview ##
 
+**This command is not implemented and is not available in TSTool.**
+
 The `WriteDelftFewsPiXml` command writes time series to the specified Delft FEWS PI XML format file.
 See the [Delft FEWS Input Type Appendix](../../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md) for more information about the file format.  
 
