@@ -30,6 +30,9 @@ check the full length of each file when computing the number of different lines.
 command to better support comparing irregular time series,
 add `CompareFlags` to control whether data flags are also compared.
 * ![change](change.png) [13.03.00] Update the
+[`CreateEnsembleFromOneTimeSeries`](../command-ref/CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md)
+command to have `TransferDataHow` to control how input time series are transferred to output time series traces.
+* ![change](change.png) [13.03.00] Update the
 [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md)
 command to support multiple patterns to match files.
 * ![change](change.png) [13.03.00] Update the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command to allow `*` to delete all rows,
