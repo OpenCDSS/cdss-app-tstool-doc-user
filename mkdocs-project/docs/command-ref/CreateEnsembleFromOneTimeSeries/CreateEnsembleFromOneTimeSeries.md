@@ -16,11 +16,15 @@ by splitting up a single time series into traces.
 For example, a historical time series can be split into 1-year
 overlapping traces that are shifted to start at the beginning of the current year.
 The sequence number part of the time series identifier for each trace
-is set to the year type starting year and will be shown as `[Year]`
+is set to the starting year consistent with the year type and will be shown as `[Year]`
 at the end of the time series identifier.
-The data transfer will retain a continuous record.
-If leap years are encountered, the output may be offset.
-In other words, no gaps are retained, and no data are discarded due to leap years.
+For example, if the year type is `WaterYear` (October - September),
+the sequence number identifier for water year October 2005 to September 2006 will be `[2006]`.
+
+The data transfer necessary to create the traces is impacted by leap years for data interval of day or smaller.
+The `TransferDataHow` parameter controls how leap years are handled,
+with the default being `Sequentially`, which results in a continuous record,
+suitable for hydrologic data.
 
 ## Command Editor ##
 
@@ -58,13 +62,14 @@ Command Parameters
 |`ReferenceDate`|The reference date indicates the starting date for each trace.  Each trace optionally can be shifted (see `ShiftDataHow`), in which case the year in the `ReferenceDate` is used for the common starting date.  The reference date can be one of:<ul><li>Blank, indicating that January 1 of the current year will be used.</li><li>A date/time string (use the format `01/01/YYYY` or `YYYY-MM-DD`).</li><li>`CurrentToYear`, `CurrentToMonth`, `CurrentToDay`, `CurrentToHour`, `CurrentToMinute`, indicating the current date/time to the specified precision.</li><li>A `Current*` value +- an interval, for example: `CurrentToMinute – 7Day`|January 1 of the first year in the source time series.|
 |`OutputYearType`|The output year type for the ensemble traces.  The only impact from this parameter is that sequence number for the time series will be set to the start of the output year.  This is useful because legends on graphs that use the sequence number (`%z` format specifier) will use the appropriate year type.  The `ReferenceDate` should normally be specified as the first day of the output year (e.g., `ReferenceDate=2012-10-01` for `OutputYearType=Water`). |`Calendar`|
 |`ShiftDataHow`|Indicates whether the traces should be shifted.  Possible values are:<ul><li>`ShiftToReference` – each trace will be shifted to the reference date, resulting in overlapping time series.</li><li>`NoShift` – plotting the traces will result in a total line that matches the original time series, except that each trace can be manipulated individually.</li></ul>|`NoShift`|
+|`TransferDataHow`|Indicates how to transfer data from the input time series to ensemble traces.  Possible values are:<ul><li>`ByDateTime` – date/time in the trace is ensured to match the input (**currently only enabled for day interval data**, and only relevant for data interval of day or smaller):<ul><li>if the output trace time series position is February 29 (leap year) when the input time series position is March 1 (not leap year), set the output trace data values for February 29 to missing and ensure that March 1 and subsequent date/times align</li><li>if the output time series position is March 1 (not leap year) when the input time series is February 29 (leap year), skip setting the February 29 value in the output trace since the input time series does not have a leap year value, and ensure that March 1 and subsequent date/times align</li></ul></li><li>`Sequentially` – data values are transferred by incrementing time sequentially in the input and trace time series, which causes date/times to shift when input and trace time series do not have same number of days due to leap year.  For example, daily time series for years will have 366 days whereas daily time series for non-leap-year will have 365 days.</li></ul>|`Sequentially`|
 
 ## Examples ##
 
 See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CreateEnsembleFromOneTimeSeries).
 
 A sample command file to read a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
-and create an ensemble from the time series is as follows:
+and create an ensemble from the time series using sequential data transfer is as follows:
 
 ```text
 # 09019500 - COLORADO RIVER NEAR GRANBY
@@ -86,4 +91,5 @@ The following figure illustrates a graph of the resulting ensemble:
 
 ## See Also ##
 
+* [`InsertTimeSeriesIntoEnsemble`](../InsertTimeSeriesIntoEnsemble/InsertTimeSeriesIntoEnsemble.md) command
 * [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command
