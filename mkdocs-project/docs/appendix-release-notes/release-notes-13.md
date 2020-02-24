@@ -21,6 +21,8 @@ with default being to use relative path.
 The command reference documentation has been updated accordingly.
 * ![change](change.png) [13.03.00] Lowercase command file extension `tstool` is now included in file selectors and is the default
 enforced when saving.  Mixed case `TSTool` extension is still supported.
+* ![change](change.png) [13.03.00] Time series graphs can now be saved as JSON format time series product file - this
+preliminary format is being evaluated to integrate with web applications.
 * ![change](change.png) [13.03.00] Fix a number of issues where table arrays were not cleanly supported.
 * ![change](change.png) [13.03.00] Update the [`AppendTable`](../command-ref/AppendTable/AppendTable.md) command to
 accept property notation in the `ColumnFilters` parameter.
@@ -45,6 +47,8 @@ add `Column` and `Value` parameters to set a single column value, useful for com
 * ![change](change.png) [13.03.00] Update the [`StartLog`](../command-ref/StartLog/StartLog.md) command to have `MaxSize` parameter to limit log file size.
 * ![change](change.png) [13.03.00] Update the [`TableMath`](../command-ref/TableMath/TableMath.md) command input and output parameters to support properties.
 * ![change](change.png) [13.03.00] Update the [`Wait`](../command-ref/Wait/Wait.md) command to allow parameters to be specified as properties.
+* ![change](change.png) [13.03.00] Update the [`WriteDelimitedFile`](../command-ref/WriteDelimitedFile/WriteDelimitedFile.md)
+command to have `HeaderComments` parameter to provide comments
 * ![change](change.png) [13.03.00] Update the [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md)
 command parameters to provide more flexibility in controlling the file format and support array columns.
 Also enhance performance of the command.
