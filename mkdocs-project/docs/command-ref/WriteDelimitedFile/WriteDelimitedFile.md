@@ -64,6 +64,7 @@ Command Parameters
 |`MissingValue`|The value to write to the file to indicate a missing value in the time series.  This will override the value initialized when the time series is read or created (typically `-999`, `NaN` or another value).  Specify `Blank` to output a blank.|Time series missing value.|
 |`OutputStart`|The date/time for the start of the output.  Can be specified using processor `${Property}`.|Use the global output period.|
 |`OutputEnd`|The date/time for the end of the output.   Can be specified using processor `${Property}`.|Use the global output period.|
+|`HeaderComments`| Comments to be included at the top of the file.  `#` will be automatically added to the front of each line if not already used.  Use `\n` or `Enter` in the editor to insert new lines.  Double quotes can be used and will be replaced with `\"` in the command parameter in order to not conflict with parameter surrounding quotes.  Can be specified using processor `${Property}`.| No comments are included.|
 
 ## Examples ##
 
