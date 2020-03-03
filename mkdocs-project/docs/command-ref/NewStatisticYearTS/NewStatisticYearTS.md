@@ -18,21 +18,13 @@ For example, if the original time series has a daily time step,
 then the sample that is analyzed will contain 365 or 366 values (depending on leap year).
 Calendar years are used by default; however, the `OutputYearType` parameter can be used to
 specify that different year types are analyzed.
-Other commands (e.g.,
-[`ChangeInterval`](../ChangeInterval/ChangeInterval.md))
-can produce a similar result for a limited number of statistics,
-for example converting a monthly time series to an annual total or mean.
-See also the
-[`NewStatisticMonthTimeSeries`](../NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md),
-[`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md),
-[`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md),
-[`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md), and
-[`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
 
 For hourly and finer interval, values are considered to be in a year when the
 year in the date/time matches the year of interested.
 This may lead to some issues if the last value in a year is
 actually recorded at hour 0 or later of the following year.
+
+See also the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
 
 ## Command Editor ##
 

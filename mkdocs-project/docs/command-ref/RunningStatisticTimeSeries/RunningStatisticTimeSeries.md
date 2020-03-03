@@ -12,7 +12,11 @@
 ## Overview ##
 
 The `RunningStatisticTimeSeries` command uses a sample of values from a
-time series to compute a running statistic, resulting in new time series.  The main purposes of the command are:
+time series to compute a running statistic, resulting in new time series.
+
+See also the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
+
+The main purposes of the `RunningStatisticTimeSeries` command are:
 
 1. Compute a running statistic around a moving point, in order to smooth the time series,
 for example to focus on underlying short-term forcings rather than variability or noise
@@ -30,7 +34,7 @@ There are several approaches to determining the sample for the running
 statistic (as specified by the `SampleMethod` command parameter):
 
 * The centered running statistic (`SampleMethod=Centered`) requires that the number
-intervals on each site of a point be specified (e.g., specifying `1` will use 3 values at each point).
+intervals on each site of a point be specified (e.g., specifying `1` will use 3 values at each point):  `x--O--x`
 * The previous/future running statistics (`SampleMethod=Future`, `FutureInclusive`, `Previous`, `PreviousInclusive`)
 require that the number of intervals prior to or after the current point be specified.
 * The N-year running statistic (`SampleMethod=NYear`) is computed by processing the current year and
@@ -128,7 +132,7 @@ Command Parameters
 | `SortOrder` | Order to sort the sample, used with exceedance probability, plotting position and rank:<ul><li>`LowToHigh` – rank 1 in plotting position is smallest value</li><li>`HighToLow` – rank 1 in plotting position is largest value | `HighToLow` for `ExceedanceProbability`, `NonexceedanceProbability`, and `PlottingPosition`. |
 | `AnalysisStart` | Start of period to analyze.  A value will be computed at each time step in the analysis period.  Can be specified with processor `${Property}`. | Analyze the full (output) period. |
 | `AnalysisEnd` | End of period to analyze.  Can be specified with processor `${Property}`. | Analyze the full period. |
-| `SampleMethod` | The method used to determine the data sample for each statistic calculation, one of:<ul><li>`AllYears` – the sample is taken from all the years in the period (one value per year), appropriate for `PercentOfMean` and similar statistics.  See also `NormalStart` and `NormalEnd`.</li><li>`Centered` – N (bracket) values on each side of a date/time and the center value</li><li>`Future` – average the next N (bracket) values but do not include the current value</li><li>`FutureInclusive` – average the next N (bracket) values and also include the current value</li><li>`NYear` – values for the current year and (N – 1) preceding years, for the same date/time in each year</li><li>`NAllYear` – values for the current year and all preceding years, for the same date/time in each year (missing values are allowed)</li><li>`Previous` – the previous N (bracket) values but do not include the current value</li><li>`PreviousInclusive` – the previous N (bracket) values and also include the current value</li></ul><br>If a sample method such as `NAllYear` is desired, but including previous, current, and future values, then the [NewStatisticTimeSeries](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command can be used. | None – must be specified. |
+| `SampleMethod` | The method used to determine the data sample for each statistic calculation, one of the following, where `X` indicates include the current value and `O` indicates exclude the current value):<ul><li>`AllYears` – the sample is taken from all the years in the period (one value per year), appropriate for `PercentOfMean` and similar statistics.  See also `NormalStart` and `NormalEnd`.</li><li>`Centered` – N (bracket) values on each side of a date/time and the center value (`Bracket=1` uses `x--X--x`)</li><li>`Future` – average the next N (bracket) values but do not include the current value (`Bracket=3` uses `O--x--x--x`)</li><li>`FutureInclusive` – average the next N (bracket) values and also include the current value (`Bracket=1` uses `X--x`)</li><li>`NYear` – values for the current year and (N – 1) preceding years, for the same date/time in each year</li><li>`NAllYear` – values for the current year and all preceding years, for the same date/time in each year (missing values are handled)</li><li>`Previous` – the previous N (bracket) values but do not include the current value (`Bracket=3` uses `x--x--x--O`)</li><li>`PreviousInclusive` – the previous N (bracket) values and also include the current value (`Bracket=1` uses `x--X`)</li></ul><br>If a sample method such as `NAllYear` is desired, but including previous, current, and future values, then the [NewStatisticTimeSeries](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command can be used. | None – must be specified. |
 | `Bracket` | For centered `SampleMethod`, the bracket is the number of points on each side of the current point (therefore a value of 1 will average 3 data values).  For future and previous `SampleMethod`, the bracket is the number of previous or future values.  For N-year `SampleMethod`, the bracket is the total number of years to process, including the current year. The bracket is not used with sample method `NAllYear` and `AllYears`. | None – must be specified. |
 | `AllowMissingCount` | The number of values allowed to be missing in the sample and still compute the statistic.  Care should be taken to specify a value that is relatively small for the sample size. | `0` – no missing values are allowed in the sample |
 | `MinimumSampleSize` | The minimum sample size is checked with `SampleMethod=AllYears` and `SampleMethod=NAllYear` because Bracket and `AllowMissingCount` do not control the sample size. | `1` |
@@ -155,6 +159,8 @@ Statistic Summary
 | `Mean` | Arithmetic mean of values. | |
 | `Median` | Median value. | |
 | `Min` | Minimum value. | |
+| `NewMax` | New minimum value, only used with `SampleMethod=NAllYear`. | Can only be used with time series having day or month interval. |
+| `NewMin` | New minimum value, only used with `SampleMethod=NAllYear`. | Can only be used with time series having day or month interval. |
 | `NonexceedanceProbability` | The probability that the value will not be exceeded, `1-ExceedanceProbability`, best-suited for the `N*` sample methods (see discussion below about how statistics are computed). | Requires distribution parameters. |
 | `PercentOfMax` | Percent of the `Max` statistic output. | |
 | `PercentOfMean` | Percent of the `Mean` statistic output. | |
