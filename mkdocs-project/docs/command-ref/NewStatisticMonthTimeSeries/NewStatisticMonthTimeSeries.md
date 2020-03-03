@@ -18,19 +18,13 @@ where each monthly value in the resulting time series contains a statistic
 determined from the data sample from the corresponding month in the original time series.
 For example, if the original time series has a daily time step,
 then the sample that is analyzed will contain 28-31 values (depending on leap year and month).
-Other commands (e.g.,
-[`ChangeInterval`](../ChangeInterval/ChangeInterval.md)) can produce a similar result for a limited number of statistics,
-for example converting a monthly time series to an annual total or mean.  See also the
-[`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md),
-[`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md),
-[`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md),
-[`NewStatisticYearTS`](../NewStatisticYearTS/NewStatisticYearTS.md), and
-[`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
-	
+
 For hourly and finer interval, values are considered to be in a month when the
 month in the date/time matches the month of interested.
 This may lead to some issues if the last value in a month is actually recorded at
 hour 0 or later of the following month.  **Handling other than daily data is not yet implemented**.
+
+See also the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
 
 ## Command Editor ##
 

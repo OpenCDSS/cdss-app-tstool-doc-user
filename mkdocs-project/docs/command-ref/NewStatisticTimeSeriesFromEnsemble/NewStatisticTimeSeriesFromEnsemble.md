@@ -22,6 +22,8 @@ all January 1, 1970 values will be used for the sample and the mean value will b
 January 1, 1970 in the output time series.
 Leap year values will be included if they are included in the period of the ensemble.
 
+See also the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax for the command.

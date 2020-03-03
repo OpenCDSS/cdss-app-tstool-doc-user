@@ -25,6 +25,8 @@ Leap year statistics are computed from Feb 29 values and are visible only in lea
 Missing data in the original time series will by default still result in the statistic being computed,
 but the `AllowMissingCount` and `MinimumSampleSize` parameters control the impacts of missing values.
 
+See also the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.

@@ -17,6 +17,7 @@ Additional information can be found in the training materials (see
 	+ [Modeling – Filling Streamflow using MOVE2 (Input=HydroBase)](#modeling-filling-streamflow-using-move2-inputhydrobase)
 * [Time Series Ensemble Examples](#time-series-ensemble-examples)
 	+ [Time Series Traces – Comparing Historical and Current Conditions (Input=HydroBase)](#time-series-traces-comparing-historical-and-current-conditions-inputhydrobase)
+* [Statistic Examples](#statistic-examples)
 * [Time Series Product Examples](#time-series-product-examples)
 	+ [Time Series Product – Using TSTool to Display Graphs from Another Software Application](#time-series-product-using-tstool-to-display-graphs-from-an-application)
 	+ [Time Series Product – Automating Graphs for Compare Observed and Simulated Time Series](#automating-graphs-to-compare-observed-and-simulated-time-series)
@@ -478,6 +479,30 @@ Key traces and output time series can be selected and graphed, as shown below.
 **<p style="text-align: center;">
 Example Graph of Traces and Combined Real-time/Historical Time Series (<a href="../Example_LobatosCurrent_Graph.png">see also the full-size image</a>)
 </p>**
+
+## Statistic Examples ##
+
+TSTool is able to compute statistics from time series in multiple ways.
+The following table summarizes commands that calculate statistics.
+Most of the commands create a time series of statistics,
+which allows the results to be visualized and analyzed using other TSTool features.
+In some cases the behavior of commands is similar,
+but the specific features of a command guide which command should be used for analysis.
+
+**<p style="text-align: center;">
+Commands that Calculate Statistics
+</p>**
+
+| **Command**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Input Interval** | **Output Interval** | **How Used** |
+| -- | -- | -- | -- |
+| [`CalculateTimeSeriesStatistic`](../command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) | Any interval | Single value for period | Calculate a single statistic value from a time series. For example, count the missing values in a time series. |
+| [`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval.md) | Small | Large | When converting instantaneous data to instantaneous data, calculate a statistic (`Max` or `Min`) on the sample data for the interval.  For example, calculate the mean values in the interval. **This is a limited feature.** |
+| [`NewStatisticEnsemble`](../command-ref/NewStatisticEnsemble/NewStatisticEnsemble.md) | Any regular | Same as input | Calculate an ensemble of statistic time series for a list of input criteria.  For example, count the percentage of values from different time series above threshold values. |
+| [`NewStatisticMonthTimeSeries`](../command-ref/NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md) | < Month| Month | Calculate a statistic month time series, where each monthly value is determined from the sample of values in that month.  For example, determine the percent of daily values in a month that are below a specific value. |
+| [`NewStatisticYearTS`](../command-ref/NewStatisticYearTS/NewStatisticYearTS.md) | < Year | Year | Calculate a statistic year time series, where each yearly value is determined from the sample of values in that year.  For example, determine the percent of daily values in a year that are below a specific value. |
+| [`NewStatisticTimeSeries`](../command-ref/NewStatisticTimeSeries/NewStatisticTimeSeries.md) | Any regular | Same as input | Create a time series of repeating years, where each interval value in a year is the statisic computed from the interval in the input time series.  For example, the result for January 1 is computed from all January 1 values in the input.  This is useful when contrasting the historical `Mean`, `Median`, `Max`, `Min`, etc., with each year's values. |
+| [`NewStatisticTimeSeriesFromEnsemble`](../command-ref/NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) | Any regular | Same as input | Create a time series of repeating years, where each interval value in a year is the statisic computed from the interval in the input ensemble's time series.  For example, the result for January 1 is computed from all January 1 values in the input.  This is useful to calculate `Mean`, `Median`, `Max`, `Min`, exceedance probabilities, etc. for the ensemble traces. |
+| [`RunningStatisticTimeSeries`](../command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries.md) | Any regular | Same as input | Calculate a time series of statistics using a moving sample, with options for how to determine the sample at each point. For example, calculate a running average for each interval. |
  
 ## Time Series Product Examples ##
 
@@ -687,7 +712,7 @@ having difficulty finding good labels – resize the graph window to improve lab
 </p>**
 
 **<p style="text-align: center;">
-Excample Scatter Graph (<a href="../Example_Scatter_Graph.png">see also the full-size image</a>)
+Example Scatter Graph (<a href="../Example_Scatter_Graph.png">see also the full-size image</a>)
 </p>**
 
 Because this approach relies primarily on the time series identifiers to

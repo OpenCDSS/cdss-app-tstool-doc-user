@@ -20,6 +20,8 @@ The sample from each time series consists of data values for the full period
 or a shorter analysis period if specified for the command.
 Missing values typically are ignored unless significant for the statistic (e.g., `Statistic=MissingCount`).
 
+See the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.

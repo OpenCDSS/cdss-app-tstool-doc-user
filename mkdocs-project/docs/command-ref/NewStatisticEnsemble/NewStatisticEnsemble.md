@@ -28,6 +28,8 @@ with the [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEns
 command and result in only one output time series,
 whereas this command is designed to facilitate creating multiple output time series.
 
+See also the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
