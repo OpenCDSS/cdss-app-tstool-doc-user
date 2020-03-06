@@ -175,3 +175,6 @@ The following figure illustrates the results:
 ## Troubleshooting ##
 
 ## See Also ##
+
+* [Statistic Examples](../../examples/examples.md#statistic-examples)
+* [`NewStatisticEnsemble`](../NewStatisticEnsemble/NewStatisticEnsemble.md) command

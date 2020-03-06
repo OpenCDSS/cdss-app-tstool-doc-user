@@ -163,4 +163,5 @@ WriteTableToDelimitedFile(TableID="Table1",OutputFile="Results/Test_CalculateTim
 
 ## See Also ##
 
+* [Statistic Examples](../../examples/examples.md#statistic-examples)
 * [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) command

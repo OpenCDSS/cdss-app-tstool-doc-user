@@ -11,7 +11,15 @@
 
 ## Overview ##
 
-The `ChangeInterval` command creates new time series by changing the data interval of each input time series.
+The `ChangeInterval` command creates new time series by changing the data interval of each input time series,
+in some cases using advanced logic consistent with hydrologic models.
+
+See also the following commands that focus on specific combinations of input and output and are
+simpler to use than the `ChangeInterval` command:
+
+* [`ChangeIntervalIrregularToRegular`](../ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md) - computes output interval value
+from input sample as a statistic
+
 A list of one or more time series or an ensemble of time series can be processed.
 The majority of the original header data (e.g., description, units) are copied to the new time series;
 however, the new interval will be used for data management and in the new time series identifier.
@@ -515,3 +523,6 @@ ChangeInterval(Alias=”3HourINST”,TSID="IrregularINST",NewInterval=3Hour,OldT
 ## Troubleshooting ##
 
 ## See Also ##
+
+* [Statistic Examples](../../examples/examples.md#statistic-examples)
+* [`ChangeIntervalIrregularToRegular`](../ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md) command

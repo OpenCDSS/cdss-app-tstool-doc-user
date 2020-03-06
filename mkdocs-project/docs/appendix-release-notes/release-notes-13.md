@@ -40,9 +40,9 @@ command to support multiple patterns to match files.
 * ![change](change.png) [13.03.00] Update the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command to allow `*` to delete all rows,
 additional functionality has been added for strings, and string operations have been made case-dependent.
 * ![change](change.png) [13.03.00] Update the [`NewTable`](../command-ref/NewTable/NewTable.md) command to support arrays.
-* ![change](change.png) [13.03.00] Update the [`RunningStatisticTimeSeries`](../command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries.md)
-command to calculate `NewMax` and `NewMin` statistics.
 * ![change](change.png) [13.03.00] Update the [`ReadTableFromDBF`](../command-ref/ReadTableFromDBF/ReadTableFromDBF.md) command to covert column data types.
+* ![change](change.png) [13.03.00] Update the [`RunningStatisticTimeSeries`](../command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries.md) command
+to add statistics:  `Change`, `ChangeAbs`, `ChangeFraction`, `ChangeFractionAbs`, `ChangePercent`, `ChangePercentAbs`, `NewMax`, and `NewMin`.
 * ![change](change.png) [13.03.00] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command to allow math parameters to be specified as properties.
 * ![change](change.png) [13.03.00] Update the [`SetTableValues`](../command-ref/SetTableValues/SetTableValues.md) command to
 add `Column` and `Value` parameters to set a single column value, useful for complex values such as arrays
@@ -57,6 +57,9 @@ Also enhance performance of the command.
 * ![change](change.png) [13.03.00] Update the PostgreSQL JDBC driver to version 42.2.9.
 * ![new](new.png) [13.03.00] Add the [`Break`](../command-ref/Break/Break.md) command to break out of 
 [`For`](../command-ref/For/For.md) loop block
+* ![new](change.png) [13.03.00] Add the [`ChangeIntervalIrregularToRegular`](../command-ref/ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md) command
+to change interval of irregular interval time series to regular interval, simpler than the
+[`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval.md) command
 * ![new](new.png) [13.03.00] Add the [`Continue`](../command-ref/Continue/Continue.md) command to jump to end of 
 [`For`](../command-ref/For/For.md) loop block
 * ![new](new.png) [13.03.00] Add the [`FormatFile`](../command-ref/FormatFile/FormatFile.md) command to format a file for output,
