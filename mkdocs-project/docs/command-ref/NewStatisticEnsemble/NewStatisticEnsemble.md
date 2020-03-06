@@ -117,5 +117,6 @@ NewStatisticEnsemble(NewEnsembleID="Group1",Alias="Group1-${c:Statistic}-${c:Tes
 
 ## See Also ##
 
+* [Statistic Examples](../../examples/examples.md#statistic-examples)
 * [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) command
 * [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

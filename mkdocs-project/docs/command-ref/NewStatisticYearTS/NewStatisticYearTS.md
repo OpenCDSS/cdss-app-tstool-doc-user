@@ -182,6 +182,7 @@ WriteStateCU(OutputFile="Results/Test.FrostDates")
 
 ## See Also ##
 
+* [Statistic Examples](../../examples/examples.md#statistic-examples)
 * [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
 * [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
 * [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.

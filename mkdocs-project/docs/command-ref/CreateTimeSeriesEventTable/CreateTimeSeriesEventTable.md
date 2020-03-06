@@ -11,6 +11,8 @@
 
 ## Overview ##
 
+**This command is under development and is experimental.**
+
 The `CreateTimeSeriesEventTable` command creates an event table associated with time series.
 Time series events have the following properties:
 

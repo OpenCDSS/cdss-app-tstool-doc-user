@@ -106,6 +106,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
+* [Statistic Examples](../../examples/examples.md#statistic-examples)
 * [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
 * [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
 * [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command

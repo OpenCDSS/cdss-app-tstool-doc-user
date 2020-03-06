@@ -14,8 +14,20 @@ article ul ul ul {
 }
 
 /*
+ * None of these seem to work
+ * Center tables horizontally on page.
+table {
+	align: center;
+}
+
+table {
+	margin: 0 auto;
+}
+*/
+
+/*
  * Align text to be centered.
  */
 .alignCenter {
-	test-align: center;
+	text-align: center;
 }

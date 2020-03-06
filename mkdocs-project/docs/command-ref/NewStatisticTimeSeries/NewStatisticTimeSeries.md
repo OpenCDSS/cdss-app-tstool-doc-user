@@ -110,4 +110,5 @@ This can be controlled by the `AllowMissingCount` and `MinimumSampleSize` parame
 
 ## See Also ##
 
+* [Statistic Examples](../../examples/examples.md#statistic-examples)
 * [`RunningStatisticTimeSeries`](../RunningStatisticTimeSeries/RunningStatisticTimeSeries.md) command

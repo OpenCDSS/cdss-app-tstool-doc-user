@@ -150,9 +150,15 @@ The following table lists available statistics.
 Statistic Summary
 </p>**
 
-|**Statistic**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Needed Input**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Statistic**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Needed Input**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 | `ExceedanceProbability` | The probability that the value will be exceeded, best-suited for the `N*` sample methods  (see discussion below about how statistic is computed). | Requires distribution parameters. |
+| `Change` | Change in magnitude from first to last value: `(last - first)`. | |
+| `ChangeAbs` | Change in magnitude from first to last value, absolute value: `abs(last - first)`. | |
+| `ChangeFraction` | Change in magnitude from first to last value, as fraction 0.0 to 1.0: `(last - first)/first`. | |
+| `ChangeFractionAbs` | Change in magnitude from first to last value, as fraction 0.0 to 1.0, absolute value: `abs((last - first)/first)`. | |
+| `ChangePercent` | Change in magnitude from first to last value, as percent 0.0 to 100.0: `100*(last - first)/first`. | |
+| `ChangePercentAbs` | Change in magnitude from first to last value, as percent 0.0 to 100.0, absolute value: `abs(100*(last - first)/first)`. | |
 | `GeometricMean` | Geometric mean value. | |
 | `Lag-1AutoCorrelation` | The autocorrelation between values and the those that follow in the next time step, given by:<br> ![lag1-autocorrelation](lag1-autocorrelation.png) |
 | `Max` | Maximum value. | |
@@ -222,6 +228,7 @@ Results from `RunningStatisticTimeSeries` Commands (<a href="../RunningStatistic
 
 ## See Also ##
 
+* [Statistic Examples](../../examples/examples.md#statistic-examples)
 * [`NewStatisticMonthTimeSeries`](../NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md) command
 * [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command
 * [`NewStatisticYearTS`](../NewStatisticYearTS/NewStatisticYearTS.md) command

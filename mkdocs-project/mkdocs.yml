@@ -38,6 +38,7 @@ nav:
   - Break: command-ref/Break/Break.md
   - CalculateTimeSeriesStatistic: command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md
   - ChangeInterval: command-ref/ChangeInterval/ChangeInterval.md
+  - ChangeIntervalIrregularToRegular: command-ref/ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md
   - ChangePeriod: command-ref/ChangePeriod/ChangePeriod.md
   - ChangeTimeZone: command-ref/ChangeTimeZone/ChangeTimeZone.md
   - CheckTimeSeries: command-ref/CheckTimeSeries/CheckTimeSeries.md
