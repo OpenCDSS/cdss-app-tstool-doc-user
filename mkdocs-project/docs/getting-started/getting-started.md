@@ -32,6 +32,7 @@ This chapter provides an overview of the TSTool graphical user interface (GUI).
 	+ [Options](#options)
 	+ [Diagnostics](#diagnostics)
 * [Help Menu](#help-menu)
+* [Creating Workflows](#creating-workflows)
 
 ----------------
 
@@ -950,3 +951,79 @@ It may be necessary to manually copy configuration old files,
 in particular for data store configuration.
 TSTool configuration files are saved in the system folder under the TSTool installation.
 This feature is needed less as of TSTool version 11.09.00 because user configuration files are used across TSTool versions.
+
+## Creating Workflows ##
+
+TSTool command files implement workflows to automate data processing.
+This section summarizes basic workflow concepts.
+
+* [Conceptualize a Workflow](#conceptualize-a-workflow)
+* [Create a Command File](#create-a-command-file)
+	+ [Best Practices for Command Files](#best-practices-for-command-files)
+* [Run the Command File using TSTool](#run-the-command-file-using-tstool)
+
+### Conceptualize a Workflow ###
+
+TSTool is fundamentally a tool for automating data processing workflows.
+Therefore, to define a workflow, it is necessary to first define what work is to be done.
+This effort should result in a conceptual workflow.
+It is best to conceptualize the workflow without thinking about software limitations.
+For example, the following workflow describes a common task:
+
+1. Create a list of every stream gage in a basin.
+2. Read in a monthly streamflow volume time series for the gages.
+3. Analyze the data for statistics such as current year compared to mean.
+4. Generate graphs and tables with the results.
+
+### Create a Command File ###
+
+Once the conceptual workflow has been determined, corresponding TSTool
+commands can be used to do the work by creating a command file that can be run by TSTool.
+Refer to the [Command Reference](../command-ref/overview.md) to learn which
+commands to use for specific work tasks.
+For example, the following commands are suitable to perform the above conceptual work tasks:
+
+1. [`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md) - to read the list of stations (or use other table commands)
+2. [`For`](../command-ref/For/For.md) - to loop over the stations in the table
+3. [`ReadHydroBase`](../command-ref/ReadHydroBase/ReadHydroBase.md) - to read time series from State of Colorado's HydroBase database
+(or use similar commands to read time series)
+4. [`RunningStatisticTimeSeries`](../command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries.md)
+or other statistics commands (see [Statistic Examples](../examples/examples.md#statistic-examples))
+5. [`WriteTableToExcel`](../command-ref/WriteTableToExcel/WriteTableToExcel.md) - to output tabular Excel results
+and [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) to process graphs
+
+The command file is typically created using the TSTool graphical user interface
+but command files can also be created with a text editor or other software.
+
+#### Best Practices for Command Files ####
+
+Best practices for command files are:
+
+1. Document command files with sufficient comments.
+2. Consider using version control such as GitHub to track changes to command files
+and other controlling information.
+For example, model input files can be maintained in version control.
+See the [TSTool test repository](https://github.com/OpenCDSS/cdss-app-tstool-test) for examples.
+3. Organize data files logically, for example, put data into a `data` folder.
+4. Organize process files logically, for example, if multiple command files are used,
+consider creating multiple folders, with numbers to cause the folders to sort in sequential order.
+5. Use relative paths for file references in commands, for example `data/somefile` and `../data/somefile`.
+The TSTool working directory (working folder) will be set to the command file folder
+when the command file is read or saved.
+All other file locations should be specified relative to that folder.
+This allows the files to be shared with others without having to change file paths.
+TSTool automatically defaults to relative paths for file and folder command parameters
+and handles Windows (`\`) and Linux (`/`) folder separators.
+6. Name TSTool command files with `.tstool` file extension (previously `.TSTool` was the default extension).
+7. Consider using the [`StartLog`](../command-ref/StartLog/StartLog.md) command as the first command in the
+command file to facilitate troubleshooting.
+The log file name can be the same as the command file with `.log` appended.
+This creates a local log file that is managed with command file and related files.
+The command can be commented out if it significantly slows down processing or creates a large log file.
+Log files should be ignored from version control repositories.
+
+### Run the Command File Using TSTool ###
+
+TSTool is typically run using the graphical user interface, as illustrated in the first part of this documentation.
+However, it can also be run in batch mode.
+See also [Appendix - Running TSTool in Various Modes](../appendix-running/running.md).

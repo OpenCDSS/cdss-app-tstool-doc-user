@@ -17,6 +17,8 @@
 	+ [Stream Data](#stream-data)
 	+ [Water Information Sheet Data](#water-information-sheet-data)
 	+ [Well Data](#well-data)
+* [Database Views](#database-views)
+* [Database Stored Procedures](#database-stored-procedures)
 
 ------------
 
@@ -654,3 +656,29 @@ This may result in duplicate identifiers if wells are very close together, and w
 The use of the temporary identifier can be minimized by reviewing original data and
 ensuring that a valid identifier column value is defined in HydroBase.
 4. If none of the above methods can be used to assign a location identifier to the time series, an error will result.
+
+## Database Views ##
+
+Access to HydroBase data is provided by public views with names starting with `vw_CDSS_`
+and stored procedures, accessible to the `cdss` user,
+which is specified in HydroBase datastore configuration file.
+Database views are used by TSTool to query time series and other data.
+The views can also be queried using the
+[`ReadTableFromDataStore`](../../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command.
+It is not necessary to select the database catalog or schema - just select the view to query from the provided list.
+
+## Database Stored Procedures ##
+
+Stored procedures can be run using the
+[`ReadTableFromDataStore`](../../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command and will
+return output similar to a table or view.
+The following is a list of stored procedures, with additional documentation below.
+This is not comprehensive documentation but is provided for illustration.
+
+**<p style="text-align: center;">
+HydroBase CDSS Stored Procedures
+</p>**
+
+| **Procedure Name** | **Description** | **Parameters** |
+| -- | -- | -- |
+| `usp_Flex` | Flexible query. | 21 fields total.  <ul><li>`vId` - view identifier number (currently known to TSTool code but not public) - see the [HydroBaseDMI.java code](https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-java/blob/master/src/DWR/DMI/HydroBaseDMI/HydroBaseDMI.java)</li><li>`fieldN` - field name in view for where clause (6 criteria specified with `fieldN`, `criteriaN`, and `valueN` triplets must be specified), `-999` if not used</li><li>`criteriaN` - criteria indicator: `CN` for string containing value, `EQ` for = number, `GE` for >= number, `GT` for > number, `LE` for <= number, `LT` for < number, `MA` to match string, `NL` for `null`, `NN` for not null, `-999` if not used</li><li>`valueN` - where clause value for the criteria or `-999` if not used</li><li>`orderCode` - numerical order code (see `HydroBaseDMI.java` code) or `-999` if not used</li><li>`appCode` - application code, for example `CDSS`</li></ul> |
