@@ -231,6 +231,7 @@ nav:
   - TableMath: command-ref/TableMath/TableMath.md
   - TableTimeSeriesMath: command-ref/TableTimeSeriesMath/TableTimeSeriesMath.md
   - TableToTimeSeries: command-ref/TableToTimeSeries/TableToTimeSeries.md
+  - TextEdit: command-ref/TextEdit/TextEdit.md
   - TimeSeriesToTable: command-ref/TimeSeriesToTable/TimeSeriesToTable.md
   - TSID: command-ref/TSID/TSID.md
   - UnknownCommand: command-ref/UnknownCommand/UnknownCommand.md
