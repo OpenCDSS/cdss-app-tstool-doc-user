@@ -66,7 +66,7 @@ it may be necessary to edit the file and make the following corrections:
 (may need to convert absolute paths to relative paths).
 
 Time series identifiers in the product file are used as follows:
-	
+
 * If the time series are in TSTool’s ***Results*** area, the time series will be used without rereading.
 * Otherwise, the `TSID` is used to read the time series and must therefore
 contain enough information to locate and read the time series,
@@ -84,16 +84,37 @@ creation of large numbers of graphs, for example to create images for a website.
 
 The following dialog is used to edit the `ProcessTSProduct` command and illustrates the command syntax.
 The path to the time series product file can be absolute or relative to the working directory.
-The ***Browse*** button can be used to select the time series product description file
-(if a relative path is desired, delete the leading path after the select or
-use the ***Remove Working Directory from TSP*** button).
 
 **<p style="text-align: center;">
 ![ProcessTSProduct](ProcessTSProduct.png)
 </p>**
 
 **<p style="text-align: center;">
-`ProcessTSProduct` Command Editor (<a href="../ProcessTSProduct.png">see also the full-size image</a>)
+`ProcessTSProduct` Command Editor for Input Parameters (<a href="../ProcessTSProduct.png">see also the full-size image</a>)
+</p>**
+
+**<p style="text-align: center;">
+![ProcessTSProduct-output](ProcessTSProduct-output.png)
+</p>**
+
+**<p style="text-align: center;">
+`ProcessTSProduct` Command Editor for Output Parameters (<a href="../ProcessTSProduct-output.png">see also the full-size image</a>)
+</p>**
+
+**<p style="text-align: center;">
+![ProcessTSProduct-product](ProcessTSProduct-product.png)
+</p>**
+
+**<p style="text-align: center;">
+`ProcessTSProduct` Command Editor for Output Product Parameters (<a href="../ProcessTSProduct-product.png">see also the full-size image</a>)
+</p>**
+
+**<p style="text-align: center;">
+![ProcessTSProduct-edit](ProcessTSProduct-edit.png)
+</p>**
+
+**<p style="text-align: center;">
+`ProcessTSProduct` Command Editor for Editing Parameters (<a href="../ProcessTSProduct-edit.png">see also the full-size image</a>)
 </p>**
 
 After using the above dialog to edit the command, the time series product can be processed from TSTool as follows:
@@ -112,9 +133,11 @@ The working directory will be set to the directory for the commands file and out
 |`RunMode`<br>**required**|Indicate the run mode to process the product, one of:<ul><li>`BatchOnly` – indicates that the product should only be processed in batch mode.</li><li>`GUIOnly` – indicates that the product should only be processed when the TSTool GUI is used (useful when Preview is set to Preview).</li><li>`GUIAndBatch` – indicates that the product should be processed in batch and GUI mode.</li><ul>|None – must be specified.|
 |`View`<br>**required**|Indicates whether the output should be previewed interactively, one of:<ul><li>`True`– display the graph.</li><li>`False` – do not display the graph (specify the output file instead to automate image creation).</li></ul>|None – must be specified.|
 |`OutputFile`|The absolute or relative path to an output file.  Use this parameter with View=False to automate image processing.  If the filename ends in “jpg”, a JPEG image file will be produced.  If the filename ends in “png”, a PNG file will be produced (recommended).  Can be specified using processor `${Property}`.|Graph file will not be created.|
-|`DefaultSaveFile`|Used with experimental feature to enabling editing in the time series table that corresponds to a graph view.  Specify the default DateValue filename to save edits.  Can be specified using processor `${Property}`.|Editing is disabled.|
+|`OutputProductFile`|The absolute or relative path to output product file.  Use this parameter to create a fully-expanded time series product, for example to hand off the product configuration to other visualization software.  Can be specified using processor `${Property}`. | |
+|`OutputProductFormat`| The format for the file specified with `OutputProductFile`:<ul><li>`JSON` for JSON</li><li>`Properties` - the format matching a `*.tsp` file</li></ul>. | `JSON` |
 |`VisibleStart`|The starting date/time to zoom for the initial (and image file) graph.  Can be specified using processor `${Property}`.|Full period is visible.|
 |`VisibleEnd`|The ending date/time to zoom for the initial (and image file) graph.  Can be specified using processor `${Property}`.|Full period is visible.|
+|`DefaultSaveFile`|Used with experimental feature to enabling editing in the time series table that corresponds to a graph view.  Specify the default DateValue filename to save edits.  Can be specified using processor `${Property}`. This feature is seldom used. |Editing is disabled.|
 
 ## Examples ##
 
