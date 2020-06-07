@@ -60,6 +60,7 @@ nav:
   - CopyTimeSeriesPropertiesToTable: command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md
   - CreateDataStoreDataDictionary: command-ref/CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md
   - CreateEnsembleFromOneTimeSeries: command-ref/CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md
+  - CreateFolder: command-ref/CreateFolder/CreateFolder.md
   - CreateFromList: command-ref/CreateFromList/CreateFromList.md
   - CreateNetworkFromTable: command-ref/CreateNetworkFromTable/CreateNetworkFromTable.md
   - CreateRegressionTestCommandFile: command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md
