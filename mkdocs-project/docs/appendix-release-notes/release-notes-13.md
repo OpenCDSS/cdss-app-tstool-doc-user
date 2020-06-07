@@ -13,8 +13,16 @@
 properties are recognized whether or not `[TSTool]` is at the top of the file.
 * ![bug](bug.png) [13.03.00] Change the [`RunProgram`](../command-ref/CompareFiles/CompareFiles.md) command
 ***Visual Diff*** feature to work when files use property in the name.
+* ![bug](bug.png) [13.03.00] Update the
+[`ReadStateCU`](../command-ref/ReadStateCU/ReadStateCU.md) and
+[`ReadStateMod`](../command-ref/ReadStateMod/ReadStateMod.md)
+commands to better handle `${Property}` in the `InputFile` parameter.
 * ![bug](bug.png) [13.03.00] Update the [`RunProgram`](../command-ref/RunProgram/RunProgram.md) command to work on Linux.
 Also add the `EnvVars`, `IfNonZeroExitCode`, `StderrFile`, and `StdoutFile` parameters.
+* ![bug](bug.png) [13.03.00] Update the
+[`WriteStateCU`](../command-ref/WriteStateCU/WriteStateCU.md) and
+[`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod.md)
+commands to enable `TSID` to handle `${Property}`, as was previously documented.
 * ![change](change.png) [13.03.00] All command editors have been updated to implement ***...***, ***Abs***, and ***Rel***
 buttons to select files and folders and switch between absolute and relative paths,
 with default being to use relative path.
@@ -42,6 +50,11 @@ additional functionality has been added for strings, and string operations have 
 * ![change](change.png) [13.03.00] Update the [`NewTable`](../command-ref/NewTable/NewTable.md) command to support arrays.
 * ![change](change.png) [13.03.00] Update the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md)
 command to output the time series product file to reflect the full product definition.
+* ![change](change.png) [13.03.00] Update the [`ReadStateCU`](../command-ref/ReadStateCU/ReadStateCU.md)
+command to have `Alias` parameter to assign an alias to time series.
+* ![change](change.png) [13.03.00] Update the
+[`ReadStateModB`](../command-ref/ReadStateModB/ReadStateModB.md) command
+to add `IncludeDataTypes` and `ExcludeDataTypes` parameters, which limits the time series that are read
 * ![change](change.png) [13.03.00] Update the [`ReadTableFromDBF`](../command-ref/ReadTableFromDBF/ReadTableFromDBF.md) command to covert column data types.
 * ![change](change.png) [13.03.00] Update the [`RunningStatisticTimeSeries`](../command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries.md) command
 to add statistics:  `Change`, `ChangeAbs`, `ChangeFraction`, `ChangeFractionAbs`, `ChangePercent`, `ChangePercentAbs`, `NewMax`, and `NewMin`.
@@ -64,6 +77,7 @@ to change interval of irregular interval time series to regular interval, simple
 [`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval.md) command
 * ![new](new.png) [13.03.00] Add the [`Continue`](../command-ref/Continue/Continue.md) command to jump to end of 
 [`For`](../command-ref/For/For.md) loop block
+* ![new](new.png) [13.03.00] Add the [`CreateFolder`](../command-ref/CreateFolder/CreateFolder.md) command to create a folder
 * ![new](new.png) [13.03.00] Add the [`FormatFile`](../command-ref/FormatFile/FormatFile.md) command to format a file for output,
 including for web
 * ![new](new.png) [13.03.00] Add the [`RunR`](../command-ref/RunR/RunR.md) command to run `R` scripts.
