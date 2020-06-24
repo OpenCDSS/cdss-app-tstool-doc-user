@@ -16,8 +16,28 @@ currently providing simple search and replace for literal strings.
 
 In the future this command may be enhanced to add the following features:
 
-* edit a property
+* edit an in-memory property value containing text
 * allow multiple operations in one command
+
+The search and replace functionality is implemented using Java pattern matching and regular expressions
+(see [`Pattern`](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) class documentation).
+It can be complicated to deal with special characters and patterns as they are processed
+through TSTool commands and underlying Java code.
+For example, some patterns pass through to the underlying code without changes whereas others
+need to be transformed or "escaped" to protect from manipulation by TSTool.
+The following examples illustrate how to perform common search and replace tasks.
+
+**<p style="text-align: center;">
+Search and Replace Examples
+</p>**
+
+| **`SearchFor`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **`ReplaceWith`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
+| -- | -- | -- |
+| `\r\n` | `\n` | Replace Windows end of line with Linux end of line. | 
+| `\n` | `\r\n` | Replace Linux end of line Windows end of line with Linux end of line. | 
+| `StationId` | `\$\{StationId}` | Replace the static string `StationId` with a property `${StationId}`.  The dollar sign has special meaning to the pattern matcher (end of line) and braces also have meaning.  Additionally, using `${` directly causes TSTool to try to replace with a property value.  Using backslashes in front of the first two characters in the `ReplaceWith` parameter allows the string to pass through TSTool and pattern matcher without interpretation. |
+| `Some.*Text` | `SomeNewText` | The `*` typically cannot be used alone and therefore `.*` indicates "any character followed by one or more characters".  The example shows how intervening characters in the original string can be replaced with new text. |
+| `SomeFile\..*\.ext` | `SomeFile\.ABC\.ext` | Similar to previous example except escape the period from interpretation by pattern matcher and treat literally, needed when handling filenames with extensions. |
 
 ## Command Editor ##
 
