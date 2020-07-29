@@ -20,6 +20,9 @@ commands to better handle `${Property}` in the `InputFile` parameter.
 * ![bug](bug.png) [13.03.00] Update the [`RunProgram`](../command-ref/RunProgram/RunProgram.md) command to work on Linux.
 Also add the `EnvVars`, `IfNonZeroExitCode`, `StderrFile`, and `StdoutFile` parameters.
 * ![bug](bug.png) [13.03.00] Update the
+[`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command to list
+time series in discovery mode if an alias is specified, for use in other commands.
+* ![bug](bug.png) [13.03.00] Update the
 [`WriteStateCU`](../command-ref/WriteStateCU/WriteStateCU.md) and
 [`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod.md)
 commands to enable `TSID` to handle `${Property}`, as was previously documented.
@@ -47,6 +50,12 @@ command to have `TransferDataHow` to control how input time series are transferr
 command to support multiple patterns to match files.
 * ![change](change.png) [13.03.00] Update the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command to allow `*` to delete all rows,
 additional functionality has been added for strings, and string operations have been made case-dependent.
+* ![change](change.png) [13.03.00] Update the
+[`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate.md) command to fill the ends
+of the fill period even if non-missing values are outside of that period
+* ![change](change.png) [13.03.00] Update the [`ManipulateTableString`](../command-ref/ManipulateTableString/ManipulateTableString.md) to
+handle conversion of floating point numbers (as strings) to integers and properly round.
+Also add `ToLowerCase` and `ToUpperCase` conversions.
 * ![change](change.png) [13.03.00] Update the [`NewTable`](../command-ref/NewTable/NewTable.md) command to support arrays.
 * ![change](change.png) [13.03.00] Update the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md)
 command to output the time series product file to reflect the full product definition.
