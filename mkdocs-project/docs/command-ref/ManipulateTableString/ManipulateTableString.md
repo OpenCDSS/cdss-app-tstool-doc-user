@@ -52,21 +52,32 @@ Command Parameters
 |`ColumnIncludeFilters`|Specify values to match to include rows using syntax: `Column1:Value1,Column2,Value2`, where values can use `*` for wildcard.  All values must be matched to include a row.  Can be specified with `${Property}` notation.|Include all rows.|
 |`ColumnExcludeFilters`|Specify values to match exclude rows using syntax: `Column1:Value1,Column2,Value2`, where values can use `*` for wildcard.  All values must be matched to exclude a row.  Can be specified with `${Property}` notation.|Include all rows.|
 |`InputColumn1`|The name of a column containing strings, as the first input.  Can be specified with `${Property}` notation.|None – must be specified.|
-|`Operator`|The operation to perform on the input strings:<br><ul><li>`Append` – append the second input to the first input (requires 2 inputs)</li><li>`Prepend` – prepend the second input before the first input (requires 2 inputs)</li><li>`Replace` – start with the first input, replace the substring indicated by the second input with that of the third input (requires 3 inputs)</li><li>`Remove` – start with the first input, remove the substring indicated by the second input (requires 2 inputs)</li><li>`Split` – split string by delimiter and output part</li><li>`Substring` – split out a substring from the first input, where the second input is the starting character position (1+) and the optional third input is the ending character position (1+) (requires 2 or 3 inputs)</li><li>`ToDate` – convert the first input to a DateTime object with date precision</li><li>`ToDateTime` – convert the first input to a DateTime object</li><li>`ToDouble` – convert the first input to a double precision object</li><li>`ToInteger` – convert the first input to an integer object</li></ul>|None – must be specified.|
+|`Operator`|The operation to perform on the input strings.  See the table below.|None – must be specified.|
 |`InputColumn2`|The name of a column containing strings, as the second input.  Can be specified with `${Property}` notation.|Required if a 2nd input value is needed no `InputValue2`.|
 |`InputValue2`|A string constant, as the second input.  Can be specified with `${Property}` notation.  For `Replace` operator, use `^` to indicate start of line, `$` to indicate end of line, `\$` to match a dollar sign, and `\s` to indicate space.|Required if a 2nd input value is needed and no `InputColumn2`.|
 |`InputValue3`|A string constant, as the third input.  Can be specified with `${Property}` notation.  See note for `InputValue2` for `Replace` operator.|Required if a 3rd input value is needed.|
 |`OutputColumn`|The name of a column to receive the output.  Can be specified with `${Property}` notation.|None – must be specified.|
 
-The following table describes the parameters that are needed for each operator.  This table will be completed for other operators in the future.
+The following table describes the `Operator` parameter and additional  parameters that are needed for each operator.
 
 **<p style="text-align: center;">
 Operators and Parameter Requirements
 </p>**
 
-|**Operator**|**Parameters Required and Description**|
-| --------------|-----------------|
-|`Split`|<ul><li>`InputValue2` is the delimiter character</li><li>`InputValue3` is the part to output (1+)</li><ul>|
+|**Operator**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description and Required Parameters**|
+| --|--|
+|`Append` | Append the second input to the first input (requires 2 inputs). |
+|`Prepend` | Prepend the second input before the first input (requires 2 inputs). |
+|`Replace` | Start with the first input, replace the substring indicated by the second input with that of the third input (requires 3 inputs). |
+|`Remove` | Start with the first input, remove the substring indicated by the second input (requires 2 inputs). |
+|`Split` | Split string by delimiter and output part. `InputValue2` is the delimiter character and `InputValue3` is the part to output (1+). |
+|`Substring` | Split out a substring from the first input, where the second input is the starting character position (1+) and the optional third input is the ending character position (1+) (requires 2 or 3 inputs). |
+|`ToDate` | Convert the first input to a DateTime object with date precision. |
+|`ToDateTime` | Convert the first input to a DateTime object. |
+|`ToDouble` | Convert the first input to a double precision object. |
+|`ToInteger` | Convert the first input to an integer object.  If the input string contains a floating point number, the number will be rounded. |
+|`ToLowerCase` | Convert the string to lower case. |
+|`ToUpperCase` | Convert the string to upper case. |
 
 ## Examples ##
 

@@ -13,7 +13,8 @@
 
 The `FillInterpolate` command fills missing data in a time series by
 interpolating between known values within the same time series.
-The command currently will not extrapolate past end points.
+A gap at either end of the fill period will be filled by interpolation using non-missing
+bounding values from outside of the fill period, if available.
 
 ## Command Editor ##
 
@@ -45,7 +46,7 @@ Command Parameters
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`FillStart`|The starting date/time for the fill.  Can be specified using processor `${Property}`.|Available period.|
 |`FillEnd`|The ending date/time for the fill.  Can be specified using processor `${Property}`.|Available period.|
-|`MaxIntervals`|The maximum number of consecutive intervals to fill (0 indicates no limits on the number of consecutive intervals that can be filled).|`0`|
+|`MaxIntervals`|The maximum number of consecutive intervals to fill (0 indicates no limits on the number of consecutive intervals that can be filled).  If interpolation is filling values at the end of the fill period, `MaxIntervals` will apply to the number of intervals searching for a non-missing value outside of the fill interval.|`0`|
 |`Transformation`|Indicate the data transformation to occur for interpolation.  Currently, None is the only option and is the default.  Earlier versions used Linear.|None (no transformation).|
 |`FillFlag`|A string to flag data values that are filled.  Can be specified using processor `${Property}`.|None – do not flag filled data.|
 |`FillFlagDesc`|Description for FillFlag.  Can be specified using processor `${Property}`.|Auto-generated.|
