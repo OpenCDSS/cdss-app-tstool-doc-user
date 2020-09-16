@@ -67,6 +67,8 @@ to add `IncludeDataTypes` and `ExcludeDataTypes` parameters, which limits the ti
 * ![change](change.png) [13.03.00] Update the [`ReadTableFromDBF`](../command-ref/ReadTableFromDBF/ReadTableFromDBF.md) command to covert column data types.
 * ![change](change.png) [13.03.00] Update the [`RunningStatisticTimeSeries`](../command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries.md) command
 to add statistics:  `Change`, `ChangeAbs`, `ChangeFraction`, `ChangeFractionAbs`, `ChangePercent`, `ChangePercentAbs`, `NewMax`, and `NewMin`.
+* ![change](change.png) [13.03.00] Update the [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+to have `ColumnNames` parameter to specify column names when they are not in the file
 * ![change](change.png) [13.03.00] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command to allow math parameters to be specified as properties.
 * ![change](change.png) [13.03.00] Update the [`SetTableValues`](../command-ref/SetTableValues/SetTableValues.md) command to
 add `Column` and `Value` parameters to set a single column value, useful for complex values such as arrays
