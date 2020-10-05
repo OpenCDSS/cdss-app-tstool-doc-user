@@ -119,6 +119,7 @@ nav:
   - NewEndOfMonthTSFromDayTS: command-ref/NewEndOfMonthTSFromDayTS/NewEndOfMonthTSFromDayTS.md
   - NewExcelWorkbook: command-ref/NewExcelWorkbook/NewExcelWorkbook.md
   - NewPatternTimeSeries: command-ref/NewPatternTimeSeries/NewPatternTimeSeries.md
+  - NewSQLiteDatabase: command-ref/NewSQLiteDatabase/NewSQLiteDatabase.md
   - NewStatisticEnsemble: command-ref/NewStatisticEnsemble/NewStatisticEnsemble.md
   - NewStatisticMonthTimeSeries: command-ref/NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md
   - NewStatisticTimeSeries: command-ref/NewStatisticTimeSeries/NewStatisticTimeSeries.md

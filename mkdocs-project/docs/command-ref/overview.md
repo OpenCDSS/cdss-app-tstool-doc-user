@@ -269,6 +269,7 @@ These commands handle reading and writing time series and other data from datast
 Utility commands for executing SQL and creating a data dictionary are also provided.
 
 * [`NewDerbyDatabase`](NewDerbyDatabase/NewDerbyDatabase.md) - **this command is under development**
+* [`NewSQLiteDatabase`](NewSQLiteDatabase/NewSQLiteDatabase.md) - create a new SQLite database
 * [`ReadTableFromDataStore`](ReadTableFromDataStore/ReadTableFromDataStore.md) - read a table from a datastore
 * [`WriteTableToDataStore`](WriteTableToDataStore/WriteTableToDataStore.md) - write a table to a datastore
 * [`RunSql`](RunSql/RunSql.md) - run an SQL statement on a datastore
@@ -608,6 +609,7 @@ except for the indicated commands (blank indicates has been migrated)
 |[`Multiply`](Multiply/Multiply.md)                                                                              |Multiply one time series by another.|||
 |[`NewDayTSFromMonthAndDayTS`](NewDayTSFromMonthAndDayTS/NewDayTSFromMonthAndDayTS.md)                           |Create a new daily time series by distributing a monthly time series using a daily pattern.|||
 |[`NewDerbyDatabase`](NewDerbyDatabase/NewDerbyDatabase.md) - **command is being developed**                     |                                 |**X**||
+|[`NewSQLiteDatabase`](NewSQLiteDatabase/NewSQLiteDatabase.md)                                                   |Create a new SQLite database.|||
 |[`NewEndOfMonthTSFromDayTS`](NewEndOfMonthTSFromDayTS/NewEndOfMonthTSFromDayTS.md)                              |Create a new end of month time series from daily time series.|||
 |[`NewEnsemble`](NewEnsemble/NewEnsemble.md)                                                                     |Create a new time series ensemble.|||
 |[`NewExcelWorkbook`](NewExcelWorkbook/NewExcelWorkbook.md)                                                      |Create a new Excel workbook file.|||

@@ -4,6 +4,10 @@
 * [Standard Time Series Properties](#standard-time-series-properties)
 * [Limitations](#limitations)
 * [Datastore Configuration File](#datastore-configuration-file)
+	+ [Microsoft Access Database Example](#microsoft-access-database-example)
+	+ [SQLite Database Example](#sqlite-database-example)
+	+ [SQL Server Database Example](#sql-server-database-example)
+	+ [Time Series Datastore Configuration Properties](#time-series-datastore-configuration-properties)
 
 ------------
 
@@ -22,7 +26,9 @@ database and converting tables to more complex data objects like time series may
  See also the [`TableToTimeSeries`](../../command-ref/TableToTimeSeries/TableToTimeSeries.md) command,
 which will convert a table into time series.
 
-The datastore internally corresponds to an Open Database Connectivity (ODBC) connection.
+The datastore internally corresponds to an
+[Open Database Connectivity](https://en.wikipedia.org/wiki/Open_Database_Connectivity)
+(ODBC) connection.
 The connection can be defined one of two ways:
 
 * Define an ODBC connection using Windows tools.
@@ -32,7 +38,8 @@ that does not perform as well as vendor drivers.
 This approach is used when the `DatabaseEngine` and `OdbcName` configuration properties are defined for the datastore.
 * Provide connection information via `DatabaseEngine`, `DatabaseServer`, `DatabaseName`,
 and potentially login configuration properties,
-and allow the software to use a vendor-specific JDBC (Java Database Connectivity) driver,
+and allow the software to use a vendor-specific JDBC
+([Java Database Connectivity](https://en.wikipedia.org/wiki/Java_Database_Connectivity)) driver,
 which is generally optimized for the database software.
 The disadvantage of this approach is that advanced authentication interfaces have not been
 implemented (this may or not be an issue depending on the security enabled for the database).
@@ -119,18 +126,24 @@ Generic Database Datastore Configuration File
 
 The `DatabaseEngine` can be one of the following values,
 and is used to control internal database interactions,
-such as properly formatting date/time strings for SQL statements:
+such as properly formatting date/time strings for SQL statements.
+The JDBC driver software is distributed with TSTool and is updated as necessary.
 
-* `Access` – Microsoft Access database
-* `Excel` – Microsoft Excel workbook (first row of worksheet should be the column names,
-column types are determined by scanning rows (independent of the ***Rows to Scan*** value in the ODBC DNS setup);
-refer to sheet in SQL as `Select * from [Sheet1$]` )
-* `H2` – H2 database
-* `Informix` – INFORMIX database
-* `MySQL` – MySQL database
-* `Oracle` – Oracle database
-* `PostgreSQL` – PostgreSQL database
-* `SQLServer` – Microsoft SQL Server database
+**<p style="text-align: center;">
+Supported Databases (`DatabaseEngine` Property Value)
+</p>**
+
+| **`DatabaseEngine`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **JDBC Driver Information**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| -- | -- | -- |
+| `Access` | Microsoft Access database | Uses system ODBC driver on Windows. |
+| `Excel` | Microsoft Excel workbook (first row of worksheet should be the column names, column types are determined by scanning rows (independent of the ***Rows to Scan*** value in the ODBC DNS setup).  Refer to sheet in SQL as `Select * from [Sheet1$]` ) | Uses system ODBC driver on Windows. |
+| `H2` | H2 database, **not actively used but included for historical reasons** | [JDBC Driver](http://www.h2database.com/html/cheatSheet.html) |
+| `Informix` | INFORMIX database, **not actively used but included for historical reasons** | [JDBC Driver](https://www.ibm.com/support/knowledgecenter/SSGU8G_12.1.0/com.ibm.jdbc_pg.doc/ids_jdbc_013.htm) |
+| `MySQL` | MySQL database | [JDBC Driver](https://www.mysql.com/products/connector/) |
+| `Oracle` | Oracle database | [JDBC Driver](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) |
+| `PostgreSQL` | PostgreSQL database | [JDBC Driver](https://jdbc.postgresql.org/) |
+| `SQLite` | SQLite database | [JDBC Driver](https://github.com/xerial/sqlite-jdbc/releases) |
+| `SQLServer` | Microsoft SQL Server database | [JDBC Driver](https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server) |
 
 TSTool, which is written in Java, is distributed with the software drivers for the above databases
 only if datastores have been implemented that use a database product.
@@ -139,8 +152,8 @@ implemented in SQL Server and consequently the SQL Server driver is distributed 
 Other drivers (e.g., Access via ODBC) depend on installation of the database software,
 which typically includes the ODBC drivers.
 Some of the databases listed above have only been used in development and software support may be out of date.
-If in doubt, contact the software developers and the issue will be evaluated.
-More databases can be supported if the number of users increases.
+If in doubt, contact the software developers.
+Additional databases can be supported if necessary.
 
 ### Microsoft Access Database Example ###
 
@@ -169,6 +182,41 @@ OdbcName = "ExampleDatabase"
 ```
 
 Generic Database Datastore Configuration File Using ODBC DSN Properties
+
+### SQLite Database Example ###
+
+The following example illustrates how to configure a generic datastore for a SQLite database file.
+Because there is no server software, the filename is used for `DatabaseServer`.
+
+```
+# Configuration information for NovaStar user web services
+#
+# The user will see the following when interacting with the datastore:
+#
+# Name - datastore identifier used in applications, for example as the
+#     input type information for time series identifiers (usually a short string)
+# Description - datastore description for reports and user interfaces (short phrase)
+#
+# The following are needed to make database connections in the software
+#
+# Type - must be GenericDatabaseDataStore because treated generically
+# DatabaseEngine - the database software (SQLite)
+# DatabaseServer - the absolute path to the database using backward or forward slashes
+#  "C:\Users\user\Downloads\dev_db.db"
+#  "C:/Users/user/Downloads/dev_db.db"
+# DatabaseName - NOT USED
+# SystemLogin - NOT USED
+# SystemPassword - NOT USED
+# Enabled - if True then datastore will be enabled when software starts, False to disable
+
+# Change the following to True to enable the datastore
+Enabled = True
+Type = "GenericDatabaseDataStore"
+Name = "nsuserws-test"
+Description = "NovaStar user web services database"
+DatabaseEngine = "SQLite"
+DatabaseServer = "C:\Users\user\Downloads\dev_db.db"
+```
 
 ### SQL Server Database Example ###
  
@@ -201,6 +249,8 @@ SystemPassword = "guest"
 **<p style="text-align: center;">
 Generic Database Datastore Configuration File Using Database Connection Properties
 </p>**
+
+### Time Series Datastore Configuration Properties ###
 
 The [`ReadTimeSeriesFromDataStore`](../../command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md) and
 [`WriteTimeSeriesToDataStore`](../../command-ref/WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md)
