@@ -37,6 +37,8 @@ preliminary format is being evaluated to integrate with web applications.
 * ![change](change.png) [13.03.00] Fix a number of issues where table arrays were not cleanly supported.
 * ![change](change.png) [13.03.00] Update the [`AppendTable`](../command-ref/AppendTable/AppendTable.md) command to
 accept property notation in the `ColumnFilters` parameter.
+* ![change](change.png) [13.03.00] Update the [`CloseDataStore`](../command-ref/CloseDataStore/CloseDataStore.md) command to
+have `IfNotFound` parameter to control error handling
 * ![change](change.png) [13.03.00] Update the [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command to
 check the full length of each file when computing the number of different lines.
 * ![change](change.png) [13.03.00] Update the [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md)
@@ -92,6 +94,7 @@ to change interval of irregular interval time series to regular interval, simple
 * ![new](new.png) [13.03.00] Add the [`FormatFile`](../command-ref/FormatFile/FormatFile.md) command to format a file for output,
 including for web
 * ![new](new.png) [13.03.00] Add the [`RunR`](../command-ref/RunR/RunR.md) command to run `R` scripts.
+* ![new](new.png) [13.03.00] Add the [`NewSQLiteDatabase`](../command-ref/NewSQLiteDatabase/NewSQLiteDatabase.md) command to create a SQLite database
 * ![new](new.png) [13.03.00] Add the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command to edit text files
 
 ## Changes in Versions 13.02.00 ##

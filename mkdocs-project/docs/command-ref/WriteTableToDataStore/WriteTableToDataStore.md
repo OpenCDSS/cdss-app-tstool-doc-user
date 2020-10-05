@@ -1,6 +1,7 @@
 # TSTool / Command / WriteTableToDataStore #
 
 * [Overview](#overview)
+	+ [Relationship Example](#relationship-example)
 * [Command Editor](#command-editor)
 * [Command Syntax](#command-syntax)
 * [Examples](#examples)
@@ -17,25 +18,26 @@
 Improvements will be made in response to exercising the command functionality.**
 * **Write statements are created for each row of the table being written.
 This is inefficient and slow.  Improvements will be made in future updates.**
-* **Functionality has been tested mainly with SQL Server.**
+* **Functionality has been tested mainly with SQL Server and SQLite.**
 * **Handling of date objects has not been tested.**
 * **Better handling of blank rows needs to be implemented.**
 
 The `WriteTableToDataStore` command processes each row in a table and
 executes an SQL statement to insert the row into a database datastore.
 If database datastore support is not specifically provided by TSTool,
-a generic datastore can be used (see the Generic Database Datastore appendix).
+a generic datastore can be used (see the [GenericDatabase](../../datastore-ref/GenericDatabase/GenericDatabase.md)
+Datastore appendix).
 This command cannot be used with web service datastores and use with Excel datastores has not been tested.
 This command is useful in particular for bulk data loading such as
-for database initialization and when tight integration with TSTool is not required or has not been implemented.
-In the future additional command parameters may be added to limit the rows that are being written and allow update functionality.
+for database initialization and when tight integration with TSTool is not required or has not been implemented via a specific API.
+In the future, additional command parameters may be added to limit the rows that are being written.
 
 General constraints on the query are as follows:
 
 * the table or views being written must be writeable by the user specified
 for the database connection (some databases restrict direct access to data and require using stored procedures)
-* the table column names must match the database table column names
-(in the future a command parameter may be added to allow column names to be mapped)
+* the table column names must match the database table column names, or use the `ColumnMap` parameter to
+specify names in the datastore that are different than the table
 * data types for table columns must closely match the database:
 	+ internally an SQL statement is created in which data values are formatted
 	as per the data type (e.g., strings are quoted);
@@ -48,12 +50,15 @@ for the database connection (some databases restrict direct access to data and r
 	(i.e., hours, minutes, and seconds may be shown with default zero values in output)
 *	the specified table columns are written (all are written by default)
 	+ primary keys in the database table do not need to be specified
-	(their values will be assigned automatically)
+	(their values will be assigned automatically),
+	although primary keys with special values, such as strings, can be specified
 	+ table columns that correspond to related tables in the datastore
 	table need to be mapped using the `DataStoreRelatedColumnsMap` command parameter
 
+### Relationship Example ###
+
 An example of column mapping to a related table is as follows,
-using the notation Table.Column to fully identify columns:
+using the notation `Table.Column` to fully identify columns:
 
 * the string `TableID.DataType` column is in the input data
 * an integer database table `TimeSeriesMeta.DataTypeID` column is a foreign key
@@ -107,7 +112,7 @@ Command Parameters
 |`DataStoreTable`<br>**required**|The name of the database table or view to receive data.|None – must be specified.|
 |`ColumnMap`|Indicate which columns in `TableID` have different names in `DataStoreTable`, using the syntax:<br>`ColumnName:DatastoreTableName, ColumnName:DatastoreTableName,...`|DataStore `TableName` columns are assumed to match the column names in `TableID`.|
 |`DataStoreRelatedColumnsMap`|Indicate datastore columns that need to match values in a related table in the datastore.  For example, `TableID` may contain a column “Abbreviation” but the corresponding column in `DataStoreTable` may refer to a related table using a foreign key relationship (matching integer column in both tables).  It is expected that the related table will have only one primary key column, which will be determined automatically.  However, a column mapping must be provided to tell the command which `DataStoreTable` column should be matched with the related table.  The syntax of the parameter is:<br>`DataStoreTableKeyCol1:RelatedTableValueCol1,DataStoreTableKeyCol2:RelatedTableValueCol2,...`<br>The above assumes that foreign keys have been defined in the `DataStoreTable` columns.  If the database does not explicitly define a foreign key relationship in the database design, then specify the right side of the map as:  `RelatedTable1.RelatedCol1`.  See the explanation below this table.|`DataStore` `TableName` columns are assumed to match the column names in TableID, with no need to perform reference table value matching.|
-|`WriteMode`|The method used to write data, recognizing the databases use insert and update SQL statements, one of:<br><ul><li>`DeleteInsert` – delete the data first and then insert (all values will need to be matched to delete)</li><li>`Insert` – insert the data with no attempt to update if the insert fails</li><li>`InsertUpdate` – try inserting the data first and if that fails try to update</li><li>`Update` – update the data with no attempt to insert if the update fails</li><li>`UpdateInsert` – try updating the data first and if that fails try to insert</li></ul>|`InsertUpdate`|
+|`WriteMode`|The method used to write data, recognizing the databases use insert and update SQL statements, one of:<br><ul><li>`DeleteInsert` – delete the data first and then insert (all values will need to be matched to delete)</li><li>`Insert` – insert the data with no attempt to update if the insert fails</li><li>`InsertUpdate` – try inserting the data first and if that fails try to update</li><li>`Update` – update the data with no attempt to insert if the update fails</li><li>`UpdateInsert` – try updating the data first and if that fails try to insert</li></ul>|`UpdateInsert`|
 
 ## Examples ##
 
