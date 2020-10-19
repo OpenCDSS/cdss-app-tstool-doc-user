@@ -31,8 +31,9 @@ Table and column descriptions currently cannot be retrieved due to limitations i
 * Data dictionary output is only as complete as the metadata defined by the database
 administrator – there currently is no way to provide additional information via the command,
 although in the future an ability to provide table and column descriptions using an input table may be implemented.
-* The ER Diagram capability is under development.
+* **The ER Diagram capability is under development**.
 * Information for procedures, functions, and triggers is not implemented.
+
 
 ## Command Editor ##
 
@@ -46,14 +47,24 @@ The following dialog is used to edit the command and illustrates the syntax of t
 `CreateDataStoreDataDictionary` Command Editor for Table Parameters (<a href="../CreateDataStoreDataDictionary_Tables.png">see also the full-size image</a>)
 </p>**
 
-The following dialog is used to edit the command and illustrates the syntax of the command for data dictionary parameters.
+The following dialog is used to edit the command and illustrates the syntax of the command for metadata parameters.
 
 **<p style="text-align: center;">
-![CreateDataStoreDataDictionary](CreateDataStoreDataDictionary.png)
+![CreateDataStoreDataDictionary Metadata](CreateDataStoreDataDictionary_Metadata.png)
 </p>**
 
 **<p style="text-align: center;">
-`CreateDataStoreDataDictionary` Command Editor for Data Dictionary Parameters (<a href="../CreateDataStoreDataDictionary.png">see also the full-size image</a>)
+`CreateDataStoreDataDictionary` Command Editor for Metadata Parameters (<a href="../CreateDataStoreDataDictionary_Metadata.png">see also the full-size image</a>)
+</p>**
+
+The following dialog is used to edit the command and illustrates the syntax of the command for data dictionary parameters.
+
+**<p style="text-align: center;">
+![CreateDataStoreDataDictionary_Dict](CreateDataStoreDataDictionary_Dict.png)
+</p>**
+
+**<p style="text-align: center;">
+`CreateDataStoreDataDictionary` Command Editor for Data Dictionary Parameters (<a href="../CreateDataStoreDataDictionary_Dict.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for entity relationship parameters.
@@ -77,21 +88,55 @@ CreateDataStoreDataDictionary(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-|--------------|-----------------|-----------------|
-|`DataStore`<br>**required**|The name of a database datastore.  Can be specified using `${Property}`.|None – must be specified.|
-|`ReferenceTables`|A comma-separated list of database reference tables.  The content of these tables will be output in their entirety.  Can be specified using `${Property}`.|No reference tables|
-|`ExcludeTables`|A comma-separated list of tables to exclude from output, for example to exclude database system tables.  Use `*` as a wildcard.|Include all tables.|
-|`OutputFile`|The name of the file for the HTML data dictionary.  Can be specified using ${Property}.|None.|
-|`SurroundWithPre`|Specify as True if comments for table columns should be surrounded with `<pre></pre>` in output, useful if comments included newlines for formatting.  In this case Newline and `EncodeHtmlChars` are ignored.|`False`|
-|`Newline`|String to replace newline in table column comments.  For example use `<br>` to preserve newlines in HTML output.  Specifying True will cause `EncodeHtmlChars` to be ignored.|Space|
-|`EncodeHtmlChars`|Specify as True if characters such as `<` should be encoded to display in HTML, `False` to pass through comment content as is with no encoding.|`True`|
-|`ERDiagramLayoutTableID`|The table identifier for the table supplying ER Diagram coordinate information.  Can be specified using `${Property}`.|None – must be specified if ER Diagram is created.|
-|`ERDiagramLayoutTableXColumn`|The name of the column in the layout table containing the X coordinates for the ER Diagram.  Coordinates should be specified in points (1/72 of inch) as position on page size.  Can be specified using `${Property}`.|None – must be specified.|
-|`ERDiagramLayoutTableYColumn`|The name of the column in the layout table containing the Y coordinates for the ER Diagram.  Can be specified using `${Property}`.|None – must be specified.|
-|`ERDiagramPageSize`|The page size for the ER Diagram layout.  Currently this defaults to 11x17 (B).|`B`|
-|`ERDiagramOrientation`|The orientation of the ER Diagram.|`Landscape`|
-|`ViewERDiagram`|Indicate whether the ER Diagram should be shown in a window when the commands are run.|`False`|
+|**Tab**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|--|--------------|-----------------|-----------------|
+| |`DataStore`<br>**required**|The name of a database datastore.  Can be specified using `${Property}`.|None – must be specified.|
+| ***Tables***|`ReferenceTables`|A comma-separated list of database reference tables.  The content of these tables will be output in their entirety.  Can be specified using `${Property}`.|No reference tables|
+||`ExcludeTables`|A comma-separated list of tables to exclude from output, for example to exclude database system tables.  Use `*` as a wildcard.|Include all tables.|
+| ***Metadata*** | `DataStoreMetaTableForTables` | Name of datastore table containing metadata for tables (see below), used for databases such as SQLite that don't store metadata in the database. | From database schema. |
+|| `DataStoreMetaTableForColumns` | Name of datastore table containing metadata for columns (see below), used for databases such as SQLite that don't store metadata in the database. | From database schema. |
+|| `MetaTableForTables` | Name of table containing metadata for tables (see below), used for databases such as SQLite that don't store metadata in the database.  Use this approach if the datastore contains a metadata table that must be queried into a table to adjust column names to match the required names.| From database schema. |
+|| `MetaTableForColumns` | Name of table containing metadata for columns (see below), used for databases such as SQLite that don't store metadata in the database.  Use this approach if the datastore contains a metadata table that must be queried into a table to adjust column names to match the required names.| From database schema. |
+| ***Data Dictionary***|`OutputFile`|The name of the file for the HTML data dictionary.  Can be specified using ${Property}.|None.|
+||`SurroundWithPre`|Specify as True if comments for table columns should be surrounded with `<pre></pre>` in output, useful if comments included newlines for formatting.  In this case Newline and `EncodeHtmlChars` are ignored.|`False`|
+||`Newline`|String to replace newline in table column comments.  For example use `<br>` to preserve newlines in HTML output.  Specifying True will cause `EncodeHtmlChars` to be ignored.|Space|
+||`EncodeHtmlChars`|Specify as True if characters such as `<` should be encoded to display in HTML, `False` to pass through comment content as is with no encoding.|`True`|
+| ***Entity Relationship Diagram***|`ERDiagramLayoutTableID`|The table identifier for the table supplying ER Diagram coordinate information.  Can be specified using `${Property}`.|None – must be specified if ER Diagram is created.|
+||`ERDiagramLayoutTableXColumn`|The name of the column in the layout table containing the X coordinates for the ER Diagram.  Coordinates should be specified in points (1/72 of inch) as position on page size.  Can be specified using `${Property}`.|None – must be specified.|
+||`ERDiagramLayoutTableYColumn`|The name of the column in the layout table containing the Y coordinates for the ER Diagram.  Can be specified using `${Property}`.|None – must be specified.|
+||`ERDiagramPageSize`|The page size for the ER Diagram layout.  Currently this defaults to 11x17 (B).|`B`|
+||`ERDiagramOrientation`|The orientation of the ER Diagram.|`Landscape`|
+||`ViewERDiagram`|Indicate whether the ER Diagram should be shown in a window when the commands are run.|`False`|
+
+The following column names are required for the table or view specified with the
+`DataStoreMetaTableForTables` command parameter.
+Metadata are only required when the database does not store metadata in database schema,
+such as for SQLite.
+
+**<p style="text-align: center;">
+Metatable Columns for Table Metadata
+</p>**
+
+|**Column Name**|**Description**|
+|--|--------------|
+|`id`|Primary identifier that is used to link column metadata (see below). |
+|`name`|Table name.|
+|`description`|Table description.|
+
+The following column names are required for the table or view specified with the
+`DataStoreMetaTableForColumns` command parameter.
+Metadata are only required when the database does not store metadata in database schema,
+such as for SQLite.
+
+**<p style="text-align: center;">
+Metatable Columns for Column Metadata
+</p>**
+
+|**Column Name**|**Description**|
+|--|--------------|
+|`table_id`| Foreign key value matching the `id` column value in the table metadata table (see above). |
+|`name`|Column name.|
+|`description`|Column description.|
 
 ## Examples ##
 
