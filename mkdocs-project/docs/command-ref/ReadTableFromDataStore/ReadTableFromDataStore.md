@@ -137,7 +137,7 @@ Command Parameters
 |All|`DataStore`<br>**required**|The name of a database datastore to read.|None – must be specified.|
 |Table/view|`DataStoreTable`|The name of the database table or view to read when querying a single table or view.  If specified, do not specify `Sql` or `SqlFile`.|None.|
 |Table/view|`DataStoreColumns`|When reading a single table/view, the names of the columns to read, separated by commas.|All columns from `DataStoreTable` are read.|
-|Table/view|`OrderBy`|When reading a single table/view, a list of column names separated by commas to control the order of output.|Default database sort order will be used.|
+|Table/view|`OrderBy`|When reading a single table/view, a list of column names separated by commas to control the order of output.  Additional modifiers are allowed for each column, for example to ignore case when sorting with SQLite, can use: `columnName COLLATE NOCASE`.|Default database sort order will be used.|
 |Table/view|`Top`|Indicate that Top rows should be returned.  This functionality may not be implemented for all databases (SQL is not fully standardized for this feature).  This parameter is useful to determine the columns for a table prior to using the `Sql` or `SqlFile` parameters.|Return all rows.|
 |SQL string|`Sql`|The SQL string that will be used to query the database, optionally using `${Property}` notation to insert processor property values.  If specified, do not specify `DataStoreTable` or `SqlFile`.|None.|
 |SQL file|`SqlFile`|The name of the file containing an SQL string to execute, optionally using `${Property}` notation in the SQL file contents to insert processor property values.  If specified, do not specify `DataStoreTable` or `Sql`.|None.|

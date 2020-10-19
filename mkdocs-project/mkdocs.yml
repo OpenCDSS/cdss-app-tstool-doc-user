@@ -130,6 +130,7 @@ nav:
   - NewTreeView: command-ref/NewTreeView/NewTreeView.md
   - Normalize: command-ref/Normalize/Normalize.md
   - OpenCheckFile: command-ref/OpenCheckFile/OpenCheckFile.md
+  - OpenDataStore: command-ref/OpenDataStore/OpenDataStore.md
   - OpenHydroBase: command-ref/OpenHydroBase/OpenHydroBase.md
   - Plugin: command-ref/Plugin/Plugin.md
   - PrintTextFile: command-ref/PrintTextFile/PrintTextFile.md

@@ -270,6 +270,7 @@ Utility commands for executing SQL and creating a data dictionary are also provi
 
 * [`NewDerbyDatabase`](NewDerbyDatabase/NewDerbyDatabase.md) - **this command is under development**
 * [`NewSQLiteDatabase`](NewSQLiteDatabase/NewSQLiteDatabase.md) - create a new SQLite database
+* [`OpenDataStore`](OpenDataStore/OpenDataStore.md) - open a datastore
 * [`ReadTableFromDataStore`](ReadTableFromDataStore/ReadTableFromDataStore.md) - read a table from a datastore
 * [`WriteTableToDataStore`](WriteTableToDataStore/WriteTableToDataStore.md) - write a table to a datastore
 * [`RunSql`](RunSql/RunSql.md) - run an SQL statement on a datastore
@@ -624,6 +625,7 @@ except for the indicated commands (blank indicates has been migrated)
 |[`NewTreeView`](NewTreeView/NewTreeView.md)                                                                     |Create a tree view in the user interface.|||
 |[`Normalize`](Normalize/Normalize.md)                                                                           |Create new time series by normalizing a time series.|||
 |[`OpenCheckFile`](OpenCheckFile/OpenCheckFile.md) - **command is not enabled**                                  |Open a check file for error handling. |**X**||
+|[`OpenDataStore`](OpenDataStore/OpenDataStore.md)                                                               |Open a datastore. |||
 |[`OpenHydroBase`](OpenHydroBase/OpenHydroBase.md)                                                               |Open a HydroBase database connection.|||
 |[`PrintTextFile`](PrintTextFile/PrintTextFile.md)                                                               |Print text file to a printer.    |||
 |[`ProcessRasterGraph`](ProcessRasterGraph/ProcessRasterGraph.md)                                                |Process (create) time series raster graph.|||

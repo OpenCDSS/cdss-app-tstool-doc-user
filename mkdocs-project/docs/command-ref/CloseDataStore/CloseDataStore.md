@@ -17,20 +17,24 @@ This command is used to simulate dropped database connections
 (for example when TSTool does not read from or write to database for a period due to user inaction).
 Some database datastores have been updated to auto-connect to the database when the connection is dropped.
 
-**Because many datastores now use a configuration file to connect at startup,
-this command is not at the current time envisioned for managing database connections.
-In the future the command may be useful to process many databases in one command file.**
+The command can also be used with commands that dynamically open datastores, including the
+[`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md) and
+[`OpenDataStore`](../OpenDataStore/OpenDataStore.md) commands.
 
-The status of datastores can be shown in TSTool using the ***View...Datastores***
+Datastores that are needed throughout a TSTool session should be configured with a datastore
+configuration file to connect at startup,
+which allows TSTool to initialize main user interface query filters.
+
+The status of datastores can be shown in TSTool using the ***View / Datastores***
 menu as shown in the following figure (the Status ***Message*** column on the far right,
 not visible in the figure, provides additional information about the datastore):
 
 **<p style="text-align: center;">
-![CloseDataStore Status](CloseDataStore_Status.png)
+![View_Datastores](View_Datastores.png)
 </p>**
 
 **<p style="text-align: center;">
-Datastore Information (<a href="../CloseDataStore_Status.png">see also the full-size image</a>)
+Datastore Information from *View/Datastores* (<a href="../View_Datastores.png">see also the full-size image</a>)
 </p>**
 
 ## Command Editor ##
@@ -68,3 +72,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 ## Troubleshooting ##
 
 ## See Also ##
+
+* [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md) command
+* [`OpenDataStore`](../OpenDataStore/OpenDataStore.md) command

@@ -48,6 +48,9 @@ add `CompareFlags` to control whether data flags are also compared.
 [`CreateEnsembleFromOneTimeSeries`](../command-ref/CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md)
 command to have `TransferDataHow` to control how input time series are transferred to output time series traces.
 * ![change](change.png) [13.03.00] Update the
+[`CreateDataStoreDataDictionary`](../command-ref/CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md)
+to handle optional metadata for database software that do not provide metadata
+* ![change](change.png) [13.03.00] Update the
 [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md)
 command to support multiple patterns to match files.
 * ![change](change.png) [13.03.00] Update the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command to allow `*` to delete all rows,
@@ -71,6 +74,7 @@ to add `IncludeDataTypes` and `ExcludeDataTypes` parameters, which limits the ti
 to add statistics:  `Change`, `ChangeAbs`, `ChangeFraction`, `ChangeFractionAbs`, `ChangePercent`, `ChangePercentAbs`, `NewMax`, and `NewMin`.
 * ![change](change.png) [13.03.00] Update the [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
 to have `ColumnNames` parameter to specify column names when they are not in the file
+* ![change](change.png) [13.03.00] Update the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command to allow modifiers after table names in `OrderBy`.
 * ![change](change.png) [13.03.00] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command to allow math parameters to be specified as properties.
 * ![change](change.png) [13.03.00] Update the [`SetTableValues`](../command-ref/SetTableValues/SetTableValues.md) command to
 add `Column` and `Value` parameters to set a single column value, useful for complex values such as arrays
@@ -93,6 +97,7 @@ to change interval of irregular interval time series to regular interval, simple
 * ![new](new.png) [13.03.00] Add the [`CreateFolder`](../command-ref/CreateFolder/CreateFolder.md) command to create a folder
 * ![new](new.png) [13.03.00] Add the [`FormatFile`](../command-ref/FormatFile/FormatFile.md) command to format a file for output,
 including for web
+* ![new](new.png) [13.03.00] Add the [`OpenDataStore`](../command-ref/OpenDataStore/OpenDataStore.md) command to open a datastore from command file
 * ![new](new.png) [13.03.00] Add the [`RunR`](../command-ref/RunR/RunR.md) command to run `R` scripts.
 * ![new](new.png) [13.03.00] Add the [`NewSQLiteDatabase`](../command-ref/NewSQLiteDatabase/NewSQLiteDatabase.md) command to create a SQLite database
 * ![new](new.png) [13.03.00] Add the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command to edit text files
