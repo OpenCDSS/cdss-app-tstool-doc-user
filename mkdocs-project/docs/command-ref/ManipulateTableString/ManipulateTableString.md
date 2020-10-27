@@ -77,6 +77,7 @@ Operators and Parameter Requirements
 |`ToDouble` | Convert the first input to a double precision object. |
 |`ToInteger` | Convert the first input to an integer object.  If the input string contains a floating point number, the number will be rounded. |
 |`ToLowerCase` | Convert the string to lower case. |
+|`ToMixedCase` | Convert the string to mixed case, where the first letter of each word is capitalized and other characters are lowercase (e.g., `Mixed Case`). Words are separated by whitespace.  Words that are concatenated are treated as one word (e.g., `Mixedcase` because the command does not know that `case` is a separate word).|
 |`ToUpperCase` | Convert the string to upper case. |
 
 ## Examples ##
