@@ -60,7 +60,7 @@ additional functionality has been added for strings, and string operations have 
 of the fill period even if non-missing values are outside of that period
 * ![change](change.png) [13.03.00] Update the [`ManipulateTableString`](../command-ref/ManipulateTableString/ManipulateTableString.md) to
 handle conversion of floating point numbers (as strings) to integers and properly round.
-Also add `ToLowerCase` and `ToUpperCase` conversions.
+Also add `ToLowerCase`, `ToMixedCase`, and `ToUpperCase` conversions.
 * ![change](change.png) [13.03.00] Update the [`NewTable`](../command-ref/NewTable/NewTable.md) command to support arrays.
 * ![change](change.png) [13.03.00] Update the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md)
 command to output the time series product file to reflect the full product definition.
