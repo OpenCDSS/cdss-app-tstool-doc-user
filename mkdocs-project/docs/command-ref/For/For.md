@@ -77,7 +77,7 @@ Command Parameters
 |--|--------------|-----------------|----------------- |
 |All|`Name`<br>**required** | The name of the for loop, which will be matched with the name of an `EndFor` command to indicate the block of commands in the loop. | None - must be specified. |
 |All|`IteratorProperty` | The processor property that will be set to the iterator property. The object type will depend on that used to provide the iteration property list. For example, if a sequence of integers is being iterated, the property will contain an integer. | Same as `Name`.
-|List|`List` | A list of comma-separated values to be used as variables for the iteration. | No default if list is used – must specify a list of values. |
+|List|`List` | A list of comma-separated values to be used as variables for the iteration. Can use `${Property}` syntax. | No default if list is used – must specify a list of values. |
 |Sequence|`SequenceStart` | Starting value when a sequence is specified for iteration, an integer or decimal number. | No default if sequence is used. |
 |Sequence|`SequenceEnd` | Ending value when a sequence is specified for iteration, an integer or decimal number. | No default if sequence is used. |
 |Sequence|`SequenceIncrement` | Increment for sequence iterator. | `1` or `1.0` depending on inferred type for `SequenceStart`. |
