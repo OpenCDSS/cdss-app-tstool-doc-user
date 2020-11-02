@@ -35,8 +35,10 @@ enforced when saving.  Mixed case `TSTool` extension is still supported.
 * ![change](change.png) [13.03.00] Time series graphs can now be saved as JSON format time series product file - this
 preliminary format is being evaluated to integrate with web applications.
 * ![change](change.png) [13.03.00] Fix a number of issues where table arrays were not cleanly supported.
+* ![change](change.png) [13.03.00] Update the [`Add`](../command-ref/Add/Add.md) command `AnalysisStart` and `AnalysisEnd` parameters to support using `${Property}`.
 * ![change](change.png) [13.03.00] Update the [`AppendTable`](../command-ref/AppendTable/AppendTable.md) command to
 accept property notation in the `ColumnFilters` parameter.
+* ![change](change.png) [13.03.00] Update the [`ChangePeriod`](../command-ref/ChangePeriod/ChangePeriod.md) command `NewStart` and `NewEnd` parameters to support using `${Property}`.
 * ![change](change.png) [13.03.00] Update the [`CloseDataStore`](../command-ref/CloseDataStore/CloseDataStore.md) command to
 have `IfNotFound` parameter to control error handling
 * ![change](change.png) [13.03.00] Update the [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command to
@@ -58,10 +60,12 @@ additional functionality has been added for strings, and string operations have 
 * ![change](change.png) [13.03.00] Update the
 [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate.md) command to fill the ends
 of the fill period even if non-missing values are outside of that period
+* ![change](change.png) [13.03.00] Update the [`For`](../command-ref/For/For.md) command `List` parameter to support using `${Property}`.
 * ![change](change.png) [13.03.00] Update the [`ManipulateTableString`](../command-ref/ManipulateTableString/ManipulateTableString.md) to
 handle conversion of floating point numbers (as strings) to integers and properly round.
 Also add `ToLowerCase`, `ToMixedCase`, and `ToUpperCase` conversions.
 * ![change](change.png) [13.03.00] Update the [`NewTable`](../command-ref/NewTable/NewTable.md) command to support arrays.
+* ![change](change.png) [13.03.00] Update the [`NewTimeSeries`](../command-ref/NewTimeSeries/NewTimeSeries.md) command `SetStart` and `SetEnd` parameters to support using `${Property}`.
 * ![change](change.png) [13.03.00] Update the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md)
 command to output the time series product file to reflect the full product definition.
 * ![change](change.png) [13.03.00] Update the [`ReadStateCU`](../command-ref/ReadStateCU/ReadStateCU.md)
@@ -75,7 +79,10 @@ to add statistics:  `Change`, `ChangeAbs`, `ChangeFraction`, `ChangeFractionAbs`
 * ![change](change.png) [13.03.00] Update the [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
 to have `ColumnNames` parameter to specify column names when they are not in the file
 * ![change](change.png) [13.03.00] Update the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command to allow modifiers after table names in `OrderBy`.
+* ![change](change.png) [13.03.00] Update the [`SetDataValue`](../command-ref/SetDataValue/SetDataValue.md) command `TSID` and `EnsembleID` parameters to support using `${Property}`.
 * ![change](change.png) [13.03.00] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command to allow math parameters to be specified as properties.
+* ![change](change.png) [13.03.00] Update the [`SetConstant`](../command-ref/SetConstant/SetConstant.md) command `SetStart` and `SetEnd` parameters to support using `${Property}`.
+* ![change](change.png) [13.03.00] Update the [`SetFromTS`](../command-ref/SetFromTS/SetFromTS.md) command `SetStart` and `SetEnd` parameters to support using `${Property}`.
 * ![change](change.png) [13.03.00] Update the [`SetTableValues`](../command-ref/SetTableValues/SetTableValues.md) command to
 add `Column` and `Value` parameters to set a single column value, useful for complex values such as arrays
 * ![change](change.png) [13.03.00] Update the [`StartLog`](../command-ref/StartLog/StartLog.md) command to have `MaxSize` parameter to limit log file size.
