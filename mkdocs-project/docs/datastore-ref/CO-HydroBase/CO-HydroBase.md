@@ -1,6 +1,7 @@
 # TSTool / Datastore Reference / Colorado HydroBase #
 
 * [Overview](#overview)
+	+ [Installing HydroBase](#installing-hydrobase)
 	+ [Database Contents](#database-contents)
 	+ [Database Connections](#database-connections)
 * [Standard Time Series Properties](#standard-time-series-properties)
@@ -26,6 +27,29 @@
 
 This appendix describes the HydroBase datastore,
 which is being phased in to replace the HydroBase “input type”.
+
+### Installing HydroBase ###
+
+HydroBase is distributed as a SQL Server Express database.
+See the following links for the database installer, archive of the databases,
+and other useful information.
+
+* **Need a link to the installer documentation so people can read before downloading**
+* [HydroBase Installer](https://dnrftp.state.co.us/DWR/Modeling/HydroBase/CDSSLocalHydroBase_Installer.zip), which includes:
+	+ SQL Server Express
+	+ HydroBase Database Manager (used to attach downloaded HydroBase databases to SQL Server database software) - the
+	program installs by default as
+	`C:\Program Files (x86)\Division of Water Resources\HydroBase Database Manager\HydroBaseMaintenanceUtility.exe`
+	and can be run to attach downloaded HydroBase databases to SQL Server Express
+	+ current CDSS version of TSTool
+	+ does not include HydroBase snapshot - see below to download snapshots
+* [HydroBase snapshots](https://dnrftp.state.co.us/DWR/Modeling/HydroBase/)
+	+ it is recommended download and save to ?
+	+ run the HydroBase Database Manager to attach the downloaded database
+	+ a recent snapshot should typically be used since it contains the most up to date data
+	+ older versions are useful for software testing
+	+ datastores can be defined to connect to multiple databases at the same time
+* See the TSTool [Troubleshooting](../../troubleshooting/troubleshooting.md) documentation if HydroBase issues occur.
 
 ### Database Contents ###
 

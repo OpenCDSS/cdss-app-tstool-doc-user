@@ -25,6 +25,7 @@ finding information on a troubleshooting topic.**
 * [Errors and Possible Solutions](#errors-and-possible-solutions)
 	+ [Issue 1 - Java Virtual Machine launcher error](#issue-1-java-virtual-machine-launcher-error)
 	+ [Issue 2 - Error connecting to State of Colorado’s HydroBase database on State computer](#issue-2-error-connecting-to-state-of-colorados-hydrobase-database-on-state-computer)
+	+ [Issue 2b - Error connecting to State of Colorado’s HydroBase database on local computer](#issue-2b-error-connecting-to-state-of-colorados-hydrobase-database-on-local-computer)
 	+ [Issue 3 - No HydroBase databases are listed in HydroBase selection dialog](#issue-3-no-hydrobase-databases-are-listed-in-hydrobase-selection-dialog)
 	+ [Issue 4 - Could not find the main class](#issue-4-could-not-find-the-main-class)
 	+ [Issue 5 - Unable to find files](#issue-5-unable-to-find-files)
@@ -434,7 +435,103 @@ and then upgrade HydroBase to a newer version of SQL Server.
 When this occurs, this error should no longer occur.
 
 **Additional Resources** – The following page provides information about
-Microsoft SQL Server database and driver compatibility:  [xxx](https://msdn.microsoft.com/en-us/data/ff928484).
+Microsoft SQL Server database and driver compatibility:  [Microsoft JDBC Driver for SQL Server support matrix](https://msdn.microsoft.com/en-us/data/ff928484).
+
+### Issue 2b - Error connecting to State of Colorado’s HydroBase database on local computer ###
+
+**Scope** – This issue has been seen when running TSTool connecting to the HydroBase
+database on a local Windows computer
+
+**Behavior** – If HydroBase databases are not listed in the HydroBase database selector, see Issue 3.
+Specifically for this issue, HydroBase databases are listed in the selector but upon selecting
+a database an error similar to the following is shown connecting to the database:
+
+**<p style="text-align: center;">
+![hydrobase-login-error](hydrobase-login-error.png)
+</p>**
+
+**<p style="text-align: center;">
+Example HydroBase Login Error
+</p>**
+
+**Troubleshooting 1** - Try logging into the SQL Server database using HydroBase CDSS service account
+credentials to confirm that login is possible.
+Create a text file (for example named `TestDatabase.udl`) with the following contents:
+
+```
+[oledb]
+; Everything after this line is an OLE DB initstring
+Provider=SQLOLEDB.1;Password=cdss%tools;Persist Security Info=True;User ID=cdss;Initial Catalog=HydroBase_CO_20200720;Data Source=localhost\CDSS
+```
+
+Double click on the file in Windows ***File Explorer***.
+A dialog will open as shown in the following figure.
+
+**<p style="text-align: center;">
+![hydrobase-login-test1](hydrobase-login-test1.png)
+</p>**
+
+Select a HydroBase database and then press ***Test Connection***.
+If a message `Test connection succeeded.` is shown,
+then the database software is accepting logins using the CDSS login.
+See the next paragraph for additional troubleshooting guidance.
+If an error is shown, then HydroBase may not be properly installed.
+See the [HydroBase Datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md) documentation for more information.
+
+**Troubleshooting 2** - It can be helpful to enable a
+[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md#datastore-configuration-file) to troubleshoot.
+To do so, edit the configuration file and ensure that `Enabled=True`, `DatabaseServer=localhost\CDSS`, and
+that `DatabaseName` has the correct HydroBase version, consistent with what was downloaded and
+configured with the HydroBase Database Manager.
+After configuring the datastore, restart TSTool and use the ***View / Datastores*** menu to
+list datastores.  Check for an error message for the HydroBase datastore.
+
+**Possible Cause** – TSTool communicates with the SQL Server database software over the network.
+The SQL Server configuration or network configuration may have been changed to prevent communication.
+The HydroBase installer should have configured SQL Server properly but sometimes other system
+updates may change the configuration.
+
+**Possible Solution 1** – Use the ***SQL Server Configuration Manager*** software to inspect the software configuration.
+See the [SQL Server Configuration Manager](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-configuration-manager?view=sql-server-ver15)
+documentation for instructions for running the software.
+The documentation lists the location of file to run,
+typically the latest installed on the computer if SQL Server is only installed for HydroBase.
+For example, for SQL Server 2012, use ***File Explorer*** to right-click on `C:\Windows\SysWOW64\SQLServerManager11.msc`
+and run as Administrator.
+
+Clicking on ***SQL Server Services*** lists services that are running as shown in the following image.
+The ***SQL Server (CDSS)*** and ***SQL Server Browser*** services
+need to be running and should be configured to automatically start.
+
+**<p style="text-align: center;">
+![hydrobase-login-sql-server-configuration-manager0.png](hydrobase-login-sql-server-configuration-manager0.png)
+</p>**
+
+**<p style="text-align: center;">
+***Check SQL Server Services*** (<a href="../hydrobase-login-sql-server-configuration-manager0.png">see also the full-size image</a>)
+</p>**
+
+Clicking on ***SQL Server Network Configuration*** displays network configuration settings
+as shown in the following image.
+Confirm that the ***Protocols for CDSS*** has ***TCP/IP*** enabled.
+If changes are made, restart TSTool and try selecting a HydroBase database and logging in.
+If errors still exist, check the TSTool ***View / Datastores*** list for errors, which may offer suggestions.
+
+**<p style="text-align: center;">
+![hydrobase-login-sql-server-configuration-manager1.png](hydrobase-login-sql-server-configuration-manager1.png)
+</p>**
+
+**<p style="text-align: center;">
+***Check SQL Server Network Configuration*** (<a href="../hydrobase-login-sql-server-configuration-manager1.png">see also the full-size image</a>)
+</p>**
+
+**Possible Solution 2** – Firewall software can prevent TSTool software network
+communication with the database.
+Try temporarily disabling the firewall software on the computer and restart TSTool.
+If this solves the problem, then check the firewall messages to see if
+information is available.  It may be necessary to change firewall rules to enable
+network traffic for TSTool.
+TSTool does attempt to communicate with web servers on the public internet.
 
 ### Issue 3 - No HydroBase databases are listed in HydroBase selection dialog ###
 
