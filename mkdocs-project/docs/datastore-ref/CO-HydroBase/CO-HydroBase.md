@@ -34,8 +34,9 @@ HydroBase is distributed as a SQL Server Express database.
 See the following links for the database installer, archive of the databases,
 and other useful information.
 
-* **Need a link to the installer documentation so people can read before downloading**
-* [HydroBase Installer](https://dnrftp.state.co.us/DWR/Modeling/HydroBase/CDSSLocalHydroBase_Installer.zip), which includes:
+* [OpenCDSS HydroBase Product](http://opencdss.state.co.us/opencdss/hydrobase/index.html) web page
+* [HydroBase Installation Instructions](https://opencdss.state.co.us/hydrobase/index.html)
+* [HydroBase Installer download link](https://dnrftp.state.co.us/DWR/Modeling/HydroBase/CDSSLocalHydroBase_Installer.zip), which includes:
 	+ SQL Server Express
 	+ HydroBase Database Manager (used to attach downloaded HydroBase databases to SQL Server database software) - the
 	program installs by default as
@@ -44,7 +45,6 @@ and other useful information.
 	+ current CDSS version of TSTool
 	+ does not include HydroBase snapshot - see below to download snapshots
 * [HydroBase snapshots](https://dnrftp.state.co.us/DWR/Modeling/HydroBase/)
-	+ it is recommended download and save to ?
 	+ run the HydroBase Database Manager to attach the downloaded database
 	+ a recent snapshot should typically be used since it contains the most up to date data
 	+ older versions are useful for software testing
