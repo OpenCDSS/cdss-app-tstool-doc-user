@@ -4,6 +4,7 @@
 	+ [Installing HydroBase](#installing-hydrobase)
 	+ [Database Contents](#database-contents)
 	+ [Database Connections](#database-connections)
+	+ [Versioning](#versioning)
 * [Standard Time Series Properties](#standard-time-series-properties)
 * [Limitations](#limitations)
 * [Datastore Configuration File](#datastore-configuration-file)
@@ -179,6 +180,19 @@ Refer to the recommended approach at the top of this section and details in the
 	In this case, the ODBC DSN must be configured using a SQL Server
 	driver with login HBGuest and password 1HBGuest.
 	See the example for the CDSS account in the [Datastore Configuration File](#datastore-configuration-file) section below.
+
+### Versioning ###
+
+The HydroBase version is indicated by the date in the distribution file and database instance name.
+For example, the HydroBase database instance name `HydroBase_CO_20210322` indicates that HydroBase has a release date `20210322`.
+Internally, the HydroBase design has a date that is different than the release date.
+However, for all practical purposes, using the release date also implies the database design date.
+
+TSTool examines the database structure to confirm the version and is able to handle multiple database versions.
+
+The [`#` Comment `@require datastore` syntax](../../command-ref/Comment/Comment.md)
+requires using a date string with format `YYYYMMDD` (e.g., `20210322`),
+which corresponds to the HydroBase instance (release) date.
 
 ## Standard Time Series Properties ##
 
