@@ -20,7 +20,8 @@ commands that support properties, using the `${Property}` notation.
 * a list of supplied values (see the `List` parameter)
 * a sequence of integers or decimal numbers specified with start (`SequenceStart` parameter),
 end (`SequenceEnd` parameter), and increment (`SequenceIncrement` parameter)
-* values from a table column (see `TbleID`, `TableColumn`, and `TablePropertyMap` parameters)
+* values from a table column (see `TableID`, `TableColumn`, and `TablePropertyMap` parameters)
+* a list of time series and corresponding properties (see `TSList`, `TSID`, and `EnsembleID` parameters)
 
 `For` commands can be nested.
 Status messages for run mode are accumulated in each command (this update is occurring over time –
@@ -62,6 +63,14 @@ The following dialog is used to edit the command and illustrates the command syn
 `For` Command Editor Illustrating Using a Table for Iteration Values (<a href="../For_Table.png">see also the full-size image</a>)
 </p>**
 
+The following dialog is used to edit the command and illustrates the command syntax when iterating over a list of time series.
+
+![For_TSList](For_TSList.png)
+
+**<p style="text-align: center;">
+`For` Command Editor Illustrating Using a List of Time Series (<a href="../For_TSList.png">see also the full-size image</a>)
+</p>**
+
 ## Command Syntax ##
 
 The command syntax is as follows.  One of the list, sequence, or table parameters must be specified.
@@ -73,17 +82,21 @@ For(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Iterator Method**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|**Iterator Method**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--|--------------|-----------------|----------------- |
-|All|`Name`<br>**required** | The name of the for loop, which will be matched with the name of an `EndFor` command to indicate the block of commands in the loop. | None - must be specified. |
-|All|`IteratorProperty` | The processor property that will be set to the iterator property. The object type will depend on that used to provide the iteration property list. For example, if a sequence of integers is being iterated, the property will contain an integer. | Same as `Name`.
-|List|`List` | A list of comma-separated values to be used as variables for the iteration. Can use `${Property}` syntax. | No default if list is used – must specify a list of values. |
-|Sequence|`SequenceStart` | Starting value when a sequence is specified for iteration, an integer or decimal number. | No default if sequence is used. |
-|Sequence|`SequenceEnd` | Ending value when a sequence is specified for iteration, an integer or decimal number. | No default if sequence is used. |
-|Sequence|`SequenceIncrement` | Increment for sequence iterator. | `1` or `1.0` depending on inferred type for `SequenceStart`. |
-|Table|`TableID` | The table identifier, when specifying the iterator as a column from a table.  Can be specified with processor `${Property}`. | No default if table is used - required if table is used. |
-|Table|`TableColumn` | The table column name, when specifying the iterator as a column from a table. | No default if table is used - required if table is used. |
-|Table|`TablePropertyMap` | Specify the names of column names and corresponding processor property names to set.  This allows other commands to access the values of those properties using `${Property}` notation.  Specify using format:<br>`ColumnName1:PropertyName1,`<br>`ColumnName2:PropertyName2` | No default if table is used - required if table is used.  Only the iterator column value will be set as a property using `IteratorProperty`.|
+|**All**|`Name`<br>**required** | The name of the for loop, which will be matched with the name of an `EndFor` command to indicate the block of commands in the loop. | None - must be specified. |
+|**All**|`IteratorProperty` | The processor property that will be set to the iterator property. The object type will depend on that used to provide the iteration property list. For example, if a sequence of integers is being iterated, the property will contain an integer. | Same as `Name`.
+|***List***|`List` | A list of comma-separated values to be used as variables for the iteration. Can use `${Property}` syntax. | No default if list is used – must specify a list of values. |
+|***Sequence***|`SequenceStart` | Starting value when a sequence is specified for iteration, an integer or decimal number. | No default if sequence is used. |
+|***Sequence***|`SequenceEnd` | Ending value when a sequence is specified for iteration, an integer or decimal number. | No default if sequence is used. |
+|***Sequence***|`SequenceIncrement` | Increment for sequence iterator. | `1` or `1.0` depending on inferred type for `SequenceStart`. |
+|***Table***|`TableID` | The table identifier, when specifying the iterator as a column from a table.  Can be specified with processor `${Property}`. | No default if table is used - required if table is used. |
+|***Table***|`TableColumn` | The table column name, when specifying the iterator as a column from a table. | No default if table is used - required if table is used. |
+|***Table***|`TablePropertyMap` | Specify the names of column names and corresponding processor property names to set.  This allows other commands to access the values of those properties using `${Property}` notation.  Specify using format:<br>`ColumnName1:PropertyName1,`<br>`ColumnName2:PropertyName2` | No default if table is used - required if table is used.  Only the iterator column value will be set as a property using `IteratorProperty`.|
+| ***TS List*** | `TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | If iterating time series, must be specified. |
+| ***TS List*** | `TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
+| ***TS List*** | `EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
+| ***TS List*** | `TimeSeriesPropertyMap`| Map of time series property names to processor processor property names, which allows time series properties to be made visible for processing.| No additional time series properties other than iterator property are set as processor properties. |
 
 ## Examples ##
 

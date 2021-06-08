@@ -13,6 +13,9 @@
 properties are recognized whether or not `[TSTool]` is at the top of the file.
 * ![bug](bug.png) [13.03.00] Change the [`RunProgram`](../command-ref/CompareFiles/CompareFiles.md) command
 ***Visual Diff*** feature to work when files use property in the name.
+* ![bug](bug.png) [13.03.00] Fix the
+[`ReadNrcsAwdb`](../command-ref/ReadNrcsAwdb/ReadNrcsAwdb.md) command to read `heightOfDepthValue` from web services
+(previously had a typo in the property)
 * ![bug](bug.png) [13.03.00] Update the
 [`ReadStateCU`](../command-ref/ReadStateCU/ReadStateCU.md) and
 [`ReadStateMod`](../command-ref/ReadStateMod/ReadStateMod.md)
@@ -26,6 +29,9 @@ time series in discovery mode if an alias is specified, for use in other command
 [`WriteStateCU`](../command-ref/WriteStateCU/WriteStateCU.md) and
 [`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod.md)
 commands to enable `TSID` to handle `${Property}`, as was previously documented.
+* ![bug](bug.png) [13.00.00] Fix the
+[`WriteTimeSeriesToGeoJSON`](../command-ref/WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON.md) command
+to output the correct bounding box features for each point (previously was using entire layer).
 * ![change](change.png) [13.03.00] All command editors have been updated to implement ***...***, ***Abs***, and ***Rel***
 buttons to select files and folders and switch between absolute and relative paths,
 with default being to use relative path.
@@ -41,6 +47,8 @@ accept property notation in the `ColumnFilters` parameter.
 * ![change](change.png) [13.03.00] Update the [`ChangePeriod`](../command-ref/ChangePeriod/ChangePeriod.md) command `NewStart` and `NewEnd` parameters to support using `${Property}`.
 * ![change](change.png) [13.03.00] Update the [`CloseDataStore`](../command-ref/CloseDataStore/CloseDataStore.md) command to
 have `IfNotFound` parameter to control error handling
+* ![change](change.png) [13.03.00] Update the [`Comment`](../command-ref/Comment/Comment.md) command to support `@require` notation
+to check the software and datastore version
 * ![change](change.png) [13.03.00] Update the [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command to
 check the full length of each file when computing the number of different lines.
 * ![change](change.png) [13.03.00] Update the [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md)
@@ -60,7 +68,9 @@ additional functionality has been added for strings, and string operations have 
 * ![change](change.png) [13.03.00] Update the
 [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate.md) command to fill the ends
 of the fill period even if non-missing values are outside of that period
-* ![change](change.png) [13.03.00] Update the [`For`](../command-ref/For/For.md) command `List` parameter to support using `${Property}`.
+* ![change](change.png) [13.03.00] Update the [`For`](../command-ref/For/For.md) command:
+	+ `List` parameter support using `${Property}`.
+	+ Add ability to iterate over a list of time series.
 * ![change](change.png) [13.03.00] Update the [`ManipulateTableString`](../command-ref/ManipulateTableString/ManipulateTableString.md) to
 handle conversion of floating point numbers (as strings) to integers and properly round.
 Also add `ToLowerCase`, `ToMixedCase`, and `ToUpperCase` conversions.

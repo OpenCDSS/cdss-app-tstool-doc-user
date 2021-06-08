@@ -14,21 +14,25 @@ This chapter discusses how TSTool software is quality controlled and how to use 
 
 ## Using TSTool to Quality Control Data ##
 
-TSTool can be used to perform quality control on time series data.  Two primary commands are:
+TSTool can be used to quality control time series and other data.
+The primary commands for checking data are:
 
-1. [`CheckTimeSeries`](../command-ref/CheckTimeSeries/CheckTimeSeries.md) – this command checks individual
-time series values for out of range, missing, greater than, etc.
-Values that are detected can be flagged with a string and optionally can be set to missing.
-The HTML summary (see [`WriteSummary`](../command-ref/WriteSummary/WriteSummary.md) command)
-will indicate flagged values and graph products can label data points with flags.
-Flags can be written to data management systems if flags are supported.
-2. [`CheckTimeSeriesStatistic`](../command-ref/CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) – this
-command calculates a statistic (e.g., count of data values greater than a criteria)
-and then checks the statistic against a criteria (e.g., is count greater than a criteria).
+**<p style="text-align: center;">
+TSTool Commands to Check Data
+</p>**
 
-The above commands can be used to check for out of range and other unusual data conditions.
+| **Data Object** | **Command**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
+| -- | -- | -- |
+| File | [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) | Compare files for equivalence. For example, write time series to DateValue files and then compare the resulting text files. Tables can be written to comma-separated-value (CSV) files. Spatial data can be written to GeoJSON files.  Property lists can be written to property files. File comparisons depend on the format, which is impacted by precision of numbers, date formatting, etc. |
+| Property | [`If`](../command-ref/If/If.md) | Compare properties for equivalence. For example, some commands set processor properties based on processing. |
+| Table | [`CompareTables`](../command-ref/CompareTables/CompareTables.md) | Compare tables for equivalence. |
+| Time Series | [`CheckTimeSeries`](../command-ref/CheckTimeSeries/CheckTimeSeries.md) | Check individual time series values for out of range, missing, greater than, etc.  Values that are detected can be flagged with a string and optionally can be set to missing.  The HTML summary (see [`WriteSummary`](../command-ref/WriteSummary/WriteSummary.md) command) will indicate flagged values and graph products can label data points with flags.  Flags can be written to data management systems if flags are supported. |
+| Time Series | [`CheckTimeSeriesStatistic`](../command-ref/CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) | Calculates a statistic (e.g., count of data values greater than a criteria) and then checks the statistic against a criteria (e.g., is count greater than a criteria). |
+| Time Series | [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md) | Compare time series for equivalence. |
+
+The above commands can be used to check time series for out of range and other unusual data conditions.
 If values are replaced with missing, the missing values can be filled using the fill commands.
-Additional quality control can be performed by using a combination of other commands.
+Additional quality control of time series can be performed by using a combination of other commands.
  For example, the [`NewStatisticYearTS`](../command-ref/NewStatisticYearTS/NewStatisticYearTS.md)
 command computes an annual statistic time series, which can then be checked using one of the above commands.
 The [`Cumulate`](../command-ref/Cumulate/Cumulate.md) command also is useful for visualizing trends.
@@ -331,16 +335,17 @@ The previous two sections described how to define individual test cases and how 
 automatically create and run a test suite comprised of test cases.
 However, there are special conditions that will cause the normal testing procedures to fail, in particular:
 
+* tests depend on a specific software version
 * tests depend on a database that is not available
-* tests depend on a database version that is not available (data in the “default” database have changed)
+* tests depend on a database version that is not available (data in the default or most recent database have changed)
 * tests can only be run on a certain operating system
 * tests depend on a specific environment configuration that is not easily reproduced for all users
 
 Any of these conditions can cause a test case to fail,
-leading to inappropriate errors and wasted time tracking down problems that do not exist.
-To address this issue, TSTool recognizes special comments that can be included in test case command files.
-The following table lists tags that can be placed in [`#`](../command-ref/Comment/Comment.md) comments in command files to
-provide information for to the
+leading to inappropriate errors and wasted time tracking down problems that do not exist or need to be solved.
+To address this issue, TSTool recognizes special comment annotations that can be included in test case command files.
+See the [`#` Comment command](../command-ref/Comment/Comment.md) documentation for detials.
+For example, the `#@expectedStatus` annotation provides information for to the
 [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md)
 command and command processor.  The syntax of the special comments is illustrated by the following example:
 
@@ -349,15 +354,18 @@ command and command processor.  The syntax of the special comments is illustrate
 ```
 
 **<p style="text-align: center;">
-Special # comment Tags
+Examples of `#` Comment Annotation Tags used in Testing
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|
+|**Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|
 |-------------|---------------|
-|`@expectedStatus Failure`<br>`@expectedStatus Warning`|The [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command `ExpectedStatus` parameter is by default Success.  However, a different status can be specified if it is expected that a command file will result in `Warning` or `Failure` and still be a successful test.  For example, if a command is obsolete and should generate a failure, the expected status can be specified as `Failure` and the test will pass.  Another example is to test that the software properly treats a missing file as a failure.|
-|`@os Windows`<br>`@os UNIX`|Using this tag indicates that the test is designed to work only on the specified platform and will be included in the test suite by the [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command only if the `IncludeOS` parameter includes the corresponding operating system (OS) type.  This is primarily used to test specific features of the OS and similar but separate test cases should be implemented for both OS types.  If the OS type is not specified as a tag in a command file, the test is always included.|
-|`@readOnly`|Use this tag to indicate that a command file is read-only.  This is useful when legacy command files are being tested because TSTool will automatically update old syntax to new.  Consequently, saving the command file will overwrite the legacy syntax and void the test.  If this tag is included, the TSTool interface will warn the user that the file is read-only and will only save if the user indicates to do so.|
-|`@testSuite ABC`|Indicate that the command file should be considered part of the specified test suite, as specified with the IncludeTestSuite parameter of the [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command.  Do not specify a test suite tag for general tests.  This tag is useful if a group of tests require special setup, for example connecting to a database.  The suite names should be decided upon by the test developer.|
+|`#enabled False` | Indicate that a test should be disabled.  This is useful when a new test is not yet ready to be included in tests or an old test is obsolete and needs to be updated with new syntax. |
+|`@expectedStatus Failure`<br>`@expectedStatus Warning`|The [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command `ExpectedStatus` parameter is by default `Success`.  However, a different status can be specified if it is expected that a command file will result in `Warning` or `Failure` and still be a successful test.  For example, if a command is obsolete and should generate a failure, the expected status can be specified as `Failure` and the test will pass only if the command fails.  Another example is to test that the software properly treats a missing file as a failure.|
+|`@os Windows`<br>`@os UNIX`|Using this tag indicates that the test is designed to work only on the specified operating system (OS) and will be included in the test suite by the [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command only if the `IncludeOS` parameter includes the corresponding OS.  This is primarily used to test specific features of the OS and similar but separate test cases should be implemented for e3ach OS.  If the OS type is not specified as a tag in a command file, the test is always included.|
+|`@readOnly`|Use this tag to indicate that a command file is read-only.  This is useful when legacy command files are being tested because the TSTool user interface will automatically update old command syntax to new.  Consequently, saving the command file will overwrite the legacy syntax and modify the original test.  If this tag is included, the TSTool interface will warn the user that the file is read-only and will only save if the user indicates to do so.|
+|`@require application TSTool >= 13.03.00` | Indicate that a specific version of TSTool is required to run the command file. TSTool is usually backward compatible; however, a specific version or later will be needed to run new commands, corresponding to release notes. |
+|`@require datastore HydroBase >= 20210321` | Indicate that a specific datastore version (in this case for datastore named `HydroBase`) is required to run the command file. Additional test control such as using test suites and using datastore names with version may be necessary to control which database is used for tests. |
+|`@testSuite ABC`|Indicate that the command file should be considered part of the specified test suite, as specified with the `IncludeTestSuite` parameter of the [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command.  Do not specify a test suite tag for general tests.  This tag is useful if a group of tests require special setup, for example a specifid database.  The suite names should be decided upon by the test developer.|
 
 Using the above special comment tags, it is possible to create test suites that are appropriate for specific environments.
 For example, using `@testSuite` HydroBase indicates that a test case should be included in the
