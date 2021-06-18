@@ -47,8 +47,11 @@ accept property notation in the `ColumnFilters` parameter.
 * ![change](change.png) [13.03.00] Update the [`ChangePeriod`](../command-ref/ChangePeriod/ChangePeriod.md) command `NewStart` and `NewEnd` parameters to support using `${Property}`.
 * ![change](change.png) [13.03.00] Update the [`CloseDataStore`](../command-ref/CloseDataStore/CloseDataStore.md) command to
 have `IfNotFound` parameter to control error handling
-* ![change](change.png) [13.03.00] Update the [`Comment`](../command-ref/Comment/Comment.md) command to support `@require` notation
-to check the software and datastore version
+* ![change](change.png) [13.03.00] Update the [`# Comment`](../command-ref/Comment/Comment.md) command to support:
+	+ `@fixme` - to indicate an item to fix
+	+ `@order` - to control order of command files for automated testing
+	+ `@require` - to check the software and datastore version
+	+ `@todo` - to indicate an item to do
 * ![change](change.png) [13.03.00] Update the [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command to
 check the full length of each file when computing the number of different lines.
 * ![change](change.png) [13.03.00] Update the [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md)
