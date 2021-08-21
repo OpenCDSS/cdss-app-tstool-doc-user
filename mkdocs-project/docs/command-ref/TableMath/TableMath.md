@@ -12,18 +12,24 @@
 ## Overview ##
 
 The `TableMath` command performs a simple math operation on columns in a table.
-Although the design of the command could support more advanced cell range addressing schemes,
-it currently processes complete columns of data.
-For example, a table that is populated by the [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md)
-command can be manipulated to produce a new column of data.
 This command and related table commands are not an attempt to replace full-feature spreadsheet
 programs but are intended to help automate common data processing tasks.
+Additional table processing commands are available to manipulate table data that can be input
+to this command or further process this command's output.
+It is often helpful to perform operations that create new table columns in order
+to understand data processing workflow.
 
-The input is specified by a table column name (`Input1`) and either a second input
-column name or a constant value (`Input2`), with the result being placed in the output column (`Output`).
-The `ToInteger` operator requires only one input value.
+The input is specified by a table column name (`Input1`) and one of the following (`Input2`),
+depending on the operator:
+
+* no second input, for example for `ToInteger` operation
+* second input column, for example to add values of each column
+* constant input value, for example to add a constant to all values in a column
+
+The second input value (`Input2`) can be a column name or a constant value,
+with the result being placed in the output column (`Output`).
 Output that cannot be computed is set to the `NonValue` value.
-Inputs can be any combination of double precision and integer values.
+Inputs can generally be any combination of double precision and integer values.
 
 ## Command Editor ##
 
@@ -51,12 +57,29 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`TableID`|The identifier for the table to process, can be specified with `${Property}`.|None – must be specified.|
-|`Input1`|First input column name, can be specified with `${Property}`.|None – must be specified.|
-|`Operator`|The operator to be applied as follows:<br>`Input1 Operator Input2 = Output`<br>For example: `Input1 * Input2 = Output`|None – must be specified.|
+|`TableID`<br>**required**|The identifier for the table to process, can be specified with `${Property}`.|None – must be specified.|
+|`Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information in the [Tables appendix](../../appendix-tables/tables.md#condition-evaluation-for-rows).|Condition or row number must be specified.|
+|`DeleteRowNumbers`|The row number(s) to process as comma-separated list of row numbers, currently limited to:</li><li>`first` - process the first row in the table</li><li>`last` - process the last row in the table</li></ul><br> Can use `${Property}`.| Process all rows.|
+|`Input1`<br>**required**|First input column name, can be specified with `${Property}`.|None – must be specified.|
+|`Operator`<br>**required**|The operator to be applied as follows:<br>`Input1 Operator Input2 = Output`<br>For example: `Input1 * Input2 = Output`|None – must be specified.|
 |`Input2`|Second input column name, or a constant value to use as input, can be specified with `${Property}`.|Required for some operators.  Not required for `ToInteger`.|
-|`Output`|Output column name.  If the column is not found it will be added to the table and will contain the results of processing, can be specified with `${Property}`.|None – must be specified.|
+|`Output`<br>**required**|Output column name.  If the column is not found it will be added to the table using the same data type as the input column and will contain the results of processing, can be specified with `${Property}`.  The output column name can be the same as input to overwrite input. |None – must be specified.|
 |`NonValue`|The value to use in cases where an output result could not be computed (missing input, division by zero).  Null will result in blanks in output whereas NaN may be shown in some output products, depending on the specifications for the format.|Null|
+
+**<p style="text-align: center;">
+Supported Operators and Input
+</p>**
+
+| **Operator** | **`Input1`** | **`Input2`** | **Output Description** |
+| --------------|-----------------|----------------- | -- |
+| `=` | Table column name. | | Assign a value from the input column to the output column. |
+| `+` | Table column name. | Table column name or a constant value. | Add the input values and set in the output column. |
+| `-` | Table column name. | Table column name or a constant value. | Subtract the second input from the first and set in the output column. |
+| `*` | Table column name. | Table column name or a constant value. | Multiply the input values and set in the output column. |
+| `/` | Table column name. | Table column name or a constant value. | Divide the first input value by the second and set in the output column. |
+| `Cumulate` | Table column name. | | Cumulate the input values into the output column. The initial value (prior to the first row) is zero and therefore the first cumulative value will be the first row's input value.  Missing values in the input will result in no cumulative value being computed and the cumulation will begin at the next non-missing value. If necessary, use other commands such as `TableMath` `=` operator to assign a different initial value. |
+| `Delta` | Table column name. | | Compute a difference (delta) by subtracting the input column's previous row value from the current row value. The initial value is is zero and therefore the first cumulative value will be the first row's input value.  Missing values in the input will result in no delta value being computed. If necessary, use other commands such as `TableMath` `=` operator to assign a different initial value. |
+| `ToInteger` | Table column name. | | Convert the input to an integer and set in the output column. |
 
 ## Examples ##
 

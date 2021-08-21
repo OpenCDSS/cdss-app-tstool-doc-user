@@ -742,7 +742,7 @@ If this cannot be resolved, contact TSTool support.
 
 ## Issue 11 - TSTool text (fonts) are small ##
 
-**Scope** – Any computer and in particular when using a high resolution monitor
+**Scope** – Any Windows computer and in particular when using a high resolution monitor
 
 **Behavior** – text is difficult to read because fonts are small
 
@@ -773,6 +773,10 @@ Repeat the following For the `java.exe` and `javaw.exe` programs.
 5. Change the ***Override high DPI scaling behavior.  Scaling performed by:  System***.
 The initial choice was probably ***Application***.
 6. Restart TSTool.  If successful, text should use a size that is typical for Windows applications.
+
+The above fix can also be implemented in the software development environment,
+but in this case the properties for the `javaw.exe` used by Eclipse must be changed,
+for example the software in `C:\Program Files\Java` or `C:\Program Files (x86)\Java`.
 
 ## Issue 12 - Datastore is (not) available ##
 

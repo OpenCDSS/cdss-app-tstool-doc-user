@@ -33,7 +33,8 @@ One solution, for example to create test data in Excel,
 is to copy cells with “paste special” and then paste the values.
 It is expected that updates to POI will continue to add more formula support.
 
-Table columns must contain consistent data types (all strings, all numeric, etc.).
+Table columns must contain consistent data types (all strings, all numeric, etc.),
+which is consistent with typical TSTool command behavior.
 The following table describes how column types are determined
 and data values are transferred to the table.
 Column type determination uses the first data row in the specified address range.
@@ -41,7 +42,10 @@ If a column is determined to be a type and then cell values in the column are di
 conversions are made to maintain the intent of the values if possible.
 For example, a Boolean value stored in a cell will get converted to 1.0
 if the table column has been determined to be for double precision numbers.
-Errors in processing cells may result in empty cell values in the output table.
+**Excel stores integers, floating point numbers, and date/times in numerical cells
+and therefore it may be necessary to provide command parameters to help the
+`ReadTableFromExcel` command to set the appropriate data type for output.**
+Errors in processing cells may result in null data values and empty cell values in the output table.
 
 **<p style="text-align: center;">
 Excel Data Table Conversion to Table
@@ -49,7 +53,7 @@ Excel Data Table Conversion to Table
 
 |**Excel Cell Format ("Number Category")**|**Conversion from Excel to TSTool Table**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|
-|Number:<br><ul><li>General</li><li>Number</li><li>Currency</li><li>Accounting</li><li>Percentage</li><li>Fraction</li><li>Scientific</li><li>Special</li><li>Custom</li><ul>|<ul><li>If Excel cell is internally a “numeric”, convert to a double-precision number, where the format “Decimal places” is used in the TSTool table for formatting.  The number of decimal places in Excel is fixed for some of the number categories shown on the left (e.g., Special=Zip Code). Excel internally stores integers as numbers with zero decimals.  **Need to figure out how to get the Excel cell formatting number of decimals to similarly set in the output table – but DO NOT assume zero decimals should convert to an integer.**</li><li>See the `ExcelIntegerColumns` parameter, which specifies the output table to use integers.</li><li>If Excel cell is internally a “Boolean”, convert to an integer having values 0 or 1.  **Need to evaluate having a parameter `ExcelBooleanColumns` to transfer to a Boolean column in the output table.  Excel seems to handle Booleans as text with values True or False.**</li></ul>|
+|Number:<br><ul><li>General</li><li>Number</li><li>Currency</li><li>Accounting</li><li>Percentage</li><li>Fraction</li><li>Scientific</li><li>Special</li><li>Custom</li><ul>|<ul><li>If Excel cell is internally a “numeric”, convert to a double-precision number, where the format “Decimal places” is used in the TSTool table for formatting.  The number of decimal places in Excel is fixed for some of the number categories shown on the left (e.g., Special=Zip Code). Excel internally stores integers as numbers with zero decimals.  **A future enhancement is to figure out how to get the Excel cell formatting number of decimals to similarly set in the output table – but DO NOT assume zero decimals should convert to an integer.**</li><li>See the `ExcelIntegerColumns` parameter, which specifies the output table to use integers.</li><li>If Excel cell is internally a “Boolean”, convert to an integer having values 0 or 1.  **A future enhancement is to evaluate having a parameter `ExcelBooleanColumns` to transfer to a Boolean column in the output table.  Excel seems to handle Booleans as text with values True or False.**</li></ul>|
 |Date:|<ul><li>Date</li><li>Time</li></ul>|TSTool will convert Number-formatted columns to date/time values when the `ExcelDateTimeColumns` parameter indicates which columns are date/times.|
 |Text|Converts to a string.|
 |Blank|<ul><li>Treated as Text (may in the future scan down the column to determine data type from first non-blank cell).</li><li>Blank cells found once the column type is determined are set to empty strings in text columns, and null in number and date columns.</li><ul>|

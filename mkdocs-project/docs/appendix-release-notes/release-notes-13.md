@@ -1,5 +1,6 @@
 # TSTool / Release Notes / Version 13 #
 
+* [Changes in Version 13.04.00](#changes-in-version-130400)
 * [Changes in Version 13.03.00](#changes-in-version-130300)
 * [Changes in Version 13.02.00](#changes-in-version-130200)
 * [Changes in Version 13.00.00 - 13.01.00](#changes-in-version-130000-130100)
@@ -7,12 +8,28 @@
 
 ----------
 
+## Changes in Versions 13.04.00 ##
+
+* ![bug](bug.png) [13.04.00] Fix the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command
+where operators with equal sign were not being handled properly in command editing.
+* ![bug](bug.png) [13.04.00] Fix the [`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md) command
+to handle date/time formula cell.
+* ![change](change.png) [13.04.00] Update the [`TableMath`](../command-ref/TableMath/TableMath.md) command:
+	+ add `=`, `Cumulate`, and `Delta` operators
+	+ improve logic for handling data types and provide better feedback when input prevents calculations
+* ![change](change.png) [13.04.00] Update the [`ReadStateCUB`](../command-ref/ReadStateCUB/ReadStateCUB.md) command
+to allow `${Property}` notation for input file, `TSID`, and period
+* ![new](new.png) [13.04.00] Add an appendix to the documentation that contains table concepts and
+provides documentation that is shared by multiple commands.
+This documentation will be expanded over time.
+
 ## Changes in Versions 13.03.00 ##
 
 * ![bug](bug.png) [13.03.00] Change so that user's `.tstool/NN/system/TSTool.cfg` file
 properties are recognized whether or not `[TSTool]` is at the top of the file.
-* ![bug](bug.png) [13.03.00] Change the [`RunProgram`](../command-ref/CompareFiles/CompareFiles.md) command
-***Visual Diff*** feature to work when files use property in the name.
+* ![bug](bug.png) [13.03.00] Fix the
+[`CheckTimeSeriesStatistic`](../command-ref/CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) command
+to fix typos in parameters that resulted in invalid command
 * ![bug](bug.png) [13.03.00] Fix the
 [`ReadNrcsAwdb`](../command-ref/ReadNrcsAwdb/ReadNrcsAwdb.md) command to read `heightOfDepthValue` from web services
 (previously had a typo in the property)
@@ -32,6 +49,8 @@ commands to enable `TSID` to handle `${Property}`, as was previously documented.
 * ![bug](bug.png) [13.00.00] Fix the
 [`WriteTimeSeriesToGeoJSON`](../command-ref/WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON.md) command
 to output the correct bounding box features for each point (previously was using entire layer).
+* ![change](change.png) [13.03.00] Update the `tstool` script used for Linux to
+parse command line options, for example to run in headless mode on Linux.
 * ![change](change.png) [13.03.00] All command editors have been updated to implement ***...***, ***Abs***, and ***Rel***
 buttons to select files and folders and switch between absolute and relative paths,
 with default being to use relative path.
@@ -52,8 +71,10 @@ have `IfNotFound` parameter to control error handling
 	+ `@order` - to control order of command files for automated testing
 	+ `@require` - to check the software and datastore version
 	+ `@todo` - to indicate an item to do
-* ![change](change.png) [13.03.00] Update the [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command to
-check the full length of each file when computing the number of different lines.
+* ![change](change.png) [13.03.00] Change the [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command:
+	+ update ***Visual Diff*** feature to work when files use ${Property} in the name
+	+ add ability to compare file properties such as size and modification time
+	+ check the full length of each file when computing the number of different lines
 * ![change](change.png) [13.03.00] Update the [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md)
 command to better support comparing irregular time series,
 add `CompareFlags` to control whether data flags are also compared.
@@ -64,8 +85,9 @@ command to have `TransferDataHow` to control how input time series are transferr
 [`CreateDataStoreDataDictionary`](../command-ref/CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md)
 to handle optional metadata for database software that do not provide metadata
 * ![change](change.png) [13.03.00] Update the
-[`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md)
-command to support multiple patterns to match files.
+[`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command
+	+ support multiple patterns to match files
+	+ add `TestResultFile` parameter to set the output file in the created command file
 * ![change](change.png) [13.03.00] Update the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command to allow `*` to delete all rows,
 additional functionality has been added for strings, and string operations have been made case-dependent.
 * ![change](change.png) [13.03.00] Update the
@@ -92,8 +114,14 @@ to add statistics:  `Change`, `ChangeAbs`, `ChangeFraction`, `ChangeFractionAbs`
 * ![change](change.png) [13.03.00] Update the [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
 to have `ColumnNames` parameter to specify column names when they are not in the file
 * ![change](change.png) [13.03.00] Update the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command to allow modifiers after table names in `OrderBy`.
+* ![change](change.png) [13.03.00] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
+	+ status messages for the command file that is run are more clearly displayed in the command status,
+	which increases efficiency debugging issues
 * ![change](change.png) [13.03.00] Update the [`SetDataValue`](../command-ref/SetDataValue/SetDataValue.md) command `TSID` and `EnsembleID` parameters to support using `${Property}`.
-* ![change](change.png) [13.03.00] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command to allow math parameters to be specified as properties.
+* ![change](change.png) [13.03.00] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
+	+ allow a property to be set as a simple math operation
+	+ allow setting a property from an environment variable
+	+ allow setting a property from a Java system property
 * ![change](change.png) [13.03.00] Update the [`SetConstant`](../command-ref/SetConstant/SetConstant.md) command `SetStart` and `SetEnd` parameters to support using `${Property}`.
 * ![change](change.png) [13.03.00] Update the [`SetFromTS`](../command-ref/SetFromTS/SetFromTS.md) command `SetStart` and `SetEnd` parameters to support using `${Property}`.
 * ![change](change.png) [13.03.00] Update the [`SetTableValues`](../command-ref/SetTableValues/SetTableValues.md) command to
@@ -101,17 +129,32 @@ add `Column` and `Value` parameters to set a single column value, useful for com
 * ![change](change.png) [13.03.00] Update the [`StartLog`](../command-ref/StartLog/StartLog.md) command to have `MaxSize` parameter to limit log file size.
 * ![change](change.png) [13.03.00] Update the [`TableMath`](../command-ref/TableMath/TableMath.md) command input and output parameters to support properties.
 * ![change](change.png) [13.03.00] Update the [`Wait`](../command-ref/Wait/Wait.md) command to allow parameters to be specified as properties.
+* ![change](change.png) [13.03.00] Update the [`WebGet`](../command-ref/WebGet/WebGet.md) command:
+	+ add the `EncodeURI` parameter to implement URL percent-encoding
+	+ add the `ConnectTimeout` and `ReadTimeout` parameters to control timeouts
+	+ add the `RetryMax` and `RetryWait` parameters to control retry attempts
+	+ add the `IfHttpError` parameter to control HTTP status
 * ![change](change.png) [13.03.00] Update the [`WriteDelimitedFile`](../command-ref/WriteDelimitedFile/WriteDelimitedFile.md)
 command to have `HeaderComments` parameter to provide comments
 * ![change](change.png) [13.03.00] Update the [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md)
 command parameters to provide more flexibility in controlling the file format and support array columns.
 Also enhance performance of the command.
 * ![change](change.png) [13.03.00] Update the PostgreSQL JDBC driver to version 42.2.9.
+* ![new](new.png) [13.03.00] If an output file created by TSTool that is listed in the ***Results*** area
+has `tstool` file extension, allow the file to be opened in the command list.
+* ![new](new.png) [13.03.00] Add new command line options:
+	+ `Property==Value` can be used to set processor property to use for each command file run
+	+ `--datastore-substitute=oldname,newname` can be used to substitute a datastore name for another,
+	which allows command files without changing datastore names,
+	such as in automated testing
 * ![new](new.png) [13.03.00] Add the [`Break`](../command-ref/Break/Break.md) command to break out of 
 [`For`](../command-ref/For/For.md) loop block
-* ![new](change.png) [13.03.00] Add the [`ChangeIntervalIrregularToRegular`](../command-ref/ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md) command
+* ![new](change.png) [13.03.00] Add the **experimental**
+[`ChangeIntervalIrregularToRegular`](../command-ref/ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md) command
 to change interval of irregular interval time series to regular interval, simpler than the
 [`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval.md) command
+* ![new](new.png) [13.03.00] Add the [`CheckFile`](../command-ref/CheckFile/CheckFile.md) command to
+check file content and properties
 * ![new](new.png) [13.03.00] Add the [`Continue`](../command-ref/Continue/Continue.md) command to jump to end of 
 [`For`](../command-ref/For/For.md) loop block
 * ![new](new.png) [13.03.00] Add the [`CreateFolder`](../command-ref/CreateFolder/CreateFolder.md) command to create a folder
