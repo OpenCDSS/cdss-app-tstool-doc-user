@@ -85,7 +85,7 @@ Command Parameters
 | `DistributionParameters`<br>**[DEV]** | Additional parameters needed to specify a distribution.  See the **Distribution Summary** table below. |
 | `ProbabilityUnits`<br>**[DEV]** | Units to use for calculated probability statistics:<ul><li>`Fraction`</li><li>`Percent` or `%`</li></ul> | `Fraction` (0 – 1). |
 | `Statistic` | The statistic to compute.  See the Available Statistics table below. | None – must be specified. |
-| `Value1`<br>**[DEV]** | Input data required by the statistic.  Currently the dialog does not check the value for correctness – it is checked when the statistic is computed. | See **Statistic Details** table below. |
+| `Value1`<br>**[DEV]** | Input data required by the statistic.  Currently the command editor does not check the value for correctness – it is checked when the statistic is computed. | See **Statistic Details** table below. |
 | `AllowMissingCount` | The number of missing values allowed in the sample of values in order to produce a result.  This capability should be used with care because it may result in data that are not representative of actual conditions. | Missing values are ignored in the sample used to compute the statistic. |
 | `MinimumSample Size` | The minimum number of values in the sample that are required to compute the statistic. | Use the sample with no restrictions, although some statistics may have requirements. |
 | `AnalysisStart` | The date/time for the analysis start, using a precision that matches the original time series.  Can be specified using `${Property}` notation. | Analyze the full period. |

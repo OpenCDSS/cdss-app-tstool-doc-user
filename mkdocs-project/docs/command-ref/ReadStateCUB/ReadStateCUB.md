@@ -45,10 +45,10 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`InputFile`<br>**required**|The name of the StateCU binary time series file to read.  The path to the file can be absolute or relative to the working directory.|None – must be specified.|
-|`TSID`|Time series identifier pattern to filter the read.|Read all time series.|
-|`InputStart`|The starting date/time to read data, specified to Month precision.|Read all data.|
-|`InputEnd`|The ending date/time to read data, specified to Month precision.|Read all data.|
+|`InputFile`<br>**required**|The name of the StateCU binary time series file to read.  The path to the file can be absolute or relative to the working directory.  Can use `${Property}` notation. |None – must be specified.|
+|`TSID`|Time series identifier pattern to filter the read.  Can use `${Property}` notation. |Read all time series. |
+|`InputStart`|The starting date/time to read data, specified to Month precision.  Can use `${Property}` notation. |Read all data.|
+|`InputEnd`|The ending date/time to read data, specified to Month precision.  Can use `${Property}` notation. |Read all data.|
 
 ## Examples ##
 

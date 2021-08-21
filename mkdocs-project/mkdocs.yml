@@ -41,6 +41,7 @@ nav:
   - ChangeIntervalIrregularToRegular: command-ref/ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md
   - ChangePeriod: command-ref/ChangePeriod/ChangePeriod.md
   - ChangeTimeZone: command-ref/ChangeTimeZone/ChangeTimeZone.md
+  - CheckFile: command-ref/CheckFile/CheckFile.md
   - CheckTimeSeries: command-ref/CheckTimeSeries/CheckTimeSeries.md
   - CheckTimeSeriesStatistic: command-ref/CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md
   - CloseDataStore: command-ref/CloseDataStore/CloseDataStore.md
@@ -326,6 +327,7 @@ nav:
   - Version 7: appendix-release-notes/release-notes-07.md
   - Version 6: appendix-release-notes/release-notes-06.md
 - 'Appendix - Running TSTool in Various Modes': appendix-running/running.md
+- 'Appendix - Tables': appendix-tables/tables.md
 - 'Appendix - TSView Time Series Viewing Tools': appendix-tsview/tsview.md
 - 'Appendix - GeoView Mapping Tools': appendix-geoview/geoview.md
 # ------- configuration properties ---------------

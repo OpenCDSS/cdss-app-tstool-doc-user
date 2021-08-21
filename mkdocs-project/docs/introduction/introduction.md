@@ -67,6 +67,8 @@ Chapter 1 – Introduction (this chapter) provides background information on tim
 
 [Appendix - Running TSTool in Various Modes](../appendix-running/running.md) summarizes how to run TSTool in various modes
 
+[Appendix - Tables](../appendix-tables/tables.md) provides general information about tables
+
 [Appendix - TSView Time Series Viewing Tools](../appendix-tsview/tsview.md) provides a general reference for time series viewing features.  These features are used throughout TSTool.
 
 [Appendix - GeoView Mapping Tools](../appendix-geoview/geoview.md) provides a general reference for the GeoView map interface

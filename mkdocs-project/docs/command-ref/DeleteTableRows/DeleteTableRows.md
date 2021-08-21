@@ -19,6 +19,9 @@ The `DeleteTableRows` command deletes specified rows from a table using one of t
 	+ delete specific row numbers
 	+ delete all rows
 
+Because the deletion is a destructive action,
+one of the above conditions is required to be specified.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
@@ -53,35 +56,8 @@ Command Parameters
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 |`TableID`<br>**required**|The table identifier for the table to process. Can specify with `${Property}`.|None - must be specified.|
-|`Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information below.|Condition or row number must be specified.|
+|`Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information in the [Tables appendix](../../appendix-tables/tables.md#condition-evaluation-for-rows).|Condition or row number must be specified.|
 |`DeleteRowNumbers`|The row number(s) to delete:<ul><li>Comma-separated list of row numbers (1+)</li><li>`last` to delete the last row</li><li>`*` to delete all rows.</li></ul><br> Can use `${Property}`.|Condition or row number must be specified.|
-
-The `Condition` parameter, if specified, is restricted to a simple comparison:
-
-```
-ColumnName operator Value
-```
-
-The `Value` will be taken from the indicated `ColumnName` and can be integer, floating point number, string, or processor property
-specified with `${Property}` that evaluates to a primitive type.
-The operator is one of the following.
-
-* `<`
-* `<=`
-* `>`
-* `>=`
-* `==` (use this to test equality – do not use a single equal sign)
-* `!=`
-* `contains` (only for string comparison)
-* `!contains` (only for string comparison)
-* `isempty` (only for string comparison, and `Value` should not be specified)
-* `!isempty` (only for string comparison, and `Value` should not be specified)
-
-Additional criteria for strings is:
-
-* For `<` and `>` comparisons, `A` is less than `Z`, etc. as per the [ASCII table](http://www.asciitable.com/).
-* Comparisons are case-specific.  Support for case-independent comparisons will be added in the future.
-* Null string is treated as empty string for `isempty` and `!isempty` operators.
 
 ## Examples ##
 
