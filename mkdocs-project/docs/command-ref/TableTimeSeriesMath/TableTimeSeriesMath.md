@@ -63,7 +63,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/TableTimeSeriesMath).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/TableTimeSeriesMath).
 
 The delimited file corresponding to that used in the above dialog example is shown below.
 In this example, the time series identifiers have location parts with values ts1 and ts2.

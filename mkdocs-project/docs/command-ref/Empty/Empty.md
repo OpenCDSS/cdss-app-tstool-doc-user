@@ -31,7 +31,7 @@ Empty (blank) lines in command files are converted to `Empty` commands.
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Empty).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/Empty).
 
 ## Troubleshooting ##
 

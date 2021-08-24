@@ -137,10 +137,10 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunR).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/RunR).
 * See an example of specifying the working directory:
-	+ [TSTool command file](https://github.com/OpenCDSS/cdss-app-tstool-test/blob/master/test/regression/commands/general/RunR/Test_RunR_HelloWorld.TSTool)
-	+ [R script](https://github.com/OpenCDSS/cdss-app-tstool-test/blob/master/test/regression/commands/general/RunR/Test_RunR_HelloWorld.R)
+	+ [TSTool command file](https://github.com/OpenCDSS/cdss-app-tstool-test/blob/master/test/commands/RunR/Test_RunR_HelloWorld.TSTool)
+	+ [R script](https://github.com/OpenCDSS/cdss-app-tstool-test/blob/master/test/commands/RunR/Test_RunR_HelloWorld.R)
 
 ## Troubleshooting ##
 

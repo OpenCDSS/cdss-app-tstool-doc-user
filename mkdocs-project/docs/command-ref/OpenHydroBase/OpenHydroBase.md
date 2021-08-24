@@ -60,7 +60,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/OpenHydroBase).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/OpenHydroBase).
 
 The following example command file illustrates how to connect to a SQL Server database running on a machine named “sopris”:
 

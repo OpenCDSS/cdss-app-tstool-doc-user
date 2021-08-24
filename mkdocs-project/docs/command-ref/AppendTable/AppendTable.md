@@ -53,7 +53,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/AppendTable).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/AppendTable).
 
 The following figures show the input tables and results (modified first table) corresponding to the parameters shown in the editor dialog figure above.
 Note that the column names for “Table2” have a “2”.

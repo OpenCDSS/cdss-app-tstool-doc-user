@@ -159,7 +159,7 @@ For example, for `OutputYearType=NovToDec`, November 1,
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewStatisticYearTS).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/NewStatisticYearTS).
 
 The following example commands file computes the last spring frost date for
 28 degrees and 32 degrees, searching backwards from June 30 each year,

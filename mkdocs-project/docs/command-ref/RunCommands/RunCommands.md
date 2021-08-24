@@ -65,7 +65,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunCommands).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/RunCommands).
 
 The following example illustrates how the `RunCommands` command can be used to test TSTool software (or any implementation of commands).
 First, individual command files are implemented to test specific functionality,

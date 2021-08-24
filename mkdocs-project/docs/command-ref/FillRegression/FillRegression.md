@@ -219,7 +219,7 @@ with `FillFlag` and `FillFlagDesc` optionally being used to indicate filled valu
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FillRegression).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/FillRegression).
 
 ## Troubleshooting ##
 

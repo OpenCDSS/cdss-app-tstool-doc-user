@@ -628,7 +628,7 @@ The following is an example command file to run the
 ```text
 #
 # Create the regression test runner for the
-# TSTool/test/regression/TestSuites/commands_general files.
+# TSTool/test/test-suites/commands-general files.
 #
 # Only command files that match Test_*.TSTool are included in the output.
 # Don't append the generated commands, in order to force the old file to be

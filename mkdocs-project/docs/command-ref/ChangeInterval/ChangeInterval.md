@@ -490,7 +490,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ChangeInterval).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ChangeInterval).
 
 Several example command files follow.  The following commands creates a Day `ACCM` time series from a Month `ACCM` time series:
 

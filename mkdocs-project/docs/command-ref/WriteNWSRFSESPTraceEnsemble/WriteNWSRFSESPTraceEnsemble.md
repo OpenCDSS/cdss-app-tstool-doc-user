@@ -55,7 +55,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteNWSRFSESPTraceEnsemble).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/WriteNWSRFSESPTraceEnsemble).
 
 A sample commands file to convert an ensemble from a DateValue file to NWS ESP format is as follows:
 

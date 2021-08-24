@@ -114,7 +114,7 @@ In addition to the HydroJSON properties that can be specified above, the followi
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToHydroJSON).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/WriteTimeSeriesToHydroJSON).
 
 ## Troubleshooting ##
 

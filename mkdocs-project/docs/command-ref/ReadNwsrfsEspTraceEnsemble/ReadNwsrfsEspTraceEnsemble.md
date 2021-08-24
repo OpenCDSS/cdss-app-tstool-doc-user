@@ -52,7 +52,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadNwsrfsEspTraceEnsemble).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ReadNwsrfsEspTraceEnsemble).
 
 A sample command file is as follows, which will use the location identifier and sequence identifier (historical year) in the alias:
 

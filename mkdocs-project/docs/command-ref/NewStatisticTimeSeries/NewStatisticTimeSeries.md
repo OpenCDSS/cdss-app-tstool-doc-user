@@ -83,7 +83,7 @@ Available Statistics
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewStatisticTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/NewStatisticTimeSeries).
 
 The following example command file illustrates how to generate test data and a corresponding statistics time series:
 

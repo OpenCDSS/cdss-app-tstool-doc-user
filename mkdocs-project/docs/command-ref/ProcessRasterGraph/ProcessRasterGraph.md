@@ -243,7 +243,7 @@ and location on an axis.
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ProcessRasterGraph).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ProcessRasterGraph).
 
 ## Troubleshooting ##
 

@@ -47,7 +47,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/InsertTimeSeriesIntoEnsemble).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/InsertTimeSeriesIntoEnsemble).
 
 A sample command file to create an ensemble from user-defined time series is as follows:
 

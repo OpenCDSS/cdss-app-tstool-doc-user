@@ -51,7 +51,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FillHistMonthAverage).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/FillHistMonthAverage).
 
 The following command files fill a time series from the State of Colorado’s
 [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md).

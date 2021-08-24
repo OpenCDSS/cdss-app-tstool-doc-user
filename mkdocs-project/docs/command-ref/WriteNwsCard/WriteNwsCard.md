@@ -45,7 +45,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteNwsCard).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/WriteNwsCard).
 
 A sample command file to write data from the State of Colorado’s HydroBase is as follows:
 

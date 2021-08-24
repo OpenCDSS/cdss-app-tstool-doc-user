@@ -55,7 +55,7 @@ The following table lists regular expression examples:
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/AppendFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/AppendFile).
 
 ## Troubleshooting ##
 
