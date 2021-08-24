@@ -10,6 +10,8 @@
 
 ## Changes in Versions 13.04.00 ##
 
+* ![remove](remove.png) [13.04.00] Remove the [ColoradoWaterSMS datastore](../datastore-ref/ColoradoWaterSMS/ColoradoWaterSMS.md)
+from software and configuration files since no longer available.
 * ![bug](bug.png) [13.04.00] Fix the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command
 where operators with equal sign were not being handled properly in command editing.
 * ![bug](bug.png) [13.04.00] Fix the [`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md) command
