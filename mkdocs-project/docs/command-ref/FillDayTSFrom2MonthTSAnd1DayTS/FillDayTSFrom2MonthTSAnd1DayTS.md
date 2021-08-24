@@ -66,7 +66,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FillDayTSFrom2MonthTSAnd1DayTS).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/FillDayTSFrom2MonthTSAnd1DayTS).
 
 A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows.

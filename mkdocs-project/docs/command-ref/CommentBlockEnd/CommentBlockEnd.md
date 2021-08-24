@@ -46,7 +46,7 @@ The commands between `/*` and `*/` lines will be recognized as commands but will
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CommentBlock).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/CommentBlock).
 
 ## Troubleshooting ##
 

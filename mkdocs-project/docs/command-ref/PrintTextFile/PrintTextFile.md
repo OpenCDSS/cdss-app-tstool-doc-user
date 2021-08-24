@@ -112,7 +112,7 @@ in particular for Windows XP](http://www.microsoft.com/download/en/details.aspx?
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/PrintTextFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/PrintTextFile).
 
 ## Troubleshooting ##
 

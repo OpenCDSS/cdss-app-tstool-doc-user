@@ -58,7 +58,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewPatternTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/NewPatternTimeSeries).
 
 The following example command file illustrates how to create a pattern time series for testing:
 

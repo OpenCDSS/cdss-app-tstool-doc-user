@@ -66,7 +66,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CreateEnsembleFromOneTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/CreateEnsembleFromOneTimeSeries).
 
 A sample command file to read a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 and create an ensemble from the time series using sequential data transfer is as follows:

@@ -141,7 +141,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CompareTimeSeries).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/CompareTimeSeries).
 
 The following example illustrates how time series from two files can be compared.
 For example, use similar commands to compare results from two model runs or two database queries:

@@ -68,7 +68,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/NewTimeSeries).
 
 The example command file shown below creates a new time series and
 initializes it to a constant of 20 CFS.

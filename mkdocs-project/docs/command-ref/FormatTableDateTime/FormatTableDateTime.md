@@ -132,7 +132,7 @@ Supported C (Strftime) Format Specifiers
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FormatTableDateTime).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/FormatTableDateTime).
 
 The following example illustrates how to convert an input date/time column into
 variations of the date/time, with the following input used to generate the

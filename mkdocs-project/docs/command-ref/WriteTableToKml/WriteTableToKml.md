@@ -105,7 +105,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToKml).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/WriteTableToKml).
 
 The following is an example of a style insert file (refer to KML reference documentation for explanation).  The last style is for polygons.
 

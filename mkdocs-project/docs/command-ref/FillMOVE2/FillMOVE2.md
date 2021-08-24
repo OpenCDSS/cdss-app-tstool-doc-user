@@ -63,7 +63,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FillMOVE2).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/FillMOVE2).
 
 A sample command file illustrating how to fill time series from the State of Colorado’s HydroBase is as follows
 (MOVE2 and ordinary least squares regression are used to allow comparing the results):

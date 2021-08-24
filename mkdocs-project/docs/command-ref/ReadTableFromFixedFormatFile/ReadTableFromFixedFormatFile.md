@@ -56,7 +56,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadTableFromFixedFormatFile).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ReadTableFromFixedFormatFile).
 
 The following example illustrates a fixed-format file.
 In this case the name includes a string name and a “node type” separated by an underscore.

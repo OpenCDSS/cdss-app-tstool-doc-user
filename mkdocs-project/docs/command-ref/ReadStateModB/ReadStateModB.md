@@ -65,7 +65,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadStateModB).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ReadStateModB).
 
 The following example command file illustrates how to read all `Available_Flow`
 time series for identifiers starting with `44` (e.g., to extract all such time series for a water district):

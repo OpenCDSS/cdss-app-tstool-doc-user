@@ -64,7 +64,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/AdjustExtremes).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/AdjustExtremes).
 
 The following example shows results using the above command editor values (adjusted on left, original on right):
 

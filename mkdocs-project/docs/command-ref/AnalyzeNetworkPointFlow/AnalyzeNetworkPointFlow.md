@@ -348,7 +348,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/AnalyzeNetworkPointFlow).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/AnalyzeNetworkPointFlow).
 
 The following command files illustrate how to implement a point flow analysis.
 In this case the first command file prepares daily time series using the network as input.

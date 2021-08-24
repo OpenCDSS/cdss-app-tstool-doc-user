@@ -69,7 +69,7 @@ The command syntax is as follows:
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/Comment).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/Comment).
 
 ## Troubleshooting ##
 

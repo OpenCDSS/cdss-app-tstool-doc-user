@@ -144,7 +144,7 @@ Statistic Details
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewStatisticTimeSeriesFromEnsemble).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/NewStatisticTimeSeriesFromEnsemble).
 
 The following example command file illustrates how to compute the mean statistic for one monthly data:
 

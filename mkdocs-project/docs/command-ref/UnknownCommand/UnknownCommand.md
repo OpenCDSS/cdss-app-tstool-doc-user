@@ -31,7 +31,7 @@ Unrecognized commands in command files are converted to `UnknownCommand` command
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/UnknownCommand).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/UnknownCommand).
 
 ## Troubleshooting ##
 

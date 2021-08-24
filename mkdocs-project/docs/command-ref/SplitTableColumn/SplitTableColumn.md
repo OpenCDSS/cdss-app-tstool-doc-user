@@ -51,7 +51,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/SplitTableColumn).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/SplitTableColumn).
 
 **<p style="text-align: center;">
 ![SplitTableColumn](SplitTableColumn_Table1a.png)

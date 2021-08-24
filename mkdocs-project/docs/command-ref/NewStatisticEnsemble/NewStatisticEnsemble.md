@@ -88,7 +88,7 @@ Available Statistic
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/NewStatisticEnsemble).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/NewStatisticEnsemble).
 
 The following example determines the percent of values that are >= several threshold values:
 

@@ -237,7 +237,7 @@ The resulting output is as shown below.
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTimeSeriesToExcelBlock).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/WriteTimeSeriesToExcelBlock).
 
 ## Troubleshooting ##
 

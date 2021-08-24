@@ -201,7 +201,7 @@ Distribution Summary
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/RunningStatisticTimeSeries).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/RunningStatisticTimeSeries).
 
 A sample command file to convert State of Colorado HydroBase diversion time series to running averages is as follows:
 

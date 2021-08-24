@@ -159,7 +159,7 @@ Supported Statistics
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ChangeIntervalIrregularToRegular).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ChangeIntervalIrregularToRegular).
 
 ## Troubleshooting ##
 

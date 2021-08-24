@@ -225,7 +225,7 @@ Condition Table used with `WriteTableToExcel` Command for a Color Scale
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/WriteTableToExcel).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/WriteTableToExcel).
 
 ## Troubleshooting ##
 

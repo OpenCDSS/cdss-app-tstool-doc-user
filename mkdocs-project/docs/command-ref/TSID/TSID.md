@@ -82,7 +82,7 @@ The command syntax is as follows with the details varying based on the data sour
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general)
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands)
 for various datastores and input types (see `TSID` in folder names).
 
 A sample command file to read a time series from the [State of Colorado’s StateMod](../../datastore-ref/StateMod/StateMod.md) is as follows.

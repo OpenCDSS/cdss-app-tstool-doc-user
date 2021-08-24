@@ -90,7 +90,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CreateTimeSeriesEventTable).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/CreateTimeSeriesEventTable).
 
 The following figure illustrates the result of processing the input event table
 with a time series that has property `basin=South Platte` and `division=1`,

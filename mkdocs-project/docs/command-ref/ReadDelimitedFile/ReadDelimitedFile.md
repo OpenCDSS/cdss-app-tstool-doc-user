@@ -90,7 +90,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/ReadDelimitedFile).
+* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ReadDelimitedFile).
 
 ### Example of Column Names Assigned with Command Parameter ###
 

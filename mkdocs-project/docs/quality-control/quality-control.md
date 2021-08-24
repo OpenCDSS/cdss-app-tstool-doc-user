@@ -211,7 +211,7 @@ The following example command file illustrates how to create a test suite:
 ```
 #
 # Create the regression test runner for the
-# TSTool/test/regression/TestSuites/commands_general files.
+# TSTool/test/test-suites/commands-general files.
 #
 # Only command files that start with Test_ are included in the output.
 # Don't append the generated commands, in order to force the old file to be

@@ -140,7 +140,7 @@ Metatable Columns for Column Metadata
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CreateDataStoreDataDictionary).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/CreateDataStoreDataDictionary).
 
 The following is an example of an Excel workbook with ER Diagram layout data, which can be read with the
 [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command.

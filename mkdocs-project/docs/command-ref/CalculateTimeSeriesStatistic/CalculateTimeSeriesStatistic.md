@@ -148,7 +148,7 @@ Statistic Details
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/CalculateTimeSeriesStatistic).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/CalculateTimeSeriesStatistic).
 
 The following example illustrates how to use the command to compute the 7q10 statistic for daily flow:
 

@@ -207,7 +207,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/VariableLagK).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/VariableLagK).
 
 A sample command file is as follows (commands to read time series are omitted, formatted for readability):
 

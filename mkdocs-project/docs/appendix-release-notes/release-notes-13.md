@@ -14,8 +14,12 @@
 where operators with equal sign were not being handled properly in command editing.
 * ![bug](bug.png) [13.04.00] Fix the [`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md) command
 to handle date/time formula cell.
+* ![change](change.png) [13.04.00] The testing repository folders were simplified and therefore all **Examples**
+section links have been updated.
+Examples links in older documentation will be broken.
 * ![change](change.png) [13.04.00] Update the [`TableMath`](../command-ref/TableMath/TableMath.md) command:
 	+ add `=`, `Cumulate`, and `Delta` operators
+	+ add `Condition` and `ProcessRows` parameters to indicate which rows to process
 	+ improve logic for handling data types and provide better feedback when input prevents calculations
 * ![change](change.png) [13.04.00] Update the [`ReadStateCUB`](../command-ref/ReadStateCUB/ReadStateCUB.md) command
 to allow `${Property}` notation for input file, `TSID`, and period

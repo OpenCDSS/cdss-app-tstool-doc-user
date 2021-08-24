@@ -105,7 +105,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [command file used to generate tests](https://github.com/OpenCDSS/cdss-app-tstool-test/blob/master/test/regression/TestSuites/commands_general/create/Create_RunTestSuite_commands_general_IncludeOS%3DWindows.TSTool)
+* See the [command files used to generate general tests](https://github.com/OpenCDSS/cdss-app-tstool-test/blob/master/test/test-suites/commands-general/create).
 
 See the [Quality Control chapter](../../quality-control/quality-control.md) for how to set up a regression test.
 

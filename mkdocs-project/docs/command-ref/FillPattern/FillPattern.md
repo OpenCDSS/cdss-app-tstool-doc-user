@@ -75,7 +75,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/FillPattern).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/FillPattern).
 
 A sample command file to process data from the [State of Colorado’s StateMod model](../../datastore-ref/StateMod/StateMod.md) is as follows.
 The example fills all diversion time series with identifier starting with `30`, using the pattern `09034500`

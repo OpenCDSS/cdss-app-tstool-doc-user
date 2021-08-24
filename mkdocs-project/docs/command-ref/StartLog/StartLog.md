@@ -47,7 +47,7 @@ Command Parameters
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/regression/commands/general/StartLog).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/StartLog).
 
 A sample command file to process State of Colorado HydroBase data is as follows
 (the [`Add`](../Add/Add.md) command will generate an error because the units of the time series are incompatible):
