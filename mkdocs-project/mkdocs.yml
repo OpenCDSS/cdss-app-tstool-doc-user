@@ -284,7 +284,7 @@ nav:
   - Colorado HydroBase: datastore-ref/CO-HydroBase/CO-HydroBase.md
   - Colorado HydroBase (legacy): datastore-ref/CO-HydroBase-legacy/CO-HydroBase-legacy.md
   - Colorado HydroBase REST Web Service: datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md
-  - ColoradoWaterHBGuest: datastore-ref/ColoradoWaterHBGuest/ColoradoWaterHBGuest.md
+  - ColoradoWaterHBGuest (legacy): datastore-ref/ColoradoWaterHBGuest/ColoradoWaterHBGuest.md
   - ColoradoWaterSMS (legacy): datastore-ref/ColoradoWaterSMS/ColoradoWaterSMS.md
   - DateValue: datastore-ref/DateValue/DateValue.md
   - Delft FEWS PI XML: datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md

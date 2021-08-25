@@ -9,7 +9,7 @@
 ## Overview ##
 
 The StateCUB time series input type corresponds to the file format used by the
-[State of Colorado's StateCU consumptive use model](http://cdss.state.co.us/software/Pages/StateCU.aspx),
+[State of Colorado's StateCU consumptive use model](https://cdss.colorado.gov/software/statecu),
 in particular the binary output file.
 These files contain important water balance information for every location in the model.
 The following table summarizes the contents of the binary files and

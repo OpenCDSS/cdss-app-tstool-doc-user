@@ -7,7 +7,7 @@ different development environment, and potential for non-coders to contribute to
 See the deployed [CDSS / TSTool](http://opencdss.state.co.us/tstool/latest/doc-user/) documentation.
 See the following online resources:
 
-* [Colorado's Decision Support Systems (CDSS)](http://cdss.state.co.us)
+* [Colorado's Decision Support Systems (CDSS)](https://cdss.colorado.gov/)
 * [OpenCDSS](http://opencdss.state.co.us/opencdss/)
 * [TSTool software main repository](https://github.com/OpenCDSS/cdss-app-tstool-main)
 * [TSTool Developer Documentation](http://opencdss.state.co.us/tstool/latest/doc-dev/)
@@ -23,7 +23,6 @@ See the following sections on this page:
 * [License](#license)
 * [Contributing](#contributing)
 * [Maintainers](#maintainers)
-* [Release Notes](#release-notes)
 
 ---------------------------
 
@@ -110,7 +109,6 @@ C:\Users\user\                            Windows:  User's files.
         cdss-lib-common-java/             Shared general utility code.
         cdss-lib-dmi-hydrobase-java/      State of Colorado's HydroBase API.
         cdss-lib-dmi-nwsrfs-java/         Legacy National Weather Service API.
-        cdss-lib-dmi-satmonsys-java/      Colorado Satellite Monitoring System API.
         cdss-lib-models-java/             CDSS StateCU and StateMod model API.
         cdss-lib-processor-ts-java/       Core TSTool processing library.
         cdss-util-buildtools/             Utilities to build and deploy TSTool.
@@ -142,17 +140,15 @@ Any issues should be resolved by updating the run script to support as many envi
 
 ## Deploying the Documentation ##
 
-The documentation is currently deployed to two locations by running the following scripts in
-Git Bash:
+The documentation is deployed to the OpenCDSS website by running the following script in Git Bash:
 
-1. `build-util/copy-to-co-dnr-gcp.sh` - copies the MkDocs-generated static website
+```
+build-util/copy-to-co-dnr-gcp.sh
+```
+
+This copies the MkDocs-generated static website
 to the State of Colorado's Google Cloud Platform, currently being configured.
 This requires installing the Google Cloud Platform `gcloud` command line tool and being authenticated.
-2. `build-util/old-build-util/copy-to-owf-amazon-s3.sh` - copies the MkDocs-generated
-static website to
-[TSTool Developer Documentation on the Open Water Foundation website](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/).
-This requires installing the Amazon Web Services command line tool and being authenticated.
-Use the `-l` option with the script to also copy to the latest version (default is to copy to version folder).
 
 ## Style Guide ##
 
@@ -204,16 +200,6 @@ This repository is maintained by the OpenCDSS team.
 
 ## Release Notes ##
 
-The following release notes indicate major updates for the documentation.
 Refer to the [GitHub issues](https://github.com/OpenCDSS/cdss-app-tstool-doc-user/issues)
 for change history and see also the
 [TSTool release notes](http://opencdss.state.co.us/tstool/latest/doc-user/appendix-release-notes/release-notes/).
-
-* 2019-08-03 - Migrate remaining Word files to Markdown.
-* 2019-07-12 - Update for version 13.00.00 release.
-* 2019-01-26 - Update documentation links to use opencdss.state.co.us.
-* 2019-01-06 - Update documentation for full OpenCDSS release and MkDocs 1.
-* 2018-09-14 - Review documentation for TSTool 12.06.00 release.
-* 2018-04-22 - Majority of content transferred from Word/PDF to Markdown/MkDocs
-except for a few commands and datastores.
-* 2018-03-16 - Initial content in Markdown/MkDocs format.

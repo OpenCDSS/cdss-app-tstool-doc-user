@@ -9,7 +9,7 @@
 ## Overview ##
 
 The StateCU time series input type corresponds to the file formats used by the
-[State of Colorado's StateCU consumptive use model](http://cdss.state.co.us/Modeling/Pages/ConsumptiveUseStateCU.aspx), including:
+[State of Colorado's StateCU consumptive use model](https://cdss.colorado.gov/modeling-data/consumptive-use-statecu), including:
 
 * Crop pattern time series file, yearly (`*.cds`)
 * Irrigation water requirement, formatted for StateMod (`*.ddc`)
@@ -24,8 +24,8 @@ See also the [StateCUB input type](../StateCUB/StateCUB.md), which corresponds t
 the [StateMod input type](../StateMod/StateMod.md), which corresponds to StateMod input files,
 and the [StateModB input type](../StateModB/StateModB.md), which corresponds to StateMod binary output files.
 
-See the [StateCU Documentation](http://cdss.state.co.us/Modeling/Pages/ConsumptiveUseStateCU.aspx) for a complete description of StateCU input files.
-Refer to the [StateMod Documentation](http://cdss.state.co.us/software/Pages/StateMod.aspx) for files that use the StateMod file format.
+See the [StateCU Documentation](https://cdss.colorado.gov/software/statecu) for a complete description of StateCU input files.
+Refer to the [StateMod Documentation](https://cdss.colorado.gov/software/statemod) for files that use the StateMod file format.
 
 Important comments about the StateCU file formats are:
 
