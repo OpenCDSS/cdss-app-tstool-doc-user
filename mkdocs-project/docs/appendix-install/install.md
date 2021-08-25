@@ -1,7 +1,7 @@
 # TSTool / Install TSTool #
 
 This appendix describes how to install TSTool.
-TSTool was originally developed for [CDSS (Colorado's Decision Support Systems)](http://cdss.state.co.us)
+TSTool was originally developed for [CDSS (Colorado's Decision Support Systems)](https://cdss.colorado.gov/)
 to process water resources data for modeling and analysis.
 However, TSTool can be used outside of CDSS and also can be used to analyze data other than water resources.
 In all cases, it is recommended to install in the default location to avoid confusion.

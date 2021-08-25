@@ -1,7 +1,7 @@
 # CDSS / TSTool #
 
 This documentation provides resources to learn how to use
-[Colorado's Decision Support Systems (CDSS)](http://cdss.state.co.us/Pages/CDSSHome.aspx) TSTool software,
+[Colorado's Decision Support Systems (CDSS)](https://cdss.colorado.gov/) TSTool software,
 which automates processing time series, data tables, and other data.
 This documentation is generally referred to as the **"User Documentation"** in contrast to
 **"Developer Documentation"**, which is relevant to software developers.
@@ -55,7 +55,7 @@ The following components are used in TSTool and require or request attribution:
 
 ## Colorado's Decision Support Systems ##
 
-Colorado's Decision Support Systems (CDSS, [cdss.state.co.us](http://cdss.state.co.us))
+Colorado's Decision Support Systems (CDSS, [https://cdss.colorado.gov/](https://cdss.colorado.gov/))
 has been developed to answer important questions about Colorado's water resources.
 CDSS efforts are led by the [Colorado Water Conservation Board (CWCB)](http://cwcb.state.co.us)
 and [Colorado Division of Water Resources (DWR)](http://water.state.co.us).

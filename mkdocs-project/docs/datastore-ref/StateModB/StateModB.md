@@ -9,7 +9,7 @@
 ## Overview ##
 
 The StateModB time series input type corresponds to the file format used by the
-[State of Colorado's StateMod model](http://cdss.state.co.us/software/Pages/StateMod.aspx),
+[State of Colorado's StateMod model](https://cdss.colorado.gov/software/statemod),
 in particular the binary FORTRAN direct access output files.
 These files contain important water balance information for every node in the model network.
 The following table summarizes the contents of the binary files and

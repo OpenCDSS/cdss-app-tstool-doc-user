@@ -3,33 +3,46 @@
 * [Changes in Version 13.04.00](#changes-in-version-130400)
 * [Changes in Version 13.03.00](#changes-in-version-130300)
 * [Changes in Version 13.02.00](#changes-in-version-130200)
-* [Changes in Version 13.00.00 - 13.01.00](#changes-in-version-130000-130100)
+* [Changes in Version 13.00.00 - 13.01.00](#changes-in-versions-130000-130100)
 * [Release notes for all versions](release-notes.md)
 
 ----------
 
-## Changes in Versions 13.04.00 ##
+## Changes in Version 13.04.00 ##
 
+**This is the final 32-bit Java release.**
+
+* ![remove](remove.png) [13.04.00] Remove the [ColoradoWaterHBGuest datastore](../datastore-ref/ColoradoWaterHBGuest/ColoradoWaterHBGuest.md)
+from software and configuration files since data access is no longer available.
 * ![remove](remove.png) [13.04.00] Remove the [ColoradoWaterSMS datastore](../datastore-ref/ColoradoWaterSMS/ColoradoWaterSMS.md)
-from software and configuration files since no longer available.
+from software and configuration files since data access is no longer available.
 * ![bug](bug.png) [13.04.00] Fix the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command
 where operators with equal sign were not being handled properly in command editing.
+* ![bug](bug.png) [13.04.00] Fix the [`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2.md) command,
+which was skipping the fill operation.
 * ![bug](bug.png) [13.04.00] Fix the [`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md) command
 to handle date/time formula cell.
-* ![change](change.png) [13.04.00] The testing repository folders were simplified and therefore all **Examples**
-section links have been updated.
+* ![change](change.png) [13.04.00] The testing repository folders were simplified to remove `regression` and `general` folders
+and therefore all command documentation **Examples** section links have been updated.
 Examples links in older documentation will be broken.
+* ![change](change.png) [13.04.00] Update the
+[`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command
+to have `ExcludeTestSuite` parameter to exclude test suites
 * ![change](change.png) [13.04.00] Update the [`TableMath`](../command-ref/TableMath/TableMath.md) command:
 	+ add `=`, `Cumulate`, and `Delta` operators
 	+ add `Condition` and `ProcessRows` parameters to indicate which rows to process
 	+ improve logic for handling data types and provide better feedback when input prevents calculations
 * ![change](change.png) [13.04.00] Update the [`ReadStateCUB`](../command-ref/ReadStateCUB/ReadStateCUB.md) command
 to allow `${Property}` notation for input file, `TSID`, and period
+* ![change](change.png) [13.04.00] Update the [`UnzipFile`](../command-ref/UnzipFile/UnzipFile.md) command
+to have `RemoveOutputFolder` parameter to control whether the output folder is removed before unzipping
 * ![new](new.png) [13.04.00] Add an appendix to the documentation that contains table concepts and
 provides documentation that is shared by multiple commands.
 This documentation will be expanded over time.
 
-## Changes in Versions 13.03.00 ##
+## Changes in Version 13.03.00 ##
+
+**This release includes many changes accumulated during an extended development period.**
 
 * ![bug](bug.png) [13.03.00] Change so that user's `.tstool/NN/system/TSTool.cfg` file
 properties are recognized whether or not `[TSTool]` is at the top of the file.
@@ -171,7 +184,7 @@ including for web
 * ![new](new.png) [13.03.00] Add the [`NewSQLiteDatabase`](../command-ref/NewSQLiteDatabase/NewSQLiteDatabase.md) command to create a SQLite database
 * ![new](new.png) [13.03.00] Add the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command to edit text files
 
-## Changes in Versions 13.02.00 ##
+## Changes in Version 13.02.00 ##
 
 * ![change](change.png) [13.02.00] Most menu items now have tooltips that provide additional information to users.
 The tooltips will be modified as feedback on their interpretation is received.
