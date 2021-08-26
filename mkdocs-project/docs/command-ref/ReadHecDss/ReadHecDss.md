@@ -11,6 +11,9 @@
 
 ## Overview ##
 
+**The `ReadHecDSS` command is disabled for TSTool 14.0.0 and newer
+because TSTool needs to be updated to use 64-bit HEC-DSS software libraries.**
+
 The `ReadHecDss` command reads time series from a HEC-DSS file.
 See the [HEC-DSS Input Type Appendix](../../datastore-ref/HEC-DSS/HEC-DSS.md) for information
 about how time series properties are assigned using HEC-DSS file data.
