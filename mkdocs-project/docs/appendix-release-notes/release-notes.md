@@ -8,6 +8,7 @@ A summary table is provided, with links to details for major versions.
 * [TSTool Version History](#tstool-version-history)
 * [Known Limitations](#known-limitations)
 * [TSTool Version Details](#tstool-version-details) - the following are separate documentation pages
+	+ [Version 14 Details](release-notes-14.md)
 	+ [Version 13 Details](release-notes-13.md)
 	+ [Version 12 Details](release-notes-12.md)
 	+ [Version 11 Details](release-notes-11.md)
@@ -76,6 +77,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.0.0](release-notes-14.md)|First 64-bit Java release.|2021-08-26|
 |[13.04.00](release-notes-13.md)|Enhancements to facilitate automated testing, final 32-bit Java release.|2021-08-24|
 |[13.03.00](release-notes-13.md)|Many enhancements to automate processing of large datasets.|2020-08-12|
 |[13.02.00](release-notes-13.md)|Improve table processing commands, clarify HydroBase read commands, improve support for stored procedures with parameters.|2019-09-10|
@@ -172,6 +174,9 @@ TSTool Version History Summary (most current at top)
 
 ## Known Limitations ##
 
+* ![limitation](limitation.png) As of version 14, features to read and write HEC-DSS files are disabled.
+Additional resources are needed to implement 64-bit libraries for HEC-DSS files.
+If necessary, use an older version of TSTool to process HEC-DSS files.
 * ![limitation](limitation.png) TSTool uses a “discovery mode” to partially execute commands when editing the commands.
 This is used to determine lists of time series identifiers, table identifiers, and properties for editor choices.
 However, some workflow logic is so complex that commands cannot fully execute in discovery mode.
@@ -191,7 +196,7 @@ of time series and providing a list could be overwhelming and slow.
 Alternatives are being evaluated.
 Currently, commands that reference time series in the binary files must use
 more generic selection methods such as `TSLIST=AllMatchingTSID` and `TSID` with wildcards.
-* ![limitation](limitation.png) Plotting features do not know understand the concept of instantaneous, mean,
+* ![limitation](limitation.png) Plotting features do not understand the concept of instantaneous, mean,
 and accumulated time series (referred to as the time scale).  All values are plotted at data value date/time.
 In the future, features may be implemented to automatically determine from the
 data type and time scale whether to adjust the visual representation based on the time scale,
