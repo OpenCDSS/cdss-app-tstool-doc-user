@@ -10,16 +10,20 @@
 
 ## Changes in Version 13.04.00 ##
 
-**This is the final 32-bit Java release.**
+**This is the final 32-bit Java release.  It is recommended to use the 64-bit version that follows this release.**
 
 * ![remove](remove.png) [13.04.00] Remove the [ColoradoWaterHBGuest datastore](../datastore-ref/ColoradoWaterHBGuest/ColoradoWaterHBGuest.md)
 from software and configuration files since data access is no longer available.
 * ![remove](remove.png) [13.04.00] Remove the [ColoradoWaterSMS datastore](../datastore-ref/ColoradoWaterSMS/ColoradoWaterSMS.md)
 from software and configuration files since data access is no longer available.
+* ![bug](bug.png) [13.04.00] Fix the user interface so that the message ***Wait...initializing data connections...***
+is removed sooner, rather than being present behind other components.
 * ![bug](bug.png) [13.04.00] Fix the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command
 where operators with equal sign were not being handled properly in command editing.
 * ![bug](bug.png) [13.04.00] Fix the [`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2.md) command,
 which was skipping the fill operation.
+* ![bug](bug.png) [13.04.00] Fix the [`FillRegression`](../command-ref/FillRegression/FillRegression.md) command,
+which was not handling some checks on the statistics due to how the installer was created
 * ![bug](bug.png) [13.04.00] Fix the [`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md) command
 to handle date/time formula cell.
 * ![change](change.png) [13.04.00] The testing repository folders were simplified to remove `regression` and `general` folders
