@@ -48,7 +48,17 @@
 	+ [Changing a Graph Page Layout](#changing-a-graph-page-layout)
 	+ [Time Series Summary View](#time-series-summary-view)
 	+ [Time Series Table View](#time-series-table-view)
-* [Time Series Product Reference](#time-series-product-reference)
+* [Time Series Product File Reference](#time-series-product-file-reference)
+	+ [Time Series Product File Format](#time-series-product-file-format)
+	+ [Time Series Product File - JSON Format](#time-series-product-file-json-format)
+	+ [Time Series Product File - Product Properties](#time-series-product-file-product-properties)
+	+ [Time Series Product File - Graph Properties](#time-series-product-file-graph-properties)
+	+ [Time Series Product File - Report Properties](#time-series-product-file-report-properties)
+	+ [Time Series Product File - Time Series Properties](#time-series-product-file-time-series-properties)
+	+ [Time Series Product File - Annotation Properties](#time-series-product-file-annotation-properties)
+	+ [Time Series Product File - Color Specification](#time-series-product-file-color-specification)
+	+ [Time Series Product File - Color Tables](#time-series-product-file-color-tables)
+	+ [Time Series Product File - Symbol Tables](#time-series-product-file-symbol-tables)
 * [Time Series Graph Templates](#time-series-graph-templates)
 
 -------------------------
@@ -174,7 +184,7 @@ Time Series Terminology (listed alphabetically)
 |Location|A string identifier that is part of a time series identifier and typically identifies a time series as being associated with a location (e.g., a stream gage or sensor identifier).  The location may be used with certain input types to determine additional information (e.g., station characteristics may be requested from a database table using the location).|
 |Scenario|A string label that is part of a time series identifier, and serves as a modifier for the identifier (e.g., `HIST` for historical).|
 |Sequence Number|A number indicating the sequence position of a time series in a series.  For example, possible time series traces may be identified with a sequence number matching the historical year for the data.  The use of sequence numbers with traces is being evaluated.|
-|Time Series Product|A graph or report that can be defined and reproduced.  See the [Time Series Product Reference](#time-series-product-reference) section.|
+|Time Series Product|A graph or report that can be defined and reproduced.  See the [Time Series Product File Reference](#time-series-product-file-reference) section.|
 |Time Step|See Data Interval.|
  
 ## Time Series Properties Interface ##
@@ -437,7 +447,7 @@ The graph view is divided into the following main areas:
 * ***Graph Page*** - The graph page (drawing canvas) is the area where the graph and legend are drawn.
 This area is used to interact with the graph via the mouse cursor.
 More than one graph can be drawn in the page (see the
-[Time Series Product Reference](#time-series-product-reference) section for additional details).
+[Time Series Product File Reference](#time-series-product-file-reference) section for additional details).
 If zooming is supported for the graph, a box can be drawn with the mouse to zoom in to a shorter period.
 Right-click over a graph of interest to show the popup menu for graph
 properties and analysis details (e.g., regression results).  The graph page is essentially a preview of a printed graph.
@@ -470,7 +480,7 @@ To use the keyboard, first click in the main graph canvas to shift focus to that
 	the printed graph may not exactly match the viewed version (e.g., more or less axis labels may be used).
 	+ ***Save*** Save the graph as a Portable Network Graphic (PNG), JPEG graphic,
 	a [DateValue file](../datastore-ref/DateValue/DateValue.md) (a useful time series format),
-	Time Series Product file (see the [Time Series Product Reference](#time-series-product-reference) section),
+	Time Series Product file (see the [Time Series Product File Reference](#time-series-product-file-reference) section),
 	or other formats, by selecting from the choices.
 	Depending on the main application, saving to a database as a time series product may also be enabled.
 	+ ***Close*** Close the graph window.  If related summary or table windows are still visible,
@@ -484,7 +494,7 @@ If a right y-axis is enabled in the graph, then both left and right y-axis track
 Within each graph page it is possible to draw more than one graph, each with its own titles, legend, etc.
 The [Time Series Product Properties](#time-series-product-properties) section (below)
 provides an example and discusses how to edit graph properties.
-The [Time Series Product Reference](#time-series-product-reference) section
+The [Time Series Product File Reference](#time-series-product-file-reference) section
 describes in detail the format of Time Series Product files.
 These files, when saved from the graph view,
 can be used to recreate a graph interactively or in batch mode, at a later time.
@@ -725,14 +735,17 @@ and then it can be processed and visualized using other software features.
 
 #### Raster Graph ####
 
-The ***Raster Graph*** provides a visualization technique for monthly and daily
-interval data (other small intervals may be added in the future),
+The ***Raster Graph*** (also called a "heat map") provides a visualization technique 
 where the entire period of record is displayed in a grid with “pixels” colored according to a scale.
+Currently only month and day interval data are supported,
+although other small intervals may be added in the future.
 The following are characteristics of the raster graph:
 
 * Time is represented on both axes, with one axis representing years, and the other time within the year.
-* The colors represent time series values.  The default is to use decile values.
-Additional functionality will be enabled in the future to control the legend scale.
+* The colors represent time series values.
+The default is to find "nice" value breaks depending on the range of input values.
+The color table can be specified by creating a time series product and processing
+with the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command.
 
 **<p style="text-align: center;">
 ![TSView_Graph_Raster_DayFlow](TSView_Graph_Raster_DayFlow.png)
@@ -842,7 +855,7 @@ Time series product properties can be displayed by right clicking on a graph of
 interest and selecting the ***Properties*** menu item from the popup menu.
 Interactively changing properties allows graphs to be configured as desired.
 The following figure illustrates a time series product that has two graphs (see the
-[Time Series Product Reference](#time-series-product-reference) section for
+[Time Series Product File Reference](#time-series-product-file-reference) section for
 information about how to define time series product files, which can be used to save a product).
 
 **<p style="text-align: center;">
@@ -857,7 +870,7 @@ In many cases, a graph product will consist of only a single graph (which may sh
 However, it is also useful to display multi-graph products, especially when related data types are used.
 The TSView interface includes features to construct multi-graph products interactively,
 and the product files described in the
-[Time Series Product Reference](#time-series-product-reference) section can be created and processed.
+[Time Series Product File Reference](#time-series-product-file-reference) section can be created and processed.
 The TSTool application, for example, can interactively create or read a product
 file and display a graph similar to the one shown above.  Important considerations for multi-graph products are:
 
@@ -904,7 +917,7 @@ This minimizes the size and complexity of product definition files.
 
 The remaining discussion in this section illustrates each of the tabbed panels.
 The text-based properties that are displayed in the panels are described in the
-[Time Series Product Reference](#time-series-product-reference) section.
+[Time Series Product File Reference](#time-series-product-file-reference) section.
 
 #### Product Properties - General ####
 
@@ -1043,7 +1056,7 @@ Graph ***Y Axis (Left)*** properties include the following:
 * ***Label*** - the font for labels and precision of numerical labels can be specified.
 * ***Axis Type*** - currently this is view-only.
 * ***Min Value***, ***Max Value*** - currently this is view-only but can be set in time
-series product definition files (see the [Time Series Product Reference](#time-series-product-reference) section).
+series product definition files (see the [Time Series Product File Reference](#time-series-product-file-reference) section).
 * ***Units***, ***Ignore Units*** - currently these are view-only.
 If time series with incompatible units are graphed, ***Ignore Units*** will be checked and the units may be shown in the legend.
 
@@ -1066,7 +1079,7 @@ and will only be used if the ***Graph Type*** for the right y-axis is other than
 * ***Label*** - the font for labels and precision of numerical labels can be specified.
 * ***Axis Type*** - currently this is view-only.
 * ***Min Value***, ***Max Value*** - currently this is view-only but can be set in
-time series product definition files (see the Time Series Product Reference section).
+time series product definition files (see the [Time Series Product File Reference)(#time-series-product-file-reference) section).
 * ***Units***, ***Ignore Units*** - currently these are view-only.
 If time series with incompatible units are graphed, ***Ignore Units*** will be checked and the units may be shown in the legend.
 
@@ -1086,7 +1099,7 @@ identify points without referring to tabular data.
 The label format can be defined using the choices next to the text field or by entering literal text.
 For an XY Scatter plot, repeat the `%v` format (e.g., `%v, %v`) to show the independent (X) and dependent (Y) data values.
 See the ***DataLabel*** properties in the
-[Time Series Product Reference](#time-series-product-reference) section for label options.
+[Time Series Product File-Reference](#time-series-product-file-reference) section for label options.
 
 #### Graph Properties - Legend ####
 
@@ -1101,7 +1114,7 @@ Example Graph Legend Properties
 Graph ***Legend*** properties include format and font properties.
 If the ***Legend Format*** is `Auto`, a default legend format will be constructed from the time series description,
 identifier, and period of record.  See the `LegendFormat` property in the
-[Time Series Product Reference](#time-series-product-reference) section for legend formatting options.
+[Time Series Product File Reference](#time-series-product-file-reference) section for legend formatting options.
 The right legend will only be drawn if the Graph Type properties specify that the right y-axis type is other than None.
  
 #### Graph Properties - Zoom ####
@@ -1146,7 +1159,7 @@ Example Graph Annotation Properties
 Graph ***Annotations*** properties are used to add annotation objects to a graph.
 Annotations are text, line, or other simple shapes and are stored as simple text
 properties in time series products (see the
-[Time Series Product Reference](#time-series-product-reference) section below for more information).
+[Time Series Product File Reference](#time-series-product-file-reference) section below for more information).
 Annotations are placed on a graph using data units or a percent of the graph dimension.
 This allows annotations to move if a graph uses real-time data.
 
@@ -1237,7 +1250,7 @@ to identify points without referring to tabular data.
 The label format can be defined using the choices next to the text field or by entering literal text.
 For an XY Scatter plot, repeat the `%v` format to show the independent (X) and dependent (Y) data values.
 See the DataLabel properties in the
-[Time Series Product Reference](#time-series-product-reference) section for label options.
+[Time Series Product File Reference](#time-series-product-file-reference) section for label options.
 
 #### Time Series Properties - Legend ####
 
@@ -1253,7 +1266,7 @@ Time series ***Legend*** properties allow the legend format to be changed.
 This is useful if the time series is to have different legend labeling that the other time series in the graph.
 If the ***Legend Format*** is `Auto`, a default legend format will be constructed from the time series description, identifier, and period of record.
 See the `LegendFormat` property in the
-[Time Series Product Reference](#time-series-product-reference) section for legend formatting options.
+[Time Series Product File Reference](#time-series-product-file-reference) section for legend formatting options.
 
 #### Time Series Properties - Analysis ####
 
@@ -1408,7 +1421,7 @@ The format can contain `%` specifiers and `${ts:Property}` properties.
 	then no time zone is displayed in the date/time column.
 	In any case, the time zone can be displayed by mousing over the column headings.
 
-## Time Series Product Reference ##
+## Time Series Product File Reference ##
 
 A time series product is a report, table, or graph, although currently TSView focuses on graph products.
 Examples of time series products and their use are:
@@ -1481,6 +1494,16 @@ quite extensive and new properties are added as new features are enabled.
 As shown in the previous section, properties are defined as simple `property=value` pairs.
 These properties are used internally by the graph view (and its properties window)
 regardless of whether the graph originated from a product file or interactively.
+
+### Time Series Product File - JSON Format ###
+
+As of version 13.03.00, TSTool allows saving the time series product as a JSON file.
+All the properties described in this documentation are included in the output,
+which allows consuming software such as web applications to implement
+time series visualizations that are consistent with TSTool.
+
+### Time Series Product File - Product Properties ###
+
 The following tables list the properties that are currently
 supported or envisioned to be enabled in the future.
 The first set of properties are used to define the overall product (the full page).
@@ -1492,7 +1515,7 @@ Top-level Time Series Product Properties
 |**Product Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**|
 |--|--|--|
 |`CurrentDateTime`|The current date and time to be drawn as a vertical line on all graphs. If the property is not specified, no current date/time line will be drawn. If specified as Auto, the current system time will be used for the date/time. If specified as a valid date/time string (e.g., `2002-02-05 15`), the string will be parsed to obtain the date/time.  This property is often specified internally by the application at run time.|Not drawn.|
-|`CurrentDateTimeColor`|Color to use to draw the current date and time.  Colors can be specified as named colors (e.g., `red`), hexadecimal RGB values (e.g., `0xFF0000`), integer triplets (e.g., `255,0,0`) or floating point triplets (e.g., `1.0,0.0,0.0`).|Green|
+|`CurrentDateTimeColor`|Color to use to draw the current date and time.  See the [Color Specification](#time-series-product-file-color-specification) section.|Green|
 |`Enabled`|Indicates whether the product should be processed. Specify as `True` or `False`.|`True`|
 |`LayoutNumberOfColumns`|The number of columns in the product.|Currently always `1`.|
 |`LayoutNumberOfRows`|The number of rows in the product.|Currently equal to the number of graphs.|
@@ -1527,6 +1550,8 @@ However, at this time, all graphs in a product are placed in a single zoom group
 It is also envisioned that graphs could be placed anywhere on the page;
 however, at this time, multiple graphs on a page can only be stacked vertically, each using the full width of the page.
 
+### Time Series Product File - Graph Properties ###
+
 The following tables describe the subproduct (graph) properties.
 
 **<p style="text-align: center;">
@@ -1544,8 +1569,8 @@ Subproduct (Graph) Properties
 |`BottomXAxisTitleFontSize`|Bottom x-axis title font size, points.|`12`|
 |`BottomXAxisTitleFontStyle`|Bottom x-axis title font style (see Product `MainTitleFontStyle`).|`Plain`|
 |`BottomXAxisLabelFormat`|Format for X-axis labels.  Currently this is confined to date/time axes and only `MM-DD` is recognized.|Determined automatically.|
-|`BottomXAxisMajorGridColor`|Color to use for the major grid.|Most graph types automatically set to `None`.|
-|`BottomXAxisMinorGridColor`|Color to use for the minor grid. This property is not implemented.|`None`|
+|`BottomXAxisMajorGridColor`|Color to use for the major grid.  See the [Color Specification](#time-series-product-file-color-specification) section.|Most graph types automatically set to `None`.|
+|`BottomXAxisMinorGridColor`|Color to use for the minor grid. This property is not implemented.  See the [Color Specification](#time-series-product-file-color-specification) section.|`None`|
 |`BottomXAxisTitleString`|Bottom X-axis title string.|As appropriate for the graph type (often `None` if dates).|
 |`DataLabelFontName`|Name of font for data labels (see Product `MainLabelFontName`).|`Arial`|
 |`DataLabelFontSize`|Data label font size, points.|`10`|
@@ -1565,11 +1590,11 @@ Subproduct (Graph) Properties
 |`LeftYAxisLabelFontStyle`|Left y-axis labels font style (see Product `MainLabelFontStyle`).|`Plain`|
 |`LeftYAxisLabelPrecision`|If numeric data, the number of digits after the decimal point in labels.|Automatically determined from graph type and/or data units.|
 |`LeftYAxisLabel1000Separator`|The character to use for number 1000’s separator:<br><ul><li>`None` – do not use a separator</li><li>`,` – use comma as separator</li><li>`.` – use period as separator</li><li>Space – use a space as separator</li></ul><br>In the future a locale setting may be added.|`None`|
-|`LeftYAxisMajorGridColor`|Color to use for the major grid.|Most graph types automatically set to `lightgray`.|
-|`LeftYAxisMajorTickColor`|Color to use for the major ticks.|Typically `None` because grid is used instead.|
+|`LeftYAxisMajorGridColor`|Color to use for the major grid.  See the [Color Specification](#time-series-product-file-color-specification) section.|Most graph types automatically set to `lightgray`.|
+|`LeftYAxisMajorTickColor`|Color to use for the major ticks.  See the [Color Specification](#time-series-product-file-color-specification) section.|Typically `None` because grid is used instead.|
 |`LeftYAxisMax`|Maximum value for the left Y-Axis.|`Auto`, automatically determined. If the actual data exceed the value, the property will be ignored.|
 |`LeftYAxisMin`|Minimum value for the left Y-Axis.|`Auto`, automatically determined. If the actual data exceed the value, the property will be ignored.|
-|`LeftYAxisMinorGridColor`|Color to use for the minor grid. This property is not implemented.|`None`|
+|`LeftYAxisMinorGridColor`|Color to use for the minor grid. This property is not implemented.  See the [Color Specification](#time-series-product-file-color-specification) section.|`None`|
 |`LeftYAxisTitleFontName`|Name of font for left y-axis title (see Product `MainTitleFontName`).|`Arial`|
 |`LeftYAxisTitleFontSize`|Left y-axis title font size, points.|`12`|
 |`LeftYAxisTitleFontStyle`|Left y-axis title font style (see Product `MainTitleFontStyle`).|`Plain`|
@@ -1598,8 +1623,8 @@ Subproduct (Graph) Properties
 |`RightYAxisLabelFontStyle`|Right y-axis labels font style (see Product `MainLabelFontStyle`).|`Plain`|
 |`RightYAxisTitlePosition`|Position of the right y-axis title:  `AboveAxis`, `None`, or `RightOfAxis`.|`None`|
 |`RightYAxisTitleRotation`|Clockwise rotation from horizontal for y-axis title.  Typical values are `0` for horizontal and `90` for vertical.|`0`|
-|`RightYAxisMajorGridColor`|Color to use for the major grid.|`None`|
-|`RightYAxisMajorTickColor`|Color to use for the major ticks.|`None`|
+|`RightYAxisMajorGridColor`|Color to use for the major grid.  See the [Color Specification](#time-series-product-file-color-specification) section.|`None`|
+|`RightYAxisMajorTickColor`|Color to use for the major ticks.  See the [Color Specification](#time-series-product-file-color-specification) section.|`None`|
 |`RightYAxisMax`|Maximum value for the right Y-Axis.|`Auto`, automatically determined. If the actual data exceed the value, the property will be ignored.|
 |`RightYAxisMin`|Minimum value for the right Y-Axis.|`Auto`, automatically determined. If the actual data exceed the value, the property will be ignored.|
 |`RightYAxisTitleFontName`|Name of font for right y-axis title (see Product `MainTitleFontName`).|`Arial`|
@@ -1635,7 +1660,7 @@ Subproduct (Graph) Properties
 |`ZoomEnabled`|Indicates whether the graph can be zoomed (`true`) or not (`false).|Graph types are evaluated and the property is automatically set. XY-Scatter and Duration graphs can't zoom.|
 |`ZoomGroup`|Indicate a group identifier that is used to associate graphs for zooming purposes. For example, there may be more than one distinct group of graphs, each with its own overall period or data limits. The graph types may also be incompatible for zooming. This is an experimental feature and should currently not be specified in product files.|All graphs are assigned to zoom group 1.|
 
-### Report Subproduct Properties ###
+### Time Series Product File - Report Properties ###
 
 The following table describes the subproduct (report) properties.
 Limited support for report products are currently enabled.
@@ -1676,7 +1701,7 @@ Subproduct (Report) Properties
 |`OutputFile`|Output file when report product is generated in batch mode.  If a relative path is given, the file will be written relative to the working directory for the software.  This property is often set at run time by the application.|`C:\TEMP\tmp_report_N` on windows, `/tmp/tmp_report_N` on UNIX|
 |`Enabled`|Indicates whether the sub-product should be processed.  Specify as `true` or `false`.|`true`|
 
-### Time Series Properties ###
+### Time Series Product File - Time Series Properties ###
 
 Each subproduct (graph) includes time series data, and the presentation of each time
 series can be configured using data (time series) properties.
@@ -1691,7 +1716,7 @@ Data (Time Series) Properties
 
 |**Data (Time Series) Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--|--|--|
-|`Color`|Color to use when drawing the data. Examples are named colors (e.g., `red`), RGB triplets (e.g., `255,0,128`), and hexadecimal RGB (e.g., `0xFF0088`).|Repeating, using common colors.|
+|`Color`|Color to use when drawing the data. See the [Color Specification](#time-series-product-file-color-specification) section.|Repeating, using common colors.|
 |`DataLabelFormat`|Data label format specifiers.  See the graph DataLabelFormat property.  If the graph property is specified and the time series property is not, the graph property will be used.|Blank (no labels).|
 |`DataLabelPosition`|Data label position.  See the graph `DataLabelPosition` property.  If the graph property is specified and the time series property is not, the graph property will be used.|`Right`|
 |`Enabled`|Indicates whether the data should be processed. Specify as `true` or `false`.|`true`|
@@ -1703,16 +1728,18 @@ Data (Time Series) Properties
 |`LineWidth`|Line width, pixels.|`1`|
 |`PeriodEnd`|Ending date for time series data in the data item. The date should be formatted according to common conventions (e.g., `YYYY-MM-DD HH:mm`), and should ideally be of appropriate precision for the data being queried.  This property is often set at run time.|Full period is read.|
 |`PeriodStart`|Starting date for time series data in the data item. The date should be formatted according to common conventions (e.g., `YYYY-MM-DD HH:mm`), and should ideally be of appropriate precision for the data being queried. This property is often set at run time.|Full period is read.|
+|`RasterGraphLegendPosition` | The position of raster graph legend.  See values for the `LegendPosition` property.  Currently only `Right` is supported.  The normal legend showing the time series can be displayed in addition to the raster graph legend. | `Right` |
 |`RegressionLineEnabled`|Indicates whether the regression line should be shown (currently only used with the XY-Scatter graph type). The line is drawn in black (there is currently not a property to set the line color).|`true`|
 |`SymbolSize`|Symbol size in pixels.|`0` (no symbol)|
 |`SymbolStyle`|Symbol style. Recognized styles are:<br><ul><li>`None`</li><li>`Arrow-Down`</li><li>`Arrow-Left`</li><li>`Arrow-Right`</li><li>`Arrow-Up`</li><li>`Asterisk`</li><li>`Circle-Hollow`</li><li>`Circle-Filled`</li><li>`Diamond-Hollow`</li><li>`Diamond-Filled`</li><li>`Plus`</li><li>`Plus-Square`</li><li>`Square-Hollow`</li><li>`Square-Filled`</li><li>`Triangle-Down-Hollow`</li><li>`Triangle-Down-Filled`</li><li>`Triangle-Left-Hollow`</li><li>`Triangle-Left-Filled`</li><li>`Triangle-Right-Hollow`</li><li>`Triangle-Right-Filled`</li><li>`Triangle-Up-Hollow`</li><li>`Triangle-Up-Filled`</li><li>`X, X-Cap`</li><li>`X-Diamond`</li><li>`X-Edge`</li><li>`X-Square`</li></ul>|`None`|
+|`SymbolTablePath`| Path to a file containing symbol table, used with a raster graph.  If a relative path is specified, it is relative to the time series product file. | Default symbol table is used. |
 |`TSAlias`|Time series alias to match, will override `TSID`.|Specify `TSAlias` or `TSID`.|
 |`TSID`|Time series identifier to match, will be overrules by `TSAlias`.|Specify `TSAlias` or `TSID`.|
 |`XAxis`|X-axis to use (Bottom or Top). This currently always defaults to bottom.|`Bottom`|
 |`XYScatterConfidenceInterval`|This property is only used with XY scatter plots.  If not blank, the value indicates that confidence level lines should be drawn on the XY Scatter plot for the given confidence interval, percent.  Currently only 99 and 95 percent confidence intervals are supported.  The lines will only be drawn if the curve fit line is drawn (see `RegressionLineEnabled`).|Blank (do not draw).|
 |`YAxis`|Y-axis to use (`Left` or `Right`).|`Left`|
 
-### Annotation Properties ###
+### Time Series Product File - Annotation Properties ###
 
 Annotations are associated with subproducts (graphs) and are implemented as simple shapes that are drawn on normal graphs.
 It is envisioned that all shapes supported by the drawing package will eventually
@@ -1749,7 +1776,7 @@ Annotation Properties (All Shape Types)
 |`AnnotationID`|A string that identifies the annotation, to be used in software displays.  If there are many annotations, this helps identify them when editing.|Annotation + annotation number (1+) (e.g., `Annotation1`).|
 |`AnnotationName`|May be implemented in future since shown in the property editor.||
 |`AnnotationTableID`|The table identifier that annotation data should be taken from.  Annotation tables allow many annotations to be provided in a table using shared configuration properties.  If specified, the corresponding table must have been passed in from the software application.  The `Point` and `Points` property for the annotation can be specified using the form `${tablecolumnvalue:ColumnName}`, which will cause a look-up of the points in the table column.  Any table annotations that fall within the viewable graph will be drawn.|If not specified then normal annotation properties are used for annotation data.|
-|`Color`|Color to use when drawing the annotation. Examples are named colors (e.g., `red`), RGB triplets (e.g., `255,0,128`), and hexadecimal RGB (e.g., `0xFF0088`).|`Black`|
+|`Color`|Color to use when drawing the annotation. See the [Color Specification](#time-series-product-file-color-specification) section. |`Black`|
 |`Order`|The drawing order for the annotation:<br><ul><li>`BehindAxes` to draw behind axes.</li><li>`BehindData` to draw behind time series data.</li><li>`OnTopOfData` to draw on top of time series data.</li></ul>|`OnTopOfData`|
 |`ShapeType`|The type of shape to be drawn for the annotation.  Currently accepted values are Line, `Rectangle`, `Symbol`, and `Text`.  See the following tables for properties for each annotation shape type.|None – must be specified.|
 |`XAxisSystem`|Indicates the system for X coordinates:<br><ul><li>If `Data`, the X coordinates that are specified will be in data units.  If the x-axis is date/time, specify the value as `YYYY-MM-DD` or as appropriate for precision of date/time (future feature).</li><li>If `Percent`, the X coordinates are percent of the graph (0% is left and 100% is right).|`Data`|
@@ -1773,7 +1800,7 @@ Annotation Properties (ShapeType=Rectangle)
 |**Annotation Property**|**Description**|**Default**|
 |--|--|--|
 |`FillPattern`|Envisioned for future.  Pattern to use other than default solid fill.||
-|`OutlineColor`|Envisioned for future.  The `Color` property is used for fill color.||
+|`OutlineColor`|Envisioned for future.  The `Color` property is used for fill color.See the [Color Specification](#time-series-product-file-color-specification) section. ||
 |`Points`|X and Y coordinates for the rectangle corners, as follows:  `X1,Y1,X2,Y2`.|None – must be specified.|
 |`Transparency`|Envisioned for future.||
 
@@ -1800,6 +1827,69 @@ Annotation Properties (ShapeType=Text)
 |`Point`|X and Y coordinates for the text position, as follows:  `X1,Y1`|None – must be specified.|
 |`Text`|The string to display.|Blank|
 |`TextPosition`|Indicates the position of text, relative to the point: `UpperRight`, `Right`, `LowerRight`, `Below`, `LowerLeft`, `Left`, `UpperLeft`, `Above`, `Center`.|`Right`|
+
+### Time Series Product File - Color Specification ###
+
+Colors are specified for a number of different properties,
+including the feature color and outline color.
+In order to allow flexibility in specifying colors, a number of formats are supported:
+
+* Named color.  Available colors are: `None` (transparent), `Black`, `Blue`, `Cyan`, `DarkGray`, `Gray`, `Green`, `LightGray`, `Magenta`, `Orange`, `Pink`, `Red`, `White`, `Yellow`.
+* Comma-separated Color Triplets as 0-255 (e.g., `255,0,0`) or 0.0-1.0 (e.g., `1.0,0.0,0.0`).
+* Hexadecimal:  `0xRRGGBB` (e.g., `0xFF0000` for red).
+* Hexadecimal:  `#RRGGBB` (e.g., `#FF0000` for red).
+* All colors accept optional fourth value indicating the opacity (alpha) value.
+Opacity is the opposite of transparency and therefore an opacity of `0.0` (`0`) is fully transparent
+and `1.0` (`255`) is fully opaque.
+
+### Time Series Product File - Color Tables ###
+
+Color tables are simply a list of colors.
+Current design is focusing on symbol tables, which include more properties than color,
+as discussed in the next section.
+
+### Time Series Product File - Symbol Tables ###
+
+Symbol tables contain color and other properties to be used when visualizing data values in multiple ranges.
+For example, the time series property `SymbolTablePath` is used with raster graphs to 
+specify the colors to use for the raster graph.
+The following is an example of a symbol table file.
+
+```
+# Symbol table for air temperature raster graph with high temperature being bad.
+# TODO smalers 2021-08-29 need to find official NWS color scale or other values.
+valueMin,  valueMax, color,   opacity, fillColor, fillOpacity, comment
+-Infinity, <0,       #0000ff, 1.0,     #0000ff,   1.0,         blue
+>=0,       <32,      #00ffff, 1.0,     #00ffff,   1.0,         cyan
+>=32,      <50,      #00ff00, 1.0,     #00ff00,   1.0,         green
+>=50,      <70,      #ffff00, 1.0,     #ffff00,   1.0,         yellow
+>=70,      <80,      #ffa500, 1.0,     #ffa500,   1.0,         orange
+>=80,      <90,      #ff0000, 1.0,     #ff0000,   1.0,         red
+>=90,      <100,     #ff00ff, 1.0,     #ff00ff,   1.0,         magenta
+>=100,     Infinity, #990099, 1.0,     #990099,   1.0,         purple
+NoData,    NoData,   #ffffff, 1.0,     #ffffff,   1.0,         white
+```
+
+Symbol table file properties include the following, listed the order typically used in the file.
+Each line of the file corresponds to a range of values and color that is used for visualization.
+An operator is included with each value to ensure that the ranges are distinct and do not overlap.
+Lines beginning with `#` are optional comments.
+The first non-comment line contains the column names.
+Columns are separated by commas and can contain surrounding spaces, which will be removed when the file is read.
+
+**<p style="text-align: center;">
+Symbol Table File Properties
+</p>**
+
+| **Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
+| -- | -- |
+| `valueMin` | Minimum value in the range using syntax similar to the following.  The operator convention shown in the above example is recommended to implement consistent visualizations. <ul><li>`-Infinity` - use to indicate lower bound on values</li><li>`>= 123` - indicate the lower bound of the range</li><li>`NoData` - indicator for no data (software should detect missing values and use this color</li></ul> |
+| `valueMax` | Maximum value in the range using syntax similar to the following.  The operator convention shown in the above example is recommended to implement consistent visualizations. <ul><li>`< 123` - indicate the upper bound of the range</li><li>`Infinity` - use to indicate upper bound on values</li><li>`NoData` - indicator for no data</li></ul>|
+| `color` | Outline color for the range.  See the [Color Specification](#time-series-product-file-color-specification) section. |
+| `opacity` | Opacity for the outline color, in the range `0.0` to `1.0`. |
+| `fillColor` | Fill color for the range.  See the [Color Specification](#time-series-product-file-color-specification) section. |
+| `fillOpacity` | Opacity for the fill color, in the range `0.0` to `1.0`. |
+| Others | Ignored. |
 
 ## Time Series Graph Templates ##
 

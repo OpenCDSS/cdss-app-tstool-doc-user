@@ -19,7 +19,7 @@ See the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
 documentation for background on time series product files and editing graphs.
 
 A raster graph is a visual representation of
-time series that emphasizes trends and patterns.
+time series that emphasizes trends and patterns using colored "pixels".
 Currently this command is limited to displaying day and month interval time series.
 For example, the following figure illustrates a raster graph
 for a daily maximum temperature time series.
