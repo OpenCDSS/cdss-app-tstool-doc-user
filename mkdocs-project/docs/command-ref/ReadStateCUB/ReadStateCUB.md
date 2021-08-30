@@ -18,7 +18,7 @@ For this reason and because the number of time series in the binary file is usua
 if any other commands reference the StateCU binary file time series,
 the time series identifiers must be specified manually or use wildcards in identifiers
 (identifiers are not available to list in dialogs).
-Only data types that contain floating point numbers will be read.
+Only data types that contain floating point numbers are read.
 
 ## Command Editor ##
 
@@ -49,6 +49,17 @@ Command Parameters
 |`TSID`|Time series identifier pattern to filter the read.  Can use `${Property}` notation. |Read all time series. |
 |`InputStart`|The starting date/time to read data, specified to Month precision.  Can use `${Property}` notation. |Read all data.|
 |`InputEnd`|The ending date/time to read data, specified to Month precision.  Can use `${Property}` notation. |Read all data.|
+|`OutputVersion`| The file format version to be used for output:<ul><li>`Original` - use the original format without translation</li><li>`Latest` - use the latest format (same as `14`)</li><li>`14` - use StateCU version 14 format</li></ul>  This allows translating one binary file's contents to a different version, which is useful for automated testing and ensuring that processes work the same regardless of the input format.  See the table below for details. | No translation occurs. |
+
+The following table lists translations that occur if `OutputVersion` is used.
+
+**<p style="text-align: center;">
+`OutputVersion` Parameter Data Translations
+</p>**
+
+| **`OutputVersion`** | **Translations** |
+| -- | -- |
+| `14`<br>`Latest` | <ul><li>Location identifier `TO` is changed to `TOTAL`.</li></ul> |
 
 ## Examples ##
 
