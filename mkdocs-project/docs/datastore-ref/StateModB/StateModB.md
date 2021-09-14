@@ -15,6 +15,10 @@ These files contain important water balance information for every node in the mo
 The following table summarizes the contents of the binary files and
 corresponding text report files (all files can be large for large data sets):
 
+**<p style="text-align: center;">
+StateMod Binary Files and Corresponding Report Files
+</p>**
+
 |**Node Type**|**Monthly Binary File**|**Monthly Report File**|**Daily Binary File**|**Daily Report File**|
 |--|--|--|--|--|
 |Diversion|`*.b43`|`*.xdd`|`*.b49`|`*.xdy`|
@@ -23,7 +27,7 @@ corresponding text report files (all files can be large for large data sets):
 |Stream gage and Stream estimate|`*.b43`|`*.xdd`|`*.b49`|`*.xdy`|
 |Well|`*.b42`|`*.xwe`|`*.b65`|`*.xwy`|
 
-The following documentation describes the format of the B43 binary file.
+The following documentation describes the format of the `b43` binary file.
 Other files are similar.  See the StateMod Documentation for a complete description of StateMod output files.
 Important comments about the file format are:
 
@@ -43,7 +47,11 @@ have data items to reference the position in the river node list.
 Time series are queried using the identifiers in records 6+.
 However, the river node position is actually used to retrieve data in the file.
 
-The B43 binary file contains the following records:
+The b43 binary file contains the following records:
+
+**<p style="text-align: center;">
+`b43` Binary File Record Specification
+</p>**
 
 |**Record**|**Field**|**StateMod Variable**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Type**|**Description**|
 |--|--|--|--|--|
@@ -126,11 +134,13 @@ Time series properties are set using the following guidelines:
 * The location part of the time series identifier is taken from the identifier field in the data.
 The identifier for the specific node type (e.g., diversion) is used, not the river node identifier.
 The river node identifier is often the same as for the specific node type, but this is not a requirement within StateMod.
-* The data source part of the time series identifier is set to StateMod, because StateMod has created the output time series.
+* The data source part of the time series identifier is set to `StateMod`,
+because StateMod has created the output time series.
 * The data type is assigned as the parameter name (see record 11 above, without using the group).
+Parameters with name `NA` should be ignored because they are placeholders for future additions.
 * The data interval is assigned as Month or Day, depending on the file extension.
 * The scenario is set to blank.
-* The input type is set to StateModB.
+* The input type is set to `StateModB`, which indicates to software how to read the time series.
 * The input name is set to the name of the file.
 * The units for daily data are assigned as `CFS`.
 The units for monthly data in the files are average CFS for the month and are converted to `ACFT`,

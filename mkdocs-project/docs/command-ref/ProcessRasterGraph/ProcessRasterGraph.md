@@ -221,10 +221,10 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSProductFile`|The time series product file to process.  The path to the file can be absolute or relative to the working directory.  The Browse button can be used to select the file to write (if a relative path is desired, delete the leading path after the select).  The graph type for the product should be Raster.|None – must be specified.|
+|`TSProductFile`|The time series product file to process.  The path to the file can be absolute or relative to the working directory.  Can be specified with `${Property}`.  The graph type for the product should be `Raster`. |None – must be specified.|
 |`RunMode`|Indicate the run mode to process the product:<ul><li>`BatchOnly` – indicates that the product should only be processed in batch mode.</li><li>`GUIOnly` – indicates that the product should only be processed when the TSTool GUI is used (useful when Preview is set to Preview).</li><li>`GUIAndBatch` – indicates that the product should be processed in batch and GUI mode.</li></ul>|None – must be specified.|
 |`View`|Indicates whether the output should be previewed interactively:<ul><li>`True` – display the graph.</li><li>`False` – do not display the graph (specify the output file instead to automate image creation).</li></ul>|None – must be specified.|
-|`OutputFile`|The absolute or relative path to an output file.  Use this parameter with `View=False` to automate image processing.  If the filename ends in “jpg”, a JPEG image file will be produced.  If the filename ends in “png”, a PNG file will be produced (recommended).|Graph file will not be created.|
+|`OutputFile`|The absolute or relative path to an output file.  Use this parameter with `View=False` to automate image processing.  If the filename ends in “jpg”, a JPEG image file will be produced.  If the filename ends in “png”, a PNG file will be produced (recommended).  Can be specified with `${Property}`. |Graph file will not be created.|
 |`VisibleStart`|The starting date/time to zoom for the initial (and image file) graph.|Full period is visible.|
 |`VisibleEnd`|The ending date/time to zoom for the initial (and image file) graph.|Full period is visible.|
 

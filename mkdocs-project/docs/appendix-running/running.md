@@ -4,6 +4,7 @@
 * [Running TSTool in Interactive Mode](#running-tstool-in-interactive-mode)
 * [Running TSTool in Limited Interactive Mode](#running-tstool-in-limited-interactive-mode)
 * [Running TSTool in Command Line Batch Mode](#running-tstool-in-command-line-batch-mode)
+	+ [TSTool Command Line Parameters](#tSTool-command-line-parameters)
 	+ [Running TSTool in Command Line Batch Mode - Windows](#running-tstool-in-command-line-batch-mode-windows)
 	+ [Running TSTool in Command Line Batch Mode - Linux](#running-tstool-in-command-line-batch-mode-linux)
 * [Running TSTool as a Scheduled Task](#running-tstool-as-a-scheduled-task)
@@ -118,6 +119,9 @@ Make sure to evaluate whether the `–nomaingui` parameter is needed in addition
 * The TSTool default log file under the logs folder of the installation is used when TSTool first starts up.
 If a [`StartLog`](../command-ref/StartLog/StartLog.md) command is used in the command file,
 it will be used when the command file is run.  Refer to the appropriate log file when troubleshooting.
+
+## TSTool Command Line Parameters ##
+
 The following table lists the TSTool command line parameters.
 
 **<p style="text-align: center;">
@@ -188,6 +192,7 @@ The `--help` parameter should be used to print the current usage.
 | `--dev` | Run using software development files in the Eclipse development environment, used with automated testing. | Use production files. | 
 | `--headless` | Run in headless mode, used on Linux when running batch and unattended processes. |
 | `-h`<br>`--help` | Print the program usage. | |
+| `--java-xmx=NNNNm` | Set the Java program `-Xmx` option to indicate the maximum memory to use, for example `--java-xmx=1024m` for 1024 MB. |
 | `--` | All command parameters after double dash are ignored by the program and are passed to the TSTool software. |
 
 ### Running TSTool in Command Line Batch Mode – Mac ###

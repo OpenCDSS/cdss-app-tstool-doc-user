@@ -133,6 +133,7 @@ Command Parameters
 ||`EnsembleID2`|Second ensemble identifier to compare.|Specify if time series from 2 ensembles are compared.|
 |***Time Series (many)***|`MatchLocation`|Match the location part of time series identifiers when matching time series to compare.|`True`|
 ||`MatchDataType`|Match the data type part of time series identifiers when matching time series to compare.|`False`|
+||`MatchAlias`|Match the time series alias when matching time series to compare. If the aliases are unique, there may be no need to use `MatchLocation` and `MatchDataType`. |`False`|
 |***Analysis***|`Precision`|When comparing data values, round the values to the given precision.  For example, a precision of 2 will round to the hundredths place.  This can be used to do comparisons on the lowest precision of the available time series.|Compare the available values without rounding.|
 ||`Tolerance`|Specify a comma-separated list of values.  The difference in the time series values will be compared to the tolerances and messages printed to the log file.|A tolerance of zero will be used to detect differences.|
 ||`CompareFlags`|Indicate whether data flags should be compared, `False` or `True`. | `False`|

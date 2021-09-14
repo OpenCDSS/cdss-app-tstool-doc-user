@@ -55,13 +55,14 @@ Command Parameters
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`InputFile`<br>**required**|The name of the StateMod binary time series file to read, surrounded by double quotes.  The path to the file can be absolute or relative to the working directory.  Global property values can be inserted using the syntax `${PropertyName}`.|None – must be specified.|
-|`TSID`|Time series identifier pattern to filter the read.  Use periods to indicate separate TSID parts and use * to match patterns within the parts.|Read all time series.|
+|`TSID`|Time series identifier pattern to filter the read.  Use periods to indicate separate TSID parts and use * to match patterns within the parts. Can use `${Property}` syntax. |Read all time series.|
 |`InputStart`|The starting date/time to read data, specified to Day or Month precision based on whether a daily or monthly model run.|Read all data.|
 |`InputEnd`|The ending date/time to read data, specified to Day or Month precision based on whether a daily or monthly model run.|Read all data.|
 |`IncludeDataTypes`| List of data types to incluce, separated by spaces.  This is checked after `TSID`. | Include all.|
 |`ExcludeDataTypes`| List of data types to exclude, separated by spaces.  This is checked after `IncludeDataTypes`. | Exclude none. |
 |`Version`|StateMod version number using the form `NN.NN` (padded with leading zero for version 9) corresponding to the file, necessary because the file version number (and consequently parameters) cannot be automatically detected in older versions.  Changes in binary file format occurred with version 9.01 and 9.69, mainly to add new data types.  The StateMod file version for version 11+ is automatically detected.|Detect from the file if possible.|
 |`Alias`|The alias to assign to the time series that are read.  Use the format choices and other characters to define a unique alias.|No alias is assigned.|
+|`IfFileNotFound`  | Indicate an action if the input file is not found:<ul><li>`Ignore` - ignore the missing file and do not warn</li><li>`Warn` - generate a warning message</li><li>`Fail` - generate a failure message</li></ul> | `Warn` |
 
 ## Examples ##
 
