@@ -341,7 +341,7 @@ and the log file will contain primarily status messages, which provide useful in
 
 When troubleshooting, it is helpful to know information about the computer system and TSTool software environment.
 This information may be requested by those who are providing support.
-To view TSTool and system information, use the ***Help / About TSTool*** menu and then ***Show Software/System Details***.
+To view TSTool and system information, use the ***Help / About TSTool*** menu and then ***Show Software / System Details***.
 
 ## Errors and Possible Solutions ##
 
@@ -732,7 +732,7 @@ Additional software features may need to be implemented.
 Trying to use an older Java version to run new TSTool version may cause unexpected errors.
 This will only be a problem in custom installations where the default Java distributed with TSTool is not used.
 To determine the Java version that is being used to run TSTool and that was used to create the software,
-use the ***Help / About TSTool*** menu item and press ***Show Software/System Details*** to display information
+use the ***Help / About TSTool*** menu item and press ***Show Software / System Details*** to display information
 that includes the Java version that is being used to run TSTool.
 See the log file and command shell window for details.
 If the log file does not offer insight, contact support.
@@ -755,7 +755,7 @@ and the display resolution of the hardware.
 **Possible Solution** - A solution that does not require user action may be possible but will
 require TSTool software developers to update to Java 9 or later,
 and as of TSTool 12.06.00 Java 8 is used.
-Use the TSTool ***Help / About TSTool / Show Software/System Details*** menu to determine the Java version being used.
+Use the TSTool ***Help / About TSTool / Show Software / System Details*** menu to determine the Java version being used.
 
 Until Java can be updated and tested, a workaround requires user action.  See the
 [Stack Overflow article - "How do I run Java apps upscaled on a high-DPI display?](https://superuser.com/questions/988379/how-do-i-run-java-apps-upscaled-on-a-high-dpi-display/1207925).
