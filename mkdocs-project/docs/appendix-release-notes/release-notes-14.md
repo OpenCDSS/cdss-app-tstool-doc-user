@@ -13,7 +13,8 @@ Additional resources are needed to update the software to use 64-bit libraries f
 
 ## Changes in Version 14.0.0 ##
 
-**This is the first 64-bit Java release.  See also many new features that were added in the last 13.x releases.**
+**This is the first 64-bit Java release.
+See also many new features that were added in the last [13.x releases](release-notes-13.md).**
 
 * ![change](change.png) [14.0.0] This is the first 64-bit release with new major version number 14:
 	+ Installing version 14 will automatically copy a user's `.tstool` configuration files
@@ -25,6 +26,8 @@ Additional resources are needed to update the software to use 64-bit libraries f
 	This is an improvement over the 32-bit version, which was constrained to
 	approximately 1.2 GB of memory use.
 * ![change](change.png) [14.0.0] Enhance the raster graph:
+	+ The [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command
+	`TSProductFile` and `OutputFile` parameters can now be specified using `${Property}` syntax.
 	+ Time series product file now accepts a `Data` property `SymbolTablePath`,
 	which specifies the path to a symbol table,
 	which describes the colors for the raster graph.
@@ -51,7 +54,19 @@ Additional resources are needed to update the software to use 64-bit libraries f
 	+ Add `SummaryFile` parameter to indicate a file listing the summary of time series with
 	differences.  Time series without differences are not included in the summary.
 	The output was previously always saved in the log file.
+	+ Add `MatchAlias` parameter to match time series alias.
+	+ Improve error checks and warnings when a time series cannot be matched.
+	+ Improve performance.
 * ![change](change.png) [14.0.0] Update the
 [`ReadStateCUB`](../command-ref/ReadStateCUB/ReadStateCUB.md) command:
 	+ Added the `OutputVersion` parameter to allow old binary files to be translated to
 	latest format, necessary to minimize differences when testing.
+* ![change](change.png) [14.0.0] Update the
+[`ReadStateModB`](../command-ref/ReadStateModB/ReadStateModB.md) command:
+	+ Ignores parameter with name `NA`, which are placeholders that don't have data.
+	+ Handle the case where `b44` (reservoir) file contains no reservoir stations.
+	+ Add `IfFileNotFound` parameter to provide more control over error handling.
+* ![change](change.png) [14.0.0] Add the `--java-xmx` parameter to the Linux `tstool` shell script
+to set the maximum computer memory to use for TSTool Java Runtime Environment.
+* ![new](new.png) [14.0.0] Added the `--space-replacement` TSTool command line parameter
+to help with commands lines that include spaces in parameters.
