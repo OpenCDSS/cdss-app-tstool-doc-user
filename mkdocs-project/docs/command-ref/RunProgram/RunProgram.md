@@ -41,11 +41,15 @@ and can help ensure that the environment is properly handled.
 However, programs can often be run without a shell.
 2. It is generally easiest to specify the command line in full rather than parts.
 However, if quoting or or other syntax is complex, try specifying the command by its parts.
-3. Program output is printed to standard output (stdout) and standard error (stderr).
+3. Program output can be printed to standard output (stdout) and standard error (stderr),
+depending on how the software is written.
 It is possible to use shell redirection (`>`) to create an output file from stdout or stderr.
 However, this requires that a shell be used that recognizes the redirection.
 Alternatively, use the `StdoutFile` and `StderrFile` parameters to save output to files,
 which avoids the need to run in a shell.
+4. Program output to `stdout` can also be saved as a property (see `StdoutProperty`).
+This is particularly useful for short output such as program version,
+date/time, etc.
 
 ## Command Editor ##
 
@@ -155,6 +159,7 @@ Command Parameters
 | `ExitStatusIndicator` | This parameter may be phased out.  Instead, use The `OutputCheckTableID` with a file of stdout and/or `ExitCodeProperty`.  By default, the program exit status is determined from the process that is run.  Normally `0` means success and non-zero indicates an error.  However, the program may not exit with a non-zero exit status when an error occurs.  If the program instead uses an output string like `STOP 3` to indicate the status, use this parameter to indicate the leading string, which is followed by the exit status (e.g., `STOP`).|Determine the exit status from the process exit value.|
 | `ExitCodeProperty` | Name of the processor property to set as the exit code from the program being run.  Can specify with `${Property}`. | Property is not set.|
 | `StdoutFile` | File to save standard output messages.  Can specify with `${Property}`. | Output is printed to console/terminal. |
+| `StdoutProperty` | The name of a property to set the program standard output.  Multiple lines will be separated with newline character and whitespace is removed from front and back of the overall output. | Output is printed to console/terminal. |
 | `StderrFile` | File to save standard error messages.  Can specify with `${Property}`. | Output is printed to console/terminal. |
 | `OutputCheckTableID` | Table identifier for table containing output check patterns.  Output file content can be scanned for patterns to detect success, warning, and errors.  See the example file below for syntax of the table.  Can specify with `${Property}`. | Output is not checked.|
 | `OutputCheckWarningCountProperty` | Name of the processor property to set as the count of warning messages generated from the output table checks.  Can specify with `${Property}`. | Property is not set.|
