@@ -20,12 +20,17 @@ Additional resources are needed to update the software to use 64-bit libraries f
 the command's output files will be listed in the ***Results / Output Files***.
 Previously, a command with an error would not list its output files.
 * ![bug](bug.png) [14.0.1] Fix the [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md) command
-to properly handle comparing two files or ensembles
+to properly handle comparing two files or ensembles.
+* ![change](change.png) [14.0.1] Message dialogs now show text that can be highlighted and copied.
 * ![change](change.png) [14.0.1] Update the [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command:
 	+ Improve how test suites are handled with `IncludeTestSuite` and `ExcludeTestSuite`.  The behavior is now intuitive.
-	+ Add support for `@os linux`, which is equivalent to `@os UNIX`
+	+ Add support for `@os linux`, which is equivalent to `@os UNIX`.
 * ![change](change.png) [14.0.1] Update the [`FormatTableDateTime`](../command-ref/FormatTableDateTime/FormatTableDateTime.md) command
 to support seconds for `IncrementBaseUnit` parameter.
+* ![change](change.png) [14.0.1] Update the [`Message`](../command-ref/Message/Message.md) command to
+have `PromptActions` parameter.
+* ![change](change.png) [14.0.1] Update the [`ReadStateModB`](../command-ref/ReadStateModB/ReadStateModB.md) command
+to have `OutputVersion` parameter.
 * ![change](change.png) [14.0.1] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command
 to have `StdoutProperty` parameter.
 

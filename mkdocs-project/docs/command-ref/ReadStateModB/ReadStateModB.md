@@ -3,6 +3,7 @@
 * [Overview](#overview)
 * [Command Editor](#command-editor)
 * [Command Syntax](#command-syntax)
+    + [`OutputVersion` Parameter Details](#outputversion-parameter-details)
 * [Examples](#examples)
 * [Troubleshooting](#troubleshooting)
 * [See Also](#see-also)
@@ -60,9 +61,26 @@ Command Parameters
 |`InputEnd`|The ending date/time to read data, specified to Day or Month precision based on whether a daily or monthly model run.|Read all data.|
 |`IncludeDataTypes`| List of data types to incluce, separated by spaces.  This is checked after `TSID`. | Include all.|
 |`ExcludeDataTypes`| List of data types to exclude, separated by spaces.  This is checked after `IncludeDataTypes`. | Exclude none. |
-|`Version`|StateMod version number using the form `NN.NN` (padded with leading zero for version 9) corresponding to the file, necessary because the file version number (and consequently parameters) cannot be automatically detected in older versions.  Changes in binary file format occurred with version 9.01 and 9.69, mainly to add new data types.  The StateMod file version for version 11+ is automatically detected.|Detect from the file if possible.|
+|`Version`|StateMod version number for the binary file using the form `NN.NN` (padded with leading zero for version 9) corresponding to the file, necessary because the file version number (and consequently parameters) cannot be automatically detected in older versions.  Changes in binary file format occurred with version 9.01 and 9.69, mainly to add new data types.  The StateMod file version for version 11+ is automatically detected.|Detect from the file if possible.|
+| `OutputVersion` | StateMod version that should be used for output, used when reading an old binary file but want to appear as if the file were a newer version.  This is used to overcome issues in binary files and allow automated testing to match time series for comparison.  See the details in the following table.  The parameter value can be:<ul><li>`Latest` - try to transform the binary file time series into current format</li><li>`Original` - use the original binary file format without transformation</li></ul> | `Original` |
 |`Alias`|The alias to assign to the time series that are read.  Use the format choices and other characters to define a unique alias.|No alias is assigned.|
 |`IfFileNotFound`  | Indicate an action if the input file is not found:<ul><li>`Ignore` - ignore the missing file and do not warn</li><li>`Warn` - generate a warning message</li><li>`Fail` - generate a failure message</li></ul> | `Warn` |
+
+### `OutputVersion` Parameter Details ###
+
+The following transformations occur if `OutputVersion=Latest` is used.
+
+**<p style="text-align: center;">
+`OutputVersion` Transformations
+</p>**
+
+| **Original Content** | **TransformedContent** |
+| -- | -- |
+| Duplicate `Total_Release` parameter in Fortran parameter position 20. | Change to `River_Release`. |
+| Duplicate `Total_Supply` parameter in Fortran parameter position 21. | Change to `River_Divert`. |
+
+Additional transformations may be necessary (or possible) but have not been implemented pending clarification
+of the technical approach.
 
 ## Examples ##
 
