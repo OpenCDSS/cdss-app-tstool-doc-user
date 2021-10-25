@@ -473,11 +473,13 @@ StateCUEnabled = true
 StateModEnabled = true
 ... etc ...
 
-# Program to use for file differences, intended to be graphical file difference
-# viewer. The program will be called as DiffProgram File1 File2.
+# Program to use for file differences, intended to be graphical file difference viewer.
+# The program will be called as DiffProgram File1 File2.
 # It is up to the user to install KDiff3 on the computer or change the following
 # to a different program.
 DiffProgram = "C:\Program Files\KDiff3\kdiff3.exe"
+DiffProgram.Windows = "C:\Program Files\KDiff3\kdiff3.exe"
+DiffProgram.Linux = "/usr/bin/kdiff3"
 
 # Online documentation home.
 # - the first is the primary documentation root for the latest software version

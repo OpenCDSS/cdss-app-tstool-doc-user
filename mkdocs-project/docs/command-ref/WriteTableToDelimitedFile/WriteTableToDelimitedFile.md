@@ -49,6 +49,8 @@ Command Parameters
 | --------------|-----------------|----------------- |
 |`TableID`<br>**required**|Identifier for the table to write.  Can be specified using processor `${Property}`.|None – must be specified.|
 |`OutputFile`<br>**required**|The name of the file to write, as an absolute path or relative to the command file location.  Can be specified using processor `${Property}`.|None – must be specified.|
+|`IncludeColumns`|The names of columns to write, separated by commas.|Write all of the columns.|
+|`ExcludeColumns`|The names of columns to **not** write, separated by commas.|Write all of the included columns.|
 |`WriteHeaderComments`|Indicates whether to write the header comments, `True` or `False`.  Some programs do not handle delimited files with comments.|`True`|
 |`WriteColumnNames`|Indicates whether to write the column names, `True` or `False`.  Some programs do not handle column names. |`True`|
 |`Delimiter`|Delimiter character to separate column values, must be a single character if specified |`,` (comma)|

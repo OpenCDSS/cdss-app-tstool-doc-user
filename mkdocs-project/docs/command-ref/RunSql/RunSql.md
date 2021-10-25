@@ -34,6 +34,8 @@ The SQL statement can be specified in the following ways:
 	+ Comments in SQL can be specified using
 	[`/* */`](../CommentBlockStart/CommentBlockStart.md) notation or `--` (double dash) for end of line comments.
 	These comments are removed by TSTool for Microsoft Access because Access does not support comments in SQL statements.
+	+ Newlines can be used to format SQL by using `Enter` when editing SQL and
+	are shown as `\n` in the SQL text.
 * Specify an SQL select statement in a file:
 	+ Similar to the above option; however, the SQL statement is read from a file.
 	+ Useful if the SQL statement is also used by other tools.
