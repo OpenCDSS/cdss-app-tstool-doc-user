@@ -1,6 +1,7 @@
 # TSTool / Command / NewSQLiteDatabase #
 
 * [Overview](#overview)
+    + [In-Memory Database](#in-memory-database)
 * [Command Editor](#command-editor)
 * [Command Syntax](#command-syntax)
 * [Examples](#examples)
@@ -30,8 +31,19 @@ commands to handle an existing database file before creating a new database with
 for example if rerunning a command file
 * the datastore is dynamically created as a
 [`GenericDatabase`](../../datastore-ref/GenericDatabase/GenericDatabase.md) using ODBC/JDBC connection
-* not all commands will list the datastore in editor datastore
-selector lists - software enhancements are being implemented to better handle dynamic datastores
+
+### In-Memory Database
+
+A file database may perform slowly on database inserts due to the need to write to disk and 
+the relatively slow speed of disk seek and write (compared to in-memory operations).
+Therefore, if performing many inserts, such as when populating a database for distribution,
+it may be better to create an in-memory database by specifying `Memory` as the database filename.
+Then, when inserts are complete, write the database to a filename using a database backup,
+for example, by running a command similar to the following (note that `backup to` must be lower case):
+
+```
+RunSql(DataStore="DatastoreName",Sql="backup to ${WorkingDirPortable}/db/thedatabase.db")
+```
 
 ## Command Editor ##
 

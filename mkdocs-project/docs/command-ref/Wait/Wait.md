@@ -47,8 +47,8 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`WaitTime`<br>**required**|The number of seconds to wait, can be specified using `${Property}`.|None – must be specified.|
-|`ProgressIncrement`|The number of seconds between progress updates in the main TSTool progress indicator, can be specified using `${Property}`.|`WaitTime` divided by ten.|
+|`WaitTime`<br>**required**|The number of seconds to wait, can be specified using `${Property}`.  Can specify as a decimal with minimum value of `.001` (1 ms). |None – must be specified.|
+|`ProgressIncrement`|The number of seconds between progress updates in the main TSTool progress indicator, can be specified using `${Property}`.  Can be specified as a decimal. |`WaitTime` divided by ten.|
 
 ## Examples ##
 
