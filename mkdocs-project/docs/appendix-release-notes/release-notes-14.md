@@ -44,6 +44,7 @@ and default to KDiff3 as an example of typical use.
 * ![change](change.png) [14.0.1] Update the [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command:
     + Improve how test suites are handled with `IncludeTestSuite` and `ExcludeTestSuite`.  The behavior is now intuitive.
     + Add support for `@os linux`, which is equivalent to `@os UNIX`.
+    + Allow the `SearchFolder` parameter to list more than one folder
 * ![change](change.png) [14.0.1] Update the [`FormatTableDateTime`](../command-ref/FormatTableDateTime/FormatTableDateTime.md) command
 to support seconds for `IncrementBaseUnit` parameter.
 * ![change](change.png) [14.0.1] Update the [`Message`](../command-ref/Message/Message.md) command to
