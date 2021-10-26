@@ -22,6 +22,9 @@ are assumed to be command files that can be run to test the software.
 The resulting command file is a test suite comprised of all the individual tests and can be used
 to verify software before release.
 The goal is to have all tests pass before software is released and not retain broken tests in the test repository.
+A passing test normally means that software is able to produce a result; however,
+it may mean that software is unable to achieve a result,
+and such a failure is expected and handled (see the `#@expectedStatus` annotation below).
 
 The following table lists tags (annotations) that can be placed in `#` comments in command files to provide information for testing, for example:
 
@@ -38,6 +41,7 @@ The following table lists tags (annotations) that can be placed in `#` comments 
 |-----------------------|-----------------|
 | `#@enabled False` | The `RunCommands` command will by default run the command file that is provided.  However, if the `@enabled False` tag is specified in a comment in the command file, `RunCommands` will skip the command file.  This is useful to disable a test that needs additional work. |
 | `#@expectedStatus Failure`<br>`#@expectedStatus Warning` | The `RunCommands` command `ExpectedStatus` parameter is by default `Success`.  Using the comment in the original command file will result in a corresponding `RunCommands(ExpectedStatus=...)` parameter to indicate how to handle overall test status.  A status can be specified if it is expected that a command file will result in Warning or Failure and still be a successful test.  For example, if a command is obsolete and should generate a failure, the expected status can be specified as `Failure` and the test will pass.  Another example is to test that the software properly treats a missing file as a failure. **In the future, the individual command file status may be detected without needing to use a `RunCommands` parameter.** |
+| `#@order ...` | Control the order of command files (**under development**). | |
 | `#@os Windows`<br>`#@os UNIX`<br>`#@os linux` | The test is designed to work only on the specified platform and will be included in the test suite only if the `IncludeOS` parameter includes the corresponding operating system (OS) type.  This is primarily used to test specific features of the OS and similar but separate test cases should be implemented for both OS types.  If the OS type is not specified as a tag in a command file, the test is always included (see also the handling of included test suites).  `UNIX` is equivalent to `linux` and can also be used for Apple computers.  **This may be replaced with `require` in the future.** |
 | `@readOnly` |Indicates that the command file should not be edited.  TSTool will update old command syntax to current syntax when a command file is loaded.  However, this tag will cause the software to warn the user when saving the command file, so that they can cancel.|
 | `@require ...` | Indicate requirements that must be met as a pre-condition in order to successfully run the command file. See the discussion below.|
@@ -53,6 +57,7 @@ The `@require` comments can be interpreted in two general cases:
 * pre-processing command files as a filter, such as by this command
 	+ this may result in a test being omitted from a test suite
 * run-time requirement checks to ensure conditions for a test
+	+ for example, require that the test is being run by a normal or root/admin/sudo user
 	+ this is the default case when running commands
 	+ this may result in tests failing if requirements are not met
 
@@ -91,7 +96,7 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `SearchFolder`<br>**required** | The folder to search for regression test command files.  All subfolders will also be searched.  Can use `${Property}`. | None - must be specified. |
+| `SearchFolder`<br>**required** | One or more folders to search for regression test command files, separated by commas.  All subfolders will also be searched.  Can use `${Property}`. The order of files for processing is as follows:<ol><li>Search folders are in the order specified in the parameter.</li><li>Matched files within a top-level search folder are sorted alphabetically.</li><li>The `#@order` annotations are evaluated and order adjusted accordingly (under development).</li></ol>| None - must be specified. |
 | `OutputFile`<br>**required** | The name of the command file to create, enclosed in double quotes if the file contains spaces or other special characters.  A path relative to the command file containing this command can be specified.  Can specify using `${Property}`.| None - must be specified.|
 | `SetupCommandFile` |  The name of a TSTool command file that supplies setup commands, and which will be prepended to output.  Use such a file to open database connections and set other global settings that apply to the entire test run.  Can specify using `${Property}`. | Do not include setup commands.|
 | `TestResultsFile` | The `OutputFile` for the [`StartRegressionTestResultsReport`](../StartRegressionTestResultsReport/StartRegressionTestResultsReport.md) file containing test results.  The path will be relative to the `OutputFile` folder from this `CreateRegressionTestCommandFile` command. | `OutputFile` + `.out.txt` |
