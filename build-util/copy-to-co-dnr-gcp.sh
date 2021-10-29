@@ -5,19 +5,10 @@
 
 # Supporting functions, alphabetical.
 
+# Build the MkDocs 'site' folder.
 buildMkDocsSite() {
   cd ${mkdocsProjectFolder}
-  if [ "$operatingSystem" = "cygwin" -o ${operatingSystem} = "linux" ]; then
-    # MkDocs is installed in a standard location.
-    mkdocs build --clean
-  elif [ "$operatingSystem" = "mingw" ]; then
-    # Use the Windows Python.
-    py -m mkdocs build --clean
-  else
-    echo ""
-    echo "Don't know how to run on operating system $operatingSystem"
-    exit 1
-  fi
+  ${mkdocsExe} build --clean
 }
 
 # Make sure the MkDocs version is consistent with the documentation content:
@@ -139,6 +130,37 @@ printUsage() {
   echo ""
 }
 
+# Set the MkDocs executable to use, depending operating system and PATH:
+# - sets the global ${mkdocsExe} variable
+# - return 0 if the executable is found, exit with 1 if not
+setMkDocsExe() {
+  if [ "${operatingSystem}" = "cygwin" -o "${operatingSystem}" = "linux" ]; then
+    # Is usually in the PATH.
+    mkdocsExe="mkdocs"
+    if hash py 2>/dev/null; then
+      echo "mkdocs is not found (not in PATH)."
+      exit 1
+    fi
+  elif [ "${operatingSystem}" = "mingw" ]; then
+    # This is used by Git Bash:
+    # - calling 'hash' is a way to determine if the executable is in the path
+    if hash py 2>/dev/null; then
+      mkdocsExe="py -m mkdocs"
+    else
+      # Try adding the Windows folder to the PATH and rerun:
+      # - not sure why C:\Windows is not in the path in the first place
+      PATH=/C/Windows:${PATH}
+      if hash py 2>/dev/null; then
+        mkdocsExe="py -m mkdocs"
+      else
+        echo 'mkdocs is not found in C:\Windows.'
+        exit 1
+      fi
+    fi
+  fi
+  return 0
+}
+
 # Sync the files to the cloud:
 # - if copyToLatest="yes", also sync to latest folder
 syncFiles() {
@@ -189,6 +211,10 @@ syncFiles() {
 
 # Check the operating system.
 checkOperatingSystem
+
+# Set the MkDocs executable:
+# - will exit if MkDocs is not found
+setMkDocsExe
 
 # Make sure the MkDocs version is OK.
 checkMkdocsVersion
