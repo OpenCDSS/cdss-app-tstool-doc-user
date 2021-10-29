@@ -20,11 +20,13 @@ Additional resources are needed to update the software to use 64-bit libraries f
 the command's output files will be listed in the ***Results / Output Files***.
 Previously, a command with an error would not list its output files.
 * ![bug](bug.png) [14.0.1] Fix problem with command documentation not finding latest documentation
-if versioned documentation does not exist.
-* ![bug](bug.png) [14.0.1] Add a ***Cancel*** button to the ***Tools / Diagnostics*** dialog
-and clarify the tooltips on buttons related to setting diagnostics properties.
+if versioned documentation does not exist and update documentation URLs to `https`.
 * ![bug](bug.png) [14.0.1] Fix the [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md) command
 to properly handle comparing two files or ensembles.
+* ![bug](bug.png) [14.0.1] Fix bug where command with `#@expectedStatus` comment that, when run returned a different status,
+was not resulting in a failure indication in the user interface.
+* ![change](change.png) [14.0.1] Add a ***Cancel*** button to the ***Tools / Diagnostics*** dialog
+and clarify the tooltips on buttons related to setting diagnostics properties.
 * ![change](change.png) [14.0.1] Add `TSTool.cfg` configuration properties `DiffProgram.Windows` and
 `DiffProgram.Linux` to allow configuring visual difference program for each environment
 without having to change the single `DiffProgram` configuration property,
@@ -48,18 +50,19 @@ and default to KDiff3 as an example of typical use.
 * ![change](change.png) [14.0.1] Update the [`FormatTableDateTime`](../command-ref/FormatTableDateTime/FormatTableDateTime.md) command
 to support seconds for `IncrementBaseUnit` parameter.
 * ![change](change.png) [14.0.1] Update the [`Message`](../command-ref/Message/Message.md) command to
-have `PromptActions` parameter, which enables interactive prompts to confirm message in command forkflows.
+have `PromptActions` parameter, which enables interactive prompts to confirm message in command workflows,
+for example to prompt for confirmation for destructive actions such as removing files and folders.
 * ![change](change.png) [14.0.1] Update the [`ReadStateModB`](../command-ref/ReadStateModB/ReadStateModB.md) command
-to have `OutputVersion` parameter.
+to have `OutputVersion` parameter, which allows converting old data files to current format.
 * ![change](change.png) [14.0.1] Update the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command:
     + allow newline character in `Sql` parameter to format multi-line SQL
     + default floating point column precision to 6 digits for SQLite databases
     + add `OutputProperties` parameter to set output properties when a single row is returned
 * ![change](change.png) [14.0.1] Update the [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
-to accept space for `Delimiter` parameter, using `\s` notation
+to accept space for `Delimiter` parameter, using `\s` notation.
 * ![change](change.png) [14.0.1] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command
 to have `StdoutProperty` parameter.
-* ![change](change.png) [14.0.1] Fix the [`Wait`](../command-ref/Wait/Wait.md) command to properly handle small wait time specified as decimal
+* ![change](change.png) [14.0.1] Fix the [`Wait`](../command-ref/Wait/Wait.md) command to properly handle small wait time specified as decimal fraction of second.
 * ![change](change.png) [14.0.1] Update the [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command
 to have `IncludeColumns` and `ExcludeColumns` parameters.
 

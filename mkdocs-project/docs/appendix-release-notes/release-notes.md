@@ -3,8 +3,6 @@
 This appendix provides information about changes that have occurred in TSTool.
 A summary table is provided, with links to details for major versions.
 
-* [TSTool Version Numbering Convention](#tstool-version-numbering-convention)
-* [TSTool Issue Icons](#tstool-issue-icons)
 * [TSTool Version History](#tstool-version-history)
 * [Known Limitations](#known-limitations)
 * [TSTool Version Details](#tstool-version-details) - the following are separate documentation pages
@@ -17,50 +15,10 @@ A summary table is provided, with links to details for major versions.
 	+ [Version 8 Details](release-notes-08.md)
 	+ [Version 7 Details](release-notes-07.md)
 	+ [Version 6 Details](release-notes-06.md)
+* [TSTool Version Numbering Convention](#tstool-version-numbering-convention)
+* [TSTool Issue Icons](#tstool-issue-icons)
 
 ---------------
-
-## TSTool Version Numbering Convention ##
-
-TSTool versioning generally adheres to the following pattern.
-The version may be incremented in source code but does not become official until a public software release is made.
-
-```
-Major.Minor.Maintenance
-```
-where:
-
-* `Major` is a number indicating a major change to the software
-* `Minor` is a number indicating a minor change to the software
-* `Maintenance` is a number indicating a maintenance release,
-for example to fix a bug with no new features
-* The version may also be followed by another indicator such as "beta" to indicate a beta release
-* Numbers have traditionally been two digits and zero-padded;
-however, the zero-padding convention may be abandoned moving forward given
-that the major version does not require it to sort the version.
-
-This convention is not always strictly followed but more attention to this standard is now occurring.
-
-The above version string is used in the software as follows, where `Version` is the version as noted above:
-
-* installation folder on Windows is `C:\CDSS\TSTool-Version`
-* Windows ***Start*** menu is ***Start / CDSS / TSTool-Version***
-* Windows install file is `TSTool_CDSS_Version_Setup.exe`
-
-## TSTool Issue Icons ##
-
-The following icons are used to indicate the type of issue in release notes.
-
-* ![limitation](limitation.png) **Known Limitation** – A known limitation has been documented and may impact the user.
-The limitation will be addressed in a future release.
-* ![bug](bug.png) **Bug Fix** – A bug has been fixed.  Users should evaluate whether their work is impacted.
-Sometimes bug fixes impact internal code and changes may not be very visible to users.
-* ![remove](remove.png) **Remove** – A feature has been removed, generally because functionality
-has been migrated to other code or the functionality is no longer needed (e.g., a database is no longer available).
-* ![change](change.png) **Update/Change** – An existing feature has been changed or enhanced.
-Backward compatibility is usually retained.  Modifications to an existing command are considered a change.
-* ![new](new.png) **New Feature** – A new feature has been added, such as a new command.
-New features may or may not be obvious to users but will generally be visible in menus.
 
 ## TSTool Version History ##
 
@@ -77,6 +35,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.0.1](release-notes-14.md)|Maintenance release, mainly related to fixes related to automated testing.|2021-10-29|
 |[14.0.0](release-notes-14.md)|First 64-bit Java release.|2021-08-26|
 |[13.04.00](release-notes-13.md)|Enhancements to facilitate automated testing, final 32-bit Java release.|2021-08-24|
 |[13.03.00](release-notes-13.md)|Many enhancements to automate processing of large datasets.|2020-08-12|
@@ -206,3 +165,46 @@ This is due to the initial checks on filenames not fully recognizing the impacts
 [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) commands.
 It is recommended that the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) command be avoided and
 that paths be specified relative to the command file.
+
+## TSTool Version Numbering Convention ##
+
+TSTool versioning generally adheres to the following pattern.
+The version may be incremented in source code but does not become official until a public software release is made.
+
+```
+Major.Minor.Maintenance
+```
+where:
+
+* `Major` is a number indicating a major change to the software
+* `Minor` is a number indicating a minor change to the software
+* `Maintenance` is a number indicating a maintenance release,
+for example to fix a bug with no new features
+* The version may also be followed by another indicator such as "beta" to indicate a beta release
+* Numbers have traditionally been two digits and zero-padded;
+however, the zero-padding convention may be abandoned moving forward given
+that the major version does not require it to sort the version.
+
+This convention is not always strictly followed but more attention to this standard is now occurring.
+
+The above version string is used in the software as follows, where `Version` is the version as noted above:
+
+* installation folder on Windows is `C:\CDSS\TSTool-Version`
+* Windows ***Start*** menu is ***Start / CDSS / TSTool-Version***
+* Windows install file is `TSTool_CDSS_Version_Setup.exe`
+
+## TSTool Issue Icons ##
+
+The following icons are used to indicate the type of issue in release notes.
+
+* ![limitation](limitation.png) **Known Limitation** – A known limitation has been documented and may impact the user.
+The limitation will be addressed in a future release.
+* ![bug](bug.png) **Bug Fix** – A bug has been fixed.  Users should evaluate whether their work is impacted.
+Sometimes bug fixes impact internal code and changes may not be very visible to users.
+* ![remove](remove.png) **Remove** – A feature has been removed, generally because functionality
+has been migrated to other code or the functionality is no longer needed (e.g., a database is no longer available).
+* ![change](change.png) **Update/Change** – An existing feature has been changed or enhanced.
+Backward compatibility is usually retained.  Modifications to an existing command are considered a change.
+* ![new](new.png) **New Feature** – A new feature has been added, such as a new command.
+New features may or may not be obvious to users but will generally be visible in menus.
+
