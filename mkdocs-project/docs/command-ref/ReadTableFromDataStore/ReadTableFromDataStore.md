@@ -1,6 +1,7 @@
 # TSTool / Command / ReadTableFromDataStore #
 
 * [Overview](#overview)
+    + [Limitations](#limitations)
 * [Command Editor](#command-editor)
 * [Command Syntax](#command-syntax)
 * [Examples](#examples)
@@ -15,15 +16,18 @@ The `ReadTableFromDataStore` command executes
 a database query for a datastore that is associated with a database,
 and places the result in a TSTool table,
 which can subsequently be processed with other TSTool commands.
-This command cannot be used with web service datastores because the underlying
-software relies on a database to perform the query.
-If database datastore support is not specifically provided by TSTool,
-a generic database datastore can be used (see the
-[Generic Database DataStore appendix](../../datastore-ref/GenericDatabase/GenericDatabase.md).
-For example, use a generic database datastore to read data from a Microsoft Access database.
 This command is useful when the database can provide results with a simple query and
 tight integration with TSTool is not required or has not been implemented
 via an application programming interface (API).
+This command cannot be used with web service datastores because the underlying
+software relies on a database to perform the query.
+
+If database datastore support is not provided by a built-in TSTool datastore,
+a generic database datastore can be used (see the
+[Generic Database DataStore appendix](../../datastore-ref/GenericDatabase/GenericDatabase.md)).
+A datastore plugin may also be available for a database,
+in which case the plugin software can be developed and maintained separate from the main TSTool software.
+
 The query can be specified in the following ways:
 
 * Specify a single table/view to query:
@@ -41,21 +45,29 @@ The query can be specified in the following ways:
 	+ SQL syntax is not checked for validity and therefore error messages
 	from the database may be more difficult to interpret.
 	+ Comments can be specified using [`/* */`](../CommentBlockStart/CommentBlockStart.md)
-	notation or - - (double dash) for end of line comments.
-	TSTool removes comments if using Microsoft Access because Access does not support comments in SQL.
+	notation for 1+ line comments or `--` (double dash) for single line comments.
+	The comments are removed before executing the query if comments are not supported by the database software.
+	Newlines can be used to format SQL by using `Enter` when editing SQL and
+	are shown as `\n` in the SQL parameter.
 * Specify an SQL select statement in a file:
-	+ Similar to the above option; however, the SQL statement is read from a file
-	+ Useful if the SQL statement is also used by other tools
+	+ Similar to the above option; however, the SQL statement is read from a file.
+	+ Useful if the SQL statement is also used by other tools.
+* Specify a function to run:
+	+ **This functionality is under development - functions can typically be called in `SELECT` statements.**
+	+ Available functions are listed using function signature with parameter types and return value.
+	+ Function parameters, if required, are specified with `ProcedureParameters` parameter.
 * Specify a procedure to run:
-	+ Available procedures are listed and can be selected
+	+ **This functionality is under development.**
+	+ Available procedures are listed using procedure signature with parameter types and return value.
 	+ Procedure parameters, if required, are specified with `ProcedureParameters` parameter.
 	+ Procedure return status, if available, can be saved as a property with `ProcedureReturnProperty` parameter.
 
 General constraints on the query are as follows:
 
-* the table, views, and procedures being queried must be readable
-	(some databases restrict direct access to data  and require using stored procedures)
+* the tables, views, functions, and procedures being queried must be readable
 * the resulting table in TSTool will have columns with names that match the database query results
+* SQL syntax varies between database software so care should be take to use standard SQL if possible,
+if the commands will be run on different databases.
 * data types for columns will closely match the database results:
 	+ data will be treated as strings if unable to match the database column type
 	+ the precision of floating point numbers for displays is defaulted to 6 digits
@@ -67,6 +79,18 @@ General constraints on the query are as follows:
 
 Future enhancements will add additional features to intelligently map database results to TSTool tables.
 
+### Limitations ###
+
+The ability to run functions and procedures is under development.
+Functions and procedures can be overloaded in some databases,
+meaning that the same function name has different parameters.
+Consequently, to select a function or procedure to run,
+it is necessary to select a function's unique signature,
+which includes the parameter names and types.
+
+**The ability to run functions and procedures will be fully enabled in the future.**
+Many databases allow functions to be called in `SELECT` statements.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the syntax for the command,
@@ -77,7 +101,7 @@ in this case reading a small table from the State of Colorado’s HydroBase.
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Querying a Single Table (or View) (<a href="../ReadTableFromDataStore_Table.png">see the full-size image</a>)
+`ReadTableFromDataStore` Command Editor when Querying a Single Table or View (<a href="../ReadTableFromDataStore_Table.png">see the full-size image</a>)
 </p>**
 
 The corresponding output table is as shown below:
@@ -112,28 +136,26 @@ The following example illustrates using an SQL file:
 `ReadTableFromDataStore` Command Editor when Specifying an SQL File (<a href="../ReadTableFromDataStore_SQLFile.png">see the full-size image.</a>)
 </p>**
 
-The following example illustrates using a database procedure:
-
-**<p style="text-align: center;">
-![ReadTableFromDataStore Procedure](ReadTableFromDataStore_Procedure.png)
-</p>**
-
-**<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specyfing a Procedure (<a href="../ReadTableFromDataStore_Procedure.png">see the full-size image</a>)
-</p>**
-
 The following example illustrates using a database function.
-Database technologies may use procedures and functions interchangeably 
-or only offer support for one approach; therefore,
-support for functions is limited because procedures often work.
-Additional features will be added for functions in the future.
+The ***Edit*** dialog will automatically populate the list of parameters if the database metadata provides such information.
 
 **<p style="text-align: center;">
 ![ReadTableFromDataStore Function](ReadTableFromDataStore_Function.png)
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specyfing a Function (<a href="../ReadTableFromDataStore_Function.png">see the full-size image</a>)
+`ReadTableFromDataStore` Command Editor when Specifying a Function (<a href="../ReadTableFromDataStore_Function.png">see the full-size image</a>)
+</p>**
+
+The following example illustrates using a database procedure.
+The ***Edit*** dialog will automatically populate the list of parameters if the database metadata provides such information.
+
+**<p style="text-align: center;">
+![ReadTableFromDataStore Procedure](ReadTableFromDataStore_Procedure.png)
+</p>**
+
+**<p style="text-align: center;">
+`ReadTableFromDataStore` Command Editor when Specifying a Procedure (<a href="../ReadTableFromDataStore_Procedure.png">see the full-size image</a>)
 </p>**
 
 The following illustrates how to set properties if the result is a single row.
@@ -144,7 +166,7 @@ This is useful when querying configuration or controlling data from the database
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specyfing Output Properties (<a href="../ReadTableFromDataStore_OutputProperties.png">see the full-size image</a>)
+`ReadTableFromDataStore` Command Editor when Specifying Output Properties (<a href="../ReadTableFromDataStore_OutputProperties.png">see the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -161,18 +183,20 @@ Command Parameters
 |**Query Method**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------------|-----------------|-----------------|----|
 |All|`DataStore`<br>**required**|The name of a database datastore to read.|None – must be specified.|
-|Table/view|`DataStoreTable`|The name of the database table or view to read when querying a single table or view.  If specified, do not specify `Sql` or `SqlFile`.|None.|
-|Table/view|`DataStoreColumns`|When reading a single table/view, the names of the columns to read, separated by commas.|All columns from `DataStoreTable` are read.|
-|Table/view|`OrderBy`|When reading a single table/view, a list of column names separated by commas to control the order of output.  Additional modifiers are allowed for each column, for example to ignore case when sorting with SQLite, can use: `columnName COLLATE NOCASE`.|Default database sort order will be used.|
-|Table/view|`Top`|Indicate that Top rows should be returned.  This functionality may not be implemented for all databases (SQL is not fully standardized for this feature).  This parameter is useful to determine the columns for a table prior to using the `Sql` or `SqlFile` parameters.|Return all rows.|
-|SQL string|`Sql`|The SQL string that will be used to query the database, optionally using `${Property}` notation to insert processor property values.  If specified, do not specify `DataStoreTable` or `SqlFile`.|None.|
-|SQL file|`SqlFile`|The name of the file containing an SQL string to execute, optionally using `${Property}` notation in the SQL file contents to insert processor property values.  If specified, do not specify `DataStoreTable` or `Sql`.|None.|
-|Procedure|`DataStoreProcedure`|The name of the database procedure to run. |None.|
-|Procedure|`ProcedureParameters`|Parameters for procedure/function, in order that is required.  Use the ***Edit*** button to see the list of parameters and their type.||
-|Procedure|`ProcedureReturnProperty`|Property name for procedure return value.||
+|***Table and columns***|`DataStoreTable`|The name of the database table or view to read when querying a single table or view.  If specified, do not specify `Sql`, `SqlFile`, `DataStoreFunction`, or `DataStoreProcedure`.|None.|
+||`DataStoreColumns`|When reading a single table/view, the names of the columns to read, separated by commas.|All columns from `DataStoreTable` are read.|
+||`OrderBy`|When reading a single table/view, a list of column names separated by commas to control the order of output.  Additional modifiers are allowed for each column, for example to ignore case when sorting with SQLite, can use: `columnName COLLATE NOCASE`.|Default database sort order will be used.|
+||`Top`|Indicate that Top rows should be returned.  This functionality may not be implemented for all databases (SQL is not fully standardized for this feature).  This parameter is useful to determine the columns for a table prior to using the `Sql` or `SqlFile` parameters.|Return all rows.|
+|***SQL string***|`Sql`|The SQL string that will be used to query the database, optionally using `${Property}` notation to insert processor property values.  If specified, do not specify `DataStoreTable`, `SqlFile`, `DataStoreFunction`, or `DataStoreProcedure`.|None.|
+|***SQL file***|`SqlFile`|The name of the file containing an SQL string to execute, optionally using `${Property}` notation in the SQL file contents to insert processor property values.  If specified, do not specify `DataStoreTable`, `Sql`, `DataStoreFunction`, or `DataStoreProcedure`.|None.|
+|***Function*** | `DataStoreFunction`|The name of the database function to run, as full signature if metadata are available.  If specified, do not specify `DataStoreTable`, `Sql`, `SqlFile`, or `DatabaseProcedure`.|None.|
+| |`FunctionParameters`|Parameters for function, in order that is required, using syntax `parameter1:value1,parameter2:value2,...`.  Use the ***Edit*** button to see the list of parameters and their type.||
+|***Procedure***|`DataStoreProcedure`|The name of the database procedure to run, as full signature if metadata are available. If specified, do not specify `DataStoreTable`, `Sql`, `SqlFile`, or `DataStoreFunction`. |None.|
+||`ProcedureParameters`|Parameters for procedure/function, in order that is required, using syntax `parameter:value1,parameter2:value2,...`.  Use the ***Edit*** button to see the list of parameters and their type.||
+||`ProcedureReturnProperty`|Property name for procedure return value.||
 |All|`OutputProperties`|A map of table column names to processor property names using syntax `name1:property1,name2:property1,...`  If a result is a single row, the output can be assigned to properties. Specify as many column names as desired. | Properties are not set. |
-|All|`TableID`<br>**required**|Identifier to assign to the output table in TSTool, which allows the table data to be used with other commands.  A new table will be created.  Can be specified with `${Property}`.|None – must be specified.|
-|All|`RowCountProperty`|The name of the processor property that will be set to the row count, optionally using `${Property}` notation to specify the name.|Property is not set.|
+||`TableID`<br>**required**|Identifier to assign to the output table in TSTool, which allows the table data to be used with other commands.  A new table will be created.  Can be specified with `${Property}`.|None – must be specified.|
+||`RowCountProperty`|The name of the processor property that will be set to the row count, optionally using `${Property}` notation to specify the name.|Property is not set.|
 
 ## Examples ##
 
@@ -182,4 +206,8 @@ Command Parameters
 
 ## See Also ##
 
+* [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
+* [`OpenDataStore`](../OpenDataStore/OpenDataStore.md) command
 * [`RunSql`](../RunSql/RunSql.md) command
+* [`SetProperty`](../SetProperty/SetProperty.md) command
+* [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command
