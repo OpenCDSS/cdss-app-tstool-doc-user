@@ -4,7 +4,7 @@
 * [Running TSTool in Interactive Mode](#running-tstool-in-interactive-mode)
 * [Running TSTool in Limited Interactive Mode](#running-tstool-in-limited-interactive-mode)
 * [Running TSTool in Command Line Batch Mode](#running-tstool-in-command-line-batch-mode)
-	+ [TSTool Command Line Parameters](#tSTool-command-line-parameters)
+	+ [TSTool Command Line Parameters](#tstool-command-line-parameters)
 	+ [Running TSTool in Command Line Batch Mode - Windows](#running-tstool-in-command-line-batch-mode-windows)
 	+ [Running TSTool in Command Line Batch Mode - Linux](#running-tstool-in-command-line-batch-mode-linux)
 * [Running TSTool as a Scheduled Task](#running-tstool-as-a-scheduled-task)
@@ -96,10 +96,17 @@ The TSTool GUI is useful because it provides immediate feedback on whether
 commands are properly defined and input data are available.
 However, once a command file has been defined,
 it may be appropriate to process the commands in an automated “headless mode”, without the GUI.
-To do so, run TSTool on the command line as follows:
+Run TSTool on the command line as follows on Windows:
 
 ```
 [PathToTSTool]tstool –commands [PathToCommandFile]commands.TSTool [TSTool parameters]
+```
+
+Run TSTool on the command line as follows on Linux (note the double dash parameter,
+which separates the `tstool` script parameters from TSTool program parameters):
+
+```
+[PathToTSTool]tstool -- –commands [PathToCommandFile]commands.TSTool [TSTool parameters]
 ```
 
 See the following sections for specific issues that may occur on different operating systems.
@@ -123,6 +130,8 @@ it will be used when the command file is run.  Refer to the appropriate log file
 ## TSTool Command Line Parameters ##
 
 The following table lists the TSTool command line parameters.
+If [running on Linux](#running-tstool-in-command-line-batch-mode-linux) using the `tstool` script,
+the parameters should be specified after `--` parameter.
 
 **<p style="text-align: center;">
 TSTool Command Line Parameters
@@ -130,14 +139,17 @@ TSTool Command Line Parameters
 
 |**Command Line Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**|
 |--|--|--|
+|`CommandFile`|The command file can be specified without `–commands` to start up the TSTool GUI and load the command file.  This behavior occurs when selecting a `*.TSTool` file in Windows Explorer.  See also `-runcommandsonload.`||
+|`Property=Value`|Define TSTool global application property (similar to the configuration file).  These properties typically are used during development to test specific features.||
+|`Property==Value`|Define global processor properties (similar to the `SetProperty` command).  These properties are initialized for each command file run and are useful for configuring an environment when starting TSTool from a script, such as running in a Linux environment.||
+| | |
 |`-batchServer`<br>`--batchServer`|Run TSTool in headless mode to process command files that are copied into the hot folder (see `-batchServerHotFolder`).  TSTool will exit when a command file named stop is placed in the hot folder.||
 |`-batchServerHotFolder Folder`<br><br>`--batchServerHotFolder Folder`|Specify the hot folder to use with the `-batchServer` parameter.||
 |`-batchTimeout TimeoutSeconds`<br><br>`--batchTimeout TimeoutSeconds`|Timeout in seconds.  If TSTool command processing takes longer, TSTool will exit.  This may be appropriate as a final fallback if other timeout controls do not work.  Warning – this will leave processing incomplete.  May be removed in future.|Do not time out.|
 |`-commands CommandFile`<br><br>`--commands CommandFile`|Specify the name of the command file to run in batch mode.  TSTool will process the commands and exit.|Start TSTool in interactive mode.|
-|`CommandFile`|The command file can be specified without `–commands` to start up the TSTool GUI and load the command file.  This behavior occurs when selecting a `*.TSTool` file in Windows Explorer.  See also `-runcommandsonload.`||
 |`-config ConfigFile`<br><br>`--config ConfigFile`|Start TSTool using the specified configuration file.  This is useful in software test environments.|Start TSTool using the `system/TSTool.cfg` file under the software installation.|
 |`-dTerm,Log`|Specify the debug level (0+) for terminal and log file debug messages.  This is useful for printing troubleshooting messages at startup.  One or both values can be specified.|No debug messages are generated.|
-|`--datastore-substitute=`<br>`oldname,newname`|Substitute a datastore name for an existing datastore name.  This can be used, for example, to run command files that use one datastore name but substituting another datastore name. | |
+|`--datastore-substitute=`<br>`oldname,newname`|Substitute a datastore name for an existing datastore name.  This can be used to run command files that use one datastore name by substituting another datastore name. For example, all automated tests may use a datastore name `something-test` and an operational system datastore can be used for tests using `--datastore-substitute=opdatastore,something-test`. | |
 |`-home InstallFolder`<br><br>`--home InstallFolder`|Specify the install folder.  This parameter is used internally by the TSTool launcher (Launch4J) and in the software development environment to specify the TSTool home, in order to locate other files.|Should always be set by the TSTool launcher.|
 |`-httpServer`<br>`--httpServer`|Run TSTool in headless mode to act as an HTTP server.  Experimental||
 |`-nodiscovery`<br>`--nodiscovery`|Do not run discovery on commands as they are loaded.  This can be used for large command files that will not be edited interactively, in order to decrease load time.|Run discovery on commands as they are loaded.|
@@ -145,13 +157,18 @@ TSTool Command Line Parameters
 |`-runcommandsonload`<br>`--runcommandsonload`|Load and run the commands, used to start the GUI with a specific command file.||
 |`-server`<br>`--server`|Start TSTool as a REST restlet server (under development).||
 |`-test`<br>`--test`|Run TSTool in test mode, for developers.||
-|`Property=Value`|Define TSTool global application property (similar to the configuration file).  These properties typically are used during development to test specific features.||
-|`Property==Value`|Define global processor properties (similar to the `SetProperty` command).  These properties are initialized for each command file run and are useful for configuring an environment when starting TSTool from a script, such as running in a Linux environment.||
+| `-ui-titlemod=TitleMod` | Set the TSTool main UI window title to ***TSTool - TitleMod - ....***.  This is useful for helping users identify custom TSTool configurations. | |
 
 ### Running TSTool in Command Line Batch Mode – Windows ###
 
-To run TSTool in batch mode on Windows, first open a command prompt application.
-Then run the TSTool as shown in the previous section.  Issues specific to Windows include:
+To run TSTool in batch mode on Windows, first open a command prompt application (`cmd`).
+Then run the TSTool program as follows.
+
+```
+[PathToTSTool]tstool –commands [PathToCommandFile]commands.TSTool [TSTool parameters]
+```
+
+Issues specific to Windows include:
 
 * If the folder containing the TSTool executable (`tstool.exe`)
 is in the `PATH` environment variable, then no leading path is needed.
@@ -161,12 +178,18 @@ specifying the leading path to the executable is often be appropriate.
 even though TSTool is still running.
 This can be disconcerting in particular because it may be difficult
 to know when TSTool has finished processing the command file.
-Placing the command in a batch file (`*.bat`) can help.
+Placing the command in a batch file (`*.bat` or `*.cmd`) can help.
 
 ### Running TSTool in Command Line Batch Mode – Linux ###
 
 To run TSTool in batch mode on Linux, first open a command shell window.
-Then run the TSTool as shown above.  Issues specific to Linux include:
+Then run the TSTool program as follows.
+
+```
+[PathToTSTool]tstool -- –commands [PathToCommandFile]commands.TSTool [TSTool parameters]
+```
+
+Issues specific to Linux include:
 
 * If the folder containing the TSTool executable (`tstool` script)
 is in the `PATH` environment variable, then no leading path is needed.
@@ -179,7 +202,7 @@ for example:
 /usr/bin/tstool -> /opt/tstool-13.03.00/bin/tstool
 ```
 
-The TSTool script provides the following command parameters.
+The linux `tstool` script provides the following command parameters.
 The `--help` parameter should be used to print the current usage.
 
 **<p style="text-align: center;">
@@ -188,12 +211,13 @@ The `--help` parameter should be used to print the current usage.
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default** |
 | -- | -- | -- |
-| `--addPath=path` | Exploratory option to configure plugin class path. | |
-| `--dev` | Run using software development files in the Eclipse development environment, used with automated testing. | Use production files. | 
-| `--headless` | Run in headless mode, used on Linux when running batch and unattended processes. |
-| `-h`<br>`--help` | Print the program usage. | |
-| `--java-xmx=NNNNm` | Set the Java program `-Xmx` option to indicate the maximum memory to use, for example `--java-xmx=1024m` for 1024 MB. |
-| `--` | All command parameters after double dash are ignored by the program and are passed to the TSTool software. |
+| `--addpath=path` | **Exploratory** - add a folder/file to the class path. | The TSTool software install folder `/plugins` folder and user's `.tstool/NN/plugins` folders are used to load plugin `jar` files. |
+| `--dev` | Run using software development files in the Eclipse development environment, used with automated testing. This allows TSTool to be run with development files rather than building and running the installer. | Use production files. | 
+| `--headless` | Run in headless mode, used on Linux when running batch and unattended processes.  The `-Djava.awt.headless=true` parameter is used to run Java. | |
+| `-h`<br>`--help` | Print the program usage.  The help for this script is printed and then TSTool program is run with `--help`. TSTool command parameters are documented in online documentation. | |
+| `--java-xmx=NNNNm` | Set the Java program `-Xmx` option to indicate the maximum memory to use, for example `--java-xmx=1024m` for 1024 MB. | `1024m`|
+| `-v`<br>`--version` | Print the program version.  The version for this script is printed and then TSTool program is run with `--version`. | |
+| `--` | All command parameters after double dash are ignored by the `tstool` script and are passed to the TSTool software. |
 
 ### Running TSTool in Command Line Batch Mode – Mac ###
 
@@ -316,7 +340,7 @@ For example, to run once an hour, the entry would be as follows:
 To run TSTool as a cron process, command should be specified as follows:
 
 ```
-/PathToInstallation/bin/tstool -commands PathToCommandFile
+/PathToInstallation/bin/tstool -- --commands PathToCommandFile
 ```
 
 The paths should be specified as absolute path because cron does not necessarily have a home directory.  
@@ -334,13 +358,13 @@ For more information, see:
 
 ## Running TSTool as a Web Server ##
 
-If TSTool is started with the `–httpServer` option it will run as a web server on port 8000.
+If TSTool is started with the `–-httpServer` option it will run as a web server on port 8000.
 This functionality is experimental and requires additional development.
 This may replace or be combined with the experimental REST servlet describe below.
 
 ## Running TSTool as a Batch Server ##
 
-If TSTool is started with the `–batchServer` option it will run continuously in headless mode.
+If TSTool is started with the `–-batchServer` option it will run continuously in headless mode.
 Use the `-batchServerHotFolder Folder` command line parameter to specify the hot folder for command files.
 This is an experimental feature.
 

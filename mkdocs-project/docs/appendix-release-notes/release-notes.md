@@ -4,7 +4,6 @@ This appendix provides information about changes that have occurred in TSTool.
 A summary table is provided, with links to details for major versions.
 
 * [TSTool Version History](#tstool-version-history)
-* [Known Limitations](#known-limitations)
 * [TSTool Version Details](#tstool-version-details) - the following are separate documentation pages
 	+ [Version 14 Details](release-notes-14.md)
 	+ [Version 13 Details](release-notes-13.md)
@@ -15,6 +14,7 @@ A summary table is provided, with links to details for major versions.
 	+ [Version 8 Details](release-notes-08.md)
 	+ [Version 7 Details](release-notes-07.md)
 	+ [Version 6 Details](release-notes-06.md)
+* [Known Limitations](#known-limitations)
 * [TSTool Version Numbering Convention](#tstool-version-numbering-convention)
 * [TSTool Issue Icons](#tstool-issue-icons)
 
@@ -35,7 +35,8 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|[14.0.1](release-notes-14.md)|Maintenance release, mainly related to fixes related to automated testing.|2021-10-29|
+|[14.0.2](release-notes-14.md)|Maintenance release, mainly fixes related to automated testing.|2021-11-15|
+|[14.0.1](release-notes-14.md)|Maintenance release, mainly fixes related to automated testing.|2021-10-29|
 |[14.0.0](release-notes-14.md)|First 64-bit Java release.|2021-08-26|
 |[13.04.00](release-notes-13.md)|Enhancements to facilitate automated testing, final 32-bit Java release.|2021-08-24|
 |[13.03.00](release-notes-13.md)|Many enhancements to automate processing of large datasets.|2020-08-12|

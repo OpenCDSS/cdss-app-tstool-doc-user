@@ -12,6 +12,35 @@
 * ![limitation](limitation.png) [14.0.0] Features that were previously available for reading and writing HEC-DSS files are disabled.
 Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
 
+## Changes in Version 14.0.2 ##
+
+**Maintenance release with changes to address issues and features needed for automated testing.**
+
+* ![bug](bug.png) [14.0.1] Fix bug related to substitute datastore features:
+    + was causing an exception editing commands that operate on datastores, fixed in the following commands:
+        - [`CreateDataStoreDataDictionary`](../command-ref/CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md)
+        - [`DeleteDataStoreTableRows`](../command-ref/DeleteDataStoreTableRows/DeleteDataStoreTableRows.md)
+        - [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md)
+        - [`ReadTimeSeriesFromDataStore`](../command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md)
+        - [`RunSql`](../command-ref/RunSql/RunSql.md)
+        - [`WriteTableToDataStore`](../command-ref/WriteTableToDataStore/WriteTableToDataStore.md)
+    + substitute datastore name was not being used to form time series identifiers in the man user interface - the
+    selected datastore (which may be a substitute) is now used to create TSID commands
+* ![bug](bug.png) [14.0.2] Fix the [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command
+so that irregular interval data outside the requested period are not set in the time series.
+* ![change](change.png) [14.0.2] Change the
+[`ReadTableFromDelimitedFile`](../command-ref/AppendFile/AppendFile.md) command `IncludeText` and `ExcludeText`
+parameters to automatically convert `*` wildcard to Java `.*` to simplify wildcard use and be consistent with other commands.
+* ![change](change.png) [14.0.2] Update the
+[`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command:
+    + allow `*` in the filename
+    + fix the `HeaderLines` parameter to work
+* ![change](change.png) [14.0.2] Update commands to improve handling database functions and procedures:
+    + [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md)
+    + [`RunSql`](../command-ref/RunSql/RunSql.md)
+* ![new](new.png) [14.0.2] Add `--ui-titlemod=TitleMod` TSTool program parameter to specify
+a string to use in the TSTool main UI title bar, to specifically identify the TSTool session .
+
 ## Changes in Version 14.0.1 ##
 
 **Maintenance release with minor changes to address issues and features needed for automated testing.**
@@ -65,6 +94,8 @@ to have `StdoutProperty` parameter.
 * ![change](change.png) [14.0.1] Fix the [`Wait`](../command-ref/Wait/Wait.md) command to properly handle small wait time specified as decimal fraction of second.
 * ![change](change.png) [14.0.1] Update the [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command
 to have `IncludeColumns` and `ExcludeColumns` parameters.
+* ![new](new.png) [14.0.1] Add `--datastore-substitute=datastore,substitute` TSTool program parameter to specify
+substitute datastore name, useful for automated testing.
 
 ## Changes in Version 14.0.0 ##
 
