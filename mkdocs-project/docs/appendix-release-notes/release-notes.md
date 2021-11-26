@@ -35,6 +35,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.0.3](release-notes-14.md)|Maintenance release for ReclamationHDB release.|2021-11-26|
 |[14.0.2](release-notes-14.md)|Maintenance release, mainly fixes related to automated testing.|2021-11-15|
 |[14.0.1](release-notes-14.md)|Maintenance release, mainly fixes related to automated testing.|2021-10-29|
 |[14.0.0](release-notes-14.md)|First 64-bit Java release.|2021-08-26|

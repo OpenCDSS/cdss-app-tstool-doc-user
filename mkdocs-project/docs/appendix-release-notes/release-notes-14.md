@@ -1,6 +1,8 @@
 # TSTool / Release Notes / Version 14 #
 
 * [Known Limitations](#known-limitations)
+* [Changes in Version 14.0.3](#changes-in-version-1403)
+* [Changes in Version 14.0.2](#changes-in-version-1402)
 * [Changes in Version 14.0.1](#changes-in-version-1401)
 * [Changes in Version 14.0.0](#changes-in-version-1400)
 * [Release notes for all versions](release-notes.md)
@@ -12,11 +14,18 @@
 * ![limitation](limitation.png) [14.0.0] Features that were previously available for reading and writing HEC-DSS files are disabled.
 Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
 
+## Changes in Version 14.0.3 ##
+
+* ![change](change.png) [14.0.3] Updated the
+[`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md)
+command to have `AllowedDiff` parameter
+* ![change](change.png) [14.0.3] Minor changes to ReclamationHDB commands based on testing
+
 ## Changes in Version 14.0.2 ##
 
 **Maintenance release with changes to address issues and features needed for automated testing.**
 
-* ![bug](bug.png) [14.0.1] Fix bug related to substitute datastore features:
+* ![bug](bug.png) [14.0.2] Fix bug related to substitute datastore features:
     + was causing an exception editing commands that operate on datastores, fixed in the following commands:
         - [`CreateDataStoreDataDictionary`](../command-ref/CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md)
         - [`DeleteDataStoreTableRows`](../command-ref/DeleteDataStoreTableRows/DeleteDataStoreTableRows.md)
