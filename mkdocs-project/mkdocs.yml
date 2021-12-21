@@ -17,8 +17,8 @@ nav:
 - 10 - Troubleshooting: troubleshooting/troubleshooting.md
 - 11 - Best Practices: best-practices/best-practices.md
 - 12 - Resources: resources/resources.md
-- Lessons:
-  - Overview: lessons/overview.md
+- Training:
+  - Overview: training/overview.md
 - Reference - Commands:
   - Overview: command-ref/overview.md
   - Command Syntax: command-ref/command-syntax.md

@@ -23,8 +23,11 @@ Extraneous content (such as HTML markup around text) and inconsistencies in newl
 (`CRLF`=`\r\n` for windows and `LF`=`\n` on other systems) may lead to some issues in processing the content with other commands.
 See the [`TextEdit`](../TextEdit/TextEdit.md) and other commands to process files after downloading.
 
-Zipped files can be unzipped using the 
-See the [`UnzipFile`](../UnzipFile/UnzipFile.md) command.
+The HTTP code is checked for the connection.
+If a redirect is detected, the URL for the redirect target is opened.
+A maximum of 100 redirects is allowed.
+
+Zipped files can be unzipped using the [`UnzipFile`](../UnzipFile/UnzipFile.md) command.
 
 ## Command Editor ##
 

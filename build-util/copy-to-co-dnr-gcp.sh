@@ -20,28 +20,28 @@ checkMkdocsVersion() {
   requiredMajorVersion="1"
   # On Cygwin, mkdocs --version gives:  mkdocs, version 1.0.4 from /usr/lib/python3.6/site-packages/mkdocs (Python 3.6)
   # On Debian Linux, similar to Cygwin:  mkdocs, version 0.17.3
-  if [ "$operatingSystem" = "cygwin" -o "$operatingSystem" = "linux" ]; then
+  if [ "${operatingSystem}" = "cygwin" -o "${operatingSystem}" = "linux" ]; then
     mkdocsVersionFull=$(mkdocs --version)
-  elif [ "$operatingSystem" = "mingw" ]; then
+  elif [ "${operatingSystem}" = "mingw" ]; then
     mkdocsVersionFull=$(py -m mkdocs --version)
   else
     echo ""
-    echo "Don't know how to run on operating system $operatingSystem"
+    echo "Don't know how to run on operating system ${operatingSystem}"
     exit 1
   fi
-  echo "MkDocs --version:  $mkdocsVersionFull"
-  mkdocsVersion=$(echo $mkdocsVersionFull | cut -d ' ' -f 3)
-  echo "MkDocs full version number:  $mkdocsVersion"
-  mkdocsMajorVersion=$(echo $mkdocsVersion | cut -d '.' -f 1)
-  echo "MkDocs major version number:  $mkdocsMajorVersion"
-  if [ "$mkdocsMajorVersion" -lt $requiredMajorVersion ]; then
+  echo "MkDocs --version:  ${mkdocsVersionFull}"
+  mkdocsVersion=$(echo ${mkdocsVersionFull} | cut -d ' ' -f 3)
+  echo "MkDocs full version number:  ${mkdocsVersion}"
+  mkdocsMajorVersion=$(echo ${mkdocsVersion} | cut -d '.' -f 1)
+  echo "MkDocs major version number:  ${mkdocsMajorVersion}"
+  if [ "${mkdocsMajorVersion}" -lt ${requiredMajorVersion} ]; then
     echo ""
-    echo "MkDocs version for this documentation must be version $requiredMajorVersion or later."
-    echo "MkDocs mersion that is found is $mkdocsMajorVersion, from full version ${mkdocsVersion}."
+    echo "MkDocs version for this documentation must be version ${requiredMajorVersion} or later."
+    echo "MkDocs mersion that is found is ${mkdocsMajorVersion}, from full version ${mkdocsVersion}."
     exit 1
   else
     echo ""
-    echo "MkDocs major version ($mkdocsMajorVersion) is OK for this documentation."
+    echo "MkDocs major version (${mkdocsMajorVersion}) is OK for this documentation."
   fi
 }
 
@@ -54,7 +54,7 @@ checkOperatingSystem()
     return
   fi
   operatingSystem="unknown"
-  os=`uname | tr [a-z] [A-Z]`
+  os=$(uname | tr [a-z] [A-Z])
   case "${os}" in
     CYGWIN*)
       operatingSystem="cygwin"
@@ -84,8 +84,8 @@ getVersionModifier() {
   local fullVersion
   fullVersion="$1"
   # grep will print each found character on a separate line so concatenate output.
-  modifier=$(echo $fullVersion | grep -o -E '[[:alpha:]]' | tr -d '\n' | tr -d ' ')
-  echo $modifier
+  tstoolVersionModifier=$(echo ${fullVersion} | grep -o -E '[[:alpha:]]' | tr -d '\n' | tr -d ' ')
+  echo ${modifier}
 }
 
 # Parse the command parameters.
@@ -105,11 +105,11 @@ parseCommandLine() {
         copyToLatest="yes"
         ;;
       \?)
-        echo "Invalid option:  -$OPTARG" >&2
+        echo "Invalid option:  -${OPTARG}" >&2
         exit 1
         ;;
       :)
-        echo "Option -$OPTARG requires an argument" >&2
+        echo "Option -${OPTARG} requires an argument" >&2
         exit 1
         ;;
     esac
@@ -121,8 +121,8 @@ printUsage() {
   echo ""
   echo "Usage:  $0"
   echo ""
-  echo "Copy the site files to the latest website folder if -l specified:  $gsFolderLatest"
-  echo "Copy the site files to the versioned website folder:  $gsFolderVersion"
+  echo "Copy the site files to the latest website folder if -l specified:  ${gsFolderLatest}"
+  echo "Copy the site files to the versioned website folder:  ${gsFolderVersion}"
   echo ""
   echo "-d dry run (print actions but don't execute upload)"
   echo "-h print usage"
@@ -194,7 +194,7 @@ syncFiles() {
       read -p "Continue with upload (Y/n)? " answer
       if [ -z "${answer}" -o "${answer}" = "Y" -o "${answer}" = "y" ]; then
         # Also copy to the latest.
-        gsutil.cmd -m rsync -d -r ${dryrun} $siteFolder ${gsFolderLatest}
+        gsutil.cmd -m rsync -d -r ${dryrun} ${siteFolder} ${gsFolderLatest}
         exitStat=$?
         return ${exitStatus}
       fi
