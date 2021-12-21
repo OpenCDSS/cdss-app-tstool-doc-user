@@ -55,7 +55,7 @@ Chapter 1 – Introduction (this chapter) provides background information on tim
 
 [Chapter 12 – Resources](../resources/resources.md) lists additional informational resources
 
-[Lessons ](../lessons/overview.md) - provides training lessons
+[Training ](../training/overview.md) - provides training lessons with examples
 
 [Reference - Commands ](../command-ref/overview.md) provides a full list of commands in groups and alphabetical list
 

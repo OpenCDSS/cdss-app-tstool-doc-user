@@ -12,7 +12,7 @@ This documentation is generally referred to as the **"User Documentation"** in c
 * [About the Open Water Foundation](#about-the-open-water-foundation)
 * [License](#license)
 * [Source Repository on GitHub](#source-repository-on-github)
-* [Release Notes](appendix-release-notes/release-notes-13.md) - **this documentation is for TSTool version 14.0.3**
+* [Release Notes](appendix-release-notes/release-notes-13.md) - **this documentation is for TSTool version 14.0.4**
 
 ----------------
 
@@ -21,7 +21,7 @@ This documentation is generally referred to as the **"User Documentation"** in c
 The documentation is organized in order of information and tasks necessary to install and use the TSTool software.
 Chapters (web pages) are provided for major topics related to software use and application.
 References are provided for TSTool [commands](command-ref/overview.md) and [datastores](datastore-ref/overview.md).
-Training modules are also provided in the [Lessons](lessons/overview.md) section.
+Training modules are also provided in the [Training](training/overview.md) section.
 
 Use the navigation menu provided on the left side of the page to navigate the documentation sections within the full document.
 Use the navigation menu provided on the right side of the page to navigate the documentation sections with a page.

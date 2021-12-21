@@ -1,6 +1,7 @@
 # TSTool / Release Notes / Version 14 #
 
 * [Known Limitations](#known-limitations)
+* [Changes in Version 14.0.4](#changes-in-version-1404)
 * [Changes in Version 14.0.3](#changes-in-version-1403)
 * [Changes in Version 14.0.2](#changes-in-version-1402)
 * [Changes in Version 14.0.1](#changes-in-version-1401)
@@ -14,12 +15,32 @@
 * ![limitation](limitation.png) [14.0.0] Features that were previously available for reading and writing HEC-DSS files are disabled.
 Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
 
+## Changes in Version 14.0.4 ##
+
+**Maintenance release to update training materials and respond to "Log4Shell" vulnerability.**
+
+* ![bug](bug.png) [14.0.4] Update the `log4j` library to version 2.17.0 in response to the "Log4Shell" security vulnerability.
+See the [Apache Log4J Vulnerability Guidance](https://www.cisa.gov/uscert/apache-log4j-vulnerability-guidance) documentation.
+* ![bug](bug.png) [14.0.4] Fix a bug introduced in the previous release that broke transfer of time series
+identifiers from the time series list to TSID commands.
+This bug was due to new features that handle datastore aliases used in software testing.
+The bug mainly impacts the case where the HydroBase input type is used with TSID commands.
+If version 14.0.3 is used, the work-around is to configure a HydroBase datastore named `HydroBase`.
+* ![change](change.png) [14.0.4] Training materials that are distributed in the `doc/training` folder have
+been updated to be compatible with the latest software features.
+Additional training presentations will be added in the future as training materials are updated.
+The [Training](../training/overview.md) documentation now links to online training materials.
+* ![change](change.png) [14.0.4] Updated the
+[`WebGet`](../command-ref/WebGet/WebGet.md) command to handle redirects.
+
 ## Changes in Version 14.0.3 ##
+
+**Maintenance release for Reclamation Linux version.**
 
 * ![change](change.png) [14.0.3] Updated the
 [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md)
 command to have `AllowedDiff` parameter
-* ![change](change.png) [14.0.3] Minor changes to ReclamationHDB commands based on testing
+* ![change](change.png) [14.0.3] Minor changes to ReclamationHDB commands based on testing.
 
 ## Changes in Version 14.0.2 ##
 
