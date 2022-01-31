@@ -1,6 +1,7 @@
 # TSTool / Release Notes / Version 14 #
 
 * [Known Limitations](#known-limitations)
+* [Changes in Version 14.0.5](#changes-in-version-1405)
 * [Changes in Version 14.0.4](#changes-in-version-1404)
 * [Changes in Version 14.0.3](#changes-in-version-1403)
 * [Changes in Version 14.0.2](#changes-in-version-1402)
@@ -14,6 +15,16 @@
 
 * ![limitation](limitation.png) [14.0.0] Features that were previously available for reading and writing HEC-DSS files are disabled.
 Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
+
+## Changes in Version 14.0.5 ##
+
+**Maintenance release for testing and to update the `log4j` library.**
+
+* ![bug](bug.png) [14.0.5] Update the `Log4J` library to version 2.17.1 for security patches.
+* ![change](change.png) [14.0.5] Updated the
+[`FormatStringProperty`](../command-ref/FormatStringProperty/FormatStringProperty.md) command:
+    + Add the `IntegerFormat`, `Endianness`, `Delimiter`, and `NumBytes` parameters to format
+    integer properties as hex code string, which is useful for automated testing.
 
 ## Changes in Version 14.0.4 ##
 
