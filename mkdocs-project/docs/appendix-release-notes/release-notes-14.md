@@ -1,6 +1,7 @@
 # TSTool / Release Notes / Version 14 #
 
 * [Known Limitations](#known-limitations)
+* [Changes in Version 14.0.6](#changes-in-version-1406)
 * [Changes in Version 14.0.5](#changes-in-version-1405)
 * [Changes in Version 14.0.4](#changes-in-version-1404)
 * [Changes in Version 14.0.3](#changes-in-version-1403)
@@ -15,6 +16,17 @@
 
 * ![limitation](limitation.png) [14.0.0] Features that were previously available for reading and writing HEC-DSS files are disabled.
 Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
+
+## Changes in Version 14.0.6 ##
+
+**Maintenance release for to improve `@require` functionality.**
+
+* ![change](change.png) [14.0.6] Updated the
+[`@require` Comment](../command-ref/Comment/Comment.md) command:
+    + Improve the `@require` software design to allow datastores more flexibility in
+      implementing requirements.
+    + Add the datastore type to `@require` command status messages to
+      improve troubleshooting.
 
 ## Changes in Version 14.0.5 ##
 
