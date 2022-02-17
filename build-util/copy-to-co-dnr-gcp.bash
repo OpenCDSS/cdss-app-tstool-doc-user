@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Copy the MkDocs site/* contents to the CO DNR GCP website:
 # - replace all the files on the web with local files

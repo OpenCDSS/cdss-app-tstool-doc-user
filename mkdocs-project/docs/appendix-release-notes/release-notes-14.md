@@ -35,6 +35,11 @@ Additional resources are needed to update the software to use 64-bit libraries f
     + The `AppendText` parameter has been added to append text to a file.
     + Increase flexibility of wildcard (glob) pattern matching.
 * ![change](change.png) [14.1.0] Update the
+  [`StartRegressionTestResultsReport`](../command-ref/StartRegressionTestResultsReport/StartRegressionTestResultsReport.md) command
+  to output a report with `nonum` in the name.
+  The file is the same as the normal output but with test numbers removed,
+  which is useful for comparing one test suite output to another.
+* ![change](change.png) [14.1.0] Update the
   [`Cumulate`](../command-ref/Cumulate/Cumulate.md) command `Reset` parameter to allow `${Property}` notation.
 * ![change](change.png) [14.1.0] Update the
   [`FormatFile`](../command-ref/FormatFile/FormatFile.md) command to allow overwriting the input file.

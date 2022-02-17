@@ -16,6 +16,10 @@ The [`CreateRegressionTestCommandFile`](../CreateRegressionTestCommandFile/Creat
 inserts this command and is the preferred way to set up automated tests.
 The [`RunCommands`](../RunCommands/RunCommands.md) commands will write to this file (and optionally results table) if available.
 
+A second output file with `nonum` in the name is automatically created,
+which is the same as that for `OutputFile` but test numbers are removed.
+This allows the output files to be compared to identify differences in output.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
@@ -41,7 +45,7 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-| `OutputFile`<br>**required** | The regression results report file to write, as an absolute path or relative to the command file.  Can use `${Property}`.  Because the file is a text file, using a `.txt` file extension is typical. | None - must be specified. |
+| `OutputFile`<br>**required** | The regression results report file to write, as an absolute path or relative to the command file.  Can use `${Property}`.  Because the file is a text file, using a `.txt` file extension is typical.<br><br>A file with name containing `nonum` is automatically created that does not have test numbers, which can be used to compare runs. | None - must be specified. |
 | `TestResultsTableID` | The identifier of an output table to be created.  The table will be created. | No table will be output. |
 
 ## Examples ##
