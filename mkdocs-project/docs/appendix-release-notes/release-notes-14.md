@@ -41,11 +41,14 @@ Additional resources are needed to update the software to use 64-bit libraries f
 
 ## Changes in Version 14.0.6 ##
 
-**Maintenance release for testing.**
+**Maintenance release for to improve `@require` functionality.**
 
-* ![bug](bug.png) [14.0.6] Fix the
-[`Comment`](../command-ref/Comment/Comment.md) command `@require` annotations to be more robust
-and update documentation to be consistent with functionality
+* ![change](change.png) [14.0.6] Updated the
+[`@require` Comment](../command-ref/Comment/Comment.md) command:
+    + Improve the `@require` software design to allow datastores more flexibility in
+      implementing requirements.
+    + Add the datastore type to `@require` command status messages to
+      improve troubleshooting.
 
 ## Changes in Version 14.0.5 ##
 
