@@ -35,6 +35,8 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.1.0](release-notes-14.md)|Add commands to output table in Markdown format, set table column properties.|2022-02-16|
+|[14.0.6](release-notes-14.md)|Maintenance release for testing features.|2022-02-04|
 |[14.0.5](release-notes-14.md)|Maintenance release for testing features and to update `Log4J` library.|2022-01-30|
 |[14.0.4](release-notes-14.md)|Maintenance release to update training documentation and respond to "Log4Shell" vulnerability.|2021-12-19|
 |[14.0.3](release-notes-14.md)|Maintenance release for ReclamationHDB release.|2021-11-26|
