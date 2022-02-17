@@ -1,6 +1,8 @@
 # TSTool / Release Notes / Version 14 #
 
 * [Known Limitations](#known-limitations)
+* [Changes in Version 14.1.0](#changes-in-version-1410)
+* [Changes in Version 14.0.6](#changes-in-version-1406)
 * [Changes in Version 14.0.5](#changes-in-version-1405)
 * [Changes in Version 14.0.4](#changes-in-version-1404)
 * [Changes in Version 14.0.3](#changes-in-version-1403)
@@ -13,8 +15,37 @@
 
 ## Known Limitations
 
-* ![limitation](limitation.png) [14.0.0] Features that were previously available for reading and writing HEC-DSS files are disabled.
+* ![limitation](limitation.png) [14.0.0+] Features that were previously available for reading and writing HEC-DSS files are disabled.
 Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
+
+## Changes in Version 14.1.0 ##
+
+**Enhancement release to format table as Markdown and improve file handling.**
+
+* ![new](new.png) [14.1.0] Add the
+  [`SetTableColumnProperties`](../command-ref/SetTableColumnProperties/SetTableColumnProperties.md)
+  command to set table column properties, used when formatting output.
+* ![new](new.png) [14.1.0] Add the
+  [`WriteTableToMarkdown`](../command-ref/WriteTableToMarkdown/WriteTableToMarkdown.md)
+  command to write a table to a Markdown format file.
+* ![change](change.png) [14.1.0] Update the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command:
+    + The output file can be the same as an input file (input file will be overwritten).
+    + Input files can now be specified as a comma-separated-value list of filenames or patterns.
+    + Filename pattern handling has been enhanced.
+    + The `AppendText` parameter has been added to append text to a file.
+    + Increase flexibility of wildcard (glob) pattern matching.
+* ![change](change.png) [14.1.0] Update the
+  [`Cumulate`](../command-ref/Cumulate/Cumulate.md) command `Reset` parameter to allow `${Property}` notation.
+* ![change](change.png) [14.1.0] Update the
+  [`FormatFile`](../command-ref/FormatFile/FormatFile.md) command to allow overwriting the input file.
+
+## Changes in Version 14.0.6 ##
+
+**Maintenance release for testing.**
+
+* ![bug](bug.png) [14.0.6] Fix the
+[`Comment`](../command-ref/Comment/Comment.md) command `@require` annotations to be more robust
+and update documentation to be consistent with functionality
 
 ## Changes in Version 14.0.5 ##
 

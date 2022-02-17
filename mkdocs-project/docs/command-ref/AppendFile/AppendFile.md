@@ -11,9 +11,32 @@
 
 ## Overview ##
 
-The `AppendFile` command appends one or more files to another file.
-All or only matching lines from input files can be transferred.
-This command is useful for appending multiple data files into a single file that can be read by TSTool.
+The `AppendFile` command appends text to a file.
+This command is useful for:
+
+* appending multiple data files into a single file that can be read by TSTool
+* formatting files for use in websites (see also the [`FormatFile`](../FormatFile/FormatFile.md) command)
+
+The command appends to a file using either of the following:
+
+* one or more files can be appended to create a new file or overwrite an input file
+* text can be added to the input file to create a new file or overwrite the input file
+
+The list of input files can be specified using a single pattern
+or a comma-separated list of patterns, each of which can be specified as:
+
+* path:
+    + absolute path
+    + a path relative to the command file folder
+* wildcards: 
+    + literal path (no wildcards) that exactly matches a file
+    + wildcards to match one or more files
+      (see Java [`PathMatcher`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getPathMatcher-java.lang.String-)):
+        - `*` - match one or more characters at a folder level
+        - `*.abc` - matches file names with extension `abc`
+        - `**/*.abc` - matches file names with extension `abc` in any folder
+
+All or only matching lines from input files can be transferred using `IncludeText` and `ExcludeText` parameters.
 
 ## Command Editor ##
 
@@ -40,8 +63,9 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------------|-----------------|----------------- |
-|`InputFile`<br>**required**|The name of one or more files to append, using the following conventions:<ul><li>No `*` in filename – match one file.</li><li>Filename specified as `*`– match all files in input directory (working directory by default).</li><li>Filename specified as `*.ext` – match all files with extension</li></ul><br>More options may be supported in the future when TSTool is updated to use Java 1.7+.  Can specify using processor `${Property}`.|None – must be specified.|
-|`OutputFile`<br>**required**|The output file that will be appended to.  The file is created if it does not exist.  Use the [`RemoveFile`](../RemoveFile/RemoveFile.md) command to remove the old file.  Can specify using processor `${Property}`.|None – must be specified.|
+|`InputFile`|The name of one or more files to append, specified as file patterns separated by commas:<ul><li>No `*` in filename – match one file</li><li>`*`– match all files in input directory (working directory by default).</li><li>`*.ext` – match all files with extension</li></ul><br>Can specify using processor `${Property}`.| Specify file pattern(s) or text to append.|
+| `AppendText` | Text to append to the input file. | Specify `InputFile` or text. |
+|`OutputFile`<br>**required**|The output file that will be created from input.  The file is created if it does not exist.  If the output file matches an input file, the input file will be overwritten.  Use the [`RemoveFile`](../RemoveFile/RemoveFile.md) command to remove the old file.  Can specify using processor `${Property}`.|None – must be specified.|
 |`IncludeText`|A regular expression pattern to include text.  Only the matching lines will be included.  `*` can be used as wildcard to match beginning and ending of a string.  The `*` is converted to `.*` and the pattern uses the [Java regular expression syntax](http://en.wikipedia.org/wiki/Regular_expression).|Append all lines.|
 |`ExcludeText`|A regular expression pattern to exclude text.  `*` can be used as wildcard to match beginning and ending of a string.  Matching lines will be excluded from the append.|Append all lines.|
 |`Newline`|Indicate the newline character to use at the end of lines.  Normally the operating system default is ok (`\n` for Linux and for Mac, `\r\n for Windows`), but the newline may need to be specified to ensure cross-platform compatibility.|Operating system default.|
@@ -62,4 +86,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 ## See Also ##
 
 * [`CopyFile`](../CopyFile/CopyFile.md) command
+* [`FormatFile`](../FormatFile/FormatFile.md) command
 * [`RemoveFile`](../RemoveFile/RemoveFile.md) command
