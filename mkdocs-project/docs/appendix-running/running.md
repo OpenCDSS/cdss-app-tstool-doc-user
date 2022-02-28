@@ -414,7 +414,7 @@ To execute the tests in the development environment,
 the datastore used for the testing framework must be used.
 Web services software typically points to one database and consequently,
 the database on the web services server used in the testing environment must be swapped to match tests.
-The TSTool [`#@require`](../command-ref/comment/comment.md) comment can be used to ensure that the appropriate database is used.
+The TSTool [`#@require`](../command-ref/Comment/Comment.md) comment can be used to ensure that the appropriate database is used.
 
 The following approach is used to configure datastores for testing:
 
