@@ -4,16 +4,19 @@
 * [Running TSTool in Interactive Mode](#running-tstool-in-interactive-mode)
 * [Running TSTool in Limited Interactive Mode](#running-tstool-in-limited-interactive-mode)
 * [Running TSTool in Command Line Batch Mode](#running-tstool-in-command-line-batch-mode)
-	+ [TSTool Command Line Parameters](#tstool-command-line-parameters)
-	+ [Running TSTool in Command Line Batch Mode - Windows](#running-tstool-in-command-line-batch-mode-windows)
-	+ [Running TSTool in Command Line Batch Mode - Linux](#running-tstool-in-command-line-batch-mode-linux)
+    + [TSTool Command Line Parameters](#tstool-command-line-parameters)
+    + [Running TSTool in Command Line Batch Mode - Windows](#running-tstool-in-command-line-batch-mode-windows)
+    + [Running TSTool in Command Line Batch Mode - Linux](#running-tstool-in-command-line-batch-mode-linux)
 * [Running TSTool as a Scheduled Task](#running-tstool-as-a-scheduled-task)
-	+ [Running TSTool as a Scheduled Task - Windows](#running-tstool-as-a-scheduled-task-windows)
-	+ [Running TSTool as a Scheduled Task - Linux](#running-tstool-as-a-scheduled-task-linux)
+    + [Running TSTool as a Scheduled Task - Windows](#running-tstool-as-a-scheduled-task-windows)
+    + [Running TSTool as a Scheduled Task - Linux](#running-tstool-as-a-scheduled-task-linux)
 * [Running TSTool as a Web Server](#running-tstool-as-a-web-server)
 * [Running TSTool as a Batch Server](#running-tstool-as-a-batch-server)
 * [Running TSTool as a REST Web Server](#running-tstool-as-a-rest-web-server)
 * [Running TSTool as a Web Browser Applet](#running-tstool-as-a-web-browser-applet)
+* [Substitute Datastore Examples](#substitute-datastore-examples)
+    + [Automated Web Services Tests Use Specific Datastore Name and Subtitute Uses a General Datastore Name](#automated-web-services-tests-use-specific-datastore-name-and-subtitute-uses-a-general-datastore-name)
+    + [Automated Database Tests Use a General Datastore Name and Substitute Uses a Specific Datastore Name](#automated-database-tests-use-a-general-datastore-name-and-substitute-uses-a-specific-datastore-name)
 
 ------------------------------
 
@@ -23,9 +26,9 @@ TSTool is commonly run as an interactive desktop application using the graphical
 However, the TSTool design allows the software to be run in various modes, as described in this document:
 
 1. Desktop application
-	1. Interactive graphical user interface
-	2. Limited graphical user interface (e.g., no main GUI but graph windows display in support of other applications)
-	3. Command line batch mode (e.g., Windows command shell or Linux shell script)
+    1. Interactive graphical user interface
+    2. Limited graphical user interface (e.g., no main GUI but graph windows display in support of other applications)
+    3. Command line batch mode (e.g., Windows command shell or Linux shell script)
 2. Scheduled task (e.g., Windows scheduler or Linux cron)
 3. Web server application (e.g., run headless processing in support of website)
 4. Batch server to process command files in a hot folder (`-batchServer` mode)
@@ -149,7 +152,7 @@ TSTool Command Line Parameters
 |`-commands CommandFile`<br><br>`--commands CommandFile`|Specify the name of the command file to run in batch mode.  TSTool will process the commands and exit.|Start TSTool in interactive mode.|
 |`-config ConfigFile`<br><br>`--config ConfigFile`|Start TSTool using the specified configuration file.  This is useful in software test environments.|Start TSTool using the `system/TSTool.cfg` file under the software installation.|
 |`-dTerm,Log`|Specify the debug level (0+) for terminal and log file debug messages.  This is useful for printing troubleshooting messages at startup.  One or both values can be specified.|No debug messages are generated.|
-|`--datastore-substitute=`<br>`oldname,newname`|Substitute a datastore name for an existing datastore name.  This can be used to run command files that use one datastore name by substituting another datastore name. For example, all automated tests may use a datastore name `something-test` and an operational system datastore can be used for tests using `--datastore-substitute=opdatastore,something-test`. | |
+|`--datastore-substitute=`<br>`DatastoreNameToUse`,<br>`DatastoreNameInCommands`|Substitute a datastore name to use for a datastore name used in commands.  For example, all automated tests may use a datastore name `datastore-test` in command files and a production system's `DatastoreNameToUse` can be specified as a substitute using `--datastore-substitute=DatastoreNameToUse,datastore-test`. See the [Substitute Datastore Examples](#substitute-datastore-examples) documentation. | No substitutes - the datastore name in command files must match a configured datastore name. |
 |`-home InstallFolder`<br><br>`--home InstallFolder`|Specify the install folder.  This parameter is used internally by the TSTool launcher (Launch4J) and in the software development environment to specify the TSTool home, in order to locate other files.|Should always be set by the TSTool launcher.|
 |`-httpServer`<br>`--httpServer`|Run TSTool in headless mode to act as an HTTP server.  Experimental||
 |`-nodiscovery`<br>`--nodiscovery`|Do not run discovery on commands as they are loaded.  This can be used for large command files that will not be edited interactively, in order to decrease load time.|Run discovery on commands as they are loaded.|
@@ -157,7 +160,7 @@ TSTool Command Line Parameters
 |`-runcommandsonload`<br>`--runcommandsonload`|Load and run the commands, used to start the GUI with a specific command file.||
 |`-server`<br>`--server`|Start TSTool as a REST restlet server (under development).||
 |`-test`<br>`--test`|Run TSTool in test mode, for developers.||
-| `-ui-titlemod=TitleMod` | Set the TSTool main UI window title to ***TSTool - TitleMod - ....***.  This is useful for helping users identify custom TSTool configurations. | |
+| `-ui-titlemod=TitleMod` | Set the TSTool main UI window title to ***TSTool - TitleMod - ....***.  This is useful for helping users identify custom TSTool configurations, for example when running a test suite that requires a Linux `sudo` login. | |
 
 ### Running TSTool in Command Line Batch Mode – Windows ###
 
@@ -389,3 +392,116 @@ The main challenges with applets are the security issues of accessing local file
 Because TSTool is used for heavy processing using local data, the applet approach was not suitable.
 Enabling TSTool as an applet, using remote data (such as web services)
 is possible but will require additional development and testing.
+
+## Substitute Datastore Examples ##
+
+Datastore names can be substituted to facilitate implementing automated processes.  This is used in automated testing.
+The following examples illustrate cases that have been used.
+In all cases, the `--datastore-substitute=DatastoreNameToUse,DataStoreNameInCommands` syntax expects that the first datastore is enabled and working.
+The second datastore does not need to be defined or enabled given that it is a substitute name that will point to the original datastore name.
+The TSTool main interface can interact with either datastore as long as a datastore is defined, enabled, and working.
+
+### Automated Web Services Tests Use Specific Datastore Name and Subtitute Uses a General Datastore Name
+
+Command files can be written to use a specific datastore name because tests were written for a specific system,
+for example matching the operational system's database used by web services.
+This allows read-only (non-destructive) testing command files to be run on a production system to confirm functionality and performance.
+A datastore substitute can be used to point the datastore used with testing to an appropriate server-side configuration,
+such as a copy of a production system's database.
+Using a system-specific datastore name helps avoid confusion because specific tests are clearly identified for a specific system.
+
+To execute the tests in the development environment,
+the datastore used for the testing framework must be used.
+Web services software typically points to one database and consequently,
+the database on the web services server used in the testing environment must be swapped to match tests.
+The TSTool [`#@require`](../command-ref/comment/comment.md) comment can be used to ensure that the appropriate database is used.
+
+The following approach is used to configure datastores for testing:
+
+* Datastore configuration 1:
+    + The datastore is configured and enabled for `datastore1` (a more specific name would be used) to point to a production system:
+        - allows read-only command file to be tested on the production system
+        - the datastore matches the production system because tests are specific to the system
+        - station identifiers and other data are specific to the system and tests
+    + Test command files use specific datastore name `datastore1`, indicating tests that are specific to the system.
+    + The testing framework uses a general datastore name pointing to the development web services, for example `wsname-osname-dev`,
+      where `wsname` and `osname` are specific to the web services and operating system
+      and indicate a web services datastore on a specific operating system version, in development environment.
+      For example, the web services back-end may use Java Hibernate to point to a specific database,
+      and the URL on the testing machine is the same regardless of which back-end database is used.
+* Datastore configuration N:
+    + Repeat the above.
+    + Datastores are configured for each production system.
+    + Testing framework uses a generic datastore name pointing to the development web services, shared among all datastores.
+
+The overall testing approach is then:
+
+1. Configure datastores to point to production systems (see above).
+2. Create test command files that use the production system datastore names (`datastore1`).
+3. Configure a datastore to point to the testing server using a general name (e.g., `wsname-osname-dev`),
+   where `wsname` and `osname` are specific to the web services and operating system.
+   The datastore name will be reused.
+4. Run TSTool to run tests:
+    1. Use command parameters such as `--datastore-substitute=wsname-osname-dev,datastore1` and
+       to cause the datastore `datastore1` found in command files
+       to be replaced with substutute `wsname-osname-dev` (the datastore name ot use) when run.
+       A shell script is typically implemented to specify these parameters in the development environment.
+       Datastore substitutes are typically NOT used in a production environment,
+       although they could be used to run read-only tests on a production system
+       to evaluate functionality and performance.
+    2. Implement a mechanism to reset the web service server-side database to point to a system-specific database,
+       available through web services via the general datastore name (`wsname-osname-dev`).
+       For example, a special web service endpoint can be implemented to change the server-side database
+       and restart web services, available only in development mode.
+    3. Run the test suite for a specific system database, using a script to run TSTool and command files from step 2.
+
+The TSTool main interface behavior is as follows. If a `--datastore-substitute` parameter is used:
+
+* if the `datastore1` datastore is used in the TSTool interface, the `wsname-osname-dev` datastore will be used instead
+* the `wsname-osname-dev` datastore can also be used directly
+
+### Automated Database Tests Use a General Datastore Name and Substitute Uses a Specific Datastore Name
+
+Automated tests can be written using a generic datastore name,
+for example when the tests are intended to be run on any database, including an empty database.
+This is appropriate when the tests do not depend on the contents of a database.
+In this case, the data in the database are synthetic and should not conflict with any production database.
+
+The following approach is used to configure datastores for testing:
+
+* Datastore configuration for general (empty) database using a specific name:
+    + Use a general datastore name such as `system-test-general`, where `system` is a specific system/product name.
+      This datastore name can be used generally for testing or a system-specific datastore could be used (see below)
+    + An empty testing database will be used to run tests.
+    + The testing environment should mimic a production system as much as possible.
+* (Optional) - Datastore configuration for system database:
+    + Configure a datastore for a local production database
+    + This will allow running tests on a copy of a production database,
+      such as restored from a database backup.
+    + The testing environment should mimic a production system as much as possible.
+* Datastore substitute:
+    + See the following approach.
+
+The following approach can be implemented to allow flexibility to run the tests on any database,
+including the generic empty database and system-specific databases.
+
+1. Configure a datastore to point to the testing server using a general name (e.g., `system-test-general`),
+   where `system` is a specific system/product name.
+2. Create test command files that use a general datastore name (e.g., `system-test`),
+   where `system` is a specific system/product name.
+   This name **is not** the same as the datastore name configured above
+   in order to provide flexibility for substitution.
+   These tests will work on any database because the data are synthetic.
+3. Run TSTool to run tests:
+   1. Use command parameters such as `--datastore-substitute=system-test-general,system-test`
+      to cause the datastore `system-test` found in command files
+      to be replaced with substutute `system-test-general` datastore name when run.
+      A script is typically implemented to specify command line parameters in the development or testing environment.
+   2. Run the general test suite, using the command files from step 2.
+   3. If appropriate, use a production system database backup for testing,
+      with the first datastore name used with `--datastore-substitute` corresponding to the databae.
+
+The TSTool main interface behavior is as follows. If a `--datastore-substitute` parameter is used:
+
+* if the `system-test` datastore is used in the TSTool interface, the `system-test-general` datastore will be used instead
+* the `system-test` datastore will not be listed in TSTool because it is not configured as a datastore (it is a placeholder in command files)
