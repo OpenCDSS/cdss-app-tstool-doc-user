@@ -35,8 +35,9 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.2.0](release-notes-14.md)|Feature release to support sub-second time precision support.  Work is ongoing.|2022-03-??|
 |[14.1.1](release-notes-14.md)|Maintenance release to improve features used in automated testing.|2022-02-28|
-|[14.1.0](release-notes-14.md)|Add commands to output table in Markdown format, set table column properties.|2022-02-16|
+|[14.1.0](release-notes-14.md)|Feature release to add commands to output table in Markdown format, set table column properties.|2022-02-16|
 |[14.0.6](release-notes-14.md)|Maintenance release to improve `# @require` functionality.|2022-02-04|
 |[14.0.5](release-notes-14.md)|Maintenance release for testing features and to update `Log4J` library.|2022-01-30|
 |[14.0.4](release-notes-14.md)|Maintenance release to update training documentation and respond to "Log4Shell" vulnerability.|2021-12-19|

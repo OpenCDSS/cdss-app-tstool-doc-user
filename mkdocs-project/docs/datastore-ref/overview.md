@@ -10,12 +10,31 @@
 
 This reference section of the documentation provides information about datastores:
 
-* databases - must be accessible via [ODBC](https://en.wikipedia.org/wiki/Open_Database_Connectivity)/[JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) connection,
-typically through database driver software distributed with TSTool
-(support for additional database software can be added)
-* file databases - typically optimized for a use, such as HEC-DSS used with Army Corps and other software
-* files - simple files, including model files such as the State of Colorado's StateMod model
-* web services - SOAP and REST web services
+* databases:
+    + must be accessible via [ODBC](https://en.wikipedia.org/wiki/Open_Database_Connectivity)/[JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) connection,
+      using a database driver software distributed with TSTool
+    + a datastore corresponding to a database is can be queried using Structured Query Language (SQL),
+      such as with the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command
+    + general support for additional database software can be added relatively easily if an ODBC/JDBC driver is available for the database
+    + requires additional software development and integration with TSTool for time series identifier and read/write commands
+* web services:
+    + typically REST web services using a published API
+    + SOAP web services can also be supported
+    + requires software development and integration with TSTool
+* file databases:
+    + ideally uses an open specification
+    + typically optimized for a use, such as
+      [HEC-DSS used with Army Corps](HEC-DSS/HEC-DSS.md) software
+    + adding a new file database requires implementing software that is able to read the file format
+    + currently are handled as ***Input Type*** in the TSTool software but in the future will
+      be migrated to a "file datastore" design
+* files:
+    + ideally uses an open specification
+    + simple files, including general [DateValue](DateValue/DateValue.md) time series file and
+      model files such as the
+      [State of Colorado's StateMod model](StateMod/StateMod.md)
+    + currently are handled as ***Input Type*** in the TSTool software but in the future will
+      be migrated to a "file datastore" design
 
 A "datastore" is a data management component that
 saves time series and other data.
@@ -41,41 +60,41 @@ The following datastores (and input types) are listed in alphabetical order by d
 Any datastores or other features that are obsolete may have already been removed from TSTool or may be removed in the future.
 If necessary, such features can be reimplemented as a plugin datastore and used on specific installations of TSTool.
 
-| **Datastore (link to documentation)**                                        | **Technology**         | **Spatial Extent** | **Contents**                                   | **Documentation Status** |
-|--|--|--|--|--|
-| [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)      | Web service (REST)     | Colorado           | Historical and real-time data                  | Migrated |
-| Colorado SMS (legacy)<br>**OBSOLETE - replaced with ColoradoHydroBaseRest web services**                                        | Database (SQL Server)  | Colorado           | Real-time data                                 | **not yet migrated** - no longer used |
-| [ColoradoWaterHBGuest](ColoradoWaterHBGuest/ColoradoWaterHBGuest.md)<br>**OBSOLETE - replaced with ColoradoHydroBaseRest web services**| Web service (SOAP)     | Colorado           | Historical data                         | Migrated - for reference |
-| [ColoradoWaterSMS](ColoradoWaterSMS/ColoradoWaterSMS.md)<br>**OBSOLETE - replaced with ColoradoHydroBaseRest web services**     | Web service (SOAP)     | Colorado           | Real-time data                                 | Migrated - for reference |
-| [DateValue](DateValue/DateValue.md)                                          | File (text)            | No limit           | General time series format                     | Migrated |
-| [Delft FEWS PI XML](Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md)                  | File (text)            | No limit           | Delft FEWS software file                       | Migrated |
-| [GenericDatabase](GenericDatabase/GenericDatabase.md)                        | Database (any ODBC)    | No limit           | Any SQL database                               | Migrated |
-| [HEC-DSS File](HEC-DSS/HEC-DSS.md)                                           | File database (binary) | No limit           | General time series database                   | Migrated |
-| [HydroBase](CO-HydroBase/CO-HydroBase.md)                                    | Database (SQL Server)  | Colorado           | Colorado water resources (datastore version)   | Migrated |
-| [HydroBase (legacy, input type version)](CO-HydroBase-legacy/CO-HydroBase-legacy.md)             | Database (SQL Server)  | Colorado           | Colorado water resources (input type version)  | Use [HydroBase datastore](CO-HydroBase/CO-HydroBase.md) documentation. |
-| [HydroJSON](HydroJSON/HydroJSON.md)                                          | File (text)            | No limit           | HydroJSON time series format                   | Migrated |
-| [MODSIM](MODSIM/MODSIM.md)                                                   | File (text)            | No limit           | MODSIM modeling software data file             | Migrated |
-| [NRCS AWDB](NRCS-AWDB/NRCS-AWDB.md)                                          | Web service (SOAP)     | USA                | Snow, reservoir, climate, other                | Migrated |
-| [NDFD](NDFD/NDFD.md)<br>**OBSOLETE - need new equivalent**                   | File (text)            | No limit           | National Digital Forecast Database             | Migrated |
-| [NWS Card](NWSCard/NWSCard.md)<br>**OBSOLETE - NWS uses other formats**      | File (text)            | No limit           | General time series format (hour interval)     | Migrated |
-| [NWSRFS ESP Trace Ensemble](NWSRFSEspTraceEnsemble/NWSRFSEspTraceEnsemble.md)<br>**OBSOLETE**        | File (binary)          | No limit           | Ensembles of time series (hour interval)       | Migrated |
-| [NWSRFS FS5Files](NWSRFS-FS5Files/NWSRFS-FS5Files.md)<br>**OBSOLETE**        | File database (binary) | No limit           | National Weather Service River Forecast System | Migrated |
-| [RCC ACIS](RCC-ACIS/RCC-ACIS.md)                                             | Web service (REST)     | USA                | Precipitation, temperature, other climate      | Migrated |
-| [Reclamation HDB](ReclamationHDB/ReclamationHDB.md)                          | Database (Oracle)      | USA                | Water resources                                | Migrated |
-| [Reclamation Pisces](ReclamationPisces/ReclamationPisces.md)                 | Database (MySQL)       | USA                | Water resources                                | Migrated |
-| [RiversideDB](RiversideDB/RiversideDB.md)<br>**OBSOLETE**                    | Database (SQL Server)  | No limit           | Hydrologic modeling database.                  | **Has been removed from TSTool as of version 13**     |
-| [RiverWare](RiverWare/RiverWare.md)                                          | File (text)            | No limit           | RiverWare modeling software data file          | Migrated |
-| [StateCU](StateCU/StateCU.md)                                                | File (text)            | No limit           | StateCU modeling software data file            | Migrated |
-| [StateCUB - StateCU Output](StateCUB/StateCUB.md)                            | File (binary)          | No limit           | StateCU modeling software data file            | Migrated |
-| [StateMod](StateMod/StateMod.md)                                             | File (text)            | No limit           | StateMod modeling software data file           | Migrated |
-| [StateModB - StateMod Output](StateModB/StateModB.md)                        | File (binary)          | No limit           | StateMod modeling software data file           | Migrated |
-| [USGS NWIS Daily](USGS-NWIS-Daily/USGS-NWIS-Daily.md)                        | Web service (REST)     | No limit           | Water and other data (day interval)            | Migrated |
-| [USGS NWIS Groundwater](USGS-NWIS-Groundwater/USGS-NWIS-Groundwater.md)      | Web service (REST)     | No limit           | Groundwater and other data                     | Migrated |
-| [USGS NWIS Instantaneous](USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous.md)| Web service (REST)     | No limit           | Water and other data (instantaneous interval)  | Migrated |
-| [USGS NWIS RDB](USGS-NWIS-RDB/USGS-NWIS-RDB.md)                              | File (text)            | No limit           | RDB format for USGS data (see USGS above)      | Migrated |
-| [WaterML](WaterML/WaterML.md)                                                | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | Migrated |
-| [WaterML2](WaterML2/WaterML2.md)                                             | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  | Migrated |
-| [WaterOneFlow](WaterOneFlow/WaterOneFlow.md)<br>**prototype**                | Web service (SOAP)     | No limit           | Web service for CUAHSI                         | Migrated |
+| **Datastore (link to documentation)**                                        | **Technology**         | **Spatial Extent** | **Contents**                                   |
+|--|--|--|--|
+| [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)      | Web service (REST)     | Colorado           | Historical and real-time data                  |
+| Colorado SMS (legacy)<br>**OBSOLETE - replaced with [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) web services**                                        | Database (SQL Server)  | Colorado           | Real-time data                                 |
+| [ColoradoWaterHBGuest](ColoradoWaterHBGuest/ColoradoWaterHBGuest.md)<br>**OBSOLETE - replaced with [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) web services**| Web service (SOAP)     | Colorado           | Historical data                         |
+| [ColoradoWaterSMS](ColoradoWaterSMS/ColoradoWaterSMS.md)<br>**OBSOLETE - replaced with [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) web services**     | Web service (SOAP)     | Colorado           | Real-time data                                 |
+| [DateValue](DateValue/DateValue.md)                                          | File (text)            | No limit           | General time series format                     |
+| [Delft FEWS PI XML](Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md)                  | File (text)            | No limit           | Delft FEWS software file                       |
+| [GenericDatabase](GenericDatabase/GenericDatabase.md)                        | Database (any ODBC)    | No limit           | Any SQL database                               |
+| [HEC-DSS File](HEC-DSS/HEC-DSS.md)                                           | File database (binary) | No limit           | General time series database                   |
+| [HydroBase](CO-HydroBase/CO-HydroBase.md)                                    | Database (SQL Server)  | Colorado           | Colorado water resources (datastore version)   |
+| [HydroBase (legacy, input type version)](CO-HydroBase-legacy/CO-HydroBase-legacy.md)             | Database (SQL Server)  | Colorado           | Colorado water resources (input type version). See the [HydroBase datastore](CO-HydroBase/CO-HydroBase.md) documentation for latest documentation. |
+| [HydroJSON](HydroJSON/HydroJSON.md)                                          | File (text)            | No limit           | HydroJSON time series format                   |
+| [MODSIM](MODSIM/MODSIM.md)                                                   | File (text)            | No limit           | MODSIM modeling software data file             |
+| [NRCS AWDB](NRCS-AWDB/NRCS-AWDB.md)                                          | Web service (SOAP)     | USA                | Snow, reservoir, climate, other                |
+| [NDFD](NDFD/NDFD.md)<br>**OBSOLETE - need new equivalent**                   | File (text)            | No limit           | National Digital Forecast Database             |
+| [NWS Card](NWSCard/NWSCard.md)<br>**OBSOLETE - NWS uses other formats**      | File (text)            | No limit           | General time series format (hour interval)     |
+| [NWSRFS ESP Trace Ensemble](NWSRFSEspTraceEnsemble/NWSRFSEspTraceEnsemble.md)<br>**OBSOLETE**        | File (binary)          | No limit           | Ensembles of time series (hour interval)       |
+| [NWSRFS FS5Files](NWSRFS-FS5Files/NWSRFS-FS5Files.md)<br>**OBSOLETE**        | File database (binary) | No limit           | National Weather Service River Forecast System |
+| [RCC ACIS](RCC-ACIS/RCC-ACIS.md)                                             | Web service (REST)     | USA                | Precipitation, temperature, other climate      |
+| [Reclamation HDB](ReclamationHDB/ReclamationHDB.md)                          | Database (Oracle)      | USA                | Water resources                                |
+| [Reclamation Pisces](ReclamationPisces/ReclamationPisces.md)                 | Database (MySQL)       | USA                | Water resources                                |
+| [RiversideDB](RiversideDB/RiversideDB.md)<br>**OBSOLETE**                    | Database (SQL Server)  | No limit           | Hydrologic modeling database.  Has been removed from TSTool as of version 13. |
+| [RiverWare](RiverWare/RiverWare.md)                                          | File (text)            | No limit           | RiverWare modeling software data file          |
+| [StateCU](StateCU/StateCU.md)                                                | File (text)            | No limit           | StateCU modeling software data file            |
+| [StateCUB - StateCU Output](StateCUB/StateCUB.md)                            | File (binary)          | No limit           | StateCU modeling software data file            |
+| [StateMod](StateMod/StateMod.md)                                             | File (text)            | No limit           | StateMod modeling software data file           |
+| [StateModB - StateMod Output](StateModB/StateModB.md)                        | File (binary)          | No limit           | StateMod modeling software data file           |
+| [USGS NWIS Daily](USGS-NWIS-Daily/USGS-NWIS-Daily.md)                        | Web service (REST)     | No limit           | Water and other data (day interval)            |
+| [USGS NWIS Groundwater](USGS-NWIS-Groundwater/USGS-NWIS-Groundwater.md)      | Web service (REST)     | No limit           | Groundwater and other data                     |
+| [USGS NWIS Instantaneous](USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous.md)| Web service (REST)     | No limit           | Water and other data (instantaneous interval)  |
+| [USGS NWIS RDB](USGS-NWIS-RDB/USGS-NWIS-RDB.md)                              | File (text)            | No limit           | RDB format for USGS data (see USGS above)      |
+| [WaterML](WaterML/WaterML.md)                                                | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  |
+| [WaterML2](WaterML2/WaterML2.md)                                             | File (text)            | No limit           | WaterML format for USGS data (see USGS above)  |
+| [WaterOneFlow](WaterOneFlow/WaterOneFlow.md)<br>**prototype**                | Web service (SOAP)     | No limit           | Web service for CUAHSI                         |
 
 ## Datastore Configuration ##
 

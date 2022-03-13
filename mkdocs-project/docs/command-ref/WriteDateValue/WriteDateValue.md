@@ -47,7 +47,7 @@ Command Parameters
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`OutputFile`|The DateValue output file.  The path to the file can be absolute or relative to the working directory (command file location).  Can be specified using processor `${Property}`.|None – must be specified.|
 |`Delimiter`|The delimiter character to use between data values.  Comma is the only other allowed value other than the default space and is recommended for irregular time series, which are output as blanks when date/times don’t align with other time series.|Space|
-|`Precision`|The number of digits after the decimal for numerical output.|`4` (in the future may default based on data type)|
+|`Precision`|The number of digits after the decimal for numerical output.|`4` or if set for time series (in the future may default based on units). |
 |`MissingValue`|The value to write to the file to indicate a missing value in the time series.	As initialized when reading the time series or creating a new time series, typically `-999`, `NaN`, etc.|
 |`IncludeProperties`|A list of time series property names to write, separated by commas, as of `Version=1.6`.  Use `*` as a wildcard to match multiple properties.|None.|
 |`WriteDataFlagDescriptions`|Indicate whether data flag descriptions should be written using `True` or `False`, as of `Version=1.6`.|`False`|
