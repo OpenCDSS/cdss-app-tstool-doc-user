@@ -1,6 +1,7 @@
 # TSTool / Release Notes / Version 14 #
 
 * [Known Limitations](#known-limitations)
+* [Changes in Version 14.2.0](#changes-in-version-1420)
 * [Changes in Version 14.1.1](#changes-in-version-1411)
 * [Changes in Version 14.1.0](#changes-in-version-1410)
 * [Changes in Version 14.0.6](#changes-in-version-1406)
@@ -19,6 +20,36 @@
 * ![limitation](limitation.png) [14.0.0+] Features that were previously available for reading and writing HEC-DSS files are disabled.
 Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
 
+## Changes in Version 14.2.0 ##
+
+**Feature release to support sub-second time.**
+
+* ![bug](bug.png) [14.2.0] The Agriculture/NASS `CropArea` data type was listed for HydroBase;
+    however, time series that were listed could not be transferred to the command list.
+    This has been fixed.
+* ![remove](remove.png) [14.2.0] Code for DIADvisor input type has been removed.
+    The software features had not been used for many years and were unsupported.
+* ![change](change.png) [14.2.0] Internal date/time objects have been updated as follows:
+    + Nanonsecond fractional seconds are supported.  Previously only hundredths of seconds was supported.
+    + Begin phasing in precision for irregular time series time interval.
+      For example 'IrregSecond' is used for irregular time series with date/times that use precision to second.
+      High precision for time now includes hundredths, milliseconds, microseconds, and nanoseconds.
+    + Core code has been updated to parse times with high precision and output in default formats when detected.
+    + Several commands listed below have been updated to utilize the new functionality and additional features will be updated over time.
+* ![change](change.png) [14.2.0] Time series now have a built-in data precision property that is used for output if specified,
+    which will override the precision determined from data units.
+    Use the ***Results / Time Series Properties*** menu to view a time series' precision.
+* ![change](change.png) [14.2.0] Update the
+  [`CreateTimeSeriesEventTable`](../command-ref/CreateTimeSeriesEventTable/CreateTimeSeriesEventTable.md) command to
+  support analysis of time series data to determine events.
+* ![change](change.png) [14.2.0] Update the
+  [`FormatTableDateTime`](../command-ref/FormatTableDateTime/FormatTableDateTime.md) command to allow
+  incremental time offset to use floating-point number with fractional intervals.
+* ![change](change.png) [14.2.0] Update the
+  [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command to support sub-second
+  precision for irregular interval time series.
+  The `IrregularIntervalPrecision` now accepts `HSecond`, `Millisecond`, `Microsecond`, and `Nanosecond`. 
+
 ## Changes in Version 14.1.1 ##
 
 **Maintenance release to fix features used in automated testing.**
@@ -29,7 +60,7 @@ Additional resources are needed to update the software to use 64-bit libraries f
 
 ## Changes in Version 14.1.0 ##
 
-**Enhancement release to format table as Markdown and improve file handling.**
+**Feature release to format table as Markdown and improve file handling.**
 
 * ![new](new.png) [14.1.0] Add the
   [`SetTableColumnProperties`](../command-ref/SetTableColumnProperties/SetTableColumnProperties.md)

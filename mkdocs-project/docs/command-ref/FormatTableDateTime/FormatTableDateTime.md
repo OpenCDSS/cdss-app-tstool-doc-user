@@ -18,25 +18,30 @@ further processing, or export to a spreadsheet.
 See also the [`FormatTableString`](../FormatTableString/FormatTableString.md) command,
 which manipulates strings.  Formatting occurs as follows:
 
-1. The date/time input column value is parsed into internal date/time object.
-Currently there is no command parameter to specify the format of the input
-column and consequently standard formats are expected
-(ISO `YYYY-MM-DD hh:mm:ss` or `MM/DD/YYYY hh:mm:ss` of varying precision):
-	1. If the input column is not an increment (***Increment*** tab parameters are blank)
-	then the input column is parsed directly to a date/time object.
-	2. If the input column is an increment from a starting date/time
-	(***Increment*** tab parameters are not blank),
-	the date/time object is computed as the offset from the starting date/time,
-	for example the number of hours since the start.
+1. The date/time input column value is parsed into an internal date/time object:
+    1. If the input column is not an increment (***Increment*** tab parameters are blank)
+       then the input column is parsed directly to a date/time object.
+        * `DateTime` input column type is used directly without parsing.
+        * `String` input column is parsed by detecting standard formats
+          (e.g., ISO `YYYY-MM-DD hh:mm:ss` or `MM/DD/YYYY hh:mm:ss` of varying precision)
+    2. If the input column is an increment from a starting date/time
+       (***Increment*** tab parameters are not blank),
+       the date/time object is computed as the offset from the starting date/time,
+       for example the number of minutes or hours since the start of an event.
+       Whole interval offsets (e.g., number of seconds since start) and offsets with fractional interval
+       (e.g., minutes `123.1`) are handled.
 2. The date/time object from the previous step is formatted into a string using
-the format specifier string specified by the `FormatterType` and `DateTimeFormat` parameters.
-Missing values in input will result in blanks (nulls) in output.
+   the format specifier string specified by the `FormatterType` and `DateTimeFormat` parameters:
+    1. Missing values in input will result in blanks (nulls) in output.
+    2. The specified format must be compatible with the output column type (see next step):
+         * A full date/time string (e.g., `YYYY-MM-DD hh:mm:ss`) can only be converted to `DateTime` or `String` output.
+         * A simple output format such as `YYYY` can be converted to `Integer` or `Double`.
 3. The string is converted into the final output column type by specifying the `OutputType` parameter:
-	1. DateTime output might be used to create date/time objects with less
-	precision that the original input column (for example to truncate hh:mm:ss that is superfluous).
-	2. Integer or double types can be created if the date/time output string from the
-	previous step contains integer or floating-point number, for example `YYYY` or `YYYY.MM`
-	3. String outputs the string from the previous step.
+    1. `DateTime` output might be used to create date/time objects with less
+       precision than the original input column (e.g., to truncate `hh:mm:ss` where `ss` is always `00` and therefore superfluous).
+    2. `Integer` or `Double` types can be created if the date/time output string from the
+       previous step contains integer or floating-point number (e.g., `YYYY` or `YYYY.MM`).
+    3. `String` outputs the string from the previous step.
 
 ## Command Editor ##
 
@@ -91,18 +96,18 @@ FormatTableDateTime(Parameter="Value",...)
 Command Parameters
 </p>**
 
-| **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| --------------|-----------------|----------------- |
-|`TableID`|The identifier for the table to process.  Can be specified using processor `${Property}`.|None – must be specified.|
-|`InputColumn`|The name of the input date/time column to process.  The column can contain date/time objects or strings that can be parsed into date/time objects.  If `IncrementStart` is specified, this column should contain integers that indicate the offset from the increment start.  Can be specified using processor `${Property}`.|None – must be specified.|
-|`IncrementStart`|When input column is an increasing time increment, specify the starting date/time.  Can be specified using processor `${Property}`.|Do not use increment.|
-|`IncrementBaseUnit`|When input column is an increasing time increment, specify the base unit for increment values: `Minute`, `Hour`, `Day`, `Year`.|Do not use increment.|
-|`FormatterType`|The date/time formatter type that defines `DateTimeFormat`:<br><ul><li>`C` – the C programming language [strftime() function](http://man7.org/linux/man-pages/man3/strftime.3.html), which has been widely copied (described below).</li><li>`MS` – Microsoft convention (currently not supported but may be added in the future).</li></ul>|`C`|
-|`DateTimeFormat`|The format specifier string used to format the date/time values.  Specify as many format specifiers as appropriate.  All other characters will be transferred to the output string.  See the table below for valid specifiers.  Can be specified using processor `${Property}`.|None – must be specified.|
-|`OutputYearType`|Indicate the year type used to transform the date/time to an output.  For example, specify `OutputYearType=Water` and `DateTimeFormat=${dt:YearForYearType}` to output the water year corresponding to the input date/time.||
-|`OutputColumn`|The name of the column to receive the output.  If the column does not exist in the table it will be created, considering `OutputType`.  Can be specified using processor `${Property}`.|None – must be specified.|
-|`OutputType`|Specify if the output column should be other than a String.  Successful conversion to the output type requires that the format string result is consistent with the desired output type.|String|
-|`InsertBeforeColumn`|The name of the column before which the output column should be inserted (if the output column needs to be created).  Can be specified using processor `${Property}`.|Insert at the end of the table.|
+| **Tab** | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| --------------|-----------------|-----------------|--|
+| **Input** |`TableID`|The identifier for the table to process.  Can be specified using processor `${Property}`.|None – must be specified.|
+| |`InputColumn`|The name of the input date/time column to process.  The column can contain date/time objects or strings that can be parsed into date/time objects.  If `IncrementStart` is specified, this column should contain integers that indicate the offset from the increment start.  Can be specified using processor `${Property}`.|None – must be specified.|
+| **Increment** |`IncrementStart`|When input column is an increasing time increment, specify the starting date/time.  Can be specified using processor `${Property}`.|Do not use increment.|
+| |`IncrementBaseUnit`|When input column is an increasing time increment, specify the base unit for increment values: `Minute`, `Hour`, `Day`, `Year`.|Do not use increment.|
+| **Format** |`FormatterType`|The date/time formatter type that defines `DateTimeFormat`:<br><ul><li>`C` – the C programming language [strftime() function](http://man7.org/linux/man-pages/man3/strftime.3.html), which has been widely copied (described below), with extensions for TSTool</li><li>`MS` – Microsoft convention (currently not supported but may be added in the future)</li></ul>|`C`|
+| |`DateTimeFormat`|The format specifier string used to format the date/time values.  Specify as many format specifiers as appropriate.  All other characters will be transferred to the output string.  See the table below for valid specifiers.  Can be specified using processor `${Property}`.|None – must be specified.|
+| **Output** |`OutputYearType`|Indicate the year type used to transform the date/time to an output.  For example, specify `OutputYearType=Water` and `DateTimeFormat=${dt:YearForYearType}` to output the water year corresponding to the input date/time.||
+| |`OutputColumn`|The name of the column to receive the output.  If the column does not exist in the table it will be created, considering `OutputType`.  Can be specified using processor `${Property}`.|None – must be specified.|
+| |`OutputType`|Specify if the output column should be other than a String.  Successful conversion to the output type requires that the format string result is consistent with the desired output type.|String|
+| |`InsertBeforeColumn`|The name of the column before which the output column should be inserted (if the output column needs to be created).  Can be specified using processor `${Property}`.|Insert at the end of the table.|
 
 The following table lists the supported format strings for `FormatterType=C`:
 
@@ -118,13 +123,17 @@ Supported C (Strftime) Format Specifiers
 |`%B`|Month (e.g., `January`).|
 |`%d`|Day (`01`-`31`).|
 |`%H`|Hour (`00`-`23`).|
+|`%h`|Hundredths of seconds (`00`-`99`), computed from nanoseconds stored with the time. **This is a TSTool extension to C standard.** |
 |`%I`|Hour (`01`-`12`).|
 |`%j`|Day of year (`001`-`366`).|
+|`%l`|Milliseconds (`000`-`999`), computed from nanoseconds stored with the time. **This is a TSTool extension to C standard.** |
 |`%m`|Month (`01`-`12`).|
 |`%M`|Minute (`00`-`59`).|
+|`%n`|Nanoseconds (`000000000`-`999999999`). **This is a TSTool extension to C standard.** |
 |`%p`|AM, PM (noon=`PM`, midnight=`AM`).|
 |`%S`|Second (`00`-`59`).|
 |`%s`|Number of seconds since Jan 1, 1970 00:00:00|
+|`%u`|Microseconds (`000000`-`999999`), computed from nanoseconds stored with the time. **This is a TSTool extension to C standard.** |
 |`%y`|Year (`00`-`99`).|
 |`%Y`|Year (`0000`-`9999`).|
 |`%Z`|Time zone (e.g., `MST`).|

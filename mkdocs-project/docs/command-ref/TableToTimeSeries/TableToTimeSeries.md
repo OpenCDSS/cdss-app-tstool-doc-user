@@ -11,18 +11,16 @@
 
 ## Overview ##
 
-The `TableToTimeSeries` command creates time series from a table.
+The `TableToTimeSeries` command creates one or more time series from a table.
 This command can be used when a command to read time series from a specific file format
 or datastore has not been implemented or parsing the table is easier.
-The table typically is read using one of the following commands:
+The table typically is read using one of the following commands or another command:
 
 * [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) – for example,
 define an ODBC DSN connection to a database and query time series using an SQL statement.
 * [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) – for example,
 read time series from a comma-separated-value (CSV) file.
 * [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) – for example, read time series from a comma-separated-value (CSV) file
-* `ReadTableFromHTML` – envisioned for the future.
-* `ReadTableFromXML` – under development.
 
 TSTool internally represents tables as a collection of columns,
 where a column contains values of a consistent data type (e.g., integer, string, double).
@@ -220,40 +218,40 @@ TableToTimeSeries(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-|--------------|-----------------|-----------------|
-|`TableID`|The identifier for the table to read.  Can be specified using processor `${Property}`.|None – must be specified.|
-|`DateTimeColumn`|The column for date/time, when date and time are in one column.  If the table was read in a way that the column type is “date/time”, then the values are used directly.  If the table was read in a way that the column type is “string”, then the string is parsed using default logic or the `DateTimeFormat` parameter if specified.|Required if `DateColumn` is not specified.|
-|`DateTimeFormat`|The format for date/time strings in the date/time column, if strings are being parsed.  If blank, common formats such as `YYYY-MM-DD hh:mm` and `MM/DD/YYYY` will automatically be detected.  However, it may be necessary to specify the format to ensure proper parsing.  This format will be used to parse date/times from the `DateTimeColumn` or the merged string from the `DateColumn` and `TimeColumn` (if specified).  The format string will depend on the formatter type.  Currently, only the `C` formatter is available, which uses C programming language specifiers. The resulting format includes the formatter and specifiers (e.g., `C:%m%d%y`).|Will automatically be determined by examining date/time strings.|
-|`DateColumn`|The name of column that includes the date, used when date and time are in separate columns.|Required if `DateTimeColumn` is not specified.|
-|`TimeColumn`|The name of column that includes the time, used when date and time are in separate columns.  If both `DateColumn` and `TimeColumn` are specified, their contents are merged with a joining colon character and are then treated as if `DateTimeColumn` had been specified.|Required if `DateColumn` is specified and the interval requires time.|
-|`LocationID`|Used with multiple data column table.  The location identifier(s) to assign to time series, separated by columns if more than one column is read from the table. Column names can be specified as literal strings or as `TC[start:stop]` to match table column names, where start is 1+ and stop is blank to read all columns or a negative number to indicate the offset from the end column.  Can be specified using processor `${Property}`.|None – must be specified for multiple column data tables.|
-|`LocationTypeColumn`|Used with single data column table. The name of the column containing the location type.|Do not assign a location type.|
-|`LocationColumn`|Used with single data column table. The name of the column containing the location identifier.|None – must be specified for single column data tables.|
-|`DataSourceColumn`|Used with single data column table. The name of the column containing the data source.|Use the `DataSource` parameter, which can be blank.|
-|`DataTypeColumn`|Used with single data column table. The name of the column containing the data type.  Use the `DataType` parameter, which can be blank.|
-|`ScenarioColumn`|Used with single data column table. The name of the column containing the scenario.  Use the `Scenario` parameter, which can be blank.|
-|`ScenarioColumn`|Used with single data column table. The name of the column containing the sequence identifier, which is used with ensembles to uniquely identify trace time series in the ensemble.|Use the `SequenceID` parameter, which can be blank.|
-|`UnitsColumn`|Used with single data column table. The name of the column containing the data units.|Use the `Units` parameter, which can be blank.|
-|`LocationType`|The location type(s) to assign to time series for each of the value columns (or specify one value to apply to all columns).|No location type will be assigned.|
-|`DataSource`|The data source (provider) identifier to assign to time series for each of the value columns (or specify one value to apply to all columns).|No data source will be assigned.|
-|`DataType`|The data type to assign to time series for each of the value columns (or specify one value to apply to all columns).  Can be specified using processor `${Property}`.|Use the value column names for the data types.|
-|`Interval`|The interval for the time series.   Only one interval is recognized for all the time series in the table.  Interval choices are provided when editing the command.  If it is possible that the date/times are not evenly spaced, then use the Irregular interval (this is difficult to do for multiple data column tables).|None – must be specified.|
-|`IrregularIntervalPrecision`|The precision for date/times used in irregular time series.|Depends on precision of parsed date/times.|
-|`Scenario`|The scenario to assign to time series for each of the value columns (or specify one value to apply to all columns).|No scenario will be assigned.|
-|`SequenceID`|The sequence ID to assign to time series for each of the value columns (or specify one value to apply to all columns).|No sequence ID will be assigned.|
-|`Alias`|The alias to assign to time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing.  Can be specified using processor `${Property}`.|No alias will be assigned.|
-|`ValueColumn`|The name(s) of column(s) containing data values.  Separate column names with commas.  The `TC[start:stop]` notation discussed for `LocationID` can be used.  Only one column should be specified for single data column table.|None – must be specified.|
-|`FlagColumn`|The name(s) of column(s) containing the data flag.  Separate column names with commas.  The `TC[start:stop]` notation discussed for `LocationID` can be used.  If specified, the number of columns must match the `ValueColumn` parameter, although specifying blank column names is allowed to indicate that a value column does not have a corresponding flag column.|Flags are not read.|
-|`Units`|The data units to assign to time series for each of the value columns (or specify one value to apply to all columns).|No units will be assigned.|
-|`Missing`|Strings that indicate missing data in the table (e.g., `m`), separated by commas.|Interpret empty column values as missing data.|
-|`HandleDuplicatesHow`|Indicate how to handle duplicate date/time values in the table:<ul><li>`Add` – add the duplicate values (missing values are ignored)</li><li>`UseFirstNonmissing` – set the output to the first non-missing value</li><li>`UseLast` – set the output to the last value processed, even if missing</li><li>`UseLastNonmissing` – set the output to the last non-missing value processed</li></ul>|`UseLast`|
-|`BlockLayout`|Indicates how data are laid out when in block format:<ul><li>`Period` – a single block is used for the entire period</li></ul>|`Block` layout is not used.|
-|`BlockLayoutColumns`|Indicates the time slice for values in columns:<ul><li>`Month` – each column includes a month</li></ul>||
-|`BlockLayoutRows`|Indicates the time slice for values in rows:<ul><li>`Year` – each row includes a year</li></ul>||
-|`BlockOutputYearType`|Indicates the year type for the data block.  For example, if columns are in rows and the output year type is `Water`, then the first value column is `October`:<ul><li>`Calendar` – January to December</li><li>`NovToOct` – November to October</li><li>`Water` – October to September</li></ul>|`Calendar`|
-|`InputStart`|The date/time to start reading data.  Can be specified using processor `${Property}`.|All data or global input start.|
-|`InputEnd`|The date/time to end reading data.  Can be specified using processor `${Property}`.|All data or global input end.|
+|**Tab**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|-------|-------|-----------------|-----------------|
+||`TableID`|The identifier for the table to read.  Can be specified using processor `${Property}`.|None – must be specified.|
+||`DateTimeColumn`|The column for date/time, when date and time are in one column.  If the table was read in a way that the column type is “date/time”, then the values are used directly.  If the table was read in a way that the column type is “string”, then the string is parsed using default logic or the `DateTimeFormat` parameter if specified.|Required if `DateColumn` is not specified.|
+||`DateTimeFormat`|The format for date/time strings in the date/time column, if strings are being parsed.  If blank, common formats such as `YYYY-MM-DD hh:mm` and `MM/DD/YYYY` will automatically be detected.  However, it may be necessary to specify the format to ensure proper parsing.  This format will be used to parse date/times from the `DateTimeColumn` or the merged string from the `DateColumn` and `TimeColumn` (if specified).  The format string will depend on the formatter type.  Currently, only the `C` formatter is available, which uses C programming language specifiers. The resulting format includes the formatter and specifiers (e.g., `C:%m%d%y`).|Will automatically be determined by examining date/time strings.|
+||`DateColumn`|The name of column that includes the date, used when date and time are in separate columns.|Required if `DateTimeColumn` is not specified.|
+||`TimeColumn`|The name of column that includes the time, used when date and time are in separate columns.  If both `DateColumn` and `TimeColumn` are specified, their contents are merged with a joining colon character and are then treated as if `DateTimeColumn` had been specified.|Required if `DateColumn` is specified and the interval requires time.|
+|***Multiple Data Value Columns***|`LocationID`|Used with multiple data column table.  The location identifier(s) to assign to time series, separated by columns if more than one column is read from the table. Column names can be specified as literal strings or as `TC[start:stop]` to match table column names, where start is 1+ and stop is blank to read all columns or a negative number to indicate the offset from the end column.  Can be specified using processor `${Property}`.|None – must be specified for multiple column data tables.|
+|***Single Data Value Column***|`LocationTypeColumn`|Used with single data column table. The name of the column containing the location type.|Do not assign a location type.|
+||`LocationColumn`|Used with single data column table. The name of the column containing the location identifier.|None – must be specified for single column data tables.|
+||`DataSourceColumn`|Used with single data column table. The name of the column containing the data source.|Use the `DataSource` parameter, which can be blank.|
+||`DataTypeColumn`|Used with single data column table. The name of the column containing the data type.  Use the `DataType` parameter, which can be blank.|
+||`ScenarioColumn`|Used with single data column table. The name of the column containing the scenario.  Use the `Scenario` parameter, which can be blank.|
+||`ScenarioColumn`|Used with single data column table. The name of the column containing the sequence identifier, which is used with ensembles to uniquely identify trace time series in the ensemble.|Use the `SequenceID` parameter, which can be blank.|
+||`UnitsColumn`|Used with single data column table. The name of the column containing the data units.|Use the `Units` parameter, which can be blank.|
+|***TSID and Alias***|`LocationType`|The location type(s) to assign to time series for each of the value columns (or specify one value to apply to all columns).|No location type will be assigned.|
+||`DataSource`|The data source (provider) identifier to assign to time series for each of the value columns (or specify one value to apply to all columns).|No data source will be assigned.|
+||`DataType`|The data type to assign to time series for each of the value columns (or specify one value to apply to all columns).  Can be specified using processor `${Property}`.|Use the value column names for the data types.|
+||`Interval`|The interval for the time series.   Only one interval is recognized for all the time series in the table.  Interval choices are provided when editing the command.<br><br>If the date/times are not evenly spaced, then use the `IRREGULAR` (`Irregular`) interval and optionally specify `IrregularIntervalPrecision`.  Multiple columns must all use the same irregular date/time, or use blanks (or save irregular data in separate files).|None – must be specified.|
+||`IrregularIntervalPrecision`|The precision for date/times used in irregular time series.  In the future, the `Interval` parameter may accept interval `IrregSecond` and similar so that two parameters are not needed. |Depends on precision of parsed date/times.|
+||`Scenario`|The scenario to assign to time series for each of the value columns (or specify one value to apply to all columns).|No scenario will be assigned.|
+||`SequenceID`|The sequence ID to assign to time series for each of the value columns (or specify one value to apply to all columns).|No sequence ID will be assigned.|
+||`Alias`|The alias to assign to time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing.  Can be specified using processor `${Property}`.|No alias will be assigned.|
+|***Data***|`ValueColumn`|The name(s) of column(s) containing data values.  Separate column names with commas.  The `TC[start:stop]` notation discussed for `LocationID` can be used.  Only one column should be specified for single data column table.|None – must be specified.|
+||`FlagColumn`|The name(s) of column(s) containing the data flag.  Separate column names with commas.  The `TC[start:stop]` notation discussed for `LocationID` can be used.  If specified, the number of columns must match the `ValueColumn` parameter, although specifying blank column names is allowed to indicate that a value column does not have a corresponding flag column.|Flags are not read.|
+||`Units`|The data units to assign to time series for each of the value columns (or specify one value to apply to all columns).|No units will be assigned.|
+||`Missing`|Strings that indicate missing data in the table (e.g., `m`), separated by commas.|Interpret empty column values as missing data.|
+||`HandleDuplicatesHow`|Indicate how to handle duplicate date/time values in the table:<ul><li>`Add` – add the duplicate values (missing values are ignored)</li><li>`UseFirstNonmissing` – set the output to the first non-missing value</li><li>`UseLast` – set the output to the last value processed, even if missing</li><li>`UseLastNonmissing` – set the output to the last non-missing value processed</li></ul>|`UseLast`|
+|***Block Data***|`BlockLayout`|Indicates how data are laid out when in block format:<ul><li>`Period` – a single block is used for the entire period</li></ul>|`Block` layout is not used.|
+||`BlockLayoutColumns`|Indicates the time slice for values in columns:<ul><li>`Month` – each column includes a month</li></ul>||
+||`BlockLayoutRows`|Indicates the time slice for values in rows:<ul><li>`Year` – each row includes a year</li></ul>||
+||`BlockOutputYearType`|Indicates the year type for the data block.  For example, if columns are in rows and the output year type is `Water`, then the first value column is `October`:<ul><li>`Calendar` – January to December</li><li>`NovToOct` – November to October</li><li>`Water` – October to September</li></ul>|`Calendar`|
+|***Period***|`InputStart`|The date/time to start reading data.  Can be specified using processor `${Property}`.|All data or global input start.|
+||`InputEnd`|The date/time to end reading data.  Can be specified using processor `${Property}`.|All data or global input end.|
 
 ## Examples ##
 

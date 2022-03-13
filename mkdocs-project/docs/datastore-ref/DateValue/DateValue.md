@@ -29,13 +29,17 @@ Header information is displayed by applications like TSTool to allow selection o
 non-overlapping date/times will result in blanks rather than the missing value
 indicator (missing value indicators indicate actual values in the irregular time series;
 “missing” values are allowed to have data flags, whereas “no value” are represented as blanks).  
-* Properties names are case-independent.
+* Property names are case-independent.
 * The `TSID`, `Start`, `End`, and `Units` properties are important for basic time series handling.
-	+ The interval part of the `TSID` is used to determine how memory should be allocated for data.
-	+ The Start and End values are used to allocate memory for regular interval time series.
-	Dates associated with data values are used to allocate memory for irregular interval time series.
-	+ For regular interval time series, if data lines between the start and end dates are omitted,
-	the unspecified values are set to the missing data value for the time series.
+    + The interval part of the `TSID` is used to determine how memory should be allocated for data.
+    + The `Start` and `End` values are used to allocate memory for regular interval time series.
+    Dates associated with data values are used to allocate memory for irregular interval time series.
+    + For regular interval time series, if data lines between the start and end dates are omitted,
+    the unspecified values are set to the missing data value for the time series.
+    + The `Units` indicates data units and is used to determine the precision
+    (number of digits after the decimal point) for output.
+    The precision determined from units can be overridden in command parameters
+    if the precision from units is not acceptable.
 
 ```
 # DateValueTS 1.5 file
