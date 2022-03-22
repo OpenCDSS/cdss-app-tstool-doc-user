@@ -22,19 +22,29 @@ Additional resources are needed to update the software to use 64-bit libraries f
 
 ## Changes in Version 14.2.0 ##
 
-**Feature release to support sub-second time.**
+**Feature release to add HydroBase REST web services for historical climate and surface water stations,
+and add support for sub-second time.**
 
+* ![new](new.png) [14.2.0] The [ColoradoHydroBaseRest](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)
+  web service has new functionality:
+    + Historical climate station time series can now be read.
+    + Historical surface water station time series (streamflow) can now be read.
+    + The [`ReadColoradoHydroBaseRest`](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md)
+      command has been updated to read the above historical time series.
+    + Time series identifier commands for the datastore read the above historical time series.
+    + The datastore documentation has been significantly updated.
 * ![bug](bug.png) [14.2.0] The Agriculture/NASS `CropArea` data type was listed for HydroBase;
     however, time series that were listed could not be transferred to the command list.
     This has been fixed.
 * ![remove](remove.png) [14.2.0] Code for DIADvisor input type has been removed.
     The software features had not been used for many years and were unsupported.
-* ![change](change.png) [14.2.0] Internal date/time objects have been updated as follows:
-    + Nanonsecond fractional seconds are supported.  Previously only hundredths of seconds was supported.
+* ![change](change.png) [14.2.0] Internal date/time objects have been updated to support sub-second precision, as follows:
+    + Nanonsecond, microsecond, millisend, and hundredths of second fractional seconds are supported
+      and are handled automatically during date/time parsing and formatting.
+      Previously only hundredths of seconds was supported.
     + Begin phasing in precision for irregular time series time interval.
-      For example 'IrregSecond' is used for irregular time series with date/times that use precision to second.
-      High precision for time now includes hundredths, milliseconds, microseconds, and nanoseconds.
-    + Core code has been updated to parse times with high precision and output in default formats when detected.
+      For example `IrregSecond` is used for irregular time series with date/times that use precision to second.
+      High precision time is handled, for example to track exact measurement times for real-time data values.
     + Several commands listed below have been updated to utilize the new functionality and additional features will be updated over time.
 * ![change](change.png) [14.2.0] Time series now have a built-in data precision property that is used for output if specified,
     which will override the precision determined from data units.
@@ -45,6 +55,7 @@ Additional resources are needed to update the software to use 64-bit libraries f
 * ![change](change.png) [14.2.0] Update the
   [`FormatTableDateTime`](../command-ref/FormatTableDateTime/FormatTableDateTime.md) command to allow
   incremental time offset to use floating-point number with fractional intervals.
+  For example, fractional minutes can be processed.
 * ![change](change.png) [14.2.0] Update the
   [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command to support sub-second
   precision for irregular interval time series.
