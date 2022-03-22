@@ -23,11 +23,10 @@ A summary table is provided, with links to details for major versions.
 ## TSTool Version History ##
 
 The following table summarizes the TSTool release history.
-See the TSTool Version Details links above for more detailed information about each version.
+See the TSTool Version Details links above or the links in the following table for more detailed information about each version.
 Only recent versions are documented in detail.
 Comments for minor versions may be listed under a version that is publicly released.
-Release note items are categorized as follows,
-and release note items for a version are typically listed in the same order as shown to emphasize impacts on software users.
+Release note details are categorized with [issue type icons](#tstool-issue-icons).
 
 **<p style="text-align: center;">
 TSTool Version History Summary (most current at top)
@@ -35,7 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|[14.2.0](release-notes-14.md)|Feature release to support sub-second time precision support.  Work is ongoing.|2022-03-??|
+|[14.2.0](release-notes-14.md)|Feature release to add HydroBase REST web service historical climate and surface water stations and support sub-second time precision. |2022-03-21|
 |[14.1.1](release-notes-14.md)|Maintenance release to improve features used in automated testing.|2022-02-28|
 |[14.1.0](release-notes-14.md)|Feature release to add commands to output table in Markdown format, set table column properties.|2022-02-16|
 |[14.0.6](release-notes-14.md)|Maintenance release to improve `# @require` functionality.|2022-02-04|
