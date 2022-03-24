@@ -19,6 +19,8 @@ The local file can then be processed with additional commands, for example
 [`ReadDelimitedFile`](../ReadDelimitedFile/ReadDelimitedFile.md) if the content is comma-separated-value and
 [`ReadTableFromJSON`](../ReadTableFromJSON/ReadTableFromJSON.md) if the content is JSON.
 
+The command is equivalent to an HTTP `GET` request.
+
 Extraneous content (such as HTML markup around text) and inconsistencies in newline characters
 (`CRLF`=`\r\n` for windows and `LF`=`\n` on other systems) may lead to some issues in processing the content with other commands.
 See the [`TextEdit`](../TextEdit/TextEdit.md) and other commands to process files after downloading.
@@ -56,6 +58,7 @@ Command Parameters
 | --------------|-----------------|----------------- |
 | `URI`<br>**required**| The Uniform Resource Identifier (URI) for the content to be retrieved.  This is often also referred to as the Uniform Resource Locator (URL).  Global properties can be used with the `${Property}` syntax.| None - must be specified.|
 | `EncodeURI` | Indicate whether to encode the URL to protect special characters: `False` or `True`.  See [Percent-encoding on Wikipedia](https://en.wikipedia.org/wiki/Percent-encoding). Encoded URLs are difficult to read and therefore human-readable URL can be entered as the `URI`, such as using spaces.  However, the requested resource may require encoding to be recognized by a called service.  If the provided `URI` is already encoded, then specify `False`. Only the value  part of `?property=value` and `&property=value` query is encoded. | `True` |
+| `HttpHeaders` | List of HTTP header properties to be attached to the request.  This is useful if a website requires authentication via a key property, and for testing. The format is `PropertyName1:PropertyValue1,PropertyName2:PropertyValue2,...`| No headers. |
 | `ConnectTimeout` | The connection timeout in milliseconds.  If a connection has not occurred in this time, an error will result. | `60000` (60 seconds) |
 | `ReadTimeout` | The read timeout in milliseconds.  If data read has not started in this time, an error will result. For example, a connection may be established and the server may begin processing a response, but may not provide data to read. | `60000` (60 seconds) |
 | `RetryMax` | Maximum number of retries, useful when a server rejects connections or is known to experience downtime.  Using retries will cause the workflow to wait on this command.  Another option is to use the [`For`](../For/For.md) command to control retries. | Try one time. |

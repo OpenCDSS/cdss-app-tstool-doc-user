@@ -3,7 +3,8 @@
 * [Overview](#overview)
     + [Web Service to Time Series Mapping](#web-service-to-time-series-mapping)
     + [ColoradoHydroBaseRest Time Series Data Types](#coloradohydrobaserest-time-series-data-types)
-    + [Diversion Coding](#diversion-coding)
+    + [Diversion Record Coding](#diversion-record-coding)
+    + [Calculation of Statistics for Interval Data](#calculation-of-statistics-for-interval-data)
 * [Standard Time Series Properties](#standard-time-series-properties)
 * [Limitations](#limitations)
 * [Datastore Configuration File](#datastore-configuration-file)
@@ -20,6 +21,19 @@ requires a direct connection to a Microsoft SQL Server HydroBase database,
 and a local installation of the database may not be available.
 A local database is typically used by State of Colorado staff and
 consultants or others that need the higher performance of a local database.
+
+---
+
+**IMPORTANT: Data available from web services originate from a wide variety of sources and formats
+Data collection and processing methods vary.
+Consequently, it is difficult in some cases to confirm data contents without
+researching the full data workflow.
+For example, `SnowDepth.Day` could be a mean of snow depth measurements in the day,
+the last value in a day, a manually measured value taken at any point in the day,
+or other value.
+This documentation is general and the documentation for original data sources should be consulted to answer questions.**
+
+---
 
 The ColoradoHydroBaseRest datastore provides access to HydroBase using internet REST web services
 and is automatically enabled in TSTool as the `HydroBaseWeb` datastore.
@@ -98,7 +112,7 @@ Summary of Web Services Implemented in ColoradoHydroBaseRest Datastore
 |--|--|--|
 | Administrative Calls         | Currently none.            | Could treat historical calls as time series. |
 | Analysis Services            | Currently none.            | Not currently integrated into TSTool. |
-| Climate Stations             | See ***Climate Station - Evap*** and similar data type below. | The TSTool HydroBase database datastore uses ***Climate*** data types and TSIDs similar to `USC00298284.NOAA.EvapPan.Month~HydroBase`.  Climate station data types are `MixedCase`. |
+| Climate Stations             | See ***Climate Station - Evap*** and similar data type below. | The TSTool HydroBase database datastore uses ***Climate*** data types and TSIDs similar to `USC00298284.NOAA.Precip.Day~HydroBase`.  Climate station data types are `MixedCase`. |
 | Dam Safety                   | Currently none.            | Not currently integrated into TSTool. |
 | Diversion Records            | See<br><ul><li>***Structure - DivComment***</li><li>***Structure - DivTotal***</li><li>***Structure - RelTotal***</li><li>***Structure - Stage***</li><li>***Structure - WaterClass***</li><li>***Structure - Volume***</li></ul> data type below.| The TSTool HydroBase database datastore uses TSIDs similar to:<ul><li>`0300905.DWR.DivComment.Year~HydroBase`</li><li>`0300905.DWR.DivTotal.Month~HydroBase`</li><li>`0300503.DWR.DivClass-S:6 F:0300934 U:Q T:0 G:.Month~HydroBase`</li><li>`0303732.DWR.ResMeasElev.Day~HydroBase`</li><li>`0303732.DWR.ResMeasStorage.Day~HydroBase`</li>**Note that web services support new water classes with account and `To` coding.  Any water class that includes periods is enclosed in single quotes to protect within normal TSID format.** |
 | Groundwater Geophysical Logs | Currently none.            | Not currently integrated into TSTool. |
@@ -107,7 +121,7 @@ Summary of Web Services Implemented in ColoradoHydroBaseRest Datastore
 | Reference Tables             | As needed.                 | Used to display choices and perform checks. |
 | Structures                   | See Diversion Records.     | Structure data is processed with Diversion Records. Time series query structure data and save as time series properties. |
 | Surface Water                | See:<ul><li>***Surface Water Station - Streamflow-Avg***</li><li>***Surface Water Station - Streamflow-Max***</li><li>***Surface Water Station - Streamflow-Min***</li><li>***Surface Water Station - Streamflow-Total***</li></ul> and similar data types below. | See the TSTool HydroBase database datastore ***Stream - Streamflow*** data types, which uses TSIDs similar to `09306395.USGS.Streamflow.Month~HydroBase`. |
-| Telemetry Stations           | See<br>***Telemetry Station - Parameter*** data type below. | See the TSTool HydroBase database datastore ***Stream - Streamflow*** data types for real-time stations (satellite monitoring stations) using time intervals.  Telemetry stations with climate data are listed under ***Climate***. Real-time HydroBase data can only by read from HydroBase within the State of Colorado's system.  The telemetry station data types are UPPERCASE, which allows differentiation from climate station data types that overlap, for example `EVAP` and `Evap`. |
+| Telemetry Stations           | See<br>***Telemetry Station - Parameter*** data type below. | The TSTool HydroBase database datastore does not provide access to real-time data because web services now provides this functionality.  The telemetry station data types are `UPPERCASE`, which allows differentiation from climate station data types that overlap, for example `EVAP` and `Evap`. |
 | Water Rights                 | Currently none.            | Not currently integrated into TSTool.  Could treat water rights as time series to allow accumulation.  The [`ReadStateMod`](../../command-ref/ReadStateMod/ReadStateMod.md) command reads water rights time series from model files. |
 | Well Permits                 | Currently none.            | Not currently integrated into TSTool. |
 
@@ -118,7 +132,11 @@ Time series identifiers can be requested for valid combinations of location iden
 
 Data indicated as "historical data" undergo review by the State in order to produce a data archive,
 and third party data are also ingested for some data types,
-to simplify access to useful data types.
+to simplify access to useful data types and allow creation of HydroBase database snapshots
+that can be used by modelers who do not want data to change during modeling work.
+Month and year interval data are often based on daily time series
+and daily time series often use common statistic, such as mean daily flow.
+Information from the original data sources should be consulted to better understand data details.
 
 Data indicated as "real-time data" include current and recent measurements and may also have a long period.
 Real-time data are typically processed into historical data using a process that includes review and quality control,
@@ -143,21 +161,21 @@ ColoradoHydroBaseRest Time Series Data Types
 | |`MinTemp`| Minimum daily temperature for intervals:<ul><li>`MinTemp.Day` - minimum daily temperature</li><li>`MinTemp-Avg.Month` - average of daily minimum temperature for month</li><li>`MinTemp-Max.Month` - maximum of daily minimum temperature month</li><li>`MinTemp-Min.Month` - minimum of daily minimum temperature for month</li><li>`MinTemp-Total.Month` - not currently provided (could be used for degree days if enabled)</li></ul>|
 | |`Precip`| Precipitation for intervals:<ul><li>`Precip.Day` - daily total precipitation</li><li>`Precip-Avg.Month` - average of daily precipitation for month</li><li>`Precip-Max.Month` - maximum of daily precipitation for month</li><li>`Precip-Min.Month` - minimum of daily precipitation for month</li><li>`Precip-Total.Month` - total of daily precipitation for month</li></ul><br>Climate station data use mixed case `Precip` whereas telemetry station data for real-time stations use upper case `PRECIP`.|
 | |`Snow`| Snow accumulation for intervals:<ul><li>`Snow.Day` - daily total snow accumulation</li><li>`Snow-Avg.Month` - average of daily snow accumulation for month</li><li>`Snow-Max.Month` - maximum of daily snow accumulation for month</li><li>`Snow-Min.Month` - minimum of daily snow accumulation for month</li><li>`Snow-Total.Month` - total of daily snow accumulation for month</li></ul> |
-| |`SnowDepth`| Snow depth for intervals:<ul><li>`Snow.Day` - daily snow depth (**mean? latest recording?**)</li><li>`Snow-Avg.Month` - average of daily snow depth for month</li><li>`Snow-Max.Month` - maximum of daily snow depth for month</li><li>`Snow-Min.Month` - minimum of daily snow depth for month</li><li>`Snow-Total.Month` - total of daily snow depth for month</li></ul> |
+| |`SnowDepth`| Snow depth for intervals:<ul><li>`Snow.Day` - daily snow depth</li><li>`Snow-Avg.Month` - average of daily snow depth for month</li><li>`Snow-Max.Month` - maximum of daily snow depth for month</li><li>`Snow-Min.Month` - minimum of daily snow depth for month</li><li>`Snow-Total.Month` - total of daily snow depth for month</li></ul> |
 | |`SnowSWE`| Snow water equivalent (SWE) depth for intervals:<ul><li>`SnowSWE.Day` - daily SWE depth</li><li>`SnowSWE-Avg.Month` - average of daily SWE for month</li><li>`SnowSWE-Max.Month` - maximum of daily SWE for month</li><li>`SnowSWE-Min.Month` - minimum of daily SWE for month</li></ul> |
-| |`Solar`| Solar radiation rate for intervals:<ul><li>`Solar.Day` - daily (**mean?**) rate</li><li>`Solar-Avg.Month` - average of daily rate for month</li><li>`Solar-Max.Month` - maximum of daily rate for month</li><li>`Solar-Min.Month` - minimum of daily rate for month</li></ul><br>Climate station data used mixed case `Solar` whereas telemetry station data for real-time stations use upper case `SOLAR`. |
-| |`VP`| Vapor pressure for intervals:<ul><li>`VP.Day` - daily (**mean?**) vapor pressure</li><li>`VP-Avg.Month` - average of daily mean vapor pressure for month</li><li>`VP-Max.Month` - maximum of daily mean vapor pressure for month</li><li>`VP-Min.Month` - minimum of daily mean vapor pressure for month</li></ul> |
+| |`Solar`| Solar radiation rate for intervals:<ul><li>`Solar.Day` - daily rate</li><li>`Solar-Avg.Month` - average of daily rate for month</li><li>`Solar-Max.Month` - maximum of daily rate for month</li><li>`Solar-Min.Month` - minimum of daily rate for month</li></ul><br>Climate station data used mixed case `Solar` whereas telemetry station data for real-time stations use upper case `SOLAR`. |
+| |`VP`| Vapor pressure for intervals:<ul><li>`VP.Day` - daily vapor pressure</li><li>`VP-Avg.Month` - average of daily mean vapor pressure for month</li><li>`VP-Max.Month` - maximum of daily mean vapor pressure for month</li><li>`VP-Min.Month` - minimum of daily mean vapor pressure for month</li></ul> |
 | |`Wind`| Wind run (distance traveled, KM) for intervals:<ul><li>`Wind.Day` - daily total wind run</li><li>`Wind-Avg.Month` - average of daily total wind run for month</li><li>`Wind-Max.Month` - maximum of daily total wind run for month</li><li>`Wind-Min.Month` - minimum of daily total wind run for month</li></ul> |
 | ***Structure***<br>(historical data)|`DivComment`| Diversion comment for intervals:<ul><li>`DivComment.Year` - acres irrigated, with corresponding diversion comment flag, used when detailed diversion records are unavailable</li></ul><br>See also the [Diversion Record Coding](#diversion-record-coding) section.  |
 | |`DivTotal`| Diversion total through structure for intervals:<ul><li>`DivTotal.Day` - average daily diversion rate, cfs</li><li>`DivTotal.Month` - total monthly diversion volume, af</li><li>`DivTotal.Year` - total annual diversion volume for irrigation year (November to October), af</ul><br>See also the [Diversion Record Coding](#diversion-record-coding) section. |
 | |`RelTotal`| Release from structure for intervals:<ul><li>`RelTotal.Day` - average daily release rate, cfs</li><li>`RelTotal.Month` - total monthly release, af</li><li>`RelTotal.Year` - total annual release for irrigation year (November to October), af</ul><br>See also the [Diversion Record Coding](#diversion-record-coding) section. |
-| |`Stage`| Reservoir stage (elevation) for intervals:<ul><li>`Stage.Day` - daily stage (**measurement at any time during day?**)</li></ul>|
-| |`Volume`| Reservoir volume for intervals:<ul><li>`Volume.Day` - daily volume (**measurement at any time during day?**)</li></ul>|
+| |`Stage`| Reservoir stage (elevation) for intervals:<ul><li>`Stage.Day` - daily stage</li></ul>|
+| |`Volume`| Reservoir volume for intervals:<ul><li>`Volume.Day` - daily volume</li></ul>|
 | |`WaterClass`| Diversion records that use water class ("water color" reflecting use, type, etc.) for intervals:<ul><li>`WaterClass.Day` - average daily water class rate, cfs</li><li>`WaterClass.Month` - total monthly water class volume, af</li><li>`WaterClass.Year` - total water class volume for irrigation year (November to October), af</ul><br>See the [Diversion Record Coding](#diversion-record-coding) section.|
 | ***Surface Water Station***<br>(historical data)|`Streamflow`| Streamflow (discharge) for intervals:<ul><li>`Streamflow-Avg.Day` - daily mean streamflow</li><li>`Streamflow-Avg.Month` - average of daily mean streamflow for month</li><li>`Streamflow-Max.Month` - maximum of daily mean streamflow for month</li><li>`Streamflow-Min.Month` - minimum of daily mean streamflow for month</li><li>`Streamflow-Total.Month` - total of daily mean streamflow as volume (af)</li></ul> The statistic `Avg` is used for daily data in anticipation that other statistics such as `Max` and `Min` may be added for daily interval data. |
 | ***Telemetry Station***<br>(real-time data)| Many parameters, including<ul><li>`DISCHRG` - discharge (streamflow)</li><li>`GAGE_HT`</li> - stage (elevation)</li></ul><br>Use a data type of `*` in TSTool to list all available data. | Real-time stations from stations maintained by Division of Water Resources and contributors.  The data are used for real-time administration and operations.  The data may be processed into historical data.  Data may be collected on multiple tributaries at one station (e.g., `DISCHRG1`, `DISCHRG2`).  Timestamp indicates the interval-ending statistic, such as mean discharge during the interval ending on the timestamp.  Midnight value is the last value for the previous day, for interval ending at midnight.  Intervals include:<ul><li>`15Min`</li><li>`Hour`</li><li>`Day`</li></ul><br>Telemetry stations use upper case data type (e.g., `EVAP`, `PRECIP`, and `SOLAR`) whereas climate stations used mixed case data type (e.g., `Evap`, `Precip`, `Solar`) to ensure unique time series identifiers. |
-| ***Well***<br>(historical data)|`WaterLevelDepth`| Water level depth for intervals:<ul><li>`WaterLevelDepth.Day` - treated as a daily time series with many gaps (**measurement taken at any time in the day?**). |
-| |`WaterLevelElev` | Water level elevation for intervals:<ul><li>`WaterLevelElev.Day` - treated as a daily time series with many gaps (**measurement taken at any time in the day?**). |
+| ***Well***<br>(historical data)|`WaterLevelDepth`| Water level depth for intervals:<ul><li>`WaterLevelDepth.Day` - treated as a daily time series with many gaps. |
+| |`WaterLevelElev` | Water level elevation for intervals:<ul><li>`WaterLevelElev.Day` - treated as a daily time series with many gaps. |
 
 ### Diversion Record Coding ###
 
@@ -191,6 +209,37 @@ For structure diversion records, additional zero values are added to facilitate 
 **It is a [known issue](https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-rest-java/issues/29)
 that monthly diversion records read from the HydroBase database and web services handle
 missing values and zeros differently.**
+
+## Calculation of Statistics for Interval Data ##
+
+This section provides background on how statistics are used to calculate interval data values.
+However, the details for each data type vary and the documentation provided for
+original data sources should be consulted.
+
+Raw data measurements are collected using various methods, including:
+
+* manual observations reported using "instantaneous" time such as to second,
+  or a less precise time such as day, depending on the data type,
+* "continuous monitoring" stations that measure data relatively frequently,
+  such as every minute or 15 minutes
+* "polled" stations that may be contacted less frequently, such as once a day
+* values that are estimated from operations, such as no diversions in a year
+
+The raw values may or may not be provided in web services.
+For example `Telemetry Station` 15 minute data are considered "raw" data and for most purposes can be considered as
+instantaneous or mean over 15 minutes.
+
+Interval data are calculated from a sample taken from the original raw data or the data for a base interval.
+For example, the daily maximum streamflow will be different if calculated from instantaneous
+1 minute values or mean 15 minute values.
+This distinction may or may not be important based on the use of the data.
+
+For ColoradoHydroBaseRest web services, daily data are often used as the base interval to compute
+month and year interval data values.
+The base interval data may have been loaded from a third party.
+
+The data processing and quality control procedures vary depending on the original data source, data type, and expected data use.
+Refer to the original data providers' documentation (if available) for more information about specific datasets.
 
 ## Standard Time Series Properties ##
 
