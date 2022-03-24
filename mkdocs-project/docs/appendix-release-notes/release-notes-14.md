@@ -1,6 +1,7 @@
 # TSTool / Release Notes / Version 14 #
 
 * [Known Limitations](#known-limitations)
+* [Changes in Version 14.2.1](#changes-in-version-1421)
 * [Changes in Version 14.2.0](#changes-in-version-1420)
 * [Changes in Version 14.1.1](#changes-in-version-1411)
 * [Changes in Version 14.1.0](#changes-in-version-1410)
@@ -19,6 +20,43 @@
 
 * ![limitation](limitation.png) [14.0.0+] Features that were previously available for reading and writing HEC-DSS files are disabled.
 Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
+
+## Changes in Version 14.2.1 ##
+
+**Maintenance release to disable real-time data in HydroBase database datastore, other cleanup for recent releases.**
+
+* ![remove](remove.png) [14.2.1] Remove real-time data in HydroBase datastore and input type since
+  no longer supported in the current HydroBase approach and data are available in the
+  [ColoradoHydroBaseRest](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) datastore.
+  The `Irregular` interval (timestep) has been removed from the following data types,
+  and the data type has also been removed if real-time interval was the only choice:
+    + `AdminFlow - AdminFlow` (`Day` and `Month` remain)
+    + `Hardware - Battery` (real-time only)
+    + `Climate - Precip` (`Day` and `Month` remain)
+    + `Climate - Temp` (has real-time only)
+    + `Reservoir - PoolElev` (has real-time only)
+    + `Reservoir - Release` (has real-time only)
+    + `Reservoir - Stage` (has real-time only)
+    + `Reservoir - Storage` (has real-time only)
+    + `Stream - WatTemp` (has real-time only)
+    + `Well - WellLevel` (has multiple intervals but have been phasing out for years so remove)
+    + `Well - WellLevelElev` (has real-time only)
+* ![bug](bug.png) [14.2.1] Fix the graphing tool to show mouse tracker when irregular
+  time series do not have fully-overlapping periods.
+  Also add the tracker option ***NearestWithId*** to show the time series identifier on the tracker,
+  which is useful when many time series are shown.
+* ![bug](bug.png) [14.2.1] Fix bug where sub-second precision dates were truncating when read
+  if the fractional digits did not match a handled interval.
+  For example, 4 digits would truncate to milliseconds.
+  The software will now use the next highest precision if the number of digits being parsed is
+  not an exact match for hundredths, milli, micro, or nanoseconds,
+  and additional zeros will be added at the end.
+* ![bug](bug.png) [14.2.1] Fix the
+  [`Cumulate`](../command-ref/Cumulate/Cumulate.md) command so an error is not shown for the `Reset`
+  parameter if not specified (the parameter is optional).
+* ![change](change.png) [14.2.1] Update the
+  [`WebGet`](../command-ref/WebGet/WebGet.md) command to have `HttpHeaders` parameter to pass
+  HTTP header properties with the request.
 
 ## Changes in Version 14.2.0 ##
 
