@@ -1,6 +1,7 @@
 # TSTool / Release Notes / Version 14 #
 
 * [Known Limitations](#known-limitations)
+* [Changes in Version 14.2.2](#changes-in-version-1422)
 * [Changes in Version 14.2.1](#changes-in-version-1421)
 * [Changes in Version 14.2.0](#changes-in-version-1420)
 * [Changes in Version 14.1.1](#changes-in-version-1411)
@@ -20,6 +21,17 @@
 
 * ![limitation](limitation.png) [14.0.0+] Features that were previously available for reading and writing HEC-DSS files are disabled.
 Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
+
+## Changes in Version 14.2.2 ##
+
+**Maintenance release to address issues found in the HydroBase REST web services datastore.**
+
+* ![bug](bug.png) [14.2.2] Fix issues identified while implementing the
+  [ColoradoHydroBaseRest](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) datastore:
+    + Tested with HydroBase 20200330 version.
+    + Fixed issue where HydroBase database `SnowDepth` data type was returning `-2147483648` for missing values
+      because the database changed from integer to floating number type.
+* ![bug](bug.png) [14.2.2] Fix bug where ***View / Data Units*** resulted in an error.
 
 ## Changes in Version 14.2.1 ##
 

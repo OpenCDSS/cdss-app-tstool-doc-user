@@ -34,6 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.2.2](release-notes-14.md)|Maintenance release to fix issues identified in HydroBase REST web services. | 2022-04-07 |
 |[14.2.1](release-notes-14.md)|Maintenance release to disable real-time data in HydroBase database datastore, other cleanup for recent releases. |2022-03-24|
 |[14.2.0](release-notes-14.md)|Feature release to add HydroBase REST web service historical climate and surface water stations and support sub-second time precision. |2022-03-21|
 |[14.1.1](release-notes-14.md)|Maintenance release to improve features used in automated testing.|2022-02-28|
