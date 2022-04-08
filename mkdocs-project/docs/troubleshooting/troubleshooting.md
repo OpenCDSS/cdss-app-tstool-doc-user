@@ -37,6 +37,7 @@ finding information on a troubleshooting topic.**
 	+ [Issue 11 - TSTool text (fonts) are small](#issue-11-tstool-text-fonts-are-small)
 	+ [Issue 12 - Datastore is (not) available](#issue-12-datastore-is-not-available)
 	+ [Issue 13 - Slow startup](#issue-13-slow-startup)
+	+ [Issue 14 - SQL Server Express out of date](#issue-14-sql-server-express-out-of-date)
 * [Obsolete Commands](#obsolete-commands)
 
 ------------------
@@ -849,6 +850,24 @@ Also remove or disable datastores that are not needed.
 but may not be relevant.  For example TSTool was developed for the State of Colorado and defaults to having
 HydroBase database being enabled.  However, a HydroBase database may not be available.
 In this case, to disable, edit the `TSTool.cfg` file and set `HydroBaseEnabled=False`.
+
+## Issue 14 - SQL Server Express out of date ##
+
+**Scope** – any version
+
+**Behavior** – HydroBase Database Manager displays the following error when trying to attach a new HydroBase database: 
+
+**<p style="text-align: center;">
+![SQL-server-express](SQL-server-express.png)
+</p>**
+
+**Possible Causes** – The following are possible causes
+
+1. SQL Server Express is out of date on the user's machine
+
+**Possible Solution** - The following is an approach to troubleshooting.
+
+1. SQL Server Express (CDSS) should be uninstalled and the latest version should be downloaded from [Microsoft](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
 ## Obsolete Commands ##
 
