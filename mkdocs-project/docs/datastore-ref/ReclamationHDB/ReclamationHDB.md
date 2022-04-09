@@ -7,6 +7,8 @@
 * [Technical Note – Handling Time Zone](#technical-note–handling-time-zone)
 * [Writing to HDB](#writing-to-hdb)
 * [Reading from HDB](#reading-from-hdb)
+* [Examples](#examples)
+    + [Writing State of Colorado Streamflow Station Time Series to HDB](#writing-state-of-colorado-streamflow-station-time-series-to-hdb)
 
 ------------
 
@@ -418,8 +420,8 @@ Note that the `SAMPLE_DATE_TIME`, which is the start of the interval,
 is a DATE type, which includes date and time to second, but no time zone.
 TSTool uses the Java `java.sql.TimeStamp.TimeStamp` object to define the timestamp,
 where the objects are created using UNIX time.
-According to the [Java JDBC driver documentation](https://docs.oracle.com/cd/B19306_01/server.102/b14200/functions092.htm),
-which is included below.
+See the [Java JDBC driver documentation](https://docs.oracle.com/cd/B19306_01/server.102/b14200/functions092.htm),
+which is included below, for information about handling timestamps.
 
 ----
 Start article...
@@ -542,3 +544,57 @@ command to tell TSTool that data are expected only on a certain offset,
 and all other data will be ignored.
 This does not clean up the database but does at least ensure that the correct data are read.
 This approach requires some effort to understand how data were loaded into the database
+
+## Examples
+
+The following examples illustrate how to use the ReclamationHDB datastore with TSTool.
+
+### Writing State of Colorado Streamflow Station Time Series to HDB
+
+The State of Colorado publishes data using web services.
+TSTool is able to read these web services using the built-in `HydroBaseWeb` datastore.
+See the [ColoradoHydroBaseRest datastore documentation](../ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)
+for information about available data types.
+Use the TSTool user interface to list time series and create TSID commands
+in order to understand how to uniquely identify time series.
+
+The following is a simple example for reading average daily flow for a State of Colorado station and writing to HDB,
+for a historical period:
+
+```
+SetInputPeriod(InputStart="2021-01-01",InputEnd="2021-12-31")
+abbrev:BTBLESCO.DWR.Streamflow-Avg.Day~HydroBaseWeb
+WriteReclamationHDB(DataStore="hdbtest1",TSList=AllMatchingTSID,TSID="abbrev:BTBLESCO.DWR.Streamflow-Avg.Day~HydroBaseWeb",SiteDataTypeID=100247,Agency="CODWR",CollectionSystem="(see agency)",Method="copy of data",TimeZone="MST",WriteProcedure="WRITE_DATA")
+```
+
+The following are technical considerations:
+
+1. Streamflow time series data are available from:
+    1. `Surface Water Station - Streamflow*` data type time series for historical data,
+       which include stations maintained by the State of Colorado
+       (only has ***CO Abbrev*** identifiers) and stations cooperatively maintained with the USGS
+       (have ***CO Abbrev*** and ***USGS Site ID***).
+       If a USGS identifier is available, it is selected by default by the TSTool user interface
+       in order to facilitate cross-reference with USGS web services.
+       If it is desired to force use of the State's abbreviation,
+       edit the command and change the location time in the time series identifier from `usgs:` to `abbrev:`.
+    2. `Telemetry Station - DISCHRG*` (discharge) and `Telemetry Station - GAGE_HT*` (stage)
+       data type time series for real-time data,
+       which use the State of Colorado abbreviation for identifier by default.
+       Telemetry station parameters vary by location.  Use the TSTool interface and query data type `Telemetry Station - *`
+       to list all available time series.
+       For example, a station may be installed at a confluence and use one site ID but multiple `DISCHRG` parameters
+       to collect data from nearby tributaries.
+       Contact the Division of Water Resources water commissioner if necessary or use the
+       [CDSS Online Tools](https://dwr.state.co.us/Tools) for more information about stations.
+2. The historical time series have smallest interval `Day` and the real-time data have largest interval `Day`,
+   but the period of record for each depends on State of Colorado processes to archive real-time data as historical data.
+   Therefore, the data for a station should be reviewed to decide which time series are best for an application.
+3. The previous sections of this page describe how to write time series to Reclamation HDB database.
+   The site and related data must be defined first, before using TSTool to load data.
+   TSTool does not provide features to define sites and other data.
+4. To load multiple time series, consider using the following commands:
+    * [`ReadColoradoHydroBaseRest`](../../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) - reads more than one time series
+    * [`ReadTimeSeriesList`](../../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md) - to read a list of time series given a table of identifier information
+    * [`For`](../../command-ref/For/For.md) - loop over commands, which avoids the need to expand a template command file,
+      for example to loop over the time series listed in a table, to write to HDB
