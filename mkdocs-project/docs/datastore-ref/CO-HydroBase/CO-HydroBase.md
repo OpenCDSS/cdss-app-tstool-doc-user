@@ -190,7 +190,8 @@ However, for all practical purposes, using the release date also implies the dat
 
 TSTool examines the database structure to confirm the version and is able to handle multiple database versions.
 
-The [`#` Comment `@require datastore` syntax](../../command-ref/Comment/Comment.md)
+The [`#@require datastore`](../../command-ref/Comment/Comment.md) and
+[`#@enabledif datastore`](../../command-ref/Comment/Comment.md) comment syntax
 requires using a date string with format `YYYYMMDD` (e.g., `20210322`),
 which corresponds to the HydroBase instance (release) date.
 
