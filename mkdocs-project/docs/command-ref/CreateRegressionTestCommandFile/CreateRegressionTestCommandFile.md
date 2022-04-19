@@ -3,7 +3,7 @@
 * [Overview](#overview)
 * [Command Editor](#command-editor)
 * [Command Syntax](#command-syntax)
-	+ [`@require` Comment](#require-comment)
+    + [`@enabledif` Comment](#enabledif-comment)
 * [Examples](#examples)
 * [Troubleshooting](#troubleshooting)
 * [See Also](#see-also)
@@ -21,6 +21,7 @@ A starting search folder is provided and all files that match the given pattern 
 are assumed to be command files that can be run to test the software.
 The resulting command file is a test suite comprised of all the individual tests and can be used
 to verify software before release.
+
 The goal is to have all tests pass before software is released and not retain broken tests in the test repository.
 A passing test normally means that software is able to produce a result; however,
 it may mean that software is unable to achieve a result,
@@ -40,36 +41,27 @@ The following table lists tags (annotations) that can be placed in `#` comments 
 | **Comment Tag**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
 |-----------------------|-----------------|
 | `#@enabled False` | The `RunCommands` command will by default run the command file that is provided.  However, if the `@enabled False` tag is specified in a comment in the command file, `RunCommands` will skip the command file.  This is useful to disable a test that needs additional work. |
-| `#@expectedStatus Failure`<br>`#@expectedStatus Warning` | The `RunCommands` command `ExpectedStatus` parameter is by default `Success`.  Using the comment in the original command file will result in a corresponding `RunCommands(ExpectedStatus=...)` parameter to indicate how to handle overall test status.  A status can be specified if it is expected that a command file will result in Warning or Failure and still be a successful test.  For example, if a command is obsolete and should generate a failure, the expected status can be specified as `Failure` and the test will pass.  Another example is to test that the software properly treats a missing file as a failure. **In the future, the individual command file status may be detected without needing to use a `RunCommands` parameter.** |
-| `#@order ...` | Control the order of command files (**under development**). | |
+| `@enabledif ...` | Indicate requirements that must be met as a pre-condition in order to enable the command file. See the [`@enabledif` Comment](#enabledif-comment) discussion below. |
+| `#@expectedStatus Failure`<br>`#@expectedStatus Warning` | The `RunCommands` command `ExpectedStatus` parameter is by default `Success`.  Using the comment in the original command file will result in a corresponding `RunCommands(ExpectedStatus=...)` parameter to indicate how to handle overall test status.  A status can be specified if it is expected that a command file will result in Warning or Failure and still be a successful test.  For example, if a command is obsolete and should generate a failure, the expected status can be specified as `Failure` and the test will pass.  Another example is to test that the software properly treats a missing file as a failure.  **In the future, the expected status from the command file being run by `RunCommands` may be detected without needing to use a `RunCommands(ExpectedStatus=...`) parameter.** |
+| `#@order ...` | Control the order of command files, used to check dependencies (**under development**). | |
 | `#@os Windows`<br>`#@os UNIX`<br>`#@os linux` | The test is designed to work only on the specified platform and will be included in the test suite only if the `IncludeOS` parameter includes the corresponding operating system (OS) type.  This is primarily used to test specific features of the OS and similar but separate test cases should be implemented for both OS types.  If the OS type is not specified as a tag in a command file, the test is always included (see also the handling of included test suites).  `UNIX` is equivalent to `linux` and can also be used for Apple computers.  **This may be replaced with `require` in the future.** |
-| `@readOnly` |Indicates that the command file should not be edited.  TSTool will update old command syntax to current syntax when a command file is loaded.  However, this tag will cause the software to warn the user when saving the command file, so that they can cancel.|
-| `@require ...` | Indicate requirements that must be met as a pre-condition in order to successfully run the command file. See the discussion below.|
-| `@testSuite ABC` |Indicate that the command file should be considered part of the specified test suite, as specified with the `IncludeTestSuite` and `ExcludeTestSuite` parameters.  The test is included in all test collections if the tag is not specified; therefore, for general tests, do not specify a test suite.  This tag is useful if a group of tests require special setup, for example connecting to a database.  The suite names should be decided upon by the test developer.|
+| `@readOnly` |Indicates that the command file should not be edited.  TSTool will update old command syntax to current syntax when a command file is loaded.  However, this tag will cause the software to warn the user when saving the command file, so that the save can be canceled.|
+| `@testSuite ABC` |Indicate that the command file should be considered part of the specified test suite, as specified with the `IncludeTestSuite` and `ExcludeTestSuite` parameters.  The test is included in all test collections if the tag is not specified; therefore, for general tests, do not specify a test suite.  This tag is useful if a group of tests require special setup, for example connecting to a database.  The suite names should be decided upon by the test developer.  An alternative approach is to use separate folders to store test command files and then process each folder as a suite. |
 
-### `@require` Comment
+### `@enabledif` Comment
 
-One or more `@require` comments can be used to check whether pre-conditions are met that allow
-including a test in a test suite.
-See the [`# Comment`](../Comment/Comment.md) and datastore documentation for full `@require` syntax.
-The `@require` comments can be interpreted in two general cases:
+The `@require` annotation was previously used to indicate when a test could not be run due to dependency issues.
+However, this approach is no longer recommended for testing and instead the `@enabledif` annotation has been implemented for testing.
+The `@require` annotation should be used in production workflows to ensure that requirements are met and will indicate an error if requirements are not met.
 
-* pre-processing command files as a filter, such as by this command
-	+ this may result in a test being omitted from a test suite
-* run-time requirement checks to ensure conditions for a test
-	+ for example, require that the test is being run by a normal or root/admin/sudo user
-	+ this is the default case when running commands
-	+ this may result in tests failing if requirements are not met
+One or more `@enabledif` comments can be used to check whether requirements are met and allow a test to be enabled in a test suite.
+See the [`# Comment`](../Comment/Comment.md) documentation for full `@enabledif` syntax.
+Datastores may implement their own check to handle the version syntax for the datastore.
+For example, the [State of Colorado's HydroBase](../../datastore-ref/CO-HydroBase/CO-HydroBase.md) uses a version formatted as a date (`YYYYMMDD`).
 
-Currently, this command evaluates `@require` comment conditions and ONLY includes the test in the test suite if requirements are met.
-This allows, for example, multiple versions of tests to be created that each work with different datastore versions.
-Otherwise, tests would be included when they should not be an failed tests will confuse the final results.
-
-However, this behavior is problematic if the requirements are dynamic and cannot be met as intended
-when this command is run, which would mistakenly filter out tests.
-For example datastores may be opened dynamically at runtime but are not available when this command is run.
-Other requirements may also not be met when this command runs and are key to evaluating the tests.
-A future update of this command will address these complexities.
+This command evaluates `@enabledif` annotation requirements and ONLY includes the test in the test suite if requirements are met.
+This allows, for example, multiple versions of tests to be created that each work with different database and TSTool software versions.
+Otherwise, tests would be included when they should not and failed tests could be included that result in time wasted on troubleshooting.
 
 ## Command Editor ##
 
@@ -131,17 +123,24 @@ An example of the output file from running the tests is:
 #
 # Explanation of columns:
 #
-# Num: count of the tests
-# Enabled: TRUE if test enabled or FALSE if "#@enabled false" in command file
-# Run Time: run time in milliseconds
+# Num:
+#   Running count of the tests.
+#   Use a text file without numbers to compare differences.
+# Enabled:
+#   Default is TRUE.
+#   FALSE if "#@enabled False" anywhere in the command file.
+#   FALSE if any "#@enabledif ..." criteria are not met for the command file.
+# Run Time:
+#    Run time in milliseconds.
+#    Use table output to see this column.
 # Test Pass/Fail:
 #    The test status below may be PASS or FAIL (or blank if disabled).
 #    A test will pass if the command file actual status matches the expected status.
 #    Disabled tests are not run and do not count as PASS or FAIL.
 #    Search for *FAIL* to find failed tests.
 # Commands Expected Status:
-#    Default is assumed to be SUCCESS.
-#    "#@expectedStatus Warning|Failure" comment in command file overrides default.
+#    Default is SUCCESS.
+#    "#@expectedStatus Warning|Failure" comment in the command file overrides the default.
 # Commands Actual Status:
 #    The most severe status (Success|Warning|Failure) for each command file.
 #
