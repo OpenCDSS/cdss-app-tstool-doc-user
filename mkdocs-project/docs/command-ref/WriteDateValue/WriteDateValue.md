@@ -50,6 +50,7 @@ Command Parameters
 |`Precision`|The number of digits after the decimal for numerical output.|`4` or if set for time series (in the future may default based on units). |
 |`MissingValue`|The value to write to the file to indicate a missing value in the time series.	As initialized when reading the time series or creating a new time series, typically `-999`, `NaN`, etc.|
 |`IncludeProperties`|A list of time series property names to write, separated by commas, as of `Version=1.6`.  Use `*` as a wildcard to match multiple properties.|None.|
+|`WriteDataFlags`|Indicate whether data flags should be written: `True` or `False`.| `True` if times series have data flags, `False` if not. |
 |`WriteDataFlagDescriptions`|Indicate whether data flag descriptions should be written using `True` or `False`, as of `Version=1.6`.|`False`|
 |`OutputStart`|The date/time for the start of the output as a date/time string or `${Property}`.|Use the global output period.|
 |`OutputEnd`|The date/time for the end of the output as a date/time string or `${Property}`.|Use the global output period.|

@@ -3,6 +3,7 @@
 * [Overview](#overview)
 * [Command Editor](#command-editor)
 * [Command Syntax](#command-syntax)
+    + [Supported Operators and Input](#supported-operators-and-input)
 * [Examples](#examples)
 * [Troubleshooting](#troubleshooting)
 * [See Also](#see-also)
@@ -66,6 +67,10 @@ Command Parameters
 |`Output`<br>**required**|Output column name.  If the column is not found it will be added to the table using the same data type as the input column and will contain the results of processing, can be specified with `${Property}`.  The output column name can be the same as input to overwrite input. |None – must be specified.|
 |`NonValue`|The value to use in cases where an output result could not be computed (missing input, division by zero).  Null will result in blanks in output whereas NaN may be shown in some output products, depending on the specifications for the format.|Null|
 
+### Supported Operators and Input ###
+
+The following operators can be specified for the `Operator` parameter.
+
 **<p style="text-align: center;">
 Supported Operators and Input
 </p>**
@@ -79,6 +84,8 @@ Supported Operators and Input
 | `/` | Table column name. | Table column name or a constant value. | Divide the first input value by the second and set in the output column. |
 | `Cumulate` | Table column name. | | Cumulate the input values into the output column. The initial value (prior to the first row) is zero and therefore the first cumulative value will be the first row's input value.  Missing values in the input will result in no cumulative value being computed and the cumulation will begin at the next non-missing value. If necessary, use other commands such as `TableMath` `=` operator to assign a different initial value. |
 | `Delta` | Table column name. | | Compute a difference (delta) by subtracting the input column's previous row value from the current row value. The initial value is is zero and therefore the first cumulative value will be the first row's input value.  Missing values in the input will result in no delta value being computed. If necessary, use other commands such as `TableMath` `=` operator to assign a different initial value. |
+| `Max` | Table column name. | Table column name or a constant value. | Set the output to the maximum of the input values.  Missing values in the input will result in no output value being computed. |
+| `Min` | Table column name. | Table column name or a constant value. | Set the output to the minimum of the input values.  Missing values in the input will result in no output value being computed. |
 | `ToInteger` | Table column name. | | Convert the input to an integer and set in the output column. |
 
 ## Examples ##
