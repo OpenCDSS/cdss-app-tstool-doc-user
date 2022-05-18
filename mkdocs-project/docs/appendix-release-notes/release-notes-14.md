@@ -33,8 +33,21 @@ Additional resources are needed to update the software to use 64-bit libraries f
       when a requirement is not met.
     + Fixed bug where `@require` was not being properly handled when checking the HydroBase version,
       when run in a test suite.
+* ![bug](bug.png) [14.3.0] Fix the
+  [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command to parse time series product file colors
+  that use format `#ffffff`.
+* ![bug](bug.png) [14.3.0] Fix the
+  [`ReadTableFromDelimitedFile`](../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command to determine
+  floating point number column precision even if the values are quoted.
+  The `DoubleColumns` command parameter allow such values to be read as numbers, and precision is used for displays after reading.
+* ![bug](bug.png) [14.3.0] Fix the
+  [`WebGet`](../command-ref/WebGet/WebGet.md) command handle URL with query values that have equal sign in the parameter value.
 * ![change](change.png) [14.3.0] Update the
-  [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command to check handle `@enabledif` annotations.
+  [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command to handle `@enabledif` annotations.
+* ![change](change.png) [14.3.0] Update the
+  [`TableMath`](../command-ref/TableMath/TableMath.md) command to have `Max` and `Min` operators.
+* ![change](change.png) [14.3.0] Update the
+  [`WriteDateValue`](../command-ref/WriteDateValue/WriteDateValue.md) command to have the `WriteDataFlags` parameter.
 
 ## Changes in Version 14.2.2 ##
 
