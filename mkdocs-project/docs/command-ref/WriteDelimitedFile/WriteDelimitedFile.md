@@ -15,14 +15,14 @@ The `WriteDelimitedFile` command writes time series to the specified delimited f
 for example a comma-separated-value (CSV) file.  The following constraints apply to this command:
 
 * The time series being written must have the same data interval – use the
-`TSList` parameter to select appropriate time series.
+  `TSList` parameter to select appropriate time series.
 * Only one irregular time series can be written because functionality has
-not yet been added to properly handle all date/times found in multiple time series.
-The output period is adjusted to ensure that actual endpoints found in the time series are used to bound output.
+  not yet been added to properly handle all date/times found in multiple time series.
+  The output period is adjusted to ensure that actual endpoints found in the time series are used to bound output.
 * The first row in the file contains column headings, which often are used by other software to identify the column:
-	+ By default, no character will be used to surround headings.
-	+ The `HeadingSurround` parameter can be used to specify a character to surround each heading.
-	+ If `HeadingSurround` matches a character in a column heading, the character will be removed from the column heading.
+    + By default, no character will be used to surround headings.
+    + The `HeadingSurround` parameter can be used to specify a character to surround each heading.
+    + If `HeadingSurround` matches a character in a column heading, the character will be removed from the column heading.
 * Precision for data values and missing value for output can be specified.
 
 ## Command Editor ##
@@ -54,6 +54,7 @@ Command Parameters
 | `TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 | `EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`OutputFile`|The delimited output file.  The path to the file can be absolute or relative to the working directory (command file location).  Global properties can be used to specify the filename, using the `${Property}` syntax.|None – must be specified.|
+|`WriteSeparateFiles`|Indicate whether separate files should be written (`True`) or a single file (`False`). Use time series `%` specifiers (e.g., `%L` for location) or properties `${ts:Property`} in the `OutputFile` to ensure unique output file names.| `False` |
 |`DateTimeColumn`|The name of the column for the date/time.|`Date` if day, month, or year interval, `DateTime` otherwise.|
 |`DateTimeFormatterType`|Specify the date/time formatter type, which indicates the syntax for `DateTimeFormat`.  Currently, only `C` is supported, corresponding to the C programming language [strftime() function](https://en.wikipedia.org/wiki/C_date_and_time_functions), which is also used by other software (see [Linux date command](http://man7.org/linux/man-pages/man1/date.1.html)).|`C`|
 |`DateTimeFormat`|The format used to expand the date/time corresponding to each time series data value.  The format string can contain literal strings and specifiers supported by the `DateTimeFormatterType`.	||
@@ -64,7 +65,8 @@ Command Parameters
 |`MissingValue`|The value to write to the file to indicate a missing value in the time series.  This will override the value initialized when the time series is read or created (typically `-999`, `NaN` or another value).  Specify `Blank` to output a blank.|Time series missing value.|
 |`OutputStart`|The date/time for the start of the output.  Can be specified using processor `${Property}`.|Use the global output period.|
 |`OutputEnd`|The date/time for the end of the output.   Can be specified using processor `${Property}`.|Use the global output period.|
-|`HeaderComments`| Comments to be included at the top of the file.  `#` will be automatically added to the front of each line if not already used.  Use `\n` or `Enter` in the editor to insert new lines.  Double quotes can be used and will be replaced with `\"` in the command parameter in order to not conflict with parameter surrounding quotes.  Can be specified using processor `${Property}`.| No comments are included.|
+|`WriteHeaderComments`|Indicate whether output file header comments should be written:<ul><li>`None` - no comments will be written</li><li>`Minimal` - only comments that indicate file creator, time, etc. will be written</li><li>`Supplied` - same as `Minimal` with  comments supplied by the `HeaderComments` parameter</li><li>`Full` - all comments will be written</li></ul> | `Full` |
+|`HeaderComments`|Comments to write to the output file header, in addition to auto-generated standard comments (see the `WriteHeaderComments` parameter). `#` will automatically be added to the front of each line if not already used.  Use `\n` or `Enter` in the editor to insert new lines.  Double quotes can be used and will be replaced with `\"` in the command parameter in order to not conflict with parameter surrounding quotes.  Can be specified using processor `${Property}`.| No additional comments are included.|
 
 ## Examples ##
 

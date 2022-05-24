@@ -25,7 +25,7 @@ Additional resources are needed to update the software to use 64-bit libraries f
 
 ## Changes in Version 14.3.0 ##
 
-**Feature release to improve automated testing.**
+**Feature release to improve automated testing and cloud integration.**
 
 * ![new](new.png) [14.3.0] The
   [Comment](../command-ref/Comment/Comment.md) command has been updated:
@@ -47,7 +47,14 @@ Additional resources are needed to update the software to use 64-bit libraries f
 * ![change](change.png) [14.3.0] Update the
   [`TableMath`](../command-ref/TableMath/TableMath.md) command to have `Max` and `Min` operators.
 * ![change](change.png) [14.3.0] Update the
-  [`WriteDateValue`](../command-ref/WriteDateValue/WriteDateValue.md) command to have the `WriteDataFlags` parameter.
+  [`WriteDateValue`](../command-ref/WriteDateValue/WriteDateValue.md) command:
+    + The `WriteDataFlags` parameter has been added to control whether data flags are written.
+    + The `WriteSeparateFiles` parameter has been added to control whether one or separate output files for each time series are written.
+    + The `WriteHeaderComments` and `HeaderComments` parameters have been added to control how output file header comments are written.
+* ![change](change.png) [14.3.0] Update the
+  [`WriteDelimitedFile`](../command-ref/WriteDelimitedFile/WriteDelimitedFile.md) command:
+    + The `WriteSeparateFiles` parameter has been added to control whether one or separate output files for each time series are written.
+    + The `WriteHeaderComments` and `HeaderComments` parameters have been added to control how output file header comments are written.
 
 ## Changes in Version 14.2.2 ##
 
