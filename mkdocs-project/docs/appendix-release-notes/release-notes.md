@@ -5,15 +5,15 @@ A summary table is provided, with links to details for major versions.
 
 * [TSTool Version History](#tstool-version-history)
 * [TSTool Version Details](#tstool-version-details) - the following are separate documentation pages
-	+ [Version 14 Details](release-notes-14.md)
-	+ [Version 13 Details](release-notes-13.md)
-	+ [Version 12 Details](release-notes-12.md)
-	+ [Version 11 Details](release-notes-11.md)
-	+ [Version 10 Details](release-notes-10.md)
-	+ [Version 9 Details](release-notes-09.md)
-	+ [Version 8 Details](release-notes-08.md)
-	+ [Version 7 Details](release-notes-07.md)
-	+ [Version 6 Details](release-notes-06.md)
+    + [Version 14 Details](release-notes-14.md)
+    + [Version 13 Details](release-notes-13.md)
+    + [Version 12 Details](release-notes-12.md)
+    + [Version 11 Details](release-notes-11.md)
+    + [Version 10 Details](release-notes-10.md)
+    + [Version 9 Details](release-notes-09.md)
+    + [Version 8 Details](release-notes-08.md)
+    + [Version 7 Details](release-notes-07.md)
+    + [Version 6 Details](release-notes-06.md)
 * [Known Limitations](#known-limitations)
 * [TSTool Version Numbering Convention](#tstool-version-numbering-convention)
 * [TSTool Issue Icons](#tstool-issue-icons)
@@ -34,7 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|[14.3.0](release-notes-14.md)|Feature release to improve automated testing. | 2022-04-19 |
+|[14.3.0](release-notes-14.md)|Feature release to improve automated testing and cloud integration. | 2022-05-24 |
 |[14.2.2](release-notes-14.md)|Maintenance release to fix issues identified in HydroBase REST web services. | 2022-04-07 |
 |[14.2.1](release-notes-14.md)|Maintenance release to disable real-time data in HydroBase database datastore, other cleanup for recent releases. |2022-03-24|
 |[14.2.0](release-notes-14.md)|Feature release to add HydroBase REST web service historical climate and surface water stations and support sub-second time precision. |2022-03-21|
@@ -144,37 +144,37 @@ TSTool Version History Summary (most current at top)
 ## Known Limitations ##
 
 * ![limitation](limitation.png) As of version 14, features to read and write HEC-DSS files are disabled.
-Additional resources are needed to implement 64-bit libraries for HEC-DSS files.
-If necessary, use an older version of TSTool to process HEC-DSS files.
+  Additional resources are needed to implement 64-bit libraries for HEC-DSS files.
+  If necessary, use an older version of TSTool to process HEC-DSS files.
 * ![limitation](limitation.png) TSTool uses a “discovery mode” to partially execute commands when editing the commands.
-This is used to determine lists of time series identifiers, table identifiers, and properties for editor choices.
-However, some workflow logic is so complex that commands cannot fully execute in discovery mode.
-Consequently, warnings may result when loading a command file or some editor choices may be incomplete.
-When this is known to be an issue, the command editors provide a text field rather than a choice.
-These complexities will be improved over time as additional resources are devoted to solving design limitations.
+  This is used to determine lists of time series identifiers, table identifiers, and properties for editor choices.
+  However, some workflow logic is so complex that commands cannot fully execute in discovery mode.
+  Consequently, warnings may result when loading a command file or some editor choices may be incomplete.
+  When this is known to be an issue, the command editors provide a text field rather than a choice.
+  These complexities will be improved over time as additional resources are devoted to solving design limitations.
 * ![limitation](limitation.png) When saving time series product [(`*.tsp`) files](../appendix-tsview/tsview.md), the absolute path is saved with each file.
-This is not as portable as saving a path relative to the command file.
-It may be necessary to edit the product file manually to change file paths from absolute to relative – the
-relative path will then be converted to absolute when processed and time series files will be found,
-assuming that the locations are consistent.
+  This is not as portable as saving a path relative to the command file.
+  It may be necessary to edit the product file manually to change file paths from absolute to relative – the
+  relative path will then be converted to absolute when processed and time series files will be found,
+  assuming that the locations are consistent.
 * ![limitation](limitation.png) The [`ReadStateCUB`](../command-ref/ReadStateCUB/ReadStateCUB.md) command,
-unlike other read commands, does not provide a discovery mode.
-Consequently, other commands will not be provided with a list of time series identifiers for the binary file.
-The reason for this is that StateMod and StateCU binary files can contain a huge number
-of time series and providing a list could be overwhelming and slow.
-Alternatives are being evaluated.
-Currently, commands that reference time series in the binary files must use
-more generic selection methods such as `TSLIST=AllMatchingTSID` and `TSID` with wildcards.
+  unlike other read commands, does not provide a discovery mode.
+  Consequently, other commands will not be provided with a list of time series identifiers for the binary file.
+  The reason for this is that StateMod and StateCU binary files can contain a huge number
+  of time series and providing a list could be overwhelming and slow.
+  Alternatives are being evaluated.
+  Currently, commands that reference time series in the binary files must use
+  more generic selection methods such as `TSLIST=AllMatchingTSID` and `TSID` with wildcards.
 * ![limitation](limitation.png) Plotting features do not understand the concept of instantaneous, mean,
-and accumulated time series (referred to as the time scale).  All values are plotted at data value date/time.
-In the future, features may be implemented to automatically determine from the
-data type and time scale whether to adjust the visual representation based on the time scale,
-for example to use a “carry forward” line instead of connecting points.
+  and accumulated time series (referred to as the time scale).  All values are plotted at data value date/time.
+  In the future, features may be implemented to automatically determine from the
+  data type and time scale whether to adjust the visual representation based on the time scale,
+  for example to use a “carry forward” line instead of connecting points.
 * ![limitation](limitation.png) Using the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) command may result in warnings after commands are edited.
-This is due to the initial checks on filenames not fully recognizing the impacts of previous
-[`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) commands.
-It is recommended that the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) command be avoided and
-that paths be specified relative to the command file.
+  This is due to the initial checks on filenames not fully recognizing the impacts of previous
+  [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) commands.
+  It is recommended that the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) command be avoided and
+  that paths be specified relative to the command file.
 
 ## TSTool Version Numbering Convention ##
 
@@ -189,11 +189,11 @@ where:
 * `Major` is a number indicating a major change to the software
 * `Minor` is a number indicating a minor change to the software
 * `Maintenance` is a number indicating a maintenance release,
-for example to fix a bug with no new features
+  for example to fix a bug with no new features
 * The version may also be followed by another indicator such as "beta" to indicate a beta release
 * Numbers have traditionally been two digits and zero-padded;
-however, the zero-padding convention may be abandoned moving forward given
-that the major version does not require it to sort the version.
+  however, the zero-padding convention may be abandoned moving forward given
+  that the major version does not require it to sort the version.
 
 This convention is not always strictly followed but more attention to this standard is now occurring.
 
@@ -208,13 +208,12 @@ The above version string is used in the software as follows, where `Version` is 
 The following icons are used to indicate the type of issue in release notes.
 
 * ![limitation](limitation.png) **Known Limitation** – A known limitation has been documented and may impact the user.
-The limitation will be addressed in a future release.
+  The limitation will be addressed in a future release.
 * ![bug](bug.png) **Bug Fix** – A bug has been fixed.  Users should evaluate whether their work is impacted.
-Sometimes bug fixes impact internal code and changes may not be very visible to users.
+  Sometimes bug fixes impact internal code and changes may not be very visible to users.
 * ![remove](remove.png) **Remove** – A feature has been removed, generally because functionality
-has been migrated to other code or the functionality is no longer needed (e.g., a database is no longer available).
+  has been migrated to other code or the functionality is no longer needed (e.g., a database is no longer available).
 * ![change](change.png) **Update/Change** – An existing feature has been changed or enhanced.
-Backward compatibility is usually retained.  Modifications to an existing command are considered a change.
+  Backward compatibility is usually retained.  Modifications to an existing command are considered a change.
 * ![new](new.png) **New Feature** – A new feature has been added, such as a new command.
-New features may or may not be obvious to users but will generally be visible in menus.
-
+  New features may or may not be obvious to users but will generally be visible in menus.
