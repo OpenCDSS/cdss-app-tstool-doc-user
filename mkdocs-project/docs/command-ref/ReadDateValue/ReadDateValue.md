@@ -55,7 +55,7 @@ Command Parameters
 |`NewUnits`|Units to convert data to (must be in the `system/DATAUNIT` configuration file under the TSTool installation folder).|Use the data units from the file.|
 |`InputStart`|Starting date/time to read data, in precision consistent with data.  Specify as a date/time string or a processor `${Property}`.|Read all data.|
 |`InputEnd`|Ending date/time to read data, in precision consistent with data.  Specify as a date/time string or a processor `${Property}`.|Read all data.|
-
+|`IfNotFound`| Indicate an action if the input file is not found:<ul><li>`Ignore` - ignore the missing file and do not warn</li><li>`Warn` - generate a warning message</li><li>`Fail` - generate a failure message</li></ul> | `Fail` |
 
 ## Examples ##
 
