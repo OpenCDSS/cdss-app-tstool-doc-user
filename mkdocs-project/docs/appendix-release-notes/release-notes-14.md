@@ -42,8 +42,20 @@ Additional resources are needed to update the software to use 64-bit libraries f
   The `DoubleColumns` command parameter allow such values to be read as numbers, and precision is used for displays after reading.
 * ![bug](bug.png) [14.3.0] Fix the
   [`WebGet`](../command-ref/WebGet/WebGet.md) command handle URL with query values that have equal sign in the parameter value.
+* ![bug](bug.png) [14.3.0] Fix the
+  [`WriteTableToGeoJSON`](../command-ref/WriteTableToGeoJSON/WriteTableToGeoJSON.md) command editor so that the `Append` parameter
+  field does not overwrite other fields.
+* ![change](change.png) [14.3.0] The processor property `RunTimeMs` has been added to show the number of milliseconds
+  to run the last command file.  This is useful for performance evaluation.
 * ![change](change.png) [14.3.0] Update the
-  [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command to handle `@enabledif` annotations.
+  [`ReadDateValue`](../command-ref/ReadDateValue/ReadDateValue.md) command:
+    + Add the `IfNotFound` parameter to ignore reading if the file does not exist,
+      which is useful for reading files during troubleshooting.
+* ![change](change.png) [14.3.0] Update the
+  [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
+    + Handle `@enabledif` annotations.
+    + Add the `AppendOutputFiles` parameter to append the command's output files to the main output file list.
+    + Add the `WarningCountProperty` and `FailureCountProperty` parameters to allow handling errors in the command file that is run.
 * ![change](change.png) [14.3.0] Update the
   [`TableMath`](../command-ref/TableMath/TableMath.md) command to have `Max` and `Min` operators.
 * ![change](change.png) [14.3.0] Update the

@@ -47,8 +47,7 @@ checkMkdocsVersion() {
 
 # Determine the operating system that is running the script:
 # - mainly care whether Cygwin or MINGW
-checkOperatingSystem()
-{
+checkOperatingSystem() {
   if [ ! -z "${operatingSystem}" ]; then
     # Have already checked operating system so return.
     return
