@@ -1928,7 +1928,7 @@ to expand the graph template file to a temporary file.
 This step is similar to the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) TSTool command.
 5. The expanded temporary time series product file is used with the time series from step 3 to produce the graph.
 
-Graph templates processed in step 4 from above use the [FreeMarker templating software](http://freemarker.org/docs/index.html).
+Graph templates processed in step 4 from above use the [FreeMarker templating software](https://freemarker.apache.org).
 Freemarker is also used by the TSTool
 [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command.
 The main benefit of FreeMarker is that it provides advanced template processing features

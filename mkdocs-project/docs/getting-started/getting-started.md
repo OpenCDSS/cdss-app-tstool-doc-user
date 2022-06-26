@@ -8,7 +8,15 @@ This chapter provides an overview of the TSTool graphical user interface (GUI).
 * [Main Interface](#main-interface)
     + [Input/Query Options and Time Series List Area](#inputquery-options-and-time-series-list-area)
     + [Command List and Command Error Indicators](#command-list-and-command-error-indicators)
-    + [Time Series Results](#time-series-results)
+    + [Results](#results)
+        - [Results / Ensembles](#results-ensembles)
+        - [Results / Networks](#results-networks)
+        - [Results / Output Files](#results-output-files)
+        - [Results / Problems](#results-problems)
+        - [Results / Properties](#results-properties)
+        - [Results / Tables](#results-tables)
+        - [Results / Time Series](#results-time-series)
+        - [Results / Views](#results-views)
 * [File Menu - Main Input and Output Control](#file-menu-main-input-and-output-control)
     + [File / New - Open Command File or Databases](#filenew–open-command-file-or-databases)
     + [File / Open - Open Command File or Databases](#fileopen-open-command-file-or-databases)
@@ -316,11 +324,11 @@ command editing and will be cleared when commands are run.
 For example, a command may depend on a file that is created by a previous command.
 It is important that errors displayed after running commands are resolved.
 
-### Time Series Results ###
+### Results ###
 
 The commands in the ***Commands*** list are processed by pressing the
 ***Run Selected Commands*** or ***Run All Commands*** buttons below the
-***Commands*** list area (or by using the Run menu).
+***Commands*** list area (or by using the ***Run*** menu).
 The time series and other output that result from processing are
 listed in the bottom of the main interface, as shown in the following figure:
 
@@ -332,12 +340,12 @@ listed in the bottom of the main interface, as shown in the following figure:
 TSTool after Running Commands (<a href="../GUI_MainWithTS.png">see also the full-size image</a>)
 </p>**
 
-The time series listed in the ***Time Series Results*** list can then viewed using the
+The time series listed in the ***Results / Time Series*** list can then viewed using the
 ***Results*** menu, analyzed further using the ***Tools*** menu,
 and output using the ***File / Save*** menus.
 Only the selected time series will be output (or all if none are selected).
 
-The following results may be available, depending on commands that were run:
+The following may be available in ***Results***, depending on commands that were run:
 
 * ***Ensembles*** – groups of time series with an ensemble identifier.
   Individual time series that are associated with an ensemble also
@@ -346,7 +354,7 @@ The following results may be available, depending on commands that were run:
 * ***Output Files*** – files that are created during processing.  Single-click on a file to view.
 * ***Problems*** – a full listing of warning and failure messages from all commands.
 * ***Properties*** – the list of processor properties that can be referenced in command parameters using `${Property}` syntax
-* ***Tables*** – column-oriented tables created during processing.  Right-click on a table in the list to view the table.
+* ***Tables*** – tables created during processing.  Right-click on a table in the list to view the table.
 * ***Time Series*** – time series created during processing.  Right-click on one or more time series to view the time series.
 * ***Views*** – alternate views of time series, other than the list of time series that is ordered based on command output.
 
@@ -354,13 +362,177 @@ Two progress bars at the bottom of the main window are updated during processing
 The left progress bar indicates the overall progress in processing the
 commands (100% means that all commands have been processed).
 The right progress bar is used with commands that provide incremental progress during processing,
-a feature that will be phased in over time for commands that take longer to run.
+such as read commands that take longer to run.
 For example, if a single command processes many time series,
 this progress bar can be used to indicate progress in the command.
+
+#### Results / Ensembles ####
+
+A time series ensemble is a group of related time series, such as time series traces for climate model runs
+or historical years that have been shifted to overlap.
+See the [Introduction - Time Series Ensembles](../introduction/introduction.md#time-series-ensembles) documentation.
+Ensembles are typically associated with modeling or analysis and are only available from from some data sources.
+See the ***Commands / Ensemble Processing*** menu for commands that process ensembles.
+
+Right-click on an ensemle to access the popup menu for ensemble tools,
+for example to graph the ensemble.
+
+**<p style="text-align: center;">
+![results-ensembles](results-ensembles.png)
+</p>**
+
+**<p style="text-align: center;">
+***Results / Ensembles*** (<a href="../results-ensembles.png">see also the full-size image</a>)
+</p>**
+
+#### Results / Networks ####
+
+TSTool has built-in features for representing a converging network,
+such as associated with a river system.
+Networks are typically used to represent a hierarchy of stream reaches or basins.
+The TSTool network features can be used to select time series based on location within a network,
+perform modeling on the network, and other analysis.
+See the ***Commands / Network Processing*** menu for commands that process networks.
+
+Right-click on a network to access the popup menu for network tools.
+
+**<p style="text-align: center;">
+![results-networks](results-networks.png)
+</p>**
+
+**<p style="text-align: center;">
+***Results / Networks*** (<a href="../results-networks.png">see also the full-size image</a>)
+</p>**
+
+#### Results / Output Files ####
+
+The ***Output Files*** list contains output files created by commands.
+In most cases, all files created by a command will be listed.
+In some cases, a command may provide a parameter to control whether files are listed,
+mainly in cases where a very large number of files may be generated or the files are difficult to view.
+
+Single-click on an output file to view the file using the operating system default program for the file extension.
+If an associated program is not available, open the file using the file explorer tool.
+
+**<p style="text-align: center;">
+![results-output-files](results-output-files.png)
+</p>**
+
+**<p style="text-align: center;">
+***Results / Output Files*** (<a href="../results-output-files.png">see also the full-size image</a>)
+</p>**
+
+#### Results / Problems ####
+
+The ***Results / Problems*** list displays a compilation of all the problems that are associated with commands that have been run.
+The messages for a specific command can also be shown by using the ***Show Command Status*** popup menu for a command in the command list area.
+In most cases, it is desirable that a command file has no warning or failure messages.
+
+Click to (un)select cells and right-click on problems to copy and paste into other programs.
+Use left and right click to select multiple cells.
+
+**<p style="text-align: center;">
+![results-problems](results-problems.png)
+</p>**
+
+**<p style="text-align: center;">
+***Results / Problems*** (<a href="../results-problems.png">see also the full-size image</a>)
+</p>**
+
+#### Results / Properties ####
+
+The ***Results / Properties*** list displays all processor properties that are defined.
+The property view is updated when command processing completes.
+Some properties are built-in and will always have a value
+whereas other properties are defined dynamically, such as by the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) and other commands.
+The property type may be important when converting between types,
+such as when formatting a floating point number as a string.
+Property types correspond to Java built-in classes and TSTool classes such as `DateTime`.
+
+Click to (un)select cells and right-click on properties to copy and paste into other programs.
+Use left and right click to select multiple cells.
+
+**<p style="text-align: center;">
+![results-properties](results-properties.png)
+</p>**
+
+**<p style="text-align: center;">
+***Results / Properties*** (<a href="../results-properties.png">see also the full-size image</a>)
+</p>**
+
+The following table lists built-in properties.
+Some global properties were implemented in early versions of TSTool before command parameters were added to control behavior.
+Global properties should be used with care because they may impact multiple commands.
+
+**<p style="text-align: center;">
+***Built-in Properties***
+</p>**
+
+| **Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default** |
+| -- | -- | -- |
+| `AutoExtendPeriod` | Whether to globally automatically extend the time series period to the requested output period. See the [`SetAutoExtendPeriod`](../command-ref/SetAutoExtendPeriod/SetAutoExtendPeriod.md) command. | `true` |
+| `AverageEnd` | The global ending date/time used when averaging data.  See the [`SetAveragePeriod`](../command-ref/SetAveragePeriod/SetAveragePeriod.md). | Not set - use all data for averaging. |
+| `AverageStart` | The global starting date/time used when averaging data.  See the [`SetAveragePeriod`](../command-ref/SetAveragePeriod/SetAveragePeriod.md). | Not set - use all data for averaging. |
+| `ComputerName` | The computer name from the operating system. | Determined from the operating system. |
+| `ComputerTimezone` | The computer's time zone (e.g., `America/Denver`). | Determined from the operating system. |
+| `CreateOutput` | Global property that indicates whether output files should be created, used to speed up runs during software and dataset development.  | Currently is always `true`. |
+| `DebugLevelLogFile` | The debug level (0+) for the log file. | 0 (debug messages are off) |
+| `DebugLevelScreen` | The debug level (0+) for console/screen output. | 0 (debug messages are off) |
+| `HaveOutputPeriod` | Indicates whether the output period has been set, used internally by some commands. See the [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) command. | `false` |
+| `HydroBaseDMIListSize` | The number of HydroBase DMI, used in automated tests to confirm database connections. | |
+| `IgnoreLEZero` | Indicates whether values less than or equals zero should be globally ignored in computing historical averages for filling.  See the [`SetIgnoreLEZero`](../command-ref/SetIgnoreLEZero/SetIgnoreLEZero.md). | `false` |
+| `IncludeMissingTS` | Indicates whether missing time series should be included in output by initializing an empty time series, useful to avoid warnings in processing, supported by some commands.  See the [`SetIncludeMissingTS`](../command-ref/SetIncludeMissingTS/SetIncludeMissingTS.md) command | `false` |
+| `InitialWorkingDir` | The initial working directory (folder) for the processor using the operating system's path convention, used to help the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command and other code know the starting point for relative paths. | Determined when a command file is opened. |
+| `InputEnd` | Global period end for reading data.  See the [`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod.md) command. | Read all data. |
+| `InputStart` | Global period start for reading data.  See the [`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod.md) command. | Read all data. |
+| `InstallDir` | The TSTool software installation directory (folder) using the operating system path convention. | Determined when the software starts. |
+| `InstallDirPortable` | The TSTool software installation directory (folder) using a portable path convention (forward slashes, include colon on Windows). | Determined when the software starts. |
+| `InstallDirPosix` | The TSTool software installation directory (folder) using POSIX path convention (only forward slashes, no colon). | Determined when the software starts. |
+| `InstallDirURL` | The TSTool software installation directory (folder) using URL path convention. | Determined when the software starts. |
+| `OutputEnd` | Global period end for writing data.  See the [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) command. | Output all data. |
+| `OutputStart` | Global period start for writing data.  See the [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) command. | Output all data. |
+| `OutputYearType` | Global output year type.  See the [`SetOutputYearType`](../command-ref/SetOutputYearType/SetOutputYearType.md) command. | `Calendar` |
+| `ProgramVersionNumber` | TSTool program version as a number with whole number being the major version (e.g., `14.30`). This allows using the version in [`If`](../command-ref/If/If.md) commands but can have issues because minor version numbers are not as distinct as the version string. | Set automatically. |
+| `ProgramVersionString` | TSTool program version as a string using semantics versioning (e.g., `14.3.0.dev2`). This allows using the version in [`If`](../commnd-ref/If/If.md) commands.  | Set automatically. |
+| `RunTimeMs` | The run time in milliseconds of the last commands that were run, useful for checking the run time of a workflow. | Set when commands are run. |
+| `StartLogEnabled` | Indicate whether the [`StartLog`](../command-ref/StartLog/StartLog.md) command is enabled, useful for controlling whether all log output to one file, such as during testing. | `true` |
+| `TSEnsembleResultsListSize` | The number of time series ensembles in results, which is useful to checking workflow results. | Set when processing time series ensembles. |
+| `TSResultsListSize` | The number of time series in results, which is useful to checking workflow results. | Set when processing time series. |
+| `TempDir` | Temporary directory (folder), using operating system path conventions, useful if a temporary file needs to be created in a workflow. | Set automatically for the operating system. |
+| `UserHomeDir` | The user's home directory (folder), using operating system path conventions. | Set automatically. |
+| `UserHomeDirPosix` | The user's home directory (folder), using POSIX path conventions (all slashes, no colon). | Set automatically. |
+| `UserHomeDirURL` | The user's home directory (folder), using URL path conventions. | Set automatically. |
+| `UserName` | The user's login name as determined from the operating system. | Set automatically. |
+| `WarningLevelLogFile` | The warning level (0+) for the log file. | 3 |
+| `WarningLevelScreen` | The warning level (0+) for console/screen output. | 0 (no warning messages to the console/screen) |
+| `WorkingDir` | The TSTool working directory (folder) using the operating system path convention. | Software folder at startup and subsequently the folder for the opened/saved command file. |
+| `WorkingDirPortable` | The TSTool working directory (folder) using a portable path convention (all forward slashes, include colon on Windows). | Software folder at startup and subsequently the folder for the opened/saved command file. |
+| `WorkingDirPosix` | The TSTool working directory (folder) using a POSIX convention (all forward slashes, no colon). | Software folder at startup and subsequently the folder for the opened/saved command file. |
+
+#### Results / Tables ####
+
+The ***Results / Tables*** tab displays the list of tables resulting from processing commands.
+See the ***Commands(Table)*** menu for table processing commands.
+Many other commands also allow tables to be created,
+for example [`ListFiles`](../command-ref/ListFiles/ListFiles.md) and
+[`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md).
+
+**<p style="text-align: center;">
+![results-tables](results-tables.png)
+</p>**
+
+**<p style="text-align: center;">
+***Results / Tables*** (<a href="../results-tables.png">see also the full-size image</a>)
+</p>**
+
+#### Results / Time Series ####
+
+The ***Results / Time Series*** tab lists time series that have been created during command processing.
 
 Right-clicking over the ***Time Series Results*** list displays a pop-up menu with useful
 time series viewing choices, including a choice to view the time series properties.
 The right-click menu choices are summarized below:
+Use ctrl-click and shift-click to select multiple time series.
 
 **<p style="text-align: center;">
 Time Series Results List Popup Menu Choices
@@ -381,6 +553,7 @@ Time Series Results List Popup Menu Choices
 |***Graph – Point***|Display a graph using symbols but no connecting lines.|
 |***Graph – Predicted Value***|Display a graph of data and the predicted values from regression.|
 |***Graph – Predicted Value Residual***|Display a graph of data minus the predicted values from regression.|
+|***Graph – Raster***|Display a raster (heat map) graph for the first selected time series.|
 |***Graph – XY-Scatter***|Display an XY-scatter plot for the selected time series.|
 |***Table***|Display a scrollable table for the selected time series.|
 |***Report – Summary (HTML)***|Display an HTML summary for selected time series using the default web browser.|
@@ -439,7 +612,21 @@ and specify the graph template to configure the graph.
 Results – Graph Ensemble Dialog (<a href="../Menu_Results_Graph_Ensemble.png">see also the full-size image</a>)
 </p>**
 
-The remainder of this chapter summarizes the TSTool menus.
+#### Results / Views ####
+
+The ***Results / Views*** tab displays time series organized in alternative views to the ***Time Series*** list.
+Views can be used to organize output in ways that are more conducive to review.
+See the ***Commands / Visualization Processing*** menu and
+[`NewTreeView`](../command-ref/NewTreeView/NewTreeView.md) command,
+which can be used at the end of a command file to create a view.
+
+**<p style="text-align: center;">
+![results-views](results-views.png)
+</p>**
+
+**<p style="text-align: center;">
+***Results / Views*** (<a href="../results-views.png">see also the full-size image</a>)
+</p>**
 
 ## File Menu - Main Input and Output Control ##
 

@@ -127,7 +127,7 @@
 * New Feature [09.05.00] Add NewEnsemble() command to create a new ensemble and optionally insert 1+ time series into the ensemble.
 * New Feature [09.05.00] Add InsertTimeSeriesIntoEnsemble() command to insert time series into an existing ensemble.
 * New Feature [09.05.00] Add TimeSeriesToTable() command to copy time series data to a table.
-* New Feature [09.05.00] Add ExpandTemplateFile() command to implement templates using FreeMarker (http://freemarker.org).  This facilitates adding conditional logic, loops, etc., to command files.
+* New Feature [09.05.00] Add ExpandTemplateFile() command to implement templates using FreeMarker (https://freemarker.apache.org).  This facilitates adding conditional logic, loops, etc., to command files.
 
 ## Changes in Versions 9.04.00 – 9.04.03 ##
 
