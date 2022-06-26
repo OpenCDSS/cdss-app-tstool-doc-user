@@ -11,10 +11,19 @@
 
 ## Overview ##
 
-The `StartLog` command (re)starts the log file. It is useful to insert this command as the first
-command in a command file, in order to persistently record the results of processing. A useful standard is
-to name the log file the same as the command file, with an additional `.log` extension, and this convention
-is enforced by default.  A date or date/time can optionally be added to the log file name.
+The `StartLog` command (re)starts the log file.
+It is useful to insert this command as the first command in a command file,
+in order to persistently record the results of processing.
+A useful standard is to name the log file the same as the command file, with an additional `.log` extension,
+and this convention is enforced by default.
+A date or date/time can optionally be added to the log file name.
+
+TSTool uses a startup log file in the `.tstool/NN/logs` user files folder when the software starts,
+where `NN` is the TSTool major version.
+Subsequently, all log messages will be written to the latest log file specified by `StartLog` commands.
+This allows, for example, log files to be created near the command file that was run.
+If this behavior is not desirable, such as in automated testing,
+use the [`ConfigureLogging`](../ConfigureLogging/ConfigureLogging.md) command to disable the `StartLog` command.
 
 ## Command Editor ##
 
@@ -65,4 +74,5 @@ Add(TSID="06753400.USGS.Streamflow.Month",AddTSList=AllTS,HandleMissingHow="Igno
 
 ## See Also ##
 
+* [`ConfigureLogging`](../ConfigureLogging/ConfigureLogging.md) command
 * [`Message`](../Message/Message.md) command - can be used to write messages to the log file

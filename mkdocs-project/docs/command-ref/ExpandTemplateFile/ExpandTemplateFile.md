@@ -28,7 +28,7 @@ For example, a template can be used to repeat commands for multiple location ide
 One advantage of using the template approach is that problems in the expanded file are clearly indicated,
 whereas a problem in logic that is represented as a loop might be difficult to diagnose.
 
-The [FreeMarker software](http://freemarker.org) is used to implement templates.
+The [FreeMarker software](https://freemarker.apache.org) is used to implement templates.
 Freemarker 2.3.15 is used prior to TSTool version 11.00.00,
 and Freemarker version 2.3.21 is used as of TSTool version 11.00.00.
 Support for other templating engines such as Apache Velocity can be added if needed.
