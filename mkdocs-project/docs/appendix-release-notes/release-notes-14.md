@@ -45,7 +45,10 @@ Additional resources are needed to update the software to use 64-bit libraries f
 * ![bug](bug.png) [14.3.0] Fix the
   [`WriteTableToGeoJSON`](../command-ref/WriteTableToGeoJSON/WriteTableToGeoJSON.md) command editor so that the `Append` parameter
   field does not overwrite other fields.
-* ![change](change.png) [14.3.0] The processor property `RunTimeMs` has been added to show the number of milliseconds
+* ![change](change.png) [14.3.0] Add built-in processor properties:
+    + `RunTimeMs` - number of milliseconds for commands to run
+    + `WarningCount` - number of warning messages from commands
+    + `FailureCount` - number of failure messages from commands
   to run the last command file.  This is useful for performance evaluation.
 * ![change](change.png) [14.3.0] Update the
   [`ReadDateValue`](../command-ref/ReadDateValue/ReadDateValue.md) command:
