@@ -478,6 +478,7 @@ Global properties should be used with care because they may impact multiple comm
 | `CreateOutput` | Global property that indicates whether output files should be created, used to speed up runs during software and dataset development.  | Currently is always `true`. |
 | `DebugLevelLogFile` | The debug level (0+) for the log file. | 0 (debug messages are off) |
 | `DebugLevelScreen` | The debug level (0+) for console/screen output. | 0 (debug messages are off) |
+| `FailureCount` | The number of failure messages for the command file, set after each command completes, to allow checking for failure within the command file. | |
 | `HaveOutputPeriod` | Indicates whether the output period has been set, used internally by some commands. See the [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) command. | `false` |
 | `HydroBaseDMIListSize` | The number of HydroBase DMI, used in automated tests to confirm database connections. | |
 | `IgnoreLEZero` | Indicates whether values less than or equals zero should be globally ignored in computing historical averages for filling.  See the [`SetIgnoreLEZero`](../command-ref/SetIgnoreLEZero/SetIgnoreLEZero.md). | `false` |
@@ -503,6 +504,7 @@ Global properties should be used with care because they may impact multiple comm
 | `UserHomeDirPosix` | The user's home directory (folder), using POSIX path conventions (all slashes, no colon). | Set automatically. |
 | `UserHomeDirURL` | The user's home directory (folder), using URL path conventions. | Set automatically. |
 | `UserName` | The user's login name as determined from the operating system. | Set automatically. |
+| `WarningCount` | The number of warning messages for the command file, set after each command completes, to allow checking for warnings within the command file. | |
 | `WarningLevelLogFile` | The warning level (0+) for the log file. | 3 |
 | `WarningLevelScreen` | The warning level (0+) for console/screen output. | 0 (no warning messages to the console/screen) |
 | `WorkingDir` | The TSTool working directory (folder) using the operating system path convention. | Software folder at startup and subsequently the folder for the opened/saved command file. |
