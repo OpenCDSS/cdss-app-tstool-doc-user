@@ -33,6 +33,11 @@ Additional resources are needed to update the software to use 64-bit libraries f
       when a requirement is not met.
     + Fixed bug where `@require` was not being properly handled when checking the HydroBase version,
       when run in a test suite.
+* ![bug](bug.png) [14.3.0] Fix the [`ColoradoHydroBaseRest`](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) datastore:
+    + Null date/time objects, for example in the `porStart` and `porEnd` for data types
+      were causing the `HydroBaseWeb` datastore to not initialize when TSTool starts.
+      This may be due to changes in how the State publishes data.
+    + Null date/times are now passed through as nulls, which may cause problems later in processing.
 * ![bug](bug.png) [14.3.0] Fix to support Microsoft Access databases again for
   [`GenericDatabaseDatastore`](../datastore-ref/GenericDatabase/GenericDatabase.md):
     + Direct use of ODBC data source names was dropped in Java 8 (TSTool 12).
