@@ -17,9 +17,11 @@ This command is used to simulate dropped database connections
 (for example when TSTool does not read from or write to database for a period due to user inaction).
 Some database datastores have been updated to auto-connect to the database when the connection is dropped.
 
-The command can also be used with commands that dynamically open datastores, including the
-[`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md) and
-[`OpenDataStore`](../OpenDataStore/OpenDataStore.md) commands.
+The command can also be used with commands that dynamically open datastores, including the following commands:
+
+* [`NewAccessDatabase`](../NewAccessDatabase/NewAccessDatabase.md)
+* [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md)
+* [`OpenDataStore`](../OpenDataStore/OpenDataStore.md)
 
 Datastores that are needed throughout a TSTool session should be configured with a datastore
 configuration file to connect at startup,
@@ -60,7 +62,7 @@ CloseDataStore(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`DataStore`|The name of a database datastore to read.|	None – must be specified.|
 |`StatusMessage`|A status message to display when the datastore information is viewed.  The status may be reset if the connection is automatically restored, for example when a subsequent database interaction occurs.|Message appropriate for closing the datastore.|
@@ -73,5 +75,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
+* [`NewAccessDatabase`](../NewAccessDatabase/NewAccessDatabase.md) command
 * [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md) command
 * [`OpenDataStore`](../OpenDataStore/OpenDataStore.md) command
