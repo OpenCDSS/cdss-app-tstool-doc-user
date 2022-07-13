@@ -114,6 +114,7 @@ nav:
   - ManipulateTableString: command-ref/ManipulateTableString/ManipulateTableString.md
   - Message: command-ref/Message/Message.md
   - Multiply: command-ref/Multiply/Multiply.md
+  - NewAccessDatabase: command-ref/NewAccessDatabase/NewAccessDatabase.md
   - NewDayTSFromMonthAndDayTS: command-ref/NewDayTSFromMonthAndDayTS/NewDayTSFromMonthAndDayTS.md
   - NewDerbyDatabase: command-ref/NewDerbyDatabase/NewDerbyDatabase.md
   - NewEnsemble: command-ref/NewEnsemble/NewEnsemble.md

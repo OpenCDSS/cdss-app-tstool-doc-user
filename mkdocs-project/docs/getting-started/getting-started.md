@@ -494,7 +494,7 @@ Global properties should be used with care because they may impact multiple comm
 | `OutputStart` | Global period start for writing data.  See the [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) command. | Output all data. |
 | `OutputYearType` | Global output year type.  See the [`SetOutputYearType`](../command-ref/SetOutputYearType/SetOutputYearType.md) command. | `Calendar` |
 | `ProgramVersionNumber` | TSTool program version as a number with whole number being the major version (e.g., `14.30`). This allows using the version in [`If`](../command-ref/If/If.md) commands but can have issues because minor version numbers are not as distinct as the version string. | Set automatically. |
-| `ProgramVersionString` | TSTool program version as a string using semantics versioning (e.g., `14.3.0.dev2`). This allows using the version in [`If`](../commnd-ref/If/If.md) commands.  | Set automatically. |
+| `ProgramVersionString` | TSTool program version as a string using semantics versioning (e.g., `14.3.0.dev2`). This allows using the version in [`If`](../command-ref/If/If.md) commands.  | Set automatically. |
 | `RunTimeMs` | The run time in milliseconds of the last commands that were run, useful for checking the run time of a workflow. | Set when commands are run. |
 | `StartLogEnabled` | Indicate whether the [`StartLog`](../command-ref/StartLog/StartLog.md) command is enabled, useful for controlling whether all log output to one file, such as during testing. | `true` |
 | `TSEnsembleResultsListSize` | The number of time series ensembles in results, which is useful to checking workflow results. | Set when processing time series ensembles. |

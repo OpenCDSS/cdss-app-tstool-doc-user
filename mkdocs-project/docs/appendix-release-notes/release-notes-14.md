@@ -25,7 +25,7 @@ Additional resources are needed to update the software to use 64-bit libraries f
 
 ## Changes in Version 14.3.0 ##
 
-**Feature release to improve automated testing and cloud integration.**
+**Feature release to improve automated testing, cloud integration, and reenable Microsoft Access support.**
 
 * ![new](new.png) [14.3.0] The
   [Comment](../command-ref/Comment/Comment.md) command has been updated:
@@ -33,6 +33,13 @@ Additional resources are needed to update the software to use 64-bit libraries f
       when a requirement is not met.
     + Fixed bug where `@require` was not being properly handled when checking the HydroBase version,
       when run in a test suite.
+* ![bug](bug.png) [14.3.0] Fix to support Microsoft Access databases again for
+  [`GenericDatabaseDatastore`](../datastore-ref/GenericDatabase/GenericDatabase.md):
+    + Direct use of ODBC data source names was dropped in Java 8 (TSTool 12).
+    + Implement the [UcanAccess](http://ucanaccess.sourceforge.net/site.html#home) software with pure Java JDBC connection to Access instead.
+    + Add Access support in the [`OpenDataStore`](../command-ref/OpenDataStore/OpenDataStore.md) command
+      and add the `ConnectionProperties` command parameter to allow additional connection priperties.
+    + Add the [`NewAccessDatabase`](../command-ref/NewAccessDatabase/NewAccessDatabase.md) command.
 * ![bug](bug.png) [14.3.0] Fix the
   [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command to parse time series product file colors
   that use format `#ffffff`.
@@ -41,7 +48,9 @@ Additional resources are needed to update the software to use 64-bit libraries f
   floating point number column precision even if the values are quoted.
   The `DoubleColumns` command parameter allow such values to be read as numbers, and precision is used for displays after reading.
 * ![bug](bug.png) [14.3.0] Fix the
-  [`WebGet`](../command-ref/WebGet/WebGet.md) command handle URL with query values that have equal sign in the parameter value.
+  [`WebGet`](../command-ref/WebGet/WebGet.md) command:
+    + Handle URL with query values that have equal sign in the parameter value.
+    + Improve handling of supported HTTP methods.
 * ![bug](bug.png) [14.3.0] Fix the
   [`WriteTableToGeoJSON`](../command-ref/WriteTableToGeoJSON/WriteTableToGeoJSON.md) command editor so that the `Append` parameter
   field does not overwrite other fields.
@@ -59,8 +68,9 @@ Additional resources are needed to update the software to use 64-bit libraries f
     + Handle `@enabledif` annotations.
     + Add the `AppendOutputFiles` parameter to append the command's output files to the main output file list.
     + Add the `WarningCountProperty` and `FailureCountProperty` parameters to allow handling errors in the command file that is run.
-* ![change](change.png) [14.3.0] Update the
-  [`TableMath`](../command-ref/TableMath/TableMath.md) command to have `Max` and `Min` operators.
+* ![change](change.png) [14.3.0] Update the [`TableMath`](../command-ref/TableMath/TableMath.md) command:
+    + Add `Max` and `Min` operators.
+    + Change so that the precision of floating point output columns is the maximum of the input columns.
 * ![change](change.png) [14.3.0] Update the
   [`WriteDateValue`](../command-ref/WriteDateValue/WriteDateValue.md) command:
     + The `WriteDataFlags` parameter has been added to control whether data flags are written.

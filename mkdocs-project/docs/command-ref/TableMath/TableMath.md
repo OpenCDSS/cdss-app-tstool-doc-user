@@ -1,6 +1,8 @@
 # TSTool / Command / TableMath #
 
 * [Overview](#overview)
+    + [Input](#input)
+    + [Output](#output)
 * [Command Editor](#command-editor)
 * [Command Syntax](#command-syntax)
     + [Supported Operators and Input](#supported-operators-and-input)
@@ -20,17 +22,30 @@ to this command or further process this command's output.
 It is often helpful to perform operations that create new table columns in order
 to understand data processing workflow.
 
+### Input ###
+
 The input is specified by a table column name (`Input1`) and one of the following (`Input2`),
 depending on the operator:
 
 * no second input, for example for `ToInteger` operation
 * second input column, for example to add values of each column
 * constant input value, for example to add a constant to all values in a column
+* inputs can generally be any combination of double precision and integer values
 
 The second input value (`Input2`) can be a column name or a constant value,
 with the result being placed in the output column (`Output`).
-Output that cannot be computed is set to the `NonValue` value.
-Inputs can generally be any combination of double precision and integer values.
+
+### Output ###
+
+The table output column values are computed as follows.
+
+* output that cannot be computed is set to the `NonValue` value
+* inputs can generally be any combination of double precision and integer values
+  and output will result from an automatic conversion:
+    + if a floating point number is in input (even if other input is an integer),
+      the output will be floating point
+    + the width and precision for column properties will be set to the maximum
+      of the input column properties
 
 ## Command Editor ##
 
