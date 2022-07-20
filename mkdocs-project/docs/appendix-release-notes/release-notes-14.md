@@ -60,10 +60,14 @@ Additional resources are needed to update the software to use 64-bit libraries f
   [`WriteTableToGeoJSON`](../command-ref/WriteTableToGeoJSON/WriteTableToGeoJSON.md) command editor so that the `Append` parameter
   field does not overwrite other fields.
 * ![change](change.png) [14.3.0] Add built-in processor properties:
-    + `RunTimeMs` - number of milliseconds for commands to run
-    + `WarningCount` - number of warning messages from commands
-    + `FailureCount` - number of failure messages from commands
-  to run the last command file.  This is useful for performance evaluation.
+    + `RunTimeMs` - number of milliseconds for commands to run.  This is useful for performance evaluation.
+    + `WarningCount` - number of warning messages from commands in the last run.  This is useful for workflow success checks.
+    + `FailureCount` - number of failure messages from commands in the last run.  This is useful for workflow success checks.
+* ![change](change.png) [14.3.0] Update the
+  [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command:
+    + Allow the input file(s) to be specified with a URL, to compare web-hosted file(s).
+    + Add the `WaitUntil` and related parameters to allow repeated comparison of files until the condition
+      of same or different files is met.
 * ![change](change.png) [14.3.0] Update the
   [`ReadDateValue`](../command-ref/ReadDateValue/ReadDateValue.md) command:
     + Add the `IfNotFound` parameter to ignore reading if the file does not exist,

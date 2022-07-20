@@ -214,11 +214,32 @@ Name = "ExampleDatabase"
 Description = "Example Access Database"
 DatabaseEngine = "Access"
 DatabaseName = "//C/path/to/database.accdb"
+# Using the following syntax also seems to work.
+#DatabaseName = "//C:/path/to/database.accdb"
+# See the discussion below.
+#ConnectionProperties = ";memory=false"
 ```
 
 **<p style="text-align: center;">
 Generic Database Datastore Configuration File for Microsoft Access
 </p>**
+
+#### Memory and Performance Considerations ####
+
+By default, the UCanAccess driver will read the entire database into memory,
+which is done to increase performance for relatively small databases.
+However, this can significantly slow down TSTool startup and may lead to an out of memory error.
+The [`OpenDataStore`](../../command-ref/OpenDataStore/OpenDataStore.md) command also
+reopens the datastore each time the commands are run and will be slow each time.
+To avoid loading the database into memory at the initial connection, use the `;memory=false` string in `ConnectionProperties`,
+as shown in the above example, and in [`OpenDataStore(ConnectionProperties=";memory=false"`](../../command-ref/OpenDataStore/OpenDataStore.md)).
+
+See the [UCanAccess documentation](http://ucanaccess.sourceforge.net/site.html#examples)
+for other connection string properties.
+
+If it is desired to load the full database at startup and TSTool runs out of memory,
+it may be necessary to increase the maximum memory used by TSTool.
+See the [Troubleshooting](../../troubleshooting/troubleshooting.md#issue-6-out-of-memory-error) documentation.
 
 ### Microsoft Access Database Example (Old, before TSTool 12) ###
 

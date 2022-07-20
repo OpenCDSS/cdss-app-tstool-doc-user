@@ -88,6 +88,24 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## Troubleshooting ##
 
+### MicroSoft Access Datastore Out of Memory ###
+
+By default, the UCanAccess driver will read the entire database into memory,
+which is done to increase performance for relatively small databases.
+However, this can significantly slow down TSTool startup and may lead to an out of memory error.
+The `OpenDataStore` command reopens the datastore each time the commands are run and will be slow each time.
+To avoid loading the database into memory at the initial connection,
+use the parameter: `ConnectionProperties=;memory=false`.
+If the database is read into memory at startup, initial queries may be slow; however,
+the speed generally incresaes as more queries occur.
+
+See the [UCanAccess documentation](http://ucanaccess.sourceforge.net/site.html#examples)
+for other connection string properties.
+
+If it is desired to load the full database at startup and TSTool runs out of memory,
+it may be necessary to increase the maximum memory used by TSTool.
+See the [Troubleshooting](../../troubleshooting/troubleshooting.md#issue-6-out-of-memory-error) documentation.
+
 ## See Also ##
 
 * [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
