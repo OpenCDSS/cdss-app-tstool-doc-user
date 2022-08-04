@@ -73,6 +73,10 @@ Additional resources are needed to update the software to use 64-bit libraries f
     + Add the `IfNotFound` parameter to ignore reading if the file does not exist,
       which is useful for reading files during troubleshooting.
 * ![change](change.png) [14.3.0] Update the
+  [`ReadNrcsAwdb`](../command-ref/ReadNrcsAwdb/ReadNrcsAwdb.md) command:
+    + Allow `${Property}` in state.
+    + Increase speed at startup when using properties.
+* ![change](change.png) [14.3.0] Update the
   [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
     + Handle `@enabledif` annotations.
     + Add the `AppendOutputFiles` parameter to append the command's output files to the main output file list.

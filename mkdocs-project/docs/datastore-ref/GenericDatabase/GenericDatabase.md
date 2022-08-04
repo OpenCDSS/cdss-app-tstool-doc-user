@@ -241,6 +241,13 @@ If it is desired to load the full database at startup and TSTool runs out of mem
 it may be necessary to increase the maximum memory used by TSTool.
 See the [Troubleshooting](../../troubleshooting/troubleshooting.md#issue-6-out-of-memory-error) documentation.
 
+#### Troubleshooting Access ####
+
+1. Because Access databases are a single file,
+   care must be taken to avoid multiple processes writing to the same database at once.
+   Consequently, avoid opening multiple datastores at startup and/or in commands that write to the same file because
+   the database may become corrupted.
+
 ### Microsoft Access Database Example (Old, before TSTool 12) ###
 
 **This example is for TSTool prior to 12.x, which uses the Windows built-in ODBC driver.**
@@ -363,6 +370,13 @@ DatabaseServer = "C:\Users\user\Downloads\dev_db.db"
 **<p style="text-align: center;">
 Generic Database Datastore Configuration File for SQLite
 </p>**
+
+#### Troubleshooting SQLite ####
+
+1. Because SQLite databases are a single file,
+   care must be taken to avoid multiple processes writing to the same database at once.
+   Consequently, avoid opening multiple datastores at startup and/or in commands that write to the same file because
+   the database may become corrupted.
 
 ### SQL Server Database Example ###
  
