@@ -34,6 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.4.0](release-notes-14.md)|Feature release to improve visualization of non-time series data and improve cloud integration. | 2022-08-11 |
 |[14.3.0](release-notes-14.md)|Feature release to improve automated testing and cloud integration, re-enable Access. | 2022-08-01 |
 |[14.2.2](release-notes-14.md)|Maintenance release to fix issues identified in HydroBase REST web services. | 2022-04-07 |
 |[14.2.1](release-notes-14.md)|Maintenance release to disable real-time data in HydroBase database datastore, other cleanup for recent releases. |2022-03-24|

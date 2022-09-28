@@ -1,6 +1,7 @@
 # TSTool / Release Notes / Version 14 #
 
 * [Known Limitations](#known-limitations)
+* [Changes in Version 14.4.0](#changes-in-version-1440)
 * [Changes in Version 14.3.0](#changes-in-version-1430)
 * [Changes in Version 14.2.2](#changes-in-version-1422)
 * [Changes in Version 14.2.1](#changes-in-version-1421)
@@ -22,6 +23,17 @@
 
 * ![limitation](limitation.png) [14.0.0+] Features that were previously available for reading and writing HEC-DSS files are disabled.
 Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
+
+## Changes in Version 14.4.0 ##
+
+**Feature release to improve visualization of non-time series data and cloud integration.**
+
+* ![change](change.png) [14.4.0] The
+  [`ReadPropertiesFromFile`](../command-ref/ReadPropertiesFromFile/ReadPropertiesFromFile.md) command has been updated:
+    + Added the `Value` file type, to allow reading a file's contents into a property,
+      which is useful when manipulating text files,
+      such as with the
+      [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command.
 
 ## Changes in Version 14.3.0 ##
 

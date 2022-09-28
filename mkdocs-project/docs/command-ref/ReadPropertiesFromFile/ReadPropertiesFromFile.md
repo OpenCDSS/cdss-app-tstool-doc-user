@@ -11,10 +11,11 @@
 
 ## Overview ##
 
-The `ReadPropertiesFromFile` command reads the values of one or more time series processor properties from a file.
+The `ReadPropertiesFromFile` command reads the values of one or properties from a file,
+which can then be used in workflows using `${Property}` syntax.
 The corresponding [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md)
 command can be used to write properties to a file.
-Processor properties include global defaults such as `InputStart`, `InputEnd`,
+Processor properties include built-in global defaults such as `InputStart`, `InputEnd`,
 `OutputStart`, `OutputEnd`, `OutputYearType`, `WorkingDir`,
 and also user-defined properties set with the [`SetProperty`](../SetProperty/SetProperty.md) command.
 Internally, properties have a name and a value, which is of a certain type
@@ -23,6 +24,7 @@ Internally, properties have a name and a value, which is of a certain type
 * creating tests to verify that properties are being set
 * passing information from TSTool to another program, such as a Python script
 * storing persistent information for later use, such as the date/time that data were last downloaded from a web service
+* reading text from a file to merge into a file
 
 A number of property formats are supported as listed in the following table.
 
@@ -35,9 +37,10 @@ Property File Formats
 | `NameValue`           | Simple format, all properties handled as text:<br><br>`PropertyName=PropertyValue`<br>`PropertyName="Property value, quoted if necessary"` |
 | `NameTypeValue`       | Same as `NameValue` format, with non-primitive objects treated as simple constructors:<br><br>`PropertyName=PropertyValue`<br>`DateTimeProperty=DateTime("2010-10-01 12:30")`|
 | `NameTypeValuePython` | Similar to the `NameTypeValue` format; however, objects are represented using “Pythonic” notation, to allow the file to be used directly by Python scripts:<br><br>`PropertyName="PropertyValue"`<br>`DateTimeProperty=DateTime(2010,10,1,12,30)` |
+| `Value`               | Read the entire contents of a file into a property. |
 
-The format of the file currently is not required when reading the file because
-the command detects the format for each property and creates an appropriate object type. 
+The command attempts to create objects of the proper type but if this is an issue,
+it may be necessary to use the formats that include property type.
 
 ## Command Editor ##
 
@@ -65,7 +68,7 @@ Command Parameters
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 |`InputFile`<br>**required**|The property file to read, as an absolute path or relative to the command file.  Can be specified using `${Property}`.|None – must be specified.|
-|`FileFormat`|Format of the properties file (see descriptions in the above Property File Formats table):<ul><li>`NameValue`</li><li>`NameTypeValue`</li><li>`NameTypeValuePython`</li></ul>|`NameValue`|
+|`FileFormat`|Format of the properties file (see descriptions in the above Property File Formats table):<ul><li>`NameValue`</li><li>`NameTypeValue`</li><li>`NameTypeValuePython`</li><li>`Value`</li></ul>|`NameValue`|
 |`IncludeProperty`|The names of properties to read, separated by commas.  Can be specified using `${Property}`.|If not specified, all processor properties will be written.|
 
 ## Examples ##

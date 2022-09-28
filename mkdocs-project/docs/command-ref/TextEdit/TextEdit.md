@@ -27,6 +27,10 @@ For example, some patterns pass through to the underlying code without changes w
 need to be transformed or "escaped" to protect from manipulation by TSTool.
 The following examples illustrate how to perform common search and replace tasks.
 
+The [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md) command
+can be used to read one or more properties from a text file
+and the property values can be used to replace text in an initial file.
+
 **<p style="text-align: center;">
 Search and Replace Examples
 </p>**
@@ -80,4 +84,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 * [`AppendFile`](../AppendFile/AppendFile.md) command
 * [`CopyFile`](../CopyFile/CopyFile.md) command
+* [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md) command
 * [`RemoveFile`](../RemoveFile/RemoveFile.md) command
