@@ -101,6 +101,7 @@ nav:
   - FormatTableDateTime: command-ref/FormatTableDateTime/FormatTableDateTime.md
   - FormatTableString: command-ref/FormatTableString/FormatTableString.md
   - Free: command-ref/Free/Free.md
+  - FreeObject: command-ref/FreeObject/FreeObject.md
   - FreeTable: command-ref/FreeTable/FreeTable.md
   - FTPGet: command-ref/FTPGet/FTPGet.md
   - If: command-ref/If/If.md
@@ -120,6 +121,7 @@ nav:
   - NewEnsemble: command-ref/NewEnsemble/NewEnsemble.md
   - NewEndOfMonthTSFromDayTS: command-ref/NewEndOfMonthTSFromDayTS/NewEndOfMonthTSFromDayTS.md
   - NewExcelWorkbook: command-ref/NewExcelWorkbook/NewExcelWorkbook.md
+  - NewObject: command-ref/NewObject/NewObject.md
   - NewPatternTimeSeries: command-ref/NewPatternTimeSeries/NewPatternTimeSeries.md
   - NewSQLiteDatabase: command-ref/NewSQLiteDatabase/NewSQLiteDatabase.md
   - NewStatisticEnsemble: command-ref/NewStatisticEnsemble/NewStatisticEnsemble.md
@@ -208,6 +210,7 @@ nav:
   - SetIgnoreLEZero: command-ref/SetIgnoreLEZero/SetIgnoreLEZero.md
   - SetIncludeMissingTS: command-ref/SetIncludeMissingTS/SetIncludeMissingTS.md
   - SetInputPeriod: command-ref/SetInputPeriod/SetInputPeriod.md
+  - SetObjectPropertiesFromTable: command-ref/SetObjectPropertiesFromTable/SetObjectPropertiesFromTable.md
   - SetOutputPeriod: command-ref/SetOutputPeriod/SetOutputPeriod.md
   - SetOutputYearType: command-ref/SetOutputYearType/SetOutputYearType.md
   - SetProperty: command-ref/SetProperty/SetProperty.md
