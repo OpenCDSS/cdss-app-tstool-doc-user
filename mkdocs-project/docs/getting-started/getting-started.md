@@ -11,6 +11,7 @@ This chapter provides an overview of the TSTool graphical user interface (GUI).
     + [Results](#results)
         - [Results / Ensembles](#results-ensembles)
         - [Results / Networks](#results-networks)
+        - [Results / Objects](#results-objects)
         - [Results / Output Files](#results-output-files)
         - [Results / Problems](#results-problems)
         - [Results / Properties](#results-properties)
@@ -351,6 +352,7 @@ The following may be available in ***Results***, depending on commands that were
   Individual time series that are associated with an ensemble also
   are shown in the ***Time Series*** tab.  Right-click on item to access viewing and analysis options.
 * ***Networks*** - a list of networks that have been created, for example to represent river or other flow networks
+* ***Objects*** – objects that are created during processing.  Single-click on an object to view as JSON.
 * ***Output Files*** – files that are created during processing.  Single-click on a file to view.
 * ***Problems*** – a full listing of warning and failure messages from all commands.
 * ***Properties*** – the list of processor properties that can be referenced in command parameters using `${Property}` syntax
@@ -402,6 +404,23 @@ Right-click on a network to access the popup menu for network tools.
 
 **<p style="text-align: center;">
 ***Results / Networks*** (<a href="../results-networks.png">see also the full-size image</a>)
+</p>**
+
+#### Results / Objects ####
+
+TSTool has built-in features for representing complex hierarchical objects,
+such as read from JSON files.
+Objects are typically used to represent complex data models.
+See the ***Commands / Object Processing*** menu for commands that process objects.
+
+Right-click on an object to access the popup menu for object tools.
+
+**<p style="text-align: center;">
+![results-objects](results-objects.png)
+</p>**
+
+**<p style="text-align: center;">
+***Results / Objects*** (<a href="../results-objects.png">see also the full-size image</a>)
 </p>**
 
 #### Results / Output Files ####

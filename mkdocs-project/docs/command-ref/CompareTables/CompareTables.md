@@ -11,15 +11,27 @@
 
 ## Overview ##
 
-The `CompareTables` command compares columns from two tables, saving the results in a new table.
-Comparisons are made using the data values formatted as strings based on the precision shown in tables.
-If the table was read with [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md),
-the precision for floating point numbers is set based on the largest
-number of digits after the decimal encountered in the input.
-Optionally, a precision and tolerance can be specified to control the comparison of floating point values.
-Values that are the same are shown in the new table without modification.
-Values that are different result in both table values being shown (as strings) to allow comparison.
-The command also allows the comparison table to be output to an HTML file, in which case different values are shown as red.
+The `CompareTables` command compares columns from two tables, with the following considerations:
+
+*   Comparisons are made using the data values formatted as strings based on the precision shown in tables.
+    If the table was read with [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md),
+    the precision for floating point numbers is set based on the largest
+    number of digits after the decimal encountered in the input.
+*   A precision and tolerance can optionally be specified to control the comparison of floating point values.
+*   The first table's content is considered the primary content for comparison purposes.
+    If the second table is shorter than the first, additional empty rows are added for comparison.
+*   Currently there is no way to align rows from the first and second table,
+    such as by matching identifiers in a column.
+    Filtering must have been done previously, such as by using SQL for database queries or the
+    [`CopyTable`](../CopyTable/CopyTable.md) command
+*   Empty tables or tables of different length generate an additional warning and are
+    not subject to the `AllowedDiff` command parameter.
+
+An optional table and file showing the comparison results can be created:
+
+*   Values that are the same are shown in the new table without modification.
+*   Values that are different result in both table values being shown (as strings) to allow comparison.
+*   The command also allows the comparison table to be output to an HTML file, in which case different values are shown as red.
 
 ## Command Editor ##
 

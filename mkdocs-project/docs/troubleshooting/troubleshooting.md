@@ -9,35 +9,36 @@ in different technologies that are maintained at different locations (other comp
 Consequently, errors can occur in various software components.
 The following are general suggestions for troubleshooting issues.
 Specific troubleshooting guidance is also provided in the documentation for each command.
+
 **If it is difficult to find a troubleshooting topic using the section headers,
-use the search feature of this documentation or browser page search to facilitate
-finding information on a troubleshooting topic.**
+use the search feature of this documentation or browser page search to find
+information on a troubleshooting topic.**
 
 * [Background and Terminology](#background-and-terminology)
-	+ [Automated Testing](#automated-testing)
-	+ [Logging](#logging)
-	+ [Severity Levels for Issues](#severity-levels-for-issues)
-	+ ["Exceptions"](#exceptions)
+    + [Automated Testing](#automated-testing)
+    + [Logging](#logging)
+    + [Severity Levels for Issues](#severity-levels-for-issues)
+    + ["Exceptions"](#exceptions)
 * [TSTool Installation and Version](#tstool-installation-and-version)
 * [Log File](#log-file)
 * [Command Status/Log](#command-statuslog)
 * [System Information](#system-information)
 * [Errors and Possible Solutions](#errors-and-possible-solutions)
-	+ [Issue 1 - Java Virtual Machine launcher error](#issue-1-java-virtual-machine-launcher-error)
-	+ [Issue 2 - Error connecting to State of Colorado’s HydroBase database on State computer](#issue-2-error-connecting-to-state-of-colorados-hydrobase-database-on-state-computer)
-	+ [Issue 2b - Error connecting to State of Colorado’s HydroBase database on local computer](#issue-2b-error-connecting-to-state-of-colorados-hydrobase-database-on-local-computer)
-	+ [Issue 3 - No HydroBase databases are listed in HydroBase selection dialog](#issue-3-no-hydrobase-databases-are-listed-in-hydrobase-selection-dialog)
-	+ [Issue 4 - Could not find the main class](#issue-4-could-not-find-the-main-class)
-	+ [Issue 5 - Unable to find files](#issue-5-unable-to-find-files)
-	+ [Issue 6 - Out of Memory Error](#issue-6-out-of-memory-error)
-	+ [Issue 7 - Time series have missing data](#issue-7-time-series-have-missing-data)
-	+ [Issue 8 - HEC-DSS features are unavailable](#issue-8-hec-dss-features-are-unavailable)
-	+ [Issue 9 - Time series data type for data source is unavailable](#issue-9-time-series-data-type-for-data-source-is-unavailable)
-	+ [Issue 10 - Unexpected failure](#issue-10-unexpected-failure)
-	+ [Issue 11 - TSTool text (fonts) are small](#issue-11-tstool-text-fonts-are-small)
-	+ [Issue 12 - Datastore is (not) available](#issue-12-datastore-is-not-available)
-	+ [Issue 13 - Slow startup](#issue-13-slow-startup)
-	+ [Issue 14 - SQL Server Express out of date](#issue-14-sql-server-express-out-of-date)
+    + [Issue 1 - Java Virtual Machine launcher error](#issue-1-java-virtual-machine-launcher-error)
+    + [Issue 2 - Error connecting to State of Colorado’s HydroBase database on State computer](#issue-2-error-connecting-to-state-of-colorados-hydrobase-database-on-state-computer)
+    + [Issue 2b - Error connecting to State of Colorado’s HydroBase database on local computer](#issue-2b-error-connecting-to-state-of-colorados-hydrobase-database-on-local-computer)
+    + [Issue 3 - No HydroBase databases are listed in HydroBase selection dialog](#issue-3-no-hydrobase-databases-are-listed-in-hydrobase-selection-dialog)
+    + [Issue 4 - Could not find the main class](#issue-4-could-not-find-the-main-class)
+    + [Issue 5 - Unable to find files](#issue-5-unable-to-find-files)
+    + [Issue 6 - Out of Memory Error](#issue-6-out-of-memory-error)
+    + [Issue 7 - Time series have missing data](#issue-7-time-series-have-missing-data)
+    + [Issue 8 - HEC-DSS features are unavailable](#issue-8-hec-dss-features-are-unavailable)
+    + [Issue 9 - Time series data type for data source is unavailable](#issue-9-time-series-data-type-for-data-source-is-unavailable)
+    + [Issue 10 - Unexpected failure](#issue-10-unexpected-failure)
+    + [Issue 11 - TSTool text (fonts) are small](#issue-11-tstool-text-fonts-are-small)
+    + [Issue 12 - Datastore is (not) available](#issue-12-datastore-is-not-available)
+    + [Issue 13 - Slow startup](#issue-13-slow-startup)
+    + [Issue 14 - SQL Server Express out of date](#issue-14-sql-server-express-out-of-date)
 * [Obsolete Commands](#obsolete-commands)
 
 ------------------
@@ -54,7 +55,7 @@ Problems can occur for many reasons, for example shown below,
 listed in approximate order of typical investigation:
 
 * user tries to use the software in an incorrect way
-(user error, such as using wrong feature for a task)
+  (user error, such as using wrong feature for a task)
 * user provides incorrect input (input error)
 * user has tried to do too much with the software (software limitation)
 * user does not properly interpret or respond to a valid warning (user error)
@@ -97,13 +98,13 @@ This allows users to troubleshoot all the issues rather than fix one and then ru
 which can be very inefficient.
 
 * **Warning** - an issue occurred that may have negative impacts,
-but the software can generally continue with additional processing, for example:
-	+ missing data in an analysis, which will impact the analysis
-	+ missing file when a command is first edited - more checks are done at run time
+  but the software can generally continue with additional processing, for example:
+    + missing data in an analysis, which will impact the analysis
+    + missing file when a command is first edited - more checks are done at run time
 * **Failure** - an issue occurred that likely has serious impacts on results and should be resolved,
-	for example:
-	+ critical input data are missing that prevent processing to occur
-	+ critical input data are missing that will render output inaccurate
+  for example:
+    + critical input data are missing that prevent processing to occur
+    + critical input data are missing that will render output inaccurate
 
 Either of the above cases should be investigated by users and resolved.
 TSTool provides features to help users be aware of processing issues.
@@ -157,7 +158,7 @@ edited in the user interface and when initial runtime processing occurs.
 Common up-front checks include:
 
 * Invalid number (such as negative when number should be greater than or equal to zero) or decimal number
-when an integer is expected results in a failure (needs to be fixed).
+  when an integer is expected results in a failure (needs to be fixed).
 * Missing input file may result in a warning during initial command setup (wait and see).
 
 Common run-time checks include:
@@ -182,9 +183,9 @@ Tests are often implemented at different levels, for example:
 
 * unit tests - run small software code blocks, often used in a software development environment
 * functional tests - run tests using functional software,
-can be used in deployed and development environments
+  can be used in deployed and development environments
 * system tests - run larger datasets to evaluate interaction of components,
-can be used in deployed and development environments
+  can be used in deployed and development environments
 
 For TSTool, thousands of functional tests have been developed to validate commands,
 using a built-in testing framework.
@@ -205,14 +206,14 @@ Separate installation folders take more disk space and result in more entries in
 This approach has the following ben:
 
 * Old versions of TSTool can continue to be used independent of new versions.
-	+ Most TSTool features are backward compatible,
-	meaning that newer versions of the software will run old command files.
-	+ However, new TSTool versions will add new commands and command parameters
-	that if saved to command files will not run in older TSTool versions.
+    + Most TSTool features are backward compatible,
+      meaning that newer versions of the software will run old command files.
+    + However, new TSTool versions will add new commands and command parameters
+      that if saved to command files will not run in older TSTool versions.
 * Multiple versions facilitate troubleshooting because issues can be pinpointed to
-specific versions, and corresponding source code can be reviewed.
+  specific versions, and corresponding source code can be reviewed.
 * If necessary, a version of the software can be "frozen" for an analysis process
-as a long-term archive.
+  as a long-term archive.
 
 The TSTool version can be determined from its installation folder and also the ***Help / About TSTool*** menu.
 
@@ -231,15 +232,15 @@ they can be difficult for others to understand.
 The log file exists in the following locations and can be edited with a text file editor:
 
 * User's home folder TSTool files, for example:
-	+ Windows: `C:\Users\user\.tstool\logs\tstool_user.log`
-	+ Linux:  `/home/user/.tstool/logs/tstool_user.log`
-	+ Cygwin:  `/cygdrive/C/Users/user/.tstool/logs/tstool.log` (different files from Windows)
-	+ Git Bash (MinGW):  `/c/Users/user/.tstool/logs/tstool.log` (same files as Windows)
+    + Windows: `C:\Users\user\.tstool\logs\tstool_user.log`
+    + Linux:  `/home/user/.tstool/logs/tstool_user.log`
+    + Cygwin:  `/cygdrive/C/Users/user/.tstool/logs/tstool.log` (different files from Windows)
+    + Git Bash (MinGW):  `/c/Users/user/.tstool/logs/tstool.log` (same files as Windows)
 * File specified by the TSTool [`StartLog`](../command-ref/StartLog/StartLog.md) command.
 * Log file in software installation folder:
-	+ Windows: `C:\CDSS\TSTool-version\logs\tstool_user.log`
-	(this was used in older versions of TSTool and has been phased out because
-	writing to the folder often requires administrator privileges)
+    + Windows: `C:\CDSS\TSTool-version\logs\tstool_user.log`
+      (this was used in older versions of TSTool and has been phased out because
+      writing to the folder often requires administrator privileges)
 
 The log file contains a sequential record of log messages for application startup followed by
 output from interacting with the TSTool user interface and running the commands,
@@ -551,11 +552,11 @@ If this service does not run, TSTool does not know which databases are available
 2. Look for ***SQL Server Browser***. It will probably be disabled.
 3. Right click and edit properties. Change the startup type to ***Automatic***.
 4. Then in the main window right click again and select ***Start***.
-If everything is disabled, investigate running the local services tool as administrator,
-for example run `C:\Windows\System32\services.msc` as administrator.
-The permissions seem a bit inconsistent.
+   If everything is disabled, investigate running the local services tool as administrator,
+   for example run `C:\Windows\System32\services.msc` as administrator.
+   The permissions seem a bit inconsistent.
 5. After starting the SQL Server Browser,
-restart TSTool and HydroBase instances should be listed in the selection dialog.
+   restart TSTool and HydroBase instances should be listed in the selection dialog.
 
 **Alternative Solution** – Recent versions of TSTool ship with a HydroBase datastore configuration file `system/HydroBase.cfg`.
 Whereas the HydroBase login allows selection of the HydroBase database through a dialog and use a default connection
@@ -645,15 +646,15 @@ More time series may be able to be handled if run in batch mode because GUI reso
 **Possible Solution 1** - Increase the amount of memory that TSTool will use:
 
 * If running on Windows using the TSTool.exe program (the default configuration),
-increase the value of the `–XmxNNNm` option in the `bin\TSTool.l4j.ini` file under the software installation folder.
+  increase the value of the `–XmxNNNm` option in the `bin\TSTool.l4j.ini` file under the software installation folder.
 * If running on Windows using the `TSTool.bat` file,
-change the `-XmxNNNm` option after the JRE program name to tell Java to allow more memory
-(increase the number of MB NNN as appropriate for the amount of memory available on the machine.
-Use a high number to force using hard disk swap space if desired).
+  change the `-XmxNNNm` option after the JRE program name to tell Java to allow more memory
+  (increase the number of MB NNN as appropriate for the amount of memory available on the machine.
+  Use a high number to force using hard disk swap space if desired).
 * If running on Linux or Unix using the `tstool` script, change the `-XmxNNNm` option
-after the JRE program name to tell Java to allow more memory (increase the number
-of MB NNN as appropriate for the amount of memory available on the machine.
-Use a high number to force using hard disk swap space if desired).
+  after the JRE program name to tell Java to allow more memory (increase the number
+  of MB NNN as appropriate for the amount of memory available on the machine.
+  Use a high number to force using hard disk swap space if desired).
 
 **Possible Solution 2** - Another solution is to free memory being used by unneeded resources
 such as temporary time series and tables by using [`Free`](../command-ref/Free/Free.md) and [`FreeTable`](../command-ref/FreeTable/FreeTable.md) commands.
@@ -750,7 +751,7 @@ If this cannot be resolved, contact TSTool support.
 **Possible Cause** – TSTool uses Java Swing for the user interface and this package
 does not automatically handle display DPI (dots per inch).
 The fundamental issue is that that graphical interfaces need to scale their content
-based on internal direction from the software (e.g., specifying font size)
+based on information from the software (e.g., specifying font size)
 and the display resolution of the hardware.
 
 **Possible Solution** - A solution that does not require user action may be possible but will
@@ -761,23 +762,26 @@ Use the TSTool ***Help / About TSTool / Show Software/System Details*** menu to 
 Until Java can be updated and tested, a workaround requires user action.  See the
 [Stack Overflow article - "How do I run Java apps upscaled on a high-DPI display?](https://superuser.com/questions/988379/how-do-i-run-java-apps-upscaled-on-a-high-dpi-display/1207925).
 The answer by "Elderry", May 10, 2017, has been demonstrated to work and is summarized below.
-The following instructions are for Windows 10.
-This solution should work on any Java software.
+The following instructions are for Windows 10 and 11 and
+the solution should work on any Java software.
 
 1. For the TSTool version that is being run,
-use a file browser to navigate to the Java Runtime Environment software folder,
-typically something like `C:\CDSS\TSTool-12.06.00\jre_18\bin`.
-Repeat the following For the `java.exe` and `javaw.exe` programs.
+   use a file browser to navigate to the Java Runtime Environment software folder,
+   typically something like `C:\CDSS\TSTool-12.06.00\jre_18\bin`.
+   Repeat the following For the `java.exe` and `javaw.exe` programs.
 2. Right-click on the file and select ***Properties***.
 3. Select the ***Compatibility*** tab.
 4. Select the ***Change high DPI settings*** button.
-5. Change the ***Override high DPI scaling behavior.  Scaling performed by:  System***.
-The initial choice was probably ***Application***.
+5. Change the ***Override high DPI scaling behavior.  Scaling performed by:*** (Windows 10),
+   ***Override high DPI scaling behavior.  Scaling performed by:*** (Windows 11), or similar.
+   Change to ***System*** or ***System (Enhanced)***.
+   The initial choice is probably ***Application***.
 6. Restart TSTool.  If successful, text should use a size that is typical for Windows applications.
 
 The above fix can also be implemented in the software development environment,
 but in this case the properties for the `javaw.exe` used by Eclipse must be changed,
-for example the software in `C:\Program Files\Java` or `C:\Program Files (x86)\Java`.
+for example the software in `C:\Program Files\Java` or `C:\Program Files (x86)\Java`,
+or similar folders used by Eclipse.
 
 ## Issue 12 - Datastore is (not) available ##
 
@@ -796,29 +800,29 @@ Datastore issues typically involve configuration file issues.
 Edit the configuration files appropriately to enable/disable the HydroBase datastore.
 
 1. The `C:\Users\user\CDSS\TSTool-Version\system\TSTool.cfg` file sets configuration properties to
-globally enable/disable a datastore by type,
-which controls the ***Commands*** menus that are shown for a datastore.
-The file can be edited with a text editor or use the ***Tools / Options*** menu.
-Set the `HydroBaseEnabled` property to `true` to enable or `false` to disable.
+   globally enable/disable a datastore by type,
+   which controls the ***Commands*** menus that are shown for a datastore.
+   The file can be edited with a text editor or use the ***Tools / Options*** menu.
+   Set the `HydroBaseEnabled` property to `true` to enable or `false` to disable.
 2. The `C:\Users\user\.tstool\NN\system\TSTool.cfg` file can be created to 
-override the installation `TSTool.cfg` configuration file.
-Make sure to include the `[TSTool]` line before specific properties.
-Set the `HydroBaseEnabled` property to `true` to enable or `false` to disable.
+   override the installation `TSTool.cfg` configuration file.
+   Make sure to include the `[TSTool]` line before specific properties.
+   Set the `HydroBaseEnabled` property to `true` to enable or `false` to disable.
 3. TSTool will look for installation datastore configuration files in the `C:\Users\user\CDSS\TSTool-Version\system` folder.
-Check to see whether a configuration file exists called `HydroBase.cfg` and that the `Enabled = true` property is set.
-Also specify the HydroBase database version for the database that is installed on the computer,
-consistent with the HydroBase that was installed with the HydroBase Database Manager.
-If uncertain, the HydroBase selector dialog shown when TSTool starts should provide a list of databases.
-If databases are not listed when TSTool starts,
-see [Issue 3 - No HydroBase databases are listed in HydroBase selection dialog](#issue-3-no-hydrobase-databases-are-listed-in-hydrobase-selection-dialog).
-**A common mistake is a typo in the HydroBase database name.**
+   Check to see whether a configuration file exists called `HydroBase.cfg` and that the `Enabled = true` property is set.
+   Also specify the HydroBase database version for the database that is installed on the computer,
+   consistent with the HydroBase that was installed with the HydroBase Database Manager.
+   If uncertain, the HydroBase selector dialog shown when TSTool starts should provide a list of databases.
+   If databases are not listed when TSTool starts,
+   see [Issue 3 - No HydroBase databases are listed in HydroBase selection dialog](#issue-3-no-hydrobase-databases-are-listed-in-hydrobase-selection-dialog).
+   **A common mistake is a typo in the HydroBase database name.**
 4. Alternatively, copy the `HydroBase.cfg` file described above into the folder `C:\Users\user\.tstool\NN\datastores` and edit
-to enable or disable the datastore.
+   to enable or disable the datastore.
 5. Restart TSTool.  If successful, the HydroBase datastore will be listed in the ***Datastore*** tab in the upper left.
-Note that this is separate from the HydroBase ***Input Type***, which is configured by selecting a HydroBase
-from the login dialog shown when TSTool starts.
-A unified HydroBase datastore and input type will be implemented in the future.
-Use the ***View / Datastores*** menu to check the datastore status and configuration errors.
+   Note that this is separate from the HydroBase ***Input Type***, which is configured by selecting a HydroBase
+   from the login dialog shown when TSTool starts.
+   A unified HydroBase datastore and input type will be implemented in the future.
+   Use the ***View / Datastores*** menu to check the datastore status and configuration errors.
 
 ## Issue 13 - Slow Startup ##
 
@@ -829,27 +833,27 @@ Use the ***View / Datastores*** menu to check the datastore status and configura
 **Possible Causes** – The following are possible causes
 
 1. TSTool is distributed with a number of datastores configured, which access databases and web services.
-In some cases, such as for the State of Colorado, a number of datastores have been made obsolete.
-However, TSTool software updates may lag and during this time the software may repeatedly attempt
-to connect to a datastore that is unavailable, causing slow startup.
-Old configurations may also need to be updated.
+   In some cases, such as for the State of Colorado, a number of datastores have been made obsolete.
+   However, TSTool software updates may lag and during this time the software may repeatedly attempt
+   to connect to a datastore that is unavailable, causing slow startup.
+   Old configurations may also need to be updated.
 2. One or more datastores are misconfigured and TSTool attempts repeatedly to connect,
-again causing slow startup.
+   again causing slow startup.
 
 **Possible Solution** - The following is an approach to troubleshooting.
 
 1. Use the ***View / Datastores*** menu to list datastores that are enabled.
-Errors with datastores should be highlighted in yellow and an error message will be shown.
-Often the error is due to a typo in configuration information.
+   Errors with datastores should be highlighted in yellow and an error message will be shown.
+   Often the error is due to a typo in configuration information.
 2. Use the ***Tools / View Log File*** menus to view log file messages.
-Search for `Exception`, `Error`, `Warning`, etc. to see additional information.
+   Search for `Exception`, `Error`, `Warning`, etc. to see additional information.
 3. Based on the above information remove datastore configuration files or use the `Enabled=False` property in
-datastore configuration files to disable.
-Also remove or disable datastores that are not needed.
+   datastore configuration files to disable.
+   Also remove or disable datastores that are not needed.
 4. It may also be necessary to disable datastores and input types that are distributed with the software
-but may not be relevant.  For example TSTool was developed for the State of Colorado and defaults to having
-HydroBase database being enabled.  However, a HydroBase database may not be available.
-In this case, to disable, edit the `TSTool.cfg` file and set `HydroBaseEnabled=False`.
+   but may not be relevant.  For example TSTool was developed for the State of Colorado and defaults to having
+   HydroBase database being enabled.  However, a HydroBase database may not be available.
+   In this case, to disable, edit the `TSTool.cfg` file and set `HydroBaseEnabled=False`.
 
 ## Issue 14 - SQL Server Express out of date ##
 
