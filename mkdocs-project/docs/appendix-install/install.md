@@ -6,21 +6,21 @@ to process water resources data for modeling and analysis.
 However, TSTool can be used outside of CDSS and also can be used to analyze data other than water resources.
 In all cases, it is recommended to install in the default location to avoid confusion.
 
-* [Overview](#overview)
-* [File Locations](#file-locations)
-	+ [Installation Files](#installation-files)
-	+ [User Files](#user-files)
-* [Installing TSTool](#installing-tstool)
-	+ [Install TSTool on Windows](#install-tstool-on-windows)
-	+ [Install TSTool on a Windows File Server](#install-tstool-on-a-windows-file-server)
-	+ [Install TSTool from the “HydroBase data set Analysis Query Tools DVD”](#install-tstool-from-the-hydrobase-data-set-analysis-query-tools-dvd)
-	+ [Install TSTool on Linux](#install-tstool-on-linux)
-* [Uninstalling TSTool](#uninstalling-tstool)
-	+ [Uninstall TSTool on Windows](#uninstall-tstool-on-windows)
-	+ [Uninstall TSTool on Linux](#uninstall-tstool-on-linux)
-* [Running TSTool](#running-tstool)
-* [TSTool Configuration](#tstool-configuration)
-* [Map Configuration](#map-configuration)
+*   [Overview](#overview)
+*   [File Locations](#file-locations)
+    +   [Installation Files](#installation-files)
+    +   [User Files](#user-files)
+*   [Installing TSTool](#installing-tstool)
+    +   [Install TSTool on Windows](#install-tstool-on-windows)
+    +   [Install TSTool on a Windows File Server](#install-tstool-on-a-windows-file-server)
+    +   [Install TSTool from the “HydroBase data set Analysis Query Tools DVD”](#install-tstool-from-the-hydrobase-data-set-analysis-query-tools-dvd)
+    +   [Install TSTool on Linux](#install-tstool-on-linux)
+*  [Uninstalling TSTool](#uninstalling-tstool)
+    +   [Uninstall TSTool on Windows](#uninstall-tstool-on-windows)
+    +   [Uninstall TSTool on Linux](#uninstall-tstool-on-linux)
+*   [Running TSTool](#running-tstool)
+*   [TSTool Configuration](#tstool-configuration)
+*   [Map Configuration](#map-configuration)
 
 -------
 
@@ -336,11 +336,11 @@ The standard installer described in this documentation focuses on individual ins
 To make TSTool software installed on a server available to other computers,
 perform the following (this is typically performed by system administrators):
 
-1. Run the `TSTool_CDSS_Version_Setup.exe` installer as described above.
-During installation specify the TSTool installation home using a drive letter and
-path for the server or specify a Universal Naming Convention (UNC) path (e.g., `\\ServerName\CDSS\TSTool-Version`).
-2. Or...Copy the `C:\Users\user\CDSS\TSTool-Version` files from a local installation to a network location.
-The TSTool software will detect the file location when run using the `TSTool.exe` file.
+1.  Run the `TSTool_CDSS_Version_Setup.exe` installer as described above.
+    During installation specify the TSTool installation home using a drive letter and
+    path for the server or specify a Universal Naming Convention (UNC) path (e.g., `\\ServerName\CDSS\TSTool-Version`).
+2.  Or...Copy the `C:\Users\user\CDSS\TSTool-Version` files from a local installation to a network location.
+    The TSTool software will detect the file location when run using the `TSTool.exe` file.
 
 The menus and shortcuts will only be configured for the computer from which the installation was run.
 Therefore, menus and shortcuts for other computers will need to be manually configured.
@@ -439,12 +439,12 @@ which allows overriding the installation files configuration files.
 
 The `system\TSTool.cfg` file can be specified in the following two locations on Windows:
 
-* Installation files:
-	+ Windows:  `C:\CDSS\TSTool-Version\system\TSTool.cfg`
-	+ Linux:  `/opt/TSTool-Version/system/TSTool.cfg`
+*   Installation files:
+    +   Windows:  `C:\CDSS\TSTool-Version\system\TSTool.cfg`
+    +   Linux:  `/opt/TSTool-Version/system/TSTool.cfg`
 * User files (`N` below is the TSTool major version number, e.g., `13`):
-	+ Windows:  `C:\Users\user\.tstool\N\system\TSTool.cfg`
-	+ Linux:  `/home/user/.tstool/N/system/TSTool.cfg`
+    +   Windows:  `C:\Users\user\.tstool\N\system\TSTool.cfg`
+    +   Linux:  `/home/user/.tstool/N/system/TSTool.cfg`
 
 The `TSTool.cfg` file installation folder contains top-level configuration information for TSTool.
 User file configuration properties take precedence over the installation configuration properties.
@@ -475,10 +475,10 @@ StateModEnabled = true
 
 # Program to use for file differences, intended to be graphical file difference viewer.
 # The program will be called as DiffProgram File1 File2.
-# It is up to the user to install KDiff3 on the computer or change the following
-# to a different program.
-DiffProgram = "C:\Program Files\KDiff3\kdiff3.exe"
-DiffProgram.Windows = "C:\Program Files\KDiff3\kdiff3.exe"
+# Specify programs separated by commas if more than one proram name or location is possible.
+# It is up to the user to install KDiff3 on the computer or change the following to a different program.
+DiffProgram = "C:\Program Files\KDiff3\kdiff3.exe,C:\Program Files\KDiff3\bin\kdiff3.exe"
+DiffProgram.Windows = "C:\Program Files\KDiff3\kdiff3.exe,C:\Program Files\KDiff3\bin\kdiff3.exe"
 DiffProgram.Linux = "/usr/bin/kdiff3"
 
 # Online documentation home.

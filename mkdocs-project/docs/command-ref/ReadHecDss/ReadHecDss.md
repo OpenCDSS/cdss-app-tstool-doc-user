@@ -11,17 +11,14 @@
 
 ## Overview ##
 
-**The `ReadHecDSS` command is disabled for TSTool 14.0.0 and newer
-because TSTool needs to be updated to use 64-bit HEC-DSS software libraries.**
-
 The `ReadHecDss` command reads time series from a HEC-DSS file.
 See the [HEC-DSS Input Type Appendix](../../datastore-ref/HEC-DSS/HEC-DSS.md) for information
 about how time series properties are assigned using HEC-DSS file data.
 Current limitations for the command include:
 
-* Irregular time series cannot be read.
-* HEC-DSS uses times through `2400`.
-However, TSTool will convert this to `0000` of the next day.  Year, month, and day data are not impacted.
+*   Irregular time series cannot be read.
+*   HEC-DSS uses times through `2400`.
+    However, TSTool will convert this to `0000` of the next day.  Year, month, and day data are not impacted.
 
 ## Command Editor ##
 
@@ -47,7 +44,7 @@ ReadHecDss(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`InputFile`<br>**required**|The name of the HEC-DSS input file to read, surrounded by double quotes to protect whitespace and special characters.  Can be specified with `${Property}` notation.|None – must be specified.|
 |`A`|The A part (basin name) to match, using `*` as a wildcard.  The location type part of the TSTool time series identifier is set to this value.  Can be specified with `${Property}` notation.|Match all.|
@@ -60,6 +57,7 @@ Command Parameters
 |`InputEnd`|Ending date/time to read data, in precision consistent with data.  Can be specified with `${Property}` notation.|Read all data.|
 |`Location`|The location to assign for the time series identifier.  Use `%A`...`%F` to indicate the `A`part ... `F` part (`D` part is not available).  The assignment will impact the Alias assignment.  This is useful when only `B` part is desired as the location identifier.  Can be specified with `${Property}` notation.|Apart:Bpart (`%A:%B`).|
 |`Alias`|Alias to assign to the output time series.  See the `LegendFormat` property described in the [TSView Time Series Viewing Tools appendix](../../appendix-tsview/tsview.md).  For example, `%L` is full location, `%T` is data type (parameter in HEC-DSS notation), `%I` is interval, and `%Z` is scenario.  Can be specified with `${Property}` notation.|None is assigned.  However, if the location contains periods that are in conflict with time series identifier conventions, the alias is set to the identifier with periods, and the periods are replaced with spaces in the full time series identifier.|
+|`CloseAfterRead` | Close the file after reading.  This is useful because the underlying HEC-DSS software can lock files, which prevents some commands such as [`CopyFile`](../CopyFile/CopyFile.md) from working. Specify as `False` or `True`. | `False` |
 
 ## Examples ##
 

@@ -1,6 +1,5 @@
 # TSTool / Release Notes / Version 14 #
 
-* [Known Limitations](#known-limitations)
 * [Changes in Version 14.4.0](#changes-in-version-1440)
 * [Changes in Version 14.3.0](#changes-in-version-1430)
 * [Changes in Version 14.2.2](#changes-in-version-1422)
@@ -18,12 +17,6 @@
 * [Release notes for all versions](release-notes.md)
 
 ----------
-
-## Known Limitations
-
-*   ![limitation](limitation.png) [14.0.0+] Features that were previously available for reading and writing HEC-DSS files are
-    not fully functional, pending additional updates.
-    Additional resources are needed to update the software to use 64-bit libraries for HEC-DSS.
 
 ## Changes in Version 14.4.0 ##
 
@@ -44,6 +37,11 @@
     to allow for multiple candidate difference programs to be specified, and handle in the
     main program and the [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command.
     The default configuration file has been updated to handle multiple KDiff3 installation folders.
+*   ![bug](bug.png) [14.4.0] Fix the HEC-DSS features:
+    +   [`ReadHecDss`](../command-ref/ReadHecDss/ReadHecDss.md) and the [`WriteHecDss`](../command-ref/WriteHecDss/WriteHecDss.md) commands
+        and interactive browsing had been broken since TSTool was updated to 64-bit architecture.
+    +   Update the [`ReadHecDss`](../command-ref/ReadHecDss/ReadHecDss.md) command to have `CloseAfterRead` parameter
+        to help with file locking.
 *   ![bug](bug.png) [14.4.0] Fix the [`CompareTables`](../command-ref/CompareTables/CompareTables.md) command
     to detect tables of different lengh (previously the number of rows in the first table controlled the comparison)
 *   ![change](change.png) [14.4.0] The
