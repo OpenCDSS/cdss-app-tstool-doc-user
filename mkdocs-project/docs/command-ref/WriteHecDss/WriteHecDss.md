@@ -11,31 +11,28 @@
 
 ## Overview ##
 
-**The `WriteHecDSS` command is disabled for TSTool 14.0.0 and newer
-because TSTool needs to be updated to use 64-bit HEC-DSS software libraries.**
-
 The `WriteHecDss` command writes time series to a HEC-DSS file.
 See the [HEC-DSS Input Type Appendix](../../datastore-ref/HEC-DSS/HEC-DSS.md)
 for information about how time series properties are output to HEC-DSS files.
 Current limitations of the command are:
 
-* Irregular time series are not supported – the focus of initial development has been regular interval time series.
-* 24-hour time series in TSTool cannot be written to HEC-DSS because HEC-DSS only supports 1DAY interval.
-Therefore, the time series must be converted to a daily time series before writing.
-An option to convert 24-hour values to 1DAY may be added to this command in the future.
-* HEC-DSS uses times through 2400.  TSTool will convert this to 0000 of the next day.
-Year, month, and day data are not impacted.  The internal TSTool values will be converted to hour 2400 when writing.
-Therefore, reading from a HEC-DSS file and then writing should result in no change in data.
-* Time series that are written overwrite existing time series, but only for the period that is written.
-Therefore, previously written values may remain, even if not appropriate.
-A future enhancement will allow the option of removing the old data before writing new data.
-The work-around is to write a period that is sufficiently long to guarantee
-that old data values do not remain in the file, or clear the file out with another tool such as DSSUTL before writing.
-* Currently the connections to the HEC-DSS file may remain open after the write,
-in order to minimize performance degradation for multiple write commands.
-However, this will lock the HEC-DSS file so that other commands or programs cannot perform file manipulation, such as removing the file.
-The connections will automatically time out after several minutes.
-A future enhancement will ensure that the file connections can be closed.  See the Close command parameter.
+*   Irregular time series are not supported – the focus of initial development has been regular interval time series.
+*   24-hour time series in TSTool cannot be written to HEC-DSS because HEC-DSS only supports 1DAY interval.
+    Therefore, the time series must be converted to a daily time series before writing.
+    An option to convert 24-hour values to 1DAY may be added to this command in the future.
+*   HEC-DSS uses times through 2400.  TSTool will convert this to 0000 of the next day.
+    Year, month, and day data are not impacted.  The internal TSTool values will be converted to hour 2400 when writing.
+    Therefore, reading from a HEC-DSS file and then writing should result in no change in data.
+*   Time series that are written overwrite existing time series, but only for the period that is written.
+    Therefore, previously written values may remain, even if not appropriate.
+    A future enhancement will allow the option of removing the old data before writing new data.
+    The work-around is to write a period that is sufficiently long to guarantee
+    that old data values do not remain in the file, or clear the file out with another tool such as DSSUTL before writing.
+*   Currently the connections to the HEC-DSS file may remain open after the write,
+    in order to minimize performance degradation for multiple write commands.
+    However, this will lock the HEC-DSS file so that other commands or programs cannot perform file manipulation, such as removing the file.
+    The connections will automatically time out after several minutes.
+    A future enhancement will ensure that the file connections can be closed.  See the Close command parameter.
 
 The A-F parts of the HEC-DSS time series pathname by default are taken from the time series properties, as follows:
 
