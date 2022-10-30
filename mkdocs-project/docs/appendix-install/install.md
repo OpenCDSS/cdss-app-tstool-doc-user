@@ -176,7 +176,7 @@ The following sections describe installation in various environments.
 
 Use the following instructions to install TSTool on Windows using the `TSTool_CDSS_Version_Setup.exe` installer program,
 for example if TSTool software was downloaded from the [CDSS website](https://www.colorado.gov/pacific/cdss/tstool)
-or [OpenCDSS website](http://opencdss.state.co.us/tstool/):
+or [OpenCDSS website](https://opencdss.state.co.us/tstool/):
 
 #### 1. Run the `TSTool_CDSS_Version_Setup.exe` file by selecting from Windows Explorer, the ***Start / Run /***  menu, or from a command shell. ####
 
@@ -486,8 +486,8 @@ DiffProgram.Linux = "/usr/bin/kdiff3"
 # - the second is a backup and allows transition from one server to another
 # - the documentation viewer will first try using the specific software version rather than 'latest'
 #   and if not found will use 'latest'
-UserDocumentationUri = "http://opencdss.state.co.us/tstool/latest/doc-user/"
-UserDocumentationUri2 = "http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/"
+UserDocumentationUri = "https://opencdss.state.co.us/tstool/latest/doc-user/"
+UserDocumentationUri2 = "https://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/"
 ```
 **<p style="text-align: center;">
 Example TSTool Installation Configuration File

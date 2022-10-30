@@ -15,11 +15,11 @@ The `WriteTableToGeoJSON` command writes a table to a GeoJSON file,
 which is a spatial data format that can be viewed in geographic information system (GIS) software and other visualization tools.  See:
 
 * [GeoJSON RFC7946 Specification](https://tools.ietf.org/html/rfc7946) - use `Version=RFC7946` parameter, which is the default if not specified
-* [GeoJSON 1.0 Specification](http://geojson.org/geojson-spec.html) - use `Version=1.0` parameter
+* [GeoJSON 1.0 Specification](https://geojson.org/geojson-spec.html) - use `Version=1.0` parameter
 
 The table must include columns for longitude and latitude or a column containing Well Known Text (WKT) geometry strings.  See:
 
-* [Well-known Text on WikiPedia](http://en.wikipedia.org/wiki/Well-known_text)
+* [Well-known Text on WikiPedia](https://en.wikipedia.org/wiki/Well-known_text)
 
 Currently only point and polygon data can be processed but in the future support
 for well-known text for other geometry types will be added.
@@ -120,7 +120,7 @@ Command Parameters
 |`CoordinatePrecision`|The number of digits to output after the decimal, for coordinates and bounding box.|Precision is based on each data value.|
 |`ElevationColumn`|The name of the table column that contains elevation.  Can be specified using `${Property}` notation.|Elevation is omitted.|
 |`WKTGeometryColumn`|The name of the table column that contains Well Known Text (WKT) geometry strings.  Can be specified using `${Property}` notation.||
-|`CRSText`|**Only used if `Version` is `1.0`** - Full text to define the coordinate reference system using the `crs` GeoJSON property.  The text will be inserted at the top level of the GeoJSON.  This should be used when other than geographic coordinates are used.  For more information, see:<br><ul><li>[GeoJSON CRS specification](http://geojson.org/geojson-spec.html#named-crs)</li><li>[Spatial Reference System](https://en.wikipedia.org/wiki/Spatial_reference_system)</li><li>[spatialreference.org](http://spatialreference.org/)|No `crs` property is included which means that GeoJSON defaults to `WGS84` (Version 1.0 default was `EPSG:4326`, geographic).|
+|`CRSText`|**Only used if `Version` is `1.0`** - Full text to define the coordinate reference system using the `crs` GeoJSON property.  The text will be inserted at the top level of the GeoJSON.  This should be used when other than geographic coordinates are used.  For more information, see:<br><ul><li>[GeoJSON CRS specification](https://geojson.org/geojson-spec.html#named-crs)</li><li>[Spatial Reference System](https://en.wikipedia.org/wiki/Spatial_reference_system)</li><li>[spatialreference.org](https://spatialreference.org/)|No `crs` property is included which means that GeoJSON defaults to `WGS84` (Version 1.0 default was `EPSG:4326`, geographic).|
 |`IncludeBBox`|Indicate whether to include bbox GeoJSON property for the full layer.|`True`|
 |`IncludeFeatureBBox`|Indicate whether to include `bbox` GeoJSON property for each feature.|`True`|
 |`IncludeColumns`|List of comma-separated table column names to include as feature properties.  Can be specified using ${Property} notation.|Include all columns.|

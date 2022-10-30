@@ -28,7 +28,7 @@ This appendix provides a summary of the syntax as a guide for users and future s
 Syntax standards listed here should be used where possible to ensure consistency in software features.
 
 Where appropriate, notation has been selected based on other efforts.
-For example, date/time formatting is patterned after the [C language strftime() function](http://man7.org/linux/man-pages/man3/strftime.3.html),
+For example, date/time formatting is patterned after the [C language strftime() function](https://man7.org/linux/man-pages/man3/strftime.3.html),
 which has been available for over 30 years.
 In cases where notation is specific to TSTool,
 an attempt has been made to consider common notation standards that can be adapted for TSTool.
@@ -168,18 +168,18 @@ Time series properties are used by some commands to control the command function
 For example, many commands that create time series allow the alias to be assigned using time series properties.
 The following notation is used when dealing with time series properties:
 
-* `%` formatting – Many commands that create time series allow the Alias
-or other parameters to be assigned using % formatters.
-For example, `Alias=”%L”` indicates that the time series alias should be
-assigned to the location part of the time series identifier,
-which for a read command is controlled by the rules of the command.
-Format specifiers are provided for fundamental time series data properties
-that are required for each time series (units, location, data type, etc.).
-* `ts:Property` reference – Some command parameters need to specify a time
-series property by reference but the above formatting notation is inappropriate.
-In this case, the following design is being phased in (under development):
-	+ `ts:PropertyName`
-	+ `${ts:PropertyName}`
+*   `%` formatting – Many commands that create time series allow the Alias
+    or other parameters to be assigned using % formatters.
+    For example, `Alias=”%L”` indicates that the time series alias should be
+    assigned to the location part of the time series identifier,
+    which for a read command is controlled by the rules of the command.
+    Format specifiers are provided for fundamental time series data properties
+    that are required for each time series (units, location, data type, etc.).
+*   `ts:Property` reference – Some command parameters need to specify a time
+    series property by reference but the above formatting notation is inappropriate.
+    In this case, the following design is being phased in (under development):
+    +   `ts:PropertyName`
+    +   `${ts:PropertyName}`
 The latter notation allows a time series property to be specified using a notation similar to processor properties,
 but the `ts:` prefix differentiates the property from the more generic processor notation.
 
@@ -243,28 +243,28 @@ It may be desirable or necessary to specify the format of date/times,
 for example to indicate the format for output or parsing.
 When this is necessary, the notation utilizes an optional format type prefix and the format itself, as follows:
 
-* The default is to parse the date/time string by matching ISO or other common
-formats (this works most of the time).  The default output format is the ISO format.
-* `C:%m%d%y` – Indicates that a C-style format is being used, where the formats match the
-UNIX [strftime() function](http://man7.org/linux/man-pages/man1/date.1.html) syntax.
-See the [`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty.md) command documentation.
-* In the future support for Microsoft Excel or other notation may be added (e.g., `MM-YYYY`).
+*   The default is to parse the date/time string by matching ISO or other common
+    formats (this works most of the time).  The default output format is the ISO format.
+*   `C:%m%d%y` – Indicates that a C-style format is being used, where the formats match the
+    UNIX [strftime() function](https://man7.org/linux/man-pages/man1/date.1.html) syntax.
+    See the [`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty.md) command documentation.
+*   In the future support for Microsoft Excel or other notation may be added (e.g., `MM-YYYY`).
 
 ## Regular Expression - Notation ##
 
 Regular expressions are strings that indicate how to match patterns,
 for example to match file names or time series identifiers
-(see: [regular expressions on WikiPedia](http://en.wikipedia.org/wiki/Regular_expression)).
+(see: [regular expressions on WikiPedia](https://en.wikipedia.org/wiki/Regular_expression)).
 Many software tools and programming languages implement regular
 expressions to facilitate efficient data processing;
 however, the notation can be confusing, especially if not used on a regular basis.
 Within TSTool the following regular expression notations are used:
 
-* “globbing” – This notation was popularized by UNIX and in simple terms relies on the
-`*` character to indicate “match zero or more characters”.
- For example, it can be used to match a list of comma-separated-value files using the expression `*.csv`.
-* Regular expression syntax – True regular expression syntax provides much more power than globbing notation,
-but also introduces complexity in notation.  TSTool is written in Java and internally relies on Java’s regular expression syntax.
+*   “globbing” – This notation was popularized by UNIX and in simple terms relies on the
+    `*` character to indicate “match zero or more characters”.
+     For example, it can be used to match a list of comma-separated-value files using the expression `*.csv`.
+*   Regular expression syntax – True regular expression syntax provides much more power than globbing notation,
+    but also introduces complexity in notation.  TSTool is written in Java and internally relies on Java’s regular expression syntax.
 
 In most cases, TSTool commands and configuration files use the simpler globbing notation
 because it is easier to use and explain.

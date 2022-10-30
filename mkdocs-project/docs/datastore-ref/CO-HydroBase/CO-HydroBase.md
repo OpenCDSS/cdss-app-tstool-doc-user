@@ -1,15 +1,15 @@
 # TSTool / Datastore Reference / Colorado HydroBase #
 
-* [Overview](#overview)
+*   [Overview](#overview)
     + [Installing HydroBase](#installing-hydrobase)
     + [Database Contents](#database-contents)
     + [Database Connections](#database-connections)
     + [Versioning](#versioning)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [Datastore Configuration File](#datastore-configuration-file)
-* [Troubleshooting](#troubleshooting)
-* [Available Time Series by Data Type Categories](#available-time-series-by-data-type-categories)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [Datastore Configuration File](#datastore-configuration-file)
+*   [Troubleshooting](#troubleshooting)
+*   [Available Time Series by Data Type Categories](#available-time-series-by-data-type-categories)
     + [Agricultural Crop and Livestock Data](#agricultural-crop-and-livestock-data)
     + [Climate Data](#climate-data)
     + [Demographic Data](#demographic-data)
@@ -19,8 +19,8 @@
     + [Stream Data](#stream-data)
     + [Water Information Sheet Data](#water-information-sheet-data)
     + [Well Data](#well-data)
-* [Database Views](#database-views)
-* [Database Stored Procedures](#database-stored-procedures)
+*   [Database Views](#database-views)
+*   [Database Stored Procedures](#database-stored-procedures)
 
 ------------
 
@@ -35,22 +35,22 @@ HydroBase is distributed as a SQL Server Express database.
 See the following links for the database installer, archive of the databases,
 and other useful information.
 
-* [OpenCDSS HydroBase Product](http://opencdss.state.co.us/opencdss/hydrobase/index.html) web page
-* [HydroBase Installation Instructions](https://opencdss.state.co.us/hydrobase/index.html)
-* [HydroBase Installer download link](https://dnrftp.state.co.us/DWR/Modeling/HydroBase/CDSSLocalHydroBase_Installer.zip), which includes:
-    + SQL Server Express
-    + HydroBase Database Manager (used to attach downloaded HydroBase databases to SQL Server database software) - the
-      program installs by default as
-      `C:\Program Files (x86)\Division of Water Resources\HydroBase Database Manager\HydroBaseMaintenanceUtility.exe`
-      and can be run to attach downloaded HydroBase databases to SQL Server Express
-    + current CDSS version of TSTool
-    + does not include HydroBase snapshot - see below to download snapshots
-* [HydroBase snapshots](https://dnrftp.state.co.us/DWR/Modeling/HydroBase/)
-    + run the HydroBase Database Manager to attach the downloaded database
-    + a recent snapshot should typically be used since it contains the most up to date data
-    + older versions are useful for software testing
-    + datastores can be defined to connect to multiple databases at the same time
-* See the TSTool [Troubleshooting](../../troubleshooting/troubleshooting.md) documentation if HydroBase issues occur.
+*   [OpenCDSS HydroBase Product](https://opencdss.state.co.us/opencdss/hydrobase/) web page
+*   [HydroBase Installation Instructions](https://opencdss.state.co.us/opencdss/hydrobase/#user-documentation)
+*   [HydroBase Installer download link - **this starts a download**](https://dnrftp.state.co.us/DWR/Modeling/HydroBase/CDSSLocalHydroBase_Installer.zip), which includes:
+    +   SQL Server Express
+    +   HydroBase Database Manager (used to attach downloaded HydroBase databases to SQL Server database software) - the
+        program installs by default as
+        `C:\Program Files (x86)\Division of Water Resources\HydroBase Database Manager\HydroBaseMaintenanceUtility.exe`
+        and can be run to attach downloaded HydroBase databases to SQL Server Express
+    +   current CDSS version of TSTool
+    +   does not include HydroBase snapshot - see below to download snapshots
+*   [HydroBase snapshots](https://dnrftp.state.co.us/DWR/Modeling/HydroBase/)
+    +   run the HydroBase Database Manager to attach the downloaded database
+    +   a recent snapshot should typically be used since it contains the most up to date data
+    +   older versions are useful for software testing
+    +   datastores can be defined to connect to multiple databases at the same time
+*   See the TSTool [Troubleshooting](../../troubleshooting/troubleshooting.md) documentation if HydroBase issues occur.
 
 ### Database Contents ###
 
@@ -61,21 +61,21 @@ This allows for consistent features and sharing of data between software tools.
 
 The current database design splits time series into three main categories:
 
-1. **Data related to structures or administrative data** maintained by the State of Colorado (e.g., diversions, reservoirs).
-Structure locations are typically identified using a water district identifier (WDID),
-consisting of a two-digit State of Colorado water district number
-and a trailing structure identifier (which in the past was four digits
-but has been increased to five or more digits to support longer identifiers).
-Although a single WDID identifier is used when identifying time series,
-the separate WD and ID fields are generally also available in HydroBase.
-2. **Data for stations**, consisting mainly of location information and time series (e.g.,
-NOAA precipitation data, USGS streamflow).
-Station locations are typically identified using a station identifier from the data source.
-For example, stations can use a USGS identifier,
-a State of Colorado Satellite Monitoring System abbreviation, or other identifier.
-3. **Data recorded at locations that are not stations or structures**.
-For example, well permits that do not have WDID identifiers and county data such as
-agricultural statistics.
+1.  **Data related to structures or administrative data** maintained by the State of Colorado (e.g., diversions, reservoirs).
+    Structure locations are typically identified using a water district identifier (WDID),
+    consisting of a two-digit State of Colorado water district number
+    and a trailing structure identifier (which in the past was four digits
+    but has been increased to five or more digits to support longer identifiers).
+    Although a single WDID identifier is used when identifying time series,
+    the separate WD and ID fields are generally also available in HydroBase.
+2.  **Data for stations**, consisting mainly of location information and time series (e.g.,
+    NOAA precipitation data, USGS streamflow).
+    Station locations are typically identified using a station identifier from the data source.
+    For example, stations can use a USGS identifier,
+    a State of Colorado Satellite Monitoring System abbreviation, or other identifier.
+3.  **Data recorded at locations that are not stations or structures**.
+    For example, well permits that do not have WDID identifiers and county data such as
+    agricultural statistics.
 
 A structure or station may have more than one identifier depending on the number of agencies
 involved with data collection, etc.
@@ -110,19 +110,19 @@ Some issues remain before moving completely to the datastore concept and consequ
 the configuration of a HydroBase datastore is an optional feature that is not enabled by default.
 To enable, it is recommended to:
 
-1. Copy the installation datastore configuration file (`C:/CDSS/TSTool-NN.NN.NN/datastores/HydroBase.cfg`) to
-user datastore configuration file (`C:/Users/user/.tstool/NN/datastores/HydroBase.cfg`).
-The configuration file distributed with the software uses `Enabled=False` so it will not result in a database connection.
-This only needs to be done for each major TSTool version (first number in version).
-2. In the user configuration file (`C:/Users/user/.tstool/NN/datastores/HydroBase.cfg`):
-    1. Comment out the `Enabled=False` property or change to `Enabled=True`.
-    2. Edit the `DatabaseName=HydroBase_CO_YYYYMMDD` property to match the HydroBase version that has been installed with
-       HydroBase Database Manager tool.
-       The connection to this database will be made automatically when TSTool starts.
-       If the configuration is incorrect, see ***View / Datastores*** for troubleshooting information.
-       This connection is independent of the HydroBase selector dialog shown at startup.
-       Use the HydroBase selector to list HydroBase names that are available.
-       See also the [Datastore Configuration File](#datastore-configuration-file) section.
+1.  Copy the installation datastore configuration file (`C:/CDSS/TSTool-NN.NN.NN/datastores/HydroBase.cfg`) to
+    user datastore configuration file (`C:/Users/user/.tstool/NN/datastores/HydroBase.cfg`).
+    The configuration file distributed with the software uses `Enabled=False` so it will not result in a database connection.
+    This only needs to be done for each major TSTool version (first number in version).
+2.  In the user configuration file (`C:/Users/user/.tstool/NN/datastores/HydroBase.cfg`):
+    1.  Comment out the `Enabled=False` property or change to `Enabled=True`.
+    2.  Edit the `DatabaseName=HydroBase_CO_YYYYMMDD` property to match the HydroBase version that has been installed with
+        HydroBase Database Manager tool.
+        The connection to this database will be made automatically when TSTool starts.
+        If the configuration is incorrect, see ***View / Datastores*** for troubleshooting information.
+        This connection is independent of the HydroBase selector dialog shown at startup.
+        Use the HydroBase selector to list HydroBase names that are available.
+        See also the [Datastore Configuration File](#datastore-configuration-file) section.
 
 The database selected with the HydroBase selector when TSTool starts results
 in a separate database connection using the `cdss` login (HydroBase logins are explained below) and is listed as an ***Input type***.
@@ -137,16 +137,16 @@ login dialog and implement best practices for naming datastores when dealing wit
 
 The HydroBase database contains stored procedures and views suitable for the following users (accounts):
 
-* **CDSS user** (SQL Server login `cdss`, password `cdss%tools`) - is a service account that exposes
-HydroBase data through stored procedures and views appropriate for decision support system projects.
-HydroBase CDSS view names have the prefix `vw_CDSS` (e.g., structures are in a view or table `vw_CDSS_Structure`).
-This is the default account when using the HydroBase datastore.
-* **HBGuest user** (SQL Server login `HBGuest`, password `1HBGuest`) - 
-is a read-only service account that exposes HydroBase data through stored procedures
-and views appropriate for general database users.
-HydroBase HBGuest view names do not have the prefix `vw_CDSS` (e.g., structures are in a view or table `structure`).
-See the [HBGuest User Manual](http://www.dwr.state.co.us/HBGuest/Documents/ColoradoHBGuestWebService.pdf)
-for an overview of HBGuest configuration and database access.
+*   **CDSS user** (SQL Server login `cdss`, password `cdss%tools`) - is a service account that exposes
+    HydroBase data through stored procedures and views appropriate for decision support system projects.
+    HydroBase CDSS view names have the prefix `vw_CDSS` (e.g., structures are in a view or table `vw_CDSS_Structure`).
+    This is the default account when using the HydroBase datastore.
+*   **HBGuest user** (SQL Server login `HBGuest`, password `1HBGuest`) - 
+    is a read-only service account that exposes HydroBase data through stored procedures
+    and views appropriate for general database users.
+    HydroBase HBGuest view names do not have the prefix `vw_CDSS` (e.g., structures are in a view or table `structure`).
+    See the HBGuest User Manual (no longer available online?)
+    for an overview of HBGuest configuration and database access.
 
 A general rule of thumb is that the CDSS account should be used for full TSTool functionality;
 however, the HBGuest account can be used to query views that are not available via the
@@ -157,29 +157,29 @@ TSTool connections for the above HydroBase accounts can be figured in several wa
 Refer to the recommended approach at the top of this section and details in the
 [Datastore Configuration File](#datastore-configuration-file) section.
 
-* CDSS user:
-    + Configure as the HydroBase “input type”.
-      This is the default legacy behavior when HydroBase is enabled,
-      and relies on the user selecting a HydroBase database via the HydroBase selection dialog.
-      This approach may be phased out in the future in favor of the more generic datastore approach.
-    + Configure a HydroBase CDSS datastore using a HydroBase datastore configuration file.
-      If the datastore name is configured as “HydroBase”,
-      this connection will supersede the “input type” when encountered in time series identifiers.
-      The account will default to the CDSS service account.
-      An example configuration file is shown in the [Datastore Configuration File](#datastore-configuration-file) section below.
-    + Configure a HydroBase CDSS datastore using a configuration file with an ODBC DSN.
-      In this case, the ODBC DSN must be configured using a SQL Server driver
-      with login `cdss` and password `cdss%tools`.
-      An example configuration file is shown in the [Datastore Configuration File](#datastore-configuration-file) section below.
-* HBGuest user:
-    + Configure a Generic Database datastore using a HydroBase datastore configuration file.
-      See the [Datastore Configuration File](#datastore-configuration-file) section below).
-      This approach may be needed if the ODBC DSN configuration (next item) results in errors,
-      and the text configuration file may be more transparent than the ODBC DSN.
-    + Configure a HydroBase datastore using a configuration file with an ODBC DSN.
-      In this case, the ODBC DSN must be configured using a SQL Server
-      driver with login HBGuest and password 1HBGuest.
-      See the example for the CDSS account in the [Datastore Configuration File](#datastore-configuration-file) section below.
+*   CDSS user:
+    +   Configure as the HydroBase “input type”.
+        This is the default legacy behavior when HydroBase is enabled,
+        and relies on the user selecting a HydroBase database via the HydroBase selection dialog.
+        This approach may be phased out in the future in favor of the more generic datastore approach.
+    +   Configure a HydroBase CDSS datastore using a HydroBase datastore configuration file.
+        If the datastore name is configured as “HydroBase”,
+        this connection will supersede the “input type” when encountered in time series identifiers.
+        The account will default to the CDSS service account.
+        An example configuration file is shown in the [Datastore Configuration File](#datastore-configuration-file) section below.
+    +   Configure a HydroBase CDSS datastore using a configuration file with an ODBC DSN.
+        In this case, the ODBC DSN must be configured using a SQL Server driver
+        with login `cdss` and password `cdss%tools`.
+        An example configuration file is shown in the [Datastore Configuration File](#datastore-configuration-file) section below.
+*   HBGuest user:
+    +   Configure a Generic Database datastore using a HydroBase datastore configuration file.
+        See the [Datastore Configuration File](#datastore-configuration-file) section below).
+        This approach may be needed if the ODBC DSN configuration (next item) results in errors,
+        and the text configuration file may be more transparent than the ODBC DSN.
+    +   Configure a HydroBase datastore using a configuration file with an ODBC DSN.
+        In this case, the ODBC DSN must be configured using a SQL Server
+        driver with login HBGuest and password 1HBGuest.
+        See the example for the CDSS account in the [Datastore Configuration File](#datastore-configuration-file) section below.
 
 ### Versioning ###
 
@@ -206,59 +206,59 @@ Location.DataSource.DataType.Interval~DataStoreName
 Due to the variety of data types, sources, and formats in HydroBase,
 time series properties can be set a number of ways.   General guidelines are as follows:
 
-* The location part of the time series identifier is set to a station or structure identifier,
-  which is typically the identifier used by the managing agency.
-  For example, USGS stream gages use the 8-digit USGS identifier and State of Colorado diversions
-  use a 7-character zero-padded structure WDID (water district identifier).
-  Wells often use the latitude and longitude merged together (see additional comments in the wells section).
-* The source part of the time series identifier corresponds to a data provider abbreviation.
-  For example, if the current provider for a time series is the USGS, then the data source will be USGS.
-  If the State of Colorado has at some point taken over maintenance of a station from the USGS,
-  then the data source will be DWR.  Individual data records may indicate a variety of data sources.
-  The convention in HydroBase is to store the data records under the current data source,
-  rather than force the user to query more than one time series and merge the time series.
-  If, however, a station has moved, then separate time series typically will be available,
-  likely under different identifiers.
-  For this reason, the location of the station or structure is important in understanding historical records.
-* The data type part of the time series identifier as much as possible uses the
-  “measurement type” information in HydroBase or a readable and reasonable data type phrase.
-  For example `Precip` is a measurement type for station data and `DivTotal` (diversion total)
-  is a measurement type for diversion data.
-  In some cases, especially with real-time data, the data type may not exactly match HydroBase.
-  For example, HydroBase uses a measurement type `RT_Rate` for multiple stream related data types.
-  TSTool uses a data type of Streamflow.
-  The tables at the end of this appendix describe all available HydroBase
-  data types and provides guidance for upgrading from old data types.
-* Data intervals are set based on the tables that are being queried.
-  In most cases, a regular interval like `Day` or `Month` is used.
-  `Irregular` is used for real-time data because there currently is no way to know
-  without doubt what the regular data interval is (e.g., `15MIN`).
-  Data that are measured infrequently (e.g., reservoir field measurements)
-  typically are stored as a regular interval time series with interval `Day`.
-  This allows more flexibility in data processing and filling.
-* In older versions of TSTool, the scenario part of the identifier (after the interval)
-  was sometimes used to supplement the data type information.
-  For example, real-time flow data in the database has a number of attributes (`Streamflow`, `RT_Rate`, `DISCHRG`)
-  that cannot easily fit into the standard time series identifier.
-  The current version of TSTool uses `datatype-subdatatype` where necessary and generally
-  does not use the scenario for normal time series identifiers (WIS time series are an exception)
-  and this field is being reserved to possibly indicate historical data, filled data, etc.
-* Units are set based on the database table definitions.
-* Period of record is set based on the available database contents.
-  Periods displayed when listing stations and time series typically are not
-  determined by checking the data because this would require querying large amounts of data.
-  Instead, periods are determined from summary information available in the database.
-  In some cases, the period of record information is not saved at a precision sufficient to
-  accurately represent the true period (e.g., the database may indicate data for years but not months).
-  Therefore, the true period will only be available when time series data values are queried.
-* Missing data typically are set to `-999` in time series but are stored as nulls in the database.
-  TSTool does allow `NaN` (not a number) to be used but `-999` continues to be used to match legacy conventions.
-* The input type of the time series identifier is set to the datastore name,
-  which typically is HydroBase for a default connection.
-  If multiple HydroBase connections are needed,
-  the datastore configuration information is used to assign an appropriate name.
-* The time scale for data (whether accumulated [`ACCM`], instantaneous [`INST`], or mean [`MEAN`])
-  is not automatically determined from the data type and interval but must be understood from the data type.
+*   The location part of the time series identifier is set to a station or structure identifier,
+    which is typically the identifier used by the managing agency.
+    For example, USGS stream gages use the 8-digit USGS identifier and State of Colorado diversions
+    use a 7-character zero-padded structure WDID (water district identifier).
+    Wells often use the latitude and longitude merged together (see additional comments in the wells section).
+*   The source part of the time series identifier corresponds to a data provider abbreviation.
+    For example, if the current provider for a time series is the USGS, then the data source will be USGS.
+    If the State of Colorado has at some point taken over maintenance of a station from the USGS,
+    then the data source will be DWR.  Individual data records may indicate a variety of data sources.
+    The convention in HydroBase is to store the data records under the current data source,
+    rather than force the user to query more than one time series and merge the time series.
+    If, however, a station has moved, then separate time series typically will be available,
+    likely under different identifiers.
+    For this reason, the location of the station or structure is important in understanding historical records.
+*   The data type part of the time series identifier as much as possible uses the
+    “measurement type” information in HydroBase or a readable and reasonable data type phrase.
+    For example `Precip` is a measurement type for station data and `DivTotal` (diversion total)
+    is a measurement type for diversion data.
+    In some cases, especially with real-time data, the data type may not exactly match HydroBase.
+    For example, HydroBase uses a measurement type `RT_Rate` for multiple stream related data types.
+    TSTool uses a data type of Streamflow.
+    The tables at the end of this appendix describe all available HydroBase
+    data types and provides guidance for upgrading from old data types.
+*   Data intervals are set based on the tables that are being queried.
+    In most cases, a regular interval like `Day` or `Month` is used.
+    `Irregular` is used for real-time data because there currently is no way to know
+    without doubt what the regular data interval is (e.g., `15MIN`).
+    Data that are measured infrequently (e.g., reservoir field measurements)
+    typically are stored as a regular interval time series with interval `Day`.
+    This allows more flexibility in data processing and filling.
+*   In older versions of TSTool, the scenario part of the identifier (after the interval)
+    was sometimes used to supplement the data type information.
+    For example, real-time flow data in the database has a number of attributes (`Streamflow`, `RT_Rate`, `DISCHRG`)
+    that cannot easily fit into the standard time series identifier.
+    The current version of TSTool uses `datatype-subdatatype` where necessary and generally
+    does not use the scenario for normal time series identifiers (WIS time series are an exception)
+    and this field is being reserved to possibly indicate historical data, filled data, etc.
+*   Units are set based on the database table definitions.
+*   Period of record is set based on the available database contents.
+    Periods displayed when listing stations and time series typically are not
+    determined by checking the data because this would require querying large amounts of data.
+    Instead, periods are determined from summary information available in the database.
+    In some cases, the period of record information is not saved at a precision sufficient to
+    accurately represent the true period (e.g., the database may indicate data for years but not months).
+    Therefore, the true period will only be available when time series data values are queried.
+*   Missing data typically are set to `-999` in time series but are stored as nulls in the database.
+    TSTool does allow `NaN` (not a number) to be used but `-999` continues to be used to match legacy conventions.
+*   The input type of the time series identifier is set to the datastore name,
+    which typically is HydroBase for a default connection.
+    If multiple HydroBase connections are needed,
+    the datastore configuration information is used to assign an appropriate name.
+*   The time scale for data (whether accumulated [`ACCM`], instantaneous [`INST`], or mean [`MEAN`])
+    is not automatically determined from the data type and interval but must be understood from the data type.
 
 Diversion data may be retrieved from several tables in HydroBase,
 including daily and monthly detailed records, infrequent values, diversion comments, and currently in use values.
@@ -268,37 +268,37 @@ command provides several options for handling data and the
 command can be used to fill with additional zero values.
 When using time series identifiers to read time series, the following defaults are used:
 
-* Daily `DivClass` and `DivTotal` time series are filled using the carry-forward
-  technique implemented by the State of Colorado.  Missing irrigation years remain missing.
-  Years with data are filled with zeros at the start and values are carried
-  forward until another observation is found, or to the end of the irrigation year.
-* Diversion comments and “currently in use” flag are NOT automatically applied.
-  This default may change in the future but is retained for historical data processing reasons.
+*   Daily `DivClass` and `DivTotal` time series are filled using the carry-forward
+    technique implemented by the State of Colorado.  Missing irrigation years remain missing.
+    Years with data are filled with zeros at the start and values are carried
+    forward until another observation is found, or to the end of the irrigation year.
+*   Diversion comments and “currently in use” flag are NOT automatically applied.
+    This default may change in the future but is retained for historical data processing reasons.
 
 ## Limitations ##
 
 HydroBase has the following limitations related to time series storage:
 
-* The station and structure measurement types and time series tables defined in HydroBase
-  do not always allow information to be determined from database records.
-  Instead, some time series properties must be hard-coded based on the table design.
-  For example, the `meas_type` table has a `MeanTemp`, `MaxTemp`, `MinTemp` types defined,
-  but these refer primarily to the separate daily tables for such data.
-  The `monthly_temp` table includes `avg_max_t`, `avg_min_t`, and `mean_t` columns
-  that do not correspond one-to-one with `meas_type` values.
-  Therefore, applications like TSTool use data types that are not specifically defined as strings in HydroBase,
-  which have consequently been hard-coded.  This is an issue with station and structure time series.
-* Real-time data types in HydroBase do not directly translate to time series data types used in TSTool.
-  An effort has been made to be as consistent as possible while using data types that can be understood by users.
-  **As of TSTool 14.2.1, real-time data are no longer available from this datastore.
-  Use the [ColoradoHydroBaseRest](../ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) web service datastore.**
-* Data units are not defined consistently in tables.
-  Some tables have a units string and others do not and the units abbreviations are
-  not always consistent (units of `A` are often used for acre-feet and `C` for `CFS`).
-  A master units table is not used in HydroBase to enforce data units consistency throughout the database.
-* The time scale for time series (whether accumulated, instantaneous, or mean)
-  is not automatically determined from the data type and interval.
-  Users much understand how to interpret the data, in particular when changing the data interval.
+*   The station and structure measurement types and time series tables defined in HydroBase
+    do not always allow information to be determined from database records.
+    Instead, some time series properties must be hard-coded based on the table design.
+    For example, the `meas_type` table has a `MeanTemp`, `MaxTemp`, `MinTemp` types defined,
+    but these refer primarily to the separate daily tables for such data.
+    The `monthly_temp` table includes `avg_max_t`, `avg_min_t`, and `mean_t` columns
+    that do not correspond one-to-one with `meas_type` values.
+    Therefore, applications like TSTool use data types that are not specifically defined as strings in HydroBase,
+    which have consequently been hard-coded.  This is an issue with station and structure time series.
+*   Real-time data types in HydroBase do not directly translate to time series data types used in TSTool.
+    An effort has been made to be as consistent as possible while using data types that can be understood by users.
+    **As of TSTool 14.2.1, real-time data are no longer available from this datastore.
+    Use the [ColoradoHydroBaseRest](../ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) web service datastore.**
+*   Data units are not defined consistently in tables.
+    Some tables have a units string and others do not and the units abbreviations are
+    not always consistent (units of `A` are often used for acre-feet and `C` for `CFS`).
+    A master units table is not used in HydroBase to enforce data units consistency throughout the database.
+*   The time scale for time series (whether accumulated, instantaneous, or mean)
+    is not automatically determined from the data type and interval.
+    Users much understand how to interpret the data, in particular when changing the data interval.
 
 ## Datastore Configuration File ##
 
@@ -422,7 +422,7 @@ Search for the ODBC name that was assigned to find the registry settings to edit
 An attempt was made to determine how to set the property in the connection URL but no documentation could be found.
 See the following for background.  <a href="../mars-regedit.png">See also the full-size image.</a>
 
-* [ODBC (SQL Server): How do I turn on Multiple Active Result Sets(MARS) for a System DSN?](http://serverfault.com/questions/302169/odbc-sql-server-how-do-i-turn-on-multiple-active-result-setsmars-for-a-syst)
+* [ODBC (SQL Server): How do I turn on Multiple Active Result Sets(MARS) for a System DSN?](https://serverfault.com/questions/302169/odbc-sql-server-how-do-i-turn-on-multiple-active-result-setsmars-for-a-syst)
 
 **<p style="text-align: center;">
 ![mars-regedit](mars-regedit.png)
@@ -485,7 +485,7 @@ HydroBase Connection Errors and Possible Solutions
 
 |**Error**|**Possible solutions**|
 |--|--|
-|A HydroBase datastore configuration generates errors.|<ol><li>Use the ***View / Datastores*** menu to display datastore information, including configuration error and location of configuration file.  Resolve issues based on provided information.</li><li>If the DatabaseServer has been specified with an instance name (e.g., `ServerName\CDSS`, then the server computer (even if the local computer) must be running the SQL Server Browser process.  Otherwise, the port number cannot be determined from the instance name.  The SQL Server Browser process is started as a service under ***Windows Control Panel / Administrative Tools / Services***.  Locate the ***Sql Server Browser*** entry, edit its properties, and set the ***Startup type*** to ***Automatic*** and press ***Start*** to start the service.  You must have administrator privileges to make this change.</li><li>Verify that the configuration information specified in the HydroBase datastore configuration file is correct by using another tool to connect to the database:<ol><li>Sequel Server Management Studio (SSMS)</li><li>Create an Open Database Connectivity Data Source Name (ODBC DSN).</li><li>Use a database tools such as [SQuirreL](http://squirrel-sql.sourceforge.net/).</li></ol></ol>|
+|A HydroBase datastore configuration generates errors.|<ol><li>Use the ***View / Datastores*** menu to display datastore information, including configuration error and location of configuration file.  Resolve issues based on provided information.</li><li>If the DatabaseServer has been specified with an instance name (e.g., `ServerName\CDSS`, then the server computer (even if the local computer) must be running the SQL Server Browser process.  Otherwise, the port number cannot be determined from the instance name.  The SQL Server Browser process is started as a service under ***Windows Control Panel / Administrative Tools / Services***.  Locate the ***Sql Server Browser*** entry, edit its properties, and set the ***Startup type*** to ***Automatic*** and press ***Start*** to start the service.  You must have administrator privileges to make this change.</li><li>Verify that the configuration information specified in the HydroBase datastore configuration file is correct by using another tool to connect to the database:<ol><li>Sequel Server Management Studio (SSMS)</li><li>Create an Open Database Connectivity Data Source Name (ODBC DSN).</li><li>Use a database tools such as [SQuirreL](https://squirrel-sql.sourceforge.net/).</li></ol></ol>|
 |A specific requested time series is not returned from the HydroBase database.|Time series in HydroBase are associated with the data source (e.g., `USGS`).  These data source abbreviations or their handling by software may have changed over time and a data source in a time series identifier may not be valid.  Current software requires the data source for HydroBase time series, if a data source is used with the data type in HydroBase.  Try interactively querying the time series to see if the data source has changed.|
 
 ## Available Time Series by Data Type Categories ##
@@ -549,89 +549,90 @@ See more information after the following table.
 The above table summarizes how diversion records are available as time series.
 However, to determine a complete diversion time series,
 it is necessary to understand the various ways that diversion records can be stored.
-See also the [State of Colorado’s Diversion Record Standard](http://hermes.cde.state.co.us/drupal/islandora/object/co%3A20416).
+See also the [State of Colorado’s Diversion Records Standard](https://dnrweblink.state.co.us/dwr/ElectronicFile.aspx?docid=3600965&dbid=0).
+Use [this search tool](https://dwr.state.co.us/tools/LFWidget/GuidanceDocuments) to find the most recent documentation.
 
 Raw data observations for a diversion structure are stored as one or more of the following forms in HydroBase:
 
-* **Daily water class time series**.  These data are recorded using irrigation year (November to October).
-   If one or more values have been entered in a month, then HydroBase will include a full month of data.
-   Days at the beginning of the irrigation year that have no observed
-   values at the start of the year should be considered to be zero,
-   regardless of values found in previous irrigation years.  Once an observation occurs,
-   then days within the month where an observation was not recorded are set to the last observed value.
-   Therefore, if an irrigation year contains at least one value,
-   that irrigation year will have at least one month of values (with no missing in the month).
-   To preserve space in HydroBase, months with no observations are not included in the daily data in the database.
-   If a year has no observation, then no data are available in HydroBase for the year and a
-   determination of whether the data values should be zero or other must be determined
-   using other data (see below) or engineering judgment.
-   **TSTool and StateView by default implement the carry-forward procedure within irrigation years.**
-* **Diversion comments**.  Diversion comments may be included for an irrigation year.
-   The `not_used` flag indicates if a diversion was not used in a year.
-   If this is the case, then daily diversion records should not be available
-   and a zero value can be assumed for the water year.
-   **TSTool and StateView DO NOT by default use diversion comments when providing daily or monthly time series.**
-* **Infrequent water class**.  Infrequent water class values can be
-   entered as an annual value for the irrigation year, or as a monthly value.
-   The data can be accessed as time series in TSTool, although no specific
-   capabilities have been implemented to supplement the daily or monthly time series.
+*   **Daily water class time series**.  These data are recorded using irrigation year (November to October).
+    If one or more values have been entered in a month, then HydroBase will include a full month of data.
+    Days at the beginning of the irrigation year that have no observed
+    values at the start of the year should be considered to be zero,
+    regardless of values found in previous irrigation years.  Once an observation occurs,
+    then days within the month where an observation was not recorded are set to the last observed value.
+    Therefore, if an irrigation year contains at least one value,
+    that irrigation year will have at least one month of values (with no missing in the month).
+    To preserve space in HydroBase, months with no observations are not included in the daily data in the database.
+    If a year has no observation, then no data are available in HydroBase for the year and a
+    determination of whether the data values should be zero or other must be determined
+    using other data (see below) or engineering judgment.
+    **TSTool and StateView by default implement the carry-forward procedure within irrigation years.**
+*   **Diversion comments**.  Diversion comments may be included for an irrigation year.
+    The `not_used` flag indicates if a diversion was not used in a year.
+    If this is the case, then daily diversion records should not be available
+    and a zero value can be assumed for the water year.
+    **TSTool and StateView DO NOT by default use diversion comments when providing daily or monthly time series.**
+*   **Infrequent water class**.  Infrequent water class values can be
+    entered as an annual value for the irrigation year, or as a monthly value.
+    The data can be accessed as time series in TSTool, although no specific
+    capabilities have been implemented to supplement the daily or monthly time series.
 
 Processed (derived) data records are created as follows:
 
-* **Daily total diversion**.  Daily water class values are accumulated to daily total records.
-   Similar to the daily water class,
-   any month that has at least one value will result in a month with no missing data.
-   To preserve space in HydroBase, only months that include an observation are included in HydroBase.
-   Other months in the same irrigation year should be carried forward.
-   Irrigation years with no observation have no records in HydroBase and a
-   determination of whether the data values should be zero or other must be
-   made using other data (see below) or engineering judgment.
-   **TSTool and StateView by default implement the carry-forward procedure within irrigation years.**
-* **Monthly water class**.  Monthly water class is computed by converting the daily water class
-   values (average CFS) to ACFT for each day of the month, and adding the values.
-   Because of the way that daily data are treated, a month will either have all daily values or none.
-   A month with no data will have its value set to missing in the database.
-   Full irrigation years with no observation will result in a full year of missing values,
-   and a determination of whether the data values should be zero or other must be
-   determined using other data (see below) or engineering judgment.
-   Unlike daily data, monthly diversion records are included in HydroBase for the full data period.
-   Full years of missing values may be included in the database. 
-* **Monthly total diversion**.  This is derived using the same
-   procedure as monthly water class; however, the daily total diversion is used as input.
-* **Infrequent data** are not considered when producing the monthly total time series.
+*   **Daily total diversion**.  Daily water class values are accumulated to daily total records.
+    Similar to the daily water class,
+    any month that has at least one value will result in a month with no missing data.
+    To preserve space in HydroBase, only months that include an observation are included in HydroBase.
+    Other months in the same irrigation year should be carried forward.
+    Irrigation years with no observation have no records in HydroBase and a
+    determination of whether the data values should be zero or other must be
+    made using other data (see below) or engineering judgment.
+    **TSTool and StateView by default implement the carry-forward procedure within irrigation years.**
+*   **Monthly water class**.  Monthly water class is computed by converting the daily water class
+    values (average CFS) to ACFT for each day of the month, and adding the values.
+    Because of the way that daily data are treated, a month will either have all daily values or none.
+    A month with no data will have its value set to missing in the database.
+    Full irrigation years with no observation will result in a full year of missing values,
+    and a determination of whether the data values should be zero or other must be
+    determined using other data (see below) or engineering judgment.
+    Unlike daily data, monthly diversion records are included in HydroBase for the full data period.
+    Full years of missing values may be included in the database. 
+*   **Monthly total diversion**.  This is derived using the same
+    procedure as monthly water class; however, the daily total diversion is used as input.
+*   **Infrequent data** are not considered when producing the monthly total time series.
 
 Therefore, to determine a complete time series, the following must be performed, using TSTool or other software:
 
 Daily time series:
 
-1. Read the daily time series from HydroBase.
-   The default in TSTool and StateView is now to carry forward daily
-   diversion time series within the irrigation year.
-2. Utilize the diversion comments to set additional years of data to zero.
-   Using diversion comments is an option with TSTool and StateDMI time series read commands.
-3. For years with no data, use an appropriate fill technique.
-   If it is known that the ditch did not operate, then zeros should be used.
-   If it is known that the ditch did operate, use historical averages or some other method to fill the data.
-4. HydroBase infrequent diversions could be used to supplement the data,
-   but currently there is no software to help users with this process.
+1.  Read the daily time series from HydroBase.
+    The default in TSTool and StateView is now to carry forward daily
+    diversion time series within the irrigation year.
+2.  Utilize the diversion comments to set additional years of data to zero.
+    Using diversion comments is an option with TSTool and StateDMI time series read commands.
+3.  For years with no data, use an appropriate fill technique.
+    If it is known that the ditch did not operate, then zeros should be used.
+    If it is known that the ditch did operate, use historical averages or some other method to fill the data.
+4.  HydroBase infrequent diversions could be used to supplement the data,
+    but currently there is no software to help users with this process.
 
 Monthly time series:
 
-1. Read the monthly time series from HydroBase.
-   Any irrigation year with at least one daily observation results in 12 monthly time series values.
-2. Utilize the diversion comments to set additional years of data to zero.
-   Using diversion comments is an option with TSTool and StateDMI time series read commands.
-3. For years with no data, use an appropriate fill technique.
-   If it is known that the ditch did not operate, then zeros should be used.
-   If it is known that the ditch did operate, use historical averages or some other method to fill the data.
-4. HydroBase infrequent diversions could be used to supplement the data,
-   but currently there is no software to help users with this process.
+1.  Read the monthly time series from HydroBase.
+    Any irrigation year with at least one daily observation results in 12 monthly time series values.
+2.  Utilize the diversion comments to set additional years of data to zero.
+    Using diversion comments is an option with TSTool and StateDMI time series read commands.
+3.  For years with no data, use an appropriate fill technique.
+    If it is known that the ditch did not operate, then zeros should be used.
+    If it is known that the ditch did operate, use historical averages or some other method to fill the data.
+4.  HydroBase infrequent diversions could be used to supplement the data,
+    but currently there is no software to help users with this process.
 
 Yearly time series:
 
-1. Infrequent time series can be read by TSTool and can supplement the above data.
-   However, currently there is no software to help users with this process.
-   General TSTool commands must be used as appropriate.
+1.  Infrequent time series can be read by TSTool and can supplement the above data.
+    However, currently there is no software to help users with this process.
+    General TSTool commands must be used as appropriate.
 
 ### Hardware Data ###
 
@@ -689,18 +690,18 @@ Irregular data are real-time using state station abbreviations, which do not mat
 The `vw_CDSS_GroundwaterWellsGroundwaterWellsMeasType` view in HydroBase contains the metadata for well level data.
 Well identifiers are used in TSTool time series identifiers as follows:
 
-1. If the view identifier column has a value, the value is used for the well identifier.
-   Typically this is the identifier for the primary data provider.
-2. If the WD ID values are available, they are used.
-3. If the latitude and longitude are available, the location identifier is set to `LL:LatLong`,
-   where latitude is format `DDMMSS` and longitude is `DDDMMSS` (positive value).
-   The conversion of decimal degrees to degrees, minutes, and seconds truncates the remainder on the seconds.
-   Subsequent reverse lookups of the well occur by querying a box around the location from the
-   identifier and then regenerating the `LL:` identifier to find a match.
-   This may result in duplicate identifiers if wells are very close together, and will generate an error.
-   The use of the temporary identifier can be minimized by reviewing original data and
-   ensuring that a valid identifier column value is defined in HydroBase.
-4. If none of the above methods can be used to assign a location identifier to the time series, an error will result.
+1.  If the view identifier column has a value, the value is used for the well identifier.
+    Typically this is the identifier for the primary data provider.
+2.  If the WD ID values are available, they are used.
+3.  If the latitude and longitude are available, the location identifier is set to `LL:LatLong`,
+    where latitude is format `DDMMSS` and longitude is `DDDMMSS` (positive value).
+    The conversion of decimal degrees to degrees, minutes, and seconds truncates the remainder on the seconds.
+    Subsequent reverse lookups of the well occur by querying a box around the location from the
+    identifier and then regenerating the `LL:` identifier to find a match.
+    This may result in duplicate identifiers if wells are very close together, and will generate an error.
+    The use of the temporary identifier can be minimized by reviewing original data and
+    ensuring that a valid identifier column value is defined in HydroBase.
+4.  If none of the above methods can be used to assign a location identifier to the time series, an error will result.
 
 ## Database Views ##
 

@@ -18,7 +18,7 @@ which is a spatial data format used by Google Earth and web mapping software.  S
 
 The table must include columns for longitude and latitude or a column containing Well Known Text (WKT) geometry strings.  See:
 
-* [Well-known Text on WikiPedia](http://en.wikipedia.org/wiki/Well-known_text)
+* [Well-known Text on WikiPedia](https://en.wikipedia.org/wiki/Well-known_text)
 
 Currently only point and polygon data can be processed but in the future
 support for well-known text for other geometry types will be added.
@@ -113,14 +113,14 @@ The following is an example of a style insert file (refer to KML reference docum
 <Style id="highlightPlacemark">
   <IconStyle>
     <Icon>
-      <href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href>
+      <href>https://maps.google.com/mapfiles/kml/paddle/red-stars.png</href>
     </Icon>
   </IconStyle>
 </Style>
 <Style id="normalPlacemark">
   <IconStyle>
     <Icon>
-      <href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
+      <href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
     </Icon>
   </IconStyle>
 </Style>
@@ -147,7 +147,7 @@ The following is an example of the resulting KML file:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2">
+<kml xmlns="https://www.opengis.net/kml/2.2">
  <Document>
   <name>Test layer</name>
   <description>Description for layer</description>

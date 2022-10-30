@@ -14,15 +14,15 @@
 The `WriteDelimitedFile` command writes time series to the specified delimited file,
 for example a comma-separated-value (CSV) file.  The following constraints apply to this command:
 
-* The time series being written must have the same data interval – use the
-  `TSList` parameter to select appropriate time series.
-* Only one irregular time series can be written because functionality has
-  not yet been added to properly handle all date/times found in multiple time series.
-  The output period is adjusted to ensure that actual endpoints found in the time series are used to bound output.
-* The first row in the file contains column headings, which often are used by other software to identify the column:
-    + By default, no character will be used to surround headings.
-    + The `HeadingSurround` parameter can be used to specify a character to surround each heading.
-    + If `HeadingSurround` matches a character in a column heading, the character will be removed from the column heading.
+*   The time series being written must have the same data interval – use the
+    `TSList` parameter to select appropriate time series.
+*   Only one irregular time series can be written because functionality has
+    not yet been added to properly handle all date/times found in multiple time series.
+    The output period is adjusted to ensure that actual endpoints found in the time series are used to bound output.
+*   The first row in the file contains column headings, which often are used by other software to identify the column:
+    +   By default, no character will be used to surround headings.
+    +   The `HeadingSurround` parameter can be used to specify a character to surround each heading.
+    +   If `HeadingSurround` matches a character in a column heading, the character will be removed from the column heading.
 * Precision for data values and missing value for output can be specified.
 
 ## Command Editor ##
@@ -56,9 +56,10 @@ Command Parameters
 |`OutputFile`|The delimited output file.  The path to the file can be absolute or relative to the working directory (command file location).  Global properties can be used to specify the filename, using the `${Property}` syntax.|None – must be specified.|
 |`WriteSeparateFiles`|Indicate whether separate files should be written (`True`) or a single file (`False`). Use time series `%` specifiers (e.g., `%L` for location) or properties `${ts:Property`} in the `OutputFile` to ensure unique output file names.| `False` |
 |`DateTimeColumn`|The name of the column for the date/time.|`Date` if day, month, or year interval, `DateTime` otherwise.|
-|`DateTimeFormatterType`|Specify the date/time formatter type, which indicates the syntax for `DateTimeFormat`.  Currently, only `C` is supported, corresponding to the C programming language [strftime() function](https://en.wikipedia.org/wiki/C_date_and_time_functions), which is also used by other software (see [Linux date command](http://man7.org/linux/man-pages/man1/date.1.html)).|`C`|
+|`DateTimeFormatterType`|Specify the date/time formatter type, which indicates the syntax for `DateTimeFormat`.  Currently, only `C` is supported, corresponding to the C programming language [strftime() function](https://en.wikipedia.org/wiki/C_date_and_time_functions), which is also used by other software (see [Linux date command](https://man7.org/linux/man-pages/man1/date.1.html)).|`C`|
 |`DateTimeFormat`|The format used to expand the date/time corresponding to each time series data value.  The format string can contain literal strings and specifiers supported by the `DateTimeFormatterType`.	||
-|`ValueColumns`|The name(s) of the column(s) corresponding to each time series, to use for the values.  Specify with `%` formatters, `${ts:property}` and `${property}`.  In the future a parameter may be added to more specifically define the column names.  If the column name contains the `HeadingSurround` character, occurrences of the character will be removed.`%L_%T`|
+|`ValueColumns`|The name(s) of the column(s) corresponding to each time series, to use for the values.  Specify with `%` formatters, `${ts:property}` and `${property}`.  In the future a parameter may be added to more specifically define the column names.  If the column name contains the `HeadingSurround` character, occurrences of the character will be removed. | `%L_%T` (location ID and data type). |
+|`DataFlagColumns`|The name(s) of the column(s) corresponding to each time series, to use for the data flags.  Specify with `%` formatters, `${ts:property}` and `${property}`.  In the future a parameter may be added to more specifically define the column names.  If the column name contains the `HeadingSurround` character, occurrences of the character will be removed. | Data flags are not output. |
 |`HeadingSurround`|Character that is used to surround column headings.  Specify a double quote using `\”`.|No surrounding character.|
 |`Delimiter`|The delimiter character to use between data values.  Specify `\t` for tab and `\s` for space.|Space.|
 |`Precision`|The number of digits after the decimal for numerical output.|4 (in the future may default based on data type)|

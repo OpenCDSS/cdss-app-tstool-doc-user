@@ -257,6 +257,7 @@ nav:
   - WriteHecDss: command-ref/WriteHecDss/WriteHecDss.md
   - WriteNwsCard: command-ref/WriteNwsCard/WriteNwsCard.md
   - WriteNwsrfsEspTraceEnsemble: command-ref/WriteNwsrfsEspTraceEnsemble/WriteNwsrfsEspTraceEnsemble.md
+  - WriteObjectToJSON: command-ref/WriteObjectToJSON/WriteObjectToJSON.md
   - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
   - WriteReclamationHDB: command-ref/WriteReclamationHDB/WriteReclamationHDB.md
   - WriteRiversideDB: command-ref/WriteRiversideDB/WriteRiversideDB.md

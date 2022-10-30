@@ -11,8 +11,8 @@ The following are useful resources.
 
 Markdown is used to create this documentation. See also the [Markdown](#markdown) section below.
 
-* [MkDocs](http://www.mkdocs.org/) - MkDocs website
-* [OWF / Learn MkDocs](http://learn.openwaterfoundation.org/owf-learn-mkdocs/) - Open Water Foundation MkDocs learning resources
+* [MkDocs](https://www.mkdocs.org/) - MkDocs website
+* [OWF / Learn MkDocs](https://learn.openwaterfoundation.org/owf-learn-mkdocs/) - Open Water Foundation MkDocs learning resources
 
 ## Markdown ##
 

@@ -11,7 +11,8 @@
 
 **These web services are obsolete and are no longer available in TSTool.
 This documentation will be retained for reference purposes during the transition to new web services.
-Use the [Colorado HydroBase REST web services](../ColoradoHydroBaseRest/ColoradoHydroBaseRest.md).**
+Use the [Colorado HydroBase REST web services](../ColoradoHydroBaseRest/ColoradoHydroBaseRest.md).
+Associated links may be broken.**
 
 The State of Colorado’s Satellite Monitoring System (SMS) database stores observations,
 configuration information, processed data, and alarms,

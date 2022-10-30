@@ -18,7 +18,7 @@ The command is designed to extract values from named ranges in the Excel file,
 for example to harvest data from a data-entry form.
 Use this command in a template to iterate through rows in a table matched with separate Excel files.
 
-TSTool uses the [Apache POI software](http://poi.apache.org) to read/write
+TSTool uses the [Apache POI software](https://poi.apache.org) to read/write
 the Excel file and consequently functionality is constrained by the features of that software package.
 
 ## Command Editor ##

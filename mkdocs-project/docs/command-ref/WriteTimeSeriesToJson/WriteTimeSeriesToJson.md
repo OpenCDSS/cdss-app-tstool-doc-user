@@ -22,7 +22,7 @@ with two hour-interval time series, one without data flags, and one with data fl
 The JSON format closely matches time series data management conventions used by TSTool.
 In the future, support for writing time series data values in parallel
 (via `overlap=true` property for the list) may be implemented in order to save space in the file.
-JSON files can be viewed/edited by online tools such as [http://jsoneditoronline.org](http://jsoneditoronline.org).
+JSON files can be viewed/edited by online tools such as [https://jsoneditoronline.org](https://jsoneditoronline.org).
 
 ```json
 	{

@@ -20,7 +20,7 @@ Property object types are determined from Excel cell type/format unless the type
 is specified with command parameters.
 If issues arise, check the Excel cell type and format.
 
-TSTool uses the [Apache POI software](http://poi.apache.org) to read/write the Excel file
+TSTool uses the [Apache POI software](https://poi.apache.org) to read/write the Excel file
 and consequently functionality is constrained by the features of that software package.
 Check the TSTool ***Help / About*** menu for information on the POI version.
 

@@ -62,8 +62,8 @@ However, there are cases where the values vary by flow, which is handled by this
 The approach that is implemented is an adaptation of that described in
 National Weather Service River Forecast System LAG/K documentation:
 
-* [NWS Lag and K Routing background](http://www.nws.noaa.gov/oh/hrl/nwsrfs/users_manual/part2/_pdf/24lagk.pdf)
-* [NWS Lag and K Routing Operation](http://www.nws.noaa.gov/ohd/hrl/nwsrfs/users_manual/part5/_pdf/533lagk.pdf)
+* [NWS Lag and K Routing background](24lagk.pdf)
+* [NWS Lag and K Routing Operation](533lagk.pdf)
 
 ### VariableLagK States ###
 

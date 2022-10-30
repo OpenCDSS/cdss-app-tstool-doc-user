@@ -51,7 +51,7 @@ Command Parameters
 |--------------|-----------------|----------------- |
 |`InputFile`<br>**required**|The name of the text file to print.|None – must be specified.|
 |`PrinterName`|The name of the printer to use (e.g., `\\MyComputer\MyPrinter` or `Adobe PDF`)|The default printer will be used.|
-|`PaperSize`|The paper size to print.  Because there are a number of standards for paper, the size is specified as standard-sizename (e.g., `na-letter` for North American Lettter).  [See information on paper sizes](http://en.wikipedia.org/wiki/Paper_size).|The default for the printer will be used.|
+|`PaperSize`|The paper size to print.  Because there are a number of standards for paper, the size is specified as standard-sizename (e.g., `na-letter` for North American Lettter).  [See information on paper sizes](https://en.wikipedia.org/wiki/Paper_size).|The default for the printer will be used.|
 |`PaperSource`|The tray for the paper – currently not enabled.  Use `ShowDialog=True` to select.|The `PaperSize` is used.|
 |`Orientation`|The paper orientation.|The default for the printer and paper size will be used.|
 |`MarginLeft`|The left margin for the orientation, inches.|See above.|
@@ -108,7 +108,7 @@ from the print dialog and consequently PDF cannot be used.
 An alternate approach such as iText may be implemented for PDF.
 
 [If a Microsoft XPS file is printed, the following software may need to be installed,
-in particular for Windows XP](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=11816).
+in particular for Windows XP](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=11816).
 
 ## Examples ##
 

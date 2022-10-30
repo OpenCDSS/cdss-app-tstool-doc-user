@@ -18,7 +18,7 @@ which is a spatial data format that can be viewed in geographic information syst
 
 The table must include columns for longitude and latitude or a column containing Well Known Text (WKT) geometry strings.  See:
 
-* [Well-known Text on Wikipedia](http://en.wikipedia.org/wiki/Well-known_text)
+* [Well-known Text on Wikipedia](https://en.wikipedia.org/wiki/Well-known_text)
 
 Currently only point and polygon data can be processed but in the future support
 for well-known text for other geometry types will be added.

@@ -20,8 +20,10 @@
 
 ## Changes in Version 14.4.0 ##
 
-**Feature release to improve visualization of non-time series data and cloud integration.**
+**Feature release to improve cloud integration, fix HEC-DSS, add support for object data type,
+and various fixes.**
 
+*   ![new](new.png) [14.4.0] The primary TSTool development environment is now Windows 11 using 64-bit Java 8.
 *   ![new](new.png) [14.4.0] Verify integration of the [TSTool AWS Plugin](https://software.openwaterfoundation.org)
     from the Open Water Foundation in production workflows to publish datasets to the cloud.
 *   ![new](new.png) [14.4.0] Add general objects as a top-level data construct:
@@ -44,6 +46,20 @@
         to help with file locking.
 *   ![bug](bug.png) [14.4.0] Fix the [`CompareTables`](../command-ref/CompareTables/CompareTables.md) command
     to detect tables of different lengh (previously the number of rows in the first table controlled the comparison)
+*   ![change](change.png) [14.4.0] Update configuration and documentation to use `https` where possible.
+*   ![change](change.png) [14.4.0] The time series table view header now shows units in parentheses
+    and minor formatting cleanup avoids headers ending in a comma.
+*   ![change](change.png) [14.4.0] Commands that provide a choice on time series interval now include
+    precision on irregular time series (e.g., `IrregSecond`).
+    This allows for better handling of date/time precision in workflows.
+*   ![change](change.png) [14.4.0] The
+    [`Cumulate`](../command-ref/Cumulate/Cumulate.md) command has been updated:
+    +   The default value for the `ResetValue` parameter (used with `Reset` parameter)
+        has been changed to `DataValue`.
+        The previous value of `0` causes the first value in the new year to always be zero,
+        even if a non-zero data value is present at that date/time,
+        which causes a value to be ignored and the cumulative value to be shorted by the ignored value.
+        This is more of an issue for monthly time series where 1 out of 12 values is ignored.
 *   ![change](change.png) [14.4.0] The
     [`If`](../command-ref/If/If.md) command has been updated:
     + Added the `FileExists` and `FileDoesNotExist` parameters to test whether a file exists.
@@ -51,11 +67,17 @@
     + Added the `TableExists` and `TableDoesNotExist` parameters to test whether a table exists.
     + Added the `TSDoesNotExist` parameter to test whether a table does not exist.
 *   ![change](change.png) [14.4.0] The
+    [`ReadDelimitedFile`](../command-ref/ReadDelimitedFile/ReadDelimitedFile.md) command has been updated
+    to list additional data interval for irregular time series.
+    The intervals include the precision that should be used for date/times, for example `IrregSecond`.
+*   ![change](change.png) [14.4.0] The
     [`ReadPropertiesFromFile`](../command-ref/ReadPropertiesFromFile/ReadPropertiesFromFile.md) command has been updated:
     +   Added the `Value` file type, to allow reading a file's contents into a property,
         which is useful when manipulating text files,
         such as with the
         [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command.
+*   ![change](change.png) [14.4.0] Update the [`WriteDelimitedFile`](../command-ref/WriteDelimitedFile/WriteDelimitedFile.md) command
+    to have the `DataFlagColumns` parameter to optionally output data flag column(s)
 
 ## Changes in Version 14.3.0 ##
 
@@ -75,7 +97,7 @@
 *   ![bug](bug.png) [14.3.0] Fix to support Microsoft Access databases again for
     [`GenericDatabaseDatastore`](../datastore-ref/GenericDatabase/GenericDatabase.md):
     +   Direct use of ODBC data source names was dropped in Java 8 (TSTool 12).
-    +   Implement the [UcanAccess](http://ucanaccess.sourceforge.net/site.html#home) software with pure Java JDBC connection to Access instead.
+    +   Implement the [UcanAccess](https://ucanaccess.sourceforge.net/site.html#home) software with pure Java JDBC connection to Access instead.
     +   Add Access support in the [`OpenDataStore`](../command-ref/OpenDataStore/OpenDataStore.md) command
         and add the `ConnectionProperties` command parameter to allow additional connection priperties.
     +   Add the [`NewAccessDatabase`](../command-ref/NewAccessDatabase/NewAccessDatabase.md) command.
