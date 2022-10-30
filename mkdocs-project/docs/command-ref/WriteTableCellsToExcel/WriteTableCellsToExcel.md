@@ -17,7 +17,7 @@ The command is designed to populate named ranges in the Excel file,
 for example to pre-populate a data-entry form.
 Use this command in a template to iterate through rows in a table matched with separate Excel output files.
 
-TSTool uses the [Apache POI software](http://poi.apache.org) to read/write the
+TSTool uses the [Apache POI software](https://poi.apache.org) to read/write the
 Excel file and consequently functionality is constrained by the features of that software package.
 
 ## Command Editor ##

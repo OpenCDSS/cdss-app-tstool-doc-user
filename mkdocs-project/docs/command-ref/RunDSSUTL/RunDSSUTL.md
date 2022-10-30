@@ -11,6 +11,10 @@
 
 ## Overview ##
 
+**The DSSUTL software does not appear to be distributed.
+This documentation and command are retained for historical purposes and may be removed in the future.
+See the [HEC-DSSVue software](https://www.hec.usace.army.mil/software/hec-dssvue/) as an alternative.**
+
 The `RunDSSUTL` command runs the Army Corps of Engineers DSSUTL program and other utility programs,
 which are used with HEC-DSS files.
 See also the [HEC-DSS Input Type appendix](../../datastore-ref/HEC-DSS/HEC-DSS.md).

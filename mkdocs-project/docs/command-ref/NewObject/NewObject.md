@@ -25,8 +25,8 @@ Internally, the open source [Jackson library](https://github.com/FasterXML/jacks
 is used to serialize and deserialize content.
 
 Note that objects are not equivalent to TSTool properties,
-which are used by TSTool to manage workflow execution.
-The TSTool ***Results*** area has ***Objects*** and ***Results*** tabs.
+which are simple objects used by TSTool to manage workflow execution.
+The TSTool ***Results*** area has ***Objects*** and ***Properties*** tabs.
 
 Common uses for objects are:
 

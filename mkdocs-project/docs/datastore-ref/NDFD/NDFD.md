@@ -81,21 +81,21 @@ Latitude_Longitude.NWS.DataType.Interval~NDFD~Server
 
 Where:
 
-* The TSID location is a latitude and longitude value and will fall within a grid cell of calculated forecast data.
-This location is based on the NWS latitude and longitude definition and will have the
-form `nnnnnn_mmmmmm` where `nnnnnn` will be translated to `nn.nnnn` and `mmmmmm` will be translated to `–mm.mmmm`.
-These translations are used because the web service only applies to the United States.
-For example, latitude `40.1800` and longitude `–105.0600` would be specified as `401800_1050600`.
-* The TSID data source is NWS since the data is coming from the National Weather Service.
-* The DataType will be one of the data parameters described in the first table.
-Daily average data will only accept `maxt`, `mint`, and `pop12` parameters.
-See the following table for a matrix of data types for available for either instantaneous or daily average data.
-* The Interval is the data interval to retrieve forecast data.
-This would be of the form: `nHour` where `n` is `2`, `3`, `4`, `6`, `8`, `12`, or `24` for instantaneous data or
-`Day` for daily average data averaged over 24 hours respectively.
-* `NDFD` is used for the input type.
-* The Server is an optional parameter to specify the NDFD web service server.
-Currently there is only one server: [http://www.nws.noaa.gov/forecasts/xml](http://www.nws.noaa.gov/forecasts/xml) that is the default.
+*   The TSID location is a latitude and longitude value and will fall within a grid cell of calculated forecast data.
+    This location is based on the NWS latitude and longitude definition and will have the
+    form `nnnnnn_mmmmmm` where `nnnnnn` will be translated to `nn.nnnn` and `mmmmmm` will be translated to `–mm.mmmm`.
+    These translations are used because the web service only applies to the United States.
+    For example, latitude `40.1800` and longitude `–105.0600` would be specified as `401800_1050600`.
+*   The TSID data source is NWS since the data is coming from the National Weather Service.
+*   The DataType will be one of the data parameters described in the first table.
+    Daily average data will only accept `maxt`, `mint`, and `pop12` parameters.
+    See the following table for a matrix of data types for available for either instantaneous or daily average data.
+*   The Interval is the data interval to retrieve forecast data.
+    This would be of the form: `nHour` where `n` is `2`, `3`, `4`, `6`, `8`, `12`, or `24` for instantaneous data or
+    `Day` for daily average data averaged over 24 hours respectively.
+*   `NDFD` is used for the input type.
+*   The Server is an optional parameter to specify the NDFD web service server.
+    Currently there is only one server: [http://www.nws.noaa.gov/forecasts/xml](http://www.nws.noaa.gov/forecasts/xml) that is the default.
 
 **<p style="text-align: center;">
 Matrix of Data Types
@@ -122,7 +122,7 @@ Matrix of Data Types
 
 The NDFD input type has the following limitations:
 
-* Latitude and longitude rather than a station ID specifies the location.
-Therefore to retrieve data at a location matching a station, the latitude and longitude of the station must first be determined.
-* The NWS NDFD web service only serves data for the United States.
-Thus a request that uses a latitude and longitude that falls outside the United States will return missing data.
+*   Latitude and longitude rather than a station ID specifies the location.
+    Therefore to retrieve data at a location matching a station, the latitude and longitude of the station must first be determined.
+*   The NWS NDFD web service only serves data for the United States.
+    Thus a request that uses a latitude and longitude that falls outside the United States will return missing data.

@@ -16,13 +16,13 @@
 The `WriteTimeSeriesToExcelBlock` command writes one or more time series to an Excel
 workbook with output being in block layout.  The following functionality is provided:
 
-* Time series are written in blocks (see
-[`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) for simple column output).
-* The worksheet and position in worksheet can be specified.
-* The output can be created or appended.
-* Options are provided to select how the blocks of data are oriented.  For example, for monthly time series rows may contain years of data and columns may contain months of data.
+*   Time series are written in blocks (see
+    [`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) for simple column output).
+*   The worksheet and position in worksheet can be specified.
+*   The output can be created or appended.
+*   Options are provided to select how the blocks of data are oriented.  For example, for monthly time series rows may contain years of data and columns may contain months of data.
 
-TSTool uses the [Apache POI software](http://poi.apache.org) to read/write the Excel file and
+TSTool uses the [Apache POI software](https://poi.apache.org) to read/write the Excel file and
 consequently functionality is constrained by the features of that software package.
 
 ## Command Editor ##

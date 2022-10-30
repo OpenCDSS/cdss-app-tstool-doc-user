@@ -41,17 +41,17 @@ The datastore internally corresponds to an
 [Java Database Connectivity (JDBC)](https://en.wikipedia.org/wiki/Java_Database_Connectivity) driver.
 The connection can be defined one of two ways:
 
-* (**Preferred**) Provide connection information via `DatabaseEngine`, `DatabaseServer`, `DatabaseName`,
-  and potentially login configuration properties,
-  and allow the software to use a vendor-specific JDBC driver,
-  which is generally optimized for the database software.
-  The disadvantage of this approach is that authentication may require extra effort,
-  such as using a databases convention for batch logins.
-* (**Use if necessary**) Define an ODBC connection using Windows tools.
-  The advantage of this approach is that database authentication occurs through the ODBC connection.
-  The disadvantage is that the connection may use a generic database driver
-  that does not perform as well as vendor drivers.
-  This approach is used when the `DatabaseEngine` and `OdbcName` configuration properties are defined for the datastore.
+*   (**Preferred**) Provide connection information via `DatabaseEngine`, `DatabaseServer`, `DatabaseName`,
+    and potentially login configuration properties,
+    and allow the software to use a vendor-specific JDBC driver,
+    which is generally optimized for the database software.
+    The disadvantage of this approach is that authentication may require extra effort,
+    such as using a databases convention for batch logins.
+*   (**Use if necessary**) Define an ODBC connection using Windows tools.
+    The advantage of this approach is that database authentication occurs through the ODBC connection.
+    The disadvantage is that the connection may use a generic database driver
+    that does not perform as well as vendor drivers.
+    This approach is used when the `DatabaseEngine` and `OdbcName` configuration properties are defined for the datastore.
 
 ## Standard Time Series Properties ##
 
@@ -61,28 +61,28 @@ See the discussion of datastore configuration files below for mapping of databas
 
 The following limitations apply to the generic database datastore:
 
-* Database permissions control which tables and views are accessible and consequently
-  protected tables may not be visible in software or may generate
-  errors if attempts are made to manipulate outside of permissions.
-* An attempt is made in the
-  [`ReadTableFromDataStore`](../../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md)
-  command to list tables and views for selection.
-  However, the ability to filter out system tables is limited because
-  some database drivers do not implement required functionality.
-  For example, the SQL Server JDBC driver does not allow generic filtering of system
-  tables and a work-around has been implemented to remove known
-  system table and view names from lists displayed to users.
-* Table column properties in TSTool are determined from database column metadata.
-  Although support for common data types has been implemented, some data types may not be fully supported.
-  If a database column type is not supported,
-  the default is to translate the column data to strings in the output table.
-  Additional functionality will be added in the future.
-* Although database column properties can specify the width and precision for floating point data,
-  some database metadata is inaccessible, causing data-handling or visualization issues.
-  For example, the SQL Server metadata defaults result in the precision of
-  floating point numbers (called “precision” in TSTool and “scale” in SQL Server column properties) to be set to zero.x
-  The work-around is that any floating point data column that has a
-  precision of zero is treated as having a precision of 6 digits after the decimal point.
+*   Database permissions control which tables and views are accessible and consequently
+    protected tables may not be visible in software or may generate
+    errors if attempts are made to manipulate outside of permissions.
+*   An attempt is made in the
+    [`ReadTableFromDataStore`](../../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md)
+    command to list tables and views for selection.
+    However, the ability to filter out system tables is limited because
+    some database drivers do not implement required functionality.
+    For example, the SQL Server JDBC driver does not allow generic filtering of system
+    tables and a work-around has been implemented to remove known
+    system table and view names from lists displayed to users.
+*   Table column properties in TSTool are determined from database column metadata.
+    Although support for common data types has been implemented, some data types may not be fully supported.
+    If a database column type is not supported,
+    the default is to translate the column data to strings in the output table.
+    Additional functionality will be added in the future.
+*   Although database column properties can specify the width and precision for floating point data,
+    some database metadata is inaccessible, causing data-handling or visualization issues.
+    For example, the SQL Server metadata defaults result in the precision of
+    floating point numbers (called “precision” in TSTool and “scale” in SQL Server column properties) to be set to zero.x
+    The work-around is that any floating point data column that has a
+    precision of zero is treated as having a precision of 6 digits after the decimal point.
 
 ## Datastore Configuration Files ##
 
@@ -168,9 +168,9 @@ Supported Databases (`DatabaseEngine` Property Value)
 
 | **`DatabaseEngine`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **JDBC Driver Information**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | -- | -- | -- |
-| `Access` | Microsoft Access database | <ul><li>For Java 8 and TSTool 14.3 and later, the [UCanAccess](http://ucanaccess.sourceforge.net/site.html#home) driver is distributed with TSTool.</li><li>For Java 8 and TSTool versions between 12.x and 13.2, Access is not supported.</li><li>For Java 7 (prior to TSTool 12.x), the system ODBC driver on Windows is used.</li></ul> |
+| `Access` | Microsoft Access database | <ul><li>For Java 8 and TSTool 14.3 and later, the [UCanAccess](https://ucanaccess.sourceforge.net/site.html#home) driver is distributed with TSTool.</li><li>For Java 8 and TSTool versions between 12.x and 13.2, Access is not supported.</li><li>For Java 7 (prior to TSTool 12.x), the system ODBC driver on Windows is used.</li></ul> |
 | `Excel` | Microsoft Excel workbook (first row of worksheet should be the column names, column types are determined by scanning rows (independent of the ***Rows to Scan*** value in the ODBC DNS setup).  Refer to sheet in SQL as `Select * from [Sheet1$]` ) | Uses system ODBC driver on Windows. |
-| `H2` | H2 database, **not actively used but included for historical reasons** | [JDBC Driver](http://www.h2database.com/html/cheatSheet.html) |
+| `H2` | H2 database, **not actively used but included for historical reasons** | [JDBC Driver](https://www.h2database.com/html/cheatSheet.html) |
 | `HSQLDB` | HSQLDB database (Java database). This database is enabled as part of the MicroSoft Access UCanAccess integration. | [HSQLDB web page](https://hsqldb.org/) |
 | `Informix` | INFORMIX database, **not actively used but included for historical reasons** | [JDBC Driver](https://www.ibm.com/support/knowledgecenter/SSGU8G_12.1.0/com.ibm.jdbc_pg.doc/ids_jdbc_013.htm) |
 | `MySQL` | MySQL database | [JDBC Driver](https://www.mysql.com/products/connector/) |
@@ -194,7 +194,6 @@ Additional databases can be supported if necessary.
 The following example illustrates how to configure a datastore for a UCanAccess connection to an Access database,
 which is available for TSTool 13.3 and later.
 Note the format of the `DatabaseName` required for the path to the database file.
-
 
 ```
 # Configuration information for Microsoft Access using UCanAccess.
@@ -234,7 +233,7 @@ reopens the datastore each time the commands are run and will be slow each time.
 To avoid loading the database into memory at the initial connection, use the `;memory=false` string in `ConnectionProperties`,
 as shown in the above example, and in [`OpenDataStore(ConnectionProperties=";memory=false"`](../../command-ref/OpenDataStore/OpenDataStore.md)).
 
-See the [UCanAccess documentation](http://ucanaccess.sourceforge.net/site.html#examples)
+See the [UCanAccess documentation](https://ucanaccess.sourceforge.net/site.html#examples)
 for other connection string properties.
 
 If it is desired to load the full database at startup and TSTool runs out of memory,
@@ -243,10 +242,10 @@ See the [Troubleshooting](../../troubleshooting/troubleshooting.md#issue-6-out-o
 
 #### Troubleshooting Access ####
 
-1. Because Access databases are a single file,
-   care must be taken to avoid multiple processes writing to the same database at once.
-   Consequently, avoid opening multiple datastores at startup and/or in commands that write to the same file because
-   the database may become corrupted.
+1.  Because Access databases are a single file,
+    care must be taken to avoid multiple processes writing to the same database at once.
+    Consequently, avoid opening multiple datastores at startup and/or in commands that write to the same file because
+    the database may become corrupted.
 
 ### Microsoft Access Database Example (Old, before TSTool 12) ###
 
@@ -373,10 +372,10 @@ Generic Database Datastore Configuration File for SQLite
 
 #### Troubleshooting SQLite ####
 
-1. Because SQLite databases are a single file,
-   care must be taken to avoid multiple processes writing to the same database at once.
-   Consequently, avoid opening multiple datastores at startup and/or in commands that write to the same file because
-   the database may become corrupted.
+1.  Because SQLite databases are a single file,
+    care must be taken to avoid multiple processes writing to the same database at once.
+    Consequently, avoid opening multiple datastores at startup and/or in commands that write to the same file because
+    the database may become corrupted.
 
 ### SQL Server Database Example ###
  

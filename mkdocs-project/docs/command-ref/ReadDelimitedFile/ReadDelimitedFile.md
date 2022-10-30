@@ -17,22 +17,22 @@ This command is useful for processing comma-separated-value (CSV) files exported
 and mining data from the web (see also the [`WebGet`](../WebGet/WebGet.md) and
 [`FTPGet`](../FTPGet/FTPGet.md) commands).  The command processes files that include the following types of information:
 
-1. Comments:
-	1. in the header (before data) and embedded in data records (e.g., because bad data values were commented out).
-	2. as non-commented line at the top of the file, which can be skipped
-2. Data records, in column format, containing date/time strings, data values, and other information.
-3. Metadata, such as station identifiers, data types, units,
-and interval may be read from the file or specified with command parameters.
+1.  Comments:
+    1.  in the header (before data) and embedded in data records (e.g., because bad data values were commented out).
+    2.  as non-commented line at the top of the file, which can be skipped
+2.  Data records, in column format, containing date/time strings, data values, and other information.
+3.  Metadata, such as station identifiers, data types, units,
+    and interval may be read from the file or specified with command parameters.
 
 The mapping of data in the file to data in the time series occurs first by assigning column names, using one of the following methods:
 
-1. Read column names from a line in the file,
-suitable when the column headings are simple strings and agree closely with the contents of the data columns.
-2. Assign column names with command parameters.
-The file being read may include metadata within column headings and data records;
-however, the information can be difficult to extract because of formatting.
-For example, column headings may include the data type as `“Precipitation\n(in)”` (where `\n` indicates a newline).
-Consequently, the command supports assigning column names via command parameters in order to ensure robust data handling.
+1.  Read column names from a line in the file,
+    suitable when the column headings are simple strings and agree closely with the contents of the data columns.
+2.  Assign column names with command parameters.
+    The file being read may include metadata within column headings and data records;
+    however, the information can be difficult to extract because of formatting.
+    For example, column headings may include the data type as `“Precipitation\n(in)”` (where `\n` indicates a newline).
+    Consequently, the command supports assigning column names via command parameters in order to ensure robust data handling.
 
 In any case, rather than trying to automatically determine other metadata like data type
 and units from the column heading, the values can be assigned with the `DataType` and `Units` parameters.
@@ -80,7 +80,7 @@ Command Parameters
 |`LocationID`|The location identifier(s) to assign to time series for each of the value columns (or specify one value to apply to all columns).  The `FC[start:stop]` notation discussed for `ColumnNames` can also be used.  Can be specified with `${Property}`.|None – must be specified.|
 |`Provider`|The data provider identifier to assign to time series for each of the value columns (or specify one value to apply to all columns).  Can be specified with `${Property}`.|No provider will be assigned.|
 |`DataType`|The data type to assign to time series for each of the value columns (or specify one value to apply to all columns).  Can be specified with `${Property}`.|Use the value column names for the data types.|
-|`Interval`|The interval for the time series.   Only one interval is recognized for all the time series in the file.  Interval choices are provided when editing the command.  If it is possible that the date/times are not evenly spaced, then use the IRREGULAR interval.|None – must be specified.|
+|`Interval`|The interval for the time series.   Only one interval is recognized for all the time series in the file.  Interval choices are provided when editing the command.  If it is possible that the date/times are not evenly spaced, then use an `Irreg` interval for a precision appropriate for data values (e.g., use `IrregSecond` for real-time data). | None – must be specified.|
 |`Scenario`|The scenario to assign to time series for each of the value columns (or specify one value to apply to all columns).  Can be specified with `${Property}`.|No scenario will be assigned.|
 |`Units`|The data units to assign to time series for each of the value columns (or specify one value to apply to all columns).  Can be specified with `${Property}`.|No units will be assigned.|
 |`Missing`|Strings that indicate missing data in the file (e.g., `“m”`).  Can be specified with `${Property}`.|Interpret empty column values as missing data.|
@@ -100,7 +100,7 @@ format where column headings are complex enough to require assignment of column 
 ```
 #...
 #Data is returned in TAB delimited format. Data miners may find help on automating
-#queries and formatting parameters at http://www.dwr.state.co.us/help
+#queries and formatting parameters at https://www.dwr.state.co.us/help
 #
 #Gaging Station: ALVA B. ADAMS TUNNEL AT EAST PORTAL NEAR ESTES PARK (ADATUNCO)
 #Retrieved: 3/30/2010 03:04
@@ -110,6 +110,7 @@ ADATUNCO        2006-10-01 00:00        2.34    225
 ADATUNCO        2006-10-01 00:15        2.34    225
 ...etc...
 ```
+
 The following dialog is used to edit the command and illustrates the syntax for the command.
 The column headings are skipped because they are assigned with a command parameter.
 Because the delimiter is a tab, the space between date and time columns is NOT used

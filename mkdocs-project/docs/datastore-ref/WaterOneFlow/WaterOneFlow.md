@@ -18,7 +18,7 @@ developed by the Consortium of Universities for the Advancement of Hydrologic Sc
 Access to web service documentation, registry,
 and other information are available at the following link:
 
-[http://his.cuahsi.org/wofws.html](http://his.cuahsi.org/wofws.html)
+[https://his.cuahsi.org/wofws.html](https://his.cuahsi.org/wofws.html)
 
 The WaterOneFlow web services are implemented using SOAP technologies.
 A Java API has been generated using the Web Services Description Language (WSDL) file:
@@ -42,7 +42,7 @@ A WaterOneFlow data store is configured by specifying the location of
 a web service root URL (see section on configuration below).
 A registry of WaterOneFlow WaterML services can be found at the following location:
 
-[http://hiscentral.cuahsi.org/pub_services.aspx](http://hiscentral.cuahsi.org/pub_services.aspx)
+[https://hiscentral.cuahsi.org/pub_services.aspx](https://hiscentral.cuahsi.org/pub_services.aspx)
 
 To select a version 1.0 WSDL, review the URL for the WSDL (e.g.,
 [http://river.sdsc.edu/wateroneflow/EPA/cuahsi_1_0.asmx?WSDL)](http://river.sdsc.edu/wateroneflow/EPA/cuahsi_1_0.asmx?WSDL))
@@ -56,7 +56,7 @@ and look for `cuahsi_1_0` in the URL.  Alternatively, view the WSDL file and loo
 WaterOneFlow/WaterML 1.1 appears to have been a development version and introduces changes that are not supported in TSTool.
 WaterML 2.0 is being reviewed as an Open Geospatial Consortium (OGC) standard, but is not yet supported in TSTool:
 
-[http://www.opengeospatial.org/projects/groups/waterml2.0swg](http://www.opengeospatial.org/projects/groups/waterml2.0swg)
+[https://www.opengeospatial.org/projects/groups/waterml2.0swg](https://www.opengeospatial.org/projects/groups/waterml2.0swg)
 
 It is expected that organizations that currently publish data in WaterML
 will update their services to version 2.0 and support for version 2.0
@@ -81,30 +81,30 @@ Network:SiteID.Vocabulary.VariableID-DataType.Interval~DataStoreName
 
 where identifier parts are described as
 
-* `Location` - The `Network` and `SiteID` corresponds to the site information.
-* `DataSource` - The `Vocabulary` corresponds to the vocabulary attribute of the `variableCode` element,
-found in the variable element.
-For example, the `Vocabulary` is used for NWIS for USGS NWIS data.
-Variable data are retrieved using the `getVariableInfoObject` SOAP request
-(one cached query and then mine the data as necessary).
-* `DataType` - The `VariableID` corresponds to the `variableID` attribute of the `variableCode` element, found in the variable element.
-The `DataType` is a modifier on the variable and corresponds to the `dataType` element found in the variable element.
-For example `00060-Average` is used for USGS NWIS daily value average streamflow.
-Variable data are retrieved using the `getVariableInfoObject` SOAP request (one cached query and then mine the data as necessary).
-* `Interval` – The `Interval` corresponds to the `UnitAbbrevation` element of the unit element, found in the `timeSupport` element,
-found in the variable element.  For example, `d` would be used to indicate daily values in the USGS NWIS daily value data.
-Variable data are retrieved using the `getVariableInfoObject` SOAP request (one cached query and then mine the data as necessary).
-* `DataStoreName` is the user-defined data store name from the configuration information.
+*   `Location` - The `Network` and `SiteID` corresponds to the site information.
+*   `DataSource` - The `Vocabulary` corresponds to the vocabulary attribute of the `variableCode` element,
+    found in the variable element.
+    For example, the `Vocabulary` is used for NWIS for USGS NWIS data.
+    Variable data are retrieved using the `getVariableInfoObject` SOAP request
+    (one cached query and then mine the data as necessary).
+*   `DataType` - The `VariableID` corresponds to the `variableID` attribute of the `variableCode` element, found in the variable element.
+    The `DataType` is a modifier on the variable and corresponds to the `dataType` element found in the variable element.
+    For example `00060-Average` is used for USGS NWIS daily value average streamflow.
+    Variable data are retrieved using the `getVariableInfoObject` SOAP request (one cached query and then mine the data as necessary).
+*   `Interval` – The `Interval` corresponds to the `UnitAbbrevation` element of the unit element, found in the `timeSupport` element,
+    found in the variable element.  For example, `d` would be used to indicate daily values in the USGS NWIS daily value data.
+    Variable data are retrieved using the `getVariableInfoObject` SOAP request (one cached query and then mine the data as necessary).
+*   `DataStoreName` is the user-defined data store name from the configuration information.
 
 Additional time series information is set as follows:
 
-* Data units are taken from the following:
-	+  WaterML `unitCode` in variable element
-* Missing numerical values are internally represented as `NaN` and are assigned to any date/times in the period that do not have values.
-	+ WaterML `noDataValue` in variable element is checked and matching data values are handled as missing
-* Data value flags, if encountered, are retained in the time series.
-However, because the USGS uses `A` for approved, it may be necessary to ignore this flag so that other flags stand out more when visualized.
-* Data value qualifiers definitions are saved with time series and are available to use in time series visualization as flag definitions
+*   Data units are taken from the following:
+    +   WaterML `unitCode` in variable element
+*   Missing numerical values are internally represented as `NaN` and are assigned to any date/times in the period that do not have values.
+    +   WaterML `noDataValue` in variable element is checked and matching data values are handled as missing
+*   Data value flags, if encountered, are retained in the time series.
+    However, because the USGS uses `A` for approved, it may be necessary to ignore this flag so that other flags stand out more when visualized.
+*   Data value qualifiers definitions are saved with time series and are available to use in time series visualization as flag definitions
 
 ## Limitations ##
 
@@ -112,17 +112,17 @@ This section will be updated to apply to WaterOneFlow.  Currently it focuses on 
 
 USGS NWIS data store limitations relative to TSTool standard features are as follows:
 
-* Interpretation of USGS data is limited by WaterML limitations, as follows:
-	+ WaterML files from NWIS do not indicate the interval of the data.
-	Day can be assumed for the daily values web service; however, trying to read the WaterML file later will require that the interval is specified.
-	+ Some of the descriptions contain units, which may lead to confusion if time series are processed into different units.
-* The USGS web services does not allow for all historical data to be returned.
-Specifying no period returns only the most recent value.
-Start and end dates must be specified to retrieve a longer period; however,
-there is no way to request the entire available period.
-Consequently, users must request a period of interest for their analysis and the
-browsing features of TSTool cannot list the available period
-(because doing so would require querying all data, which would be very slow).
+*   Interpretation of USGS data is limited by WaterML limitations, as follows:
+    +   WaterML files from NWIS do not indicate the interval of the data.
+        Day can be assumed for the daily values web service; however, trying to read the WaterML file later will require that the interval is specified.
+    +   Some of the descriptions contain units, which may lead to confusion if time series are processed into different units.
+*   The USGS web services does not allow for all historical data to be returned.
+    Specifying no period returns only the most recent value.
+    Start and end dates must be specified to retrieve a longer period; however,
+    there is no way to request the entire available period.
+    Consequently, users must request a period of interest for their analysis and the
+    browsing features of TSTool cannot list the available period
+    (because doing so would require querying all data, which would be very slow).
 
 ## Datastore Configuration File ##
 

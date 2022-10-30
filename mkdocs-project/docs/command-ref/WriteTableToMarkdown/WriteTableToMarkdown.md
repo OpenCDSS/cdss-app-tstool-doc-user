@@ -54,7 +54,7 @@ Command Parameters
 |`WriteHeaderComments`|Indicates whether to write the file header comments, `True` or `False`. File header comments include information about the creator of the file.  Comments are written as HTML `<!-- -->` comment, which typically passes through software that converts Markdown to HTML for viewing.| `False`|
 |`NaNValue`|The value to write for `NaN` data values.  Specify the word `Blank` to write a blank (empty string).|`NaN`|
 |`OutputSchemaFile`|Name of schema file to write, useful to help other software understand contents of the delimited file.  See the `OutputSchemaFormat` parameter.  This is an experimental feature being evaluated to facilitate data exchange between software.|Do not create schema file.|
-|`OutputSchemaFormat`|Schema format, one of the following, output is limited but will be expanded in the future:<ul><li>`JSONTableSchema` – see [frictionlessdata schema](http://specs.frictionlessdata.io/json-table-schema)</li><li>`GoogleBigQuery` – see [Google big query](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables)</li></ul>| `JSONTableSchema`|
+|`OutputSchemaFormat`|Schema format, one of the following, output is limited but will be expanded in the future:<ul><li>`JSONTableSchema` – see [frictionlessdata schema](https://specs.frictionlessdata.io/table-schema/)</li><li>`GoogleBigQuery` – see [Google big query](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables)</li></ul>| `JSONTableSchema`|
 
 ## Examples ##
 

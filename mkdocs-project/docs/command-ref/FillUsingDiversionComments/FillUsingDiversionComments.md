@@ -29,7 +29,8 @@ If the `not_used` value matches one of the values shown in the following table f
 irrigation year (November of the previous year to October of the irrigation year),
 the diversion (or reservoir release) data for the specified irrigation year
 can be interpreted as zero (see the
-[State of Colorado’s Diversion Records Standard](http://hermes.cde.state.co.us/drupal/islandora/object/co%3A20416) for more information).
+[State of Colorado’s Diversion Records Standard](https://dnrweblink.state.co.us/dwr/ElectronicFile.aspx?docid=3600965&dbid=0) for more information).
+Use [this search tool](https://dwr.state.co.us/tools/LFWidget/GuidanceDocuments) to find the most recent documentation.
 
 **<p style="text-align: center;">
 Diversion Comment `not_used` Flag Resulting in Additional Zero Values

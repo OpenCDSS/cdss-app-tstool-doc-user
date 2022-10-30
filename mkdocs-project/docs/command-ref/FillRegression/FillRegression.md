@@ -109,9 +109,9 @@ Statistics from Regression Analysis
 | `SYfilled` | Dependent | Raw | The standard deviation of the values that were used to fill missing points. |
 | `SkewYfilled` | Dependent | Raw | The skew, or non-symmetry, of the values that were used to fill missing points. |
 
-Student’s T-distribution ([http://en.wikipedia.org/wiki/Student's_t-distribution](http://en.wikipedia.org/wiki/Student's_t-distribution))
+Student’s T-distribution ([https://en.wikipedia.org/wiki/Student's_t-distribution](https://en.wikipedia.org/wiki/Student's_t-distribution))
 is similar to a standard distribution, but has a higher probability of producing outliers.
-Using the Apache Math library ([http://commons.apache.org/proper/commons-math/javadocs/api-3.2/index.html)](http://commons.apache.org/proper/commons-math/javadocs/api-3.2/index.html)),
+Using the Apache Math library ([https://commons.apache.org/proper/commons-math/](https://commons.apache.org/proper/commons-math/)),
 the appropriate distribution for the size of the dataset is generated,
 and the value at which the desired confidence level is satisfied is calculated.
 For example, a confidence level of approximately 40%, or .4, would require a test score of at least .5 given a sample size of 10.

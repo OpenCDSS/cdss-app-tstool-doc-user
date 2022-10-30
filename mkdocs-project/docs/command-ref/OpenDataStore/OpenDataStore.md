@@ -99,7 +99,7 @@ use the parameter: `ConnectionProperties=;memory=false`.
 If the database is read into memory at startup, initial queries may be slow; however,
 the speed generally incresaes as more queries occur.
 
-See the [UCanAccess documentation](http://ucanaccess.sourceforge.net/site.html#examples)
+See the [UCanAccess documentation](https://ucanaccess.sourceforge.net/site.html#examples)
 for other connection string properties.
 
 If it is desired to load the full database at startup and TSTool runs out of memory,

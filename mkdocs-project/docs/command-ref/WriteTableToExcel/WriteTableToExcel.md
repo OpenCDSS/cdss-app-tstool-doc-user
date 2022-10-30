@@ -19,7 +19,7 @@ A contiguous block of cells (rectangle) must be specified in one of the followin
 * Specify the name of an Excel named range.
 * Specify a table name (essentially a named range).
 
-TSTool uses the Apache POI software ([http://poi.apache.org](http://poi.apache.org))
+TSTool uses the Apache POI software ([https://poi.apache.org](https://poi.apache.org))
 to read/write the Excel file and consequently functionality is constrained by the features of that software package.
 
 The following are limitations of this command:

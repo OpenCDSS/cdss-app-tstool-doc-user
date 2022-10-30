@@ -18,7 +18,7 @@ Currently the command can set the following properties:
 
 * Freeze pane for rows and columns
 
-TSTool uses the [Apache POI software](http://poi.apache.org) to read/write the Excel file
+TSTool uses the [Apache POI software](https://poi.apache.org) to read/write the Excel file
 and consequently functionality is constrained by the features of that software package.
 
 ## Command Editor ##

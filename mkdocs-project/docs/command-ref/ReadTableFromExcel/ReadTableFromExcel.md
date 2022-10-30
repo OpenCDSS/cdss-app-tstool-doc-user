@@ -24,7 +24,7 @@ in the first data row being read (NOT the column name row) – data types must b
 for all cells in a column, although blanks are allowed.
 Table column names are determined according to the `ExcelColumnNames` command parameter.
 
-TSTool uses the [Apache POI software](http://poi.apache.org) to read the Excel file
+TSTool uses the [Apache POI software](https://poi.apache.org) to read the Excel file
 and consequently functionality is constrained by the features of that software package.
 The software reads and writes Excel files.
 POI does not fully implement Excel functionality and consequently some formula capabilities

@@ -406,7 +406,7 @@ which will increase the amount of memory available to the JRE and programs that 
 64-bit TSTool installers will be provided in the future.
 
 **Additional Resources** – the following article provides additional information:
-[Fix "could not create the java virtual machine" issue](http://www.tomshardware.co.uk/faq/id-1761312/fix-create-java-virtual-machine-issue.html)
+[Fix "could not create the java virtual machine" issue](https://www.tomshardware.co.uk/faq/id-1761312/fix-create-java-virtual-machine-issue.html)
 
 ### Issue 2 - Error connecting to State of Colorado’s HydroBase database on State computer ###
 

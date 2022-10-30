@@ -11,7 +11,8 @@
 
 **These web services are obsolete and are no longer publicly available.
 This documentation will be retained during the transition to new web services.
-Instead, use the [Colorado HydroBase REST web services](../ColoradoHydroBaseRest/ColoradoHydroBaseRest.md).**
+Instead, use the [Colorado HydroBase REST web services](../ColoradoHydroBaseRest/ColoradoHydroBaseRest.md).
+Associated links may be broken.**
 
 The State of Colorado’s HydroBase database is the primary database for water data in Colorado.
 However, using the HydroBase datastore or input type in TSTool (see the [HydroBase Datastore appendix](../CO-HydroBase/CO-HydroBase.md)

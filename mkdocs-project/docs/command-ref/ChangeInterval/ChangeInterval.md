@@ -337,7 +337,7 @@ Not currently supported.  The data can be treated equivalently by most commands.
 Changing the interval for large interval mean to small interval instantaneous data
 involves calculating a value for each new interval based on trends found in the mean data.
 This approach has been adapted from the National Weather Service River Forecast System (NWSRFS) CHANGE-T operation
-(see [http://www.nws.noaa.gov/oh/hrl/nwsrfs/users_manual/part5/_pdf/533changet.pdf](http://www.nws.noaa.gov/oh/hrl/nwsrfs/users_manual/part5/_pdf/533changet.pdf).
+(see [National Weather Service River Forecast System CHANGE-T operation](533changet.pdf)).
 The following example demonstrates how the data is converted from the old interval to the new interval.
 A general representation is shown first followed by an example.
 

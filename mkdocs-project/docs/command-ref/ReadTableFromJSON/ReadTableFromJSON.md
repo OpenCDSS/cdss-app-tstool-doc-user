@@ -14,7 +14,7 @@
 
 ## Overview ##
 
-The `ReadTableFromJSON` command reads a table from a [JavaScript Object Notation (JSON)](http://www.json.org/) file.
+The `ReadTableFromJSON` command reads a table from a [JavaScript Object Notation (JSON)](https://www.json.org/) file.
 
 JSON is a hierarchical data representation that can have multiple nesting levels.
 Arrays are indicated by brackets `[ ]`,

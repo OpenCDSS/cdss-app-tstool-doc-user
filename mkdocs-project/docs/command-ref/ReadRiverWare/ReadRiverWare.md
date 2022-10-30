@@ -33,8 +33,8 @@ with other time series metadata coming from the first lines in the file.
 
 ### 2. RiverWare Data Format (RDF) file
 
-See:  [RiverWare Technical Documentation - Output](http://www.riverware.org/PDF/RiverWare/documentation/Output.pdf),
-which can store1+ time series, including multiple runs and multiple slots for each run.
+See:  [RiverWare Technical Documentation - Output](https://www.riverware.org/PDF/RiverWare/documentation/73_pre-release/Slots.pdf),
+which can store 1+ time series, including multiple runs and multiple slots for each run.
 Time series are treated as ensemble traces if `idx_sequential = 1` or `number_of_runs > 0` in the file,
 in which case the individual time series will have a sequence identifier corresponding to the run number.
 The `Output` command parameter can be used to indicate whether the results of the

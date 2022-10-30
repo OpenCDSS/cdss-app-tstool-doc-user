@@ -32,7 +32,7 @@ in the future) – work around by adding an extra delimiter or ensure that the l
 Strings that contain quotes are checked.
 If two sequential quotes are found in input,
 they are converted to one quote in the table values
-(see [comma-separated-value, CSV, standards](http://en.wikipedia.org/wiki/Comma-separated_values)).
+(see [comma-separated-value, CSV, standards](https://en.wikipedia.org/wiki/Comma-separated_values)).
 Subsequent writes of the table will re-introduce the repeated quote to indicate an embedded quote.
 
 ## Command Editor ##

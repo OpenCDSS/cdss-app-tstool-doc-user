@@ -12,7 +12,7 @@
 ## Overview ##
 
 The `WriteTimeSeriesToExcel` command writes one or more time series to an Excel workbook.  The following functionality is provided:
-	
+
 * Time series are written in columns (see
 [`WriteTimeSeriesToExcelBlock`](../WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock.md) for alternate formatting options).
 * The worksheet and position in worksheet can be specified.
@@ -21,7 +21,7 @@ The `WriteTimeSeriesToExcel` command writes one or more time series to an Excel 
 Currently date/time values are written as strings but Excel date objects will be enabled in the future.
 * Cell comments can be formatted using data flags and other time series properties.
 
-TSTool uses the [Apache POI software](http://poi.apache.org) to read/write the Excel file
+TSTool uses the [Apache POI software](https://poi.apache.org) to read/write the Excel file
 and consequently functionality is constrained by the features of that software package.
 
 ## Command Editor ##
@@ -104,13 +104,13 @@ Command Parameters
 |`ExcelTableName`|Indicates the block of cells to write, using an Excel named range.|Must specify address using one of available address parameters.|
 |`KeepOpen`|Indicate whether to keep the Excel file open (`True`) or close after creating (`False`).  Keeping the file open will increase performance because later commands will not need to reread the workbook.  Make sure to close the file in the last Excel command.|`False`|
 |`DateTimeColumn`|The name of the column for the date/time.|Date if day, month, or year interval, `DateTime` otherwise.|
-|`DateTimeFormatterType`|Specify the date/time formatter type, which indicates the syntax for `DateTimeFormat`.  Currently, only `C` is supported, corresponding to the C programming language [strftime() function](http://man7.org/linux/man-pages/man3/strftime.3.html), which is also used by other software.|`C`|
+|`DateTimeFormatterType`|Specify the date/time formatter type, which indicates the syntax for `DateTimeFormat`.  Currently, only `C` is supported, corresponding to the C programming language [strftime() function](https://man7.org/linux/man-pages/man3/strftime.3.html), which is also used by other software.|`C`|
 |`DateTimeFormat`|The format used to expand the date/time corresponding to each time series data value.  The format string can contain literal strings and specifiers supported by the `DateTimeFormatterType`.||
 |`DateColumn`|The name of the column for the date, if date and time need to be in separate columns.|`Date`|
-|`DateFormatterType`|Specify the date/time formatter type, which indicates the syntax for `DateFormat`.  Currently, only `C` is supported, corresponding to the C programming language [strftime() function](http://man7.org/linux/man-pages/man3/strftime.3.html), which is also used by other software.|`C`|
+|`DateFormatterType`|Specify the date/time formatter type, which indicates the syntax for `DateFormat`.  Currently, only `C` is supported, corresponding to the C programming language [strftime() function](https://man7.org/linux/man-pages/man3/strftime.3.html), which is also used by other software.|`C`|
 |`DateFormat`|The format used to expand the date/time corresponding to each time series data value.  The format string can contain literal strings and specifiers supported by the `DateFormatterType`.||
 |`TimeColumn`|The name of the column for the time, if date and time need to be in separate columns.|`Time`|
-|`TimeFormatterType`|Specify the date/time formatter type, which indicates the syntax for `TimeFormat`.  Currently, only `C` is supported, corresponding to the C programming language [strftime() function](http://man7.org/linux/man-pages/man3/strftime.3.html), which is also used by other software.|`C`|
+|`TimeFormatterType`|Specify the date/time formatter type, which indicates the syntax for `TimeFormat`.  Currently, only `C` is supported, corresponding to the C programming language [strftime() function](https://man7.org/linux/man-pages/man3/strftime.3.html), which is also used by other software.|`C`|
 |`TimeFormat`|The format used to expand the date/time corresponding to each time series data value.  The format string can contain literal strings and specifiers supported by the `TimeFormatterType`.||
 |`ValueColumns`|The name(s) of the column(s) corresponding to each time series, to use for the values.  Specify with `%` formatters, `${ts:property}` and `${property}`.  In the future a parameter may be added to more specifically define the column names.|`%L_%T`|
 |`Author`|Name to use in comments for author.|No author|

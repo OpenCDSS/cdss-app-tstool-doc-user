@@ -78,6 +78,6 @@ The operator is one of the following.
 
 Additional criteria for strings include:
 
-* For `<` and `>` comparisons, `A` is less than `Z`, etc. as per the [ASCII table](http://www.asciitable.com/).
+* For `<` and `>` comparisons, `A` is less than `Z`, etc. as per the [ASCII table](https://www.asciitable.com/).
 * Comparisons are case-specific.  Support for case-independent comparisons may be added in the future.
 * Null string is treated as empty string for `isempty` and `!isempty` operators.

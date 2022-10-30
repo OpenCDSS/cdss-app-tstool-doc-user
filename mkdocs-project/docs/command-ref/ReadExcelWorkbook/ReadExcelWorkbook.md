@@ -25,7 +25,7 @@ Therefore, use `KeepOpen=True` in combination with the following.
 `WriteFile=True` to force writing the Excel workbook.
 The `NewOutputFile` parameter can also be specified to write a new output file, leaving the original Excel file intact.
 
-TSTool uses the [Apache POI software](http://poi.apache.org) to read and manipulate
+TSTool uses the [Apache POI software](https://poi.apache.org) to read and manipulate
 Excel workbooks and consequently functionality is constrained by the features of that software package.
 
 

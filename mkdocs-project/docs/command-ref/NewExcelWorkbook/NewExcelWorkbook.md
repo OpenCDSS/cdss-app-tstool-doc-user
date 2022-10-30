@@ -14,8 +14,8 @@
 The `NewExcelWorkbook` command creates a Microsoft Excel workbook file and
 optionally also creates worksheets in the new workbook.
 See also other Excel processing commands that can be used to further manipulate the Excel file.
-	
-TSTool uses the [Apache POI software](http://poi.apache.org) to write the Excel file
+
+TSTool uses the [Apache POI software](https://poi.apache.org) to write the Excel file
 and consequently functionality is constrained by the features of that software package.
 
 ## Command Editor ##
