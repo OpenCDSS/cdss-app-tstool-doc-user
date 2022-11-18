@@ -1,65 +1,65 @@
 # TSView Time Series Viewing Tools #
 
-* [Overview](#overview)
-* [Time Series Terminology](#time-series-terminology)
-* [Time Series Properties Interface](#time-series-properties-interface)
-	+ [Time Series Properties - General](#time-series-properties-general)
-	+ [Time Series Properties - Comments](#time-series-properties-comments)
-	+ [Time Series Properties - Period](#time-series-properties-period)
-	+ [Time Series Properties - Limits](#time-series-properties-limits)
-	+ [Time Series Properties - History](#time-series-properties-history)
-	+ [Time Series Properties - Data Flags](#time-series-properties-data-flags)
-* [Time Series Traces](#time-series-traces)
-* [Time Series Views](#time-series-views)
-	+ [Time Series Graph View](#time-series-graph-view)
-		- [Area Graph](#area-graph)
-		- [Area (Stacked) Graph](#area-stacked-graph)
-		- [Bar Graph](#bar-graph)
-		- [Double Mass Curve](#double-mass-curve)
-		- [Duration Graph](#duration-graph)
-		- [Line Graph](#line-graph)
-		- [Line Graph (Log Y Axis)](#line-graph-log-y-axis)
-		- [Period of Record Graph](#period-of-record-graph)
-		- [Predicted Value Graph](#predicted-value-graph)
-		- [Predicted Value Residual Graph](#predicted-value-residual-graph)
-		- [Raster Graph](#raster-graph)
-		- [XY-Scatter Graph](#xy-scatter-graph)
-	+ [Time Series Product Properties](#time-series-product-properties)
-		- [Product Properties - General](#product-properties-general)
-		- [Product Properties - Titles](#product-properties-titles)
-		- [Product Properties - Layout](#product-properties-layout)
-		- [Graph Properties - General](#graph-properties-general)
-		- [Graph Properties - Graph Type](#graph-properties-graph-type)
-		- [Graph Properties - Titles](#graph-properties-titles)
-		- [Graph Properties - X Axis](#graph-properties-x-axis)
-		- [Graph Properties - Y Axis](#graph-properties-y-axis)
-		- [Graph Properties - Data Point Label](#graph-properties-data-point-label)
-		- [Graph Properties - Legend](#graph-properties-legend)
-		- [Graph Properties - Zoom](#graph-properties-zoom)
-		- [Graph Properties - Analysis](#graph-properties-analysis)
-		- [Graph Properties - Annotations](#graph-properties-annotations)
-		- [Time Series Properties - General](#time-series-properties-general)
-		- [Time Series Properties - Graph Type](#time-series-properties-graph-type)
-		- [Time Series Properties - Axes](#time-series-properties-axes)
-		- [Time Series Properties - Symbol](#time-series-properties-symbol)
-		- [Time Series Properties - Label](#time-series-properties-label)
-		- [Time Series Properties - Legend](#time-series-properties-legend)
-		- [Time Series Properties - Analysis](#time-series-properties-analysis)
-	+ [Changing a Graph Page Layout](#changing-a-graph-page-layout)
-	+ [Time Series Summary View](#time-series-summary-view)
-	+ [Time Series Table View](#time-series-table-view)
-* [Time Series Product File Reference](#time-series-product-file-reference)
-	+ [Time Series Product File Format](#time-series-product-file-format)
-	+ [Time Series Product File - JSON Format](#time-series-product-file-json-format)
-	+ [Time Series Product File - Product Properties](#time-series-product-file-product-properties)
-	+ [Time Series Product File - Graph Properties](#time-series-product-file-graph-properties)
-	+ [Time Series Product File - Report Properties](#time-series-product-file-report-properties)
-	+ [Time Series Product File - Time Series Properties](#time-series-product-file-time-series-properties)
-	+ [Time Series Product File - Annotation Properties](#time-series-product-file-annotation-properties)
-	+ [Time Series Product File - Color Specification](#time-series-product-file-color-specification)
-	+ [Time Series Product File - Color Tables](#time-series-product-file-color-tables)
-	+ [Time Series Product File - Symbol Tables](#time-series-product-file-symbol-tables)
-* [Time Series Graph Templates](#time-series-graph-templates)
+*   [Overview](#overview)
+*   [Time Series Terminology](#time-series-terminology)
+*   [Time Series Properties Interface](#time-series-properties-interface)
+    +   [Time Series Properties - General](#time-series-properties-general)
+    +   [Time Series Properties - Comments](#time-series-properties-comments)
+    +   [Time Series Properties - Period](#time-series-properties-period)
+    +   [Time Series Properties - Limits](#time-series-properties-limits)
+    +   [Time Series Properties - History](#time-series-properties-history)
+    +   [Time Series Properties - Data Flags](#time-series-properties-data-flags)
+*   [Time Series Traces](#time-series-traces)
+*   [Time Series Views](#time-series-views)
+    +   [Time Series Graph View](#time-series-graph-view)
+        -   [Area Graph](#area-graph)
+        -   [Area (Stacked) Graph](#area-stacked-graph)
+        -   [Bar Graph](#bar-graph)
+        -   [Double Mass Curve](#double-mass-curve)
+        -   [Duration Graph](#duration-graph)
+        -   [Line Graph](#line-graph)
+        -   [Line Graph (Log Y Axis)](#line-graph-log-y-axis)
+        -   [Period of Record Graph](#period-of-record-graph)
+        -   [Predicted Value Graph](#predicted-value-graph)
+        -   [Predicted Value Residual Graph](#predicted-value-residual-graph)
+        -   [Raster Graph](#raster-graph)
+        -   [XY-Scatter Graph](#xy-scatter-graph)
+    +   [Time Series Product Properties](#time-series-product-properties)
+        -   [Product Properties - General](#product-properties-general)
+        -   [Product Properties - Titles](#product-properties-titles)
+        -   [Product Properties - Layout](#product-properties-layout)
+        -   [Graph Properties - General](#graph-properties-general)
+        -   [Graph Properties - Graph Type](#graph-properties-graph-type)
+        -   [Graph Properties - Titles](#graph-properties-titles)
+        -   [Graph Properties - X Axis](#graph-properties-x-axis)
+        -   [Graph Properties - Y Axis](#graph-properties-y-axis)
+        -   [Graph Properties - Data Point Label](#graph-properties-data-point-label)
+        -   [Graph Properties - Legend](#graph-properties-legend)
+        -   [Graph Properties - Zoom](#graph-properties-zoom)
+        -   [Graph Properties - Analysis](#graph-properties-analysis)
+        -   [Graph Properties - Annotations](#graph-properties-annotations)
+        -   [Time Series Properties - General](#time-series-properties-general)
+        -   [Time Series Properties - Graph Type](#time-series-properties-graph-type)
+        -   [Time Series Properties - Axes](#time-series-properties-axes)
+        -   [Time Series Properties - Symbol](#time-series-properties-symbol)
+        -   [Time Series Properties - Label](#time-series-properties-label)
+        -   [Time Series Properties - Legend](#time-series-properties-legend)
+        -   [Time Series Properties - Analysis](#time-series-properties-analysis)
+    +   [Changing a Graph Page Layout](#changing-a-graph-page-layout)
+    +   [Time Series Summary View](#time-series-summary-view)
+    +   [Time Series Table View](#time-series-table-view)
+*   [Time Series Product File Reference](#time-series-product-file-reference)
+    +   [Time Series Product File Format](#time-series-product-file-format)
+    +   [Time Series Product File - JSON Format](#time-series-product-file-json-format)
+    +   [Time Series Product File - Product Properties](#time-series-product-file-product-properties)
+    +   [Time Series Product File - Graph Properties](#time-series-product-file-graph-properties)
+    +   [Time Series Product File - Report Properties](#time-series-product-file-report-properties)
+    +   [Time Series Product File - Time Series Properties](#time-series-product-file-time-series-properties)
+    +   [Time Series Product File - Annotation Properties](#time-series-product-file-annotation-properties)
+    +   [Time Series Product File - Color Specification](#time-series-product-file-color-specification)
+    +   [Time Series Product File - Color Tables](#time-series-product-file-color-tables)
+    +   [Time Series Product File - Symbol Tables](#time-series-product-file-symbol-tables)
+*   [Time Series Graph Templates](#time-series-graph-templates)
 
 -------------------------
  
@@ -92,34 +92,34 @@ Regular time series lend themselves to simpler storage and faster processing
 because date/time information can be stored only for the endpoints.
 The following basic attributes are stored for each time series: 
 
-* Data interval as an interval base (e.g., `Month`, `Hour`) and multiplier
-(e.g., `1` for month, or `24` for hour) - in many cases,
-the multiplier is `1` and is not shown in output (e.g., `Month` rather than `1Month`)
-* Data type (e.g., `Streamflow`), which ideally can be checked to determine
-whether a time series contains mean, instantaneous, or accumulated values
-* Units (e.g., `CFS`), which ideally can be used to make units conversions and look up precision for output
-* Period of record, using dates that are of an appropriate precision for the interval
-* Data limits (the maximum, minimum, etc.)
-* Description (generally a station, structure, or sensor name)
-* Missing data value (used internally to mark missing data and trigger data filling, often `-999`, `NaN`, etc.)
-* Comments (often station comments, if available)
-* Genesis history (a list of comments about how the time series was created)
+*   Data interval as an interval base (e.g., `Month`, `Hour`) and multiplier
+    (e.g., `1` for month, or `24` for hour) - in many cases,
+    the multiplier is `1` and is not shown in output (e.g., `Month` rather than `1Month`)
+*   Data type (e.g., `Streamflow`), which ideally can be checked to determine
+    whether a time series contains mean, instantaneous, or accumulated values
+*   Units (e.g., `CFS`), which ideally can be used to make units conversions and look up precision for output
+*   Period of record, using dates that are of an appropriate precision for the interval
+*   Data limits (the maximum, minimum, etc.)
+*   Description (generally a station, structure, or sensor name)
+*   Missing data value (used internally to mark missing data and trigger data filling, often `-999`, `NaN`, etc.)
+*   Comments (often station comments, if available)
+*   Genesis history (a list of comments about how the time series was created)
 
 In order to uniquely and consistently identify time series,
 a multi-part time series identifier is employed, having the following parts:
 
-* Location type (optional)
-* Location (or location-sublocation)
-* Data source
-* Data type (or datatype-subdatatype)
-* Data interval (time step)
-* Scenario
+*   Location type (optional)
+*   Location (or location-sublocation)
+*   Data source
+*   Data type (or datatype-subdatatype)
+*   Data interval (time step)
+*   Scenario
 
 and optionally:
 
-* Sequence number for ensemble
-* Datastore identifier (or legacy input type)
-* Input name
+*   Sequence number for ensemble
+*   Datastore identifier (or legacy input type)
+*   Input name
 
 These time series attributes are typically concatenated into a time series identifier string.
 The following example illustrates how the basic identifier parts can be used (without input type and name):
@@ -209,20 +209,20 @@ Time Series Properties - General
 
 General time series properties are as follows:
 
-* ***Identifier*** - The five-part time series identifier without the input type and name.
-This identifier is often used internally in applications to manage time series.
-See the [Time Series Terminology](#time-series-terminology) section for a complete explanation of time series identifiers.
-* ***Identifier (with input)*** - The full identifier, including the input type and name (if available).
-The datastore identifier (or input type and name) indicate the format and storage of the data.
-* ***Alias*** - A time series may be assigned an alias to facilitate processing (e.g.,
-the alias is used by the TSTool application in time series commands).
-* ***Sequence (ensemble trace) ID*** - If the time series is part of a series of traces,
-the sequence number is used to identify the trace.  Often it is the year for the start of the trace.
-* ***Description*** - The description is a mid-length phrase (i.e.,
-longer than the location but shorter than comments) describing the time series (e.g., `XYZ RIVER AT ABC`).
-* ***Units (Current)*** - The units that are currently used for data.
-The units may have been converted from the original.
-* ***Units (Original)*** - The units in the original data source.
+*   ***Identifier*** - The five-part time series identifier without the input type and name.
+    This identifier is often used internally in applications to manage time series.
+    See the [Time Series Terminology](#time-series-terminology) section for a complete explanation of time series identifiers.
+*   ***Identifier (with input)*** - The full identifier, including the input type and name (if available).
+    The datastore identifier (or input type and name) indicate the format and storage of the data.
+*   ***Alias*** - A time series may be assigned an alias to facilitate processing (e.g.,
+    the alias is used by the TSTool application in time series commands).
+*   ***Sequence (ensemble trace) ID*** - If the time series is part of a series of traces,
+    the sequence number is used to identify the trace.  Often it is the year for the start of the trace.
+*   ***Description*** - The description is a mid-length phrase (i.e.,
+    longer than the location but shorter than comments) describing the time series (e.g., `XYZ RIVER AT ABC`).
+*   ***Units (Current)*** - The units that are currently used for data.
+    The units may have been converted from the original.
+*   ***Units (Original)*** - The units in the original data source.
 
 ### Time Series Properties - (Dynamic) Properties ###
  
@@ -252,12 +252,12 @@ Time Series Properties - Comments
 Comments for time series can be created a number of ways and may be formatted specifically for an application.
 Common ways of creating comments are:
 
-* Read comments from the original data source - this is ideal; however,
-electronic comments may not be available (e.g., the USGS previously published comments
-for data stations in hard copy water reports; however, comments may not be available electronically),
-* Format comments from existing data (e.g.,
-the figure illustrates a standard set of comments for State of Colorado data, using the
-[HydroBase input type](../datastore-ref/CO-HydroBase/CO-HydroBase.md)).
+*   Read comments from the original data source - this is ideal; however,
+    electronic comments may not be available (e.g., the USGS previously published comments
+    for data stations in hard copy water reports; however, comments may not be available electronically),
+*   Format comments from existing data (e.g.,
+    the figure illustrates a standard set of comments for State of Colorado data, using the
+    [HydroBase input type](../datastore-ref/CO-HydroBase/CO-HydroBase.md)).
 
 In the future, the time series dynamic properties may be used more and text comments less.
  
@@ -273,15 +273,15 @@ Time Series Properties - Period
 
 Properties related to the period are as follows:
 
-* ***Current (reflects manipulation)*** - The current period is used to allocate computer memory for the time series data.
-This period may be set by an application (e.g., when creating model input files a specific period may be used).
-The precision of the date/time objects should generally be consistent with the time series data interval.
-* ***Original (from input)*** - The original period can be used to indicate the full period available from a database.
-Setting the original period can sometimes be complicated by how missing data are handled
-(e.g., a database or file may indicate a certain period but a much shorter period is actually available).
-* ***Total Points*** - Total number of data points.  If a regular time series, this is computed from the period.
-If an irregular time series, the number of points is the count of all data values.
-The data points may include missing data – see the data limits for additional information.
+*   ***Current (reflects manipulation)*** - The current period is used to allocate computer memory for the time series data.
+    This period may be set by an application (e.g., when creating model input files a specific period may be used).
+    The precision of the date/time objects should generally be consistent with the time series data interval.
+*   ***Original (from input)*** - The original period can be used to indicate the full period available from a database.
+    Setting the original period can sometimes be complicated by how missing data are handled
+    (e.g., a database or file may indicate a certain period but a much shorter period is actually available).
+*   ***Total Points*** - Total number of data points.  If a regular time series, this is computed from the period.
+    If an irregular time series, the number of points is the count of all data values.
+    The data points may include missing data – see the data limits for additional information.
  
 ### Time Series Properties - Limits ###
  
@@ -367,10 +367,10 @@ must be taken to understand their meaning, especially when using data from multi
 In general, the term time series traces refers to a group of time series,
 often shown in overlapping fashion.  Common uses of time series traces are:
 
-* Separate a full time series into annual traces and plot them on top of each other,
-shifted so that they all start at the same date/time,
-* Run a model or analytical tool multiple times, with input being a series of input traces,
-and generating a series of output traces, in order to produce probabilistic simulations.
+*   Separate a full time series into annual traces and plot them on top of each other,
+    shifted so that they all start at the same date/time,
+*   Run a model or analytical tool multiple times, with input being a series of input traces,
+    and generating a series of output traces, in order to produce probabilistic simulations.
 
 The power of using traces is that a large amount of data can be used to
 visualize and study statistical qualities of the data, as shown in the following figure.
@@ -403,9 +403,9 @@ Although most illustrations use simple time series, most features also are avail
 The main components of the TSView package are configured to provide multiple views for time series data.
 The three main views that are available are:
 
-1. ***Graph*** - line, bar, or other graph
-2. ***Summary*** - text report suitable for the data type and interval
-3. ***Table*** - spreadsheet-like table with scrolling, suitable for export to other tools
+1.  ***Graph*** - line, bar, or other graph
+2.  ***Summary*** - text report suitable for the data type and interval
+3.  ***Table*** - spreadsheet-like table with scrolling, suitable for export to other tools
 
 The initial view for a time series list is typically determined from the actions of the software user.
 For example, a ***Graph*** button may be displayed on a screen,
@@ -444,52 +444,52 @@ Example Line Graph for Monthly Streamflow
 
 The graph view is divided into the following main areas:
 
-* ***Graph Page*** - The graph page (drawing canvas) is the area where the graph and legend are drawn.
-This area is used to interact with the graph via the mouse cursor.
-More than one graph can be drawn in the page (see the
-[Time Series Product File Reference](#time-series-product-file-reference) section for additional details).
-If zooming is supported for the graph, a box can be drawn with the mouse to zoom in to a shorter period.
-Right-click over a graph of interest to show the popup menu for graph
-properties and analysis details (e.g., regression results).  The graph page is essentially a preview of a printed graph.
-* ***Overview Graph*** - The overview (also called reference) graph below the main graph
-canvas shows the current view extent (the white area in reference graph in the figure above).
-The overview graph is only shown for graph types that support zooming.
-If shown, it can be used for zooming, similar to the main graph.
-The time series with the longest period of record is drawn in the
-reference graph to illustrate variations in the data over time.
-* ***Page/Zoom Buttons*** - Under the graph areas is a layer of buttons used for zooming.
-The buttons facilitate paging (scrolling) through data as described below.
-For all paging operations, the visible graph extent (or page) is maintained during the paging.
-Paging can use the buttons or keys described below.
-To use the keyboard, first click in the main graph canvas to shift focus to that area.
-	+ ***|<*** or ***Start*** - Scroll the visible window to the start of the period.
-	+ ***<<*** or ***Page Down*** - Scroll the visible window one full page to the left (earlier in time).
-	+ ***<*** or ***Left Arrow*** - Scroll the visible window 1/2 page to the left.
-	+ ***>*** or ***Right Arrow*** - Scroll the visible window 1/2 page to the right (later in time).
-	+ ***>>*** or ***Page Up*** - Scroll the visible window a full page to the right.
-	+ ***>|*** or ***End*** - Scroll the visible window to the end of the period.
-	+ ***Zoom Out*** - Zoom to the full time period.
-* ***Tracker*** - Indicate the main behavior of the mouse tracker.  See also the time series product tracker properties to control features.
-	+ ***Nearest*** – highlight the nearest point to the mouse.
-	+ ***NearestTime*** – highlight the nearest point to the mouse on each time series, considering only time for proximity.
-	+ ***None*** – do not show tracker.
-* ***Main Buttons*** The bottom row of buttons provides features for displaying other views, printing, and exporting:
-	+ ***Summary*** Display the summary view for the time series (see the [Time Series Summary View](#time-series-summary-view) section).
-	+ ***Table*** Display the table view for the time series (see the [Time Series Table View](#time-series-table-view) section).
-	+ ***Print*** Print the graph.  Because the physical extents of the printed page are different from the visible window,
-	the printed graph may not exactly match the viewed version (e.g., more or less axis labels may be used).
-	+ ***Save*** Save the graph as a Portable Network Graphic (PNG), JPEG graphic,
-	a [DateValue file](../datastore-ref/DateValue/DateValue.md) (a useful time series format),
-	Time Series Product file (see the [Time Series Product File Reference](#time-series-product-file-reference) section),
-	or other formats, by selecting from the choices.
-	Depending on the main application, saving to a database as a time series product may also be enabled.
-	+ ***Close*** Close the graph window.  If related summary or table windows are still visible,
-	the graph view can be quickly re-displayed by pressing the ***Graph*** button on the other view windows.
-	If the graph properties have been changed but have not been saved, a warning will be displayed asking whether to save the changes.
-* ***Status Message Area*** The lower-left status message area is used to provide general user instructions and feedback.
-* ***Mouse Tracker Area*** The lower-right status message area is used to indicate the position of the mouse on a graph, in data units.
-The coordinates are typically shown using an appropriate precision as determined from the time series date/time precision and data units.
-If a right y-axis is enabled in the graph, then both left and right y-axis tracker information will be shown.
+*   ***Graph Page*** - The graph page (drawing canvas) is the area where the graph and legend are drawn.
+    This area is used to interact with the graph via the mouse cursor.
+    More than one graph can be drawn in the page (see the
+    [Time Series Product File Reference](#time-series-product-file-reference) section for additional details).
+    If zooming is supported for the graph, a box can be drawn with the mouse to zoom in to a shorter period.
+    Right-click over a graph of interest to show the popup menu for graph
+    properties and analysis details (e.g., regression results).  The graph page is essentially a preview of a printed graph.
+*   ***Overview Graph*** - The overview (also called reference) graph below the main graph
+    canvas shows the current view extent (the white area in reference graph in the figure above).
+    The overview graph is only shown for graph types that support zooming.
+    If shown, it can be used for zooming, similar to the main graph.
+    The time series with the longest period of record is drawn in the
+    reference graph to illustrate variations in the data over time.
+*   ***Page/Zoom Buttons*** - Under the graph areas is a layer of buttons used for zooming.
+    The buttons facilitate paging (scrolling) through data as described below.
+    For all paging operations, the visible graph extent (or page) is maintained during the paging.
+    Paging can use the buttons or keys described below.
+    To use the keyboard, first click in the main graph canvas to shift focus to that area.
+    +   ***|<*** or ***Start*** - Scroll the visible window to the start of the period.
+    +   ***<<*** or ***Page Down*** - Scroll the visible window one full page to the left (earlier in time).
+    +   ***<*** or ***Left Arrow*** - Scroll the visible window 1/2 page to the left.
+    +   ***>*** or ***Right Arrow*** - Scroll the visible window 1/2 page to the right (later in time).
+    +   ***>>*** or ***Page Up*** - Scroll the visible window a full page to the right.
+    +   ***>|*** or ***End*** - Scroll the visible window to the end of the period.
+    +   ***Zoom Out*** - Zoom to the full time period.
+*   ***Tracker*** - Indicate the main behavior of the mouse tracker.  See also the time series product tracker properties to control features.
+    +   ***Nearest*** – highlight the nearest point to the mouse.
+    +   ***NearestTime*** – highlight the nearest point to the mouse on each time series, considering only time for proximity.
+    +   ***None*** – do not show tracker.
+*   ***Main Buttons*** The bottom row of buttons provides features for displaying other views, printing, and exporting:
+    +   ***Summary*** Display the summary view for the time series (see the [Time Series Summary View](#time-series-summary-view) section).
+    +   ***Table*** Display the table view for the time series (see the [Time Series Table View](#time-series-table-view) section).
+    +   ***Print*** Print the graph.  Because the physical extents of the printed page are different from the visible window,
+        the printed graph may not exactly match the viewed version (e.g., more or less axis labels may be used).
+    +   ***Save*** Save the graph as a Portable Network Graphic (PNG), JPEG graphic,
+        a [DateValue file](../datastore-ref/DateValue/DateValue.md) (a useful time series format),
+        Time Series Product file (see the [Time Series Product File Reference](#time-series-product-file-reference) section),
+        or other formats, by selecting from the choices.
+        Depending on the main application, saving to a database as a time series product may also be enabled.
+    +   ***Close*** Close the graph window.  If related summary or table windows are still visible,
+        the graph view can be quickly re-displayed by pressing the ***Graph*** button on the other view windows.
+        If the graph properties have been changed but have not been saved, a warning will be displayed asking whether to save the changes.
+*   ***Status Message Area*** The lower-left status message area is used to provide general user instructions and feedback.
+*   ***Mouse Tracker Area*** The lower-right status message area is used to indicate the position of the mouse on a graph, in data units.
+    The coordinates are typically shown using an appropriate precision as determined from the time series date/time precision and data units.
+    If a right y-axis is enabled in the graph, then both left and right y-axis tracker information will be shown.
 
 Within each graph page it is possible to draw more than one graph, each with its own titles, legend, etc.
 The [Time Series Product Properties](#time-series-product-properties) section (below)
@@ -503,64 +503,64 @@ Because TSView is a general tool, a number of rules are in place when viewing ti
 (see the [Time Series Product Properties](#time-series-product-properties)
 section for information on changing specific graph properties to override the defaults):
 
-1. Time series plotted on the same graph should generally have the
-same units or have units that can be readily converted.
-If the units are not consistent,
-a warning will be displayed and the units will be displayed in the legend rather on the axis.
-2. Time series can have different data intervals (e.g., daily data can be plotted with monthly data).
-However, other output options, such as reports, may not allow the same flexibility.
-It is important to understand the data type characteristics.
-For example, some data are instantaneous (e.g., real-time streamflow)
-whereas other data are accumulated (e.g., precipitation) or mean (e.g., mean temperature).
-Therefore, the representation of the data may need to be selected with care to ensure consistency.
-For example, some data intervals and types may be better represented as bars and others as lines or points.
-3. Data values are plotted at exactly the point that they are recorded.
-The plot positions are determined using the year as the whole number and months, days, etc.
-to determine the fractional part of the plot position.
-The numerical positions are typically not evident because labeling uses data units, including dates.
-The plot positions are determined from the dates associated with data and no adjustments
-are made to plot in the middle an interval.
-For example, monthly data are plotted at the first day of the month (not day 15).
-Properties to override this convention may be implemented in the future.
-Bar graph properties can be used to indicate whether the bars are
-drawn to the left or right of the date, or centered on the date.
-This allows flexibility to show a period over which a value was recorded, if appropriate.
-4. The mouse coordinates that are displayed by the mouse tracker
-are computed by interpolating screen pixels back to data coordinates
-(which involves a conversion of the plot position to date/time notation).
-Consequently, the values shown may be rounded off (depending on the zoom extent and data precision).
-The mouse coordinates are displayed based on the precision of the time series data.
-When moved, the mouse will display the same date until the date changes within the given precision.
-For example, for monthly data, moving the mouse left to right,
-the mouse coordinate will display as `1999-01` as soon as the date changes from `1998-12` to `1999-01`.
-The label will remain at `1999-01` until `1999-02` is encountered.
-Because data values are drawn at points, to ensure that the date/time is correctly displayed,
-position the mouse slightly to the right of the point to see the date corresponding to the value.
-This is very important for bar graphs because the bar may extend over several dates.
-If specific values need to be determined, use the summary or table views.
-5. Labels for axes are determined automatically in most cases based on the font requirements,
-available display space, and data range.
-Major and minor tic marks are drawn to help determine the data coordinates.
-Labels are redrawn as the visible period is changed.
-6. The legend lists the time series in the graph.  Left and right y-axis legends are shown.
-Clicking on a time series in the legend will highlight the time series in the graph and clicking on again will un-highlight.
-This feature is implemented for line graphs and will be expanded to other graph types in the future.
-7. Graphs that can be zoomed do not allow the vertical axis to be re-scaled on the fly.
-This capability is being evaluated.
-8. Currently, graph types cannot be universally mixed for time series on a graph.
-In other words, a graph cannot contain a bar graph for one time series and a line graph for another time series.
-However, this functionality is being added over time.
-For example time series can be drawn using line graph type on top of stacked area graph.
-A work-around is to use multiple graphs on a page or right y-axis
-(see the [Time Series Product Properties](#time-series-product-properties) section for an example).
-9. The precision used to format graph labels is determined from data unit information provided by the application.
-This generally produces acceptable graphs.
-However, in some cases, the range of values being plotted results in
-inappropriate labels where label values are truncated and/or repeated.
+1.  Time series plotted on the same graph should generally have the
+    same units or have units that can be readily converted.
+    If the units are not consistent,
+    a warning will be displayed and the units will be displayed in the legend rather on the axis.
+2.  Time series can have different data intervals (e.g., daily data can be plotted with monthly data).
+    However, other output options, such as reports, may not allow the same flexibility.
+    It is important to understand the data type characteristics.
+    For example, some data are instantaneous (e.g., real-time streamflow)
+    whereas other data are accumulated (e.g., precipitation) or mean (e.g., mean temperature).
+    Therefore, the representation of the data may need to be selected with care to ensure consistency.
+    For example, some data intervals and types may be better represented as bars and others as lines or points.
+3.  Data values are plotted at exactly the point that they are recorded.
+    The plot positions are determined using the year as the whole number and months, days, etc.
+    to determine the fractional part of the plot position.
+    The numerical positions are typically not evident because labeling uses data units, including dates.
+    The plot positions are determined from the dates associated with data and no adjustments
+    are made to plot in the middle an interval.
+    For example, monthly data are plotted at the first day of the month (not day 15).
+    Properties to override this convention may be implemented in the future.
+    Bar graph properties can be used to indicate whether the bars are
+    drawn to the left or right of the date, or centered on the date.
+    This allows flexibility to show a period over which a value was recorded, if appropriate.
+4.  The mouse coordinates that are displayed by the mouse tracker
+    are computed by interpolating screen pixels back to data coordinates
+    (which involves a conversion of the plot position to date/time notation).
+    Consequently, the values shown may be rounded off (depending on the zoom extent and data precision).
+    The mouse coordinates are displayed based on the precision of the time series data.
+    When moved, the mouse will display the same date until the date changes within the given precision.
+    For example, for monthly data, moving the mouse left to right,
+    the mouse coordinate will display as `1999-01` as soon as the date changes from `1998-12` to `1999-01`.
+    The label will remain at `1999-01` until `1999-02` is encountered.
+    Because data values are drawn at points, to ensure that the date/time is correctly displayed,
+    position the mouse slightly to the right of the point to see the date corresponding to the value.
+    This is very important for bar graphs because the bar may extend over several dates.
+    If specific values need to be determined, use the summary or table views.
+5.  Labels for axes are determined automatically in most cases based on the font requirements,
+    available display space, and data range.
+    Major and minor tic marks are drawn to help determine the data coordinates.
+    Labels are redrawn as the visible period is changed.
+6.  The legend lists the time series in the graph.  Left and right y-axis legends are shown.
+    Clicking on a time series in the legend will highlight the time series in the graph and clicking on again will un-highlight.
+    This feature is implemented for line graphs and will be expanded to other graph types in the future.
+7.  Graphs that can be zoomed do not allow the vertical axis to be re-scaled on the fly.
+    This capability is being evaluated.
+8.  Currently, graph types cannot be universally mixed for time series on a graph.
+    In other words, a graph cannot contain a bar graph for one time series and a line graph for another time series.
+    However, this functionality is being added over time.
+    For example time series can be drawn using line graph type on top of stacked area graph.
+    A work-around is to use multiple graphs on a page or right y-axis
+    (see the [Time Series Product Properties](#time-series-product-properties) section for an example).
+9.  The precision used to format graph labels is determined from data unit information provided by the application.
+    This generally produces acceptable graphs.
+    However, in some cases, the range of values being plotted results in
+    inappropriate labels where label values are truncated and/or repeated.
 10. Graph types can be changed after the initial display, with limitations.
-Graphs can be switched between simple types like line and bar graphs;
-however, simple graphs cannot be changed to more complex types.
-Additional functionality is being added to allow complete flexibility in the product properties editor.
+    Graphs can be switched between simple types like line and bar graphs;
+    however, simple graphs cannot be changed to more complex types.
+    Additional functionality is being added to allow complete flexibility in the product properties editor.
 
 The following sections describe various graph types supported by the TSView package.
 Graph properties are mentioned in some sections.
@@ -612,20 +612,20 @@ labels are drawn for months.  Zooming in more would display the day in the label
 The mouse tracker in all cases shows days since that is the precision of the data.
 Characteristics of the bar graph are as follows:
 
-* Bars can be plotted centered on, to the left of, or to the right of the dates.
-If multiple time series are plotted, the overall total width of the bars will correspond to one data interval.
-If drawn to the left of the date, the bars for all graphed time series are drawn to the left of the date.
-If drawn to the right of the date, the bars for all graphed time series are drawn to the right of the date.
-If centered on the date, half the bars are drawn to the left of the date, and half to the right
-* Bar widths are determined based on the number of time series being plotted.
-Monthly time series use a slightly narrower bar (larger gap between bars) because the number of days in a month varies.
-To make bars stand out better, a white line may be drawn to separate adjacent bars.
-If bars are very narrow the line is not drawn.
-Bars will always be drawn at least one pixel wide, even if this obscures neighboring bars (zoom in to see more detail).
-Round-off in drawing bars may result in some bars being slightly wider or narrower than other bars.
-* Bars always end at the zero value on the Y axis.  In other words, bars extend up or down from zero.
-* The mouse cursor display dates relative to the axis and does not determine the data value relative to edges of the bars.
-For example, if bars are plotted centered on dates, 1/2 of the bar will actually be in the previous date, according to the mouse tracker.
+*   Bars can be plotted centered on, to the left of, or to the right of the dates.
+    If multiple time series are plotted, the overall total width of the bars will correspond to one data interval.
+    If drawn to the left of the date, the bars for all graphed time series are drawn to the left of the date.
+    If drawn to the right of the date, the bars for all graphed time series are drawn to the right of the date.
+    If centered on the date, half the bars are drawn to the left of the date, and half to the right
+*   Bar widths are determined based on the number of time series being plotted.
+    Monthly time series use a slightly narrower bar (larger gap between bars) because the number of days in a month varies.
+    To make bars stand out better, a white line may be drawn to separate adjacent bars.
+    If bars are very narrow the line is not drawn.
+    Bars will always be drawn at least one pixel wide, even if this obscures neighboring bars (zoom in to see more detail).
+    Round-off in drawing bars may result in some bars being slightly wider or narrower than other bars.
+*   Bars always end at the zero value on the Y axis.  In other words, bars extend up or down from zero.
+*   The mouse cursor display dates relative to the axis and does not determine the data value relative to edges of the bars.
+    For example, if bars are plotted centered on dates, 1/2 of the bar will actually be in the previous date, according to the mouse tracker.
 
 #### Double Mass Curve ####
 
@@ -654,11 +654,11 @@ time as abscissas results in a so-called duration curve.
 If the magnitude to be plotted is the discharge of a stream,
 the duration curve is known as a flow-duration curve.”  Features of duration graphs are as follows:
 
-* The zoom feature is disabled for this graph type.
-* Although duration curves have traditionally been applied to streamflow or reservoir data,
-duration graphs can be created for any time series data.
-* Noticeable breaks in the curve are caused by a limited number of
-data points and/or values that are measured as rounded values.
+*   The zoom feature is disabled for this graph type.
+*   Although duration curves have traditionally been applied to streamflow or reservoir data,
+    duration graphs can be created for any time series data.
+*   Noticeable breaks in the curve are caused by a limited number of
+    data points and/or values that are measured as rounded values.
 
 #### Line Graph ####
 
@@ -701,13 +701,13 @@ Example Period of Record Graph showing Monthly Streamflow
 
 Characteristics of the period of record graph type are:
 
-* Horizontal lines are drawn for each time series, with breaks in the line indicating missing data.
-* Zooming is fully enabled, however, it may be difficult to see small breaks in the lines – it may
-be necessary to display symbols at the data points.
-The data limits properties of each time series can also be used to check for missing data.
-The TSTool application provides reporting features to summarize data coverage.
-* Because data values are not plotted, the y-axis is labeled with a legend index number.
-This also allows the graph window to be compressed vertically, if desired.
+*   Horizontal lines are drawn for each time series, with breaks in the line indicating missing data.
+*   Zooming is fully enabled, however, it may be difficult to see small breaks in the lines – it may
+    be necessary to display symbols at the data points.
+    The data limits properties of each time series can also be used to check for missing data.
+    The TSTool application provides reporting features to summarize data coverage.
+*   Because data values are not plotted, the y-axis is labeled with a legend index number.
+    This also allows the graph window to be compressed vertically, if desired.
  
 #### Predicted Value Graph ####
 
@@ -741,11 +741,11 @@ Currently only month and day interval data are supported,
 although other small intervals may be added in the future.
 The following are characteristics of the raster graph:
 
-* Time is represented on both axes, with one axis representing years, and the other time within the year.
-* The colors represent time series values.
-The default is to find "nice" value breaks depending on the range of input values.
-The color table can be specified by creating a time series product and processing
-with the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command.
+*   Time is represented on both axes, with one axis representing years, and the other time within the year.
+*   The colors represent time series values.
+    The default is to find "nice" value breaks depending on the range of input values.
+    The color table can be specified by creating a time series product and processing
+    with the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command.
 
 **<p style="text-align: center;">
 ![TSView_Graph_Raster_DayFlow](TSView_Graph_Raster_DayFlow.png)
@@ -761,14 +761,14 @@ The ***XY-Scatter*** graph type can be used to compare data having the
 same data interval (units can be different).
 This graph type is often used for the following comparisons:
 
-1. The dependent time series (Y) requires filling and multiple independent time series (X)
-are analyzed to find the best time series to use as the independent time series.
-One or more independent time series can be plotted on the same graph.
-2. The dependent time series (Y) contains observed data and one or more
-independent simulated time series (X) are analyzed to determine which simulation is closed to actual observations.
-3. The independent (X) and dependent (Y) time series are compared to
-determine whether any time of relationship exists between data points.
-In this case, a single dependent time series may be compared with multiple independent time series on the same graph.
+1.  The dependent time series (Y) requires filling and multiple independent time series (X)
+    are analyzed to find the best time series to use as the independent time series.
+    One or more independent time series can be plotted on the same graph.
+2.  The dependent time series (Y) contains observed data and one or more
+    independent simulated time series (X) are analyzed to determine which simulation is closed to actual observations.
+3.  The independent (X) and dependent (Y) time series are compared to
+    determine whether any time of relationship exists between data points.
+    In this case, a single dependent time series may be compared with multiple independent time series on the same graph.
 
 Currently the XY-Scatter graph can have only a single dependent time series
 but can have one or more independent time series.  The following figure shows a typical graph.
@@ -783,19 +783,19 @@ Example XY Scatter Graph showing Monthly Streamflow
 
 Characteristics of the XY Scatter graph are:
 
-* Labels and legend are automatically generated.
-See the [Time Series Product Properties](#time-series-product-properties)
-section below for information about changing the appearance of the graph.
-* Simple linear regression is initially performed to determine a line of best fit.
-See the ***Analysis*** tab in the [Time Series Product Properties](#time-series-product-properties)
-section below for information about curve fit methods.
-* A 45-degree line is currently not displayed because time series of different types and units may be compared.
-Graph properties do allow the line of best fit to be forced to zero.
-The limits on the axes are not automatically set to equal values for the same reason;
-however, a property to force the values to be the same will be added.
-* Zooming is disabled.
-* Two or more time series must be specified and must have the same interval.
-* Confidence intervals can be turned on, as shown in the following figure:
+*   Labels and legend are automatically generated.
+    See the [Time Series Product Properties](#time-series-product-properties)
+    section below for information about changing the appearance of the graph.
+*   Simple linear regression is initially performed to determine a line of best fit.
+    See the ***Analysis*** tab in the [Time Series Product Properties](#time-series-product-properties)
+    section below for information about curve fit methods.
+*   A 45-degree line is currently not displayed because time series of different types and units may be compared.
+    Graph properties do allow the line of best fit to be forced to zero.
+    The limits on the axes are not automatically set to equal values for the same reason;
+    however, a property to force the values to be the same will be added.
+*   Zooming is disabled.
+*   Two or more time series must be specified and must have the same interval.
+*   Confidence intervals can be turned on, as shown in the following figure:
  
 **<p style="text-align: center;">
 ![TSView_Graph_XYConfidence](TSView_Graph_XYConfidence.png)
@@ -814,9 +814,9 @@ the points are sorted to generate a continuous line).
 ![TSView_Graph_XYConfidence_Equation](TSView_Graph_XYConfidence_Equation.png)
 </p>**
 
-* The best-fit line can be turned off.
-* Right-clicking on the graph displays the ***Analysis Details*** menu, that,
-if selected, displays curve fit information about the time series, as illustrated in the following figure:
+*   The best-fit line can be turned off.
+*   Right-clicking on the graph displays the ***Analysis Details*** menu, that,
+    if selected, displays curve fit information about the time series, as illustrated in the following figure:
 
 **<p style="text-align: center;">
 ![TSView_Graph_XYScatter_Details](TSView_Graph_XYScatter_Details.png)
@@ -834,13 +834,13 @@ The RMS error (or RMSE) is calculated in the following way:
 
 The RMSE can have different meanings, depending on how the data are being analyzed:
 
-1. If a measured (X) and a simulated (Y) time series are being compared to determine,
-for example, to determine how well a model is simulating actual observations,
-then the RMSE indicates the error of a simulation when compared to the actual (comparing the values).
-2. If two time series are evaluated to determine if the relationship between the
-time series can be used to estimate missing values in one of the time series,
-then the difference between estimated values (*Yest*) and the line of best fit (e.g., *A + BX*) is used to compute the RMSE.
-For a perfect fit, the RMSE would be zero.  Values of RMSE can be used to evaluate the estimator for data filling.
+1.  If a measured (X) and a simulated (Y) time series are being compared to determine,
+    for example, to determine how well a model is simulating actual observations,
+    then the RMSE indicates the error of a simulation when compared to the actual (comparing the values).
+2.  If two time series are evaluated to determine if the relationship between the
+    time series can be used to estimate missing values in one of the time series,
+    then the difference between estimated values (*Yest*) and the line of best fit (e.g., *A + BX*) is used to compute the RMSE.
+    For a perfect fit, the RMSE would be zero.  Values of RMSE can be used to evaluate the estimator for data filling.
 
 To provide as much information as possible for multiple uses,
 the ***XY-Scatter Graph Analysis Details*** provides both RMSE values.
@@ -874,13 +874,13 @@ and the product files described in the
 The TSTool application, for example, can interactively create or read a product
 file and display a graph similar to the one shown above.  Important considerations for multi-graph products are:
 
-* The product page has its own set of properties (e.g., titles and size).
-* Each graph area has its own properties (e.g., titles, labels, graph type, legend).
-These properties comprise most of the properties for a product.
-* Each time series has its own properties (e.g., symbol, color).
-* If zooming is enabled (the default), then zooming in one graph causes the same zoom to occur in related graphs.
-Each graph (and the reference graph) is assigned a zoom group number.
-This is used to indicate which graphs should zoom together.  Currently, all graphs are in the same zoom group.
+*   The product page has its own set of properties (e.g., titles and size).
+*   Each graph area has its own properties (e.g., titles, labels, graph type, legend).
+    These properties comprise most of the properties for a product.
+*   Each time series has its own properties (e.g., symbol, color).
+*   If zooming is enabled (the default), then zooming in one graph causes the same zoom to occur in related graphs.
+    Each graph (and the reference graph) is assigned a zoom group number.
+    This is used to indicate which graphs should zoom together.  Currently, all graphs are in the same zoom group.
 
 Right clicking on a graph and pressing the ***Properties*** item in the popup menu will display the properties for the graph.
 The following figures illustrate the properties tabbed panel:
@@ -896,24 +896,24 @@ Tabbed Panel to Edit Time Series Product Properties
 The time series product properties display as three layers of tabbed panels.
 Characteristics of the properties window are:
 
-* The window is divided into a layout area (top-left) and tabs for different groups of properties.
-The layout window shows the overall layout of graphs on a page and allows
-manipulation of the time series product by dropping time series onto the layout.
-* The top layer of tabs (***Product Properties***) is associated with product properties (the page).
-* The middle layer of tabs (***Graph Properties***) is associated with subproduct properties (graphs on the page).
-The graph of interest is selected using the drop-down choice that shows the graph number and graph main title.
-When initially displayed, the selected graph is the one that was clicked on to display the Properties menu.
-* The bottom layer of tabs (***Time Series Properties***) is associated with data (time series) properties.
-A time series within a graph is selected using the drop-down choice that shows the
-time series number within the graph, and the time series identifier.
-When initially displayed, the first time series for the selected graph is selected.
-* The ***Apply*** button will apply the current properties and update the graph(s).
-It is generally best to press Apply before changing tables or selecting new graphs or
-time series because auto-saving properties does not occur (this may be enhanced in the future).
-* The ***Close*** button will apply the current properties, update the graph(s), and close the properties window.
-* Only properties read from an original time series product file or that are
-set by the user will be saved if a time series product is saved.  Internal defaults are not saved.
-This minimizes the size and complexity of product definition files.
+*   The window is divided into a layout area (top-left) and tabs for different groups of properties.
+    The layout window shows the overall layout of graphs on a page and allows
+    manipulation of the time series product by dropping time series onto the layout.
+*   The top layer of tabs (***Product Properties***) is associated with product properties (the page).
+*   The middle layer of tabs (***Graph Properties***) is associated with subproduct properties (graphs on the page).
+    The graph of interest is selected using the drop-down choice that shows the graph number and graph main title.
+    When initially displayed, the selected graph is the one that was clicked on to display the Properties menu.
+*   The bottom layer of tabs (***Time Series Properties***) is associated with data (time series) properties.
+    A time series within a graph is selected using the drop-down choice that shows the
+    time series number within the graph, and the time series identifier.
+    When initially displayed, the first time series for the selected graph is selected.
+*   The ***Apply*** button will apply the current properties and update the graph(s).
+    It is generally best to press Apply before changing tables or selecting new graphs or
+    time series because auto-saving properties does not occur (this may be enhanced in the future).
+*   The ***Close*** button will apply the current properties, update the graph(s), and close the properties window.
+*   Only properties read from an original time series product file or that are
+    set by the user will be saved if a time series product is saved.  Internal defaults are not saved.
+    This minimizes the size and complexity of product definition files.
 
 The remaining discussion in this section illustrates each of the tabbed panels.
 The text-based properties that are displayed in the panels are described in the
@@ -1050,15 +1050,15 @@ Example Graph Y Axis (Left) Properties
 
 Graph ***Y Axis (Left)*** properties include the following:
 
-* ***Title*** – this may be set to the data units but can be specified (the Y axis title is currently always placed at the top of the Y axis).
-* ***Position*** – the location of axis title
-* ***Rotation*** – the rotation (clockwise degrees) of the title text (generally use `270` for left, if specified)
-* ***Label*** - the font for labels and precision of numerical labels can be specified.
-* ***Axis Type*** - currently this is view-only.
-* ***Min Value***, ***Max Value*** - currently this is view-only but can be set in time
-series product definition files (see the [Time Series Product File Reference](#time-series-product-file-reference) section).
-* ***Units***, ***Ignore Units*** - currently these are view-only.
-If time series with incompatible units are graphed, ***Ignore Units*** will be checked and the units may be shown in the legend.
+*   ***Title*** – this may be set to the data units but can be specified (the Y axis title is currently always placed at the top of the Y axis).
+*   ***Position*** – the location of axis title
+*   ***Rotation*** – the rotation (clockwise degrees) of the title text (generally use `270` for left, if specified)
+*   ***Label*** - the font for labels and precision of numerical labels can be specified.
+*   ***Axis Type*** - currently this is view-only.
+*   ***Min Value***, ***Max Value*** - currently this is view-only but can be set in time
+    series product definition files (see the [Time Series Product File Reference](#time-series-product-file-reference) section).
+*   ***Units***, ***Ignore Units*** - currently these are view-only.
+    If time series with incompatible units are graphed, ***Ignore Units*** will be checked and the units may be shown in the legend.
 
 #### Graph Properties - Y Axis (Right) ####
 
@@ -1073,15 +1073,15 @@ Example Graph Y Axis (Right) Properties
 Graph ***Y Axis (Right)*** properties include the following,
 and will only be used if the ***Graph Type*** for the right y-axis is other than None:
 
-* ***Title*** – this may be set to the data units but can be specified (the Y axis title is currently always placed at the top of the Y axis).
-* ***Position*** – the location of axis title
-* ***Rotation*** – the rotation (clockwise degrees) of the title text (generally use `90` for right, if specified)
-* ***Label*** - the font for labels and precision of numerical labels can be specified.
-* ***Axis Type*** - currently this is view-only.
-* ***Min Value***, ***Max Value*** - currently this is view-only but can be set in
-time series product definition files (see the [Time Series Product File Reference)(#time-series-product-file-reference) section).
-* ***Units***, ***Ignore Units*** - currently these are view-only.
-If time series with incompatible units are graphed, ***Ignore Units*** will be checked and the units may be shown in the legend.
+*   ***Title*** – this may be set to the data units but can be specified (the Y axis title is currently always placed at the top of the Y axis).
+*   ***Position*** – the location of axis title
+*   ***Rotation*** – the rotation (clockwise degrees) of the title text (generally use `90` for right, if specified)
+*   ***Label*** - the font for labels and precision of numerical labels can be specified.
+*   ***Axis Type*** - currently this is view-only.
+*   ***Min Value***, ***Max Value*** - currently this is view-only but can be set in
+    time series product definition files (see the [Time Series Product File Reference)(#time-series-product-file-reference) section).
+*   ***Units***, ***Ignore Units*** - currently these are view-only.
+    If time series with incompatible units are graphed, ***Ignore Units*** will be checked and the units may be shown in the legend.
 
 #### Graph Properties - Data Point Label ####
 
@@ -1309,19 +1309,19 @@ Layout Window Menu
 
 The actions taken by the menus are described below:
 
-* ***Add Graph Above Selected*** - Add a new graph above the selected graph, renumbering the graphs as needed.
+*   ***Add Graph Above Selected*** - Add a new graph above the selected graph, renumbering the graphs as needed.
 
-* ***Add Graph*** - Add a new graph below the selected graph, renumbering the graphs as needed.
+*   ***Add Graph*** - Add a new graph below the selected graph, renumbering the graphs as needed.
 
-* ***Add Graph at Bottom*** - Add a new graph below all existing graphs, giving the new graph the next number in the sequence.
+*   ***Add Graph at Bottom*** - Add a new graph below all existing graphs, giving the new graph the next number in the sequence.
 
-* ***Remove Graph*** - Remove the selected graph, renumbering the graphs as needed.
+*   ***Remove Graph*** - Remove the selected graph, renumbering the graphs as needed.
 
-* ***Move Graph Up*** - Move the graph up one in the sequence, renumbering the graphs as needed.
-The menu is enabled only when multiple graphs are available.
+*   ***Move Graph Up*** - Move the graph up one in the sequence, renumbering the graphs as needed.
+    The menu is enabled only when multiple graphs are available.
 
-* ***Move Graph Down*** - Move the graph down one in the sequence, renumbering the graphs as needed.
-The menu is enabled only when multiple graphs are available.
+*   ***Move Graph Down*** - Move the graph down one in the sequence, renumbering the graphs as needed.
+    The menu is enabled only when multiple graphs are available.
 
 When a new graph is added, it will not have any specific properties, time series data, or annotations,
 other than the default properties that are assigned (e.g., the default graph type is `Line`),
@@ -1335,18 +1335,18 @@ top of the ***Graph Properties*** tab panel (or by selecting the graph in the la
 
 To add time series data to the new graph (or an existing graph), two approaches can be taken:
 
-1. Find the time series to be moved using the list in the time series properties panel.
-It may be necessary to select a graph to find the time series – selecting a graph
-will not impact the ability to move the time series to a different graph.
-In the list of time series, hold the left mouse button down over a time series choice and
-drag the time series to a graph on the layout area.  During this process, the cursor will change to a new shape, as shown below:<br>
-![TSView_Layout_MoveTS](TSView_Layout_MoveTS.png)<br>
-Release the mouse over the graph in the layout area that is to receive the time series.
-The time series will then be removed from the original graph and will be
-inserted into the new graph as the last time series in the list.
-2. Some software programs will allow dragging a time series from a display to the time series product properties window.
-Similar to above, drag the time series onto the receiving graph in the layout area.
-Refer to documentation for the specific software program for additional information about whether this feature is available.
+1.  Find the time series to be moved using the list in the time series properties panel.
+    It may be necessary to select a graph to find the time series – selecting a graph
+    will not impact the ability to move the time series to a different graph.
+    In the list of time series, hold the left mouse button down over a time series choice and
+    drag the time series to a graph on the layout area.  During this process, the cursor will change to a new shape, as shown below:<br>
+    ![TSView_Layout_MoveTS](TSView_Layout_MoveTS.png)<br>
+    Release the mouse over the graph in the layout area that is to receive the time series.
+    The time series will then be removed from the original graph and will be
+    inserted into the new graph as the last time series in the list.
+2.  Some software programs will allow dragging a time series from a display to the time series product properties window.
+    Similar to above, drag the time series onto the receiving graph in the layout area.
+    Refer to documentation for the specific software program for additional information about whether this feature is available.
 
 After adding a new graph and moving time series,
 it may be necessary to change the graph type for a graph.
@@ -1373,14 +1373,14 @@ Example Summary View showing Monthly Streamflow
 
 The summary view has the following characteristics:
 
-* The graph view can be displayed using the ***Graph*** button and the table view can be displayed using the ***Table*** button.
-* Each time series interval (e.g., `Month`, `Day`, `Hour`) has a default summary report format suitable for the interval.
-This format may be made more specific if time series are read from specific data types (e.g.,
-if daily diversion time series are read from the [HydroBase input type](../datastore-ref/CO-HydroBase/CO-HydroBase.md),
-the summary report will use the State of Colorado diversion coding report format).
-* The contents of the view can be printed.
-* The summary can be saved as a text file or [DateValue time series file](../datastore-ref/DateValue/DateValue.md).
-* Limited search capabilities are available to search for a string in the text area.
+*   The graph view can be displayed using the ***Graph*** button and the table view can be displayed using the ***Table*** button.
+*   Each time series interval (e.g., `Month`, `Day`, `Hour`) has a default summary report format suitable for the interval.
+    This format may be made more specific if time series are read from specific data types (e.g.,
+    if daily diversion time series are read from the [HydroBase input type](../datastore-ref/CO-HydroBase/CO-HydroBase.md),
+    the summary report will use the State of Colorado diversion coding report format).
+*   The contents of the view can be printed.
+*   The summary can be saved as a text file or [DateValue time series file](../datastore-ref/DateValue/DateValue.md).
+*   Limited search capabilities are available to search for a string in the text area.
 
 ### Time Series Table View ###
 
@@ -1401,35 +1401,35 @@ Example Table View showing Monthly Streamflow
 
 Characteristics of the table view are:
 
-* The summary view can be displayed using the ***Summary*** button and the graph view can be displayed using the ***Graph*** button.
-* If any of the time series have data flags, the ***Flags*** choice will be enabled and allow showing the time series values with flags.
-* The precision of date/times in the first column matches the data interval for the time series.
-For irregular time series the precision will match that of the time series start date/time.
-* If time series with different intervals are selected, multiple tables will be displayed in the window.
-For irregular time series, a separate table will be shown for each date/time precision.
-* The table contents can be saved as delimited or [DateValue file](../datastore-ref/DateValue/DateValue.md).
-* Column headings by default indicate alias if set (or location otherwise),
-sequence number (used with ensembles), data type and units.
-If the `TableViewHeaderFormat` time series property is set, it will be used to format the header.
-The format can contain `%` specifiers and `${ts:Property}` properties.
-* For irregular time series:
-	+ Prior to displaying time series, a unique list of date/times is created for all the time series values.
-	This is cached to allow fast lookups of data.  Long irregular time series periods will take longer to determine the list of date/times.
-	+ The starting date/time is used to determine the date/time precision and whether a time zone is used.
-	If the date/times have precision of hour or minute and time zones are the same,
-	the time zone is displayed with the date/time column.  If multiple time zones are found (including no time zone),
-	then no time zone is displayed in the date/time column.
-	In any case, the time zone can be displayed by mousing over the column headings.
+*   The summary view can be displayed using the ***Summary*** button and the graph view can be displayed using the ***Graph*** button.
+*   If any of the time series have data flags, the ***Flags*** choice will be enabled and allow showing the time series values with flags.
+*   The precision of date/times in the first column matches the data interval for the time series.
+    For irregular time series the precision will match that of the time series start date/time.
+*   If time series with different intervals are selected, multiple tables will be displayed in the window.
+    For irregular time series, a separate table will be shown for each date/time precision.
+*   The table contents can be saved as delimited or [DateValue file](../datastore-ref/DateValue/DateValue.md).
+*   Column headings by default indicate alias if set (or location otherwise),
+    sequence number (used with ensembles), data type and units.
+    If the `TableViewHeaderFormat` time series property is set, it will be used to format the header.
+    The format can contain `%` specifiers and `${ts:Property}` properties.
+*   For irregular time series:
+    +   Prior to displaying time series, a unique list of date/times is created for all the time series values.
+        This is cached to allow fast lookups of data.  Long irregular time series periods will take longer to determine the list of date/times.
+    +   The starting date/time is used to determine the date/time precision and whether a time zone is used.
+        If the date/times have precision of hour or minute and time zones are the same,
+        the time zone is displayed with the date/time column.  If multiple time zones are found (including no time zone),
+        then no time zone is displayed in the date/time column.
+        In any case, the time zone can be displayed by mousing over the column headings.
 
 ## Time Series Product File Reference ##
 
 A time series product is a report, table, or graph, although currently TSView focuses on graph products.
 Examples of time series products and their use are:
 
-* Reports and graphs generated from a database to perform quality checks.
-* Reports and graphs generated from model input and output to check a calibration or model results.
-* Reports and graphs generated from a database for real-time data products,
-to monitor current conditions or to create products for a web site.
+*   Reports and graphs generated from a database to perform quality checks.
+*   Reports and graphs generated from model input and output to check a calibration or model results.
+*   Reports and graphs generated from a database for real-time data products,
+    to monitor current conditions or to create products for a web site.
 
 The TSView package contains features to process time series product files in
 interactive and batch mode to produce time series products.  Currently, only graph products are supported.
@@ -1751,16 +1751,16 @@ Therefore, placing an annotation using a fixed coordinate would cause the annota
 To resolve this issue and still allow absolute positioning of annotations, as appropriate,
 the following coordinate systems are supported, as specified by the `XAxisSystem` and `YAxisSystem` properties:
 
-* ***Data*** - When using the data coordinate system,
-it is expected that the coordinates used to define the annotation will agree with the data units being drawn.
-For example, for a normal time series graph, the x-axis coordinate would be specified as a
-date/time to the necessary precision and the y-axis coordinate would be specified using data values.
+*   ***Data*** - When using the data coordinate system,
+    it is expected that the coordinates used to define the annotation will agree with the data units being drawn.
+    For example, for a normal time series graph, the x-axis coordinate would be specified as a
+    date/time to the necessary precision and the y-axis coordinate would be specified using data values.
 
-It is envisioned that a notation `+NNN` and `–NNN` will be implemented in the future to allow offsets from the edges of the graph, in data units.
+    It is envisioned that a notation `+NNN` and `–NNN` will be implemented in the future to allow offsets from the edges of the graph, in data units.
 
-* ***Percent*** - When using the percent coordinate system,
-it is expected that the coordinates used to define the annotation are specified
-as a percent of the graph width or height, with `0` being the lower/left and `100` being the upper/right.
+*   ***Percent*** - When using the percent coordinate system,
+    it is expected that the coordinates used to define the annotation are specified
+    as a percent of the graph width or height, with `0` being the lower/left and `100` being the upper/right.
 
 Each axis can have a different coordinate system (e.g., the y-axis value can be set
 using data units and the x-axis value can be set using percent).
@@ -1834,13 +1834,13 @@ Colors are specified for a number of different properties,
 including the feature color and outline color.
 In order to allow flexibility in specifying colors, a number of formats are supported:
 
-* Named color.  Available colors are: `None` (transparent), `Black`, `Blue`, `Cyan`, `DarkGray`, `Gray`, `Green`, `LightGray`, `Magenta`, `Orange`, `Pink`, `Red`, `White`, `Yellow`.
-* Comma-separated Color Triplets as 0-255 (e.g., `255,0,0`) or 0.0-1.0 (e.g., `1.0,0.0,0.0`).
-* Hexadecimal:  `0xRRGGBB` (e.g., `0xFF0000` for red).
-* Hexadecimal:  `#RRGGBB` (e.g., `#FF0000` for red).
-* All colors accept optional fourth value indicating the opacity (alpha) value.
-Opacity is the opposite of transparency and therefore an opacity of `0.0` (`0`) is fully transparent
-and `1.0` (`255`) is fully opaque.
+*   Named color.  Available colors are: `None` (transparent), `Black`, `Blue`, `Cyan`, `DarkGray`, `Gray`, `Green`, `LightGray`, `Magenta`, `Orange`, `Pink`, `Red`, `White`, `Yellow`.
+*   Comma-separated Color Triplets as 0-255 (e.g., `255,0,0`) or 0.0-1.0 (e.g., `1.0,0.0,0.0`).
+*   Hexadecimal:  `0xRRGGBB` (e.g., `0xFF0000` for red).
+*   Hexadecimal:  `#RRGGBB` (e.g., `#FF0000` for red).
+*   All colors accept optional fourth value indicating the opacity (alpha) value.
+    Opacity is the opposite of transparency and therefore an opacity of `0.0` (`0`) is fully transparent
+    and `1.0` (`255`) is fully opaque.
 
 ### Time Series Product File - Color Tables ###
 
@@ -1908,25 +1908,25 @@ For example, assume that one or more time series have been generated and are lis
 
 Graph templates utilizes the following process:
 
-1. Normal TSTool command features are used to create time series.
-The command file can be very basic, using only time series identifiers or commands to read time series.
-Or, the command file can be more complex, as needed for a workflow process.
-2. One or more time series (or time series ensembles) are selected in the ***TSTool Results***
-area and the ***Graph*** with template button is used, with a corresponding graph template.
-The graph template is a time series product file (`*.tsp`) containing properties described in the previous sections,
-but typically will also contain Freemarker template syntax as described below.
-Graph templates need to be stored in the folder in the user's files (`/home/user` on Linux or `C:\Users\user` on Windows).
-	* TSTool 13+:  `.tstool/NN/template-graphs` folder under the user’s files, where `NN` is the TSTool major version
-	* TSTool 13+:  `.tstool/template-graph` folder under the user’s files
-3. If the specified graph template includes a `TemplatePreprocessCommandFile` property,
-then the specified command file will be run with the selected time series as input
-(all other time series in TSTool’s main interface will NOT be used),
-and properties passed as described below.
-If the property is not defined, then the time series are used as is in the following steps with no additional processing.
-4. The resulting processed results are passed to the Freemarker template engine
-to expand the graph template file to a temporary file.
-This step is similar to the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) TSTool command.
-5. The expanded temporary time series product file is used with the time series from step 3 to produce the graph.
+1.  Normal TSTool command features are used to create time series.
+    The command file can be very basic, using only time series identifiers or commands to read time series.
+    Or, the command file can be more complex, as needed for a workflow process.
+2.  One or more time series (or time series ensembles) are selected in the ***TSTool Results***
+    area and the ***Graph*** with template button is used, with a corresponding graph template.
+    The graph template is a time series product file (`*.tsp`) containing properties described in the previous sections,
+    but typically will also contain Freemarker template syntax as described below.
+    Graph templates need to be stored in the folder in the user's files (`/home/user` on Linux or `C:\Users\user` on Windows).
+    *   TSTool 13+:  `.tstool/NN/template-graphs` folder under the user’s files, where `NN` is the TSTool major version
+    *   TSTool 13+:  `.tstool/template-graph` folder under the user’s files
+3.  If the specified graph template includes a `TemplatePreprocessCommandFile` property,
+    then the specified command file will be run with the selected time series as input
+    (all other time series in TSTool’s main interface will NOT be used),
+    and properties passed as described below.
+    If the property is not defined, then the time series are used as is in the following steps with no additional processing.
+4.  The resulting processed results are passed to the Freemarker template engine
+    to expand the graph template file to a temporary file.
+    This step is similar to the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) TSTool command.
+5.  The expanded temporary time series product file is used with the time series from step 3 to produce the graph.
 
 Graph templates processed in step 4 from above use the [FreeMarker templating software](https://freemarker.apache.org).
 Freemarker is also used by the TSTool
@@ -1935,23 +1935,23 @@ The main benefit of FreeMarker is that it provides advanced template processing 
 and minimizes the need to develop such features in the TSTool software.
 TSTool currently uses a simple FreeMarker data model to pass data to the Freemarker data model, as follows:
 
-* TSTool processor properties are passed to FreeMarker in their native form.
-These properties are listed in TSTool in the results area in the ***Properties*** tab.
-To pass additional properties, define them in the main TSTool command file.
-* To facilitate template processing, TSTool passes the following additional properties to Freemarker:
-	+ Currently none but can be added if appropriate.
-* TSTool also passes a number of lists to Freemarket, which can be used with the Freemarker `<#list>` directive.
-These lists are of general use for graph templates:
-	+ `TemplateTSIDList` – the list of TSID for the time series that are provided to the graph template.
-	These identifiers DO include the trailing datastore name or input type. 
-	+ `TemplateTSIDShortList` – the list of TSID for the time series that are provided to the graph template.
-	These identifiers DO NOT include the trailing datastore name or input type.
-	+ `TemplateTSAliasList` – the list of time series alias for the time series that are provided to the graph template.
-	+ `TemplateTSLocationIDList` – the list of location identifiers for the time series that are provided to the graph template.
-	+ `TemplateTSDescriptionList` – the list of descriptions for the time series that are provided to the graph template, which are useful to set the graph title.
-	+ `TemplateTSUnitsList` – the list of data units for the time series that are provided to the graph template, which are useful for graph title and labeling axes.
-	+ `TemplateTSEnsembleIDList` – the list of time series ensemble identifiers for ensembles that are provided to the graph template.
-	+ `TemplateTSEnsembleNameList` – the list of time series ensemble names for ensembles that are provided to the graph template.
+*   TSTool processor properties are passed to FreeMarker in their native form.
+    These properties are listed in TSTool in the results area in the ***Properties*** tab.
+    To pass additional properties, define them in the main TSTool command file.
+*   To facilitate template processing, TSTool passes the following additional properties to Freemarker:
+    +   Currently none but can be added if appropriate.
+*   TSTool also passes a number of lists to Freemarket, which can be used with the Freemarker `<#list>` directive.
+    These lists are of general use for graph templates:
+    +   `TemplateTSIDList` – the list of TSID for the time series that are provided to the graph template.
+        These identifiers DO include the trailing datastore name or input type. 
+    +   `TemplateTSIDShortList` – the list of TSID for the time series that are provided to the graph template.
+        These identifiers DO NOT include the trailing datastore name or input type.
+    +   `TemplateTSAliasList` – the list of time series alias for the time series that are provided to the graph template.
+    +   `TemplateTSLocationIDList` – the list of location identifiers for the time series that are provided to the graph template.
+    +   `TemplateTSDescriptionList` – the list of descriptions for the time series that are provided to the graph template, which are useful to set the graph title.
+    +   `TemplateTSUnitsList` – the list of data units for the time series that are provided to the graph template, which are useful for graph title and labeling axes.
+    +   `TemplateTSEnsembleIDList` – the list of time series ensemble identifiers for ensembles that are provided to the graph template.
+    +   `TemplateTSEnsembleNameList` – the list of time series ensemble names for ensembles that are provided to the graph template.
 
 The above data can be referenced in Freemarker templates using its variable syntax
 (variable name is used as in within a FreeMarker directive, and as `${variable}` in other template file text).

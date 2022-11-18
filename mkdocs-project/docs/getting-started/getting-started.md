@@ -2,46 +2,46 @@
 
 This chapter provides an overview of the TSTool graphical user interface (GUI).
 
-* [Introduction](#introduction)
-* [Starting TSTool](#starting-tstool)
-* [Database Selection and User Authentication](#database-selection-and-user-authentication)
-* [Main Interface](#main-interface)
-    + [Input/Query Options and Time Series List Area](#inputquery-options-and-time-series-list-area)
-    + [Command List and Command Error Indicators](#command-list-and-command-error-indicators)
-    + [Results](#results)
-        - [Results / Ensembles](#results-ensembles)
-        - [Results / Networks](#results-networks)
-        - [Results / Objects](#results-objects)
-        - [Results / Output Files](#results-output-files)
-        - [Results / Problems](#results-problems)
-        - [Results / Properties](#results-properties)
-        - [Results / Tables](#results-tables)
-        - [Results / Time Series](#results-time-series)
-        - [Results / Views](#results-views)
-* [File Menu - Main Input and Output Control](#file-menu-main-input-and-output-control)
-    + [File / New - Open Command File or Databases](#filenew–open-command-file-or-databases)
-    + [File / Open - Open Command File or Databases](#fileopen-open-command-file-or-databases)
-    + [File / Save - Save Command File, and Time Series](#filesave–save-command-file-and-time-series)
-    + [Print Commands](#print-commands)
-    + [Properties for Commands Run, TSTool Session, and Input Types](#properties-for-commands-run-tstool-session-and-input-types)
-    + [Set Working Directory](#set-working-directory)
-    + [File / Exit](#fileexit)
-* [Edit Menu - Editing Commands](#edit-menu-editing-commands)
-    + [Cut/Copy/Paste/Delete](#cutcopypastedelete)
-    + [Select All Commands/Deselect All Commands](#select-all-commandsdeselect-all-commands)
-    + [Edit Command](#edit-command)
-    + [Convert Selected Commands To/From Comments](#convert-selected-commands-tofrom-comments)
-    + [Convert TSID to Read Commands](#convert-tsid-to-read-commands)
-* [View Menu –-Display Useful Information and Map Interface](#view-menu-display-useful-information-and-map-interface)
-* [Commands Menus](#commands-menus)
-* [Run Menu - Run Commands](#run-Menu-run-commands)
-    * [Process TSProduct](#process-tsproduct)
-* [Results Menu - Display Time Series](#results-menu-display-time-series)
-* [Tools Menu](#tools-menu)
-    + [Options](#options)
-    + [Diagnostics](#diagnostics)
-* [Help Menu](#help-menu)
-* [Creating Workflows](#creating-workflows)
+*   [Introduction](#introduction)
+*   [Starting TSTool](#starting-tstool)
+*   [Database Selection and User Authentication](#database-selection-and-user-authentication)
+*   [Main Interface](#main-interface)
+    +   [Input/Query Options and Time Series List Area](#inputquery-options-and-time-series-list-area)
+    +   [Command List and Command Error Indicators](#command-list-and-command-error-indicators)
+    +   [Results](#results)
+        -   [Results / Ensembles](#results-ensembles)
+        -   [Results / Networks](#results-networks)
+        -   [Results / Objects](#results-objects)
+        -   [Results / Output Files](#results-output-files)
+        -   [Results / Problems](#results-problems)
+        -   [Results / Properties](#results-properties)
+        -   [Results / Tables](#results-tables)
+        -   [Results / Time Series](#results-time-series)
+        -   [Results / Views](#results-views)
+*   [File Menu - Main Input and Output Control](#file-menu-main-input-and-output-control)
+    +   [File / New - Open Command File or Databases](#filenew–open-command-file-or-databases)
+    +   [File / Open - Open Command File or Databases](#fileopen-open-command-file-or-databases)
+    +   [File / Save - Save Command File, and Time Series](#filesave–save-command-file-and-time-series)
+    +   [Print Commands](#print-commands)
+    +   [Properties for Commands Run, TSTool Session, and Input Types](#properties-for-commands-run-tstool-session-and-input-types)
+    +   [Set Working Directory](#set-working-directory)
+    +   [File / Exit](#fileexit)
+*   [Edit Menu - Editing Commands](#edit-menu-editing-commands)
+    +   [Cut/Copy/Paste/Delete](#cutcopypastedelete)
+    +   [Select All Commands/Deselect All Commands](#select-all-commandsdeselect-all-commands)
+    +   [Edit Command](#edit-command)
+    +   [Convert Selected Commands To/From Comments](#convert-selected-commands-tofrom-comments)
+    +   [Convert TSID to Read Commands](#convert-tsid-to-read-commands)
+*   [View Menu –-Display Useful Information and Map Interface](#view-menu-display-useful-information-and-map-interface)
+*   [Commands Menus](#commands-menus)
+*   [Run Menu - Run Commands](#run-Menu-run-commands)
+    *   [Process TSProduct](#process-tsproduct)
+*   [Results Menu - Display Time Series](#results-menu-display-time-series)
+*   [Tools Menu](#tools-menu)
+    +   [Options](#options)
+    +   [Diagnostics](#diagnostics)
+*   [Help Menu](#help-menu)
+*   [Creating Workflows](#creating-workflows)
 
 ----------------
 
@@ -49,19 +49,19 @@ This chapter provides an overview of the TSTool graphical user interface (GUI).
 
 The TSTool GUI has three main functions:
 
-1. Browse and view time series data.  In this capacity,
-   a graph or summary can be created and then TSTool can be closed.
-2. Automate time series processing.
-   For example, format lists of time series for use with simulation models or other software.
-   In this capacity, time series that are read and displayed can be incorporated into a command file,
-   which can be run to generate time series files.
-3. Process time series products.  For example, create graphs for use on web sites or to facilitate review data or modeling results.
-   In this capacity TSTool is used to generate data products in a streamlined fashion.
-   The remainder of this chapter provides an overview of the graphical user interface,
-   in the general order of the main features and menus on the menu bar (left to right, top to bottom).
-   The features necessary to accomplish the above tasks are described at an introductory level.
-   See other chapters for more detailed information.
-   See also the training materials that are available for TSTool.
+1.  Browse and view time series data.  In this capacity,
+    a graph or summary can be created and then TSTool can be closed.
+2.  Automate time series processing.
+    For example, format lists of time series for use with simulation models or other software.
+    In this capacity, time series that are read and displayed can be incorporated into a command file,
+    which can be run to generate time series files.
+3.  Process time series products.  For example, create graphs for use on web sites or to facilitate review data or modeling results.
+    In this capacity TSTool is used to generate data products in a streamlined fashion.
+    The remainder of this chapter provides an overview of the graphical user interface,
+    in the general order of the main features and menus on the menu bar (left to right, top to bottom).
+    The features necessary to accomplish the above tasks are described at an introductory level.
+    See other chapters for more detailed information.
+    See also the training materials that are available for TSTool.
 
 ## Starting TSTool ##
 
@@ -134,9 +134,9 @@ TSTool At Startup, Waiting for Data Connections to be Initialized (<a href="../G
 The following figure illustrates the main TSTool interface after data connections are initialized.
 The interface is divided into three main areas:
 
-* ***Input/Query Options*** (top left) and Time Series List area (top right)
-* ***Commands*** (middle)
-* ***Results*** (bottom)
+*   ***Input/Query Options*** (top left) and Time Series List area (top right)
+*   ***Commands*** (middle)
+*   ***Results*** (bottom)
 
 Status and progress information is displayed at the bottom of the main
 window and also in the borders around main panels (e.g.,
@@ -161,57 +161,57 @@ An alternative to the following interactive approach is to use
 read commands from the ***Commands*** menu (see the [Commands chapter](../commands/commands.md)).
 To select time series, perform the following steps:
 
-1. **Select the source of the data**.  Select a ***Datastore*** or ***Input type***.
-    * A data store is a repository that generally contains multiple time series
-      (e.g., a database, web service, or file).
-      The details about the datastore are included in a simple configuration file (see datastore appendices).
-    * Input types define the storage format (e.g., database or file)
-      for time series data, and may require an input name.
-      Selecting some input types may prompt for a file,
-      which is then listed in the ***Input name*** choices immediately below ***Input type***.<br><br>
-      The datastore design is being phased in because it provides more flexibility in defining data connections.
-      In the future, all database connections will be transferred to
-      datastores and remaining input types may be referred to as “file datastores”, which will use a filename.<br><br>
-      The DateValue input type is the default.
-      More specific input types (e.g., HydroBase) may be the default if enabled.
-      See the appropriate data store or input type appendix for more information.<br><br>
-      Depending on the input type, some of the remaining selection choices described below may be disabled or limited.  
-2. **Select the time series data type**.  Select the ***Data type*** (if appropriate for the input type).
-   For example, select ***Streamflow*** or ***Diversion*** if using a HydroBase input type.
-   For some input types, the data type will be listed as ***Auto***,
-   indicating that the data type automatically will be determined from the data.
-3. **Select the time series time step (interval)**.
-   Select the ***Time step*** (if appropriate for the input type).
-   The time step, also referred to as the data interval,
-   generally will be limited by the input type.
-   For example, if reading from the HydroBase database,
-   the ***Streamflow*** data type will result in Day, Month, and Irregular (real-time) time steps being listed.
-   The time step will be shown as Auto for input types where the time step is determined as data are read.
-4. **Specify filter criteria for the time series list**.
-   Specify the ***Where*** and ***Is*** clause(s) for the query (if appropriate for the input type).
-   This information will limit the number of time series that are returned.
-   The filters are highly dependent on the original data.
-5. **Generate the time series list**.  Press the ***Get Time Series List*** button
-   in the ***Input/Query Options*** area, and TSTool will display a list of matching time series in the ***Time Series List***.
-   If the input type is a file, you may first be prompted to select the file containing the time series.
-   The ***Time Series List*** shows a list of matching time series,
-   typically including location and time series properties.
-   As much as possible, the column headings are consistent between different input types.
-   The results are typically sorted by name or identifier if from a database,
-   or if read from a file are listed according to the order in the file.
-   Right-click on the column headings and select ***Sort Ascending*** to sort by that column.
-   The sorts are alphabetical so some numeric fields may not sort as expected due to spaces, etc.
-6. **Copy time series identifiers to the command list**.
-   TSTool requires that time series identifiers (TSIDs) be created in the ***Commands***
-   list area in order to read the time series data values.
-   To create TSIDs from the ***Time Series List***,
-   selecting one or more rows in the ***Time Series List*** (note that the first column will not allow selections)
-   and then press the ***Copy Selected to Commands*** button.
-   Or, if appropriate, press the ***Copy All to Commands*** button.
-7. **Read and display time series**.  The ***Commands*** and ***Results*** areas are discussed below.
-   To process time series having different data types or time steps,
-   make multiple queries using the ***Input/Query Options*** and ***Time Series List***
-   areas and select from the lists as necessary, accumulating time series identifiers in the ***Commands*** list.
+1.  **Select the source of the data**.  Select a ***Datastore*** or ***Input type***.
+    *   A data store is a repository that generally contains multiple time series
+        (e.g., a database, web service, or file).
+        The details about the datastore are included in a simple configuration file (see datastore appendices).
+    *   Input types define the storage format (e.g., database or file)
+        for time series data, and may require an input name.
+        Selecting some input types may prompt for a file,
+        which is then listed in the ***Input name*** choices immediately below ***Input type***.<br><br>
+        The datastore design is being phased in because it provides more flexibility in defining data connections.
+        In the future, all database connections will be transferred to
+        datastores and remaining input types may be referred to as “file datastores”, which will use a filename.<br><br>
+        The DateValue input type is the default.
+        More specific input types (e.g., HydroBase) may be the default if enabled.
+        See the appropriate data store or input type appendix for more information.<br><br>
+        Depending on the input type, some of the remaining selection choices described below may be disabled or limited.  
+2.  **Select the time series data type**.  Select the ***Data type*** (if appropriate for the input type).
+    example, select ***Streamflow*** or ***Diversion*** if using a HydroBase input type.
+    For some input types, the data type will be listed as ***Auto***,
+    indicating that the data type automatically will be determined from the data.
+3.  **Select the time series time step (interval)**.
+    Select the ***Time step*** (if appropriate for the input type).
+    The time step, also referred to as the data interval,
+    generally will be limited by the input type.
+    For example, if reading from the HydroBase database,
+    the ***Streamflow*** data type will result in Day, Month, and Irregular (real-time) time steps being listed.
+    The time step will be shown as Auto for input types where the time step is determined as data are read.
+4.  **Specify filter criteria for the time series list**.
+    Specify the ***Where*** and ***Is*** clause(s) for the query (if appropriate for the input type).
+    This information will limit the number of time series that are returned.
+    The filters are highly dependent on the original data.
+5.  **Generate the time series list**.  Press the ***Get Time Series List*** button
+    in the ***Input/Query Options*** area, and TSTool will display a list of matching time series in the ***Time Series List***.
+    If the input type is a file, you may first be prompted to select the file containing the time series.
+    The ***Time Series List*** shows a list of matching time series,
+    typically including location and time series properties.
+    As much as possible, the column headings are consistent between different input types.
+    The results are typically sorted by name or identifier if from a database,
+    or if read from a file are listed according to the order in the file.
+    Right-click on the column headings and select ***Sort Ascending*** to sort by that column.
+    The sorts are alphabetical so some numeric fields may not sort as expected due to spaces, etc.
+6.  **Copy time series identifiers to the command list**.
+    TSTool requires that time series identifiers (TSIDs) be created in the ***Commands***
+    list area in order to read the time series data values.
+    To create TSIDs from the ***Time Series List***,
+    selecting one or more rows in the ***Time Series List*** (note that the first column will not allow selections)
+    and then press the ***Copy Selected to Commands*** button.
+    Or, if appropriate, press the ***Copy All to Commands*** button.
+7.  **Read and display time series**.  The ***Commands*** and ***Results*** areas are discussed below.
+    To process time series having different data types or time steps,
+    make multiple queries using the ***Input/Query Options*** and ***Time Series List***
+    areas and select from the lists as necessary, accumulating time series identifiers in the ***Commands*** list.
 
 After selecting time series and copying to the ***Commands*** area,
 the main interface will appear similar to the following figure.
@@ -232,8 +232,8 @@ TSTool after Pressing Get Time Series List and selecting from Time Series List (
 
 The ***Commands*** list occupies the middle of the main interface and contains:
 
-* time series identifiers corresponding to time series selected from the ***Time Series List***
-* commands inserted using the ***Commands*** menu (see the [Commands chapter](../commands/commands.md)).
+*   time series identifiers corresponding to time series selected from the ***Time Series List***
+*   commands inserted using the ***Commands*** menu (see the [Commands chapter](../commands/commands.md)).
 
 Time series identifiers are added to the ***Commands*** list by selecting items in the
 ***Time Series List*** and copying the identifiers to the ***Commands*** list, as discussed above.
@@ -246,9 +246,9 @@ data read or when processing more than one time series with one command.
 The ***Commands*** and other TSTool GUI lists behave according
 to standard conventions for the operating system.  For example, on Windows:
 
-* **Single-click** to select one item.
-* **Ctrl-click** to additionally select an item.
-* **Shift-click** to select everything between the previous selection and the current selection.
+*   **Single-click** to select one item.
+*   **Ctrl-click** to additionally select an item.
+*   **Shift-click** to select everything between the previous selection and the current selection.
 
 Behavior on operating systems other than Windows may vary.
 Right-clicking over the ***Commands*** list displays a pop-up menu
@@ -291,20 +291,20 @@ Command List Illustrating Error
 
 The following error handling features are available:
 
-* The graphic in the left gutter indicates the severity of a problem (see below for full explanation).
-* The colored indicator on the right indicates the severity of a
-  problem by its color and, when clicked on, positions the visible list of
-  commands to display the command corresponding to the problem.
-* Commands have three phases:  1) initialization, 2) discovery, 3) run.
-  Initialization occurs when reading a command file or adding a new command.
-  The discovery phase is executed only for commands that generate time series
-  for other commands and provides other commands with identifiers used in command editing.
-  The run phase generates full output.
-* Positioning the mouse over a graphic in the left or right gutter
-  will show a popup message with the problem information.
-  The popup is only visible for a few seconds so use the right-click popup menu
-  ***Show Command Status (Success/Warning/Failure)*** for a dialog that does not automatically disappear.
-* Clicking on the left gutter will hide and un-hide the gutter.
+*   The graphic in the left gutter indicates the severity of a problem (see below for full explanation).
+*   The colored indicator on the right indicates the severity of a
+    problem by its color and, when clicked on, positions the visible list of
+    commands to display the command corresponding to the problem.
+*   Commands have three phases:  1) initialization, 2) discovery, 3) run.
+    Initialization occurs when reading a command file or adding a new command.
+    The discovery phase is executed only for commands that generate time series
+    for other commands and provides other commands with identifiers used in command editing.
+    The run phase generates full output.
+*   Positioning the mouse over a graphic in the left or right gutter
+    will show a popup message with the problem information.
+    The popup is only visible for a few seconds so use the right-click popup menu
+    ***Show Command Status (Success/Warning/Failure)*** for a dialog that does not automatically disappear.
+*   Clicking on the left gutter will hide and un-hide the gutter.
 
 The meaning of the error handling symbols is described in the following table.
 The symbol for the most severe error will be displayed next to each command.
@@ -348,17 +348,17 @@ Only the selected time series will be output (or all if none are selected).
 
 The following may be available in ***Results***, depending on commands that were run:
 
-* ***Ensembles*** – groups of time series with an ensemble identifier.
-  Individual time series that are associated with an ensemble also
-  are shown in the ***Time Series*** tab.  Right-click on item to access viewing and analysis options.
-* ***Networks*** - a list of networks that have been created, for example to represent river or other flow networks
-* ***Objects*** – objects that are created during processing.  Single-click on an object to view as JSON.
-* ***Output Files*** – files that are created during processing.  Single-click on a file to view.
-* ***Problems*** – a full listing of warning and failure messages from all commands.
-* ***Properties*** – the list of processor properties that can be referenced in command parameters using `${Property}` syntax
-* ***Tables*** – tables created during processing.  Right-click on a table in the list to view the table.
-* ***Time Series*** – time series created during processing.  Right-click on one or more time series to view the time series.
-* ***Views*** – alternate views of time series, other than the list of time series that is ordered based on command output.
+*   ***Ensembles*** – groups of time series with an ensemble identifier.
+    Individual time series that are associated with an ensemble also
+    are shown in the ***Time Series*** tab.  Right-click on item to access viewing and analysis options.
+*   ***Networks*** - a list of networks that have been created, for example to represent river or other flow networks
+*   ***Objects*** – objects that are created during processing.  Single-click on an object to view as JSON.
+*   ***Output Files*** – files that are created during processing.  Single-click on a file to view.
+*   ***Problems*** – a full listing of warning and failure messages from all commands.
+*   ***Properties*** – the list of processor properties that can be referenced in command parameters using `${Property}` syntax
+*   ***Tables*** – tables created during processing.  Right-click on a table in the list to view the table.
+*   ***Time Series*** – time series created during processing.  Right-click on one or more time series to view the time series.
+*   ***Views*** – alternate views of time series, other than the list of time series that is ordered based on command output.
 
 Two progress bars at the bottom of the main window are updated during processing.
 The left progress bar indicates the overall progress in processing the
@@ -791,12 +791,12 @@ The working directory is used by TSTool to local files specified with relative p
 The working directory normally is set in one of the following ways,
 with the current setting being defined by the most recent selection:
 
-1. The startup directory for the TSTool program,
-2. The directory where a command file was opened,
-3. The directory where a command file was saved,
-4. The directory specified by a [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md)
-   command (use of this command is discouraged because it hard-codes a system-specific folder in command files),
-5. The directory specified by ***File / Set Working Directory***.
+1.  The startup directory for the TSTool program,
+2.  The directory where a command file was opened,
+3.  The directory where a command file was saved,
+4.  The directory specified by a [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md)
+    command (use of this command is discouraged because it hard-codes a system-specific folder in command files),
+5.  The directory specified by ***File / Set Working Directory***.
 
 The menu item is provided to allow the working directory to be set before a command file has been saved (or opened).
  
@@ -928,29 +928,29 @@ Commands Menu
 
 Time series commands are organized into the following categories:
 
-* ***Select, Free, Sort Time Series*** – select or deselect time series for processing, free or sort time series
-* ***Create Time Series*** – create one or more new time series
-* ***Read Time Series*** – read time series from a file or database
-* ***Fill Time Series Missing Data*** – fill missing data
-* ***Set Time Series Contents*** – set time series data or properties
-* ***Manipulate Time Series*** – manipulate data (e.g., scale a time series’ data values)
-* ***Analyze Time Series*** – perform analysis on time series (e.g., determine wet/dry/average pattern)
-* ***Models – Routing*** – lag and attenuate time series
-* ***Output Time Series*** – write time series results to a file or produce graphical products
-* ***Check Time Series*** – check time series values and statistics against criteria
-* ***Datastore Processing*** – read data from and write data to datastores, using general functionality
-* ***Ensemble Processing*** – commands that are specific to ensemble processing
-* ***Network Processing*** – commands that process networks of nodes and links
-* ***Spatial Processing*** – commands that process spatial data
-* ***Spreadsheet Processing*** – commands that process spreadsheet files
-* ***Template Processing*** – commands that are specific to template processing
-* ***Visualization Processing*** – commands that are specific to visualization
-* ***General – Comments*** – insert comments
-* ***General – File Handling*** – commands to manipulate files and perform FTP and web retrieval
-* ***General – Logging*** – commands for logging (e.g., open a log file, set message levels)
-* ***General – Running and Properties*** – commands to control processing and run external programs
-* ***General – Test Processing*** – commands to process tests, to validate software and procedures
-* ***Deprecated Commands*** – commands that are planned for removal
+*   ***Select, Free, Sort Time Series*** – select or deselect time series for processing, free or sort time series
+*   ***Create Time Series*** – create one or more new time series
+*   ***Read Time Series*** – read time series from a file or database
+*   ***Fill Time Series Missing Data*** – fill missing data
+*   ***Set Time Series Contents*** – set time series data or properties
+*   ***Manipulate Time Series*** – manipulate data (e.g., scale a time series’ data values)
+*   ***Analyze Time Series*** – perform analysis on time series (e.g., determine wet/dry/average pattern)
+*   ***Models – Routing*** – lag and attenuate time series
+*   ***Output Time Series*** – write time series results to a file or produce graphical products
+*   ***Check Time Series*** – check time series values and statistics against criteria
+*   ***Datastore Processing*** – read data from and write data to datastores, using general functionality
+*   ***Ensemble Processing*** – commands that are specific to ensemble processing
+*   ***Network Processing*** – commands that process networks of nodes and links
+*   ***Spatial Processing*** – commands that process spatial data
+*   ***Spreadsheet Processing*** – commands that process spreadsheet files
+*   ***Template Processing*** – commands that are specific to template processing
+*   ***Visualization Processing*** – commands that are specific to visualization
+*   ***General – Comments*** – insert comments
+*   ***General – File Handling*** – commands to manipulate files and perform FTP and web retrieval
+*   ***General – Logging*** – commands for logging (e.g., open a log file, set message levels)
+*   ***General – Running and Properties*** – commands to control processing and run external programs
+*   ***General – Test Processing*** – commands to process tests, to validate software and procedures
+*   ***Deprecated Commands*** – commands that are planned for removal
 
 The ***Commands(Table)*** menu provides commands for table processing.
 
@@ -964,14 +964,14 @@ Commands(Table) Menu
  
 Table commands are organized into the following categories:
 
-* ***Create, Copy, Free Table*** – create, copy and free memory for tables
-* ***Read Table*** – read tables from various input
-* ***Append, Join Tables*** – append and join tables
-* ***Table, Timeseries Processing*** – manipulate data between tables and time series
-* ***Manipulate Table Values*** – manipulate table contents
-* ***Analyze Table*** – analyze table contents, for example to compare tables
-* ***Output Table*** – write tables to various output formats
-* ***Running and Properties*** – manipulate processor properties in and out of tables
+*   ***Create, Copy, Free Table*** – create, copy and free memory for tables
+*   ***Read Table*** – read tables from various input
+*   ***Append, Join Tables*** – append and join tables
+*   ***Table, Timeseries Processing*** – manipulate data between tables and time series
+*   ***Manipulate Table Values*** – manipulate table contents
+*   ***Analyze Table*** – analyze table contents, for example to compare tables
+*   ***Output Table*** – write tables to various output formats
+*   ***Running and Properties*** – manipulate processor properties in and out of tables
 
 The [Commands Chapter](../commands/commands.md) discusses commands in more detail and the
 [Command Reference Appendix](../command-ref/overview.md) provides a reference for each command.
@@ -1079,10 +1079,8 @@ Results Menu Choices
  
 ## Tools Menu ##
 
-The ***Tools*** menu lists tools that perform additional analysis on
-time series that are selected in the ***Time Series Results*** list.
-These features are similar to the ***Results*** features in that a level of
-additional analysis is performed to produce the data product.
+The ***Tools*** menu lists tools that control TSTool behavior or that require interaction,
+such as performing additional analysis on time series that are selected in the ***Time Series Results*** list.
 
 **<p style="text-align: center;">
 ![Menu_Tools](Menu_Tools.png)
@@ -1093,7 +1091,7 @@ Tools Menu
 </p>**
 
 Analysis tools are described in more detail in the [Tools Chapter](../tools/tools.md).
-The following sections describe the ***Tools / Options and Tools / Diagnostics*** features.
+The following sections describe the ***Tools / Options*** and ***Tools / Diagnostics*** features.
 Some tools are provided based on enabled input types.
 
 ### Options ###
@@ -1167,10 +1165,10 @@ This feature is needed less as of TSTool version 11.09.00 because user configura
 TSTool command files implement workflows to automate data processing.
 This section summarizes basic workflow concepts.
 
-* [Conceptualize a Workflow](#conceptualize-a-workflow)
-* [Create a Command File](#create-a-command-file)
-    + [Best Practices for Command Files](#best-practices-for-command-files)
-* [Run the Command File using TSTool](#run-the-command-file-using-tstool)
+*   [Conceptualize a Workflow](#conceptualize-a-workflow)
+*   [Create a Command File](#create-a-command-file)
+    +   [Best Practices for Command Files](#best-practices-for-command-files)
+*   [Run the Command File using TSTool](#run-the-command-file-using-tstool)
 
 ### Conceptualize a Workflow ###
 
@@ -1180,10 +1178,10 @@ This effort should result in a conceptual workflow.
 It is best to conceptualize the workflow without thinking about software limitations.
 For example, the following workflow describes a common task:
 
-1. Create a list of every stream gage in a basin.
-2. Read in a monthly streamflow volume time series for the gages.
-3. Analyze the data for statistics such as current year compared to mean.
-4. Generate graphs and tables with the results.
+1.  Create a list of every stream gage in a basin.
+2.  Read in a monthly streamflow volume time series for the gages.
+3.  Analyze the data for statistics such as current year compared to mean.
+4.  Generate graphs and tables with the results.
 
 ### Create a Command File ###
 
@@ -1193,14 +1191,14 @@ Refer to the [Command Reference](../command-ref/overview.md) to learn which
 commands to use for specific work tasks.
 For example, the following commands are suitable to perform the above conceptual work tasks:
 
-1. [`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md) - to read the list of stations (or use other table commands)
-2. [`For`](../command-ref/For/For.md) - to loop over the stations in the table
-3. [`ReadHydroBase`](../command-ref/ReadHydroBase/ReadHydroBase.md) - to read time series from State of Colorado's HydroBase database
-   (or use similar commands to read time series)
-4. [`RunningStatisticTimeSeries`](../command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries.md)
-   or other statistics commands (see [Statistic Examples](../examples/examples.md#statistic-examples))
-5. [`WriteTableToExcel`](../command-ref/WriteTableToExcel/WriteTableToExcel.md) - to output tabular Excel results
-   and [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) to process graphs
+1.  [`ReadTableFromExcel`](../command-ref/ReadTableFromExcel/ReadTableFromExcel.md) - to read the list of stations (or use other table commands)
+2.  [`For`](../command-ref/For/For.md) - to loop over the stations in the table
+3.  [`ReadHydroBase`](../command-ref/ReadHydroBase/ReadHydroBase.md) - to read time series from State of Colorado's HydroBase database
+    (or use similar commands to read time series)
+4.  [`RunningStatisticTimeSeries`](../command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries.md)
+    or other statistics commands (see [Statistic Examples](../examples/examples.md#statistic-examples))
+5.  [`WriteTableToExcel`](../command-ref/WriteTableToExcel/WriteTableToExcel.md) - to output tabular Excel results
+    and [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) to process graphs
 
 The command file is typically created using the TSTool graphical user interface
 but command files can also be created with a text editor or other software.
@@ -1209,28 +1207,28 @@ but command files can also be created with a text editor or other software.
 
 Best practices for command files are:
 
-1. Document command files with sufficient comments.
-2. Consider using version control such as GitHub to track changes to command files
-   and other controlling information.
-   For example, model input files can be maintained in version control.
-   See the [TSTool test repository](https://github.com/OpenCDSS/cdss-app-tstool-test) for examples.
-3. Organize data files logically, for example, put data into a `data` folder.
-4. Organize process files logically, for example, if multiple command files are used,
-   consider creating multiple folders, with numbers to cause the folders to sort in sequential order.
-5. Use relative paths for file references in commands, for example `data/somefile` and `../data/somefile`.
-   The TSTool working directory (working folder) will be set to the command file folder
-   when the command file is read or saved.
-   All other file locations should be specified relative to that folder.
-   This allows the files to be shared with others without having to change file paths.
-   TSTool automatically defaults to relative paths for file and folder command parameters
-   and handles Windows (`\`) and Linux (`/`) folder separators.
-6. Name TSTool command files with `.tstool` file extension (previously `.TSTool` was the default extension).
-7. Consider using the [`StartLog`](../command-ref/StartLog/StartLog.md) command as the first command in the
-   command file to facilitate troubleshooting.
-   The log file name can be the same as the command file with `.log` appended.
-   This creates a local log file that is managed with command file and related files.
-   The command can be commented out if it significantly slows down processing or creates a large log file.
-   Log files should be ignored from version control repositories.
+1.  Document command files with sufficient comments.
+2.  Consider using version control such as GitHub to track changes to command files
+    and other controlling information.
+    For example, model input files can be maintained in version control.
+    See the [TSTool test repository](https://github.com/OpenCDSS/cdss-app-tstool-test) for examples.
+3.  Organize data files logically, for example, put data into a `data` folder.
+4.  Organize process files logically, for example, if multiple command files are used,
+    consider creating multiple folders, with numbers to cause the folders to sort in sequential order.
+5.  Use relative paths for file references in commands, for example `data/somefile` and `../data/somefile`.
+    The TSTool working directory (working folder) will be set to the command file folder
+    when the command file is read or saved.
+    All other file locations should be specified relative to that folder.
+    This allows the files to be shared with others without having to change file paths.
+    TSTool automatically defaults to relative paths for file and folder command parameters
+    and handles Windows (`\`) and Linux (`/`) folder separators.
+6.  Name TSTool command files with `.tstool` file extension (previously `.TSTool` was the default extension).
+7.  Consider using the [`StartLog`](../command-ref/StartLog/StartLog.md) command as the first command in the
+    command file to facilitate troubleshooting.
+    The log file name can be the same as the command file with `.log` appended.
+    This creates a local log file that is managed with command file and related files.
+    The command can be commented out if it significantly slows down processing or creates a large log file.
+    Log files should be ignored from version control repositories.
 
 ### Run the Command File Using TSTool ###
 

@@ -15,8 +15,8 @@
 *   [Running TSTool as a REST Web Server](#running-tstool-as-a-rest-web-server)
 *   [Running TSTool as a Web Browser Applet](#running-tstool-as-a-web-browser-applet)
 *   [Substitute Datastore Examples](#substitute-datastore-examples)
-    + [Automated Web Services Tests Use Specific Datastore Name and Subtitute Uses a General Datastore Name](#automated-web-services-tests-use-specific-datastore-name-and-subtitute-uses-a-general-datastore-name)
-    + [Automated Database Tests Use a General Datastore Name and Substitute Uses a Specific Datastore Name](#automated-database-tests-use-a-general-datastore-name-and-substitute-uses-a-specific-datastore-name)
+    +   [Automated Web Services Tests Use Specific Datastore Name and Subtitute Uses a General Datastore Name](#automated-web-services-tests-use-specific-datastore-name-and-subtitute-uses-a-general-datastore-name)
+    +   [Automated Database Tests Use a General Datastore Name and Substitute Uses a Specific Datastore Name](#automated-database-tests-use-a-general-datastore-name-and-substitute-uses-a-specific-datastore-name)
 
 ------------------------------
 

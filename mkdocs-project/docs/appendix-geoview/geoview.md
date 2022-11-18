@@ -3,20 +3,20 @@
 This documentation describes the GeoView software component,
 which is a Java library used to implement map interfaces for software.
 
-* [Overview](#overview)
-* [GeoView Terminology](#geoview-terminology)
-* [The GeoView Panel](#the-geoview-panel)
-* [Interacting with the GeoView Map](#interacting-with-the-geoview-map)
-* [Setting GeoView Properties](#setting-geoview-properties)
-* [Viewing a Layer’s Attributes](#viewing-a-layers-attributes)
-* [Using GeoView with a Software Application](#using-geoview-with-a-software-application)
-* [Limitations](#limitations)
-* [GeoView Configuration - the GeoView Project File](#geoview-configuration-the-geoview-project-file)
-	+ [Color Specification](#color-specification)
-	+ [Color Tables](#color-tables)
-	+ [Symbol Style - Point Data](#symbol-style-point-data)
-	+ [Classification](#classification)
-* [GeoView Project File Examples](#geoview-project-file-examples)
+*   [Overview](#overview)
+*   [GeoView Terminology](#geoview-terminology)
+*   [The GeoView Panel](#the-geoview-panel)
+*   [Interacting with the GeoView Map](#interacting-with-the-geoview-map)
+*   [Setting GeoView Properties](#setting-geoview-properties)
+*   [Viewing a Layer’s Attributes](#viewing-a-layers-attributes)
+*   [Using GeoView with a Software Application](#using-geoview-with-a-software-application)
+*   [Limitations](#limitations)
+*   [GeoView Configuration - the GeoView Project File](#geoview-configuration-the-geoview-project-file)
+    +   [Color Specification](#color-specification)
+    +   [Color Tables](#color-tables)
+    +   [Symbol Style - Point Data](#symbol-style-point-data)
+    +   [Classification](#classification)
+*   [GeoView Project File Examples](#geoview-project-file-examples)
 
 --------------
 
@@ -424,9 +424,9 @@ Colors are specified for a number of different properties,
 including the feature color and outline color.
 In order to allow flexibility in specifying colors, a number of formats are supported:
 
-* Named color.  Available colors are: `None` (transparent), `Black`, `Blue`, `Cyan`, `DarkGray`, `Gray`, `Green`, `LightGray`, `Magenta`, `Orange`, `Pink`, `Red`, `White`, `Yellow`
-* Comma-separated Color Triplets as 0-255 (e.g., `255,0,0`) or 0.0-1.0 (e.g., `1.0,0.0,0.0`).
-* Hexadecimal:  `0xRRGGBB` (e.g., `0xFF0000` for red)
+*   Named color.  Available colors are: `None` (transparent), `Black`, `Blue`, `Cyan`, `DarkGray`, `Gray`, `Green`, `LightGray`, `Magenta`, `Orange`, `Pink`, `Red`, `White`, `Yellow`
+*   Comma-separated Color Triplets as 0-255 (e.g., `255,0,0`) or 0.0-1.0 (e.g., `1.0,0.0,0.0`).
+*   Hexadecimal:  `0xRRGGBB` (e.g., `0xFF0000` for red)
 
 ### Color Tables ###
 
@@ -441,15 +441,15 @@ A number of predefined color tables are supported but and user-defined tables is
 Symbol styles for point data are the same as for time series viewing tools.
 The following styles are available:
 
-* `None`
-* `Arrow-Down`, `Arrow-Left`
-* `Asterisk`
-* `Circle-Hollow`, `Circle-Filled`
-* `Diamond-Hollow`, `Diamond-Filled`
-* `Plus`, `Plus-Square`
-* `Square-Hollow`, `Square-Filled`
-* `Triangle-Down-Hollow`, `Triangle-Down-Filled`, `Triangle-Left-Hollow`, `Triangle-Left-Filled`, `Triangle-Right-Hollow`, `Triangle-Right-Filled`, `Triangle-Up-Hollow`, `Triangle-Up-Filled`
-* `X-Cap`, `X-Diamond`, `X-Edge`, `X-Square`
+*   `None`
+*   `Arrow-Down`, `Arrow-Left`
+*   `Asterisk`
+*   `Circle-Hollow`, `Circle-Filled`
+*   `Diamond-Hollow`, `Diamond-Filled`
+*   `Plus`, `Plus-Square`
+*   `Square-Hollow`, `Square-Filled`
+*   `Triangle-Down-Hollow`, `Triangle-Down-Filled`, `Triangle-Left-Hollow`, `Triangle-Left-Filled`, `Triangle-Right-Hollow`, `Triangle-Right-Filled`, `Triangle-Up-Hollow`, `Triangle-Up-Filled`
+*   `X-Cap`, `X-Diamond`, `X-Edge`, `X-Square`
 
 ### Classification ###
 

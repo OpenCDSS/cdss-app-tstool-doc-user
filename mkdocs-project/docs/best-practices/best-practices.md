@@ -1,7 +1,7 @@
 # TSTool / Best Practices
 
-* [Overview](#overview)
-* [Time Series Identifiers](#time-series-identifiers)
+*   [Overview](#overview)
+*   [Time Series Identifiers](#time-series-identifiers)
 
 -----------
 
@@ -13,9 +13,9 @@ This documentation describes best practices when using TSTool.
 
 The main function of TSTool is to process time series and other data:
 
-1. Read data.
-2. Process/manipulate data.
-3. Write data. 
+1.  Read data.
+2.  Process/manipulate data.
+3.  Write data. 
 
 Each time series being processed is assigned a unique identifier (time series ID or TSID)
 and commands that process time series
@@ -26,7 +26,7 @@ Because the TSID can be long and cumbersome, TSTool also allows an alias to be a
 
 ### Time Series Identifier Requirements ###
 
-* **need to link to other documentation**
+*  **need to link to other documentation**
 
 ### Recommended TSID Convention ###
 

@@ -5,12 +5,12 @@ This chapter will be updated when addition spatial data integration features are
 Much of the content at the end of this chapter is still relevant to the software,
 but will be updated significantly in the future.
 
-* [Introduction](#introduction)
-* [Time Series and Map Layer Relationships](#time-series-and-map-layer-relationships)
-* [Opening a Map](#opening-a-map)
-* [Using Time Series to Select Locations on the Map](#using-time-series-to-select-locations-on-the-map)
-* [Using Locations on the Map to Select Time Series](#using-locations-on-the-map-to-select-time-series)
-* [Spatial Analysis Commands](#spatial-analysis-commands)
+*   [Introduction](#introduction)
+*   [Time Series and Map Layer Relationships](#time-series-and-map-layer-relationships)
+*   [Opening a Map](#opening-a-map)
+*   [Using Time Series to Select Locations on the Map](#using-time-series-to-select-locations-on-the-map)
+*   [Using Locations on the Map to Select Time Series](#using-locations-on-the-map-to-select-time-series)
+*   [Spatial Analysis Commands](#spatial-analysis-commands)
 
 ------------
 
@@ -28,18 +28,18 @@ Time series concepts (such as time series identifiers) are discussed in detail i
 The map capability in the TSTool user interface is limited and has not been fully developed.
 However, commands related to tables can be used to link time series to tables, for example:
 
-* the [`ReadTableFromDBF`](../command-ref/ReadTableFromDBF/ReadTableFromDBF.md) command can be used to
-read the attribute data from an Esri shapefile and attributes can be attached to time series using the
-[`SetTimeSeriesPropertiesFromTable`](../command-ref/SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command
-* similarly, it is possible to use commands like
-[`CalculateTimeSeriesStatistic`](../command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md),
-save to a table, and then join the table in a spatial data layer using GIS tools
-* time series read from sources that provide location data typically have properties
-set during the read and these properties can be copied to a table with
-[`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md),
-the table can be written using
-[`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md),
-and then the file can be used by GIS software as a point layer
+*   the [`ReadTableFromDBF`](../command-ref/ReadTableFromDBF/ReadTableFromDBF.md) command can be used to
+    read the attribute data from an Esri shapefile and attributes can be attached to time series using the
+    [`SetTimeSeriesPropertiesFromTable`](../command-ref/SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command
+*   similarly, it is possible to use commands like
+    [`CalculateTimeSeriesStatistic`](../command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md),
+    save to a table, and then join the table in a spatial data layer using GIS tools
+*   time series read from sources that provide location data typically have properties
+    set during the read and these properties can be copied to a table with
+    [`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md),
+    the table can be written using
+    [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md),
+    and then the file can be used by GIS software as a point layer
 
 It also is often possible to perform selections of time series based on spatial constraints,
 simply by using available attributes.
@@ -60,11 +60,11 @@ Map layers often indicate physical features (e.g., rivers, cities, roads, data c
 or features that are overlaid on physical features (e.g., political boundaries,
 weather fronts, regions or points of interest).  A layer’s data consist of:
 
-1. Features – the coordinate information that defines the shape on the map.
-2. Attributes – a tabular list of data values associated with the features.
-3. Metadata – data about the layer, including the source, coordinate system, history, etc.
-4. Projection – the coordinate system for the coordinates, which is usually noted in metadata but may also be indicated by a projection file or similar.
-5. Symbology – the symbol information for each layer (e.g., point symbol, line width, polygon fill color), labels, and other visualization information.
+1.  Features – the coordinate information that defines the shape on the map.
+2.  Attributes – a tabular list of data values associated with the features.
+3.  Metadata – data about the layer, including the source, coordinate system, history, etc.
+4.  Projection – the coordinate system for the coordinates, which is usually noted in metadata but may also be indicated by a projection file or similar.
+5.  Symbology – the symbol information for each layer (e.g., point symbol, line width, polygon fill color), labels, and other visualization information.
 
 The features and attributes are the primary data, and the other information facilitates using the features and attributes.
 
@@ -92,13 +92,13 @@ consistent throughout a system or only one data type is of interest.
 It is frequently the case that the real-time data that are collected are managed in a database,
 with data being archived over time, for example resulting in the following time series for precipitation data:
 
-1. Real-time data (often provisional data available for a short period).
-2. Real-time extended data – real-time data collected for the past year, for example, having received limited or no quality control
-3. Real-time archived data – real-time data for the historical period, quality controlled
-4. Hourly accumulation – for example, convert real-time precipitation data to hourly totals
-5. Daily accumulation – for example, convert hourly precipitation data to daily totals
-6. Monthly accumulation – etc.
-7. Yearly accumulation – etc.
+1.  Real-time data (often provisional data available for a short period).
+2.  Real-time extended data – real-time data collected for the past year, for example, having received limited or no quality control
+3.  Real-time archived data – real-time data for the historical period, quality controlled
+4.  Hourly accumulation – for example, convert real-time precipitation data to hourly totals
+5.  Daily accumulation – for example, convert hourly precipitation data to daily totals
+6.  Monthly accumulation – etc.
+7.  Yearly accumulation – etc.
 
 The first two examples are often referred to as “real-time” data whereas the last
 five examples are often referred to as “historical” data.  In a system that is homogeneous,
@@ -282,14 +282,14 @@ The latter may be implemented in the future; however,
 it is faster to use the input/query list because only time series header information is processed.
 When ***Tools / Select on Map*** is selected, features on the map are selected as follows:
 
-1. The software tries to find appropriate map layers by matching the lookup file
-`TS_DataType` and `TS_Interval` column values with the ***Data Type*** and ***Time Step*** values in the input/query list.  
-2. The resulting layers (indicated by ***Layer_Name***) are searched to match the ID
-(and optionally Data Source) values in the input/query time series list with
-the attributes indicated by the `Layer_Location` and `Layer_DataSource` lookup file
-(`Layer_Interval` can also optionally be used).
-3. Matching features are selected and the map zooms to highlight the features,
-as shown in the following figure (the arrows have been added for illustration).
+1.  The software tries to find appropriate map layers by matching the lookup file
+    `TS_DataType` and `TS_Interval` column values with the ***Data Type*** and ***Time Step*** values in the input/query list.  
+2.  The resulting layers (indicated by ***Layer_Name***) are searched to match the ID
+    (and optionally Data Source) values in the input/query time series list with
+    the attributes indicated by the `Layer_Location` and `Layer_DataSource` lookup file
+    (`Layer_Interval` can also optionally be used).
+3.  Matching features are selected and the map zooms to highlight the features,
+    as shown in the following figure (the arrows have been added for illustration).
 
 **<p style="text-align: center;">
 ![Menu_Tools_SelectOnMap2](Menu_Tools_SelectOnMap2.png)
@@ -313,37 +313,37 @@ Providing all information will result in record-level queries that allow a direc
 
 To select time series from the map:
 
-1. Perform a time series query to create a list of time series (see the previous section for an example).
-**The map can be used to select time series in this list,
-but selecting from the map will not initiate a database query or file read.
-This is because the variety of input types that TSTool
-supports require specific information to query/read time series.**
-2. Select a layer of interest on the map.
-This layer should correspond to time series in the list from the first step.
-For example, if the time series list contains daily streamflow time series,
-select the map layer that corresponds to such data.  For example:<br><br>
-![GeoView_SelectLayer](GeoView_SelectLayer.png)<br>
-3. Activate the select tool on the map interface toolbar:<br><br>
-![GeoView_SelectLayer2](GeoView_SelectLayer2.png)<br>
-4. Draw a box around features of interest on the map.
-The software will attempt to match the features in the time series list in the TSTool main window.
-To do so, it first matches the layer name with the similar value in the lookup file.
-It then tries to match the ID (and optionally ***Data Source***) values in the
-input/query time series list with the attributes indicated by the `Layer_Location` and
-`Layer_DataSource` lookup file (`Layer_Interval` can also be used).
-Matched time series are selected in the list.
-Previous selections are not cleared – use the right click popup menu to clear selections first if appropriate.<br><br>
-![GeoView_SelectLayer3](GeoView_SelectLayer3.png)<br>
-**<p style="text-align: center;">
-Selecting Features on the Map
-</p>**
-![GeoView_SelectLayer4](GeoView_SelectLayer4.png)<br>
-**<p style="text-align: center;">
-Time Series List After Select from Map<br>
-</p>**
-5. Once time series have been matched,
-the information can be copied to the commands area for further processing.
-This capability is therefore useful for identifying available data for an area.
+1.  Perform a time series query to create a list of time series (see the previous section for an example).
+    **The map can be used to select time series in this list,
+    but selecting from the map will not initiate a database query or file read.
+    This is because the variety of input types that TSTool
+    supports require specific information to query/read time series.**
+2.  Select a layer of interest on the map.
+    This layer should correspond to time series in the list from the first step.
+    For example, if the time series list contains daily streamflow time series,
+    select the map layer that corresponds to such data.  For example:<br><br>
+    ![GeoView_SelectLayer](GeoView_SelectLayer.png)<br>
+3.  Activate the select tool on the map interface toolbar:<br><br>
+    ![GeoView_SelectLayer2](GeoView_SelectLayer2.png)<br>
+4.  Draw a box around features of interest on the map.
+    The software will attempt to match the features in the time series list in the TSTool main window.
+    To do so, it first matches the layer name with the similar value in the lookup file.
+    It then tries to match the ID (and optionally ***Data Source***) values in the
+    input/query time series list with the attributes indicated by the `Layer_Location` and
+    `Layer_DataSource` lookup file (`Layer_Interval` can also be used).
+    Matched time series are selected in the list.
+    Previous selections are not cleared – use the right click popup menu to clear selections first if appropriate.<br><br>
+    ![GeoView_SelectLayer3](GeoView_SelectLayer3.png)<br>
+    **<p style="text-align: center;">
+    Selecting Features on the Map
+    </p>**
+    ![GeoView_SelectLayer4](GeoView_SelectLayer4.png)<br>
+    **<p style="text-align: center;">
+    Time Series List After Select from Map<br>
+    </p>**
+5.  Once time series have been matched,
+    the information can be copied to the commands area for further processing.
+    This capability is therefore useful for identifying available data for an area.
 
 If not all selected features in a layer correspond to time series, a warning similar to the following may be shown:
  

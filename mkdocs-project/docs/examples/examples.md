@@ -5,22 +5,22 @@ General examples are listed first, followed by more complex examples.
 Additional information can be found in the training materials (see
 ***Help / View Training Materials***).
 
-* [General Examples](#general-examples)
-	+ [General – One-time Time Series Display/Analysis](#general-one-time-time-series-displayanalysis)
-	+ [General – Reproducing an Analysis with a Command File](#general-reproducing-an-analysis-with-a-command-file)
-* [Model Data Processing Examples](#model-data-processing-examples)
-	+ [Modeling – Preparing Model Files Using a Command File](#modeling-preparing-model-files-using-a-command-file)
-	+ [Modeling – Processing Reservoir Target (Input=HydroBase, Output=StateMod)](#modeling-processing-reservoir-target-inputhydrobase-outputstatemod)
-	+ [Modeling – Filling Reservoir End of Month Content with a Pattern File (Input=HydroBase, Output=StateMod)](#modeling-filling-reservoir-end-of-month-contents-with-a-pattern-file-inputhydrobase-outputstatemod)
-	+ [Modeling – Using a List File to Automate Time Series Processing (Input=HydroBase, Output=StateMod)](#modeling-using-a-list-file-to-automate-time-series-processing-inputhydrobase-outputstatemod)
-	+ [Modeling – Processing Frost Dates (Input=HydroBase, Output=StateCU)](#modeling-processing-frost-dates-inputhydrobase-outputstatecu)
-	+ [Modeling – Filling Streamflow using MOVE2 (Input=HydroBase)](#modeling-filling-streamflow-using-move2-inputhydrobase)
-* [Time Series Ensemble Examples](#time-series-ensemble-examples)
-	+ [Time Series Traces – Comparing Historical and Current Conditions (Input=HydroBase)](#time-series-traces-comparing-historical-and-current-conditions-inputhydrobase)
-* [Statistic Examples](#statistic-examples)
-* [Time Series Product Examples](#time-series-product-examples)
-	+ [Time Series Product – Using TSTool to Display Graphs from Another Software Application](#time-series-product-using-tstool-to-display-graphs-from-an-application)
-	+ [Time Series Product – Automating Graphs for Compare Observed and Simulated Time Series](#automating-graphs-to-compare-observed-and-simulated-time-series)
+*   [General Examples](#general-examples)
+    +   [General – One-time Time Series Display/Analysis](#general-one-time-time-series-displayanalysis)
+    +   [General – Reproducing an Analysis with a Command File](#general-reproducing-an-analysis-with-a-command-file)
+*   [Model Data Processing Examples](#model-data-processing-examples)
+    +   [Modeling – Preparing Model Files Using a Command File](#modeling-preparing-model-files-using-a-command-file)
+    +   [Modeling – Processing Reservoir Target (Input=HydroBase, Output=StateMod)](#modeling-processing-reservoir-target-inputhydrobase-outputstatemod)
+    +   [Modeling – Filling Reservoir End of Month Content with a Pattern File (Input=HydroBase, Output=StateMod)](#modeling-filling-reservoir-end-of-month-contents-with-a-pattern-file-inputhydrobase-outputstatemod)
+    +   [Modeling – Using a List File to Automate Time Series Processing (Input=HydroBase, Output=StateMod)](#modeling-using-a-list-file-to-automate-time-series-processing-inputhydrobase-outputstatemod)
+    +   [Modeling – Processing Frost Dates (Input=HydroBase, Output=StateCU)](#modeling-processing-frost-dates-inputhydrobase-outputstatecu)
+    +   [Modeling – Filling Streamflow using MOVE2 (Input=HydroBase)](#modeling-filling-streamflow-using-move2-inputhydrobase)
+*   [Time Series Ensemble Examples](#time-series-ensemble-examples)
+    +   [Time Series Traces – Comparing Historical and Current Conditions (Input=HydroBase)](#time-series-traces-comparing-historical-and-current-conditions-inputhydrobase)
+*   [Statistic Examples](#statistic-examples)
+*   [Time Series Product Examples](#time-series-product-examples)
+    +   [Time Series Product – Using TSTool to Display Graphs from Another Software Application](#time-series-product-using-tstool-to-display-graphs-from-an-application)
+    +   [Time Series Product – Automating Graphs for Compare Observed and Simulated Time Series](#automating-graphs-to-compare-observed-and-simulated-time-series)
 
 -------------
 
@@ -32,22 +32,22 @@ This section includes examples related to general TSTool use, which may be appro
 
 The following example session illustrates how to query time series data for display, analysis, and viewing.
 
-1. Start TSTool.  If the [State of Colorado's HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase.md) or other database input types are enabled,
-you may need to select a database and provide a login.
-2. To manipulate time series in any way,
-first select the time series of interest in the TSTool main interface.
-Pick appropriate ***Datastore*** or ***Input type***, ***Data type***, ***Time step***, and filter information.
-Press ***Get Time Series List*** to list the available time series.
-After pressing ***Get Time Series List***, a list of time series will be shown in the upper-right corner of the interface.
-3. Select one or more time series from the list and transfer to the ***Commands*** list as time series identifiers.
-Time series identifiers are explained in [Introduction](../introduction/introduction.md).
-4. Press the ***Run All Commands*** button to query the time series.  They should now be listed in the ***Results*** area.
-5. Use the Results and Tools menus to view the time series.  For example, display a line graph
-(using ***Results / Graph - Line***) and then view the time series as a summary or table.
-6. Go back to the ***Commands*** list and use the ***Commands*** menu to add additional commands to manipulate time series.  For example:
-* Insert a [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate.md) command to fill data
-* Insert a [`Cumulate`](../command-ref/Cumulate/Cumulate.md) command to transform the data into cumulative values
-7. Repeat steps 4 – 5 to process and view time series.
+1.  Start TSTool.  If the [State of Colorado's HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase.md) or other database input types are enabled,
+    you may need to select a database and provide a login.
+2.  To manipulate time series in any way,
+    first select the time series of interest in the TSTool main interface.
+    Pick appropriate ***Datastore*** or ***Input type***, ***Data type***, ***Time step***, and filter information.
+    Press ***Get Time Series List*** to list the available time series.
+    After pressing ***Get Time Series List***, a list of time series will be shown in the upper-right corner of the interface.
+3.  Select one or more time series from the list and transfer to the ***Commands*** list as time series identifiers.
+    Time series identifiers are explained in [Introduction](../introduction/introduction.md).
+4.  Press the ***Run All Commands*** button to query the time series.  They should now be listed in the ***Results*** area.
+5.  Use the Results and Tools menus to view the time series.  For example, display a line graph
+    (using ***Results / Graph - Line***) and then view the time series as a summary or table.
+6.  Go back to the ***Commands*** list and use the ***Commands*** menu to add additional commands to manipulate time series.  For example:
+    *   Insert a [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate.md) command to fill data
+    *   Insert a [`Cumulate`](../command-ref/Cumulate/Cumulate.md) command to transform the data into cumulative values
+7.  Repeat steps 4 – 5 to process and view time series.
 
 ### General – Reproducing an Analysis with a Command File ###
 
@@ -55,12 +55,12 @@ To reproduce an analysis, save the commands shown in the ***Commands*** list to 
 and then reload and run the commands later.
 For example, assuming that steps similar to the previous section have been executed:
 
-1. Use the ***File / Save / Commands*** As menu to save the commands.
-It is recommended that command files be saved with a file extension `.TSTool`.
-2. Exit TSTool and restart (alternatively, clear the commands using the ***Clear Commands*** button).
-3. Use ***File / Open / Command File***.  Select the file that you previously saved.
-4. Then run the commands by pressing the ***Run All Commands*** button.
-Display the results using the Results menu.
+1.  Use the ***File / Save / Commands*** As menu to save the commands.
+    It is recommended that command files be saved with a file extension `.TSTool`.
+2.  Exit TSTool and restart (alternatively, clear the commands using the ***Clear Commands*** button).
+3.  Use ***File / Open / Command File***.  Select the file that you previously saved.
+4.  Then run the commands by pressing the ***Run All Commands*** button.
+    Display the results using the Results menu.
 
 As the above example shows,
 reproducing an analysis consists of saving a command file that can be reused later.
@@ -79,9 +79,9 @@ TSTool will internally set the working directory that the directory where a comm
 Most computer models require data that adhere to a consistent format.
 TSTool facilitates processing model data files with features that:
 
-* Allow a specific period of record to be output
-* Fill missing data
-* Produce time series in a specific order
+*   Allow a specific period of record to be output
+*   Fill missing data
+*   Produce time series in a specific order
 
 The following examples illustrate how to use TSTool to process model data.
 
@@ -103,15 +103,15 @@ An effort has been made to make the current TSTool recognize and process old com
  However, there have been some changes that will require updates to commands.
 It is recommended that old command files be migrated to the new syntax using the following approaches:
 
-1. Review the release notes appendix when installing software updates.
-2. Be familiar with this documentation, in particular, the command reference.
-3. Run an existing command file and review the log file
-for warnings about commands that need to be updated.
-Then edit the commands in the GUI (see the next step).
-4. Open an existing command file using the ***File / Open / Command File*** menu.
-TSTool will attempt to convert commands to new syntax as the file is loaded.
-Most command files focus on a particular data type and manipulation.
-Therefore most updates will generally involve only a few changes.
+1.  Review the release notes appendix when installing software updates.
+2.  Be familiar with this documentation, in particular, the command reference.
+3.  Run an existing command file and review the log file
+    for warnings about commands that need to be updated.
+    Then edit the commands in the GUI (see the next step).
+4.  Open an existing command file using the ***File / Open / Command File*** menu.
+    TSTool will attempt to convert commands to new syntax as the file is loaded.
+    Most command files focus on a particular data type and manipulation.
+    Therefore most updates will generally involve only a few changes.
 
 A number of commands have been added/enhanced to promote
 reuse of command files in both batch and GUI run modes.
@@ -255,10 +255,10 @@ where the list file contains the following:
 
 Frost dates are special time series consisting of four dates per year. The dates correspond to:
 
-* Last day in spring that the temperature was 28 degrees F
-* Last day in spring that the temperature was 32 degrees F
-* First day in fall that the temperature was 32 degrees F
-* First day in fall that the temperature was 28 degrees F
+*   Last day in spring that the temperature was 28 degrees F
+*   Last day in spring that the temperature was 32 degrees F
+*   First day in fall that the temperature was 32 degrees F
+*   First day in fall that the temperature was 28 degrees F
 
 These specific dates are currently consistent with the
 [State of Colorado’s HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase.md) and
@@ -329,23 +329,23 @@ relationships between daily precipitation time series may not exist.
 TSTool provides tools for data filling but it does not automatically pick the most appropriate fill methods.
 Data filling involves a number of steps:
 
-1. Initial review of the data (e.g., using the ***Tools / Report - Data Coverage by Year*** menu, and graphs).
-2. Review of the spatial proximity of gages using the ***TSTool View / Map Interface***
-capability or GIS software (see [Spatial Data Integration](../spatial/spatial.md) Chapter for limitations of the map interface).
-3. Comparison of candidate time series (e.g., using the ***Results / Graph - XY-Scatter*** menu).
-4. Apply data filling commands.
-5. Review final results visually and review time series histories
-(by right-clicking on a time series in the ***Time Series Results*** list and selecting ***Time Series Properties***).
+1.  Initial review of the data (e.g., using the ***Tools / Report - Data Coverage by Year*** menu, and graphs).
+2.  Review of the spatial proximity of gages using the ***TSTool View / Map Interface***
+    capability or GIS software (see [Spatial Data Integration](../spatial/spatial.md) Chapter for limitations of the map interface).
+3.  Comparison of candidate time series (e.g., using the ***Results / Graph - XY-Scatter*** menu).
+4.  Apply data filling commands.
+5.  Review final results visually and review time series histories
+    (by right-clicking on a time series in the ***Time Series Results*** list and selecting ***Time Series Properties***).
 
 The data filling approach can be simple or complex.
 An example of a complex data filling technique is to use the
 [`FillMOVE2`](../command-ref/FillMOVE2/FillMOVE2.md) command on daily streamflow data.
 In particular, consider the following case:
 
-* Time series 1 (TS1) has a long period of gaged unregulated data (e.g., a headwater): 1900 to 2000
-* Time series 2 (TS2) has a shorter period of gaged data with 1920 to 1950
-being unregulated and 1950 to 2000 being regulated (e.g., due to the construction of a reservoir)
-* The goal is to produce an estimate of unregulated flow for TS2 for the full period 1900 to 2000.
+*   Time series 1 (TS1) has a long period of gaged unregulated data (e.g., a headwater): 1900 to 2000
+*   Time series 2 (TS2) has a shorter period of gaged data with 1920 to 1950
+    being unregulated and 1950 to 2000 being regulated (e.g., due to the construction of a reservoir)
+*   The goal is to produce an estimate of unregulated flow for TS2 for the full period 1900 to 2000.
 
 This can be accomplished using the following commands:
 
@@ -390,9 +390,9 @@ A simpler approach may involve only a single filling step (e.g., fill the entire
 The general term time series ensemble refers to groups of a time series, often shown in overlapping fashion.
 Common ways to create ensembles are:
 
-* Split time series into N-year lengths and shift to overlap.
-* Run a model multiple times with different input, in order to generate many possible outcomes.
-* Generate synthetic data to use as input to a model.
+*   Split time series into N-year lengths and shift to overlap.
+*   Run a model multiple times with different input, in order to generate many possible outcomes.
+*   Generate synthetic data to use as input to a model.
 
 Several TSTool commands have been implemented to create and process time series ensembles.
 Many other commands allow ensembles to be specified to provide a list of time series for processing.
@@ -462,13 +462,13 @@ Any of the time series can be selected and viewed.
 
 The following features are useful for selecting appropriate traces:
 
-1. Convert a time series to an ensemble and then plot all the traces.
-Use the graph properties to turn traces on/off or use symbols to identify different traces.
-2. Use the tools described in Chapter 5 - Tools to evaluate time series and traces.
-For example, the Year to Date report can be used to determine how well different years compare volumetrically.
-The [`NewStatisticYearTS`](../command-ref/NewStatisticYearTS/NewStatisticYearTS.md) and
-[`NewStatisticTimeSeriesFromEnsemble`](../command-ref/NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) commands
-create derived time series that are useful for evaluating ensemble time series.
+1.  Convert a time series to an ensemble and then plot all the traces.
+    Use the graph properties to turn traces on/off or use symbols to identify different traces.
+2.  Use the tools described in Chapter 5 - Tools to evaluate time series and traces.
+    For example, the Year to Date report can be used to determine how well different years compare volumetrically.
+    The [`NewStatisticYearTS`](../command-ref/NewStatisticYearTS/NewStatisticYearTS.md) and
+    [`NewStatisticTimeSeriesFromEnsemble`](../command-ref/NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) commands
+    create derived time series that are useful for evaluating ensemble time series.
 
 Key traces and output time series can be selected and graphed, as shown below.
 

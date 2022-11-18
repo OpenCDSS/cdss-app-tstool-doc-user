@@ -1,5 +1,6 @@
 # TSTool / Release Notes / Version 14 #
 
+* [Changes in Version 14.5.0](#changes-in-version-1450)
 * [Changes in Version 14.4.0](#changes-in-version-1440)
 * [Changes in Version 14.3.0](#changes-in-version-1430)
 * [Changes in Version 14.2.2](#changes-in-version-1422)
@@ -17,6 +18,16 @@
 * [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.5.0 ##
+
+**Feature release to improve cloud integration and various fixes.**
+
+*   ![new](new.png) [14.5.0] Add features to track command file versions and improve attribution and documentation:
+    +    The [`# comment`](../command-ref/Comment/Comment.md) annotations now include `@author`,
+         `@version`, `@versionDate`, `@sourceUrl`, and `@docUrl`.
+    +    The ***Tools / Commands*** menu has been added with tools to check for updates to the command file
+         and allow comparison of the current commands to the original source
 
 ## Changes in Version 14.4.0 ##
 
