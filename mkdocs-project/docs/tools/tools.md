@@ -1,15 +1,18 @@
 # TSTool / Tools #
 
 This chapter discusses the tools available under the ***Tools*** menu.
+Tools configure TSTool or analyze data and information.
+
 The ***Tools*** menu lists tools that perform additional analysis on
 time series that are selected in the ***Time Series Results*** list.
 These features are similar to the ***Results*** menu features in that a
 level of additional analysis is performed to produce the data product.
+
 Tools may or may not correspond to commands – often tools internally execute the features available in commands,
 in order to implement a more complicated analysis.
 Tools are interactive, whereas commands can be used in automated processing.
 Tools are therefore appropriate for one-off interactive data viewing,
-and commands should be used to automate processing on large datasets.
+whereas commands should be used to automate processing on large datasets.
 
 **<p style="text-align: center;">
 ![Menu_Tools](Menu_Tools.png)
@@ -23,18 +26,21 @@ Tools may be specific to a datastore type and consequently some
 tools may not be available in TSTool for all configurations.
 Where possible, TSTool functionality is included in commands to facilitate automation.
 
-* [Analysis Tools](#analysis-tools)
-	+ [Mixed Station Analysis](#mixed-station-analysis)
-* [Report Tools](#report-tools)
-	+ [Data Coverage by Year Report](#data-coverage-by-year-report)
-	+ [Data Limits Summary Report](#data-limits-summary-report)
-	+ [Month Summary Reports](#month-summary-reports)
-	+ [Year to Date Total Report](#year-to-date-total-report)
-* [Map Tools](#map-tools)
-* [TSTool Options](#tstool-options)
-* [Diagnostics](#diagnostics)
-	+ [Diagnostics Settings](#diagnostics-settings)
-	+ [Diagnostics – View Log File](#diagnostics–view-log-file)
+*   [Analysis Tools](#analysis-tools)
+    +   [Mixed Station Analysis](#mixed-station-analysis)
+*   [Command Tools](#command-tools)
+    +   [Check for Updated Command File](#check-for-updated-command-file)
+    +   [Compare Commands With Source](#compare-commands-with-source)
+*   [Report Tools](#report-tools)
+    +   [Data Coverage by Year Report](#data-coverage-by-year-report)
+    +   [Data Limits Summary Report](#data-limits-summary-report)
+    +   [Month Summary Reports](#month-summary-reports)
+    +   [Year to Date Total Report](#year-to-date-total-report)
+*   [Map Tools](#map-tools)
+*   [TSTool Options](#tstool-options)
+*   [Diagnostics](#diagnostics)
+    +   [Diagnostics Settings](#diagnostics-settings)
+    +   [Diagnostics – View Log File](#diagnostics–view-log-file)
 
 ------------------------
 
@@ -72,6 +78,55 @@ The following figure illustrates the ***Mixed Station Analysis*** tool.
 **<p style="text-align: center;">
 Mixed Station Analysis Interface (<a href="../Menu_Tools_Analysis_MixedStationAnalysis.png">see also the full-size image</a>)
 </p>**
+
+## Command Tools ##
+
+Command tools are used to compare the commands in the TSTool software (local commands)
+with the command file stored in an online repository or other source.
+This helps with version control and maintenance of the command file.
+
+**<p style="text-align: center;">
+![Menu_Tools_Commands](Menu_Tools_Commands.png)
+</p>**
+
+**<p style="text-align: center;">
+Tools / Commands Menu
+</p>**
+
+### Check for Updated Command File ###
+
+The ***Tools / Commands / Check for Updated Command File*** tool compares the local commands
+with the original source file,
+which is typically stored in a GitHub repository or other online location,
+in order to determine which copy is more recent.
+For example, use this tool to evaluate whether a newer command file version
+has been published on the web and needs to be downloaded,
+or whether local changes need to be saved in the respository.
+This requires that the following are defined:
+
+*   Use a `#@sourceUrl` comment to indicate the source location of the command file.
+*   Use a `#@version` and/or `#@versionDate` commnt to indicate the command file version.
+
+The version information from the source command file and the commands in the TSTool interface are compared
+and version information is displayed.
+
+See also the next section.
+
+### Compare Commands With Source ###
+
+The ***Tools / Commands / Compare Commands With Source*** tool compares the local commands
+with the original source file,
+which is typically stored in a GitHub repository or other online location.
+This requires that the following are defined:
+
+*   Use a `#@sourceUrl` command to indicate the source location of the command file.
+*   Install the Kdiff3 software (the default comparison program)
+    or another visual differnce program and 
+    configure in the [TSTool configuration file](../appendix-install/install.md#tstool-configuration).
+
+The source command file and the commands in the TSTool interface are downloaded to temporary files and 
+are then compared with the visual difference program.
+The comparison is helpful to understanding differences before synchronizing the local and source commands.
 
 ## Report Tools ##
 

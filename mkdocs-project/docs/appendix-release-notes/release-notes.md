@@ -5,15 +5,15 @@ A summary table is provided, with links to details for major versions.
 
 *   [TSTool Version History](#tstool-version-history)
 *   [TSTool Version Details](#tstool-version-details) - the following are separate documentation pages
-    + [Version 14 Details](release-notes-14.md)
-    + [Version 13 Details](release-notes-13.md)
-    + [Version 12 Details](release-notes-12.md)
-    + [Version 11 Details](release-notes-11.md)
-    + [Version 10 Details](release-notes-10.md)
-    + [Version 9 Details](release-notes-09.md)
-    + [Version 8 Details](release-notes-08.md)
-    + [Version 7 Details](release-notes-07.md)
-    + [Version 6 Details](release-notes-06.md)
+    +   [Version 14 Details](release-notes-14.md)
+    +   [Version 13 Details](release-notes-13.md)
+    +   [Version 12 Details](release-notes-12.md)
+    +   [Version 11 Details](release-notes-11.md)
+    +   [Version 10 Details](release-notes-10.md)
+    +   [Version 9 Details](release-notes-09.md)
+    +   [Version 8 Details](release-notes-08.md)
+    +   [Version 7 Details](release-notes-07.md)
+    +   [Version 6 Details](release-notes-06.md)
 *   [Known Limitations](#known-limitations)
 *   [TSTool Version Numbering Convention](#tstool-version-numbering-convention)
 *   [TSTool Issue Icons](#tstool-issue-icons)
@@ -34,6 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.5.0](release-notes-14.md)|Feature release to improve cloud integration features. | 2022-11-17 |
 |[14.4.0](release-notes-14.md)|Feature release to improve cloud integration features, add object top-level data type, fix HEC-DSS 64-bit implementation. | 2022-10-27 |
 |[14.3.0](release-notes-14.md)|Feature release to improve automated testing and cloud integration, re-enable Access. | 2022-08-01 |
 |[14.2.2](release-notes-14.md)|Maintenance release to fix issues identified in HydroBase REST web services. | 2022-04-07 |
@@ -208,13 +209,13 @@ The above version string is used in the software as follows, where `Version` is 
 
 The following icons are used to indicate the type of issue in release notes.
 
-*  ![limitation](limitation.png) **Known Limitation** – A known limitation has been documented and may impact the user.
-   The limitation will be addressed in a future release.
-*  ![bug](bug.png) **Bug Fix** – A bug has been fixed.  Users should evaluate whether their work is impacted.
-   Sometimes bug fixes impact internal code and changes may not be very visible to users.
-*  ![remove](remove.png) **Remove** – A feature has been removed, generally because functionality
-   has been migrated to other code or the functionality is no longer needed (e.g., a database is no longer available).
-*  ![change](change.png) **Update/Change** – An existing feature has been changed or enhanced.
-   Backward compatibility is usually retained.  Modifications to an existing command are considered a change.
-*  ![new](new.png) **New Feature** – A new feature has been added, such as a new command.
-   New features may or may not be obvious to users but will generally be visible in menus.
+*   ![limitation](limitation.png) **Known Limitation** – A known limitation has been documented and may impact the user.
+    The limitation will be addressed in a future release.
+*   ![bug](bug.png) **Bug Fix** – A bug has been fixed.  Users should evaluate whether their work is impacted.
+    Sometimes bug fixes impact internal code and changes may not be very visible to users.
+*   ![remove](remove.png) **Remove** – A feature has been removed, generally because functionality
+    has been migrated to other code or the functionality is no longer needed (e.g., a database is no longer available).
+*   ![change](change.png) **Update/Change** – An existing feature has been changed or enhanced.
+    Backward compatibility is usually retained.  Modifications to an existing command are considered a change.
+*   ![new](new.png) **New Feature** – A new feature has been added, such as a new command.
+    New features may or may not be obvious to users but will generally be visible in menus.

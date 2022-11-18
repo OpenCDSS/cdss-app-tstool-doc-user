@@ -1,22 +1,22 @@
 # TSTool / Introduction #
 
-* [Introduction](#introduction)
-* [TSTool Workflow Concepts](#tstool-workflow-concepts)
-    + [Workflow Overview](#workflow-overview)
-    + [Processor Properties](#processor-properties)
-    + [Using Logic Control Commands and Templates](#using-logic-control-commands-and-templates)
-        - [Logic Control Commands](#logic-control-commands)
-        - [Separate Command Files](#separate-command-files)
-        - [Templates](#templates)
-* [Time Series Concepts](#time-series-concepts)
-    + [Time Series Objects and Identifiers](#time-series-objects-and-identifiers)
-    + [Time Series Aliases](#time-series-aliases)
-    + [Date/Time Conventions](#datetime-conventions)
-    + [Time Scale for Time Series Data](#time-scale-for-time-series-data)
-    + [Time Series Commands and Processing Sequence](#time-series-commands-and-processing-sequence)
-* [Time Series Ensembles](#time-series-ensembles)
-* [Tables](#tables)
-* [Networks](#networks)
+*   [Introduction](#introduction)
+*   [TSTool Workflow Concepts](#tstool-workflow-concepts)
+    +   [Workflow Overview](#workflow-overview)
+    +   [Processor Properties](#processor-properties)
+    +   [Using Logic Control Commands and Templates](#using-logic-control-commands-and-templates)
+        -   [Logic Control Commands](#logic-control-commands)
+        -   [Separate Command Files](#separate-command-files)
+        -   [Templates](#templates)
+*   [Time Series Concepts](#time-series-concepts)
+    +   [Time Series Objects and Identifiers](#time-series-objects-and-identifiers)
+    +   [Time Series Aliases](#time-series-aliases)
+    +   [Date/Time Conventions](#datetime-conventions)
+    +   [Time Scale for Time Series Data](#time-scale-for-time-series-data)
+    +   [Time Series Commands and Processing Sequence](#time-series-commands-and-processing-sequence)
+*   [Time Series Ensembles](#time-series-ensembles)
+*   [Tables](#tables)
+*   [Networks](#networks)
 
 ---------------
 
@@ -204,19 +204,19 @@ for the row count of the copied table, which is useful for error checks.
 
 The benefits of using logic commands (in particular the [`For`](../command-ref/For/For.md) command) are listed below.
 
-* Because logic is repeated within the [`For`](../command-ref/For/For.md) and [`EndFor`](../command-ref/EndFor/EndFor.md) command block,
-  command files can be much shorter than if using templates.
-  Consequently, command files load faster and in most cases also run faster.
-* The syntax of TSTool logic commands is controlled by TSTool editors and
-  parameters are edited with command editor dialogs, thereby providing guidance to users.
+*   Because logic is repeated within the [`For`](../command-ref/For/For.md) and [`EndFor`](../command-ref/EndFor/EndFor.md) command block,
+    command files can be much shorter than if using templates.
+    Consequently, command files load faster and in most cases also run faster.
+*   The syntax of TSTool logic commands is controlled by TSTool editors and
+    parameters are edited with command editor dialogs, thereby providing guidance to users.
 
 The downside of using logic commands are listed below:
 
-* [`For`](../command-ref/For/For.md) commands compress logic into a repeating loop of commands.
-  This makes it more difficult to troubleshoot errors.  Additional TSTool features will be added over time to help.
-* There is more reliance on processor properties,
-  which cannot be checked until the commands are run.
-  Consequently, users may have more difficulty troubleshooting command file logic.
+*   [`For`](../command-ref/For/For.md) commands compress logic into a repeating loop of commands.
+    This makes it more difficult to troubleshoot errors.  Additional TSTool features will be added over time to help.
+*   There is more reliance on processor properties,
+    which cannot be checked until the commands are run.
+    Consequently, users may have more difficulty troubleshooting command file logic.
 
 #### Separate Command Files ####
 
@@ -231,19 +231,19 @@ To run all steps sequentially, a main command file can be created that runs each
 
 The benefits of using separate command files are as follows:
 
-1. Large workflows are split into more manageable steps.
-2. Separate steps can be run at different frequencies,
-   which can be helpful during development and reduce overall processing time.
-3. More complex steps can be isolated in a separate command file,
-   which can receive focused attention.
+1.  Large workflows are split into more manageable steps.
+2.  Separate steps can be run at different frequencies,
+    which can be helpful during development and reduce overall processing time.
+3.  More complex steps can be isolated in a separate command file,
+    which can receive focused attention.
 
 The downside of using separate command files are as follows:
 
-1. The separate command files may need to repeat some logic, such as initial set-up.
-2. Hand-off of data from one command file to the next requires writing data at the end of one command file 
-   and reading data in the next command file.
-   The [`DateValue`](../datastore-ref/DateValue/DateValue.md) format and other formats
-   can be used for this purpose.
+1.  The separate command files may need to repeat some logic, such as initial set-up.
+2.  Hand-off of data from one command file to the next requires writing data at the end of one command file 
+    and reading data in the next command file.
+    The [`DateValue`](../datastore-ref/DateValue/DateValue.md) format and other formats
+    can be used for this purpose.
 
 #### Templates ####
 
@@ -257,54 +257,54 @@ The [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.
 final TSTool command file that can be run as usual.
 Conceptually the process to expand a template TSTool command file is as follows.
 
-1. Edit the template file with a text editor, including FreeMarker syntax to implement logic and looping.
-   If the template is a TSTool command file, it is helpful to copy and paste commands from the bottom part of command editor dialogs
-   and then convert the command to template syntax.
-   It is also helpful to develop the core logic of a TSTool command file as usual with TSTool,
-   and then edit the command file with a text editor to convert to a template.
-   Include FreeMarker syntax as documented in the
-   [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command documentation and on the FreeMarker website.
-2. Create a small TSTool command file that includes an
-   [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command.
-   The purpose of this command file is to process the template command file created in the previous
-   step into the final TSTool command file that can be run in the next step.
-   The [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command utilizes data from
-   the TSTool processor to expand the template, including:
-    1. Processor properties including built-in properties (e.g., global input and output periods)
-       and user-defined properties (e.g., set with
-       [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command and other commands).
-    2. One-column tables that can be used to iterate in template lists.
-       If necessary, one-column tables can be created from larger tables using the
-       [`CopyTable`](../command-ref/CopyTable/CopyTable.md) command.
-3. Open and run the expanded TSTool command file to run the final commands.
-   Any errors in logic will need to be addressed by editing the template file and re-expanding to the final command file.
+1.  Edit the template file with a text editor, including FreeMarker syntax to implement logic and looping.
+    If the template is a TSTool command file, it is helpful to copy and paste commands from the bottom part of command editor dialogs
+    and then convert the command to template syntax.
+    It is also helpful to develop the core logic of a TSTool command file as usual with TSTool,
+    and then edit the command file with a text editor to convert to a template.
+    Include FreeMarker syntax as documented in the
+    [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command documentation and on the FreeMarker website.
+2.  Create a small TSTool command file that includes an
+    [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command.
+    The purpose of this command file is to process the template command file created in the previous
+    step into the final TSTool command file that can be run in the next step.
+    The [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command utilizes data from
+    the TSTool processor to expand the template, including:
+    1.  Processor properties including built-in properties (e.g., global input and output periods)
+        and user-defined properties (e.g., set with
+        [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command and other commands).
+    2.  One-column tables that can be used to iterate in template lists.
+        If necessary, one-column tables can be created from larger tables using the
+        [`CopyTable`](../command-ref/CopyTable/CopyTable.md) command.
+3.  Open and run the expanded TSTool command file to run the final commands.
+    Any errors in logic will need to be addressed by editing the template file and re-expanding to the final command file.
 
 The benefits of using a template for a TSTool command file are as follows:
 
-* The full set of FreeMarker features can be used,
-  which provides functionality beyond other options available in TSTool.
-  A relatively small template file can be expanded into a file that represents a complete workflow or data product.
-* Because the final file is completely expanded, any errors in that file can be reviewed at the specific location of the error.
-  For example, if a block of TSTool commands is reproduced 100 times, an error
-  in the 98th block will be very evident because all the commands are present in the final command file.
-* Developing a robust template command file can encompass the primary logic of a workflow.
+*   The full set of FreeMarker features can be used,
+    which provides functionality beyond other options available in TSTool.
+    A relatively small template file can be expanded into a file that represents a complete workflow or data product.
+*   Because the final file is completely expanded, any errors in that file can be reviewed at the specific location of the error.
+    For example, if a block of TSTool commands is reproduced 100 times, an error
+    in the 98th block will be very evident because all the commands are present in the final command file.
+*   Developing a robust template command file can encompass the primary logic of a workflow.
 
 The downside of using a template for a TSTool command file are as follows:
 
-* The final expanded command file may be very large.
-  Consequently, the file may take a long time to load into TSTool and may actually cause TSTool to run out of memory.
-  One reason that TSTool can be slow loading the file is that TSTool runs
-  commands in “discovery” mode to ensure that data are correct and can be used by other commands.
-  For example, commands that read time series will generally attempt to read the time series
-  metadata so that time series can be listed in choices for other commands.  The following work-arounds may be helpful:
-    + Minimize the length of the template command file so as to minimize the length of the expanded command file.
-    + Use the ***File / Open / Command File (no discovery)...*** menu to open the command file.
-      This will avoid running the discovery step, which is appropriate since the
-      expanded command file should generally not be edited after being auto-generated.
-* The FreeMarker template language syntax may be difficult to understand and master competency.
-* The `${Property}` notation used by FreeMarker conflicts with the similar notation used by TSTool.
-  Consequently, where appropriate, the notation needs to be “escaped” by using FreeMarker literal string notation.
-  See the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command documentation for examples.
+*   The final expanded command file may be very large.
+    Consequently, the file may take a long time to load into TSTool and may actually cause TSTool to run out of memory.
+    One reason that TSTool can be slow loading the file is that TSTool runs
+    commands in “discovery” mode to ensure that data are correct and can be used by other commands.
+    For example, commands that read time series will generally attempt to read the time series
+    metadata so that time series can be listed in choices for other commands.  The following work-arounds may be helpful:
+    +   Minimize the length of the template command file so as to minimize the length of the expanded command file.
+    +   Use the ***File / Open / Command File (no discovery)...*** menu to open the command file.
+        This will avoid running the discovery step, which is appropriate since the
+        expanded command file should generally not be edited after being auto-generated.
+*   The FreeMarker template language syntax may be difficult to understand and master competency.
+*   The `${Property}` notation used by FreeMarker conflicts with the similar notation used by TSTool.
+    Consequently, where appropriate, the notation needs to be “escaped” by using FreeMarker literal string notation.
+    See the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command documentation for examples.
 
 ## Time Series Concepts ##
 
@@ -328,14 +328,14 @@ TSTool defines each time series as having an interval base and multiplier (e.g.,
 In many cases, the multiplier is `1` and is not shown in output (e.g., `Month` rather than `1Month` is shown).
 In addition to a period of record, interval, and data values, time series properties include:
 
-* Units (e.g., `CFS`)
-* Data type (e.g., `Streamflow`)
-* Data limits (the maximum, minimum, and other statistics)
-* Description (generally a station or structure name)
-* Missing data value (used internally to mark missing data and trigger data filling,
-  typically `NaN` [Not a Number] or a special value such as `-999`)
-* Comments (often station comments, if available)
-* Processing history (a list of comments about how the time series was created and manipulated)
+*   Units (e.g., `CFS`)
+*   Data type (e.g., `Streamflow`)
+*   Data limits (the maximum, minimum, and other statistics)
+*   Description (generally a station or structure name)
+*   Missing data value (used internally to mark missing data and trigger data filling,
+    typically `NaN` [Not a Number] or a special value such as `-999`)
+*   Comments (often station comments, if available)
+*   Processing history (a list of comments about how the time series was created and manipulated)
 
 To identify time series in the original data and manage time series internally,
 TSTool assigns each time series a time series identifier (TSID) that uses the notation:
@@ -352,23 +352,23 @@ The TSID can be thought of as a unique resource identifier, similar to a URL for
 The first five parts (`Location.Source.Type.Interval.Scenario`) are used to identify
 time series within the original data (e.g., to find the time series in a file or database):
 
-* `LocationType` – optionally used where necessary to uniquely identify locations
-  (e.g., use a location type of `Basin` or `Subbasin` where other identifier information
-  would result in ambiguous interpretation of the identifier parts 
-* `Location` – typically a physical location identifier, such as a station, basin, or sensor identifier.
-* `Source` – a data provider identifier, usually a government or system identifier (e.g., `USGS`, `NWS`),
-  necessary because sometimes the provider for a location changes over time or a database may contain time series from multiple data providers
-* `Type` – the data type, typically specific to the data
-  (e.g., `Streamflow`, `Precip`) – TSTool does not try to institute global data type definitions).
-* `Interval` – the data interval, indicating the time between data values (e.g., `6Hour`, `Day`, `Irregular`).
-* `Scenario` – an optional item that indicates a scenario (e.g., `Hist`, `Filled`, `Max`, `Critical`).
-* `Seq` – an optional sequence identifier used in cases
-  where multiple time series traces in an ensemble may be available,
-  with all other identifier information being equal (e.g., for simulations
-  where multiple versions of input are used or for cases when a historical
-  time series is cut into annual traces, collectively known as ensembles).
-  Where historical data are used as input for an analysis,
-  the sequence identifier typically is a four-digit year corresponding to the data input start year.
+*   `LocationType` – optionally used where necessary to uniquely identify locations
+    (e.g., use a location type of `Basin` or `Subbasin` where other identifier information
+    would result in ambiguous interpretation of the identifier parts 
+*   `Location` – typically a physical location identifier, such as a station, basin, or sensor identifier.
+*   `Source` – a data provider identifier, usually a government or system identifier (e.g., `USGS`, `NWS`),
+    necessary because sometimes the provider for a location changes over time or a database may contain time series from multiple data providers
+*   `Type` – the data type, typically specific to the data
+    (e.g., `Streamflow`, `Precip`) – TSTool does not try to institute global data type definitions).
+*   `Interval` – the data interval, indicating the time between data values (e.g., `6Hour`, `Day`, `Irregular`).
+*   `Scenario` – an optional item that indicates a scenario (e.g., `Hist`, `Filled`, `Max`, `Critical`).
+*   `Seq` – an optional sequence identifier used in cases
+    where multiple time series traces in an ensemble may be available,
+    with all other identifier information being equal (e.g., for simulations
+    where multiple versions of input are used or for cases when a historical
+    time series is cut into annual traces, collectively known as ensembles).
+    Where historical data are used as input for an analysis,
+    the sequence identifier typically is a four-digit year corresponding to the data input start year.
 
 The last part of the TSID after the tilde (`~DataStoreName` or `~InputType~InputName`) indicates input information,
 which allows TSTool to locate and read the time series from a file, database, or the internet.
@@ -482,17 +482,17 @@ In summary, if an alias is assigned to a time series, it will take precedence ov
 
 TSTool uses date/time information in several ways:
 
-1. Data values in time series are associated with a date/time and the precision
-   of all date/time information should be consistent within the time series.
-2. The data interval indicates the time spacing between data points and is
-   represented as a multiplier (optional if `1`) and a base (e.g., `Day`, `Hour`).
-   Consequently 24Hour data has a base interval of `Hour` and a multiplier of `24`.
-3. The period of a time series is defined by start and end date/time values, using appropriate precision.
-4. An analysis period may be used to indicate when data processing should occur.
-5. Output is typically formatted for calendar year (January to December) or water year (October to November).
-   Additionally, a year type of `NovToOct` has been implemented to represent
-   November to October and additional similar year types may be implemented in the future.
-   Calendar year is the default but can be changed in some commands.
+1.  Data values in time series are associated with a date/time and the precision
+    of all date/time information should be consistent within the time series.
+2.  The data interval indicates the time spacing between data points and is
+    represented as a multiplier (optional if `1`) and a base (e.g., `Day`, `Hour`).
+    Consequently 24Hour data has a base interval of `Hour` and a multiplier of `24`.
+3.  The period of a time series is defined by start and end date/time values, using appropriate precision.
+4.  An analysis period may be used to indicate when data processing should occur.
+5.  Output is typically formatted for calendar year (January to December) or water year (October to November).
+    Additionally, a year type of `NovToOct` has been implemented to represent
+    November to October and additional similar year types may be implemented in the future.
+    Calendar year is the default but can be changed in some commands.
 
 A date/time has a precision.  For example, `2002-02` has a monthly precision and `2002-02-01` has a daily precision.
 Each date/time object knows its precision and “extra” date/time
@@ -552,25 +552,25 @@ The time scale for time series data gives an indication of how data values were 
 The time scale is generally determined from the data type (or the data type and interval)
 and can be one of the following (the abbreviations are often used in software choices):
 
-* Instantaneous (`INST`):  The data value represents the data observed at
-  the time associated with the reading (e.g., instantaneous temperature, streamflow, or snow depth).
-  Instantaneous data may be of irregular or regular interval, depending on the data collection system.
-  If irregular, the precision of the date/time associated with the reading may vary (e.g.,
-  automated collection systems may have very precise times whereas
-  infrequently recorded field measurements may only be recorded to the day).
-* Accumulated (`ACCM`):  The data value represents the accumulation of the observed data over the preceding interval.
-  The date/time associated with the data value corresponds to the end of the interval.
-  For example, precipitation (rain or snow recorded as melt) is often recorded as an accumulation over some interval.
-  Accumulated values are typically available as a regular time series,
-  although this is not a requirement (e.g., precipitation might be accumulated between times that a rain gage is read and emptied).
-* Mean (`MEAN`):  The data value represents the mean value of observations during the preceding interval.
-  The date/time associated with the data value corresponds to the end of the interval.
-  The mean includes values after the previous timestamp and including the current timestamp.
-  The computation of mean values may be different depending on whether the original data are irregular or regular.
-  For example, if the original data are regular interval,
-  then equal weight may be given to each value when computing the mean (a simple mean).
-  If the original data are irregular interval, then the weight given to each irregular
-  value may depend on the amount of time that a value was observed (a time-weighted mean, not a simple mean).
+*   Instantaneous (`INST`):  The data value represents the data observed at
+    the time associated with the reading (e.g., instantaneous temperature, streamflow, or snow depth).
+    Instantaneous data may be of irregular or regular interval, depending on the data collection system.
+    If irregular, the precision of the date/time associated with the reading may vary (e.g.,
+    automated collection systems may have very precise times whereas
+    infrequently recorded field measurements may only be recorded to the day).
+*   Accumulated (`ACCM`):  The data value represents the accumulation of the observed data over the preceding interval.
+    The date/time associated with the data value corresponds to the end of the interval.
+    For example, precipitation (rain or snow recorded as melt) is often recorded as an accumulation over some interval.
+    Accumulated values are typically available as a regular time series,
+    although this is not a requirement (e.g., precipitation might be accumulated between times that a rain gage is read and emptied).
+*   Mean (`MEAN`):  The data value represents the mean value of observations during the preceding interval.
+    The date/time associated with the data value corresponds to the end of the interval.
+    The mean includes values after the previous timestamp and including the current timestamp.
+    The computation of mean values may be different depending on whether the original data are irregular or regular.
+    For example, if the original data are regular interval,
+    then equal weight may be given to each value when computing the mean (a simple mean).
+    If the original data are irregular interval, then the weight given to each irregular
+    value may depend on the amount of time that a value was observed (a time-weighted mean, not a simple mean).
 
 Without having specific information about the time scale for data, TSTool assumes that all data are instantaneous for displays.
 If time series are graphed using bars, an option is given to display the bar to the left,
@@ -606,14 +606,14 @@ See the examples in the [Examples of Use](../examples/examples.md) chapter for i
 
 TSTool commands fall into several categories:
 
-1. Time series identifiers (see [Time Series Objects and Identifiers](#time-series-objects-and-identifiers)),
-   which are equivalent to time series “read” commands (where the identifier
-   input type or datastore is used to determine how to read from the original data format)
-2. General commands, which are used to set properties like the period
-   for output, and control processing such as [`If`](../command-ref/If/If.md) and [`For`](../command-ref/For/For.md) commands
-3. Time series commands, which are used to read and manipulate time series and output results
-4. Ensemble commands, which process ensembles of time series,
-5. Table commands, which process tables of information.
+1.  Time series identifiers (see [Time Series Objects and Identifiers](#time-series-objects-and-identifiers)),
+    which are equivalent to time series “read” commands (where the identifier
+    input type or datastore is used to determine how to read from the original data format)
+2.  General commands, which are used to set properties like the period
+    for output, and control processing such as [`If`](../command-ref/If/If.md) and [`For`](../command-ref/For/For.md) commands
+3.  Time series commands, which are used to read and manipulate time series and output results
+4.  Ensemble commands, which process ensembles of time series,
+5.  Table commands, which process tables of information.
 
 Commands are processed sequentially and can be repeated as necessary.
 A typical user starts learning TSTool by performing simple queries and
@@ -626,11 +626,11 @@ Command(Param1=Value1,Param2=”Value”,...)
 Values that may contain spaces or commas are normally surrounded by double quotes.
 This notation is useful for the following reasons:
 
-* The parameter names are included in the command, which makes the command more readable as text.
-* Because the parameter name is included, the parameters can be in any order.
-  The command editor dialogs will enforce a default older.
-* Parameters that have default values can be omitted from the parameter list, shortening commands.
-* New parameters can be added over time, without requiring parameter order to change in existing commands.
+*   The parameter names are included in the command, which makes the command more readable as text.
+*   Because the parameter name is included, the parameters can be in any order.
+    The command editor dialogs will enforce a default older.
+*   Parameters that have default values can be omitted from the parameter list, shortening commands.
+*   New parameters can be added over time, without requiring parameter order to change in existing commands.
 
 Older commands used a fixed notation where parameters were required to be in a specific order.
 TSTool will attempt to update older command syntax to the current syntax when a command file is read.
@@ -665,12 +665,12 @@ By default, the entire time series will be read unless the
 [`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod.md) or
 [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) commands have been specified.
 
-1. Read data.  If the input type, and if needed, input name, are specified in the identifier,
-   they are used to read the data.   Time series properties such as units are assigned.
-2. Compute data limits.  The time series data limits are computed because they may be needed later for filling.
-   This information includes the long-term monthly averages.  These limits are referred to as the original data limits.
-3. Save time series in processor.  The time series that are read or created are managed by the processor,
-   using the TSID and alias.  The time series can then be manipulated by other commands, as per the following step.
+1.  Read data.  If the input type, and if needed, input name, are specified in the identifier,
+    they are used to read the data.   Time series properties such as units are assigned.
+2.  Compute data limits.  The time series data limits are computed because they may be needed later for filling.
+    This information includes the long-term monthly averages.  These limits are referred to as the original data limits.
+3.  Save time series in processor.  The time series that are read or created are managed by the processor,
+    using the TSID and alias.  The time series can then be manipulated by other commands, as per the following step.
 
 #### 3. Manipulate time series or other data. ####
 
@@ -727,12 +727,12 @@ If running in batch mode using the `-commands` option, all of the above
 steps occur in sequence and the UI is not displayed.
 Processing the example shown above results in three time series in memory:
 
-1. A time series identified by `08235350.USGS.Streamflow.Month`, containing the sum of the two time series.
-2. A time series identified by `08236000.DWR.Streamflow.Month`,
-   containing the input to the [`Add`](../command-ref/Add/Add.md) command.
-3. A time series also identified by `08235350.USGS.Streamflow.Month`,
-   containing the original data from the time series that is added to.
-   This contains the original data because a time series identifier by itself in a command list will cause the time series to be read.
+1.  A time series identified by `08235350.USGS.Streamflow.Month`, containing the sum of the two time series.
+2.  A time series identified by `08236000.DWR.Streamflow.Month`,
+    containing the input to the [`Add`](../command-ref/Add/Add.md) command.
+3.  A time series also identified by `08235350.USGS.Streamflow.Month`,
+    containing the original data from the time series that is added to.
+    This contains the original data because a time series identifier by itself in a command list will cause the time series to be read.
 
 These time series can be graphed or saved in an output file.
 
@@ -774,27 +774,27 @@ See the ***Commands(Table)*** menu commands and ***Results / Tables*** tab.
 
 Tables correspond to:
 
-* database query results
-* delimited and fixed-format text files
-* time series viewed as a date/value table
-* attribute table associated with a spatial data layer
+*   database query results
+*   delimited and fixed-format text files
+*   time series viewed as a date/value table
+*   attribute table associated with a spatial data layer
 
 Each table has properties, including:
 
-* unique text identifier, which is used by commands to request and save the table in the processor
-* column metadata:
-    + name (used in table views and output files for column heading)
-    + type (single values or array of values, corresponding to common database, JSON, and other format types):
-        - `boolean`
-        - `datetim`e
-        - `double`
-        - `float`
-        - `integer`
-        - `long` (integer)
-        - `short` (integer)
-        - `string`
-    + precision (number of digits after the decimal, for double and float types)
-    + width (characters used for output)
+*   unique text identifier, which is used by commands to request and save the table in the processor
+*   column metadata:
+    +   name (used in table views and output files for column heading)
+    +   type (single values or array of values, corresponding to common database, JSON, and other format types):
+        -   `boolean`
+        -   `datetim`e
+        -   `double`
+        -   `float`
+        -   `integer`
+        -   `long` (integer)
+        -   `short` (integer)
+        -   `string`
+    +   precision (number of digits after the decimal, for double and float types)
+    +   width (characters used for output)
 
 TSTool generally assumes that table cells within a column are consistent with the column type.
 If command processing results in cell values that are different from the column data type,

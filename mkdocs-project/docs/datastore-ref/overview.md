@@ -1,8 +1,8 @@
 # TSTool / Datastore Reference / Overview #
 
-* [Introduction](#introduction)
-* [Datastore List](#datastore-list)
-* [Datastore Configuration](#datastore-configuration)
+*   [Introduction](#introduction)
+*   [Datastore List](#datastore-list)
+*   [Datastore Configuration](#datastore-configuration)
 
 -----
 
@@ -22,31 +22,31 @@ Most legacy input types that could be migrated to datastores have been migrated.
 
 Data sources that are associated with datastores and input types include:
 
-* databases:
-    + must be accessible via [ODBC](https://en.wikipedia.org/wiki/Open_Database_Connectivity)/[JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) connection,
-      using a database driver software distributed with TSTool
-    + a datastore corresponding to a database is can be queried using Structured Query Language (SQL),
-      such as with the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command
-    + general support for additional database software can be added relatively easily if an ODBC/JDBC driver is available for the database
-    + requires additional software development and integration with TSTool for time series identifier and read/write commands
-* web services:
-    + typically REST web services using a published API
-    + SOAP web services can also be supported
-    + requires software development and integration with TSTool
-* file databases:
-    + ideally uses an open specification
-    + typically optimized for a use, such as
-      [HEC-DSS used with Army Corps](HEC-DSS/HEC-DSS.md) software
-    + adding a new file database requires implementing software that is able to read the file format
-    + currently are handled as ***Input Type*** in the TSTool software but in the future will
-      be migrated to a "file datastore" design
-* files:
-    + ideally uses an open specification
-    + simple files, including general [DateValue](DateValue/DateValue.md) time series file and
-      model files such as the
-      [State of Colorado's StateMod model](StateMod/StateMod.md)
-    + currently are handled as ***Input Type*** in the TSTool software but in the future will
-      be migrated to a "file datastore" design
+*   databases:
+    +   must be accessible via [ODBC](https://en.wikipedia.org/wiki/Open_Database_Connectivity)/[JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) connection,
+        using a database driver software distributed with TSTool
+    +   a datastore corresponding to a database is can be queried using Structured Query Language (SQL),
+        such as with the [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command
+    +   general support for additional database software can be added relatively easily if an ODBC/JDBC driver is available for the database
+    +   requires additional software development and integration with TSTool for time series identifier and read/write commands
+*   web services:
+    +   typically REST web services using a published API
+    +   SOAP web services can also be supported
+    +   requires software development and integration with TSTool
+*   file databases:
+    +   ideally uses an open specification
+    +   typically optimized for a use, such as
+        [HEC-DSS used with Army Corps](HEC-DSS/HEC-DSS.md) software
+    +   adding a new file database requires implementing software that is able to read the file format
+    +   currently are handled as ***Input Type*** in the TSTool software but in the future will
+        be migrated to a "file datastore" design
+*   files:
+    +   ideally uses an open specification
+    +   simple files, including general [DateValue](DateValue/DateValue.md) time series file and
+        model files such as the
+        [State of Colorado's StateMod model](StateMod/StateMod.md)
+    +   currently are handled as ***Input Type*** in the TSTool software but in the future will
+        be migrated to a "file datastore" design
 
 A "datastore" is a data management component that
 saves time series and other data.
@@ -114,8 +114,7 @@ If necessary, such features can be reimplemented as a plugin datastore and used 
 
 Datastores are configured using datastore configuration files, which are described in the specific appendix.
 The `system/TSTool.cfg` file located in the software installation folder provides properties to enable/disable
-datastores globally, which turns off software features (such as ***Commands*** menu for commands
-related to the datastore).
+datastores globally, which turns off software features (such as ***Commands*** menu for commands related to the datastore).
 A similar file can be created in users's files (`.tstool/NN/system/TSTool.cfg`) to configure TSTool for each major version.
 
 Built-in (installation) datastore configuration files are located in the software installation `system/datastores` folder.
@@ -127,10 +126,10 @@ configuration file `C:\Users\user\CDSS\TSTool-13.00.00\datastores\HydroBase.cfg`
 Note that the `Name` property in the datastore configuration file defines the name, not the file name.
 User datastore configuration files allow providing a more specific configuration for:
 
-* database version for [HydroBase datastore](CO-HydroBase/CO-HydroBase.md) database installed on user's computer
-* API key for [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) web services for
-the specific user
-* user-specific datastore files used by software developers
+*   database version for [HydroBase datastore](CO-HydroBase/CO-HydroBase.md) database installed on user's computer
+*   API key for [ColoradoHydroBaseRest](ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) web services for
+    the specific user
+*   user-specific datastore files used by software developers
 
 Use the ***View / Datastores*** menu in TSTool to view datastores that are enabled, in particular to review
 configuration errors and to see which configuration file was used for a datastore.

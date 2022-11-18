@@ -3,35 +3,35 @@
 This chapter summarizes features in the ***Commands*** menu.
 See also the [Command Reference overview](../command-ref/overview.md).
 
-* [Introduction](#introduction)
-* Time Series Commands
-	+ [Select/Free Time Series](#selectfree-time-series)
-	+ [Create Time Series](#create-time-series)
-	+ [Read Time Series](#read-time-series)
-	+ [Fill Time Series Missing Data](#fill-time-series-missing-data)
-	+ [Set Time Series Data](#set-time-series-data)
-	+ [Manipulate Time Series](#manipulate-time-series)
-	+ [Analyze Time Series](#analyze-time-series)
-	+ [Models - Routing](#models-routing)
-	+ [Output Time Series](#output-time-series)
-	+ [Check Time Series](#check-time-series)
-* Topic Area Commands
-	+ [Datastore Processing](#datastore-processing)
-	+ [Ensemble Processing](#ensemble-processing)
-	+ [Network Processing](#network-processing)
-	+ [Spatial Data Processing](#spatial-data-processing)
-	+ [Spreadsheet Processing](#spreadsheet-processing)
-	+ [Template Processing](#template-processing)
-	+ [Visualization Processing](#visualization-processing)
-* General Commands
-	+ [General Commands - Comments](#general-commands-comments)
-	+ [General Commands - File Handling](#general-commands-file-handling)
-	+ [General Commands - Logging and Messaging](#general-commands-logging-and-messaging)
-	+ [General Commands - Running and Properties](#general-commands-running-and-properties)
-	+ [General Commands - Test Processing](#general-commands-test-processing)
-* [Deprecated Commands](#deprecated-commands)
-* [Table Commands](#table-commands)
-* [Plugin Commands](#plugin-commands)
+*   [Introduction](#introduction)
+*   Time Series Commands
+    +   [Select/Free Time Series](#selectfree-time-series)
+    +   [Create Time Series](#create-time-series)
+    +   [Read Time Series](#read-time-series)
+    +   [Fill Time Series Missing Data](#fill-time-series-missing-data)
+    +   [Set Time Series Data](#set-time-series-data)
+    +   [Manipulate Time Series](#manipulate-time-series)
+    +   [Analyze Time Series](#analyze-time-series)
+    +   [Models - Routing](#models-routing)
+    +   [Output Time Series](#output-time-series)
+    +   [Check Time Series](#check-time-series)
+*   Topic Area Commands
+    +   [Datastore Processing](#datastore-processing)
+    +   [Ensemble Processing](#ensemble-processing)
+    +   [Network Processing](#network-processing)
+    +   [Spatial Data Processing](#spatial-data-processing)
+    +   [Spreadsheet Processing](#spreadsheet-processing)
+    +   [Template Processing](#template-processing)
+    +   [Visualization Processing](#visualization-processing)
+*   General Commands
+    +   [General Commands - Comments](#general-commands-comments)
+    +   [General Commands - File Handling](#general-commands-file-handling)
+    +   [General Commands - Logging and Messaging](#general-commands-logging-and-messaging)
+    +   [General Commands - Running and Properties](#general-commands-running-and-properties)
+    +   [General Commands - Test Processing](#general-commands-test-processing)
+*   [Deprecated Commands](#deprecated-commands)
+*   [Table Commands](#table-commands)
+*   [Plugin Commands](#plugin-commands)
 
 ----------
 
@@ -103,7 +103,7 @@ The standard values for the `TSList` parameter are as follows:
 |**`TSList` Parameter Value**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|
 |--|--|
 |`AllMatchingTSID`|Process all time series that match the TSID parameter value.|
-|`AllTS	`|Process all time series.|
+|`AllTS    `|Process all time series.|
 |`EnsembleID`|Process all time series for the ensemble identifier specified by the `EnsembleID` parameter.|
 |`FirstMatchingTSID`|Process the first time series (from the start of commands to the previous command) that matches the `TSID` parameter.|
 |`LastMatchingTSID`|Process the last (previous to the current command) time series that matches the `TSID` parameter.|
@@ -194,14 +194,14 @@ These commands can be executed in sequence to apply multiple fill techniques to 
 
 Time series may contain missing data due to the following or other reasons:
 
-1. The data collection system is unavailable because of a failure, maintenance cycle,
-or hardware that is turned off because of seasonal use
-2. In a real-time system the most current data have not yet been received
-3. Data collection hardware was not in place during a period (e.g., an early period)
-4. Measured values are suspected of being in error and are changed to missing
-5. Values in a computed time series cannot be computed (e.g., input data are missing)
-6. A data source stores only observed values and non-recorded values are
-assumed to be missing rather than a specific value (e.g., zero)
+1.  The data collection system is unavailable because of a failure, maintenance cycle,
+    or hardware that is turned off because of seasonal use
+2.  In a real-time system the most current data have not yet been received
+3.  Data collection hardware was not in place during a period (e.g., an early period)
+4.  Measured values are suspected of being in error and are changed to missing
+5.  Values in a computed time series cannot be computed (e.g., input data are missing)
+6.  A data source stores only observed values and non-recorded values are
+    assumed to be missing rather than a specific value (e.g., zero)
 
 Observations that are available typically are either measured values or values
 that have been estimated by the organization that collects and/or maintains the data.
@@ -360,15 +360,15 @@ Using the output commands allows the results of processing to be saved but does 
 If commands are processed repeatedly during analysis or debugging,
 the following steps may be taken to increase overall efficiency:
 
-1. Output commands that produce output files are not executed if the ***Commands*** list is processed with
-***Run / All Commands*** (ignore output commands) or ***Run / Selected Commands*** (ignore output commands).
-Therefore, use this menu choice to ignore the output commands.
-2. Only selected commands are processed.  Therefore select all but the output commands.
-3. Use an [`Exit`](../command-ref/Exit/Exit.md) control command before output commands to skip the output commands.
-This command can then be deleted or commented out when not needed.
-4. Commands can be converted to comments using the ***Commands*** menu or the popup menu that is
-displayed when right-clicking on the Commands list.
-Therefore, output commands can be temporarily converted to comments until output needs to be created.
+1.  Output commands that produce output files are not executed if the ***Commands*** list is processed with
+    ***Run / All Commands*** (ignore output commands) or ***Run / Selected Commands*** (ignore output commands).
+    Therefore, use this menu choice to ignore the output commands.
+2.  Only selected commands are processed.  Therefore select all but the output commands.
+3.  Use an [`Exit`](../command-ref/Exit/Exit.md) control command before output commands to skip the output commands.
+    This command can then be deleted or commented out when not needed.
+4.  Commands can be converted to comments using the ***Commands*** menu or the popup menu that is
+    displayed when right-clicking on the Commands list.
+    Therefore, output commands can be temporarily converted to comments until output needs to be created.
 
 ## Check Time Series ##
 

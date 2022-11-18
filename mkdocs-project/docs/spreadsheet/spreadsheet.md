@@ -2,14 +2,14 @@
 
 This chapter provides a comparison of TSTool and Microsoft Excel and describes how they can be integrated.
 
-* [Introduction](#introduction)
-* [TSTool and Excel Comparison](#tstool-and-excel-comparison)
-* [Running TSTool from Excel](#running-tstool-from-excel)
-* [Running Excel from TSTool](#running-excel-from-tstool)
-* [Manipulating Excel Files from TSTool](#manipulating-excel-files-from-tstool)
-* [Manipulating TSTool Files from Excel](#manipulating-tstool-files-from-excel)
-* [Testing Excel and TSTool Software and Command Files](#testing-excel-and-tstool-software-and-command-files)
-* [Making TSTool Graph Output Look Like Excel Charts](#making-tstool-graph-output-look-like-excel-charts)
+*   [Introduction](#introduction)
+*   [TSTool and Excel Comparison](#tstool-and-excel-comparison)
+*   [Running TSTool from Excel](#running-tstool-from-excel)
+*   [Running Excel from TSTool](#running-excel-from-tstool)
+*   [Manipulating Excel Files from TSTool](#manipulating-excel-files-from-tstool)
+*   [Manipulating TSTool Files from Excel](#manipulating-tstool-files-from-excel)
+*   [Testing Excel and TSTool Software and Command Files](#testing-excel-and-tstool-software-and-command-files)
+*   [Making TSTool Graph Output Look Like Excel Charts](#making-tstool-graph-output-look-like-excel-charts)
 
 ---------------------
 
@@ -105,8 +105,8 @@ TSTool and Excel Comparison
 
 Reasons for running TSTool from Excel include:
 
-* TSTool is used to acquire and/or process data as input to Excel
-* TSTool performs an analysis/visualization function
+*   TSTool is used to acquire and/or process data as input to Excel
+*   TSTool performs an analysis/visualization function
 
 To run TSTool from Excel, run it like any other external system call,
 using a VBA macro in Excel. TSTool can be run in batch mode using a command line:
@@ -123,7 +123,8 @@ for example using REST web services.
 
 TSTool can run Excel by using its [`RunProgram`](../command-ref/RunProgram/RunProgram.md) command,
 and appropriate Excel command-line switches
-(see:  [Command line Switches for Microsoft Office Products](https://office.microsoft.com/en-us/excel-help/command-line-switches-for-excel-HA010158030.aspx)) (is there a better reference, for example to explain how to run in headless mode and exit?).
+(see:  [Command line Switches for Microsoft Office Products](https://office.microsoft.com/en-us/excel-help/command-line-switches-for-excel-HA010158030.aspx))
+(is there a better reference, for example to explain how to run in headless mode and exit?).
 
 It also is possible to run and control Excel.
 However, this is not integrated into TSTool.
@@ -146,7 +147,7 @@ that has been written specifically to manipulate Excel files through an applicat
 The following options are available for integrating TSTool and Excel
 and an appropriate option should be chosen for the specific environment, problem, and user:
 
-* Use built-in TSTool features to interact directly with Excel `*.xls`, `*.xlsx` files:
+*   Use built-in TSTool features to interact directly with Excel `*.xls`, `*.xlsx` files:
     +   See [TSTool commands to read and write Excel files](../command-ref/overview.md#spreadsheet-processing).
     +   The [Apache POI package](https://poi.apache.org) is used for integration with Excel files.
         Functionality that is envisioned for future TSTool enhancements can be implemented using this package.

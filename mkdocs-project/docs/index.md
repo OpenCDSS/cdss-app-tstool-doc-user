@@ -6,13 +6,13 @@ which automates processing time series, data tables, and other data.
 This documentation is generally referred to as the **"User Documentation"** in contrast to
 **"Developer Documentation"**, which is relevant to software developers.
 
-* [How to Use this Documentation](#how-to-use-this-documentation)
-* [Acknowledgements](#acknowledgements)
-* [Colorado's Decision Support Systems](#colorados-decision-support-systems)
-* [About the Open Water Foundation](#about-the-open-water-foundation)
-* [License](#license)
-* [Source Repository on GitHub](#source-repository-on-github)
-* [Release Notes](appendix-release-notes/release-notes-14.md) - **this documentation is for TSTool version 14.4.0**
+*   [How to Use this Documentation](#how-to-use-this-documentation)
+*   [Acknowledgements](#acknowledgements)
+*   [Colorado's Decision Support Systems](#colorados-decision-support-systems)
+*   [About the Open Water Foundation](#about-the-open-water-foundation)
+*   [License](#license)
+*   [Source Repository on GitHub](#source-repository-on-github)
+*   [Release Notes](appendix-release-notes/release-notes-14.md) - **this documentation is for TSTool version 14.5.0**
 
 ----------------
 
@@ -38,10 +38,11 @@ as part of Colorado’s Decision Support Systems (CDSS).
 
 Additional enhancement to TSTool have been funded by various organizations including:
 
-* Open Water Foundation
-* US Bureau of Reclamation
-* Tennessee Valley Authority
-* and others
+*   Open Water Foundation
+*   US Bureau of Reclamation
+*   Tennessee Valley Authority
+*   Denver Water 
+*   and others
 
 TSTool software users are encouraged to provide feedback using the
 [GitHub Issues page](https://github.com/OpenCDSS/cdss-app-tstool-main/issues).
@@ -50,8 +51,8 @@ TSTool software users are encouraged to provide feedback using the
 
 The following components are used in TSTool and require or request attribution:
 
-* [Material Theme icons](https://material.io/icons/) - these icons are used in documentation
-* More information will be added here as the open source license is finalized.
+*   [Material Theme icons](https://material.io/icons/) - these icons are used in documentation
+*   More information will be added here as the open source license is finalized.
 
 ## Colorado's Decision Support Systems ##
 
