@@ -210,6 +210,7 @@ nav:
   - SetIgnoreLEZero: command-ref/SetIgnoreLEZero/SetIgnoreLEZero.md
   - SetIncludeMissingTS: command-ref/SetIncludeMissingTS/SetIncludeMissingTS.md
   - SetInputPeriod: command-ref/SetInputPeriod/SetInputPeriod.md
+  - SetObjectProperty: command-ref/SetObjectProperty/SetObjectProperty.md
   - SetObjectPropertiesFromTable: command-ref/SetObjectPropertiesFromTable/SetObjectPropertiesFromTable.md
   - SetOutputPeriod: command-ref/SetOutputPeriod/SetOutputPeriod.md
   - SetOutputYearType: command-ref/SetOutputYearType/SetOutputYearType.md

@@ -34,7 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|[14.5.0](release-notes-14.md)|Feature release to improve cloud integration features. | 2022-11-17 |
+|[14.5.0](release-notes-14.md)|Feature release to improve cloud integration and JSON object features. | 2022-11-23 |
 |[14.4.0](release-notes-14.md)|Feature release to improve cloud integration features, add object top-level data type, fix HEC-DSS 64-bit implementation. | 2022-10-27 |
 |[14.3.0](release-notes-14.md)|Feature release to improve automated testing and cloud integration, re-enable Access. | 2022-08-01 |
 |[14.2.2](release-notes-14.md)|Maintenance release to fix issues identified in HydroBase REST web services. | 2022-04-07 |
