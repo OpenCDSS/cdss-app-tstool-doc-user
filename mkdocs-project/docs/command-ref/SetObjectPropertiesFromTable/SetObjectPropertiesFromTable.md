@@ -24,6 +24,11 @@ because of different software used to create the original input and the output.
 within an array of objects.
 Additional functionality and examples will be added over time.**
 
+See the [JSON specification](https://www.json.org/json-en.html).
+
+See also the [`SetObjectProperty`](../SetObjectProperty/SetObjectProperty.md) command,
+which sets an object property from processor property.
+
 ## Command Editor ##
 
 The following dialog is used to edit the command and illustrates the command syntax.
@@ -188,4 +193,5 @@ Problems in JSON files can be checked by using online "JSON lint" websites.
 ## See Also ##
 
 * [`NewObject`](../NewObject/NewObject.md) command
+* [`SetObjectProperty`](../SetObjectProperty/SetObjectProperty.md) command
 * [`WriteObjectToJSON`](../WriteObjectToJSON/WriteObjectToJSON.md) command

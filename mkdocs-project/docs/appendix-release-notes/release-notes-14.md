@@ -21,13 +21,17 @@
 
 ## Changes in Version 14.5.0 ##
 
-**Feature release to improve cloud integration and various fixes.**
+**Feature release to improve cloud and JSON object integration and various fixes.**
 
+*   ![bug](bug.png) [14.5.0] The ***Results / Objects*** output has been fixed to only show the object JSON. 
+    Previously the internal TSTool object was shown, which wraps the original object and adds The JSON object identifier.
 *   ![new](new.png) [14.5.0] Add features to track command file versions and improve attribution and documentation:
     +    The [`# comment`](../command-ref/Comment/Comment.md) annotations now include `@author`,
          `@version`, `@versionDate`, `@sourceUrl`, and `@docUrl`.
     +    The ***Tools / Commands*** menu has been added with tools to check for updates to the command file
          and allow comparison of the current commands to the original source
+*   ![new](new.png) [14.5.0] The [`SetObjectProperty`](../command-ref/SetObjectProperty/SetObjectProperty.md)
+    command has been added to set object property values.
 
 ## Changes in Version 14.4.0 ##
 
