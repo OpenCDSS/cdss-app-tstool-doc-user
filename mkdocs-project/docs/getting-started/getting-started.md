@@ -909,7 +909,7 @@ Data units from all data repositories are not automatically understood by TSTool
 although additional capabilities may be added in the future.
 
 The ***View / Map*** menu displays a map interface in a separate window.
-See the [Spatial Data Integration chapter](../spatial/spatial.md) for more information.
+See the [Processing / Spatial Data ](../processing/spatial-data/spatial-data.md) documentation for more information.
 
 The ***View / Close All View Windows*** menu closes all visible view windows, including graphs.
 This is useful if the command file has generated many graphs and the user wishes to close them all at once.

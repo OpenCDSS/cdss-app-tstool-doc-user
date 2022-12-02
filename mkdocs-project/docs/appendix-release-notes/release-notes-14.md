@@ -24,12 +24,35 @@
 **Feature release to improve cloud and JSON object integration and various fixes.**
 
 *   ![bug](bug.png) [14.5.0] The ***Results / Objects*** output has been fixed to only show the object JSON. 
-    Previously the internal TSTool object was shown, which wraps the original object and adds The JSON object identifier.
-*   ![new](new.png) [14.5.0] Add features to track command file versions and improve attribution and documentation:
-    +    The [`# comment`](../command-ref/Comment/Comment.md) annotations now include `@author`,
-         `@version`, `@versionDate`, `@sourceUrl`, and `@docUrl`.
-    +    The ***Tools / Commands*** menu has been added with tools to check for updates to the command file
-         and allow comparison of the current commands to the original source
+    Previously the internal TSTool object was shown, which wraps the original object and adds The JSON object identifier used by TSTool.
+*   ![change](change.png) [14.5.0] The TSTool main user interface code has been made more modular
+    to split out code for different data sources to improve maintainability.
+    The class names shown in the log file may have changed.
+*   ![change](change.png) [14.5.0] The syntax for specifying a date/time, for example in
+    the [`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod.md) command now supports rounding to week using
+    the following syntax, which is useful to automate weekly scheduled workflows:
+    `CurrentToDay.RoundToDayOfWeek(Wednesday).RoundDirection(>)`
+*   ![change](change.png) [14.5.0] The [`ManipulateTableString`](../command-ref/ManipulateTableString/ManipulateTableString.md)
+    command has been updated:
+    +   The substring operator now supports negative positions to extract substrings at the end of a string.
+    +   The substring operator will now extract partial strings if the starting position is within the string
+        but the ending position is past the end of the string.
+*   ![change](change.png) [14.5.0] The [`WriteTableToMarkdown`](../command-ref/WriteTableToMarkdown/WriteTableToMarkdown.md) command has been updated:
+    +   Columns values that start with `http` are automatically formatted as links.
+    +   The `LinkColumns` command parameter has been added to specify the link text (default is to show the link URL).
+*   ![new](new.png) [14.5.0] Update the documentation organization:
+    +   Add a "Processing" chapter with pages for each group of commands that process various data.
+        This provides background and help with training.
+        Examples will be added over time.
+        Previous content for spatial data and spreadsheet processing have been moved to sections of this chapter and
+        the documentation may be further reorganized once initial documentation content is added.
+    +   Add the [Reference - Plugins](../plugin-ref/overview.md) documentation to list known TSTool plugins.
+*   ![new](new.png) [14.5.0] Add features to track command file versions and improve attribution and documentation,
+    which helps with command file maintenance and collaboration:
+    +   The [`# comment`](../command-ref/Comment/Comment.md) annotations now include `@author`,
+        `@version`, `@versionDate`, `@sourceUrl`, and `@docUrl`.
+    +   The ***Tools / Commands*** menu has been added with tools to check for updates to the command file
+        and allow comparison of the current commands to the original source.
 *   ![new](new.png) [14.5.0] The [`SetObjectProperty`](../command-ref/SetObjectProperty/SetObjectProperty.md)
     command has been added to set object property values.
 
@@ -342,14 +365,14 @@ and add support for sub-second time.**
 
 *   ![bug](bug.png) [14.0.2] Fix bug related to substitute datastore features:
     +   was causing an exception editing commands that operate on datastores, fixed in the following commands:
-        - [`CreateDataStoreDataDictionary`](../command-ref/CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md)
-        - [`DeleteDataStoreTableRows`](../command-ref/DeleteDataStoreTableRows/DeleteDataStoreTableRows.md)
-        - [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md)
-        - [`ReadTimeSeriesFromDataStore`](../command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md)
-        - [`RunSql`](../command-ref/RunSql/RunSql.md)
-        - [`WriteTableToDataStore`](../command-ref/WriteTableToDataStore/WriteTableToDataStore.md)
+        -   [`CreateDataStoreDataDictionary`](../command-ref/CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md)
+        -   [`DeleteDataStoreTableRows`](../command-ref/DeleteDataStoreTableRows/DeleteDataStoreTableRows.md)
+        -   [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md)
+        -   [`ReadTimeSeriesFromDataStore`](../command-ref/ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md)
+        -   [`RunSql`](../command-ref/RunSql/RunSql.md)
+        -   [`WriteTableToDataStore`](../command-ref/WriteTableToDataStore/WriteTableToDataStore.md)
     +   substitute datastore name was not being used to form time series identifiers in the man user interface - the
-      selected datastore (which may be a substitute) is now used to create TSID commands
+        selected datastore (which may be a substitute) is now used to create TSID commands
 *   ![bug](bug.png) [14.0.2] Fix the [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command
     so that irregular interval data outside the requested period are not set in the time series.
 *   ![change](change.png) [14.0.2] Change the

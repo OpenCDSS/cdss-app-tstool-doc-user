@@ -71,6 +71,11 @@ in which case `Read` command parameters or datastore configuration properties ar
 The following datastores (and input types) are listed in alphabetical order by datastore name.
 Any datastores or other features that are obsolete may have already been removed from TSTool or may be removed in the future.
 If necessary, such features can be reimplemented as a plugin datastore and used on specific installations of TSTool.
+See also the [Plugin Reference](../plugin-ref/overview.md) for a list of plugins that may provide datastore integration.
+
+**<p style="text-align: center;">
+Available TSTool Datastores
+</p>**
 
 | **Datastore or Input Type (link to documentation)**                                   | **Technology**         | **Spatial Extent** | **Contents**                                   |
 |--|--|--|--|

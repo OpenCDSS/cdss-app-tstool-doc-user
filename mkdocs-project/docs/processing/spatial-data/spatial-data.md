@@ -1,58 +1,90 @@
-# TSTool / Spatial Data Integration #
+# TSTool / Spatial Data Processing #
 
-This chapter describes TSTool integration with spatial data.
-This chapter will be updated when addition spatial data integration features are implemented.
-Much of the content at the end of this chapter is still relevant to the software,
-but will be updated significantly in the future.
+This documentation describes TSTool integration with spatial data.
 
 *   [Introduction](#introduction)
-*   [Time Series and Map Layer Relationships](#time-series-and-map-layer-relationships)
-*   [Opening a Map](#opening-a-map)
-*   [Using Time Series to Select Locations on the Map](#using-time-series-to-select-locations-on-the-map)
-*   [Using Locations on the Map to Select Time Series](#using-locations-on-the-map-to-select-time-series)
-*   [Spatial Analysis Commands](#spatial-analysis-commands)
+*   [Commands](#commands)
+*   [TSTool User Interface](#tstool-user-interface)
+*   [Examples](#examples)
+*   [TSTool Map Interface](#tstool-map-interface)
+    +   [Time Series and Map Layer Relationships](#time-series-and-map-layer-relationships)
+    +   [Opening a Map](#opening-a-map)
+    +   [Using Time Series to Select Locations on the Map](#using-time-series-to-select-locations-on-the-map)
+    +   [Using Locations on the Map to Select Time Series](#using-locations-on-the-map-to-select-time-series)
+    +   [Spatial Analysis Commands](#spatial-analysis-commands)
 
 ------------
 
 ## Introduction ##
+
+TSTool can be used to automate spatial data processing to a limited degree.
+TSTool is not intended to replace geographic information system (GIS) software but does
+provide useful functionality for common spatial data processing tasks.
+
+Example use cases include:
+
+*   reading spatial data tabular data from shapefile `.dbf` file
+*   creating GeoJSON, KML, and shapefiles files from tables and time series
+*   processing GeoJSON files as objects
+
+## Commands ##
+
+Spatial data processing commands are found in the ***Commands / Spatial Data Processing*** menu.
+
+Properties (attributes) associated with spatial data layer features can be determined
+by processing table and time series data, and then outputting in standard spatial data formats.
+
+## TSTool User Interface ##
+
+The ***Results / Output Files*** tab lists spatial data output files that are created when processing commands.
+Click on an output file to view.
+
+Spatial data files must be viewed with appropriate software,
+such as ArcGIS, QGIS, or web mapping tools.
+
+## Examples ##
+
+See the ***Examples*** section of command documentation.
+
+## TSTool Map Interface ##
 
 Although the main focus in TSTool is time series,
 many time series are associated with a location such as a station, area, or sensor.
 This chapter discusses the relationship between time series and spatial data and
 provides an overview of using map-related features in TSTool.
 Time series concepts (such as time series identifiers) are discussed in detail in
-[the Introduction chapter](../introduction/introduction.md).
+[the Introduction chapter](../../introduction/introduction.md).
  Information about the built-in map display tool used in TSTool is provided in the
-[GeoView Mapping Tools Appendix](../appendix-geoview/geoview.md).
+[GeoView Mapping Tools Appendix](../../appendix-geoview/geoview.md).
 
 The map capability in the TSTool user interface is limited and has not been fully developed.
 However, commands related to tables can be used to link time series to tables, for example:
 
-*   the [`ReadTableFromDBF`](../command-ref/ReadTableFromDBF/ReadTableFromDBF.md) command can be used to
+*   the [`ReadTableFromDBF`](../../command-ref/ReadTableFromDBF/ReadTableFromDBF.md) command can be used to
     read the attribute data from an Esri shapefile and attributes can be attached to time series using the
-    [`SetTimeSeriesPropertiesFromTable`](../command-ref/SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command
+    [`SetTimeSeriesPropertiesFromTable`](../../command-ref/SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command
 *   similarly, it is possible to use commands like
-    [`CalculateTimeSeriesStatistic`](../command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md),
+    [`CalculateTimeSeriesStatistic`](../../command-ref/CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md),
     save to a table, and then join the table in a spatial data layer using GIS tools
 *   time series read from sources that provide location data typically have properties
     set during the read and these properties can be copied to a table with
-    [`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md),
+    [`CopyTimeSeriesPropertiesToTable`](../../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md),
     the table can be written using
-    [`WriteTableToDelimitedFile`](../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md),
+    [`WriteTableToDelimitedFile`](../../command-ref/WriteTableToDelimitedFile/WriteTableToDelimitedFile.md),
     and then the file can be used by GIS software as a point layer
 
 It also is often possible to perform selections of time series based on spatial constraints,
 simply by using available attributes.
-For example [USGS NWIS web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md)
+For example [USGS NWIS web services](../../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md)
 allow querying by county name and Hydrologic Unit Code.
 Of course, this requires that the locational properties for time series are available.
 
 The remainder of this chapter describes map-related features and concepts.
 Future TSTool enhancements will build on features described in the above paragraph
 in order to allow automated processing of map data and products (similar to how the
-[`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command processes time series products).
+[`ProcessTSProduct`](../../command-ref/ProcessTSProduct/ProcessTSProduct.md) command processes time series products).
 
-## Time Series and Map Layer Relationships ##
+### Time Series and Map Layer Relationships ###
 
 An example is useful to provide an overview of the relationship between time series and map layers.  
 
@@ -231,7 +263,7 @@ of users and therefore maps with more detail may need to be configured for use w
 
 The following sections describe more specifically how to utilize the links between time series and map layers.
 
-## Opening a Map ##
+### Opening a Map ###
 
 To open a map in TSTool, first select the ***View / Map*** menu item, which will display the following window.
 
@@ -253,7 +285,7 @@ In this window, select ***File / Open Project*** and select a GeoView Project Fi
 Opening a Map (GeoView Project) File (<a href="../GeoView_Window_OpenProject.png">see also the full-size image</a>)
 </p>**
 
-The format for a GVP file is described in the [GeoView Mapping Tools Appendix](../appendix-geoview/geoview.md).
+The format for a GVP file is described in the [GeoView Mapping Tools Appendix](../../appendix-geoview/geoview.md).
 The file is a simple text file that can be manually edited.
 Although using an Esri `*.mxd` or other file was considered,
 such file formats have been changing, are binary, and are proprietary in nature.
@@ -261,7 +293,7 @@ such file formats have been changing, are binary, and are proprietary in nature.
 After opening the GVP file, a map will be displayed and the TSTool
 ***Tools / Show on Map*** button will be enabled when appropriate.
 
-## Using Time Series to Select Locations on the Map ##
+### Using Time Series to Select Locations on the Map ###
 
 To select time series on the map, first select time series in the upper part of the
 TSTool interface and then select the
@@ -309,7 +341,7 @@ Additionally providing an attribute for data interval allows another level of se
 In this case, the intervals in the attributes must match those shown in TSTool.
 Providing all information will result in record-level queries that allow a direct link between a time series and a layer.
 
-## Using Locations on the Map to Select Time Series ##
+### Using Locations on the Map to Select Time Series ###
 
 To select time series from the map:
 
@@ -364,12 +396,3 @@ The above procedure is not completely robust in that the user may select
 a layer that does not match the time series list.
 Additional features are being considered to minimize this possibility.
 However, the use of the map interface is considered an advanced feature and some reliance is made on a user’s capability.
-
-## Spatial Analysis Commands ##
-
-TSTool’s commands provide a powerful analysis and data processing capability.
-The above sections provided an overview of how to link time series and spatial data.
-It is envisioned that in the future commands will be added to perform processing of time series,
-considering spatial data (e.g., weight time series based on their proximity to a point).
-The ability to perform spatial and temporal analysis in batch mode will be
-implemented as appropriate to meet needed requirements.
