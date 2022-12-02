@@ -49,35 +49,45 @@ Chapter 1 – Introduction (this chapter) provides background information on tim
 
 [Chapter 6 – Quality Control](../quality-control/quality-control.md) provides guidelines and examples for using TSTool to quality control software and data processing workflows.
 
-[Chapter 7 – Spatial Data Integration](../spatial/spatial.md) provides information about using the map interface to link time series with spatial data.
+Chapter 7 – Processing - automate data processing for the following:
 
-[Chapter 8 – Spreadsheet Integration](../spreadsheet/spreadsheet.md) provides information about using TSTool with spreadsheet software.
+*   [Datastore Processing](../processing/datastores/datastores.md) - databases, web services, etc.
+*   [Ensemble Processing](../processing/ensembles/ensembles.md) - time series ensembles (e.g., operational scenarios)
+*   [File Processing](../processing/files/files.md) - file manipulation
+*   [Network Processing](../processing/networks/networks.md) - upstream to downstream networks such as river systems
+*   [Objects Processing](../processing/objects/objects.md) - general objects including JSON
+*   [Spatial Data Processing](../processing/spatial-data/spatial-data.md) - map interface and processing spatial data
+*   [Spreadsheet Processing](../processing/spreadsheets/spreadsheets.md) - spreadsheet integration
+*   [Table Processing](../processing/tables/tables.md) - tables from files, databases, etc.
+*   [Template Processing](../processing/templates/templates.md) - reusable templates with placeholders for dynamic data
+*   [Time Series Processing](../processing/time-series/time-series.md) - any timestamped data
+*   [Visualization Processing](../processing/visualizations/visualizations.md) - graphs and other visual information products
 
-[Chapter 9 – Model Framework Integration](../modeling/modeling.md) provides information about model integration
+[Chapter 8 – Model Framework Integration](../modeling/modeling.md) - provides information about model integration
 
-[Chapter 10 – Troubleshooting](../troubleshooting/troubleshooting.md) provides troubleshooting information, including a list of obsolete commands.
+[Chapter 9 – Troubleshooting](../troubleshooting/troubleshooting.md) - provides troubleshooting information, including a list of obsolete commands.
 
-[Chapter 11 – Best Practices](../best-practices/best-practices.md) describes best practices for workflows
+[Chapter 10 – Best Practices](../best-practices/best-practices.md) - describes best practices for workflows
 
-[Chapter 12 – Resources](../resources/resources.md) lists additional informational resources
+[Chapter 11 – Resources](../resources/resources.md) - lists additional informational resources
 
 [Training ](../training/overview.md) - provides training lessons with examples
 
-[Reference - Commands ](../command-ref/overview.md) provides a full list of commands in groups and alphabetical list
+[Reference - Commands ](../command-ref/overview.md) - provides a full list of commands in groups and alphabetical list
 
-[Reference - Datastores ](../datastore-ref/overview.md) provides a full list of datastores supported by TSTool
+[Reference - Datastores ](../datastore-ref/overview.md) - provides a full list of datastores supported by TSTool
 
-[Appendix - Install TSTool](../appendix-install/install.md) provides information about installing and configuring TSTool.
+[Appendix - Install TSTool](../appendix-install/install.md) - provides information about installing and configuring TSTool.
 
-[Appendix - Release Notes](../appendix-release-notes/release-notes.md) summarizes TSTool changes over time.
+[Appendix - Release Notes](../appendix-release-notes/release-notes.md) - summarizes TSTool changes over time.
 
-[Appendix - Running TSTool in Various Modes](../appendix-running/running.md) summarizes how to run TSTool in various modes
+[Appendix - Running TSTool in Various Modes](../appendix-running/running.md) - summarizes how to run TSTool in various modes
 
-[Appendix - Tables](../appendix-tables/tables.md) provides general information about tables
+[Appendix - Tables](../appendix-tables/tables.md) - provides general information about tables
 
-[Appendix - TSView Time Series Viewing Tools](../appendix-tsview/tsview.md) provides a general reference for time series viewing features.  These features are used throughout TSTool.
+[Appendix - TSView Time Series Viewing Tools](../appendix-tsview/tsview.md) - provides a general reference for time series viewing features.  These features are used throughout TSTool.
 
-[Appendix - GeoView Mapping Tools](../appendix-geoview/geoview.md) provides a general reference for the GeoView map interface
+[Appendix - GeoView Mapping Tools](../appendix-geoview/geoview.md) - provides a general reference for the GeoView map interface
 
 ## TSTool Workflow Concepts ##
 

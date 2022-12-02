@@ -331,7 +331,7 @@ Data filling involves a number of steps:
 
 1.  Initial review of the data (e.g., using the ***Tools / Report - Data Coverage by Year*** menu, and graphs).
 2.  Review of the spatial proximity of gages using the ***TSTool View / Map Interface***
-    capability or GIS software (see [Spatial Data Integration](../spatial/spatial.md) Chapter for limitations of the map interface).
+    capability or GIS software (see [Spatial Data Integration](../processing/spatial-data/spatial-data.md) documentation for limitations of the map interface).
 3.  Comparison of candidate time series (e.g., using the ***Results / Graph - XY-Scatter*** menu).
 4.  Apply data filling commands.
 5.  Review final results visually and review time series histories

@@ -1,11 +1,11 @@
 # TSTool / Command / ManipulateTableString #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,9 +15,9 @@ The `ManipulateTableString` command manipulates a string column in a table.
 For example, it may be necessary to manipulate strings in a table in order to
 match time series identifier parts, so that lookups can occur.  The input is specified by:
 
-* a table column name (`InputColumn1`)
-* optionally, either a second input column name (`InputColumn2`) or a constant string value (`InputValue2`), depending on operator
-* optionally, some operators require an additional input value (`InputValue3`)
+*   a table column name (`InputColumn1`)
+*   optionally, either a second input column name (`InputColumn2`) or a constant string value (`InputValue2`), depending on operator
+*   optionally, some operators require an additional input value (`InputValue3`)
 
 The result is placed in the output column (`OutputColumn`).
 Missing/blank input will be considered as empty strings when formatting the output.
@@ -71,7 +71,7 @@ Operators and Parameter Requirements
 |`Replace` | Start with the first input, replace the substring indicated by the second input with that of the third input (requires 3 inputs). |
 |`Remove` | Start with the first input, remove the substring indicated by the second input (requires 2 inputs). |
 |`Split` | Split string by delimiter and output part. `InputValue2` is the delimiter character and `InputValue3` is the part to output (1+). |
-|`Substring` | Split out a substring from the first input, where the second input is the starting character position (1+) and the optional third input is the ending character position (1+) (requires 2 or 3 inputs). |
+|`Substring` | Split out a substring from the first input, where:<ul><li>the second input is the starting character position (1+), or specify a negative number for the number of characters from the end of the string</li><li>and the optional third input is the ending character position (1+), or specify a negative number for the number of characters from the end of the string</li></ul> This operator requires 2 or 3 inputs. |
 |`ToDate` | Convert the first input to a DateTime object with date precision. |
 |`ToDateTime` | Convert the first input to a DateTime object. |
 |`ToDouble` | Convert the first input to a double precision object. |

@@ -1,11 +1,11 @@
 # TSTool / Command / SetInputPeriod #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -58,10 +58,11 @@ CurrentToMinute.Round(5min).RoundDirection(>).TimeZone()
 CurrentTo* Modifiers
 </p>**
 
-| **Modifier**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
+| **Modifier**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
 |-----------------------|-----------------|
-|`Round(interval)`|Round the current date/time to the specified interval (e.g., `5min`, `6hour`). The default is to round back but see the `RoundDirection()` modifier.|
-|`RoundDirection(<)`<br>`RoundDirection(>)`|Indicate which way the `Round()` modifier should round the date/time, one of:<ul><li>`<` - round to the nearest past even interval</li><li>`>` - round to the nearest future even interval</li></ul>|
+|`Round(interval)`|Round the current date/time to the specified interval (e.g., `5min`, `6hour`). No rounding occurs if the current date/time exactly matches the requested rounding interval. The default is to round back but see the `RoundDirection()` modifier.|
+|`RoundToDayOfWeek(Day)`|Round the current date/time to the specified day of the week (`Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, or `Sunday`). The day is rounded and the month and year are adjusted accordingly. No rounding occurs if the current date/time matches the requested day of the week.  The default is to round back but see the `RoundDirection()` modifier.|
+|`RoundDirection(<)`<br>`RoundDirection(>)`|Indicate which way the `Round()` modifier should round the date/time, one of:<ul><li>`<` - round to the nearest past even interval</li><li>`>` - round to the nearest future even interval</li></ul> |
 |`TimeZone(tzToSet)`|Set the time zone for the date/time to the specified time zone string.  This does not shift the time value.  It simply assigns the time zone string.  Blank (no value) can be used to set the time zone to blank.  Note that other commands may handle time zone in a specific way, for example when reading and writing data.|
 
 ## Examples ##

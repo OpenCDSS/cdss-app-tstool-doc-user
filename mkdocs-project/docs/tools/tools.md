@@ -223,7 +223,7 @@ Year to Date Total Report (<a href="../Menu_Tools_Report_YearToDateTotal.png">se
 The ***Tools / Select on Map*** menu button is enabled when a map is displayed (using ***View / Map***)
 and time series are listed in the upper right part of the main window.
 The locations corresponding to selected time series or all time series in this
-list can be displayed on the map.  See the [Spatial Data Integration](../spatial/spatial.md) chapter for more information.
+list can be displayed on the map.  See the [Processing / Spatial Data](../processing/spatial-data/spatial-data.md) documentation for more information.
 Map features are implemented at only a basic level.
 
 ## TSTool Options ##

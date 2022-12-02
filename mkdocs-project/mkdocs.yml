@@ -11,12 +11,22 @@ nav:
 - 4 - Tools: tools/tools.md
 - 5 - Examples of Use: examples/examples.md
 - 6 - Quality Control: quality-control/quality-control.md
-- 7 - Spatial Data Integration: spatial/spatial.md
-- 8 - Spreadsheet Integration: spreadsheet/spreadsheet.md
-- 9 - Model Framework Integration: modeling/modeling.md
-- 10 - Troubleshooting: troubleshooting/troubleshooting.md
-- 11 - Best Practices: best-practices/best-practices.md
-- 12 - Resources: resources/resources.md
+- '7 - Processing':
+  - 'Datastores': processing/datastores/datastores.md
+  - 'Ensembles': processing/ensembles/ensembles.md
+  - 'Files': processing/files/files.md
+  - 'Networks': processing/networks/networks.md
+  - 'Objects': processing/objects/objects.md
+  - 'Spatial Data': processing/spatial-data/spatial-data.md
+  - 'Spreadsheets': processing/spreadsheets/spreadsheets.md
+  - 'Tables': processing/tables/tables.md
+  - 'Templates': processing/templates/templates.md
+  - 'Time Series': processing/time-series/time-series.md
+  - 'Visualizations': processing/visualizations/visualizations.md
+- 8 - Model Framework Integration: modeling/modeling.md
+- 9 - Troubleshooting: troubleshooting/troubleshooting.md
+- 10 - Best Practices: best-practices/best-practices.md
+- 11 - Resources: resources/resources.md
 - Training:
   - Overview: training/overview.md
 - Reference - Commands:
@@ -323,6 +333,8 @@ nav:
   - WaterML: datastore-ref/WaterML/WaterML.md
   - WaterML2: datastore-ref/WaterML2/WaterML2.md
   - WaterOneFlow: datastore-ref/WaterOneFlow/WaterOneFlow.md
+- Reference - Plugins:
+  - Overview: plugin-ref/overview.md
 - 'Appendix - Install TSTool': appendix-install/install.md
 - 'Appendix - Release Notes':
   - Release Notes: appendix-release-notes/release-notes.md
@@ -336,7 +348,6 @@ nav:
   - Version 7: appendix-release-notes/release-notes-07.md
   - Version 6: appendix-release-notes/release-notes-06.md
 - 'Appendix - Running TSTool in Various Modes': appendix-running/running.md
-- 'Appendix - Tables': appendix-tables/tables.md
 - 'Appendix - TSView Time Series Viewing Tools': appendix-tsview/tsview.md
 - 'Appendix - GeoView Mapping Tools': appendix-geoview/geoview.md
 # ------- configuration properties ---------------
