@@ -1,5 +1,6 @@
 # TSTool / Release Notes / Version 14 #
 
+* [Changes in Version 14.5.1](#changes-in-version-1451)
 * [Changes in Version 14.5.0](#changes-in-version-1450)
 * [Changes in Version 14.4.0](#changes-in-version-1440)
 * [Changes in Version 14.3.0](#changes-in-version-1430)
@@ -18,6 +19,24 @@
 * [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.5.1 ##
+
+**Maintenance release to improve cloud and JSON object integration.**
+
+*   ![change](change.png) [14.5.1] The processor property `UserHomeDir` has been changed to have the value of the home directory.
+    Previously it ended in `\.tstool` on Windows and `/.tstool` on Linux.
+    The new property `UserTstoolDir` has been added to include `.tstool`.
+*   ![change](change.png) [14.5.1] The [`ReadTableFromJSON`](../command-ref/ReadTableFromJSON/ReadTableFromJSON.md) command has been updated:
+    +   Empty strings in the JSON that are used as input for non-string output result in null values.
+    +   Add the `Append` parameter to allow appending to an existing table.
+    +   Add the `ObjectID` parameter to allow reading JSON from an object.
+    +   Add the `RowCountProperty` parameter to allow checking the size of the output table.
+*   ![change](change.png) [14.5.1] The [`WebGet`](../command-ref/WebGet/WebGet.md) command has been updated:
+    +   Add the `Cookies` parameter.
+    +   Add tabs to the command editor to group related parameters.
+*   ![new](new.png) [14.5.1] Add the [`SetPropertyFromObject`](../command-ref/SetPropertyFromObject/SetPropertyFromObject.md) command
+    to set a processor property from an object property.
 
 ## Changes in Version 14.5.0 ##
 

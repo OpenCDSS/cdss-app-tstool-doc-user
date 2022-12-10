@@ -1,20 +1,22 @@
 # TSTool / Command / ReadTableFromJSON #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-	+ [Top Level Array (No Array Name)](#top-level-array-no-array-name)
-	+ [Named Array](#named-array)
-	+ [Nested Arrays (`AppendArrays=True`)](#nested-arrays-appendarraystrue)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+    +   [Top Level Array (No Array Name)](#top-level-array-no-array-name)
+    +   [Named Array](#named-array)
+    +   [Nested Arrays (`AppendArrays=True`)](#nested-arrays-appendarraystrue)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
 ## Overview ##
 
-The `ReadTableFromJSON` command reads a table from a [JavaScript Object Notation (JSON)](https://www.json.org/) file.
+The `ReadTableFromJSON` command reads a table from a [JavaScript Object Notation (JSON)](https://www.json.org/) file
+or an object that has been created by another command such as
+[`NewObject`](../NewObject/NewObject.md).
 
 JSON is a hierarchical data representation that can have multiple nesting levels.
 Arrays are indicated by brackets `[ ]`,
@@ -45,22 +47,23 @@ where the outer braces enclose the entire JSON object and `someArray` is the dat
 
 This command has the following functionality:
 
-* An array name must be specified to indicate the level within the JSON to read:
-	+ If not specified, the topmost array is used.
-	+ All simple data objects in the array are read unless filtered.
-	+ Additional arrays and maps (dictionaries) are ignored.
-* Table column names match the object data names:
-	+ Objects do not need to have consistently-named properties, although this is typical.
-	+ The names within each object correspond to table column names in output.
-	+ Processing of names is case dependent and redundant names will overwrite.
-* Types for table columns are determined by examining the JSON structure:
-	+ Quoted values are interpreted to be strings.
-	+ Booleans are handled directly.
-	+ Floating point numbers with decimal default to double precision output.
-	+ Command parameters `ArrayColumns`, `BooleanColumns`, `DateTimeColumns`, `DoubleColumns`, `IntegerColumns`,
-	and `TextColumns` can be used to override the default data type mapping.
-	+ Arrays containing primitive values (such as all strings or all numbers), can be read into the table as an array column.
-	+ The `ExcludeNames` parameter is provided to exclude JSON names within the data objects.
+*   An array name must be specified to indicate the level within the JSON to read:
+    +   If not specified, the topmost array is used.
+    +   All simple data objects in the array are read unless filtered.
+    +   Additional arrays and maps (dictionaries) are ignored.
+*   Table column names match the object data names:
+    +   Objects do not need to have consistently-named properties, although this is typical.
+    +   The names within each object correspond to table column names in output.
+    +   Processing of names is case dependent and redundant names will overwrite.
+*   Types for table columns are determined by examining the JSON structure:
+    +   Quoted values are interpreted to be strings.
+    +   Booleans are handled directly.
+    +   Floating point numbers with decimal default to double precision output.
+    +   Command parameters `ArrayColumns`, `BooleanColumns`, `DateTimeColumns`, `DoubleColumns`, `IntegerColumns`,
+        and `TextColumns` can be used to override the default data type mapping.
+    +   Arrays containing primitive values (such as all strings or all numbers), can be read into the table as an array column.
+    +   The `ExcludeNames` parameter is provided to exclude JSON names within the data objects.
+*   Empty strings that are converted to non-string types are set to null.
 
 ## Command Editor ##
 
@@ -87,8 +90,9 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
+|`InputFile`<br>|The name of the file to read, as an absolute path or relative to the command file location.  Can be specified using processor `${Property}`.| Must be specified if `ObjectID` is not specified.|
+|`ObjectID`<br>|The identifier for an object that contains JSON data for the table.  Can be specified using `${Property}`.| Must be specified if `InputFile` is not specified.|
 |`TableID`<br>**required**|Identifier to assign to the table that is read, which allows the table data to be used with other commands.  Can be specified using processor `${Property}`.|None – must be specified.|
-|`InputFile`<br>**required**|The name of the file to read, as an absolute path or relative to the command file location.  Can be specified using processor `${Property}`.|None – must be specified.|
 |`ArrayName`|JSON array name containing data objects to read.  Can be specified using processor `${Property}`. | First array found will be read. |
 |`AppendArrays`|If `False`, the first matching array is processed.  If `True`, all matching arrays are processed and appended. | `False` |
 |`IncludeParents`|**Planned feature.** It may be necessary to include parent element values to ensure uniqueness. Parent data will be duplicated in child array table rows. ||
@@ -100,6 +104,8 @@ Command Parameters
 |`IntegerColumns`|List of comma-separated column names for columns that should be treated as containing integer values.  Can be specified using processor `${Property}`.|Automatically determine column type based on numbers without decimal point.|
 |`TextColumns`|List of comma-separated column names for columns that should be treated as containing text values.  Can be specified using processor `${Property}`.| Default column type if other type is not determined.|
 |`Top`|Specify the number of data rows to read, useful when prototyping an analysis process.|Process all rows.  Can be specified using processor `${Property}`.|
+|`RowCountProperty`| Name of the property to set containing the number of rows in the output table.| A property is not set. |
+|`Append`| Indicate whether to append results to the specified table (`True`) or (re)create the table (`False`). | `False` |
 
 ## Examples ##
 
@@ -305,5 +311,4 @@ ReadTableFromJSON(TableID="Table1",InputFile="Data/named-array-nested.json",Arra
 
 ## See Also ##
 
-* [`WebGet`](../WebGet/WebGet.md) command
-* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command
+*   [`NewObject`](../NewObject/NewObject.md) command
