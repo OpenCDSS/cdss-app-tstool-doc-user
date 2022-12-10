@@ -227,6 +227,7 @@ nav:
   - SetProperty: command-ref/SetProperty/SetProperty.md
   - SetPropertyFromEnsemble: command-ref/SetPropertyFromEnsemble/SetPropertyFromEnsemble.md
   - SetPropertyFromNwsrfsAppDefault: command-ref/SetPropertyFromNwsrfsAppDefault/SetPropertyFromNwsrfsAppDefault.md
+  - SetPropertyFromObject: command-ref/SetPropertyFromObject/SetPropertyFromObject.md
   - SetPropertyFromTable: command-ref/SetPropertyFromTable/SetPropertyFromTable.md
   - SetPropertyFromTimeSeries: command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md
   - SetTableColumnProperties: command-ref/SetTableColumnProperties/SetTableColumnProperties.md
