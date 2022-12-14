@@ -22,14 +22,36 @@
 
 ## Changes in Version 14.5.1 ##
 
-**Maintenance release to improve cloud and JSON object integration.**
+**Maintenance release to improve cloud integration, JSON object features, and HydroBase web service diversion record handling.**
 
+*   ![bug](bug.png) [14.5.1] Fix the [Colorado HydroBase REST web service datastore](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)
+    handling of diversion records:
+    +   Previously, some monthly values were read as missing values,
+        with results being different than time series read from a HydroBase database, which contained zeroes instead of missing.
+        This has been fixed, as described below.
+    +   Monthly diversion records from web services now reflect application of the carry forward fill algorithm.
+        Missing months where the previous month's last daily record was a zero are set to zero and carried forward in the irrigation year.
+        The results should match monthly records red from HydroBase.
+        Implementing this logic requires reading the daily time series so retrieving monthly data is slower than before.
+    +   The period for time series is internally set to full irrigation years to support the carry forward algorithm.
+        After filling, the period is set to the requested period, if provided by read commands.
+    +   The carry forward fill logic is the default for web service diversion record time series identifiers
+        and the [`ReadColoradoHydroBaseRest`](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command.
+*   ![change](bug.png) [14.5.1] Update the [`ReadHydroBase`](../command-ref/ReadHydroBase/ReadHydroBase.md) command:
+    +   The period for time series is internally set to full irrigation years to support the carry forward algorithm.
+        After filling, the period is set to the requested period, if provided by read commands.
+    +   Fix so that if filling with diversion comments and the fill flag is defaulted,
+        it sets the flag in the result.  Previously it was not setting the flag in output if for default parameters.
+*   ![bug](bug.png) [14.5.1] Fix the
+    [Colorado HydroBase REST web service datastore](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md) query filters:
+    +   Climate stations can now be filtered by station name and site identifier.
+    +   Surface water stations can now be filtered by station abbreviation.
 *   ![change](change.png) [14.5.1] The processor property `UserHomeDir` has been changed to have the value of the home directory.
-    Previously it ended in `\.tstool` on Windows and `/.tstool` on Linux.
-    The new property `UserTstoolDir` has been added to include `.tstool`.
+    Previously it ended in `\.tstool` on Windows and `/.tstool` on Linux, which is not consistent with the user's home folder.
+    The new property `UserTstoolDir` has been added to include the trailing `.tstool`.
 *   ![change](change.png) [14.5.1] The [`ReadTableFromJSON`](../command-ref/ReadTableFromJSON/ReadTableFromJSON.md) command has been updated:
     +   Empty strings in the JSON that are used as input for non-string output result in null values.
-    +   Add the `Append` parameter to allow appending to an existing table.
+    +   Add the `Append` parameter to allow appending output to an existing table.
     +   Add the `ObjectID` parameter to allow reading JSON from an object.
     +   Add the `RowCountProperty` parameter to allow checking the size of the output table.
 *   ![change](change.png) [14.5.1] The [`WebGet`](../command-ref/WebGet/WebGet.md) command has been updated:
