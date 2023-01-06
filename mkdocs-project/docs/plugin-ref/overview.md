@@ -57,10 +57,10 @@ Available TSTool Plugins
 
 | **Plugin** | **Description** | **Contact** |
 |--|--|--|
-| [Amazon Web Services](https://software.openwaterfoundation.org/) | Commands to integrate with AWS. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool AWS plugin) |
+| [Amazon Web Services](https://software.openwaterfoundation.org/tstool-aws-plugin/) | Commands to integrate with AWS. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool AWS plugin) |
 | [TriLynx Systems NovaStar](https://trilynx.systems/) | Datastores and commands to integrate with the TriLynx NovaStar system for environmental data and flood warning. | [TriLynx Systems](mailto:steve.malers@trilynx.systems?subject=TSTool NovaStar plugin) |
 | [National Weather Service MADIS](https://trilynx.systems/) | Datastores and commands to integrate with the National Weather Service MADIS system (under development). | [TriLynx Systems](mailto:steve.malers@trilynx.systems?subject=TSTool NWS plugin) |
-| [Kisters WISKI web services](https://software.openwaterfoundation.org/) | Datastores and commands to integrate with the Kisters WISKI system web services (under development). | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Kisters WISKI plugin) |
+| [Kisters WISKI (KiWIS) web services](https://software.openwaterfoundation.org/tstool-kiwis-plugin/) | Datastores and commands to integrate with the Kisters WISKI (KiWIS) system web services. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Kisters WISKI plugin) |
 
 ## Plugin Installation and Configuration ##
 

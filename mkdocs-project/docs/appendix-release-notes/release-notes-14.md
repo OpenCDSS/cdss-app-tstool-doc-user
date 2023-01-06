@@ -1,5 +1,6 @@
 # TSTool / Release Notes / Version 14 #
 
+* [Changes in Version 14.5.2](#changes-in-version-1452)
 * [Changes in Version 14.5.1](#changes-in-version-1451)
 * [Changes in Version 14.5.0](#changes-in-version-1450)
 * [Changes in Version 14.4.0](#changes-in-version-1440)
@@ -19,6 +20,20 @@
 * [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.5.2 ##
+
+**Maintenance release to improve JSON object features, and fix HydroBase web service issue.**
+
+*   ![bug](bug.png) [14.5.2] Fix the [Colorado HydroBase REST web service datastore](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md):
+    +   Fix issue where telemetry station time series could not be copied from the time series list to the command area.
+*   ![remove](remove.png) [14.5.2] Remove the unused legacy State of Colorado Satellite Monitoring System library from development files.
+    The latest HydroBase web services have replaced this old library.
+*   ![change](change.png) [14.5.2] Update the copyright notice for 2023.
+*   ![change](change.png) [14.5.2] Update the [`NewObject`](../command-ref/NewObject/NewObject.md) and
+    [`WriteObjectToJSON`](../command-ref/WriteObjectToJSON/WriteObjectToJSON.md) commands and the main interface to support 
+    JSON files that have `[ ]` array at the top level.
+*   ![new](new.png) [14.5.2] TSTool has been tested with the [Kisters WISKI (KiWIS) plugin](../plugin-ref/overview.md).
 
 ## Changes in Version 14.5.1 ##
 

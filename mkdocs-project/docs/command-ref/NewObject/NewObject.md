@@ -11,8 +11,13 @@
 
 ## Overview ##
 
-The `NewObject` command creates a new "complex" object from
+The `NewObject` command creates a new complex object from
 [JavaScript Object Notation (JSON)](https://en.wikipedia.org/wiki/JSON) text.
+An object typically has a root level that is one of:
+
+*   A dictionary of objects surrounded by `{  }`.
+*   An array of objects surrounded by `[  ]`.
+
 The object can be thought of as a dictionary of dictionaries,
 where each object has a text name,
 and a value that is text, a number, a dictionary, a list (array),
@@ -26,11 +31,12 @@ is used to serialize and deserialize content.
 
 Note that objects are not equivalent to TSTool properties,
 which are simple objects used by TSTool to manage workflow execution.
-The TSTool ***Results*** area has ***Objects*** and ***Properties*** tabs.
+The TSTool ***Results*** area has the ***Properties*** tabs for property objects and
+the ***Objects*** tab for complex objects.
 
 Common uses for objects are:
 
-*   hold GeoJSON data, which can be manipulated using commands like
+*   hold GeoJSON spatial data layer, which can be manipulated using commands like
     [`SetObjectPropertiesFromTable`](../SetObjectPropertiesFromTable/SetObjectPropertiesFromTable.md)
 *   hold data that are used to control a process or describe a dataset or product,
     such as configuration files for web content
@@ -82,3 +88,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 * [`FreeObject`](../FreeObject/FreeObject.md) command
 * [`SetObjectPropertiesFromTable`](../SetObjectPropertiesFromTable/SetObjectPropertiesFromTable.md) command
+* [`SetObjectProperty`](../SetObjectProperty/SetObjectProperty.md) command
+* [`WriteObjectToJSON`](../WriteObjectToJSON/WriteObjectToJSON.md) command
