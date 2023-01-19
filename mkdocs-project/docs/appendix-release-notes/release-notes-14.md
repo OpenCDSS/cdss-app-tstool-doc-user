@@ -1,25 +1,36 @@
 # TSTool / Release Notes / Version 14 #
 
-* [Changes in Version 14.5.2](#changes-in-version-1452)
-* [Changes in Version 14.5.1](#changes-in-version-1451)
-* [Changes in Version 14.5.0](#changes-in-version-1450)
-* [Changes in Version 14.4.0](#changes-in-version-1440)
-* [Changes in Version 14.3.0](#changes-in-version-1430)
-* [Changes in Version 14.2.2](#changes-in-version-1422)
-* [Changes in Version 14.2.1](#changes-in-version-1421)
-* [Changes in Version 14.2.0](#changes-in-version-1420)
-* [Changes in Version 14.1.1](#changes-in-version-1411)
-* [Changes in Version 14.1.0](#changes-in-version-1410)
-* [Changes in Version 14.0.6](#changes-in-version-1406)
-* [Changes in Version 14.0.5](#changes-in-version-1405)
-* [Changes in Version 14.0.4](#changes-in-version-1404)
-* [Changes in Version 14.0.3](#changes-in-version-1403)
-* [Changes in Version 14.0.2](#changes-in-version-1402)
-* [Changes in Version 14.0.1](#changes-in-version-1401)
-* [Changes in Version 14.0.0](#changes-in-version-1400)
-* [Release notes for all versions](release-notes.md)
+*   [Changes in Version 14.5.3](#changes-in-version-1453)
+*   [Changes in Version 14.5.2](#changes-in-version-1452)
+*   [Changes in Version 14.5.1](#changes-in-version-1451)
+*   [Changes in Version 14.5.0](#changes-in-version-1450)
+*   [Changes in Version 14.4.0](#changes-in-version-1440)
+*   [Changes in Version 14.3.0](#changes-in-version-1430)
+*   [Changes in Version 14.2.2](#changes-in-version-1422)
+*   [Changes in Version 14.2.1](#changes-in-version-1421)
+*   [Changes in Version 14.2.0](#changes-in-version-1420)
+*   [Changes in Version 14.1.1](#changes-in-version-1411)
+*   [Changes in Version 14.1.0](#changes-in-version-1410)
+*   [Changes in Version 14.0.6](#changes-in-version-1406)
+*   [Changes in Version 14.0.5](#changes-in-version-1405)
+*   [Changes in Version 14.0.4](#changes-in-version-1404)
+*   [Changes in Version 14.0.3](#changes-in-version-1403)
+*   [Changes in Version 14.0.2](#changes-in-version-1402)
+*   [Changes in Version 14.0.1](#changes-in-version-1401)
+*   [Changes in Version 14.0.0](#changes-in-version-1400)
+*   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.5.3 ##
+
+**Maintenance release to improve plugin integration.**
+
+*   ![change](change.png) [14.5.3] Update the time series properties view to show the time series identifier parts in separate text fields.
+    This facilitates troubleshooting.
+*   ![change](change.png) [14.5.3] Time series library code has been updated to improve plugin integration.
+    The changes allow better error handling when reading time series.
+    Existing plugins that read time series will not work with this version of TSTool and will need to be recompiled.
 
 ## Changes in Version 14.5.2 ##
 
