@@ -1,11 +1,12 @@
 # TSTool / Command / WebGet #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+    +   [Checking for Valid URLs](#checking-for-valid-urls)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -74,6 +75,8 @@ Command Parameters
 | --------------|-----------------|----------------- | --- |
 | ***Request*** | `URI`<br>**required**| The Uniform Resource Identifier (URI) for the content to be retrieved.  This is often also referred to as the Uniform Resource Locator (URL).  Global properties can be used with the `${Property}` syntax. The URI can include query parameters with special characters such as equal sign because URLs can be encoded (see the `EncodeURI` parameter). | None - must be specified.|
 | | `EncodeURI` | Indicate whether to encode the URL to protect special characters: `False` or `True`.  See [Percent-encoding on Wikipedia](https://en.wikipedia.org/wiki/Percent-encoding). Encoded URLs are difficult to read and therefore human-readable URL can be entered as the `URI`, such as using spaces.  However, the requested resource may require encoding to be recognized by a called service.  If the provided `URI` is already encoded, then specify `False`. Only the value  part of `?property=value` and `&property=value` query is encoded. | `True` |
+| | `RequestMethod` | The HTTP request method:<ul><li>`DELETE`</li><li>`GET`</li><li>`OPTIONS`</li><li>`POST`</li><li>`PUT`</li></ul> The web server must support the requested methods.  Refer to API documentation for the server. Some requests may require additional input such as HTTP headers or payload file, as described below.| `GET` |
+| | `PayloadFile` | Payload file for `PUT` and `POST` requests. | |
 | | `HttpHeaders` | List of HTTP header properties to be attached to the request.  This is useful if a website requires authentication via a key property, and for testing. The format is `PropertyName1:PropertyValue1,PropertyName2:PropertyValue2,...`| No headers. |
 | | `Cookies` | List of HTTP header cookie properties to be attached to the request. The format is `CookieName1:CookietValue1,CookieName2:CookieValue2,...`| No cookies. |
 | ***Timeout*** | `ConnectTimeout` | The connection timeout in milliseconds.  If a connection has not occurred in this time, an error will result. | `60000` (60 seconds) |
@@ -89,13 +92,36 @@ Command Parameters
 
 See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/WebGet).
 
+### Checking for Valid URLs ###
+
+This `WebGet` command can be used to check a dataset for valid URLs.
+For example, if the dataset can be represented as a table:
+
+1.  Use the [`For`](../For/For.md) command to iterate through the table rows.
+    Use the `TablePropertyMap` command parameter to set a processor property for the website URL.
+2.  Use this `WebGet` command with the following parameters:
+    *   `URI` - for the URL
+    *   `HttpHeaders` - if necessary, set the `User-Agent` header to a suitable agent (see
+        [Chrome web browser user agent](https://www.whatismybrowser.com/guides/the-latest-user-agent/chrome) or
+        [Mozilla User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) documentation)
+        to mimic a web browser because some websites may reject requests without an accepted user agent.
+        Edit the user agent value to remove commas, which cause problems parsing the parameter.
+        It may also be necessary to surround the user agent property value with single quotes.
+    *   `ResponseCodeProperty`- set a processor property for the HTTP response code
+3.  Use the [`If`](../If/If.md) and [`Message`](../Message/Message.md) commands to check the error code.
+    Any value other than 200 can be considered to be an error and a warning or failure message can be generated.
+
+Any warnings or errors should be reviewed and problem URLs should be corrected in the dataset.
+
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`For`](../For/For.md) command
-* [`FTPGet`](../FTPGet/FTPGet.md) command
-* [`ListFiles`](../ListFiles/ListFiles.md) command
-* [`TextEdit`](../TextEdit/TextEdit.md) command
-* [`ReadDelimitedFile`](../ReadDelimitedFile/ReadDelimitedFile.md) command
-* [`UnzipFile`](../UnzipFile/UnzipFile.md) command
+*   [`For`](../For/For.md) command
+*   [`FTPGet`](../FTPGet/FTPGet.md) command
+*   [`If`](../If/If.md) command
+*   [`ListFiles`](../ListFiles/ListFiles.md) command
+*   [`Message`](../Message/Message.md) command
+*   [`TextEdit`](../TextEdit/TextEdit.md) command
+*   [`ReadDelimitedFile`](../ReadDelimitedFile/ReadDelimitedFile.md) command
+*   [`UnzipFile`](../UnzipFile/UnzipFile.md) command

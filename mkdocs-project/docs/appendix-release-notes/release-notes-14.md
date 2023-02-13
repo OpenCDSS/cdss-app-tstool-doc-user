@@ -1,5 +1,6 @@
 # TSTool / Release Notes / Version 14 #
 
+*   [Changes in Version 14.5.4](#changes-in-version-1454)
 *   [Changes in Version 14.5.3](#changes-in-version-1453)
 *   [Changes in Version 14.5.2](#changes-in-version-1452)
 *   [Changes in Version 14.5.1](#changes-in-version-1451)
@@ -21,6 +22,34 @@
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.5.4 ##
+
+**Maintenance release to improve plugin integration and automated testing.**
+
+*   ![bug](bug.png) [14.5.4] Fix bugs in the [`TSID`](../command-ref/TSID/TSID.md) command:
+    +   Adding a new TSID command now shows the editor whereas previously the generic command editor was shown.
+    +   The TSID editor now properly shows single quotes in TSIDs (previously they were not displayed even when present in the command).
+    +   TSID strings where a part included single-quoted subparts were not being parsed correctly.
+        For example, a data type `'part1'-'part2'` was not being parsed correctly.  This has been fixed.
+*   ![bug](bug.png) [14.5.4] Fix the ***Command Status*** window to center on the screen
+    where the TSTool main window is visible, rather than the first screen in multi-screen workstations.
+*   ![change](change.png) [14.5.4] Increase the speed of parsing command strings when reading, editing, and running command files.
+*   ![change](change.png) [14.5.4] Convert startup messages to debug messages to reduce information in the log file.
+    Debug can be turned on with the `-d` command line parameter if necessary to view the messages.
+*   ![change](change.png) [14.5.4] Command editor dialogs for editing parameters that are
+    maps (`key:value,key:value,...`) and delimited lists (`value1,value2,...`) have been updated to provide
+    more functionality including inserting and removing rows.
+    These editors will be phased into more command editors.
+*   ![change](change.png) [14.5.4] The [`CompareFiles`](../command-ref/CompareFiles/CompareFiles.md) command has been updated:
+    +   The `CommentLineChar` property now allows `<!--` for HTML comments.
+*   ![change](change.png) [14.5.4] The [`SetPropertyFromTable`](../command-ref/SetPropertyFromTable/SetPropertyFromTable.md) command
+    has been updated:
+    +   The `RowCountProperty` and `ColumnCountProperty` parameters have been added to allow
+        setting processor properties for the table size,
+        which is useful for automated testing and workflow checks.
+*   ![new](new.png) [14.5.4] The [`RemoveFolder`](../command-ref/RemoveFolder/RemoveFolder.md) command
+    has been added to remove a folder.
 
 ## Changes in Version 14.5.3 ##
 
