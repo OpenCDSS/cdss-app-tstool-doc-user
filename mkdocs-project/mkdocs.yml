@@ -195,6 +195,7 @@ nav:
   - ReadWaterOneFlow: command-ref/ReadWaterOneFlow/ReadWaterOneFlow.md
   - RelativeDiff: command-ref/RelativeDiff/RelativeDiff.md
   - RemoveFile: command-ref/RemoveFile/RemoveFile.md
+  - RemoveFolder: command-ref/RemoveFolder/RemoveFolder.md
   - RenameTableColumns: command-ref/RenameTableColumns/RenameTableColumns.md
   - ReplaceValue: command-ref/ReplaceValue/ReplaceValue.md
   - ResequenceTimeSeriesData: command-ref/ResequenceTimeSeriesData/ResequenceTimeSeriesData.md
