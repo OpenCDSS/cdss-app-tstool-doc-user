@@ -1,5 +1,6 @@
 # TSTool / Release Notes / Version 14 #
 
+*   [Changes in Version 14.6.0](#changes-in-version-1460dev1)
 *   [Changes in Version 14.5.4](#changes-in-version-1454)
 *   [Changes in Version 14.5.3](#changes-in-version-1453)
 *   [Changes in Version 14.5.2](#changes-in-version-1452)
@@ -22,6 +23,20 @@
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.6.0 ##
+
+**Development release to implement command indentation..**
+
+*   ![new](new.png) [14.6.0] Add command indentation:
+    +   Added the popup ***Fiile / Indent Right*** and ***File / Indent Left*** menus
+        to indent and unindent commands that are selected in the ***Commands*** area.
+    +   The default indentation is 4 spaces.
+    +   All commands have been updated to enable indentation.
+*   ![change](change.png) [14.6.0] Update all command parameters to use double quotes.
+    +   This provides consistency for all commands.
+    +   Previously, parameters that did not need to be quoted such as numbers were not
+        but where sometimes quoted.
 
 ## Changes in Version 14.5.4 ##
 
