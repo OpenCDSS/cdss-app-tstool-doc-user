@@ -1,22 +1,23 @@
 # TSTool / Command Syntax #
 
-* [Introduction](#introduction)
-* [Commands - Basic Syntax](#commands-basic-syntax)
-* [Commands - Referring to Parameters](#commands-referring-to-parameters)
-* [Commands - Comments](#commands-comments)
-* [Commands - Time Series Identifiers](#commands-time-series-identifiers)
-* [Processor - Properties](#processor-properties)
-* [Time Series - Properties](#time-series-properties)
-* [Time Series - Data Flags](#time-series-data-flags)
-* [Date/Time](#datetime)
-* [Regular Expression - Notation](#regular-expression-notation)
-* [Tables](#tables)
-* [Table - Identification](#table-identification)
-* [Tables - Referring to Properties](#tables-referring-to-properties)
-* [Template - Syntax](#template-syntax)
-* [Configuration File - TSTool Configuration File](#configuration-file-tstool-configuration-file)
-* [Configuration File - Datastore Properties](#configuration-file-datastore-properties)
-* [Configuration File - Time Series Product Files](#configuration-file-time-series-product-files)
+*   [Introduction](#introduction)
+*   [Commands - Basic Syntax](#commands-basic-syntax)
+*   [Commands - Referring to Parameters](#commands-referring-to-parameters)
+*   [Commands - Comments](#commands-comments)
+*   [Commands - Indentation](#commands-indentation)
+*   [Commands - Time Series Identifiers](#commands-time-series-identifiers)
+*   [Processor - Properties](#processor-properties)
+*   [Time Series - Properties](#time-series-properties)
+*   [Time Series - Data Flags](#time-series-data-flags)
+*   [Date/Time](#datetime)
+*   [Regular Expression - Notation](#regular-expression-notation)
+*   [Tables](#tables)
+*   [Table - Identification](#table-identification)
+*   [Tables - Referring to Properties](#tables-referring-to-properties)
+*   [Template - Syntax](#template-syntax)
+*   [Configuration File - TSTool Configuration File](#configuration-file-tstool-configuration-file)
+*   [Configuration File - Datastore Properties](#configuration-file-datastore-properties)
+*   [Configuration File - Time Series Product Files](#configuration-file-time-series-product-files)
 
 -----------------
 
@@ -89,6 +90,17 @@ Command files use comments to disable commands without deleting them.
 A [`#`](Comment/Comment) character at the start of a line indicates a one-line comment.
 A group of lines that start with [`/*`](CommentBlockStart/CommentBlockStart.md) and end with
 [`*/`](CommentBlockEnd/CommentBlockEnd.md) indicate a block of comments and all intervening commands will be ignored in processing.
+
+## Commands - Indentation ##
+
+As of TSTool version 14.6.0, the popup menu for commands provides the
+***Indent Right*** menu to increase indentation and ***Indent Left*** menu to decrease indentation.
+Indentation by default uses 4 spaces similar to Python
+and it is recommended that multiples of 4 spaces are used for indentation.
+
+Indentation can be used for commands enclosed within
+[`If`](If/If.md) and [`For`](For/For.md) command blocks to improve readability.
+Command editors typically do not show indentation but the indentation will be retained after a command is edited.
 
 ## Commands - Time Series Identifiers ##
 
@@ -229,9 +241,9 @@ data point labels indicates that the points should be labeled with the data flag
 
 Date/time notation is ubiquitous when dealing with time series, and includes use for the following:
 
-* date/time associated with specific data values
-* date/time pair that indicates data period or subset of the full data period
-* date/time pair indicating a window within each year
+*   date/time associated with specific data values
+*   date/time pair that indicates data period or subset of the full data period
+*   date/time pair indicating a window within each year
 
 In most cases TSTool will default to displaying date/time using the [ISO 8601 specification](https://en.wikipedia.org/wiki/ISO_8601),
 which is essentially `YYYY-MM-DD hh:mm:ss`.  Not only does this implement a global standard,
