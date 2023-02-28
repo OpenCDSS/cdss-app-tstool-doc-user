@@ -8,48 +8,50 @@ The commands in the **Reference - Commands** section in the table of comments
 are listed alphabetically with several general commands including
 [`TSID`](TSID/TSID.md) listed at the top.
 
-* [Command Syntax Overview](#command-syntax-overview)
-* [Command List](#command-list) - alphabetical list of commands (**is at the end of this section**)
-* [Time Series Processing](#time-series-processing)
-	+ [Select, Free, Sort Time Series](#select-free-sort-time-series) - basic handling of time series objects
-	+ [Create Time Series](#create-time-series) - create new time series
-	+ [Read Time Series](#read-time-series) - read time series from files, databases, and web services
-	+ [Fill Time Series Missing Data](#fill-time-series-missing-data) - fill time series missing data values
-	+ [Set Time Series Contents](#set-time-series-contents) - set time series data values and properties
-	+ [Manipulate Time Series](#manipulate-time-series) - manipulate time series data values
-	+ [Analyze Time Series](#analyze-time-series) - analyze time series
-	+ [Models - Routing](#models-routing) - route time series through time
-	+ [Output Time Series](#output-time-series) - output (write) time series to files and databases
-	+ [Check Time Series](#check-time-series) - check time series against criteria
-* [Topic Area Commands](#topic-area-commands)
-	+ [Datastore Processing](#datastore-processing) - read/write database data
-	+ [Ensemble Processing](#ensemble-processing) - process ensembles of time series
-	+ [Network Processing](#network-processing) - process node/link networks
-	+ [Spatial Processing](#spatial-processing) - read/write spatial data
-	+ [Spreadsheet Processing](#spreadsheet-processing) - read/write spreadsheet files
-	+ [Template Processing](#template-processing) - expand template files
-	+ [visualization Processing](#visualization-processing) - visualize data
-* [General Commands](#general-commands)
-	+ [General - Comments](#general-comments) - insert comments
-	+ [General - File Handling](#general-file-handling) - manipulate files
-	+ [General - Logging and Messaging](#general-logging-and-messaging) - handle log files and other messages
-	+ [General - Running and Properties](#general-running-and-properties) - run programs and control logic
-	+ [General - Test Processings](#general-test-processing) - automated tests for quality control
-* [Deprecated Commands](#deprecated-commands) - old commands
-* [Table Commands](#table-commands)
-	+ [Create, Copy, Free Table](#create-copy-free-table) - basic table object management
-	+ [Read Table](#read-table) - read tables from files, databases, and web services
-	+ [Append, Join Tables](#append-join-tables) - append and join tables
-	+ [Table, Time Series Processing](#table-time-series-processing) - translate tables to/from time series
-	+ [Manipulate Tables](#manipulate-tables) - manipulate table data
-	+ [Analyze Table](#analyze-table) - analyze table data
-	+ [Output Table](#output-table) - output (write) tables to files and databases
-	+ [Running and Properties](#running-and-properties) - use table data to control logic
-* [Plugin Commands](#plugin-commands) - commands developed by third parties
+*   [Command Syntax Overview](#command-syntax-overview)
+*   [Command List](#command-list) - alphabetical list of commands (**is at the end of this section**)
+*   [Time Series Processing](#time-series-processing)
+    +   [Select, Free, Sort Time Series](#select-free-sort-time-series) - basic handling of time series objects
+    +   [Create Time Series](#create-time-series) - create new time series
+    +   [Read Time Series](#read-time-series) - read time series from files, databases, and web services
+    +   [Fill Time Series Missing Data](#fill-time-series-missing-data) - fill time series missing data values
+    +   [Set Time Series Contents](#set-time-series-contents) - set time series data values and properties
+    +   [Manipulate Time Series](#manipulate-time-series) - manipulate time series data values
+    +   [Analyze Time Series](#analyze-time-series) - analyze time series
+    +   [Models - Routing](#models-routing) - route time series through time
+    +   [Output Time Series](#output-time-series) - output (write) time series to files and databases
+    +   [Check Time Series](#check-time-series) - check time series against criteria
+*   [Topic Area Commands](#topic-area-commands)
+    +   [Datastore Processing](#datastore-processing) - read/write database data
+    +   [Ensemble Processing](#ensemble-processing) - process ensembles of time series
+    +   [Network Processing](#network-processing) - process node/link networks
+    +   [Spatial Processing](#spatial-processing) - read/write spatial data
+    +   [Spreadsheet Processing](#spreadsheet-processing) - read/write spreadsheet files
+    +   [Template Processing](#template-processing) - expand template files
+    +   [visualization Processing](#visualization-processing) - visualize data
+*   [General Commands](#general-commands)
+    +   [General - Comments](#general-comments) - insert comments
+    +   [General - File Handling](#general-file-handling) - manipulate files
+    +   [General - Logging and Messaging](#general-logging-and-messaging) - handle log files and other messages
+    +   [General - Running and Properties](#general-running-and-properties) - run programs and control logic
+    +   [General - Test Processings](#general-test-processing) - automated tests for quality control
+*   [Deprecated Commands](#deprecated-commands) - old commands
+*   [Table Commands](#table-commands)
+    +   [Create, Copy, Free Table](#create-copy-free-table) - basic table object management
+    +   [Read Table](#read-table) - read tables from files, databases, and web services
+    +   [Append, Join Tables](#append-join-tables) - append and join tables
+    +   [Table, Time Series Processing](#table-time-series-processing) - translate tables to/from time series
+    +   [Manipulate Tables](#manipulate-tables) - manipulate table data
+    +   [Analyze Table](#analyze-table) - analyze table data
+    +   [Output Table](#output-table) - output (write) tables to files and databases
+    +   [Running and Properties](#running-and-properties) - use table data to control logic
+*   [Plugin Commands](#plugin-commands) - commands developed by third parties
 
 ---------------------------
 
 ## Command Syntax Overview ##
+
+See also the [Command Syntax](command-syntax.md) documentation, which provides detailed information about command syntax.
 
 TSTool command files contain a list of commands, one command per line.
 These commands are processed in sequence from top to bottom.
@@ -63,23 +65,24 @@ CommandName(ParameterName1="ParameterValue1",ParameterName2="ParameterValue2",..
 
 The following are guidelines for commands:
 
-1. Commands always follow the convention of command name at start with a list of named parameters in parentheses.
-The only exceptions are:
-	1. Comments starting with [`#`](Comment/Comment.md).
-	2. Block comments [`/*`](CommentBlockStart/CommentBlockStart.md) and
-	[`*/`](CommentBlockEnd/CommentBlockEnd.md) that surround one or more command lines.
-	3. Command such as [`Exit`](Exit/Exit.md), which will always have empty list of parameters in the parentheses.
-2. Commands are generally not case-specific although the TSTool software enforces standards.
-3. Command and parameter names use mixed case where the first letter of each word is capitalized.
-4. Parameter values may optionally be surrounded by double quotes, regardless of type.
-Double quotes are required in some cases to protect spaces and other characters within quotes.
-5. Each command must exist on a single line.
-6. Spaces at the front of a command for indentation are currently not allowed.
-This limitation is planned to be removed in the future.
-Tabs used for indentation are discouraged and will likely be prohibited because tab width is ambiguous between different users and tools.
-Spaces will be the preferred method of indentation.
-7. Empty (blank) lines are allowed and will be handled as [`Empty`](Empty/Empty.md) commands.
-8. Unknown commands are handled as [`UnknownCommand`](UnknownCommand/UnknownCommand.md) commands.
+1.  Commands always follow the convention of command name at start with a list of named parameters in parentheses.
+    The only exceptions are:
+    1.  Comments starting with [`#`](Comment/Comment.md).
+    2.  Block comments [`/*`](CommentBlockStart/CommentBlockStart.md) and
+        [`*/`](CommentBlockEnd/CommentBlockEnd.md) that surround one or more command lines.
+    3.  Command such as [`Exit`](Exit/Exit.md), which will always have empty list of parameters in the parentheses.
+2.  Commands are generally not case-specific although the TSTool software enforces standards.
+3.  Command and parameter names use mixed case where the first letter of each word is capitalized.
+4.  Parameter values by default (as of TSTool 14.6.0) are surrounded by double quotes, regardless of type.
+    Double quotes are required in some cases to protect spaces and other characters within quotes.
+    TSTool versions prior to 14.6.0 formatted command parameters based on parameter type and
+    quotes may not have been used.
+5.  Each command must exist on a single line.
+6.  As of TSTool 14.6.0, commands can be indented with spaces,
+    with 4 spaces per level being the default, similar to Python.
+    Older versions of TSTool will strip the indentation when reading the command file.
+7.  Empty (blank) lines are allowed and will be handled as [`Empty`](Empty/Empty.md) commands.
+8.  Unknown commands are handled as [`UnknownCommand`](UnknownCommand/UnknownCommand.md) commands.
 
 ## Time Series Processing ##
 
@@ -94,170 +97,177 @@ whereas newer commands recognize that other objects may be processed and have mo
 
 These commands select, free, and sort time series.
 
-* [`SelectTimeSeries`](SelectTimeSeries/SelectTimeSeries.md) - select output time series for processing
-* [`DeselectTimeSeries`](DeselectTimeSeries/DeselectTimeSeries.md) - deselect output time series for processing
-* [`Free`](Free/Free.md) - free memory used by time series
-* [`SortTimeSeries`](SortTimeSeries/SortTimeSeries.md) - sort the output time series
+*   [`DeselectTimeSeries`](DeselectTimeSeries/DeselectTimeSeries.md) - deselect output time series for processing
+*   [`SelectTimeSeries`](SelectTimeSeries/SelectTimeSeries.md) - select output time series for processing
+*   [`Free`](Free/Free.md) - free memory used by time series
+*   [`SortTimeSeries`](SortTimeSeries/SortTimeSeries.md) - sort the output time series
 
 ### Create Time Series ###
 
 These commands create new time series from other time series or data values.
 
-* [`NewPatternTimeSeries`](NewPatternTimeSeries/NewPatternTimeSeries.md) - create a new time series with repeating pattern for data values
-* [`NewTimeSeries`](NewTimeSeries/NewTimeSeries.md) - create a new time series
-* [`ChangeInterval`](ChangeInterval/ChangeInterval.md)
-* [`Copy`](Copy/Copy.md) - copy a time series
-* [`Delta`](Delta/Delta.md) - create a new time series from delta between time series values
-* [`Disaggregate`](Disaggregate/Disaggregate.md) - create a new time series by disaggregating a time series
-* [`LookupTimeSeriesFromTable`](LookupTimeSeriesFromTable/LookupTimeSeriesFromTable.md) - create a time series by looking up data values from a table
-* [`NewDayTSFromMonthAndDayTS`](NewDayTSFromMonthAndDayTS/NewDayTSFromMonthAndDayTS.md) - create a new daily time series by distributing a monthly time series using a daily pattern
-* [`NewEndOfMonthTSFromDayTS`](NewEndOfMonthTSFromDayTS/NewEndOfMonthTSFromDayTS.md) - create a new end of month time series from daily time series
-* [`Normalize`](Normalize/Normalize.md) - create a new time series by normalizing a time series
-* [`RelativeDiff`](RelativeDiff/RelativeDiff.md) - create a new time series as relative difference of two time series
-* [`ResequenceTimeSeriesData`](ResequenceTimeSeriesData/ResequenceTimeSeriesData.md) - resequence time series data values by year
-* [`NewStatisticTimeSeries`](NewStatisticTimeSeries/NewStatisticTimeSeries.md) - create a new time series having statistic repeated each year
-* [`NewStatisticMonthTimeSeries`](NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md) - create a new time series with monthly statistics
-* [`NewStatisticYearTS`](NewStatisticYearTS/NewStatisticYearTS.md) - create a new time series of annual statistics
-* [`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries.md) - create time series containing statistic from moving "running" sample
+*   [`NewPatternTimeSeries`](NewPatternTimeSeries/NewPatternTimeSeries.md) - create a new time series with repeating pattern for data values
+*   [`NewTimeSeries`](NewTimeSeries/NewTimeSeries.md) - create a new time series
+*   [`TSID`](TSID/TSID.md) - time series identifier (TSID) editor
+*   [`ChangeInterval`](ChangeInterval/ChangeInterval.md) - create time series with a different data interval
+*   [`Copy`](Copy/Copy.md) - copy a time series
+*   [`Delta`](Delta/Delta.md) - create a new time series from delta between time series values
+*   [`Disaggregate`](Disaggregate/Disaggregate.md) - create a new time series by disaggregating a time series
+*   [`LookupTimeSeriesFromTable`](LookupTimeSeriesFromTable/LookupTimeSeriesFromTable.md) - create a time series by looking up data values from a table
+*   [`NewDayTSFromMonthAndDayTS`](NewDayTSFromMonthAndDayTS/NewDayTSFromMonthAndDayTS.md) - create a new daily time series by distributing a monthly time series using a daily pattern
+*   [`NewEndOfMonthTSFromDayTS`](NewEndOfMonthTSFromDayTS/NewEndOfMonthTSFromDayTS.md) - create a new end of month time series from daily time series
+*   [`Normalize`](Normalize/Normalize.md) - create a new time series by normalizing a time series
+*   [`RelativeDiff`](RelativeDiff/RelativeDiff.md) - create a new time series as relative difference of two time series
+*   [`ResequenceTimeSeriesData`](ResequenceTimeSeriesData/ResequenceTimeSeriesData.md) - resequence time series data values by year
+*   [`NewStatisticTimeSeries`](NewStatisticTimeSeries/NewStatisticTimeSeries.md) - create a new time series having statistic repeated each year
+*   [`NewStatisticMonthTimeSeries`](NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md) - create a new time series with monthly statistics
+*   [`NewStatisticYearTS`](NewStatisticYearTS/NewStatisticYearTS.md) - create a new time series of annual statistics
+*   [`RunningStatisticTimeSeries`](RunningStatisticTimeSeries/RunningStatisticTimeSeries.md) - create time series containing statistic from moving "running" sample
 
 ### Read Time Series ###
 
 These commands read time series from various sources.
+The following read commands are "built in" to core TSTool functionality.
+See also the [Plugin Overview](../plugin-ref/overview.md), which lists plugins that read data from additional sources.
+The TSTool configuration file may need to be edited to enable a data source.
 
-* [`SetIncludeMissingTS`](SetIncludeMissingTS/SetIncludeMissingTS.md) - set the global property to include missing time series in output
-* [`SetInputPeriod`](SetInputPeriod/SetInputPeriod.md) - set the global processor input period
-* [`CreateFromList`](CreateFromList/CreateFromList.md) - create time series from a list in a file
-* [`ReadColoradoHydroBaseRest`](ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) - read time series from [Colorado HydroBase REST web services](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)
-* [`ReadDateValue`](ReadDateValue/ReadDateValue.md) - read time series from a [DateValue file](../datastore-ref/DateValue/DateValue.md)
-* [`ReadDelftFewsPiXml`](ReadDelftFewsPiXml/ReadDelftFewsPiXml.md) - read time series from Delft [FEWS PI XML file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md)
-* [`ReadDelimitedFile`](ReadDelimitedFile/ReadDelimitedFile.md) - read time series from delimited file
-* [`ReadHecDss`](ReadHecDss/ReadHecDss.md) - read time series from [HEC-DSS file](../datastore-ref/HEC-DSS/HEC-DSS.md)
-* [`ReadHydroBase`](ReadHydroBase/ReadHydroBase.md) - read time series from [State of Colorado HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase.md)
-* [`ReadMODSIM`](ReadMODSIM/ReadMODSIM.md) - read time series from [MODSIM model file](../datastore-ref/MODSIM/MODSIM.md)
-* [`ReadNrcsAwdb`](ReadNrcsAwdb/ReadNrcsAwdb.md) - read time series from [NRCS AWDB web services](../datastore-ref/NRCS-AWDB/NRCS-AWDB.md)
-* [`ReadNwsCard`](ReadNwsCard/ReadNwsCard.md)
-* [`ReadNwsrfsEspTraceEnsemble`](ReadNwsrfsEspTraceEnsemble/ReadNwsrfsEspTraceEnsemble.md)
-* [`ReadNwsrfsFS5Files`](ReadNwsrfsFS5Files/ReadNwsrfsFS5Files.md)
-* [`ReadRccAcis`](ReadRccAcis/ReadRccAcis.md) - read time series from [RCC ACIS web service](../datastore-ref/RCC-ACIS/RCC-ACIS.md)
-* [`ReadReclamationHDB`](ReadReclamationHDB/ReadReclamationHDB.md) - read time series from [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB.md)
-* [`ReadReclamationPisces`](ReadReclamationPisces/ReadReclamationPisces.md) - read time series from [Reclamation Pisces database](../datastore-ref/ReclamationPisces/ReclamationPisces.md)
-* [`ReadRiverWare`](ReadRiverWare/ReadRiverWare.md) - read time series from [RiverWare file](../datastore-ref/RiverWare/RiverWare.md)
-* [`ReadStateCU`](ReadStateCU/ReadStateCU.md) - read time series from a [StateCU file](../datastore-ref/StateCU/StateCU.md)
-* [`ReadStateCUB`](ReadStateCUB/ReadStateCUB.md) - read time series from a [StateCU binary file](../datastore-ref/StateCUB/StateCUB.md)
-* [`ReadStateMod`](ReadStateMod/ReadStateMod.md) - read time series from a [StateMod file](../datastore-ref/StateMod/StateMod.md)
-* [`ReadStateModB`](ReadStateModB/ReadStateModB.md) - read time series from a [StateMod binary file](../datastore-ref/StateModB/StateModB.md)
-* [`ReadTimeSeries`](ReadTimeSeries/ReadTimeSeries.md) - read a single time series using TSID to determine data source
-* [`ReadTimeSeriesFromDataStore`](ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md) - read time series from a datastore
-* [`ReadTimeSeriesList`](ReadTimeSeriesList/ReadTimeSeriesList.md) - read time series from a list in a table
-* [`ReadUsgsNwisDaily`](ReadUsgsNwisDaily/ReadUsgsNwisDaily.md) - read daily value time series from [USGS NWIS Daily web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md)
-* [`ReadUsgsNwisInstantaneous`](ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous.md) - read instantaneous value time series from [USGS NWIS Instantaneous web services](../datastore-ref/USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous.md)
-* [`ReadUsgsNwisGroundwater`](ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater.md) - read groundwater time series from [USGS NWIS Daily web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md) 
-* [`ReadUsgsNwisRdb`](ReadUsgsNwisRdb/ReadUsgsNwisRdb.md) - read time series from a [USGS NWS RDB file](../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB.md)
-* [`ReadWaterML`](ReadWaterML/ReadWaterML.md)
-* [`ReadWaterML2`](ReadWaterML2/ReadWaterML2.md)
-* [`StateModMax`](StateModMax/StateModMax.md) - create time series that are maximum of two [StateMod files](../datastore-ref/StateMod/StateMod.md)
+*   [`SetIncludeMissingTS`](SetIncludeMissingTS/SetIncludeMissingTS.md) - set the global property to include missing time series in output
+*   [`SetInputPeriod`](SetInputPeriod/SetInputPeriod.md) - set the global processor input period
+*   [`CreateFromList`](CreateFromList/CreateFromList.md) - create time series from a list in a file
+*   [`ReadColoradoHydroBaseRest`](ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) - read time series from [Colorado HydroBase REST web services](../datastore-ref/ColoradoHydroBaseRest/ColoradoHydroBaseRest.md)
+*   [`ReadDateValue`](ReadDateValue/ReadDateValue.md) - read time series from a [DateValue file](../datastore-ref/DateValue/DateValue.md)
+*   [`ReadDelftFewsPiXml`](ReadDelftFewsPiXml/ReadDelftFewsPiXml.md) - read time series from Delft [FEWS PI XML file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md)
+*   [`ReadDelimitedFile`](ReadDelimitedFile/ReadDelimitedFile.md) - read time series from delimited file
+*   [`ReadHecDss`](ReadHecDss/ReadHecDss.md) - read time series from [HEC-DSS file](../datastore-ref/HEC-DSS/HEC-DSS.md)
+*   [`ReadHydroBase`](ReadHydroBase/ReadHydroBase.md) - read time series from [State of Colorado HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase.md)
+*   [`ReadMODSIM`](ReadMODSIM/ReadMODSIM.md) - read time series from [MODSIM model file](../datastore-ref/MODSIM/MODSIM.md)
+*   [`ReadNrcsAwdb`](ReadNrcsAwdb/ReadNrcsAwdb.md) - read time series from [NRCS AWDB web services](../datastore-ref/NRCS-AWDB/NRCS-AWDB.md)
+*   [`ReadNwsCard`](ReadNwsCard/ReadNwsCard.md)
+*   [`ReadNwsrfsEspTraceEnsemble`](ReadNwsrfsEspTraceEnsemble/ReadNwsrfsEspTraceEnsemble.md)
+*   [`ReadNwsrfsFS5Files`](ReadNwsrfsFS5Files/ReadNwsrfsFS5Files.md)
+*   [`ReadRccAcis`](ReadRccAcis/ReadRccAcis.md) - read time series from [RCC ACIS web service](../datastore-ref/RCC-ACIS/RCC-ACIS.md)
+*   [`ReadReclamationHDB`](ReadReclamationHDB/ReadReclamationHDB.md) - read time series from [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB.md)
+*   [`ReadReclamationPisces`](ReadReclamationPisces/ReadReclamationPisces.md) - read time series from [Reclamation Pisces database](../datastore-ref/ReclamationPisces/ReclamationPisces.md)
+*   [`ReadRiverWare`](ReadRiverWare/ReadRiverWare.md) - read time series from [RiverWare file](../datastore-ref/RiverWare/RiverWare.md)
+*   [`ReadStateCU`](ReadStateCU/ReadStateCU.md) - read time series from a [StateCU file](../datastore-ref/StateCU/StateCU.md)
+*   [`ReadStateCUB`](ReadStateCUB/ReadStateCUB.md) - read time series from a [StateCU binary file](../datastore-ref/StateCUB/StateCUB.md)
+*   [`ReadStateMod`](ReadStateMod/ReadStateMod.md) - read time series from a [StateMod file](../datastore-ref/StateMod/StateMod.md)
+*   [`ReadStateModB`](ReadStateModB/ReadStateModB.md) - read time series from a [StateMod binary file](../datastore-ref/StateModB/StateModB.md)
+*   [`ReadTimeSeries`](ReadTimeSeries/ReadTimeSeries.md) - read a single time series using TSID to determine data source
+*   [`ReadTimeSeriesFromDataStore`](ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md) - read time series from a datastore
+*   [`ReadTimeSeriesList`](ReadTimeSeriesList/ReadTimeSeriesList.md) - read time series from a list in a table
+*   [`ReadUsgsNwisDaily`](ReadUsgsNwisDaily/ReadUsgsNwisDaily.md) - read daily value time series from [USGS NWIS Daily web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md)
+*   [`ReadUsgsNwisGroundwater`](ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater.md) - read groundwater time series from [USGS NWIS Daily web services](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md) 
+*   [`ReadUsgsNwisInstantaneous`](ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous.md) - read instantaneous value time series from [USGS NWIS Instantaneous web services](../datastore-ref/USGS-NWIS-Instantaneous/USGS-NWIS-Instantaneous.md)
+*   [`ReadUsgsNwisRdb`](ReadUsgsNwisRdb/ReadUsgsNwisRdb.md) - read time series from a [USGS NWS RDB file](../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB.md) - read USGS NWIS delimited file format
+*   [`ReadWaterML`](ReadWaterML/ReadWaterML.md) - read WaterML 1.0
+*   [`ReadWaterML2`](ReadWaterML2/ReadWaterML2.md) - read WaterML 2.x
+*   [`StateModMax`](StateModMax/StateModMax.md) - create time series that are maximum of two [StateMod files](../datastore-ref/StateMod/StateMod.md) - read time series as a maximum of two StateMod files
 
 ### Fill Time Series Missing Data ###
 
 These commands fill missing time series values.
 
-* [`FillConstant`](FillConstant/FillConstant.md) - fill missing time series values with a constant
-* [`FillDayTSFrom2MonthTSAnd1DayTS`](FillDayTSFrom2MonthTSAnd1DayTS/FillDayTSFrom2MonthTSAnd1DayTS.md) - fill a daily time series by prorating monthly volumes using a daily pattern
-* [`FillFromTS`](FillFromTS/FillFromTS.md) - fill missing time series values from another time series
-* [`FillHistMonthAverage`](FillHistMonthAverage/FillHistMonthAverage.md) - fill missing time series values with historical monthly average
-* [`FillHistYearAverage`](FillHistYearAverage/FillHistYearAverage.md) - fill missing time series values with historical yearly average
-* [`FillInterpolate`](FillInterpolate/FillInterpolate.md) - fill missing time series values using interpolation
-* [`FillMixedStation`](FillMixedStation/FillMixedStation.md)
-* [`FillMOVE2`](FillMOVE2/FillMOVE2.md)
-* [`FillPattern`](FillPattern/FillPattern.md) - fill missing time series values using historical pattern average
-	+ [`ReadPatternFile`](ReadPatternFile/ReadPatternFile.md) - read pattern time series used by [`FillPattern`](FillPattern/FillPattern.md)
-* [`FillProrate`](FillProrate/FillProrate.md) - fill missing time series values by prorating another time series
-* [`FillRegression`](FillRegression/FillRegression.md)
-* [`FillRepeat`](FillRepeat/FillRepeat.md) - fill missing time series values by repeating values
-* [`FillUsingDiversionComments`](FillUsingDiversionComments/FillUsingDiversionComments.md) - fill missing time series values using HydroBase diversion comments
-* [`SetAutoExtendPeriod`](SetAutoExtendPeriod/SetAutoExtendPeriod.md) - set global property to auto-extend time series to output period
-* [`SetAveragePeriod`](SetAveragePeriod/SetAveragePeriod.md) - set the global period used to compute historical averages
-* [`SetIgnoreLEZero`](SetIgnoreLEZero/SetIgnoreLEZero.md) - set global property to ignore time series values <= 0 in averages
+*   [`FillConstant`](FillConstant/FillConstant.md) - fill missing time series values with a constant
+*   [`FillDayTSFrom2MonthTSAnd1DayTS`](FillDayTSFrom2MonthTSAnd1DayTS/FillDayTSFrom2MonthTSAnd1DayTS.md) - fill a daily time series by prorating monthly volumes using a daily pattern
+*   [`FillFromTS`](FillFromTS/FillFromTS.md) - fill missing time series values from another time series
+*   [`FillHistMonthAverage`](FillHistMonthAverage/FillHistMonthAverage.md) - fill missing time series values with historical monthly average
+*   [`FillHistYearAverage`](FillHistYearAverage/FillHistYearAverage.md) - fill missing time series values with historical yearly average
+*   [`FillInterpolate`](FillInterpolate/FillInterpolate.md) - fill missing time series values using interpolation
+*   [`FillMixedStation`](FillMixedStation/FillMixedStation.md)
+*   [`FillMOVE2`](FillMOVE2/FillMOVE2.md)
+*   [`FillPattern`](FillPattern/FillPattern.md) - fill missing time series values using historical pattern average
+    +   [`ReadPatternFile`](ReadPatternFile/ReadPatternFile.md) - read pattern time series used by [`FillPattern`](FillPattern/FillPattern.md)
+*   [`FillProrate`](FillProrate/FillProrate.md) - fill missing time series values by prorating another time series
+*   [`FillRegression`](FillRegression/FillRegression.md)
+*   [`FillRepeat`](FillRepeat/FillRepeat.md) - fill missing time series values by repeating values
+*   [`FillUsingDiversionComments`](FillUsingDiversionComments/FillUsingDiversionComments.md) - fill missing time series values using HydroBase diversion comments
+*   [`SetAutoExtendPeriod`](SetAutoExtendPeriod/SetAutoExtendPeriod.md) - set global property to auto-extend time series to output period
+*   [`SetAveragePeriod`](SetAveragePeriod/SetAveragePeriod.md) - set the global period used to compute historical averages
+*   [`SetIgnoreLEZero`](SetIgnoreLEZero/SetIgnoreLEZero.md) - set global property to ignore time series values <= 0 in averages
 
 ### Set Time Series Contents ###
 
 These commands set time series contents, including properties and data values.
 
-* [`ReplaceValue`](ReplaceValue/ReplaceValue.md) - replace values in time series data
-* [`SetConstant`](SetConstant/SetConstant.md) - set time series data values to a constant
-* [`SetDataValue`](SetDataValue/SetDataValue.md) - set data values in time series
-* [`SetFromTS`](SetFromTS/SetFromTS.md) - set time series data values from another time series
-* [`SetTimeSeriesValuesFromLookupTable`](SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable.md) - set time series values from a lookup table
-* [`SetTimeSeriesValuesFromTable`](SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable.md) - set time series values from a table
-* [`SetToMax`](SetToMax/SetToMax.md) - set time series values to maximum of 1+ time series
-* [`SetToMin`](SetToMin/SetToMin.md) - set time series values to minimum of 1+ time series
-* [`SetTimeSeriesProperty`](SetTimeSeriesProperty/SetTimeSeriesProperty.md) - set a time series property
+*   [`ReplaceValue`](ReplaceValue/ReplaceValue.md) - replace values in time series data
+*   [`SetConstant`](SetConstant/SetConstant.md) - set time series data values to a constant
+*   [`SetDataValue`](SetDataValue/SetDataValue.md) - set data values in time series
+*   [`SetFromTS`](SetFromTS/SetFromTS.md) - set time series data values from another time series
+*   [`SetTimeSeriesValuesFromLookupTable`](SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable.md) - set time series values from a lookup table
+*   [`SetTimeSeriesValuesFromTable`](SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable.md) - set time series values from a table
+*   [`SetToMax`](SetToMax/SetToMax.md) - set time series values to maximum of 1+ time series
+*   [`SetToMin`](SetToMin/SetToMin.md) - set time series values to minimum of 1+ time series
+*   [`SetTimeSeriesProperty`](SetTimeSeriesProperty/SetTimeSeriesProperty.md) - set a time series property
 
 ### Manipulate Time Series ###
 
 These commands perform basic time series manipulation.
 
-* [`Add`](Add/Add.md) - add time series to time series
-* [`AddConstant`](AddConstant/AddConstant.md) - add a constant to time series values
-* [`AdjustExtremes`](AdjustExtremes/AdjustExtremes.md) - adjust extreme values in time series
-* [`ARMA`](ARMA/ARMA.md)
-* [`Blend`](Blend/Blend.md) - blend one time series into another
-* [`ChangePeriod`](ChangePeriod/ChangePeriod.md) - change time series data period
-* [`ChangeTimeZone`](ChangeTimeZone/ChangeTimeZone.md) - change the time zone for time series
-* [`ConvertDataUnits`](ConvertDataUnits/ConvertDataUnits.md) - convert time series data units
-* [`Cumulate`](Cumulate/Cumulate.md) - set time series values to cumulative values
-* [`Divide`](Divide/Divide.md) - divide one time series by another
-* [`Multiply`](Multiply/Multiply.md) - multiply one time series by another
-* [`Scale`](Scale/Scale.md) - scale time series values
-* [`ShiftTimeByInterval`](ShiftTimeByInterval/ShiftTimeByInterval.md) - shift time series data values by a time interval
-* [`Subtract`](Subtract/Subtract.md) - subtract time series from time series
+*   [`Add`](Add/Add.md) - add time series to time series
+*   [`AddConstant`](AddConstant/AddConstant.md) - add a constant to time series values
+*   [`AdjustExtremes`](AdjustExtremes/AdjustExtremes.md) - adjust extreme values in time series
+*   [`ARMA`](ARMA/ARMA.md) - apply autoregressive moving average formula
+*   [`Blend`](Blend/Blend.md) - blend one time series into another
+*   [`ChangePeriod`](ChangePeriod/ChangePeriod.md) - change time series data period
+*   [`ChangeTimeZone`](ChangeTimeZone/ChangeTimeZone.md) - change the time zone for time series
+*   [`ConvertDataUnits`](ConvertDataUnits/ConvertDataUnits.md) - convert time series data units
+*   [`Cumulate`](Cumulate/Cumulate.md) - set time series values to cumulative values
+*   [`Divide`](Divide/Divide.md) - divide one time series by another
+*   [`Multiply`](Multiply/Multiply.md) - multiply one time series by another
+*   [`Scale`](Scale/Scale.md) - scale time series values
+*   [`ShiftTimeByInterval`](ShiftTimeByInterval/ShiftTimeByInterval.md) - shift time series data values by a time interval
+*   [`Subtract`](Subtract/Subtract.md) - subtract time series from time series
 
 ### Analyze Time Series ###
 
 These commands analyze time series.
 
-* [`AnalyzePattern`](AnalyzePattern/AnalyzePattern.md) - analyze pattern of time series data
-* [`CalculateTimeSeriesStatistic`](CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md)
-* [`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries.md) - compare time series to detect whether they are the same or different
-* [`ComputeErrorTimeSeries`](ComputeErrorTimeSeries/ComputeErrorTimeSeries.md) - compute the error between two time series
+*   [`AnalyzePattern`](AnalyzePattern/AnalyzePattern.md) - analyze pattern of time series data
+*   [`CalculateTimeSeriesStatistic`](CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) - compute a single statistic for a time series
+*   [`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries.md) - compare time series to detect whether they are the same or different
+*   [`ComputeErrorTimeSeries`](ComputeErrorTimeSeries/ComputeErrorTimeSeries.md) - compute the error between two time series
 
 ### Models - Routing ###
 
 These commands route flow time series from one location to another.
 
-* [`LagK`](LagK/LagK.md) - lag and attenuate flows
-* [`VariableLagK`](VariableLagK/VariableLagK.md) - lag and attenuate flows
+*   [`LagK`](LagK/LagK.md) - lag and attenuate flows
+*   [`VariableLagK`](VariableLagK/VariableLagK.md) - lag and attenuate flows
 
 ### Output Time Series ###
 
 These commands output time series to different formats.
+The following write commands are "built in" to core TSTool functionality.
+See also the [Plugin Overview](../plugin-ref/overview.md), which lists plugins that write data for additional sources.
+The TSTool configuration file may need to be edited to enable a data source.
 
-* [`SetOutputPeriod`](SetOutputPeriod/SetOutputPeriod.md) - set the global processor output period
-* [`SetOutputYearType`](SetOutputYearType/SetOutputYearType.md) - set the global processor output year type
-* [`WriteDateValue`](WriteDateValue/WriteDateValue.md) - write time series to [DateValue format file](../datastore-ref/DateValue/DateValue.md)
-* [`WriteDelftFewsPiXml`](WriteDelftFewsPiXml/WriteDelftFewsPiXml.md) - write time series to [Delft FEWS PI XML format file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md)
-* [`WriteDelimitedFile`](WriteDelimitedFile/WriteDelimitedFile.md) - write time series to a delimited file
-* [`WriteHecDss`](WriteHecDss/WriteHecDss.md) - write time series to a [HEC-DSS file](../datastore-ref/HEC-DSS/HEC-DSS.md)
-* [`WriteReclamationHDB`](WriteReclamationHDB/WriteReclamationHDB.md) - write time series to [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB.md)
-* [`WriteRiverWare`](WriteRiverWare/WriteRiverWare.md) write time series to a [RiverWare file](../datastore-ref/RiverWare/RiverWare.md)
-* [`WriteStateCU`](WriteStateCU/WriteStateCU.md) - write time series to a [StateCU file](../datastore-ref/StateCU/StateCU.md)
-* [`WriteStateMod`](WriteStateMod/WriteStateMod.md) - write time series to a [StateMod file](../datastore-ref/StateMod/StateMod.md)
-* [`WriteSummary`](WriteSummary/WriteSummary.md) - write time series to a summary report file
-* [`WriteTimeSeriesToDataStore`](WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md) - write time series to a datastore
-* [`WriteTimeSeriesToDataStream`](WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream.md) - write time series to a stream of data lines
-* [`WriteTimeSeriesToHydroJSON`](WriteTimeSeriesToHydroJSON/WriteTimeSeriesToHydroJSON.md) - write time series to a [HydroJSON file](../datastore-ref/HydroJSON/HydroJSON.md).
-* [`WriteTimeSeriesToJson`](WriteTimeSeriesToJson/WriteTimeSeriesToJson.md) - write time series to a JSON file
-* [`WriteWaterML`](WriteWaterML/WriteWaterML.md)
-* [`WriteWaterML2`](WriteWaterML2/WriteWaterML2.md)
-* [`WriteTimeSeriesPropertiesToFile`](WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile.md) - write time series properties to a file
+*   [`SetOutputPeriod`](SetOutputPeriod/SetOutputPeriod.md) - set the global processor output period
+*   [`SetOutputYearType`](SetOutputYearType/SetOutputYearType.md) - set the global processor output year type
+*   [`WriteDateValue`](WriteDateValue/WriteDateValue.md) - write time series to [DateValue format file](../datastore-ref/DateValue/DateValue.md)
+*   [`WriteDelftFewsPiXml`](WriteDelftFewsPiXml/WriteDelftFewsPiXml.md) - write time series to [Delft FEWS PI XML format file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md)
+*   [`WriteDelimitedFile`](WriteDelimitedFile/WriteDelimitedFile.md) - write time series to a delimited file
+*   [`WriteHecDss`](WriteHecDss/WriteHecDss.md) - write time series to a [HEC-DSS file](../datastore-ref/HEC-DSS/HEC-DSS.md)
+*   [`WriteReclamationHDB`](WriteReclamationHDB/WriteReclamationHDB.md) - write time series to [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB.md)
+*   [`WriteRiverWare`](WriteRiverWare/WriteRiverWare.md) write time series to a [RiverWare file](../datastore-ref/RiverWare/RiverWare.md)
+*   [`WriteStateCU`](WriteStateCU/WriteStateCU.md) - write time series to a [StateCU file](../datastore-ref/StateCU/StateCU.md)
+*   [`WriteStateMod`](WriteStateMod/WriteStateMod.md) - write time series to a [StateMod file](../datastore-ref/StateMod/StateMod.md)
+*   [`WriteSummary`](WriteSummary/WriteSummary.md) - write time series to a summary report file
+*   [`WriteTimeSeriesToDataStore`](WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md) - write time series to a datastore
+*   [`WriteTimeSeriesToDataStream`](WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream.md) - write time series to a stream of data lines
+*   [`WriteTimeSeriesToHydroJSON`](WriteTimeSeriesToHydroJSON/WriteTimeSeriesToHydroJSON.md) - write time series to a [HydroJSON file](../datastore-ref/HydroJSON/HydroJSON.md).
+*   [`WriteTimeSeriesToJson`](WriteTimeSeriesToJson/WriteTimeSeriesToJson.md) - write time series to a JSON file
+*   [`WriteWaterML`](WriteWaterML/WriteWaterML.md) - write WaterML 1.x format
+*   [`WriteWaterML2`](WriteWaterML2/WriteWaterML2.md) - write WaterML 2.x format
+*   [`WriteTimeSeriesPropertiesToFile`](WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile.md) - write time series properties to a file
 
 ### Check Time Series ###
 
 These commands are used to check time series, for example for quality control.
 
-* [`CheckTimeSeries`](CheckTimeSeries/CheckTimeSeries.md) - check time series values against criteria
-* [`CheckTimeSeriesStatistic`](CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) - check time series statistic against criteria
-* [`WriteCheckFile`](WriteCheckFile/WriteCheckFile.md) - write command log to file
+*   [`CheckTimeSeries`](CheckTimeSeries/CheckTimeSeries.md) - check time series values against criteria
+*   [`CheckTimeSeriesStatistic`](CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) - check time series statistic against criteria
+*   [`WriteCheckFile`](WriteCheckFile/WriteCheckFile.md) - write command log to file
 
 ## Topic Area Commands ##
 
@@ -268,66 +278,92 @@ The following commands are grouped into specific topic areas.
 These commands handle reading and writing time series and other data from datastores, in particular databases.
 Utility commands for executing SQL and creating a data dictionary are also provided.
 
-* [`NewDerbyDatabase`](NewDerbyDatabase/NewDerbyDatabase.md) - **this command is under development**
-* [`NewSQLiteDatabase`](NewSQLiteDatabase/NewSQLiteDatabase.md) - create a new SQLite database
-* [`OpenDataStore`](OpenDataStore/OpenDataStore.md) - open a datastore
-* [`ReadTableFromDataStore`](ReadTableFromDataStore/ReadTableFromDataStore.md) - read a table from a datastore
-* [`WriteTableToDataStore`](WriteTableToDataStore/WriteTableToDataStore.md) - write a table to a datastore
-* [`RunSql`](RunSql/RunSql.md) - run an SQL statement on a datastore
-* [`DeleteDataStoreTableRows`](DeleteDataStoreTableRows/DeleteDataStoreTableRows.md) - delete datastore table rows
-* [`ReadTimeSeriesFromDataStore`](ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md) - read time series from a datastore
-* [`WriteTimeSeriesToDataStore`](WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md) - write time series to a datastore
-* [`CloseDataStore`](CloseDataStore/CloseDataStore.md) - close an open datastore
-* [`CreateDataStoreDataDictionary`](CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md) - create a database data dictionary
+*   [`NewAccessDatabase`](NewAccessDatabase/NewAccessDatabase.md) - create a new Microsoft Access database
+*   [`NewDerbyDatabase`](NewDerbyDatabase/NewDerbyDatabase.md) - **this command is under development**
+*   [`NewSQLiteDatabase`](NewSQLiteDatabase/NewSQLiteDatabase.md) - create a new SQLite database
+*   [`OpenDataStore`](OpenDataStore/OpenDataStore.md) - open a datastore
+*   [`ReadTableFromDataStore`](ReadTableFromDataStore/ReadTableFromDataStore.md) - read a table from a datastore
+*   [`WriteTableToDataStore`](WriteTableToDataStore/WriteTableToDataStore.md) - write a table to a datastore
+*   [`RunSql`](RunSql/RunSql.md) - run an SQL statement on a datastore
+*   [`DeleteDataStoreTableRows`](DeleteDataStoreTableRows/DeleteDataStoreTableRows.md) - delete datastore table rows
+*   [`ReadTimeSeriesFromDataStore`](ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md) - read time series from a datastore
+*   [`WriteTimeSeriesToDataStore`](WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md) - write time series to a datastore
+*   [`CloseDataStore`](CloseDataStore/CloseDataStore.md) - close an open datastore
+*   [`CreateDataStoreDataDictionary`](CreateDataStoreDataDictionary/CreateDataStoreDataDictionary.md) - create a database data dictionary
 
 ### Ensemble Processing ###
 
-* [`CreateEnsembleFromOneTimeSeries`](CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md) - create an ensemble from a time series
-* [`CopyEnsemble`](CopyEnsemble/CopyEnsemble.md) - copy an ensemble to a new ensemble
-* [`NewEnsemble`](NewEnsemble/NewEnsemble.md) - create a new time series ensemble
-* [`InsertTimeSeriesIntoEnsemble`](InsertTimeSeriesIntoEnsemble/InsertTimeSeriesIntoEnsemble.md) - insert a time series into an ensemble
-* [`SetEnsembleProperty`](SetEnsembleProperty/SetEnsembleProperty.md) - set an ensemble property
-* [`NewStatisticEnsemble`](NewStatisticEnsemble/NewStatisticEnsemble.md) - create an ensemble of statistic time series
-* [`NewStatisticTimeSeriesFromEnsemble`](NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md)
-* [`WeightTraces`](WeightTraces/WeightTraces.md) - create time series as weighted sum of ensemble traces
+These commands handle time series ensembles,
+which are related time series such as scenarios.
+
+*   [`CreateEnsembleFromOneTimeSeries`](CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md) - create an ensemble from a time series
+*   [`CopyEnsemble`](CopyEnsemble/CopyEnsemble.md) - copy an ensemble to a new ensemble
+*   [`NewEnsemble`](NewEnsemble/NewEnsemble.md) - create a new time series ensemble
+*   [`InsertTimeSeriesIntoEnsemble`](InsertTimeSeriesIntoEnsemble/InsertTimeSeriesIntoEnsemble.md) - insert a time series into an ensemble
+*   [`SetEnsembleProperty`](SetEnsembleProperty/SetEnsembleProperty.md) - set an ensemble property
+*   [`NewStatisticEnsemble`](NewStatisticEnsemble/NewStatisticEnsemble.md) - create an ensemble of statistic time series
+*   [`NewStatisticTimeSeriesFromEnsemble`](NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md)
+*   [`WeightTraces`](WeightTraces/WeightTraces.md) - create time series as weighted sum of ensemble traces
 
 ### Network Processing ###
 
-* [`AnalyzeNetworkPointFlow`](AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow.md) - perform point flow analysis for a network
-* [`CreateNetworkFromTable`](CreateNetworkFromTable/CreateNetworkFromTable.md) - create a network from a table
+These commands process networks such as network of rivers or basins.
+
+*   [`AnalyzeNetworkPointFlow`](AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow.md) - perform point flow analysis for a network
+*   [`CreateNetworkFromTable`](CreateNetworkFromTable/CreateNetworkFromTable.md) - create a network from a table
+
+### Object Processing ###
+
+These commands process objects associated with JavaScript Object Notation (JSON) content.
+
+*   [`NewObject`](NewObject/NewObject.md) - create a new object
+*   [`FreeObject`](FreeObject/FreeObject.md) - free memory for an object
+*   [`SetObjectProperty`](SetObjectProperty/SetObjectProperty.md) - set an object's property
+*   [`SetObjectPropertiesFromTable`](SetObjectPropertiesFromTable/SetObjectPropertiesFromTable.md) - set object properties from a table
+*   [`SetPropertyFromObject`](SetPropertyFromObject/SetPropertyFromObject.md) - set a property from an object
+*   [`WriteObjectToJSON`](WriteObjectToJSON/WriteObjectToJSON.md) - write an object to a JSON file
 
 ### Spatial Processing ###
 
-* [`WriteTableToGeoJSON`](WriteTableToGeoJSON/WriteTableToGeoJSON.md) - write a table to a GeoJSON file
-* [`WriteTableToShapefile`](WriteTableToShapefile/WriteTableToShapefile.md) - write a table to a shapefile
-* [`WriteTableToKml`](WriteTableToKml/WriteTableToKml.md) - write a table to a KML file
-* [`WriteTimeSeriesToGeoJSON`](WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON.md) - write time series to a GeoJSON file
-* [`WriteTimeSeriesToKml`](WriteTimeSeriesToKml/WriteTimeSeriesToKml.md) - write time series to a KML file
+These commands write data to spatial data formats
+that can be used in geographic information systems and web mapping applications.
+
+*   [`WriteTableToGeoJSON`](WriteTableToGeoJSON/WriteTableToGeoJSON.md) - write a table to a GeoJSON file
+*   [`WriteTableToShapefile`](WriteTableToShapefile/WriteTableToShapefile.md) - write a table to a shapefile
+*   [`WriteTableToKml`](WriteTableToKml/WriteTableToKml.md) - write a table to a KML file
+*   [`WriteTimeSeriesToGeoJSON`](WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON.md) - write time series to a GeoJSON file
+*   [`WriteTimeSeriesToKml`](WriteTimeSeriesToKml/WriteTimeSeriesToKml.md) - write time series to a KML file
 
 ### Spreadsheet Processing ###
 
-* [`NewExcelWorkbook`](NewExcelWorkbook/NewExcelWorkbook.md) - create a new Excel workbook file
-* [`ReadExcelWorkbook`](ReadExcelWorkbook/ReadExcelWorkbook.md) - read Excel workbook file
-* [`ReadTableFromExcel`](ReadTableFromExcel/ReadTableFromExcel.md) - read a table from an Excel workbook file
-* [`ReadTableCellsFromExcel`](ReadTableCellsFromExcel/ReadTableCellsFromExcel.md) - read table cells from Excel worksheet
-* [`ReadPropertiesFromExcel`](ReadPropertiesFromExcel/ReadPropertiesFromExcel.md) - read processor properties from Excel
-* [`SetExcelCell`](SetExcelCell/SetExcelCell.md) - set data in an Excel cell
-* [`SetExcelWorksheetViewProperties`](SetExcelWorksheetViewProperties/SetExcelWorksheetViewProperties.md) - set Excel worksheet view properties
-* [`WriteTableToExcel`](WriteTableToExcel/WriteTableToExcel.md) - write a table to an Excel workbook file
-* [`WriteTableCellsToExcel`](WriteTableCellsToExcel/WriteTableCellsToExcel.md) - write table row cells to an Excel worksheet
-* [`WriteTimeSeriesToExcel`](WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) - write time series to an Excel workbook
-* [`WriteTimeSeriesToExcelBlock`](WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock.md) - write time series to an Excel workbook using block format
-* [`CloseExcelWorkbook`](CloseExcelWorkbook/CloseExcelWorkbook.md) - close Excel workbook that is open
+This commands read, write, and manipulate Excel workbook files and worksheets within workbooks.
+
+*   [`NewExcelWorkbook`](NewExcelWorkbook/NewExcelWorkbook.md) - create a new Excel workbook file
+*   [`ReadExcelWorkbook`](ReadExcelWorkbook/ReadExcelWorkbook.md) - read Excel workbook file
+*   [`ReadTableFromExcel`](ReadTableFromExcel/ReadTableFromExcel.md) - read a table from an Excel workbook file
+*   [`ReadTableCellsFromExcel`](ReadTableCellsFromExcel/ReadTableCellsFromExcel.md) - read table cells from Excel worksheet
+*   [`ReadPropertiesFromExcel`](ReadPropertiesFromExcel/ReadPropertiesFromExcel.md) - read processor properties from Excel
+*   [`SetExcelCell`](SetExcelCell/SetExcelCell.md) - set data in an Excel cell
+*   [`SetExcelWorksheetViewProperties`](SetExcelWorksheetViewProperties/SetExcelWorksheetViewProperties.md) - set Excel worksheet view properties
+*   [`WriteTableToExcel`](WriteTableToExcel/WriteTableToExcel.md) - write a table to an Excel workbook file
+*   [`WriteTableCellsToExcel`](WriteTableCellsToExcel/WriteTableCellsToExcel.md) - write table row cells to an Excel worksheet
+*   [`WriteTimeSeriesToExcel`](WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) - write time series to an Excel workbook
+*   [`WriteTimeSeriesToExcelBlock`](WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock.md) - write time series to an Excel workbook using block format
+*   [`CloseExcelWorkbook`](CloseExcelWorkbook/CloseExcelWorkbook.md) - close Excel workbook that is open
 
 ### Template Processing ###
 
-* [`ExpandTemplateFile`](ExpandTemplateFile/ExpandTemplateFile.md) - expand template file into full file
+These commands process template files.
+
+*   [`ExpandTemplateFile`](ExpandTemplateFile/ExpandTemplateFile.md) - expand template file into full file
 
 ### Visualization Processing ###
 
-* [`ProcessTSProduct`](ProcessTSProduct/ProcessTSProduct.md) - process (create) time series data product
-* [`ProcessRasterGraph`](ProcessRasterGraph/ProcessRasterGraph.md) - process (create) time series raster graph
-* [`NewTreeView`](NewTreeView/NewTreeView.md) - create a tree view in the user interface
+These commands automate data visualization including creating time series graphs.
+
+*   [`ProcessTSProduct`](ProcessTSProduct/ProcessTSProduct.md) - process (create) time series data product
+*   [`ProcessRasterGraph`](ProcessRasterGraph/ProcessRasterGraph.md) - process (create) time series raster graph
+*   [`NewTreeView`](NewTreeView/NewTreeView.md) - create a tree view in the user interface
 
 ## General Commands ##
 
@@ -338,74 +374,81 @@ meaning they are not specific to processing time series, tables, or other specif
 
 These commands are used to insert comments into command files.
 
-* [`#` comment](Comment/Comment.md) - single line comment
-* [`\*` comment block start](CommentBlockStart/CommentBlockStart.md) - start of multi-line comment block
-* [`\*` comment block end](CommentBlockEnd/CommentBlockEnd.md) - end of multi-line comment block
+*   [`#` comment](Comment/Comment.md) - single line comment (there are many pre-built commands available)
+*   [`/*` comment block start](CommentBlockStart/CommentBlockStart.md) - start of multi-line comment block
+*   [`*/` comment block end](CommentBlockEnd/CommentBlockEnd.md) - end of multi-line comment block
+*   [`Empty`](Empty/Empty.md) - empty (blank) line
 
 ### General - File Handling ###
 
 These commands provide general file handling capabilities.
 
-* [`AppendFile`](AppendFile/AppendFile.md) - append a file to another file
-* [`CopyFile`](CopyFile/CopyFile.md) - copy a file to another name
-* [`ListFiles`](ListFiles/ListFiles.md) - list files in a folder
-* [`FTPGet`](FTPGet/FTPGet.md) - download a file from an FTP site
-* [`WebGet`](WebGet/WebGet.md) - download a file from a URL
-* [`RemoveFile`](RemoveFile/RemoveFile.md) - remove a file
-* [`UnzipFile`](UnzipFile/UnzipFile.md) - unzip the contents of a zip file
-* [`PrintTextFile`](PrintTextFile/PrintTextFile.md) - print a text file to printer
+*   [`FTPGet`](FTPGet/FTPGet.md) - download a file from an FTP site
+*   [`WebGet`](WebGet/WebGet.md) - download a file from a URL
+*   [`CreateFolder`](CreateFolder/CreateFolder.md) - create a folder
+*   [`RemoveFolder`](RemoveFolder/RemoveFolder.md) - remove a folder
+*   [`AppendFile`](AppendFile/AppendFile.md) - append a file to another file
+*   [`CheckFile`](CheckFile/CheckFile.md) - check a file's contents and properties
+*   [`CopyFile`](CopyFile/CopyFile.md) - copy a file to another name
+*   [`FormatFile`](FormatFile/FormatFile.md) - format a files contents
+*   [`ListFiles`](ListFiles/ListFiles.md) - list files in a folder
+*   [`RemoveFile`](RemoveFile/RemoveFile.md) - remove a file
+*   [`TextEdit`](TextEdit/TextEdit.md) - edit a file
+*   [`UnzipFile`](UnzipFile/UnzipFile.md) - unzip the contents of a zip file
+*   [`PrintTextFile`](PrintTextFile/PrintTextFile.md) - print a text file to printer
 
 ### General - Logging and Messaging ###
 
 These commands handle run-time configuration of logging and sending messages.
 
-* [`ConfigureLogging`](ConfigureLogging/ConfigureLogging.md) - configure logging
-* [`Message`](Message/Message.md) - output a message to the log file
-* [`SetDebugLevel`](SetDebugLevel/SetDebugLevel.md) - set the debug level for logging
-* [`SetWarningLevel`](SetWarningLevel/SetWarningLevel.md) - set the warning level for logging
-* [`StartLog`](StartLog/StartLog.md) - (re)start the log file
-* [`SendEmailMessage`](SendEmailMessage/SendEmailMessage.md) - send an email message
+*   [`ConfigureLogging`](ConfigureLogging/ConfigureLogging.md) - configure logging
+*   [`Message`](Message/Message.md) - output a message to the log file
+*   [`SetDebugLevel`](SetDebugLevel/SetDebugLevel.md) - set the debug level for logging
+*   [`SetWarningLevel`](SetWarningLevel/SetWarningLevel.md) - set the warning level for logging
+*   [`StartLog`](StartLog/StartLog.md) - (re)start the log file
+*   [`SendEmailMessage`](SendEmailMessage/SendEmailMessage.md) - send an email message
 
 ### General - Running and Properties ###
 
 These commands provide general capabilities to control running commands, including running programs external to TSTool,
 handling processor properties (used with `${Property}`), and control commands such as [`For`](For/For.md) and [`If`](If/If.md).
 
-* [`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile.md) - read processor properties from a file
-* [`SetProperty`](SetProperty/SetProperty.md) - set a processor property value
-* [`SetPropertyFromEnsemble`](SetPropertyFromEnsemble/SetPropertyFromEnsemble.md) - set a processor property from an ensemble
-* [`SetPropertyFromNwsrfsAppDefault`](SetPropertyFromNwsrfsAppDefault/SetPropertyFromNwsrfsAppDefault.md)
-* [`SetPropertyFromTimeSeries`](SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) - set time series property from time series property
-* [`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty.md) - format a date/time processor property
-* [`FormatStringProperty`](FormatStringProperty/FormatStringProperty.md) - format a string processor property
-* [`WritePropertiesToFile`](WritePropertiesToFile/WritePropertiesToFile.md) - write processor properties to a file
-* [`RunCommands`](RunCommands/RunCommands.md) - run a TSTool command file
-* [`RunProgram`](RunProgram/RunProgram.md) - run a program
-* [`RunPython`](RunPython/RunPython.md) - run a Python a program
-* [`RunR`](RunR/RunR.md) - run an R script
-* [`RunDSSUTL`](RunDSSUTL/RunDSSUTL.md) - run HEC-DSS DSSUTL program
-* [`If`](If/If.md) - test a condition to control logic flow
-* [`EndIf`](EndIf/EndIf.md) - end of an [`If`](If/If.md) block of commands
-* [`For`](For/For.md) - iterate over items in a loop
-* [`EndFor`](EndFor/EndFor.md) - end of a [`For`](For/For.md) loop block of commands
-* [`Break`](Break/Break.md) - break out of a [`For`](For/For.md) loop block of commands
-* [`Continue`](Continue/Continue.md) - continue to end of a [`For`](For/For.md) loop block of commands
-* [`Exit`](Exit/Exit.md) - stop processing commands
-* [`Wait`](Wait/Wait.md) - wait for a time before continuing
-* [`SetWorkingDir`](SetWorkingDir/SetWorkingDir.md) - set the working directory (folder) for following commands
-* [`ProfileCommands`](ProfileCommands/ProfileCommands.md) - create summary table with containing performance data
-* [`Empty`](Empty/Empty.md) - empty (blank) line
-* [`UnknownCommand`](UnknownCommand/UnknownCommand.md) - unknown command
+*   [`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile.md) - read processor properties from a file
+*   [`SetProperty`](SetProperty/SetProperty.md) - set a processor property value
+*   [`SetPropertyFromEnsemble`](SetPropertyFromEnsemble/SetPropertyFromEnsemble.md) - set a processor property from an ensemble
+*   [`SetPropertyFromNwsrfsAppDefault`](SetPropertyFromNwsrfsAppDefault/SetPropertyFromNwsrfsAppDefault.md)
+*   [`SetPropertyFromTimeSeries`](SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) - set time series property from time series property
+*   [`FormatDateTimeProperty`](FormatDateTimeProperty/FormatDateTimeProperty.md) - format a date/time processor property
+*   [`FormatStringProperty`](FormatStringProperty/FormatStringProperty.md) - format a string processor property
+*   [`WritePropertiesToFile`](WritePropertiesToFile/WritePropertiesToFile.md) - write processor properties to a file
+*   [`RunCommands`](RunCommands/RunCommands.md) - run a TSTool command file
+*   [`RunProgram`](RunProgram/RunProgram.md) - run a program
+*   [`RunPython`](RunPython/RunPython.md) - run a Python a program
+*   [`RunR`](RunR/RunR.md) - run an R script
+*   [`RunDSSUTL`](RunDSSUTL/RunDSSUTL.md) - run HEC-DSS DSSUTL program
+*   [`If`](If/If.md) - test a condition to control logic flow
+*   [`EndIf`](EndIf/EndIf.md) - end of an [`If`](If/If.md) block of commands
+*   [`For`](For/For.md) - iterate over items in a loop
+*   [`EndFor`](EndFor/EndFor.md) - end of a [`For`](For/For.md) loop block of commands
+*   [`Break`](Break/Break.md) - break out of a [`For`](For/For.md) loop block of commands
+*   [`Continue`](Continue/Continue.md) - continue to end of a [`For`](For/For.md) loop block of commands
+*   [`Exit`](Exit/Exit.md) - stop processing commands
+*   [`Wait`](Wait/Wait.md) - wait for a time before continuing
+*   [`SetWorkingDir`](SetWorkingDir/SetWorkingDir.md) - set the working directory (folder) for following commands
+*   [`ProfileCommands`](ProfileCommands/ProfileCommands.md) - create summary table with containing performance data
+*   [`UnknownCommand`](UnknownCommand/UnknownCommand.md) - unknown command
 
 ### General - Test Processing ###
 
 These commands are used to run automated tests, in particular when running the full suite of tests.
 
-* [`WriteTimeSeriesPropertiesToFile`](WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile.md) - write time series properties to a file
-* [`CompareFiles`](CompareFiles/CompareFiles.md) - compare files to detect whether they are the same or different
-* [`CreateRegressionTestCommandFile`](CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) - create a regression test suite command file
-* [`StartRegressionTestResultsReport`](StartRegressionTestResultsReport/StartRegressionTestResultsReport.md) - start the regression test results report file to record output of tests
-* [`WriteCommandSummaryToFile`](WriteCommandSummaryToFile/WriteCommandSummaryToFile.md) - write summary of command log to a file
+*   [`WriteTimeSeriesPropertiesToFile`](WriteTimeSeriesPropertiesToFile/WriteTimeSeriesPropertiesToFile.md) - write time series properties to a file
+*   [`CompareFiles`](CompareFiles/CompareFiles.md) - compare files to detect whether they are the same or different
+*   [`CompareTables`](CompareTables/CompareTables.md) - compare tables to detect whether they are the same or different
+*   [`CompareTimeSeries`](CompareTimeSeries/CompareTimeSeries.md) - compare time series to detect whether they are the same or different
+*   [`CreateRegressionTestCommandFile`](CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) - create a regression test suite command file
+*   [`StartRegressionTestResultsReport`](StartRegressionTestResultsReport/StartRegressionTestResultsReport.md) - start the regression test results report file to record output of tests
+*   [`WriteCommandSummaryToFile`](WriteCommandSummaryToFile/WriteCommandSummaryToFile.md) - write summary of command log to a file
 
 ## Deprecated Commands ##
 
@@ -416,9 +459,9 @@ These commands are generally quite old and may be removed at some point.
 
 Table commands are used to process tabular data, for example:
 
-* database tables
-* Excel worksheets
-* delimited and other data files
+*   database tables
+*   Excel worksheets
+*   delimited and other data files
 
 Tables are converted to an in-memory representation where each column stores a single data type.
 Tables and time series can be converted back and forth, as needed.
@@ -427,96 +470,99 @@ Tables and time series can be converted back and forth, as needed.
 
 These commands create, copy, and free tables.
 
-* [`NewTable`](NewTable/NewTable.md) - create a new table
-* [`CopyTable`](CopyTable/CopyTable.md) - copy a table to a new table
-* [`FreeTable`](FreeTable/FreeTable.md) - free memory resources for a table
+*   [`NewTable`](NewTable/NewTable.md) - create a new table
+*   [`CopyTable`](CopyTable/CopyTable.md) - copy a table to a new table
+*   [`FreeTable`](FreeTable/FreeTable.md) - free memory resources for a table
 
 ### Read Table ###
 
 These commands read tables from various sources.
 
-* [`ReadTableFromDataStore`](ReadTableFromDataStore/ReadTableFromDataStore.md) - read a table from a datastore
-* [`ReadTableFromDBF`](ReadTableFromDBF/ReadTableFromDBF.md) - read a table from a DBF file
-* [`ReadTableFromDelimitedFile`](ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) - read a table from a delimited file
-* [`ReadTableFromExcel`](ReadTableFromExcel/ReadTableFromExcel.md) - read a table from an Excel workbook file
-* [`ReadTableFromFixedFormatFile`](ReadTableFromFixedFormatFile/ReadTableFromFixedFormatFile.md) - read a table from a fixed-format file
-* [`ReadTableFromJSON`](ReadTableFromJSON/ReadTableFromJSON.md) - read a table from a JSON file
-* [`ReadTableFromXml`](ReadTableFromXml/ReadTableFromXml.md) - read a table from an XML file
+*   [`ReadTableFromDataStore`](ReadTableFromDataStore/ReadTableFromDataStore.md) - read a table from a datastore
+*   [`ReadTableFromDBF`](ReadTableFromDBF/ReadTableFromDBF.md) - read a table from a DBF file
+*   [`ReadTableFromDelimitedFile`](ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) - read a table from a delimited file
+*   [`ReadTableFromExcel`](ReadTableFromExcel/ReadTableFromExcel.md) - read a table from an Excel workbook file
+*   [`ReadTableFromFixedFormatFile`](ReadTableFromFixedFormatFile/ReadTableFromFixedFormatFile.md) - read a table from a fixed-format file
+*   [`ReadTableFromJSON`](ReadTableFromJSON/ReadTableFromJSON.md) - read a table from a JSON file
+*   [`ReadTableFromXml`](ReadTableFromXml/ReadTableFromXml.md) - read a table from an XML file
 
 ### Append, Join Tables ###
 
 These commands append and join tables.
 
-* [`AppendTable`](AppendTable/AppendTable.md) - append a table to another table
-* [`JoinTables`](JoinTables/JoinTables.md) - join two tables
+*   [`AppendTable`](AppendTable/AppendTable.md) - append a table to another table
+*   [`JoinTables`](JoinTables/JoinTables.md) - join two tables
 
 ### Table, Time Series Processing ###
 
 These commands convert between tables and time series.
 
-* [`TimeSeriesToTable`](TimeSeriesToTable/TimeSeriesToTable.md) - copy a time series to a table
-* [`TableToTimeSeries`](TableToTimeSeries/TableToTimeSeries.md) - create time series from a table
-* [`CreateTimeSeriesEventTable`](CreateTimeSeriesEventTable/CreateTimeSeriesEventTable.md) - create an event table associated with time series
-* [`SetTimeSeriesPropertiesFromTable`](SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) - set time series properties from table values
-* [`CopyTimeSeriesPropertiesToTable`](CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) - copy time series properties to table
+*   [`TimeSeriesToTable`](TimeSeriesToTable/TimeSeriesToTable.md) - copy a time series to a table
+*   [`TableToTimeSeries`](TableToTimeSeries/TableToTimeSeries.md) - create time series from a table
+*   [`CreateTimeSeriesEventTable`](CreateTimeSeriesEventTable/CreateTimeSeriesEventTable.md) - create an event table associated with time series
+*   [`SetTimeSeriesPropertiesFromTable`](SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) - set time series properties from table values
+*   [`CopyTimeSeriesPropertiesToTable`](CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) - copy time series properties to table
 
 ### Manipulate Tables ###
 
 These commands manipulate tables.
 
-* [`InsertTableColumn`](InsertTableColumn/InsertTableColumn.md) - insert a column in a table
-* [`DeleteTableColumns`](DeleteTableColumns/DeleteTableColumns.md) - delete columns from a table
-* [`DeleteTableRows`](DeleteTableRows/DeleteTableRows.md) - delete rows from a table
-* [`FormatTableDateTime`](FormatTableDateTime/FormatTableDateTime.md) - format a date/time in a table
-* [`FormatTableString`](FormatTableString/FormatTableString.md) - format a string in a table
-* [`ManipulateTableString`](ManipulateTableString/ManipulateTableString.md) - manipulate a string in a table
-* [`SetTableValues`](SetTableValues/SetTableValues.md) - set values in a table
-* [`SplitTableColumn`](SplitTableColumn/SplitTableColumn.md) - split table column into multiple columns
-* [`TableMath`](TableMath/TableMath.md) - perform simple math on table columns
-* [`TableTimeSeriesMath`](TableTimeSeriesMath/TableTimeSeriesMath.md) - perform simple math on a table and time series
-* [`InsertTableRow`](InsertTableRow/InsertTableRow.md) - insert a row in a table
-* [`SortTable`](SortTable/SortTable.md) - sort table contents
-* [`SplitTableRow`](SplitTableRow/SplitTableRow.md) - split a table row into multiple rows
+*   [`DeleteTableColumns`](DeleteTableColumns/DeleteTableColumns.md) - delete columns from a table
+*   [`InsertTableColumn`](InsertTableColumn/InsertTableColumn.md) - insert a column in a table
+*   [`RenameTableColumns`](RenameTableColumns/RenameTableColumns.md) - rename table columns
+*   [`SplitTableColumn`](SplitTableColumn/SplitTableColumn.md) - split table column into multiple columns
+*   [`DeleteTableRows`](DeleteTableRows/DeleteTableRows.md) - delete rows from a table
+*   [`InsertTableRow`](InsertTableRow/InsertTableRow.md) - insert a row in a table
+*   [`SortTable`](SortTable/SortTable.md) - sort table contents
+*   [`SplitTableRow`](SplitTableRow/SplitTableRow.md) - split a table row into multiple rows
+*   [`FormatTableDateTime`](FormatTableDateTime/FormatTableDateTime.md) - format a date/time in a table
+*   [`FormatTableString`](FormatTableString/FormatTableString.md) - format a string in a table
+*   [`ManipulateTableString`](ManipulateTableString/ManipulateTableString.md) - manipulate a string in a table
+*   [`SetTableColumnProperties`](SetTableColumnProperties/SetTableColumnProperties.md) - set table column properties
+*   [`SetTableValues`](SetTableValues/SetTableValues.md) - set values in a table
+*   [`TableMath`](TableMath/TableMath.md) - perform simple math on table columns
+*   [`TableTimeSeriesMath`](TableTimeSeriesMath/TableTimeSeriesMath.md) - perform simple math on a table and time series
 
 ### Analyze Table ###
 
 These commands analyze tables.
 
-* [`CompareTables`](CompareTables/CompareTables.md) - compare tables to detect whether they are the same or different
+*   [`CompareTables`](CompareTables/CompareTables.md) - compare tables to detect whether they are the same or different
 
 ### Output Table ###
 
 These commands write tables to various formats.
 
-* [`WriteTableToDataStore`](WriteTableToDataStore/WriteTableToDataStore.md) - write a table to a datastore
-* [`WriteTableToDelimitedFile`](WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) - write a table to a delimited file
-* [`WriteTableToExcel`](WriteTableToExcel/WriteTableToExcel.md) - write a table to an Excel workbook file
-* [`WriteTableToHTML`](WriteTableToHTML/WriteTableToHTML.md) - write a table to an HTML file
+*   [`WriteTableToDataStore`](WriteTableToDataStore/WriteTableToDataStore.md) - write a table to a datastore
+*   [`WriteTableToDelimitedFile`](WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) - write a table to a delimited file
+*   [`WriteTableToExcel`](WriteTableToExcel/WriteTableToExcel.md) - write a table to an Excel workbook file
+*   [`WriteTableToHTML`](WriteTableToHTML/WriteTableToHTML.md) - write a table to an HTML file
+*   [`WriteTableToMarkdown`](WriteTableToMarkdown/WriteTableToMarkdown.md) - write a table to a Markdown file
 
 ### Running and Properties ###
 
 These commands handle table properties, which are used to control run logic.
 
-* [`SetPropertyFromTable`](SetPropertyFromTable/SetPropertyFromTable.md) - set a processor property from a table
-* [`CopyPropertiesToTable`](CopyPropertiesToTable/CopyPropertiesToTable.md) - **command is under development**
+*   [`SetPropertyFromTable`](SetPropertyFromTable/SetPropertyFromTable.md) - set a processor property from a table
+*   [`CopyPropertiesToTable`](CopyPropertiesToTable/CopyPropertiesToTable.md) - **command is under development**
 
 ## Plugin Commands ##
 
-Plugin commands are an experimental TSTool feature,
-designed to allow commands to be added to TSTool independent of the main TSTool distribution.
-This will allow third parties to add custom commands to TSTool.
+Plugin commands allow commands to be added to TSTool independent of the main TSTool distribution.
+This allows third parties to add custom commands and additional datastores to TSTool.
+See the [Plugins Overview](../plugin-ref/overview.md) documentation for a list of known plugins.
 
 ## Command List ##
 
 The following table contains every command and provides summary information that
 is useful to software users and developers.  Columns are as follows:
 
-* **Command** - command name as link to that command's documentation
-* **Description** - brief description
-* **Doc** - all documentation exists and has been migrated to the online version
-except for the indicated commands (blank indicates has been migrated)
-* **Def. to Rel. Path** - does command editor default to relative path
-(this feature has been prototyped but not implemented for all commands)?
+*   **Command** - command name as link to that command's documentation
+*   **Description** - brief description
+*   **Doc** - all documentation exists and has been migrated to the online version
+    except for the indicated commands (blank indicates has been migrated)
+*   **Def. to Rel. Path** - does command editor default to relative path
+    (this feature has been prototyped but not implemented for all commands)?
 
 |**Command**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Doc**|**Def. to Rel. Path**|
 |-------------------------------------------------------------------------------------------------------------|---------------------------------|:----------------------:|----|

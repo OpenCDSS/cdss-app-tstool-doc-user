@@ -1,8 +1,8 @@
 # TSTool / Datastore Reference / Delft Fews PI XML #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
 
 --------------
 
@@ -10,10 +10,18 @@
 
 The Delft FEWS public interface (PI) XML file format stores one or more time series
 associated with the Delft FEWS hydrologic forecasting and warning software
-(see: [Delft-FEWS Published Interface - PI documentation](https://publicwiki.deltares.nl/display/FEWSDOC/Delft-FEWS+Published+interface+-+PI)
+(see: [Delft-FEWS Published Interface - PI documentation](https://publicwiki.deltares.nl/display/FEWSDOC/Delft-FEWS+Published+interface+-+PI)).
 FEWS software is used by the National Weather Service (NWS) to produce deterministic
 (forecast based on previous conditions) and ensemble forecasts (sequence of forecasts as discussed below).
 The PI XML format can be used to store one or more time series, as well as ensembles of related time series.
+
+This format is disabled by default in TSTool and must be enabled in the TSTool installation or user `TSTool.cfg` configuration file with:
+
+```
+[TSTool]
+
+DelftFewsEnabled = true
+```
 
 The Ensemble Streamflow Prediction (ESP) system is that portion of the NWS system
 that provides the capability of making long-range probabilistic
@@ -32,9 +40,9 @@ Ensemble files may contain collections of input data or model-generated results.
 The PI XML format is described on the following website (note that this documentation
 may not match the current version of the XML schema referenced in the <TimeSeries> element of the XML).
 
-* [The Delft-FEWS Published Interface (PI)](https://publicwiki.deltares.nl/display/FEWSDOC/The+Delft-Fews+Published+interface+(PI))
+*   [The Delft-FEWS Published Interface (PI)](https://publicwiki.deltares.nl/display/FEWSDOC/The+Delft-Fews+Published+interface+(PI))
 
-* [The Delff-FEWS Published Interface timeseries Format (PI) Import](https://publicwiki.deltares.nl/display/FEWSDOC/Delft-Fews+Published+Interface+timeseries+Format+%28PI%29+Import)
+*   [The Delff-FEWS Published Interface timeseries Format (PI) Import](https://publicwiki.deltares.nl/display/FEWSDOC/Delft-Fews+Published+Interface+timeseries+Format+%28PI%29+Import)
 
 The following example illustrates the PI XML file (PI XML version is 1.9):
 

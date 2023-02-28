@@ -1,11 +1,11 @@
 # TSTool / Command / ReadDelftFewsPiXml #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -13,6 +13,14 @@
 
 The `ReadDelftFewsPiXml` command reads all the time series in a Delft FEWS PI XML file.
 See the [Delft FEWS Input Type Appendix](../../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md) for information about the file format.
+
+This format is disabled by default and must be enabled in the TSTool installation or user `TSTool.cfg` configuration file with:
+
+```
+[TSTool]
+
+DelftFewsEnabled = true
+```
 
 ## Command Editor ##
 
@@ -72,4 +80,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`WriteDelftFewsPiXml`](../WriteDelftFewsPiXml/WriteDelftFewsPiXml.md) command
+*   [`WriteDelftFewsPiXml`](../WriteDelftFewsPiXml/WriteDelftFewsPiXml.md) command

@@ -1,6 +1,6 @@
 # TSTool / Release Notes / Version 14 #
 
-*   [Changes in Version 14.6.0](#changes-in-version-1460dev1)
+*   [Changes in Version 14.6.0](#changes-in-version-1460)
 *   [Changes in Version 14.5.4](#changes-in-version-1454)
 *   [Changes in Version 14.5.3](#changes-in-version-1453)
 *   [Changes in Version 14.5.2](#changes-in-version-1452)
@@ -26,17 +26,33 @@
 
 ## Changes in Version 14.6.0 ##
 
-**Development release to implement command indentation..**
+**Feature release to implement command indentation.**
 
+*   ![bug](bug.png) [14.6.0] Fix the
+    [`ReadColoradoHydroBaseRest`](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command:
+    +   Several `Where` filters, when selected, did not update the command parameters,
+        including county, latitude, and longitude.
 *   ![new](new.png) [14.6.0] Add command indentation:
-    +   Added the popup ***Fiile / Indent Right*** and ***File / Indent Left*** menus
+    +   Added the ***Indent Right*** and ***Indent Left*** popup menu choices
         to indent and unindent commands that are selected in the ***Commands*** area.
+        Select one or more commands and then right-click to use the popup menu to change indentation.
     +   The default indentation is 4 spaces.
     +   All commands have been updated to enable indentation.
+    +   Commands are automatically indented based on the previous commands' indentation and
+        whether the inserted command follows an [`If`](../command-ref/If/If.md) or
+        [`For`](../command-ref/For/For.md) command.
+    +   TSTool plugins must be updated to newer versions to utilize indentation
+        (refer to the release notes for the plugins).
 *   ![change](change.png) [14.6.0] Update all command parameters to use double quotes.
     +   This provides consistency for all commands.
-    +   Previously, parameters that did not need to be quoted such as numbers were not
-        but where sometimes quoted.
+    +   Previously, parameters that did not need to be quoted such as numbers were not quoted.
+    +   The new convention also ensures that parameter values that use `${Property}` are handled for complex syntax.
+*   ![change](change.png) [14.6.0] Editor dialogs that use `Where` parameters and input filters
+    have been updated so that typing characters into text fields immediately updates the command
+    shown in the bottom of command editors.
+*   ![change](change.png) [14.6.0] The graph warning about incompatible units
+    will now display on the TSTool window when multiple computer displays are used
+    so the warning is more obvious.
 
 ## Changes in Version 14.5.4 ##
 
