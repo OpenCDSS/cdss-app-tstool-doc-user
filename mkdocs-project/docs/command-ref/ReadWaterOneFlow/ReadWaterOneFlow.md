@@ -1,11 +1,11 @@
 # TSTool / Command / ReadWaterOneFlow #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -47,5 +47,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command
-* [`ReadWaterML2`](../ReadWaterML2/ReadWaterML2.md) command
+*   [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command
+*   [`ReadWaterML2`](../ReadWaterML2/ReadWaterML2.md) command

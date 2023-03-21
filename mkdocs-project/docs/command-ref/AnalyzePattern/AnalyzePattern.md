@@ -1,11 +1,11 @@
 # TSTool / Command / AnalyzePattern #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,16 +16,16 @@ The `AnalyzePattern` command creates the pattern file for use with the
 [`ReadPatternFile`](../ReadPatternFile/ReadPatternFile.md)).
 Each time series to be processed is analyzed as follows:
 
-1. Create a time series to contain the pattern identifiers for each month (e.g., `DRY`, `AVG`, `WET`).
-2. For each month, determine the monthly values for the
-time series being analyzed (e.g., find all of the January values).
-3. Rank the values in ascending order.
-4. Evaluate the percentile rank information for non-missing values and assign
-in the pattern time series an appropriate pattern identifier.
-For example, if the percentile values are `.25` and `.75`,
-assign the first pattern identifier to values < 25% of the non-missing count,
-assign the second pattern identifier to non-missing values >= 25% and < 75%,
-and assign the third identifier to the non-missing values >= 75%.
+1.  Create a time series to contain the pattern identifiers for each month (e.g., `DRY`, `AVG`, `WET`).
+2.  For each month, determine the monthly values for the
+    time series being analyzed (e.g., find all of the January values).
+3.  Rank the values in ascending order.
+4.  Evaluate the percentile rank information for non-missing values and assign
+    in the pattern time series an appropriate pattern identifier.
+    For example, if the percentile values are `.25` and `.75`,
+    assign the first pattern identifier to values < 25% of the non-missing count,
+    assign the second pattern identifier to non-missing values >= 25% and < 75%,
+    and assign the third identifier to the non-missing values >= 75%.
 
 The resulting pattern time series is then written to a file.
 This command is enabled for monthly data only.
@@ -56,6 +56,10 @@ year type can be set with the
 [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md) command.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Analyze Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -122,6 +126,6 @@ Statistics from Pattern Analysis
 
 ## See Also ##
 
-* [`FillPattern`](../FillPattern/FillPattern.md) command
-* [`ReadPatternFile`](../ReadPatternFile/ReadPatternFile.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`FillPattern`](../FillPattern/FillPattern.md) command
+*   [`ReadPatternFile`](../ReadPatternFile/ReadPatternFile.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

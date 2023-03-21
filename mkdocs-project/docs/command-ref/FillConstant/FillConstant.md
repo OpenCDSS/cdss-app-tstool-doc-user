@@ -1,11 +1,11 @@
 # TSTool / Command / FillConstant #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,6 +15,10 @@ The `FillConstant` command fills the missing data in a time series with the spec
 This fill technique is useful for filling missing data with zeros, perhaps as the last step in a sequence of filling commands.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -66,5 +70,5 @@ ConstantValue=500,FillStart="1970-02",FillEnd="1970-10",FillFlag="C")
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetConstant`](../SetConstant/SetConstant.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetConstant`](../SetConstant/SetConstant.md) command

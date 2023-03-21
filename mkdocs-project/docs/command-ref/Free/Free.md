@@ -1,11 +1,11 @@
 # TSTool / Command / Free #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -24,6 +24,10 @@ Many commands also use a `TSList` parameter to indicate which time series should
 The `Free` command is useful if a block of commands is used with [`For`](../For/For.md) because many time series may be created.
   
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Select, Free, Sort Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -63,4 +67,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FreeTable`](../FreeTable/FreeTable.md) command
+*   [`FreeTable`](../FreeTable/FreeTable.md) command

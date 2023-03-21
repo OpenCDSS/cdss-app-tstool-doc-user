@@ -1,11 +1,11 @@
 # TSTool / Command / InsertTimeSeriesIntoEnsemble #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ The time series must have the same interval and data units as the time series in
 For example, use the command to insert scenario time series into an ensemble.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Ensemble Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -63,5 +67,5 @@ InsertTimeSeriesIntoEnsemble(Ensemble2=”TestEnsemble”)
 
 ## See Also ##
 
-* [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

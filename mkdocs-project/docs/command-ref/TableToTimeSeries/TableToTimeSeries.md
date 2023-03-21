@@ -1,11 +1,11 @@
 # TSTool / Command / TableToTimeSeries #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,11 +16,11 @@ This command can be used when a command to read time series from a specific file
 or datastore has not been implemented or parsing the table is easier.
 The table typically is read using one of the following commands or another command:
 
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) – for example,
-define an ODBC DSN connection to a database and query time series using an SQL statement.
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) – for example,
-read time series from a comma-separated-value (CSV) file.
-* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) – for example, read time series from a comma-separated-value (CSV) file
+*   [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) – for example,
+    define an ODBC DSN connection to a database and query time series using an SQL statement.
+*   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) – for example,
+    read time series from a comma-separated-value (CSV) file.
+*   [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) – for example, read time series from a comma-separated-value (CSV) file
 
 TSTool internally represents tables as a collection of columns,
 where a column contains values of a consistent data type (e.g., integer, string, double).
@@ -28,14 +28,14 @@ A time series table requires at a minimum a date/time column (or separate date a
 at least one data value column, and optionally one or more columns for data flags.
 Data represented in three table designs are handled by this command:
 
-* Data for multiple locations/series stored in a single column
-(common in a database or stream of data from a data logger) – specify
-the `LocationColumn` command parameter – referred to as single column format in this command.
-* Data for multiple locations/series stored in multiple columns
-(common in spreadsheets and CSV files) – do not specify the `LocationColumn` command parameter
-but instead specify the `ValueColumn` and optionally `LocationID` parameters – referred to as multiple column format in this command.
-* Data for one or multiple stations represented in a block of data with time on
-both axes (e.g., year in first column and months in other columns) – this is referred to as block format and is under development.
+*   Data for multiple locations/series stored in a single column
+    (common in a database or stream of data from a data logger) – specify
+    the `LocationColumn` command parameter – referred to as single column format in this command.
+*   Data for multiple locations/series stored in multiple columns
+    (common in spreadsheets and CSV files) – do not specify the `LocationColumn` command parameter
+    but instead specify the `ValueColumn` and optionally `LocationID` parameters – referred to as multiple column format in this command.
+*   Data for one or multiple stations represented in a block of data with time on
+    both axes (e.g., year in first column and months in other columns) – this is referred to as block format and is under development.
 
 The command provides flexibility to specify time series metadata (e.g., data source,
 units) as command parameters, or read from the file.
@@ -58,6 +58,10 @@ Data needed to form the time series identifier is stripped of periods (`.`)
 because periods interfere with the TSID convention.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Table, Time Series Processing***
 
 ### Example 1: Single Column for Time Series Values with Time Series Identifier Information Specified by Command Parameters ###
 
@@ -263,7 +267,7 @@ Examples were also shown in the [Command Editor section above](#command-editor)
 
 ## See Also ##
 
-* [`FreeTable`](../FreeTable/FreeTable.md) command
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
-* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command
+*   [`FreeTable`](../FreeTable/FreeTable.md) command
+*   [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
+*   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command

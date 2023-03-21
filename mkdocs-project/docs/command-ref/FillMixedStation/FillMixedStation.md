@@ -1,11 +1,11 @@
 # TSTool / Command / FillMixedStation #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -23,12 +23,12 @@ However, due to performing calculations in double precision in TSTool, the resul
 The time series involved in the analysis are typically related,
 such as being from nearby locations in a region.  The main uses of the command are
 
-1. To automatically fill every time series in a data set, using other time series in the data set.
-For example, for hydrologic modeling natural flow time series may have been
-estimated by processing measured streamflow, diversion, and reservoir time series.
-The natural flow time series can be filled for use in modeling.
-2. To perform an analysis without filling, to guide application of individual
-[`FillRegression`](../FillRegression/FillRegression.md) and other commands.
+1.  To automatically fill every time series in a data set, using other time series in the data set.
+    For example, for hydrologic modeling natural flow time series may have been
+    estimated by processing measured streamflow, diversion, and reservoir time series.
+    The natural flow time series can be filled for use in modeling.
+2.  To perform an analysis without filling, to guide application of individual
+    [`FillRegression`](../FillRegression/FillRegression.md) and other commands.
 
 Important:  TSTool does not automatically exclude time series that have been filled in previous steps.
 Consequently, care must be taken when specifying the list of independent time
@@ -38,17 +38,17 @@ In the future, features may be enabled to examine the data flags to determine if
 For each dependent time series being filled, the Mixed Station Analysis (MSA) selects
 the independent time series and parameters that result in the best filling results, considering combinations of the following:
 
-* The list of independent time series being considered can be constrained to a subset of available time series.
-* Filling methods include ordinary least squares (OLS) regression (see the
-[`FillRegression`](../FillRegression/FillRegression.md) command for details).
-Support for MOVE2 may be added in the future (see the
-[`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command for details).
-* One equation and/or monthly equations can be used.
-* The data can be transformed using log10, or no transformation can be applied.
-* A minimum number of overlapping data points (sample size `N1`) can be specified to indicate a valid relationship.
-* A minimum correlation coefficient r can be specified to indicate a valid relationship.
-* A minimum confidence level for the slope of the regression line can be specified (see T-Test discussion below).
-* The best fit indicator can be the correlation coefficient (R), or the standard error of prediction (SEP, described below).
+*   The list of independent time series being considered can be constrained to a subset of available time series.
+*   Filling methods include ordinary least squares (OLS) regression (see the
+    [`FillRegression`](../FillRegression/FillRegression.md) command for details).
+    Support for MOVE2 may be added in the future (see the
+    [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command for details).
+*   One equation and/or monthly equations can be used.
+*   The data can be transformed using log10, or no transformation can be applied.
+*   A minimum number of overlapping data points (sample size `N1`) can be specified to indicate a valid relationship.
+*   A minimum correlation coefficient r can be specified to indicate a valid relationship.
+*   A minimum confidence level for the slope of the regression line can be specified (see T-Test discussion below).
+*   The best fit indicator can be the correlation coefficient (R), or the standard error of prediction (SEP, described below).
 
 Because extensive analysis may be necessary to evaluate all the combinations of parameters,
 the `FillMixedStation` command will be slower than other commands that
@@ -59,32 +59,36 @@ correlation coefficients that are required for a good regression result.
 
 The full MSA process is as follows:
 
-1. For each dependent time series, perform a regression analysis using a unique combination
-of parameters (e.g., use an independent time series, OLS regression with one equation, no data transform).
-This results in 1+ regression results for each dependent time series.
-2. Qualifying results (those that meet the requirements of minimum number of overlapping
-points and correlation coefficient) are retained in a list for the dependent time series, for processing in the next step.
-3. The qualifying results are used to estimate each missing value.
-Typically, the SEP is used to select the relationship to use (the one that has lowest SEP).
-4. Missing data in the dependent time series are filled using the regression results for the selected relationship.
-If missing values remain, the next highest ranking regression result is used until all missing
-values are filled (or no additional qualifying regression results are available).
-Monthly filling occurs on each of the 12 months.
-This approach may use different stations for each filled value because of the goodness of fit
-of the relationship and because different stations may or may not have data that overlap the period to be filled.
+1.  For each dependent time series, perform a regression analysis using a unique combination
+    of parameters (e.g., use an independent time series, OLS regression with one equation, no data transform).
+    This results in 1+ regression results for each dependent time series.
+2.  Qualifying results (those that meet the requirements of minimum number of overlapping
+    points and correlation coefficient) are retained in a list for the dependent time series, for processing in the next step.
+3.  The qualifying results are used to estimate each missing value.
+    Typically, the SEP is used to select the relationship to use (the one that has lowest SEP).
+4.  Missing data in the dependent time series are filled using the regression results for the selected relationship.
+    If missing values remain, the next highest ranking regression result is used until all missing
+    values are filled (or no additional qualifying regression results are available).
+    Monthly filling occurs on each of the 12 months.
+    This approach may use different stations for each filled value because of the goodness of fit
+    of the relationship and because different stations may or may not have data that overlap the period to be filled.
 
 ### Implementation in Colorado’s Decision Support Systems ###
 
 The Mixed Station Model implemented for the State of Colorado typically used the following input:
 
-* Log transform (`Transform=Log10`)
-* One and monthly relationships (`NumberOfEquations=MonthlyEquations`,`OneEquation`)
-* Rank on SEP (`BestFitIndicator=SEP`)
-* Minimum concurrent values = `5` (`MinimumDataCount=5`)
-* Confidence level = `95%` (`ConfidenceInterval=95`)
-* Fill all time series in data set (nothing selected in filling)
+*   Log transform (`Transform=Log10`)
+*   One and monthly relationships (`NumberOfEquations=MonthlyEquations`,`OneEquation`)
+*   Rank on SEP (`BestFitIndicator=SEP`)
+*   Minimum concurrent values = `5` (`MinimumDataCount=5`)
+*   Confidence level = `95%` (`ConfidenceInterval=95`)
+*   Fill all time series in data set (nothing selected in filling)
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -203,6 +207,6 @@ FillMixedStation(BestFitIndicator=SEP,NumberOfEquations="MonthlyEquations,OneEqu
 
 ## See Also ##
 
-* [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command
-* [`FillRegression`](../FillRegression/FillRegression.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command
+*   [`FillRegression`](../FillRegression/FillRegression.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / WriteTimeSeriesToExcel #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -13,18 +13,22 @@
 
 The `WriteTimeSeriesToExcel` command writes one or more time series to an Excel workbook.  The following functionality is provided:
 
-* Time series are written in columns (see
-[`WriteTimeSeriesToExcelBlock`](../WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock.md) for alternate formatting options).
-* The worksheet and position in worksheet can be specified.
-* The output can be created or appended.
-* Separate columns can be written for date/time, date, and/or time.
-Currently date/time values are written as strings but Excel date objects will be enabled in the future.
-* Cell comments can be formatted using data flags and other time series properties.
+*   Time series are written in columns (see
+    [`WriteTimeSeriesToExcelBlock`](../WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock.md) for alternate formatting options).
+*   The worksheet and position in worksheet can be specified.
+*   The output can be created or appended.
+*   Separate columns can be written for date/time, date, and/or time.
+    Currently date/time values are written as strings but Excel date objects will be enabled in the future.
+*   Cell comments can be formatted using data flags and other time series properties.
 
 TSTool uses the [Apache POI software](https://poi.apache.org) to read/write the Excel file
 and consequently functionality is constrained by the features of that software package.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Spreadsheet Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -183,9 +187,9 @@ Condition Table used with `WriteTimeSeriesToExcel` Command for Specific Checks a
 The column names for the condition table must be specified as shown.
 The ***Condition*** column recognizes the following specifiers:
 
-* `${ts:property}` – a time series property, which can be used to format comments for column headings or data value cells
-* `${tsdata:value}` – the time series data value, used to evaluate numerical conditions (cannot be used to format column headings)
-* `${tsdata:flag}` – the time series flag, used to evaluate string conditions (cannot be used to format column headings)
+*   `${ts:property}` – a time series property, which can be used to format comments for column headings or data value cells
+*   `${tsdata:value}` – the time series data value, used to evaluate numerical conditions (cannot be used to format column headings)
+*   `${tsdata:flag}` – the time series flag, used to evaluate string conditions (cannot be used to format column headings)
 
 Values on the left and right of the operator must be
 separated with spaces to facilitate parsing the condition.
@@ -255,6 +259,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command
-* [`WriteTimeSeriesToExcelBlock`](../WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command
+*   [`WriteTimeSeriesToExcelBlock`](../WriteTimeSeriesToExcelBlock/WriteTimeSeriesToExcelBlock.md) command

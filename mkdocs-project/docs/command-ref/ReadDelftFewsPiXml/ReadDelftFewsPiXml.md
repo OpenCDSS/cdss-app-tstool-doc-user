@@ -24,6 +24,10 @@ DelftFewsEnabled = true
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
+
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
 **<p style="text-align: center;">

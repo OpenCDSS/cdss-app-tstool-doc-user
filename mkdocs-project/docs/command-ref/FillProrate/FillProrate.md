@@ -1,11 +1,11 @@
 # TSTool / Command / FillProrate #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,23 +17,27 @@ This fill technique is useful, for example, where two time series are likely
 to have the same general trend and ratio of data values.
 The ratio can be computed two ways, as specified by the `FactorMethod` parameter:
 
-* `NearestPoint` – causes the ratio to be recomputed each time that a non-missing
-value is found in both time series.
-The ratio computed from the nearest points in each time series is used for filling until another value can be computed.
-* `AnalyzeAverage` – computes the ratio as the average ratio of the time
-series (numerator) and the independent time series (divisor).
-This was implemented to match an existing fill procedure but can lead to some bias in the results.
-A different overall average will be obtained depending on whether
-ratios are computed first and then averaged than if the sum of the
-numerators are added and divided by the sum of the denominators.
-In the former, the choice of which time series is in the denominator could impact results.
-More parameters may need to be added in the future to implement an analysis different from the current defaults.
+*   `NearestPoint` – causes the ratio to be recomputed each time that a non-missing
+    value is found in both time series.
+    The ratio computed from the nearest points in each time series is used for filling until another value can be computed.
+*   `AnalyzeAverage` – computes the ratio as the average ratio of the time
+    series (numerator) and the independent time series (divisor).
+    This was implemented to match an existing fill procedure but can lead to some bias in the results.
+    A different overall average will be obtained depending on whether
+    ratios are computed first and then averaged than if the sum of the
+    numerators are added and divided by the sum of the denominators.
+    In the former, the choice of which time series is in the denominator could impact results.
+    More parameters may need to be added in the future to implement an analysis different from the current defaults.
 
 The initial computation of the ratio may require specifying an initial value
 due to missing data on the end-points of the time series (see the `InitialValue` parameter).
 Alternatively, the time series can be filled in one direction first and then filled in the other direction with a second command.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -91,5 +95,5 @@ FillProrate(TSList=AllMatchingTSID,TSID="06754000.DWR.Streamflow.Month",Independ
 
 ## See Also ##
 
-* [`FillConstant`](../FillConstant/FillConstant.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`FillConstant`](../FillConstant/FillConstant.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

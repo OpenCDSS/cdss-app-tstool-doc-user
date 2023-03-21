@@ -1,11 +1,11 @@
 # TSTool / Command / Break #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ It is typically enclosed in an [`If`](../If/If.md) block.
 Logic will continue with the command after the corresponding [`EndFor`](../EndFor/EndFor.md) command.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -50,7 +54,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`Continue`](../Continue/Continue.md) command
-* [`EndFor`](../EndFor/EndFor.md) command
-* [`For`](../For/For.md) command
-* [`If`](../If/If.md) command
+*   [`Continue`](../Continue/Continue.md) command
+*   [`EndFor`](../EndFor/EndFor.md) command
+*   [`For`](../For/For.md) command
+*   [`If`](../If/If.md) command

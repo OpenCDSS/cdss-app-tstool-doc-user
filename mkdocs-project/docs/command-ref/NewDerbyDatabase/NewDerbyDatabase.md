@@ -1,11 +1,11 @@
 # TSTool / Command / NewDerbyDatabase #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -20,6 +20,10 @@ which provides similar functionality.
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Datastore Processing***
+
 ## Command Syntax ##
 
 ## Examples ##
@@ -28,4 +32,4 @@ which provides similar functionality.
 
 ## See Also ##
 
-* [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md) command
+*   [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md) command

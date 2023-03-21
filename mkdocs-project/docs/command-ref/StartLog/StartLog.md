@@ -1,11 +1,11 @@
 # TSTool / Command / StartLog #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -26,6 +26,10 @@ If this behavior is not desirable, such as in automated testing,
 use the [`ConfigureLogging`](../ConfigureLogging/ConfigureLogging.md) command to disable the `StartLog` command.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Logging and Messaging***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -74,5 +78,5 @@ Add(TSID="06753400.USGS.Streamflow.Month",AddTSList=AllTS,HandleMissingHow="Igno
 
 ## See Also ##
 
-* [`ConfigureLogging`](../ConfigureLogging/ConfigureLogging.md) command
-* [`Message`](../Message/Message.md) command - can be used to write messages to the log file
+*   [`ConfigureLogging`](../ConfigureLogging/ConfigureLogging.md) command
+*   [`Message`](../Message/Message.md) command - can be used to write messages to the log file

@@ -1,7 +1,7 @@
 # TSTool / Command / FillMOVE1 #
 
-* [Overview](#overview)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -51,6 +51,6 @@ This is the only difference between OLS regression and MOVE.1.
 
 ## See Also ##
 
-* [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command
-* [`FillRegression`](../FillRegression/FillRegression.md) command
-* Hirsch, R. M., 1982, “A Comparison of Four Streamflow Record Extension Techniques”, Water Resources Research, Vol. 18, No. 4, pages 1081-1088.
+*   [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command
+*   [`FillRegression`](../FillRegression/FillRegression.md) command
+*   Hirsch, R. M., 1982, “A Comparison of Four Streamflow Record Extension Techniques”, Water Resources Research, Vol. 18, No. 4, pages 1081-1088.

@@ -1,11 +1,11 @@
 # TSTool / Command / FillRegression #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -126,6 +126,10 @@ Student's T-Test Example (<a href="../ttest-graph.png">see also the full-size im
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
+
 The following dialog is used to edit the command and illustrates the syntax for the command when reading a single time series.
 
 **<p style="text-align: center;">
@@ -200,22 +204,22 @@ Command Parameters
 
 The command logic is as follows, with reference to command parameters that control the process:
 
-1. The dependent (`TSID`) and independent time series (`IndependentTSID`) are retrieved using the time series identifiers or aliases.
-2. Data arrays of overlapping non-missing values are extracted from time series to be used as the samples for analysis,
-as specified by command parameters (analysis period specified by `AnalysisStart` and `AnalysisEnd`;
-transformation specified by `Transformation`, `LEZeroLogValue`, and `Intercept`;
-number of equations specified by `NumberOfEquations` and `AnalysisMonth`).
-3. The independent and dependent statistics and relationships are calculated,
-computing as many of the statistics as possible (some are skipped if the sample size results in division by zero).
-Computing the statistics allows them to be saved in the output table for review,
-and is controlled by the `TableID`, `TableTSIDColumn`, and `TableTSIDFormat` parameters.
-4. The statistics are analyzed to determine if the relationships are acceptable for filling by
-checking the minimum sample size (`MinimumSampleSize`), minimum correlation coefficient (`MinimumR`),
-and that the relationship meets the confidence interval (`ConfidenceInterval`).
-If monthly equations are used, then it is possible that some months can be filled but not others.
-5. If `Fill=True` (the default), then the relationships that are acceptable from step 4 are used to
-fill the dependent time series for the period specified by the `FillStart` and `FillEnd` parameters,
-with `FillFlag` and `FillFlagDesc` optionally being used to indicate filled values.
+1.  The dependent (`TSID`) and independent time series (`IndependentTSID`) are retrieved using the time series identifiers or aliases.
+2.  Data arrays of overlapping non-missing values are extracted from time series to be used as the samples for analysis,
+    as specified by command parameters (analysis period specified by `AnalysisStart` and `AnalysisEnd`;
+    transformation specified by `Transformation`, `LEZeroLogValue`, and `Intercept`;
+    number of equations specified by `NumberOfEquations` and `AnalysisMonth`).
+3.  The independent and dependent statistics and relationships are calculated,
+    computing as many of the statistics as possible (some are skipped if the sample size results in division by zero).
+    Computing the statistics allows them to be saved in the output table for review,
+    and is controlled by the `TableID`, `TableTSIDColumn`, and `TableTSIDFormat` parameters.
+4.  The statistics are analyzed to determine if the relationships are acceptable for filling by
+    checking the minimum sample size (`MinimumSampleSize`), minimum correlation coefficient (`MinimumR`),
+    and that the relationship meets the confidence interval (`ConfidenceInterval`).
+    If monthly equations are used, then it is possible that some months can be filled but not others.
+5.  If `Fill=True` (the default), then the relationships that are acceptable from step 4 are used to
+    fill the dependent time series for the period specified by the `FillStart` and `FillEnd` parameters,
+    with `FillFlag` and `FillFlagDesc` optionally being used to indicate filled values.
 
 ## Examples ##
 
@@ -225,5 +229,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FillMixedStation`](../FillMixedStation/FillMixedStation.md) command
-* [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command
+*   [`FillMixedStation`](../FillMixedStation/FillMixedStation.md) command
+*   [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / AppendTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,10 +16,14 @@ resulting in more rows being added to the first table.
 This command does not “join” tables horizontally (for such functionality see the [`JoinTables`](../JoinTables/JoinTables.md) command).
 For appended rows:
 
-* values in columns that are not matched are set to null in the receiving table
-* values in columns where the data types do not match are set to null in the receiving table
+*   values in columns that are not matched are set to null in the receiving table
+*   values in columns where the data types do not match are set to null in the receiving table
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Append, Join Tables***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -86,6 +90,6 @@ Table Corresponding to Results from Parameters in Command Editor
 
 ## See Also ##
 
-* [`FreeTable`](../FreeTable/FreeTable.md) command
-* [`JoinTables`](../JoinTables/JoinTables.md) command
-* [`NewTable`](../NewTable/NewTable.md) command
+*   [`FreeTable`](../FreeTable/FreeTable.md) command
+*   [`JoinTables`](../JoinTables/JoinTables.md) command
+*   [`NewTable`](../NewTable/NewTable.md) command

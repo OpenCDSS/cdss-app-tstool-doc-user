@@ -1,11 +1,11 @@
 # TSTool / Command / ReadTableFromFixedFormatFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,14 +15,18 @@ The `ReadTableFromFixedFormatFile` command reads a table from a fixed-format fil
 for example input files to scientific models.
 Columns are indicated by a column type and width.  Files have the following characteristics:
 
-* Comments indicated by lines starting with `#` are stripped during the read.
-* Extraneous lines in the file can be skipped during the read using the `SkipLines` parameter (**not yet implemented**).
-* Files cannot have header lines (see the `ColumnNames` parameter) – **header lines will be handled in the future**.
-* Data in columns are assumed to be of consistent type (i.e., all numerical data or all text), based on the format specifier (see `DataFormat` parameter).
-* Missing values can be indicated by blanks in the input file.
-* Values in adjacent columns that have no intervening space are read properly.
+*   Comments indicated by lines starting with `#` are stripped during the read.
+*   Extraneous lines in the file can be skipped during the read using the `SkipLines` parameter (**not yet implemented**).
+*   Files cannot have header lines (see the `ColumnNames` parameter) – **header lines will be handled in the future**.
+*   Data in columns are assumed to be of consistent type (i.e., all numerical data or all text), based on the format specifier (see `DataFormat` parameter).
+*   Missing values can be indicated by blanks in the input file.
+*   Values in adjacent columns that have no intervening space are read properly.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Read Table***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -108,5 +112,5 @@ The following table in TSTool illustrates the resulting output:
 
 ## See Also ##
 
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
-* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command
+*   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command

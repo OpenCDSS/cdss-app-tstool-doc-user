@@ -1,11 +1,11 @@
 # TSTool / Command / ARMA #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -32,45 +32,48 @@ The *a* and *b* coefficients are listed in the dialog from left-most to right-mo
 The interval used to compute the ARMA coefficients can be different from the data interval
 but the data and ARMA intervals must be divisible by a common interval.  The ARMA algorithm is executed as follows:
 
-1. The data and ARMA intervals are checked and if they not the same,
-the data are expanded by duplicating each input value into a temporary array.
-For example, if the data interval is `6Hour` and the ARMA interval is `2Hour`,
-each data value is expanded to three data values (`2Hour` values).
-If the data interval is `6Hour` and the ARMA interval is `10Hour`,
-each data value is expanded to three data values (`2Hour` values) so that `2Hour` values
-can be combined to get `10Hour` values in the final output.
-2. The ARMA equation is applied at each point in the expanded data array.
-However, because the ARMA coefficients were developed using a specific interval,
-only the data values at the ARMA interval are used in the equation.
-For example, if the expanded data array has `2Hour` data and the ARMA interval is `10Hour`,
-then every fifth value will be used (e.g., *t* corresponds to the “current” value and *t – 1*
-corresponds to the fifth value before the current value).
-Because the ARMA algorithm depends on a number of previous terms in both the input and output,
-there may be missing terms at the beginning of the data array and in cases where missing data periods are encountered.
-Ideally ARMA will be applied to filled data and only the first few intervals will be an issue.
-The output period can be specified as less than the total period so
-that the initial part of the routed time series can be ignored.
-In cases where *O* values are missing, the algorithm first tries to use the *I* values.
-If any values needed for the result are missing, the result is set to missing.
-Another approach is to use the `InputPreviousValues` and `OutputPreviousValues` parameters to supply
-additional time series values previous to the start of the time series to overcome this issue.
-The following illustrates potential combinations of input and output previous values (*i* and *o*):<br>
-```
-           t
-           IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII (no InputPreviousValues)
-       iiiiIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII (InputPreviousValues specified)
-           OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO (no OutputPreviousValues)
-        oooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO (OutputPreviousValues within overall input array)
- ooooooooooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO (OutputPreviousValues beyond input array)
-```
-<br>
-3. The final results are converted to a data interval that matches the original input, if necessary.
-If the original data interval and the ARMA interval are the same, no conversion is necessary.
-For example, if the original data interval is `6Hour` and the ARMA interval is `10Hour`,
-then the expanded data interval will be `2Hour`.
-Consequently, three sequential expanded values are averaged to obtain the final 6Hour time series.
+1.  The data and ARMA intervals are checked and if they not the same,
+    the data are expanded by duplicating each input value into a temporary array.
+    For example, if the data interval is `6Hour` and the ARMA interval is `2Hour`,
+    each data value is expanded to three data values (`2Hour` values).
+    If the data interval is `6Hour` and the ARMA interval is `10Hour`,
+    each data value is expanded to three data values (`2Hour` values) so that `2Hour` values
+    can be combined to get `10Hour` values in the final output.
+2.  The ARMA equation is applied at each point in the expanded data array.
+    However, because the ARMA coefficients were developed using a specific interval,
+    only the data values at the ARMA interval are used in the equation.
+    For example, if the expanded data array has `2Hour` data and the ARMA interval is `10Hour`,
+    then every fifth value will be used (e.g., *t* corresponds to the “current” value and *t – 1*
+    corresponds to the fifth value before the current value).
+    Because the ARMA algorithm depends on a number of previous terms in both the input and output,
+    there may be missing terms at the beginning of the data array and in cases where missing data periods are encountered.
+    Ideally ARMA will be applied to filled data and only the first few intervals will be an issue.
+    The output period can be specified as less than the total period so
+    that the initial part of the routed time series can be ignored.
+    In cases where *O* values are missing, the algorithm first tries to use the *I* values.
+    If any values needed for the result are missing, the result is set to missing.
+    Another approach is to use the `InputPreviousValues` and `OutputPreviousValues` parameters to supply
+    additional time series values previous to the start of the time series to overcome this issue.
+    The following illustrates potential combinations of input and output previous values (*i* and *o*):<br>
+    ```
+               t
+               IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII (no InputPreviousValues)
+           iiiiIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII (InputPreviousValues specified)
+               OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO (no OutputPreviousValues)
+            oooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO (OutputPreviousValues within overall input array)
+     ooooooooooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO (OutputPreviousValues beyond input array)
+    ```
+3.  The final results are converted to a data interval that matches the original input, if necessary.
+    If the original data interval and the ARMA interval are the same, no conversion is necessary.
+    For example, if the original data interval is `6Hour` and the ARMA interval is `10Hour`,
+    then the expanded data interval will be `2Hour`.
+    Consequently, three sequential expanded values are averaged to obtain the final 6Hour time series.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Manipulate Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -169,4 +172,4 @@ Example Graph Showing Original and ARMA-Routed Time Series as Cumulative Values 
 
 ## See Also ##
 
-* [`Cumulate`](../Cumulate/Cumulate.md) command
+*   [`Cumulate`](../Cumulate/Cumulate.md) command

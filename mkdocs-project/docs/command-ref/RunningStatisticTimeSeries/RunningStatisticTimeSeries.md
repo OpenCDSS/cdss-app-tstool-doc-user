@@ -1,11 +1,11 @@
 # TSTool / Command / RunningStatisticTimeSeries #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,12 +18,12 @@ See also the [Statistic Examples](../../examples/examples.md#statistic-examples)
 
 The main purposes of the `RunningStatisticTimeSeries` command are:
 
-1. Compute a running statistic around a moving point, in order to smooth the time series,
-for example to focus on underlying short-term forcings rather than variability or noise
-2. Compute a statistic by using values from the historical period,
-for example to illustrate how a daily value compares to historical values for the same day of year
-3. Compute a statistic by comparing a value to a statistic computed
-for a “normal” period, such as a standard 30-year climate period
+1.  Compute a running statistic around a moving point, in order to smooth the time series,
+    for example to focus on underlying short-term forcings rather than variability or noise
+2.  Compute a statistic by using values from the historical period,
+    for example to illustrate how a daily value compares to historical values for the same day of year
+3.  Compute a statistic by comparing a value to a statistic computed
+    for a “normal” period, such as a standard 30-year climate period
 
 The sample is computed relative to a date/time in the time series and consequently
 the resulting statistic may vary at each date/time in the time series.
@@ -33,22 +33,22 @@ data type (an alias can be assigned to customize the identifier that is used for
 There are several approaches to determining the sample for the running
 statistic (as specified by the `SampleMethod` command parameter):
 
-* The centered running statistic (`SampleMethod=Centered`) requires that the number
-intervals on each site of a point be specified (e.g., specifying `1` will use 3 values at each point):  `x--O--x`
-* The previous/future running statistics (`SampleMethod=Future`, `FutureInclusive`, `Previous`, `PreviousInclusive`)
-require that the number of intervals prior to or after the current point be specified.
-* The N-year running statistic (`SampleMethod=NYear`) is computed by processing the current year and
-N - 1 values from previous years, for a specific date.
-A resulting value is produced only if N non-missing values are available.
-Currently N-year running statistic values for Feb 29 for daily or finer data will always
-be missing because a sufficient number of values will not be found – an option may be added
-in the future to allow Feb 29 values to be computed based on fewer than N values.
-* A special case of the N-year running statistic (`SampleMethod=NAllYear`)
-is to use all previous years’ and the current value.
-* Use `SampleMethod=AllYears` to use data from the full analysis period.
-In this case some statistics may have the same value for the full period.
-This sample method is used with `NormalStart` and `NormalEnd` and `PercentOf*`
-statistics to indicate how values compare to a normal period.
+*   The centered running statistic (`SampleMethod=Centered`) requires that the number
+    intervals on each site of a point be specified (e.g., specifying `1` will use 3 values at each point):  `x--O--x`
+*   The previous/future running statistics (`SampleMethod=Future`, `FutureInclusive`, `Previous`, `PreviousInclusive`)
+    require that the number of intervals prior to or after the current point be specified.
+*   The N-year running statistic (`SampleMethod=NYear`) is computed by processing the current year and
+    N - 1 values from previous years, for a specific date.
+    A resulting value is produced only if N non-missing values are available.
+    Currently N-year running statistic values for Feb 29 for daily or finer data will always
+    be missing because a sufficient number of values will not be found – an option may be added
+    in the future to allow Feb 29 values to be computed based on fewer than N values.
+*   A special case of the N-year running statistic (`SampleMethod=NAllYear`)
+    is to use all previous years’ and the current value.
+*   Use `SampleMethod=AllYears` to use data from the full analysis period.
+    In this case some statistics may have the same value for the full period.
+    This sample method is used with `NormalStart` and `NormalEnd` and `PercentOf*`
+    statistics to indicate how values compare to a normal period.
 
 Statistics may be calculated directly from the sample or may be derived from an additional calculation.
 For example, the Mean statistic is computed by computing the mean of the values in the sample,
@@ -70,6 +70,10 @@ data so that the largest data value is in rank position 1.
 The `Rank` statistic can be calculated as a simple statistic and will consider the `SortOrder` parameter.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the centered running average command syntax.
 In this case the distribution does not need to be specified.
@@ -228,7 +232,7 @@ Results from `RunningStatisticTimeSeries` Commands (<a href="../RunningStatistic
 
 ## See Also ##
 
-* [Statistic Examples](../../examples/examples.md#statistic-examples)
-* [`NewStatisticMonthTimeSeries`](../NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md) command
-* [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command
-* [`NewStatisticYearTS`](../NewStatisticYearTS/NewStatisticYearTS.md) command
+*   [Statistic Examples](../../examples/examples.md#statistic-examples)
+*   [`NewStatisticMonthTimeSeries`](../NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md) command
+*   [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command
+*   [`NewStatisticYearTS`](../NewStatisticYearTS/NewStatisticYearTS.md) command

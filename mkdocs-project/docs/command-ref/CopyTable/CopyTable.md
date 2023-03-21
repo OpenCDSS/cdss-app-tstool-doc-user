@@ -1,11 +1,11 @@
 # TSTool / Command / CopyTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ or to create a subset of a table to output to a file or write to a database
 (for example filter a large table by geographic area or other criteria).  
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Create, Copy, Free Table***
 
 The following dialog is used to edit the command and illustrates the syntax of the command
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
@@ -60,7 +64,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command
-* [`FreeTable`](../FreeTable/FreeTable.md) command
-* [`NewTable`](../NewTable/NewTable.md) command
-* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command
+*   [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command
+*   [`FreeTable`](../FreeTable/FreeTable.md) command
+*   [`NewTable`](../NewTable/NewTable.md) command
+*   [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command

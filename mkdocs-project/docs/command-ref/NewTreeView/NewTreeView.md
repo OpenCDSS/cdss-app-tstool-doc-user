@@ -1,11 +1,11 @@
 # TSTool / Command / NewTreeView #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,21 +19,21 @@ area and provides interactive access to data.  The view is defined using a simpl
 
 Tree view definition files have the following characteristics:
 
-* Comments are indicated by lines starting with `#`.
-* Indentations indicate the level (branch) in the tree:
-	+ Use the tab character to indicate indentation
-	+ The indentation on one row cannot be more than 1 greater than the previous row
-* The content for the tree is indicated by keywords:
-	+ `Label`:  indicates that the string following the colon will be used to label a branch.
-		- A single top-level label is required
-	+ `TS`:  indicates that a time series identifier pattern will be used to identify time series in the tree.
-	Wildcard conventions follow rules consistent with the `TSList=AllMatchingTSID` ,`TSID=...` command parameters.
-	The time series can be graphed by right-clicking on one or more selected time series and graphing.
-	+ `TSProduct`:  specify the path to a time series product file as processed by the
-	[`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct) command.
-	The path can be specified relative to the command file.
-	All time listed in the file must be found in the results of processing the command file.
-	**Currently functionality is not implemented to re-use the time series product file as a template.**
+*   Comments are indicated by lines starting with `#`.
+*   Indentations indicate the level (branch) in the tree:
+    +   Use the tab character to indicate indentation
+    +   The indentation on one row cannot be more than 1 greater than the previous row
+*   The content for the tree is indicated by keywords:
+    +   `Label`:  indicates that the string following the colon will be used to label a branch.
+        - A single top-level label is required
+    +   `TS`:  indicates that a time series identifier pattern will be used to identify time series in the tree.
+    Wildcard conventions follow rules consistent with the `TSList=AllMatchingTSID` ,`TSID=...` command parameters.
+    The time series can be graphed by right-clicking on one or more selected time series and graphing.
+    +   `TSProduct`:  specify the path to a time series product file as processed by the
+    [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct) command.
+    The path can be specified relative to the command file.
+    All time listed in the file must be found in the results of processing the command file.
+    **Currently functionality is not implemented to re-use the time series product file as a template.**
 
 The following figure illustrates the resulting view that is displayed in TSTool for the above example, using contrived data.
  One or more time series in the tree view can be selected and right-click used to create a generic graph.
@@ -50,6 +50,10 @@ Example of Tree View in TSTool Results
 </p>**
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Visualization Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -85,4 +89,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
+*   [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command

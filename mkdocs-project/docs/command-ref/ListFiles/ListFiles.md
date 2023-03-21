@@ -1,11 +1,11 @@
 # TSTool / Command / ListFiles #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,11 +16,15 @@ The table can then be used to drive processes, such as looping with [`For`](../F
 and working with a template.
 The resulting table will include the following columns:
 
-* `FileName` – name of the file without leading path
-* `RelativePath` – name of the file as a relative path (relative to the command file working directory)
-* `AbsolutePath` – name of the file as the full absolute path
+*   `FileName` – name of the file without leading path
+*   `RelativePath` – name of the file as a relative path (relative to the command file working directory)
+*   `AbsolutePath` – name of the file as the full absolute path
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -59,4 +63,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`For`](../For/For.md) command
+*   [`For`](../For/For.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / SetWarningLevel #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,14 +19,18 @@ Currently the warning level applies to all components.
 In the future logging control may be grouped by component.
 Levels are not completely consistent but the following guidelines can be followed:
 
-* `0` = no messages
-* `1` = important messages generated in applications
-* `2` = important messages generated in commands
-* `3+` = messages generated in commands that may explain other problems
-* `10+` = messages in processing code that may still be useful to end users
-* `30+` = low-level messages, for example generated while reading from files or databases
+*   `0` = no messages
+*   `1` = important messages generated in applications
+*   `2` = important messages generated in commands
+*   `3+` = messages generated in commands that may explain other problems
+*   `10+` = messages in processing code that may still be useful to end users
+*   `30+` = low-level messages, for example generated while reading from files or databases
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Logging and Messaging***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -62,5 +66,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel.md) command
-* [`StartLog`](../StartLog/StartLog.md) command
+*   [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel.md) command
+*   [`StartLog`](../StartLog/StartLog.md) command

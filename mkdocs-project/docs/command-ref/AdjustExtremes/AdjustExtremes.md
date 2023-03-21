@@ -1,11 +1,11 @@
 # TSTool / Command / AdjustExtremes #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,18 +16,22 @@ to remove negative values from a time series that can only have values
 greater than or equal to zero), while preserving “mass” (volume).
 Currently the only adjust method is `Average`, which performs the following logic:
 
-1. Find a value beyond the extreme value, for example a negative value if the extreme value is 0.
-2. Adjust extreme values by considering neighboring values equally on each side of the point in question.
-When adjusting minimum values, neighboring values are added until the average
-is above the allowed extreme value, and all values that make up the sum are then set to the average value.
-3. Missing values remain missing and therefore this command should only be applied to filled data.
-4. If a satisfactory result cannot be reached within limits, then the original values are not changed.
-5. Changed values are listed in the time series history, which is viewed with the time series properties.
-6. Applying the command will result in the time series having periods of constant value,
-with the length of the period being controlled by the magnitude of the
-extreme value and the maximum number of values allowed for consideration on each side.
+1.  Find a value beyond the extreme value, for example a negative value if the extreme value is 0.
+2.  Adjust extreme values by considering neighboring values equally on each side of the point in question.
+    When adjusting minimum values, neighboring values are added until the average
+    is above the allowed extreme value, and all values that make up the sum are then set to the average value.
+3.  Missing values remain missing and therefore this command should only be applied to filled data.
+4.  If a satisfactory result cannot be reached within limits, then the original values are not changed.
+5.  Changed values are listed in the time series history, which is viewed with the time series properties.
+6.  Applying the command will result in the time series having periods of constant value,
+    with the length of the period being controlled by the magnitude of the
+    extreme value and the maximum number of values allowed for consideration on each side.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Manipulate Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -80,6 +84,6 @@ Results from `AdjustExtremes` Command
 
 ## See Also ##
 
-* [`AddConstant`](../AddConstant/AddConstant.md) command
-* [`FillConstant`](../FillConstant/FillConstant.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`AddConstant`](../AddConstant/AddConstant.md) command
+*   [`FillConstant`](../FillConstant/FillConstant.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

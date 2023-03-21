@@ -1,11 +1,12 @@
+
 # TSTool / Command / SetPropertyFromEnsemble #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,6 +20,10 @@ This command should not be confused with the [`SetEnsembleProperty`](../SetEnsem
 which sets a property on an ensemble.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -55,9 +60,9 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`For`](../For/For.md) command
-* [`If`](../If/If.md) command
-* [`SetProperty`](../SetProperty/SetProperty.md) command
-* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command
-* [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command
-* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md) command
+*   [`For`](../For/For.md) command
+*   [`If`](../If/If.md) command
+*   [`SetProperty`](../SetProperty/SetProperty.md) command
+*   [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command
+*   [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command
+*   [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md) command

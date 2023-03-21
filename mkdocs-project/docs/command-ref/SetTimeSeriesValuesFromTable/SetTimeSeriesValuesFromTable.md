@@ -1,11 +1,11 @@
 # TSTool / Command / SetTimeSeriesValuesFromTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -13,10 +13,14 @@
 
 The `SetTimeSeriesValuesFromTable` command sets values in time series by matching the TSID and date/time in a table.  Examples of use are:
 
-* Provide data values from a table to override missing values in the time series
-* Set a stream of values from a table into time series
+*   Provide data values from a table to override missing values in the time series
+*   Set a stream of values from a table into time series
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Table, Time Series Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing time series parameters.
 
@@ -75,5 +79,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetTimeSeriesValuesFromLookupTable`](../SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetTimeSeriesValuesFromLookupTable`](../SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable.md) command

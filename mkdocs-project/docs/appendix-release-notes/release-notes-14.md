@@ -1,5 +1,11 @@
 # TSTool / Release Notes / Version 14 #
 
+Release notes for specific versions are listed below.
+See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tstool-main/issues)
+for outstanding issues and enhancement requests.
+Issues may also be included in other repositories that are TSTool components.
+
+*   [Changes in Version 14.7.0](#changes-in-version-1470)
 *   [Changes in Version 14.6.0](#changes-in-version-1460)
 *   [Changes in Version 14.5.4](#changes-in-version-1454)
 *   [Changes in Version 14.5.3](#changes-in-version-1453)
@@ -23,6 +29,29 @@
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.7.0 ##
+
+**Feature release to improve the experience for new TSTool users.**
+
+*   ![change](change.png) [14.7.0] The ***Datastore*** tab in the ***Input/Query Options***
+    in the main TSTool window is now selected by default.
+    The ***Input Type*** tab can be selected if necessary,
+    but the use of web service datastores and plugin datastores is increasing.
+*   ![change](change.png) [14.7.0] TSTool is configured by default to show the ***Select HydroBase*** dialog at startup.
+    HydroBase is enabled by default because of TSTool's use by the State of Colorado.
+    Most users do not install a local version of HydroBase and therefore the dialog is not relevant,
+    shows no HydroBase databases, and slows startup because TSTool searches for HydroBase databases.
+    Canceling the HydroBase selection now shows an additional dialog explaining how to disable HydroBase.
+*   ![change](change.png) [14.7.0] Update the command reference documentation to indicate which menu
+    a command editor is found.
+*   ![change](change.png) [14.7.0] TSTool has been tested with the new Synoptic data web services plugin.
+    See the [Plugins Reference](../plugin-ref/overview.md).
+*   ![bug](bug.png) [14.7.0] Fix a minor bug in
+    [`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md) where the `ReadData`
+    parameter was not being handled in the command editor.
+*   ![new](new.png) [14.7.0] The [`SetPropertyFromDataStore`](../command-ref/SetPropertyFromDataStore/SetPropertyFromDataStore.md)
+    command has been added to set a propcessor property from a datastore configuration property.
 
 ## Changes in Version 14.6.0 ##
 

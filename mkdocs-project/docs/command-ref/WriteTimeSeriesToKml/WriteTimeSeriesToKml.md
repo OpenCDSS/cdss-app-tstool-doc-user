@@ -1,11 +1,11 @@
 # TSTool / Command / WriteTimeSeriesToKml #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,22 +16,26 @@ which is a spatial data format used by Google Earth and web mapping software.
 At a minimum, the locations associated with the time series can be written as spatial data.
 In the future, the time series values will be used to color the layer symbols and animate the data.  See:
 
-* [Keyhole Markup Language Developer's Guide](https://developers.google.com/kml/documentation/topicsinkml)
+*   [Keyhole Markup Language Developer's Guide](https://developers.google.com/kml/documentation/topicsinkml)
 
 Spatial data are taken from time series properties and must include columns for
 longitude and latitude or Well Known Text (WKT) geometry strings.  See:
 
-* [Well-known Text on Wikipedia](https://en.wikipedia.org/wiki/Well-known_text)
+*   [Well-known Text on Wikipedia](https://en.wikipedia.org/wiki/Well-known_text)
 
 Currently only point and polygon data can be processed but in the future support
 for well-known text for other geometry types will be added.
 Other features that are envisioned in the future include;
 
-* Providing the option to output the time series using the timestamp and timespan KML features.
-* Providing the option to specify style information with a table,
-for example using the data type to indicate the symbol and icon.
+*   Providing the option to output the time series using the timestamp and timespan KML features.
+*   Providing the option to specify style information with a table,
+    for example using the data type to indicate the symbol and icon.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Spatial Data Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -136,4 +140,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`WriteTimeSeriesToGeoJSON`](../WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON.md) command
+*   [`WriteTimeSeriesToGeoJSON`](../WriteTimeSeriesToGeoJSON/WriteTimeSeriesToGeoJSON.md) command

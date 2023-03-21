@@ -1,13 +1,13 @@
 # TSTool / Command / SetObjectProperty #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-    + [Simple Root Level Object](#simple-root-level-object)
-    + [Array of Objects](#array-of-objects)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+    +   [Simple Root Level Object](#simple-root-level-object)
+    +   [Array of Objects](#array-of-objects)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -28,6 +28,10 @@ See also the [`SetObjectPropertiesFromTable`](../SetObjectPropertiesFromTable/Se
 which sets an object's array properties from a table.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Object Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 See the examples below for an explanation of input.
@@ -146,6 +150,6 @@ Problems in JSON files can be checked by using online "JSON lint" websites.
 
 ## See Also ##
 
-* [`NewObject`](../NewObject/NewObject.md) command
-* [`SetObjectPropertiesFromTable`](../SetObjectPropertiesFromTable/SetObjectPropertiesFromTable.md) command
-* [`WriteObjectToJSON`](../WriteObjectToJSON/WriteObjectToJSON.md) command
+*   [`NewObject`](../NewObject/NewObject.md) command
+*   [`SetObjectPropertiesFromTable`](../SetObjectPropertiesFromTable/SetObjectPropertiesFromTable.md) command
+*   [`WriteObjectToJSON`](../WriteObjectToJSON/WriteObjectToJSON.md) command

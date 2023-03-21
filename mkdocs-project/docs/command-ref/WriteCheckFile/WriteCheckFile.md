@@ -1,11 +1,11 @@
 # TSTool / Command / WriteCheckFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,6 +19,10 @@ occurred during processing organized by commands, whereas a full log file contai
 See the [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command to implement specific data checks.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Check Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -55,4 +59,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
+*   [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command

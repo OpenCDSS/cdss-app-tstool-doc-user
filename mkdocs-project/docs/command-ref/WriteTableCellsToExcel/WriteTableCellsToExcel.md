@@ -1,11 +1,11 @@
 # TSTool / Command / WriteTableCellsToExcel #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -21,6 +21,10 @@ TSTool uses the [Apache POI software](https://poi.apache.org) to read/write the
 Excel file and consequently functionality is constrained by the features of that software package.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Spreadsheet Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -60,5 +64,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook.md) command
-* [`ReadTableCellsFromExcel`](../ReadTableCellsFromExcel/ReadTableCellsFromExcel.md) command
+*   [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook.md) command
+*   [`ReadTableCellsFromExcel`](../ReadTableCellsFromExcel/ReadTableCellsFromExcel.md) command

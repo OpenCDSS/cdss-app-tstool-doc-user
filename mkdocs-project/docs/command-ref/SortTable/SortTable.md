@@ -1,11 +1,11 @@
 # TSTool / Command / SortTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ The column(s) to be sorted can be of type string, integer, double, float, or dat
 Strings are sorted by ignoring case.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -52,4 +56,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`NewTable`](../NewTable/NewTable.md) command
+*   [`NewTable`](../NewTable/NewTable.md) command

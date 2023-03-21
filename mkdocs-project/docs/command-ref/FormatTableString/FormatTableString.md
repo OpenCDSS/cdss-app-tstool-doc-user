@@ -1,11 +1,11 @@
 # TSTool / Command / FormatTableString #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,12 +17,16 @@ It can also be used to assign a literal string to a column.
 See also the [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command.
 Formatting occurs as follows:
 
-* The data types for input columns control the type of formatting that can be done.
-For example, columns containing floating-point numbers must use the format specifiers for floating-point numbers.
-* Format specifiers are consistent with the C programming language.
-* Missing values in input will result in blanks in output.
+*   The data types for input columns control the type of formatting that can be done.
+    For example, columns containing floating-point numbers must use the format specifiers for floating-point numbers.
+*   Format specifiers are consistent with the C programming language.
+*   Missing values in input will result in blanks in output.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the command
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
@@ -62,5 +66,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime.md) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
+*   [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime.md) command
+*   [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command

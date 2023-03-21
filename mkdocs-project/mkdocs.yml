@@ -226,6 +226,7 @@ nav:
   - SetOutputPeriod: command-ref/SetOutputPeriod/SetOutputPeriod.md
   - SetOutputYearType: command-ref/SetOutputYearType/SetOutputYearType.md
   - SetProperty: command-ref/SetProperty/SetProperty.md
+  - SetPropertyFromDataStore: command-ref/SetPropertyFromDataStore/SetPropertyFromDataStore.md
   - SetPropertyFromEnsemble: command-ref/SetPropertyFromEnsemble/SetPropertyFromEnsemble.md
   - SetPropertyFromNwsrfsAppDefault: command-ref/SetPropertyFromNwsrfsAppDefault/SetPropertyFromNwsrfsAppDefault.md
   - SetPropertyFromObject: command-ref/SetPropertyFromObject/SetPropertyFromObject.md

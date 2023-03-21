@@ -1,11 +1,11 @@
 # TSTool / Command / ProcessRasterGraph #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -37,43 +37,43 @@ These concepts may or may not be handled similarly in other software.
 The TSTool design provides custom handling of time series whereas other
 time series may not handle time series intricacies such as leap year.
 
-* Display an entire time series in one visible "page" of information,
-which is useful to understand trends, patterns, and extreme values.
-* Because each value is represented as a colored pixel or cell,
-the number of values on an axis at the current view dimensions
-should be large enough to display each time series value as at least 1x1 pixel,
-and often ideally an even multiple.
-For example, if a time axis is for days in a year, a display size of 365 (or 366) pixels will
-display each value as 1x1 pixel "cell" and a display size of 730 pixels will display each value as 2x2 cell.
-If the interval is large (e.g., `Month`) and the display size is large,
-the raster graph may appear to be overly "blocky"
-because because the displayed cell size is large.
-* The X and Y axes map to the time series data, which is used to select the color and other information.
-* The order on the time axis may be earliest time at top/left or reversed.
-* For time interval of day or less, leap year Feb 29 values require special handling,
-for example:
-	- Omit Feb 29 completely, ensuring alignment of cells.
-	This approach is not recommended because some values are not displayed.
-	- Include Feb 29 only in leap years, allowing rows to have different number of pixels (for example 365 and 366),
-	with rough edge.  This approach is not recommended because data don't align on time axis.
-	- Always include Feb 29 and use a special pixel color (for example white) for the 3 years that are not leap year.
-	This ensures that months align.
-	This approach is not recommended because it results in a distracting visual artifact.
-	- Always include Feb 29, using the same color as Feb 28 for visual continuity.
-	This ensures that months align.
-	**This is the approach currently taken for this command,
-	although flexibility may be added in the future.**
-	The mouse tracker clearly indicates that the Feb 29 value is not actual.
-* Time series are often displayed using a "year type" as set with
-[`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md),
-and some commands allow setting the year type for the command.
-For example, calendar year may have 
-This command currently defaults to calendar year.
-* Missing data values should be displayed with a special value, such as white or black.
-This command uses white for missing.
-* Additional information can be added to the raster graph as annotations
-that overlay the raster graph.
-This command does not currently support annotations.
+*   Display an entire time series in one visible "page" of information,
+    which is useful to understand trends, patterns, and extreme values.
+*   Because each value is represented as a colored pixel or cell,
+    the number of values on an axis at the current view dimensions
+    should be large enough to display each time series value as at least 1x1 pixel,
+    and often ideally an even multiple.
+    For example, if a time axis is for days in a year, a display size of 365 (or 366) pixels will
+    display each value as 1x1 pixel "cell" and a display size of 730 pixels will display each value as 2x2 cell.
+    If the interval is large (e.g., `Month`) and the display size is large,
+    the raster graph may appear to be overly "blocky"
+    because because the displayed cell size is large.
+*   The X and Y axes map to the time series data, which is used to select the color and other information.
+*   The order on the time axis may be earliest time at top/left or reversed.
+*   For time interval of day or less, leap year Feb 29 values require special handling,
+    for example:
+    -   Omit Feb 29 completely, ensuring alignment of cells.
+        This approach is not recommended because some values are not displayed.
+    -   Include Feb 29 only in leap years, allowing rows to have different number of pixels (for example 365 and 366),
+        with rough edge.  This approach is not recommended because data don't align on time axis.
+    -   Always include Feb 29 and use a special pixel color (for example white) for the 3 years that are not leap year.
+        This ensures that months align.
+        This approach is not recommended because it results in a distracting visual artifact.
+    -   Always include Feb 29, using the same color as Feb 28 for visual continuity.
+        This ensures that months align.
+        **This is the approach currently taken for this command,
+        although flexibility may be added in the future.**
+        The mouse tracker clearly indicates that the Feb 29 value is not actual.
+*   Time series are often displayed using a "year type" as set with
+    [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md),
+    and some commands allow setting the year type for the command.
+    For example, calendar year may have 
+    This command currently defaults to calendar year.
+*   Missing data values should be displayed with a special value, such as white or black.
+    This command uses white for missing.
+*   Additional information can be added to the raster graph as annotations
+    that overlay the raster graph.
+    This command does not currently support annotations.
 
 ### Raster Graph with Time on Each Axis ###
 
@@ -130,8 +130,8 @@ Day interval time series can be displayed in a raster graph
 and the number of data points is high enough to result in
 a non-blocky display.
 
-* Full period can be displayed.
-* The output year type can indicate the month order.
+*   Full period can be displayed.
+*   The output year type can indicate the month order.
 
 The following example displays calendar year with most recent year at top.
 Each year contains the day of year, with leap year handling as discussed above.
@@ -150,8 +150,8 @@ Time series with interval less than a day can be displayed in a raster graph.
 However, the number of data points may be high enough that only a subset of the period
 can be viewed in raster (pixel) form.
 
-* Only part of period may be displayed.
-* Year type may not be relevant because a short period is shown.
+*   Only part of period may be displayed.
+*   Year type may not be relevant because a short period is shown.
 
 The following example displays recent `15Minute` data, illustrating trends within each day.
 
@@ -171,9 +171,9 @@ In this case, displaying locations on the Y-axis and time on the X-axis is an ef
 visualization technique.
 The time series can be sorted appropriately to control order on the Y-axis.
 
-* Full period can be displayed for larger interval (year, month)
-	* The output year type can indicate the months to sum for a year.
-* Partial period can be displayed for smaller interval (month if a long period, day, sub-day)
+*   Full period can be displayed for larger interval (year, month)
+    *   The output year type can indicate the months to sum for a year.
+*   Partial period can be displayed for smaller interval (month if a long period, day, sub-day)
 
 The following example displays 50 years of monthly data for streams along a reach.
 
@@ -196,6 +196,10 @@ Location3
 ```
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Visualization Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -230,16 +234,16 @@ Command Parameters
 
 It is envisioned that in the future, command parameters will implemented to:
 
-* Create a raster graph without a time series product file,
-as a way of streamlining product generation,
-with parameters for important configuration information such as selecting a time series to plot,
-and specifying the color scale and whether a log transform should be used.
-* Specify an output table containing the colors used for plotting,
-to allow export of the raster plot information to other tools, such as web visualization.
-This will allow TSTool to be used to create the product, and other tools to visualize.
-* Specify whether other than calendar year should be used.
-* Specify additional configuration options for selecting the axis (e.g., allow seasonal or weekly display)
-and location on an axis.
+*   Create a raster graph without a time series product file,
+    as a way of streamlining product generation,
+    with parameters for important configuration information such as selecting a time series to plot,
+    and specifying the color scale and whether a log transform should be used.
+*   Specify an output table containing the colors used for plotting,
+    to allow export of the raster plot information to other tools, such as web visualization.
+    This will allow TSTool to be used to create the product, and other tools to visualize.
+*   Specify whether other than calendar year should be used.
+*   Specify additional configuration options for selecting the axis (e.g., allow seasonal or weekly display)
+    and location on an axis.
 
 ## Examples ##
 
@@ -249,4 +253,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
+*   [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command

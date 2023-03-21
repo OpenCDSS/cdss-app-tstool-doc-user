@@ -1,12 +1,12 @@
 # TSTool / Command / ReadTableFromDataStore #
 
-* [Overview](#overview)
-    + [Limitations](#limitations)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+    +   [Limitations](#limitations)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -30,52 +30,52 @@ in which case the plugin software can be developed and maintained separate from 
 
 The query can be specified in the following ways:
 
-* Specify a single table/view to query:
-	+ the list of tables is filtered to remove internal database tables;
-	however, this capability varies by database product and in some cases internal tables will be listed
-	+ the query is constructed from the provided database table/view name and column names
-	+ the output can be sorted by specifying column names
-	+ “where” clauses currently are not supported but may be added in the future
-	+ the top N rows of the result can be returned to allow “peeking”
-	at tables (may not be available for all database software)
-* Specify a SQL select statement:
-	+ SQL must be valid for the database (syntax may vary based on database software)
-	+ Use `${Property}` notation to insert processor property values set with
-	[`SetProperty`](../SetProperty/SetProperty) or other commands.
-	+ SQL syntax is not checked for validity and therefore error messages
-	from the database may be more difficult to interpret.
-	+ Comments can be specified using [`/* */`](../CommentBlockStart/CommentBlockStart.md)
-	notation for 1+ line comments or `--` (double dash) for single line comments.
-	The comments are removed before executing the query if comments are not supported by the database software.
-	Newlines can be used to format SQL by using `Enter` when editing SQL and
-	are shown as `\n` in the SQL parameter.
-* Specify an SQL select statement in a file:
-	+ Similar to the above option; however, the SQL statement is read from a file.
-	+ Useful if the SQL statement is also used by other tools.
-* Specify a function to run:
-	+ **This functionality is under development - functions can typically be called in `SELECT` statements.**
-	+ Available functions are listed using function signature with parameter types and return value.
-	+ Function parameters, if required, are specified with `ProcedureParameters` parameter.
-* Specify a procedure to run:
-	+ **This functionality is under development.**
-	+ Available procedures are listed using procedure signature with parameter types and return value.
-	+ Procedure parameters, if required, are specified with `ProcedureParameters` parameter.
-	+ Procedure return status, if available, can be saved as a property with `ProcedureReturnProperty` parameter.
+*   Specify a single table/view to query:
+    +   the list of tables is filtered to remove internal database tables;
+        however, this capability varies by database product and in some cases internal tables will be listed
+    +   the query is constructed from the provided database table/view name and column names
+    +   the output can be sorted by specifying column names
+    +   “where” clauses currently are not supported but may be added in the future
+    +   the top N rows of the result can be returned to allow “peeking”
+        at tables (may not be available for all database software)
+*   Specify a SQL select statement:
+    +   SQL must be valid for the database (syntax may vary based on database software)
+    +   Use `${Property}` notation to insert processor property values set with
+        [`SetProperty`](../SetProperty/SetProperty) or other commands.
+    +   SQL syntax is not checked for validity and therefore error messages
+        from the database may be more difficult to interpret.
+    +   Comments can be specified using [`/* */`](../CommentBlockStart/CommentBlockStart.md)
+        notation for 1+ line comments or `--` (double dash) for single line comments.
+        The comments are removed before executing the query if comments are not supported by the database software.
+        Newlines can be used to format SQL by using `Enter` when editing SQL and
+        are shown as `\n` in the SQL parameter.
+*   Specify an SQL select statement in a file:
+    +   Similar to the above option; however, the SQL statement is read from a file.
+    +   Useful if the SQL statement is also used by other tools.
+*   Specify a function to run:
+    +   **This functionality is under development - functions can typically be called in `SELECT` statements.**
+    +   Available functions are listed using function signature with parameter types and return value.
+    +   Function parameters, if required, are specified with `ProcedureParameters` parameter.
+*   Specify a procedure to run:
+    +   **This functionality is under development.**
+    +   Available procedures are listed using procedure signature with parameter types and return value.
+    +   Procedure parameters, if required, are specified with `ProcedureParameters` parameter.
+    +   Procedure return status, if available, can be saved as a property with `ProcedureReturnProperty` parameter.
 
 General constraints on the query are as follows:
 
-* the tables, views, functions, and procedures being queried must be readable
-* the resulting table in TSTool will have columns with names that match the database query results
-* SQL syntax varies between database software so care should be take to use standard SQL if possible,
-if the commands will be run on different databases.
-* data types for columns will closely match the database results:
-	+ data will be treated as strings if unable to match the database column type
-	+ the precision of floating point numbers for displays is defaulted to 6 digits
-	+ null values in the database will transfer to null values in
-	the TSTool table and will display as blank table cells
-	+ date/time columns in the database will be represented as such in the TSTool table;
-	however, it may not be possible to limit the precision of the date/time
-	(i.e., hours, minutes, and seconds may be shown with default zero values in output)
+*   the tables, views, functions, and procedures being queried must be readable
+*   the resulting table in TSTool will have columns with names that match the database query results
+*   SQL syntax varies between database software so care should be take to use standard SQL if possible,
+    if the commands will be run on different databases.
+*   data types for columns will closely match the database results:
+    +   data will be treated as strings if unable to match the database column type
+    +   the precision of floating point numbers for displays is defaulted to 6 digits
+    +   null values in the database will transfer to null values in
+        the TSTool table and will display as blank table cells
+    +   date/time columns in the database will be represented as such in the TSTool table;
+        however, it may not be possible to limit the precision of the date/time
+        (i.e., hours, minutes, and seconds may be shown with default zero values in output)
 
 Future enhancements will add additional features to intelligently map database results to TSTool tables.
 
@@ -92,6 +92,10 @@ which includes the parameter names and types.
 Many databases allow functions to be called in `SELECT` statements.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Read Table***
 
 The following dialog is used to edit the command and illustrates the syntax for the command,
 in this case reading a small table from the State of Colorado’s HydroBase.
@@ -200,14 +204,14 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ReadTableFromDataStore).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ReadTableFromDataStore).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
-* [`OpenDataStore`](../OpenDataStore/OpenDataStore.md) command
-* [`RunSql`](../RunSql/RunSql.md) command
-* [`SetProperty`](../SetProperty/SetProperty.md) command
-* [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command
+*   [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
+*   [`OpenDataStore`](../OpenDataStore/OpenDataStore.md) command
+*   [`RunSql`](../RunSql/RunSql.md) command
+*   [`SetProperty`](../SetProperty/SetProperty.md) command
+*   [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command

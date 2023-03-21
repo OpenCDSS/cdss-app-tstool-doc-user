@@ -1,12 +1,12 @@
 # TSTool / Command / CreateRegressionTestCommandFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-    + [`@enabledif` Comment](#enabledif-comment)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+    +   [`@enabledif` Comment](#enabledif-comment)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -64,6 +64,10 @@ This allows, for example, multiple versions of tests to be created that each wor
 Otherwise, tests would be included when they should not and failed tests could be included that result in time wasted on troubleshooting.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Test Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -165,6 +169,6 @@ Total          =    18
 
 ## See Also ##
 
-* [`RunCommands`](../RunCommands/RunCommands.md) command
-* [`StartRegressionTestResultsReport`](../StartRegressionTestResultsReport/StartRegressionTestResultsReport.md) command
-* [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile.md) command
+*   [`RunCommands`](../RunCommands/RunCommands.md) command
+*   [`StartRegressionTestResultsReport`](../StartRegressionTestResultsReport/StartRegressionTestResultsReport.md) command
+*   [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / RunPython #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -65,6 +65,10 @@ Program InputFile Arguments
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
+
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
@@ -97,7 +101,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/RunPython).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/RunPython).
 
 The following command example illustrates how to run a Python script.
 
@@ -167,6 +171,6 @@ RunPython(Interpreter="Python",InputFile="mei2csv.py",Arguments="\"InputFile=${W
 
 ## See Also ##
 
-* [`RunCommands`](../RunCommands/RunCommands.md) command
-* [`RunProgram`](../RunProgram/RunProgram.md) command
-* [`RunR`](../RunR/RunR.md) command
+*   [`RunCommands`](../RunCommands/RunCommands.md) command
+*   [`RunProgram`](../RunProgram/RunProgram.md) command
+*   [`RunR`](../RunR/RunR.md) command

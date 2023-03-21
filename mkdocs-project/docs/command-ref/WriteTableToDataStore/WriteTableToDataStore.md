@@ -1,12 +1,12 @@
 # TSTool / Command / WriteTableToDataStore #
 
-* [Overview](#overview)
-	+ [Relationship Example](#relationship-example)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+    +   [Relationship Example](#relationship-example)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,13 +14,13 @@
 
 **This command is under development and has the following limitations:**
 
-* **Although some error handling has been implemented, it is not very detailed.
-Improvements will be made in response to exercising the command functionality.**
-* **Write statements are created for each row of the table being written.
-This is inefficient and slow.  Improvements will be made in future updates.**
-* **Functionality has been tested mainly with SQL Server and SQLite.**
-* **Handling of date objects has not been tested.**
-* **Better handling of blank rows needs to be implemented.**
+*   **Although some error handling has been implemented, it is not very detailed.
+    Improvements will be made in response to exercising the command functionality.**
+*   **Write statements are created for each row of the table being written.
+    This is inefficient and slow.  Improvements will be made in future updates.**
+*   **Functionality has been tested mainly with SQL Server and SQLite.**
+*   **Handling of date objects has not been tested.**
+*   **Better handling of blank rows needs to be implemented.**
 
 The `WriteTableToDataStore` command processes each row in a table and
 executes an SQL statement to insert the row into a database datastore.
@@ -34,53 +34,57 @@ In the future, additional command parameters may be added to limit the rows that
 
 General constraints on the query are as follows:
 
-* the table or views being written must be writeable by the user specified
-for the database connection (some databases restrict direct access to data and require using stored procedures)
-* the table column names must match the database table column names, or use the `ColumnMap` parameter to
-specify names in the datastore that are different than the table
-* data types for table columns must closely match the database:
-	+ internally an SQL statement is created in which data values are formatted
-	as per the data type (e.g., strings are quoted);
-	consequently column types must be appropriate to generate correct formatting
-	+ the full precision of floating point numbers is passed to
-	the database (formatting for display will not apply to values written to the database)
-	+ null values in the table will transfer to null values in the database
-	+ date/time columns in the table will be represented as such in the database table;
-	however, it may not be possible to limit the precision of the date/time
-	(i.e., hours, minutes, and seconds may be shown with default zero values in output)
-*	the specified table columns are written (all are written by default)
-	+ primary keys in the database table do not need to be specified
-	(their values will be assigned automatically),
-	although primary keys with special values, such as strings, can be specified
-	+ table columns that correspond to related tables in the datastore
-	table need to be mapped using the `DataStoreRelatedColumnsMap` command parameter
+*   the table or views being written must be writeable by the user specified
+    for the database connection (some databases restrict direct access to data and require using stored procedures)
+*   the table column names must match the database table column names, or use the `ColumnMap` parameter to
+    specify names in the datastore that are different than the table
+*   data types for table columns must closely match the database:
+    +   internally an SQL statement is created in which data values are formatted
+        as per the data type (e.g., strings are quoted);
+        consequently column types must be appropriate to generate correct formatting
+    +   the full precision of floating point numbers is passed to
+        the database (formatting for display will not apply to values written to the database)
+    +   null values in the table will transfer to null values in the database
+    +   date/time columns in the table will be represented as such in the database table;
+        however, it may not be possible to limit the precision of the date/time
+        (i.e., hours, minutes, and seconds may be shown with default zero values in output)
+*   the specified table columns are written (all are written by default)
+    +   primary keys in the database table do not need to be specified
+        (their values will be assigned automatically),
+        although primary keys with special values, such as strings, can be specified
+    +   table columns that correspond to related tables in the datastore
+        table need to be mapped using the `DataStoreRelatedColumnsMap` command parameter
 
 ### Relationship Example ###
 
 An example of column mapping to a related table is as follows,
 using the notation `Table.Column` to fully identify columns:
 
-* the string `TableID.DataType` column is in the input data
-* an integer database table `TimeSeriesMeta.DataTypeID` column is a foreign key
-to `DataTypes.DataTypeID`, and `DataTypes.Abbreviation` is the string data type – in other words,
-the datastore column being written does not match the string data type,but uses a relationship to match the integer data type in a separate table
+*   the string `TableID.DataType` column is in the input data
+*   an integer database table `TimeSeriesMeta.DataTypeID` column is a foreign key
+    to `DataTypes.DataTypeID`, and `DataTypes.Abbreviation` is the string data type – in other words,
+    the datastore column being written does not match the string data type,but uses a relationship to match the integer data type in a separate table
 
 To handle this relationship:
 
-* Use the `ColumnMap` parameter to tell the command that the `DataType` column in input table maps to the `DataTypeID` column in the datastore table:
+*   Use the `ColumnMap` parameter to tell the command that the `DataType` column in input table maps to the `DataTypeID` column in the datastore table:
 
 ```
 ColumnMap=”DataType:DataTypeID”
 ```
 
-* Use the `DataStoreRelatedColumnsMap` parameter to tell the command that the `DataTypeID`
-column should be looked up the Abbreviation column, which is a second level of column mapping:
+*   Use the `DataStoreRelatedColumnsMap` parameter to tell the command that the `DataTypeID`
+    column should be looked up the Abbreviation column, which is a second level of column mapping:
 
 ```
 DataStoreRelatedColumnsMap=”DataTypeID:Abbreviation”
 ```
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Output Table***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -224,4 +228,4 @@ In this case, the relationship table will add overhead and potentially confusion
 
 ## See Also ##
 
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
+*   [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command

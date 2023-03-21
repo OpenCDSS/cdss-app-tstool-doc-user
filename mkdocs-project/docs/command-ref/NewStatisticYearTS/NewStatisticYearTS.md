@@ -1,11 +1,11 @@
 # TSTool / Command / NewStatisticYearTS #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -27,6 +27,10 @@ actually recorded at hour 0 or later of the following year.
 See also the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for input parameters.
 
@@ -148,9 +152,9 @@ For example, for `OutputYearType=NovToDec`, November 1,
 |`MonthOfFirstLE`|Similar to `DayOfFirstGE`, for values <= `Value1`.|Input time series must be monthly or smaller interval.|
 |`MonthOfFirstLT`|Similar to `DayOfFirstGE`, for values < `Value1`.|Input time series must be monthly or smaller interval.|
 |`MonthOfLastGE`|Month of the year (`1`-`12`, relative to the start of the `OutputYearType`) for the last data value >= `Value1`.  Searches start at the end of the analysis window and move backward.|Input time series must be monthly or smaller interval.|
-|`MonthOfLastGT`|Similar to DayOfLastGE, for values > `Value1`.|Input time series must be monthly or smaller interval.|
-|`MonthOfLastLE`|Similar to DayOfLastGE, for values <= `Value1`.|Input time series must be monthly or smaller interval.|
-|`MonthOfLastLT`|Similar to DayOfLastGE, for values < `Value1`.|Input time series must be monthly or smaller interval.|
+|`MonthOfLastGT`|Similar to `DayOfLastGE`, for values > `Value1`.|Input time series must be monthly or smaller interval.|
+|`MonthOfLastLE`|Similar to `DayOfLastGE`, for values <= `Value1`.|Input time series must be monthly or smaller interval.|
+|`MonthOfLastLT`|Similar to `DayOfLastGE`, for values < `Value1`.|Input time series must be monthly or smaller interval.|
 |`MonthOfMax`|Month of the year (`1`-`12`, relative to the start of the `OutputYearType`) for the first maximum value in the time series.|Input time series must be monthly or smaller interval.|
 |`MonthOfMin`|Month of the year (`1`-`12`, relative to the start of the `OutputYearType`) for the first minimum value in the time series.|Input time series must be monthly or smaller interval.|
 |`NonMissingCount`|Number of non-missing values in a year.||
@@ -182,11 +186,11 @@ WriteStateCU(OutputFile="Results/Test.FrostDates")
 
 ## See Also ##
 
-* [Statistic Examples](../../examples/examples.md#statistic-examples)
-* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
-* [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
-* [`NewStatisticMonthTimeSeries`](../NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md) command
-* [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command
-* [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [Statistic Examples](../../examples/examples.md#statistic-examples)
+*   [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
+*   [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
+*   [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
+*   [`NewStatisticMonthTimeSeries`](../NewStatisticMonthTimeSeries/NewStatisticMonthTimeSeries.md) command
+*   [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command
+*   [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / CalculateTimeSeriesStatistic #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -23,6 +23,10 @@ Missing values typically are ignored unless significant for the statistic (e.g.,
 See the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Analyze Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 Most statistics do not require additional input; however,
@@ -94,8 +98,8 @@ Command Parameters
 | `TimeSeriesPropertyName` | If specified, the output statistic will be set as a property value for the time series.  In the future, statistics with multiple values will use a variation of the property name. | No property is set. |
 | `StatisticValueProperty` | Name of the processor property to set the value of the statistics. | No property is set. |
 
-The following table provides additinal information about specific statistics,
-in particular to describe how the statitic is computed,
+The following table provides additional information about specific statistics,
+in particular to describe how the statistic is computed,
 whether additional input needs to be provided with `Value` command parameters,
 and whether multiple statistic values are output in results.
 
@@ -163,5 +167,5 @@ WriteTableToDelimitedFile(TableID="Table1",OutputFile="Results/Test_CalculateTim
 
 ## See Also ##
 
-* [Statistic Examples](../../examples/examples.md#statistic-examples)
-* [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) command
+*   [Statistic Examples](../../examples/examples.md#statistic-examples)
+*   [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) command

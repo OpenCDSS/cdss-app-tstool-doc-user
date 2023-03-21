@@ -1,11 +1,11 @@
 # TSTool / Command / NewStatisticTimeSeriesFromEnsemble #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -25,6 +25,10 @@ Leap year values will be included if they are included in the period of the ense
 See also the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Ensemble Processing***
 
 The following dialog is used to edit the command and illustrates the syntax for the command.
 
@@ -176,5 +180,5 @@ The following figure illustrates the results:
 
 ## See Also ##
 
-* [Statistic Examples](../../examples/examples.md#statistic-examples)
-* [`NewStatisticEnsemble`](../NewStatisticEnsemble/NewStatisticEnsemble.md) command
+*   [Statistic Examples](../../examples/examples.md#statistic-examples)
+*   [`NewStatisticEnsemble`](../NewStatisticEnsemble/NewStatisticEnsemble.md) command

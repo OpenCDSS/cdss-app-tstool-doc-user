@@ -1,11 +1,11 @@
 # TSTool / Command / Scale #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ The value to use for scaling can be specified as a constant,
 monthly values, or special values that indicate to scale by the number of days in the month.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Manipulate Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -80,5 +84,5 @@ Scale(TSList=AllMatchingTSID,TSID="06754000.DWR.Streamflow.Month",ScaleValue=Day
 
 ## See Also ##
 
-* [`ConvertDataUnits`](../ConvertDataUnits/ConvertDataUnits.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`ConvertDataUnits`](../ConvertDataUnits/ConvertDataUnits.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / SplitTableRow #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -51,6 +51,10 @@ The start and end columns can be specified in any order but the output is always
 </p>**
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for tuple split.
 
@@ -106,7 +110,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
-* [`SplitTableColumn`](../SplitTableColumn/SplitTableColumn.md) command
-* [`TableToTimeSeries`](../TableToTimeSeries/TableToTimeSeries.md) command
+*   [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+*   [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
+*   [`SplitTableColumn`](../SplitTableColumn/SplitTableColumn.md) command
+*   [`TableToTimeSeries`](../TableToTimeSeries/TableToTimeSeries.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / ReadExcelWorkbook #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,22 +14,26 @@
 The `ReadExcelWorkbook` command reads a Microsoft Excel workbook file (`*.xls`, `*.xlsx`, `*.xlsm`).
 The workbook is retained in memory and can be manipulated using commands that write to Excel, for example:
 
-1. Create an Excel workbook template with desired analysis, formatting, charts, etc.
-Leave placeholders for data sheets.  Refer to the data sheets using named ranges.
-2. Read the Excel workbook template using the `ReadExcelWorkbook` command.
-3. Manipulate the Excel workbook using TSTool commands that write to Excel, for example
-[`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md).
-If the `KeepOpen=False` parameter is used, the original file will not be re-written.
-Therefore, use `KeepOpen=True` in combination with the following.
-4. Use the [`CloseExcelWorkbook`](../CloseExcelWorkbook/CloseExcelWorkbook.md) command and specify
-`WriteFile=True` to force writing the Excel workbook.
-The `NewOutputFile` parameter can also be specified to write a new output file, leaving the original Excel file intact.
+1.   Create an Excel workbook template with desired analysis, formatting, charts, etc.
+    Leave placeholders for data sheets.  Refer to the data sheets using named ranges.
+2.   Read the Excel workbook template using the `ReadExcelWorkbook` command.
+3.   Manipulate the Excel workbook using TSTool commands that write to Excel, for example
+    [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md).
+    If the `KeepOpen=False` parameter is used, the original file will not be re-written.
+    Therefore, use `KeepOpen=True` in combination with the following.
+4.   Use the [`CloseExcelWorkbook`](../CloseExcelWorkbook/CloseExcelWorkbook.md) command and specify
+    `WriteFile=True` to force writing the Excel workbook.
+    The `NewOutputFile` parameter can also be specified to write a new output file, leaving the original Excel file intact.
 
 TSTool uses the [Apache POI software](https://poi.apache.org) to read and manipulate
 Excel workbooks and consequently functionality is constrained by the features of that software package.
 
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -64,5 +68,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CloseExcelWorkbook`](../CloseExcelWorkbook/CloseExcelWorkbook.md) command
-* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command
+*   [`CloseExcelWorkbook`](../CloseExcelWorkbook/CloseExcelWorkbook.md) command
+*   [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command

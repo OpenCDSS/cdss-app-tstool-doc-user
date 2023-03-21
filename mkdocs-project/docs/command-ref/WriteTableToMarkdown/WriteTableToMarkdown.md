@@ -23,6 +23,10 @@ The default is to use `|` as the column separator without any column justificati
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Output Table***
+
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">

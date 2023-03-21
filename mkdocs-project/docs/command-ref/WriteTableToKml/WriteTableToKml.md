@@ -1,11 +1,11 @@
 # TSTool / Command / WriteTableToKml #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,16 +14,20 @@
 The `WriteTableToKml` command writes a table to a Keyhole Markup Language (KML) file,
 which is a spatial data format used by Google Earth and web mapping software.  See:
 
-* [Keyhole Markup Language Developer's Guide](https://developers.google.com/kml/documentation/topicsinkml)
+*   [Keyhole Markup Language Developer's Guide](https://developers.google.com/kml/documentation/topicsinkml)
 
 The table must include columns for longitude and latitude or a column containing Well Known Text (WKT) geometry strings.  See:
 
-* [Well-known Text on WikiPedia](https://en.wikipedia.org/wiki/Well-known_text)
+*   [Well-known Text on WikiPedia](https://en.wikipedia.org/wiki/Well-known_text)
 
 Currently only point and polygon data can be processed but in the future
 support for well-known text for other geometry types will be added.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Spatial Data Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
 
@@ -196,5 +200,5 @@ The following example illustrates a CSV table that specifies WKT for polygons:
 
 ## See Also ##
 
-* [`WriteTableToGeoJSON`](../WriteTableToGeoJSON/WriteTableToGeoJSON.md) command
-* [`WriteTableToShapefile`](../WriteTableToShapefile/WriteTableToShapefile.md) command
+*   [`WriteTableToGeoJSON`](../WriteTableToGeoJSON/WriteTableToGeoJSON.md) command
+*   [`WriteTableToShapefile`](../WriteTableToShapefile/WriteTableToShapefile.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / FormatTableDateTime #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,32 +18,36 @@ further processing, or export to a spreadsheet.
 See also the [`FormatTableString`](../FormatTableString/FormatTableString.md) command,
 which manipulates strings.  Formatting occurs as follows:
 
-1. The date/time input column value is parsed into an internal date/time object:
-    1. If the input column is not an increment (***Increment*** tab parameters are blank)
-       then the input column is parsed directly to a date/time object.
-        * `DateTime` input column type is used directly without parsing.
-        * `String` input column is parsed by detecting standard formats
-          (e.g., ISO `YYYY-MM-DD hh:mm:ss` or `MM/DD/YYYY hh:mm:ss` of varying precision)
-    2. If the input column is an increment from a starting date/time
-       (***Increment*** tab parameters are not blank),
-       the date/time object is computed as the offset from the starting date/time,
-       for example the number of minutes or hours since the start of an event.
-       Whole interval offsets (e.g., number of seconds since start) and offsets with fractional interval
-       (e.g., minutes `123.1`) are handled.
-2. The date/time object from the previous step is formatted into a string using
-   the format specifier string specified by the `FormatterType` and `DateTimeFormat` parameters:
-    1. Missing values in input will result in blanks (nulls) in output.
-    2. The specified format must be compatible with the output column type (see next step):
-         * A full date/time string (e.g., `YYYY-MM-DD hh:mm:ss`) can only be converted to `DateTime` or `String` output.
-         * A simple output format such as `YYYY` can be converted to `Integer` or `Double`.
-3. The string is converted into the final output column type by specifying the `OutputType` parameter:
-    1. `DateTime` output might be used to create date/time objects with less
-       precision than the original input column (e.g., to truncate `hh:mm:ss` where `ss` is always `00` and therefore superfluous).
-    2. `Integer` or `Double` types can be created if the date/time output string from the
-       previous step contains integer or floating-point number (e.g., `YYYY` or `YYYY.MM`).
-    3. `String` outputs the string from the previous step.
+1.  The date/time input column value is parsed into an internal date/time object:
+    1.  If the input column is not an increment (***Increment*** tab parameters are blank)
+        then the input column is parsed directly to a date/time object.
+        *   `DateTime` input column type is used directly without parsing.
+        *   `String` input column is parsed by detecting standard formats
+            (e.g., ISO `YYYY-MM-DD hh:mm:ss` or `MM/DD/YYYY hh:mm:ss` of varying precision)
+    2.  If the input column is an increment from a starting date/time
+        (***Increment*** tab parameters are not blank),
+        the date/time object is computed as the offset from the starting date/time,
+        for example the number of minutes or hours since the start of an event.
+        Whole interval offsets (e.g., number of seconds since start) and offsets with fractional interval
+        (e.g., minutes `123.1`) are handled.
+2.  The date/time object from the previous step is formatted into a string using
+    the format specifier string specified by the `FormatterType` and `DateTimeFormat` parameters:
+    1.  Missing values in input will result in blanks (nulls) in output.
+    2.  The specified format must be compatible with the output column type (see next step):
+         *   A full date/time string (e.g., `YYYY-MM-DD hh:mm:ss`) can only be converted to `DateTime` or `String` output.
+         *   A simple output format such as `YYYY` can be converted to `Integer` or `Double`.
+3.  The string is converted into the final output column type by specifying the `OutputType` parameter:
+    1.  `DateTime` output might be used to create date/time objects with less
+        precision than the original input column (e.g., to truncate `hh:mm:ss` where `ss` is always `00` and therefore superfluous).
+    2.  `Integer` or `Double` types can be created if the date/time output string from the
+        previous step contains integer or floating-point number (e.g., `YYYY` or `YYYY.MM`).
+    3.  `String` outputs the string from the previous step.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing input parameters.
 
@@ -190,5 +194,5 @@ Formatted Date/time Output for Increment Data (<a href="../FormatTableDateTime_I
 
 ## See Also ##
 
-* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
+*   [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+*   [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command

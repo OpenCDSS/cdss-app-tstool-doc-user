@@ -1,11 +1,11 @@
 # TSTool / Command / LagK #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,8 +18,8 @@ original time series with “routed” appended to the scenario.
 The command is commonly used to route an instantaneous flow time series through a stretch of river (reach).
 Lag and K routing is a common routing method that combines the concepts of:
 
-1. Lagging the inflow to simulate travel time in a reach and,
-2. Attenuating the wave to simulate the storage-outflow relationship for the reach (see figure below).
+1.  Lagging the inflow to simulate travel time in a reach and,
+2.  Attenuating the wave to simulate the storage-outflow relationship for the reach (see figure below).
 
 **<p style="text-align: center;">
 ![LagK-graph](LagK-graph.png)
@@ -52,10 +52,10 @@ For discrete time steps these relationships translate into:
 
 In the case that either *I_1* , *I_2* or *O_1* are missing, these values will be set in the following order:
 
-1. Use data from an observed time series (see `ObsTSID` parameter below).
-2. Use the nearest value in the input time series (see `FillNearest` parameter below).
-3. Use the nearest value in the observed time series (see `FillNearest` parameter and the `ObsTSID` parameter below).
-4. Use a defined default flow value (see `DefaultFlow` parameter below). 
+1.  Use data from an observed time series (see `ObsTSID` parameter below).
+2.  Use the nearest value in the input time series (see `FillNearest` parameter below).
+3.  Use the nearest value in the observed time series (see `FillNearest` parameter and the `ObsTSID` parameter below).
+4.  Use a defined default flow value (see `DefaultFlow` parameter below). 
 
 By default, the identifier of the resulting time series is the same as the original input time series,
 with the data subtype set to “routed” (e.g., `Streamflow` becomes `Streamflow-routed`).
@@ -65,6 +65,10 @@ Alternatively, the `Lag` can be estimated using the reach length and wave speed 
 Without any other information, `K` can be set to `Lag`/2.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Models - Routing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -120,4 +124,4 @@ LagK(Alias=”LKPN6routed”,TSID=LKPN6.USGS.QIN.1HOUR,Lag=3,K=2,FillNearest=tru
 
 ## See Also ##
 
-* [`VariableLagK`](../VariableLagK/VariableLagK.md) command
+*   [`VariableLagK`](../VariableLagK/VariableLagK.md) command

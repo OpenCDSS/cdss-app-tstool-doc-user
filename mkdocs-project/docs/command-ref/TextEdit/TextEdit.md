@@ -1,11 +1,11 @@
 # TSTool / Command / TextEdit #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,8 +16,8 @@ currently providing simple search and replace for literal strings.
 
 In the future this command may be enhanced to add the following features:
 
-* edit an in-memory property value containing text
-* allow multiple operations in one command
+*   edit an in-memory property value containing text
+*   allow multiple operations in one command
 
 The search and replace functionality is implemented using Java pattern matching and regular expressions
 (see [`Pattern`](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) class documentation).
@@ -44,6 +44,10 @@ Search and Replace Examples
 | `SomeFile\..*\.ext` | `SomeFile\.ABC\.ext` | Similar to previous example except escape the period from interpretation by pattern matcher and treat literally, needed when handling filenames with extensions. |
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -82,7 +86,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`AppendFile`](../AppendFile/AppendFile.md) command
-* [`CopyFile`](../CopyFile/CopyFile.md) command
-* [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md) command
-* [`RemoveFile`](../RemoveFile/RemoveFile.md) command
+*   [`AppendFile`](../AppendFile/AppendFile.md) command
+*   [`CopyFile`](../CopyFile/CopyFile.md) command
+*   [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md) command
+*   [`RemoveFile`](../RemoveFile/RemoveFile.md) command

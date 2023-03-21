@@ -1,11 +1,11 @@
 # TSTool / Command / NewPatternTimeSeries #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,6 +15,10 @@ The `NewPatternTimeSeries` command creates a new time series containing a repeat
 This command is useful for generating data to test other commands.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -71,4 +75,4 @@ WriteDateValue(OutputFile=",Example_NewPatternTimeSeries_out.dv")
 
 ## See Also ##
 
-* [`NewTimeSeries`](../NewTimeSeries/NewTimeSeries.md) command
+*   [`NewTimeSeries`](../NewTimeSeries/NewTimeSeries.md) command

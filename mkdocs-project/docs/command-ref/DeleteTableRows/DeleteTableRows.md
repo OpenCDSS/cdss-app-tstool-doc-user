@@ -1,11 +1,11 @@
 # TSTool / Command / DeleteTableRows #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -13,16 +13,20 @@
 
 The `DeleteTableRows` command deletes specified rows from a table using one of the following approaches:
 
-* ***Condition***
-	+ delete rows where a column value matches a condition
-* ***Row Number***
-	+ delete specific row numbers
-	+ delete all rows
+*   ***Condition***
+    +   delete rows where a column value matches a condition
+*   ***Row Number***
+    +   delete specific row numbers
+    +   delete all rows
 
 Because the deletion is a destructive action,
 one of the above conditions is required to be specified.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -85,5 +89,5 @@ DeleteTableRows(TableID="Table1",DeleteRowNumbers="last")
 
 ## See Also ##
 
-* [`DeleteTableColumns`](../DeleteTableColumns/DeleteTableColumns.md) command
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`DeleteTableColumns`](../DeleteTableColumns/DeleteTableColumns.md) command
+*   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command

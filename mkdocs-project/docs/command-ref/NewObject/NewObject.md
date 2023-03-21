@@ -1,11 +1,11 @@
 # TSTool / Command / NewObject #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -51,6 +51,10 @@ Characteristics of each object are as follows:
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Object Processing***
+
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
@@ -86,7 +90,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FreeObject`](../FreeObject/FreeObject.md) command
-* [`SetObjectPropertiesFromTable`](../SetObjectPropertiesFromTable/SetObjectPropertiesFromTable.md) command
-* [`SetObjectProperty`](../SetObjectProperty/SetObjectProperty.md) command
-* [`WriteObjectToJSON`](../WriteObjectToJSON/WriteObjectToJSON.md) command
+*   [`FreeObject`](../FreeObject/FreeObject.md) command
+*   [`SetObjectPropertiesFromTable`](../SetObjectPropertiesFromTable/SetObjectPropertiesFromTable.md) command
+*   [`SetObjectProperty`](../SetObjectProperty/SetObjectProperty.md) command
+*   [`WriteObjectToJSON`](../WriteObjectToJSON/WriteObjectToJSON.md) command

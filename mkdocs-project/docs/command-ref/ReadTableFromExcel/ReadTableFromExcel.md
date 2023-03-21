@@ -1,11 +1,11 @@
 # TSTool / Command / ReadTableFromExcel #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,9 +15,9 @@ The `ReadTableFromExcel` command reads a table from a Microsoft Excel file,
 more specifically from a worksheet in an Excel workbook file.
 A contiguous block of cells (rectangle) must be specified in one of the following ways:
 
-* Specify a range of cells using Excel address notation (e.g., `A1:D10`)
-* Specify the name of an Excel named range.
-* Specify a table name (essentially a named range).
+*   Specify a range of cells using Excel address notation (e.g., `A1:D10`)
+*   Specify the name of an Excel named range.
+*   Specify a table name (essentially a named range).
 
 Table column types (number, text, etc.) are determined from the cells
 in the first data row being read (NOT the column name row) – data types must be consistent
@@ -84,6 +84,11 @@ The comment lines in the above example will be ignored in determining the headin
 and any data rows that have a first cell value starting with the comment character will be ignored.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Spreadsheet Processing***
+*   ***Commands(Table) / Read Table***
 
 The following dialog is used to edit the command and illustrates the syntax for the command when reading the above Excel worksheet.
 
@@ -168,11 +173,11 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ReadTableFromExcel).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ReadTableFromExcel).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
-* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command
+*   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / CopyFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,9 +14,8 @@
 The `CopyFile` command copies a source file to a destination.
 The destination can be one of:
 
-* a specific file given by the `OutputFile` parameter
-* a temporary file (use the `TempFileProperty` command parameter to allow using the
-  name in other commands)
+*   a specific file given by the `OutputFile` parameter
+*   a temporary file (use the `TempFileProperty` command parameter to allow using the name in other commands)
 
 If a temporary file is used, the filename will include randomly-generated characters
 based on the operating system.
@@ -29,8 +28,11 @@ must be used to remove the file to ensure that file space is not wasted.
 
 ## Command Editor ##
 
-The following dialog is used to edit the command and illustrates the command syntax for
-a specific output file.
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
+
+The following dialog is used to edit the command and illustrates the command syntax for a specific output file.
 
 **<p style="text-align: center;">
 ![CopyFile](CopyFile.png)
@@ -79,4 +81,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`RemoveFile`](../RemoveFile/RemoveFile.md) command
+*   [`RemoveFile`](../RemoveFile/RemoveFile.md) command

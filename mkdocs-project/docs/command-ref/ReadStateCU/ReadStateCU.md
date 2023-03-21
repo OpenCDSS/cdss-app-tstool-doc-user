@@ -1,11 +1,11 @@
 # TSTool / Command / ReadStateCU #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ The `ReadStateCU` command reads all the time series in a StateCU time series fil
 See the [StateCU Input Type Appendix](../../datastore-ref/StateCU/StateCU.md).
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -56,5 +60,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ReadStateCUB`](../ReadStateCUB/ReadStateCUB.md) command
-* [`WriteStateCU`](../WriteStateCU/WriteStateCU.md) command
+*   [`ReadStateCUB`](../ReadStateCUB/ReadStateCUB.md) command
+*   [`WriteStateCU`](../WriteStateCU/WriteStateCU.md) command

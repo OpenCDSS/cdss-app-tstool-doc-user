@@ -1,12 +1,12 @@
 # TSTool / Command / SetObjectPropertiesFromTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-    + [Adding Properties to a GeoJSON File](#adding-properties-to-a-geojson-file)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+    +   [Adding Properties to a GeoJSON File](#adding-properties-to-a-geojson-file)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -30,6 +30,10 @@ See also the [`SetObjectProperty`](../SetObjectProperty/SetObjectProperty.md) co
 which sets an object property from processor property.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Object Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 See the example below for a full explanation of input.
@@ -192,6 +196,6 @@ Problems in JSON files can be checked by using online "JSON lint" websites.
 
 ## See Also ##
 
-* [`NewObject`](../NewObject/NewObject.md) command
-* [`SetObjectProperty`](../SetObjectProperty/SetObjectProperty.md) command
-* [`WriteObjectToJSON`](../WriteObjectToJSON/WriteObjectToJSON.md) command
+*   [`NewObject`](../NewObject/NewObject.md) command
+*   [`SetObjectProperty`](../SetObjectProperty/SetObjectProperty.md) command
+*   [`WriteObjectToJSON`](../WriteObjectToJSON/WriteObjectToJSON.md) command

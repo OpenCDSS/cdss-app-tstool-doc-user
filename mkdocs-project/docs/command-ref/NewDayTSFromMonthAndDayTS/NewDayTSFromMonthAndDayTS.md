@@ -1,11 +1,11 @@
 # TSTool / Command / NewDayTSFromMonthAndDayTS #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -26,11 +26,11 @@ The following calculations are performed:
 
 where, for days in a month:
 
-* *DayTS2_i* = the daily value being estimated in daily time series 2
-* *MonthTS2* = the monthly value being used for volumes for time series 2, shown in units of ACFT/NDAYS (equivalent to ACFT/Month)
-* *NDAYS*  = the number of days in the month
-* *DayTS1_i* = the daily value for indicator daily time series 1
-* *sum(DayTS1_i)* = the sum of the daily values for indicator time series for a month
+*   *DayTS2_i* = the daily value being estimated in daily time series 2
+*   *MonthTS2* = the monthly value being used for volumes for time series 2, shown in units of ACFT/NDAYS (equivalent to ACFT/Month)
+*   *NDAYS*  = the number of days in the month
+*   *DayTS1_i* = the daily value for indicator daily time series 1
+*   *sum(DayTS1_i)* = the sum of the daily values for indicator time series for a month
 
 In summary, the monthly volume in ACFT/NDAYS is first converted to an average monthly CFS
 rate by multiplying by 43560/86400 (or 1/1.9835),
@@ -89,6 +89,10 @@ In this case, the indicator time series was the same as the time series being
 estimated and therefore the estimated value should be the same as the indicator. 
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -154,5 +158,5 @@ Result of `NewDayTSFromMonthAndDayTS` Command (<a href="../NewDayTSFromMonthAndD
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command

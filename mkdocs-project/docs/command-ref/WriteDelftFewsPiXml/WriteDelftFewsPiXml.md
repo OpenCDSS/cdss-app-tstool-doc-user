@@ -18,6 +18,10 @@ See the [Delft FEWS Input Type Appendix](../../datastore-ref/Delft-FEWS-PI-XML/D
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
+
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">

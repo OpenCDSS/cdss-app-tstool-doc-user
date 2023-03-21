@@ -1,11 +1,11 @@
 # TSTool / Command / FreeTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,6 +17,10 @@ although a new table with the same name can be created and used with subsequent 
 This command is useful, for example, when looping through blocks of commands where logic is repeated and the table contents are recreated.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Create, Copy, Free Table***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -51,4 +55,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`NewTable`](../NewTable/NewTable.md) command
+*   [`NewTable`](../NewTable/NewTable.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / CreateFolder #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,6 +14,10 @@
 The `CreateFolder` command creates a folder (directory).
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -50,5 +54,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CopyFile`](../CopyFile/CopyFile.md) command
-* [`RemoveFile`](../RemoveFile/RemoveFile.md) command
+*   [`CopyFile`](../CopyFile/CopyFile.md) command
+*   [`RemoveFile`](../RemoveFile/RemoveFile.md) command

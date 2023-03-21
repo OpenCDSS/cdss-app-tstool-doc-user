@@ -1,11 +1,11 @@
 # TSTool / Command / Divide #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ If the divisor is zero or missing, the result is set to missing.
 Use the [`Scale`](../Scale/Scale.md) command to divide by a numerical value.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Manipulate Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -74,6 +78,6 @@ Results from `Divide` Command (<a href="../Divide_Graph.png">see also the full-s
 
 ## See Also ##
 
-* [`RelativeDiff`](../RelativeDiff/RelativeDiff.md) command
-* [`Scale`](../Scale/Scale.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`RelativeDiff`](../RelativeDiff/RelativeDiff.md) command
+*   [`Scale`](../Scale/Scale.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

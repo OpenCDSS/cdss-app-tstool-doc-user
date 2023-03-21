@@ -1,11 +1,11 @@
 # TSTool / Command / WriteTableToExcel #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,20 +14,25 @@
 The `WriteTableToExcel` command writes a table to a worksheet in a Microsoft Excel workbook file.
 A contiguous block of cells (rectangle) must be specified in one of the following ways to receive the table:
 
-* Specify the upper-left cell in a range of cells using Excel address notation (e.g., `A1`)
-* Specify a range of cells using Excel address notation (e.g., `A1:D10`)
-* Specify the name of an Excel named range.
-* Specify a table name (essentially a named range).
+*   Specify the upper-left cell in a range of cells using Excel address notation (e.g., `A1`)
+*   Specify a range of cells using Excel address notation (e.g., `A1:D10`)
+*   Specify the name of an Excel named range.
+*   Specify a table name (essentially a named range).
 
 TSTool uses the Apache POI software ([https://poi.apache.org](https://poi.apache.org))
 to read/write the Excel file and consequently functionality is constrained by the features of that software package.
 
 The following are limitations of this command:
 
-* Currently only the upper-left cell is utilized but in the future the range may be used to limit output.
-* Cell data types are determined from the table columns being written.  In the future a parameter may be provided to allow option of using original Excel formatting.
+*   Currently only the upper-left cell is utilized but in the future the range may be used to limit output.
+*   Cell data types are determined from the table columns being written.  In the future a parameter may be provided to allow option of using original Excel formatting.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Spreadsheet Processing***
+*   ***Commands(Table) / Output Table***
 
 The following dialog is used to edit the command and illustrates the syntax for the command.
 
@@ -160,8 +165,8 @@ Condition Table used with `WriteTableToExcel` Command for Specific Checks and Fo
 For the above style and format tables, the column names must be specified as shown.
 The ***Condition*** column can contain the following specifiers:
 
-* `${tablecell:value}` – the cell value (raw value before any formatting)
-* `${tablecell:comment}` – the cell comment (currently not implemented in TSTool tables but is reserved for future implementation and Excel cell comments)
+*   `${tablecell:value}` – the cell value (raw value before any formatting)
+*   `${tablecell:comment}` – the cell comment (currently not implemented in TSTool tables but is reserved for future implementation and Excel cell comments)
 
 Values on the left and right of the operator must be separated with a space to facilitate parsing the condition.
 The ***Condition*** column can contain the following operators.
@@ -225,12 +230,12 @@ Condition Table used with `WriteTableToExcel` Command for a Color Scale
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/WriteTableToExcel).
+See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/WriteTableToExcel).
 
 ## Troubleshooting ##
 
 ## See Also ##
 
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
-* [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command
-* [`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) command
+*   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command
+*   [`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) command

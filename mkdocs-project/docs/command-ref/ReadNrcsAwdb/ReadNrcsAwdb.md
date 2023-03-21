@@ -1,11 +1,11 @@
 # TSTool / Command / ReadNrcsAwdb #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -25,14 +25,18 @@ Specifying a list of elements (separated by commas) will return only stations an
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
+
 The following dialog is used to edit the command and illustrates the syntax for general parameters.
 
-* Some choices are provided as a convenience.  However, full listing of choices
-(such as all the thousands of HUCs) are not provided due to performance issues.
-Additional query features such as cascading choices may be enabled as web service integration is enhanced.
-* Querying many time series can be slow.
-It is recommended that filters be used to constrain the query,
-and then modify to converge on an appropriate set of filters for optimal performance.
+*   Some choices are provided as a convenience.  However, full listing of choices
+    (such as all the thousands of HUCs) are not provided due to performance issues.
+    Additional query features such as cascading choices may be enabled as web service integration is enhanced.
+*   Querying many time series can be slow.
+    It is recommended that filters be used to constrain the query,
+    and then modify to converge on an appropriate set of filters for optimal performance.
 
 **<p style="text-align: center;">
 ![ReadNrcsAwdb](ReadNrcsAwdb.png)
@@ -122,4 +126,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`WebGet`](../WebGet/WebGet.md) command, use to test web service queries
+*   [`WebGet`](../WebGet/WebGet.md) command, use to test web service queries

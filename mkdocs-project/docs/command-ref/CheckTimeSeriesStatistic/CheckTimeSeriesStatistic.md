@@ -1,11 +1,11 @@
 # TSTool / Command / CheckTimeSeriesStatistic #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -22,6 +22,10 @@ statistic computed from the entire time series.
 The [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile.md) command can be used to write a summary of the warnings.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Check Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax,
 in this case to check for time series that have >= 5% missing data values.
@@ -98,7 +102,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile.md) command
+*   [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
+*   [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile.md) command

@@ -31,6 +31,10 @@ See the [`CreateFolder`](../CreateFolder/CreateFolder.md) command to create a fo
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
+
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
@@ -66,4 +70,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CreateFolder`](../CreateFolder/CreateFolder.md) command
+*   [`CreateFolder`](../CreateFolder/CreateFolder.md) command

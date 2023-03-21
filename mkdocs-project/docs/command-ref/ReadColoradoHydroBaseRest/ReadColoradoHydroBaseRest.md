@@ -295,6 +295,10 @@ and are applied based on engineering judgement.
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
+
 The following dialog is used to edit the command and illustrates the syntax for the command.
 Two options are available for matching time series, based on historical software requirements.
 The following example illustrates how to read a single time series by specifying the time series identifier.
@@ -360,7 +364,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CopyTimeSeriesPropertiesToTable`](../CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command
-* [`FillUsingDiversionComments`](../FillUsingDiversionComments/FillUsingDiversionComments.md) command
-* [`ReadHydroBase`](../ReadHydroBase/ReadHydroBase.md) command
-* [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command
+*   [`CopyTimeSeriesPropertiesToTable`](../CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command
+*   [`FillUsingDiversionComments`](../FillUsingDiversionComments/FillUsingDiversionComments.md) command
+*   [`ReadHydroBase`](../ReadHydroBase/ReadHydroBase.md) command
+*   [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command

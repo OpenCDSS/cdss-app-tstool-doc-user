@@ -1,11 +1,11 @@
 # TSTool / Command / ReadReclamationPisces #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -24,6 +24,10 @@ the `ReadReclamationPisces` command reads the time series in bulk.
 This can greatly shorten command files and simplify command logic, especially when processing many time series. 
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -65,4 +69,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB.md) command
+*   [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB.md) command

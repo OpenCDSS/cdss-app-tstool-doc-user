@@ -1,11 +1,11 @@
 # TSTool / Command / CreateNetworkFromTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -48,6 +48,10 @@ Network Definition Input Table (<a href="../AnalyzeNetworkPointFlow_InputTable.p
 </p>**
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Network Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
 
@@ -108,7 +112,7 @@ Command Parameters
 |`NodeSubtractTypes`|Node types for which time series are subtracted from the node’s inflow, for example the Diversion node type in the above table example.  The `NodeTypeColumn` table column is checked to determine the type for each node in the network.  **Currently not used.**|No subtractions will occur.|
 |`NodeSubtractDataType`|The time series data type to match for the node.  The data type is used with the NodeID as the location ID to match available time series to use as input.  The `TSIDColumn` will override the default matching.  **Currently not used.**|No subtractions will occur.|
 |`NodeOutflowTypes`|Node types for which time series outflows are set to the node’s time input time series, for example the `Streamflow` node type in the above table example.  The `NodeTypeColumn` table column is checked to determine the type for each node in the network.  **Currently not used.**|No known flows will be set – gain/loss cannot be computed.|
-|`NodeOutflowDataType`|The time series data type to match for the node.  The data type is used with the NodeID as the location ID to match available time series to use as input.  The TSIDColumn will override the default matching.  **Currently not used.**|See above.|
+|`NodeOutflowDataType`|The time series data type to match for the node.  The data type is used with the NodeID as the location ID to match available time series to use as input.  The `TSIDColumn` will override the default matching.  **Currently not used.**|See above.|
 |`NodeFlowThroughTypes`|Node types for which time series outflows are set to the node’s inflow, for example the `InstreamFlow` node type in the above table example.  The `NodeTypeColumn` table column is checked to determine the type for each node in the network.  **Currently not used.**|No known flows will be set – gain/loss cannot be computed.|
 
 ## Examples ##
@@ -119,6 +123,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`AnalyzeNetworkPointFlow`](../AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow.md) command
-* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`AnalyzeNetworkPointFlow`](../AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow.md) command
+*   [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

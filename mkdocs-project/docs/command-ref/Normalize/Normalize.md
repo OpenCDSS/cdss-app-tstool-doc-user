@@ -1,11 +1,11 @@
 # TSTool / Command / Normalize #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,6 +19,10 @@ For example, the range of data values can be normalized to the range 0 to 1.
 The alias that is assigned to the time series can be referenced by other commands.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -75,5 +79,5 @@ Results of `Normalize` Command (<a href="../Normalize_Graph.png">see also the fu
 
 ## See Also ##
 
-* [`RelativeDiff`](../RelativeDiff/RelativeDiff.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`RelativeDiff`](../RelativeDiff/RelativeDiff.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

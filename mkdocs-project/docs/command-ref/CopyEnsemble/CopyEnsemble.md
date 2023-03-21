@@ -1,11 +1,11 @@
 # TSTool / Command / CopyEnsemble #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,6 +17,10 @@ The copy is an exact copy except that the ensemble identifier is different
 (the TSIDs for each ensemble time series should also specified to be unique).
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Ensemble Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -64,5 +68,5 @@ CopyEnsemble(NewEnsembleID="Ensemble_2",NewEnsembleName="Test ensemble 2",NewTSI
 
 ## See Also ##
 
-* [`Copy`](../Copy/Copy.md) command, to copy a time series
-* [`CopyTable`](../CopyTable/CopyTable.md) command
+*   [`Copy`](../Copy/Copy.md) command, to copy a time series
+*   [`CopyTable`](../CopyTable/CopyTable.md) command

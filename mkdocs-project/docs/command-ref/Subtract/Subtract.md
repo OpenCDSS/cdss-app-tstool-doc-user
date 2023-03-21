@@ -1,11 +1,11 @@
 # TSTool / Command / Subtract #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -28,6 +28,10 @@ The user should consider the implications of ignoring missing data.
 Time series being subtracted must have the same data interval.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Manipulate Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -80,5 +84,5 @@ Subtract(TSID="0100501.DWR.DivTotal.Month",SubtractTSList=SpecifiedTSID,Subtract
 
 ## See Also ##
 
-* [`Add`](../Add/Add.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`Add`](../Add/Add.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

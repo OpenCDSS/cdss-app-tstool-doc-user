@@ -1,11 +1,11 @@
 # TSTool / Command / FillMOVE2 #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -27,6 +27,10 @@ The following MOVE.2 equation is used to estimate values for the dependent time 
 </p>**
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the command syntax,
 
@@ -88,5 +92,5 @@ IndependentTSID="06754000.DWR.Streamflow.Month")
 
 ## See Also ##
 
-* [`FillMOVE1`](../FillMOVE1/FillMOVE1.md) command
-* [`FillRegression`](../FillRegression/FillRegression.md) command
+*   [`FillMOVE1`](../FillMOVE1/FillMOVE1.md) command
+*   [`FillRegression`](../FillRegression/FillRegression.md) command

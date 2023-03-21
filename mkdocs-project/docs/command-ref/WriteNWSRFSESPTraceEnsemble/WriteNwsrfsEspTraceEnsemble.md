@@ -1,11 +1,11 @@
 # TSTool / Command / WriteNwsrfsEspTraceEnsemble #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,6 +19,10 @@ The time series should have the same header information, with the sequence numbe
 For example use time series that are managed as an ensemble in TSTool.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Ensemble Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -69,4 +73,4 @@ WriteNwsrfsEspTraceEnsemble(OutputFile="Results/FRANH.FRANH.SQME.01.CS",Carryove
 
 ## See Also ##
 
-* [`ReadNwsrfsEspTraceEnsemble`](../ReadNwsrfsEspTraceEnsemble/ReadNwsrfsEspTraceEnsemble.md) command
+*   [`ReadNwsrfsEspTraceEnsemble`](../ReadNwsrfsEspTraceEnsemble/ReadNwsrfsEspTraceEnsemble.md) command

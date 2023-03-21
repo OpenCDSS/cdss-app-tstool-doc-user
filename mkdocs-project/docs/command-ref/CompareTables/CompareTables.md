@@ -1,11 +1,11 @@
 # TSTool / Command / CompareTables #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -34,6 +34,11 @@ An optional table and file showing the comparison results can be created:
 *   The command also allows the comparison table to be output to an HTML file, in which case different values are shown as red.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menus:
+
+*   ***Commands / General - Test Processing***
+*   ***Commands(Table) / Analyze Table***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -78,6 +83,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CompareFiles`](../CompareFiles/CompareFiles.md) command
-* [`CompareTimeSeries`](../CompareTimeSeries/CompareTimeSeries.md) command
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`CompareFiles`](../CompareFiles/CompareFiles.md) command
+*   [`CompareTimeSeries`](../CompareTimeSeries/CompareTimeSeries.md) command
+*   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command

@@ -1,13 +1,13 @@
 # TSTool / Command / CreateTimeSeriesEventTable #
 
-* [Overview](#overview)
-    + [Analyze Time Series for Events](#analyze-time-series-for-events)
-    + [Associate Historical Events with Time Series](#associate-historical-events-with-time-series)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+    +   [Analyze Time Series for Events](#analyze-time-series-for-events)
+    +   [Associate Historical Events with Time Series](#associate-historical-events-with-time-series)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -22,11 +22,11 @@ for example to highlight time series peaks or show a period of drought or flood.
 
 There are currently two uses for the command:
 
-1. Analyze time series data to identify events:
-    * peaks are determined from data
-2. Associate historical events with time series:
-    * time series properties, such as county or basin identifier,
-      are used to associate the time series with historical events
+1.  Analyze time series data to identify events:
+    *   peaks are determined from data
+2.  Associate historical events with time series:
+    *   time series properties, such as county or basin identifier,
+        are used to associate the time series with historical events
 
 ### Analyze Time Series for Events
 
@@ -38,24 +38,24 @@ Currently, all command parameters and output format uses default values.
 A peak event is defined as follows.
 Enhancements to the analysis may implement additional refinements to define events.
 
-* The first value in the event is a low point:
-    + the previous value is >= the starting value
-    + the next value is > the starting value
-* The last value in the event is a low point:
-    + the previous value is > the ending value
-    + the next value is >= the ending value
-* The peak may include repeated values:
-    + Currently the repeated values must have exactly the same value.
-    + In the future repeated values may be allowed to have some variability.
-* All values after start but before the peak are greater than the previous value.
-* All values after the peak but before the end are less than the previous value (no flat sequences are allowed).
-* Event as part of longer slow increase:
-    + in the future, enhancements may be implemented to require events to fit within a limited time period
-* Event magnitude to avoid interpreting noise as events:
-    + the maximum difference between peak and starting value, and
-      peak and ending value, must be >= 1% of the starting value
-    + this criteria may identify too many local peaks if the time series
-      base value hovers around a value that is relatively large compared to the event local size
+*   The first value in the event is a low point:
+    +   the previous value is >= the starting value
+    +   the next value is > the starting value
+*   The last value in the event is a low point:
+    +   the previous value is > the ending value
+    +   the next value is >= the ending value
+*   The peak may include repeated values:
+    +   Currently the repeated values must have exactly the same value.
+    +   In the future repeated values may be allowed to have some variability.
+*   All values after start but before the peak are greater than the previous value.
+*   All values after the peak but before the end are less than the previous value (no flat sequences are allowed).
+*   Event as part of longer slow increase:
+    +   in the future, enhancements may be implemented to require events to fit within a limited time period
+*   Event magnitude to avoid interpreting noise as events:
+    +   the maximum difference between peak and starting value, and
+        peak and ending value, must be >= 1% of the starting value
+    +   this criteria may identify too many local peaks if the time series
+        base value hovers around a value that is relatively large compared to the event local size
 
 The output event table has the following columns.
 If an extreme value is repeated, the extreme date/time and value are for the first repeated value.
@@ -134,6 +134,10 @@ Event Data before Relating to Time Series (<a href="../CreateTimeSeriesEventTabl
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Table, Time Series Processing***
+
 The following dialog is used to edit the command and illustrates the
 syntax of the command (in this case illustrating how an input event table can
 be processed to create a time series event table).
@@ -208,7 +212,7 @@ Event Data after Relating to Time Series (<a href="../CreateTimeSeriesEventTable
 
 ## See Also ##
 
-* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
-* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
-* [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command
+*   [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
+*   [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command
+*   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command

@@ -1,12 +1,12 @@
 # TSTool / Command / RunSql #
 
-* [Overview](#overview)
-    + [Limitations](#limitations)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+    +   [Limitations](#limitations)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -31,42 +31,42 @@ and other commands specific to datastores.
 
 The SQL statement can be specified in the following ways:
 
-* Specify a SQL statement as a command parameter:
-	+ SQL must be valid for the database (syntax may vary based on database software).
-	+ Use `${Property}` notation to insert processor property values set with
-	[`SetProperty`](../SetProperty/SetProperty.md), other commands, or TSTool command line parameter.
-	+ SQL syntax is not checked for validity and therefore error messages
-	from the database need to be diagnosed based on database software messages.
-	+ Comments in SQL can be specified using
-	[`/* */`](../CommentBlockStart/CommentBlockStart.md) notation for 1+ line comments or `--` (double dash) for single line comments.
-	The comments are removed before executing the query if comments are not supported by the database software.
-	+ Newlines can be used to format SQL by using `Enter` when editing SQL and
-	are shown as `\n` in the SQL parameter.
-* Specify an SQL select statement in a file:
-	+ Similar to the above option; however, the SQL statement is read from a file.
-	+ Useful if the SQL statement is complex or is used by other tools.
-* Specify a function to run:
-	+ **This functionality is under development - functions can typically be called in `SELECT` statements.**
-	+ Available functions are listed using function signature with parameter types and return value.
-	+ Function parameters, if required, are specified with `ProcedureParameters` parameter.
-* Specify a procedure to run:
-	+ **This functionality is under development.**
-	+ Available procedures are listed using procedure signature with parameter types and return value.
-	+ Procedure parameters, if required, are specified with `ProcedureParameters` parameter.
-	+ Procedure return status, if available, can be saved as a property with `ProcedureReturnProperty` parameter.
+*   Specify a SQL statement as a command parameter:
+    +   SQL must be valid for the database (syntax may vary based on database software).
+    +   Use `${Property}` notation to insert processor property values set with
+        [`SetProperty`](../SetProperty/SetProperty.md), other commands, or TSTool command line parameter.
+    +   SQL syntax is not checked for validity and therefore error messages
+        from the database need to be diagnosed based on database software messages.
+    +   Comments in SQL can be specified using
+        [`/* */`](../CommentBlockStart/CommentBlockStart.md) notation for 1+ line comments or `--` (double dash) for single line comments.
+        The comments are removed before executing the query if comments are not supported by the database software.
+    +   Newlines can be used to format SQL by using `Enter` when editing SQL and
+        are shown as `\n` in the SQL parameter.
+*   Specify an SQL select statement in a file:
+    +   Similar to the above option; however, the SQL statement is read from a file.
+    +   Useful if the SQL statement is complex or is used by other tools.
+*   Specify a function to run:
+    +   **This functionality is under development - functions can typically be called in `SELECT` statements.**
+    +   Available functions are listed using function signature with parameter types and return value.
+    +   Function parameters, if required, are specified with `ProcedureParameters` parameter.
+*   Specify a procedure to run:
+    +   **This functionality is under development.**
+    +   Available procedures are listed using procedure signature with parameter types and return value.
+    +   Procedure parameters, if required, are specified with `ProcedureParameters` parameter.
+    +   Procedure return status, if available, can be saved as a property with `ProcedureReturnProperty` parameter.
 
 General constraints on executing the SQL statement are as follows:
 
-* The tables, views, functions, and procedures must be readable.
-* Any SQL statement can be run; consequently, suitable authentication and permissions
-should be in place to protect against unintended changes to the database.
-For example, use a service account with appropriate permissions.
-* SQL syntax varies between database software so care should be take to use standard SQL if possible,
-if the commands will be run on different databases.
-* Results from the statement currently are not displayed,
-although errors will be shown and added to the log file.
-Use the [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md)
-command to process statements that return a result set.
+*   The tables, views, functions, and procedures must be readable.
+*   Any SQL statement can be run; consequently, suitable authentication and permissions
+    should be in place to protect against unintended changes to the database.
+    For example, use a service account with appropriate permissions.
+*   SQL syntax varies between database software so care should be take to use standard SQL if possible,
+    if the commands will be run on different databases.
+*   Results from the statement currently are not displayed,
+    although errors will be shown and added to the log file.
+    Use the [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md)
+    command to process statements that return a result set.
 
 ### Limitations ###
 
@@ -81,6 +81,10 @@ which includes the parameter names and types.
 Many databases allow functions to be called in `SELECT` statements.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Datastore Processing***
 
 The following dialog is used to edit the command and illustrates the syntax for the command, in this case creating a database index.
 
@@ -159,8 +163,8 @@ interfere with TSTool command syntax.  In this case, use a file for SQL.
 
 ## See Also ##
 
-* [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
-* [`OpenDataStore`](../OpenDataStore/OpenDataStore.md) command
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
-* [`SetProperty`](../SetProperty/SetProperty.md) command
-* [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command
+*   [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
+*   [`OpenDataStore`](../OpenDataStore/OpenDataStore.md) command
+*   [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
+*   [`SetProperty`](../SetProperty/SetProperty.md) command
+*   [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command

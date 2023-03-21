@@ -1,11 +1,11 @@
 # TSTool / Command / WriteNwsCard #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,12 @@ See the [NWSCard Input Type Appendix](../../datastore-ref/NWSCard/NWSCard.md) fo
 Only daily or hourly time series can be written.  Daily time series will be converted to 24Hour time series.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
+
+The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
 ![WriteNwsCard](WriteNwsCard.png)
@@ -59,4 +65,4 @@ WriteNWSCard(OutputFile="Alamosa.NOAA.PTPX.24Hour",TSList=AllTS)
 
 ## See Also ##
 
-* [`ReadNwsCard`](../ReadNwsCard/ReadNwsCard.md) command
+*   [`ReadNwsCard`](../ReadNwsCard/ReadNwsCard.md) command

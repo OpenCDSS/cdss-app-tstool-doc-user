@@ -1,11 +1,11 @@
 # TSTool / Command / SetTableValues #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,19 +14,23 @@
 The `SetTableValues` command sets values in a table.
 It does so by:
 
-1. First match rows by filtering on column values (see `ColumnFilters` parameter).
-The default if no filters are specified is to match all rows.
-2. Set values in specified columns:
-	1. If `ColumnValues` parameter is specified, set one or more column values.
-	2. If `Column` and `Value` parameters are specified, set a single column's values.
-	This form is used when the `ColumnValues` syntax is complicated,
-	such as when a column containing array is modified.
+1.  First match rows by filtering on column values (see `ColumnFilters` parameter).
+    The default if no filters are specified is to match all rows.
+2.  Set values in specified columns:
+    1.  If `ColumnValues` parameter is specified, set one or more column values.
+    2.  If `Column` and `Value` parameters are specified, set a single column's values.
+        This form is used when the `ColumnValues` syntax is complicated,
+        such as when a column containing array is modified.
 
 This command can be used to set or override table values that were not included in the original data.
 See also the [`FormatTableString`](../FormatTableString/FormatTableString.md) and
 [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) commands.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -65,5 +69,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
+*   [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+*   [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command

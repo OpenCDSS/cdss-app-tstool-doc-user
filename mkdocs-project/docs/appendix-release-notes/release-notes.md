@@ -34,6 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.7.0](release-notes-14.md)|Feature release to improve the experience for new users. | 2023-03-20 |
 |[14.6.0](release-notes-14.md)|Feature release to implement command indentation. | 2023-02-26 |
 |[14.5.4](release-notes-14.md)|Maintenance release to improve plugin integration and automated testing. | 2023-02-13 |
 |[14.5.3](release-notes-14.md)|Maintenance release to improve plugin integration. | 2023-01-19 |

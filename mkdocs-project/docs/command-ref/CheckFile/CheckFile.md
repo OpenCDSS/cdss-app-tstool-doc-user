@@ -1,11 +1,11 @@
 # TSTool / Command / CheckFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,13 +17,17 @@ which can be used to compare the properties of two files.
 
 Examples of use include:
 
-* check that a file has non-zero size as output from a process
-* check for lines matching expected output (or check that an error indicator is **not** present) a pattern as part of automated testing
+*   check that a file has non-zero size as output from a process
+*   check for lines matching expected output (or check that an error indicator is **not** present) a pattern as part of automated testing
 
 Use the [`CompareFiles`](../CompareFiles/CompareFiles.md) command
 if it is necessary to compare two files, for example size or modification time.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
 
 The following dialog is used to edit the command and illustrates the command syntax
 for statistic parameters.
@@ -107,7 +111,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
-* [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) command
-* [`CompareFiles`](../CompareFiles/CompareFiles.md) command
-* [`CompareTables`](../CompareTables/CompareTables.md) command
+*   [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
+*   [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) command
+*   [`CompareFiles`](../CompareFiles/CompareFiles.md) command
+*   [`CompareTables`](../CompareTables/CompareTables.md) command

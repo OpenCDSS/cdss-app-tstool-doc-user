@@ -1,12 +1,12 @@
 # TSTool / Command / If #
 
-* [Overview](#overview)
-    + [Conditional Syntax](#conditional-syntax)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+    +   [Conditional Syntax](#conditional-syntax)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -20,11 +20,11 @@ commands defines a block of commands. Currently, there is no “else if” or �
 
 The `If` command can evaluate the following:
 
-* simple conditional statement, as described in the next section
-* file exists or does not exist
-* object exists or does not exist (by checking for the object ID)
-* table exists or does not exist (by checking for the table ID)
-* time series exists or does not exist (by checking for the alias and TSID)
+*   simple conditional statement, as described in the next section
+*   file exists or does not exist
+*   object exists or does not exist (by checking for the object ID)
+*   table exists or does not exist (by checking for the table ID)
+*   time series exists or does not exist (by checking for the alias and TSID)
 
 All nested `If` commands must evaluate to true to execute the commands within the deepest level of nesting.
 Some commands, including [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) and
@@ -37,8 +37,8 @@ the result of evaluating an `If` block.
 
 Future enhancements to the `If` command may include:
 
-* Test whether a time series value is non-missing.
-* Compare time series properties with other properties and values.
+*   Test whether a time series value is non-missing.
+*   Compare time series properties with other properties and values.
 
 See also the [`Break`](../Break/Break.md) and
 [`Continue`](../Continue/Continue.md) commands,
@@ -57,16 +57,20 @@ specified with `${Property}` that
 evaluate to primitive types. The operator is one of the following (more functionality will be added in the
 future). For Booleans, False is less than True. For strings, A is less than Z, etc.
 
-* `<`
-* `<=`
-* `>`
-* `>=`
-* `==` (use this to test equality – do not use a single equal sign)
-* `!=`
-* `contains` (only for string comparison)
-* `!contains` (only for string comparison)
+*   `<`
+*   `<=`
+*   `>`
+*   `>=`
+*   `==` (use this to test equality – do not use a single equal sign)
+*   `!=`
+*   `contains` (only for string comparison)
+*   `!contains` (only for string comparison)
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax for a condition check.
 
@@ -199,8 +203,8 @@ EndIf(Name="SampleSizeCheck3Outer")
 
 ## See Also ##
 
-* [`Break`](../Break/Break.md) command
-* [`Continue`](../Continue/Continue.md) command
-* [`EndIf`](../EndIf/EndIf.md) command
-* [`Message`](../Message/Message.md) command
-* [`SetProperty`](../SetProperty/SetProperty.md) command
+*   [`Break`](../Break/Break.md) command
+*   [`Continue`](../Continue/Continue.md) command
+*   [`EndIf`](../EndIf/EndIf.md) command
+*   [`Message`](../Message/Message.md) command
+*   [`SetProperty`](../SetProperty/SetProperty.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / WriteWaterML2 #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -22,6 +22,10 @@ specification should be implemented, resulting in various dialects of WaterML 2 
 These dialects require that software such as TSTool understand the dialect and be able to produce it accurately.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -66,4 +70,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ReadWaterML2`](../ReadWaterML/ReadWaterML.md) command
+*   [`ReadWaterML2`](../ReadWaterML/ReadWaterML.md) command

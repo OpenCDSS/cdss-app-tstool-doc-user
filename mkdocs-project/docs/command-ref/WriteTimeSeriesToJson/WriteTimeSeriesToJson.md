@@ -1,11 +1,11 @@
 # TSTool / Command / WriteTimeSeriesToJson #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -25,74 +25,78 @@ In the future, support for writing time series data values in parallel
 JSON files can be viewed/edited by online tools such as [https://jsoneditoronline.org](https://jsoneditoronline.org).
 
 ```json
-	{
-	 "timeSeriesList": {
-	  "numTimeSeries": 2,
-	  "overlap": false,
-	  "timeSeries": [
-	   {
-	    "timeSeriesMeta": {
-	     "tsid": "MyLoc1..MyDataType.Hour",
-	     "alias": "MyLoc1",
-	     "description": "Test data, pattern",
-	     "locationType": "",
-	     "locationId": "MyLoc1",
-	     "dataSource": "",
-	     "dataType": "MyDataType",
-	     "scenario": "",
-	     "missingVal": -999.0,
-	     "units": "CFS",
-	     "unitsOriginal": "CFS",
-	     "start": "1950-01-01 00",
-	     "end": "1950-01-03 12",
-	     "startOriginal": "1950-01-01 00",
-	     "endOriginal": "1950-01-03 12",
-	     "hasDataFlags": false
-	    },
-	    "timeSeriesData": [
-	     { "dt": "1950-01-01 00", "value": 5.0000 },
-	     { "dt": "1950-01-01 01", "value": 10.0000 },
-	     { "dt": "1950-01-01 02", "value": 12.0000 },
-	… omitted …
-	     { "dt": "1950-01-03 11", "value": 75.0000 },
-	     { "dt": "1950-01-03 12", "value": 5.0000 }
-	    ]
-	   },
-	   {
-	    "timeSeriesMeta": {
-	     "tsid": "MyLoc2..MyData.Hour",
-	     "alias": "MyLoc2",
-	     "description": "Test data, pattern",
-	     "locationType": "",
-	     "locationId": "MyLoc2",
-	     "dataSource": "",
-	     "dataType": "MyData",
-	     "scenario": "",
-	     "missingVal": -999.0,
-	     "units": "CFS",
-	     "unitsOriginal": "CFS",
-	     "start": "1950-01-01 00",
-	     "end": "1950-01-04 12",
-	     "startOriginal": "1950-01-01 00",
-	     "endOriginal": "1950-01-04 12",
-	     "hasDataFlags": true
-	    },
-	    "timeSeriesData": [
-	     { "dt": "1950-01-01 00", "value": 7.0000, "flag": "A" },
-	     { "dt": "1950-01-01 01", "value": 12.0000, "flag": "B" },
-	     { "dt": "1950-01-01 02", "value": 14.0000, "flag": "" },
-	…omitted…
-	     { "dt": "1950-01-04 11", "value": -999.0000, "flag": "D" },
-	     { "dt": "1950-01-04 12", "value": 77.0000, "flag": "E" }
-	    ]
-	   }
-	  ]
-	 }
-	}
+  {
+   "timeSeriesList": {
+    "numTimeSeries": 2,
+    "overlap": false,
+    "timeSeries": [
+     {
+      "timeSeriesMeta": {
+       "tsid": "MyLoc1..MyDataType.Hour",
+       "alias": "MyLoc1",
+       "description": "Test data, pattern",
+       "locationType": "",
+       "locationId": "MyLoc1",
+       "dataSource": "",
+       "dataType": "MyDataType",
+       "scenario": "",
+       "missingVal": -999.0,
+       "units": "CFS",
+       "unitsOriginal": "CFS",
+       "start": "1950-01-01 00",
+       "end": "1950-01-03 12",
+       "startOriginal": "1950-01-01 00",
+       "endOriginal": "1950-01-03 12",
+       "hasDataFlags": false
+      },
+      "timeSeriesData": [
+       { "dt": "1950-01-01 00", "value": 5.0000 },
+       { "dt": "1950-01-01 01", "value": 10.0000 },
+       { "dt": "1950-01-01 02", "value": 12.0000 },
+  … omitted …
+       { "dt": "1950-01-03 11", "value": 75.0000 },
+       { "dt": "1950-01-03 12", "value": 5.0000 }
+      ]
+     },
+     {
+      "timeSeriesMeta": {
+       "tsid": "MyLoc2..MyData.Hour",
+       "alias": "MyLoc2",
+       "description": "Test data, pattern",
+       "locationType": "",
+       "locationId": "MyLoc2",
+       "dataSource": "",
+       "dataType": "MyData",
+       "scenario": "",
+       "missingVal": -999.0,
+       "units": "CFS",
+       "unitsOriginal": "CFS",
+       "start": "1950-01-01 00",
+       "end": "1950-01-04 12",
+       "startOriginal": "1950-01-01 00",
+       "endOriginal": "1950-01-04 12",
+       "hasDataFlags": true
+      },
+      "timeSeriesData": [
+       { "dt": "1950-01-01 00", "value": 7.0000, "flag": "A" },
+       { "dt": "1950-01-01 01", "value": 12.0000, "flag": "B" },
+       { "dt": "1950-01-01 02", "value": 14.0000, "flag": "" },
+  …omitted…
+       { "dt": "1950-01-04 11", "value": -999.0000, "flag": "D" },
+       { "dt": "1950-01-04 12", "value": 77.0000, "flag": "E" }
+      ]
+     }
+    ]
+   }
+  }
 
 ```
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -134,4 +138,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

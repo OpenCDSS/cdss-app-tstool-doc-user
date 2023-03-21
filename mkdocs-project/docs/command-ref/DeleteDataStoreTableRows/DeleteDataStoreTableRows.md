@@ -1,11 +1,11 @@
 # TSTool / Command / DeleteDataStoreTableRows #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,12 +14,12 @@
 The `DeleteDataStoreTableRows` command deletes rows from a database
 datastore table by using one of the following methods:
 
-* Execute an `SQL DELETE` statement to delete all rows.
-Currently, only the ability to delete all rows is supported (see `DeleteAllRows=True` command parameter).
-In the future functionality will be implemented to delete specific rows using an `SQL WHERE` clause.
-See also the [`RunSql()`](../RunSql/RunSql.md) command, which can be used to execute any SQL statement on a database datastore.
-* Execute an `SQL TRUNCATE` statement (see `DeleteAllRows=Truncate`).
-Although database software varies, this typically has the effect of resetting auto-number counters.
+*   Execute an `SQL DELETE` statement to delete all rows.
+    Currently, only the ability to delete all rows is supported (see `DeleteAllRows=True` command parameter).
+    In the future functionality will be implemented to delete specific rows using an `SQL WHERE` clause.
+    See also the [`RunSql()`](../RunSql/RunSql.md) command, which can be used to execute any SQL statement on a database datastore.
+*   Execute an `SQL TRUNCATE` statement (see `DeleteAllRows=Truncate`).
+    Although database software varies, this typically has the effect of resetting auto-number counters.
 
 If database datastore support is not specifically provided by TSTool,
 a generic datastore can be used (see the
@@ -32,11 +32,15 @@ delete records in a table before (re)loading in bulk (see
 
 General constraints are as follows:
 
-* the table or views being processed must be writeable by the user specified
-for the database connection (some databases restrict direct access to data
-and/or require using stored procedures)
+*   the table or views being processed must be writeable by the user specified
+    for the database connection (some databases restrict direct access to data
+    and/or require using stored procedures)
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Datastore Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -73,5 +77,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command
-* [`WriteTimeSeriesToDataStore`](../WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md) command
+*   [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command
+*   [`WriteTimeSeriesToDataStore`](../WriteTimeSeriesToDataStore/WriteTimeSeriesToDataStore.md) command

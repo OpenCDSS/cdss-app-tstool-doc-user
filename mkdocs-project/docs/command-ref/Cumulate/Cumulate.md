@@ -1,15 +1,15 @@
 # TSTool / Command / Cumulate #
 
-* [Overview](#overview)
+*   [Overview](#overview)
     +   [Cumulate Without Reset](#cumulate-without-reset)
     +   [Cumulate With Reset](#cumulate-with-reset)
     +   [Limitations](#limitations)
     +   [Double Mass Curve Analysis](#double-mass-curve-analysis)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -157,6 +157,10 @@ TSTool graph annotations can be used to indicate slope and corrections.
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Manipulate Time Series***
+
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
@@ -219,4 +223,4 @@ Example Graph Showing Results of `Cumulate` Command (<a href="../Cumulate_Graph.
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / CloseDataStore #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,9 +19,9 @@ Some database datastores have been updated to auto-connect to the database when 
 
 The command can also be used with commands that dynamically open datastores, including the following commands:
 
-* [`NewAccessDatabase`](../NewAccessDatabase/NewAccessDatabase.md)
-* [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md)
-* [`OpenDataStore`](../OpenDataStore/OpenDataStore.md)
+*   [`NewAccessDatabase`](../NewAccessDatabase/NewAccessDatabase.md)
+*   [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md)
+*   [`OpenDataStore`](../OpenDataStore/OpenDataStore.md)
 
 Datastores that are needed throughout a TSTool session should be configured with a datastore
 configuration file to connect at startup,
@@ -40,6 +40,10 @@ Datastore Information from *View/Datastores* (<a href="../View_Datastores.png">s
 </p>**
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Datastore Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -64,7 +68,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`DataStore`|The name of a database datastore to read.|	None – must be specified.|
+|`DataStore`|The name of a database datastore to read.| None – must be specified.|
 |`StatusMessage`|A status message to display when the datastore information is viewed.  The status may be reset if the connection is automatically restored, for example when a subsequent database interaction occurs.|Message appropriate for closing the datastore.|
 
 ## Examples ##
@@ -75,6 +79,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`NewAccessDatabase`](../NewAccessDatabase/NewAccessDatabase.md) command
-* [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md) command
-* [`OpenDataStore`](../OpenDataStore/OpenDataStore.md) command
+*   [`NewAccessDatabase`](../NewAccessDatabase/NewAccessDatabase.md) command
+*   [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md) command
+*   [`OpenDataStore`](../OpenDataStore/OpenDataStore.md) command

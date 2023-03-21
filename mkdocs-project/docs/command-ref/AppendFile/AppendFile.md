@@ -1,11 +1,11 @@
 # TSTool / Command / AppendFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,31 +14,35 @@
 The `AppendFile` command appends text to a file.
 This command is useful for:
 
-* appending multiple data files into a single file that can be read by TSTool
-* formatting files for use in websites (see also the [`FormatFile`](../FormatFile/FormatFile.md) command)
+*   appending multiple data files into a single file that can be read by TSTool
+*   formatting files for use in websites (see also the [`FormatFile`](../FormatFile/FormatFile.md) command)
 
 The command appends to a file using either of the following:
 
-* one or more files can be appended to create a new file or overwrite an input file
-* text can be added to the input file to create a new file or overwrite the input file
+*   one or more files can be appended to create a new file or overwrite an input file
+*   text can be added to the input file to create a new file or overwrite the input file
 
 The list of input files can be specified using a single pattern
 or a comma-separated list of patterns, each of which can be specified as:
 
-* path:
-    + absolute path
-    + a path relative to the command file folder
-* wildcards: 
-    + literal path (no wildcards) that exactly matches a file
-    + wildcards to match one or more files
-      (see Java [`PathMatcher`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getPathMatcher-java.lang.String-)):
-        - `*` - match one or more characters at a folder level
-        - `*.abc` - matches file names with extension `abc`
-        - `**/*.abc` - matches file names with extension `abc` in any folder
+*   path:
+    +   absolute path
+    +   a path relative to the command file folder
+*   wildcards: 
+    +   literal path (no wildcards) that exactly matches a file
+    +   wildcards to match one or more files
+        (see Java [`PathMatcher`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getPathMatcher-java.lang.String-)):
+        -   `*` - match one or more characters at a folder level
+        -   `*.abc` - matches file names with extension `abc`
+        -   `**/*.abc` - matches file names with extension `abc` in any folder
 
 All or only matching lines from input files can be transferred using `IncludeText` and `ExcludeText` parameters.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -85,6 +89,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CopyFile`](../CopyFile/CopyFile.md) command
-* [`FormatFile`](../FormatFile/FormatFile.md) command
-* [`RemoveFile`](../RemoveFile/RemoveFile.md) command
+*   [`CopyFile`](../CopyFile/CopyFile.md) command
+*   [`FormatFile`](../FormatFile/FormatFile.md) command
+*   [`RemoveFile`](../RemoveFile/RemoveFile.md) command

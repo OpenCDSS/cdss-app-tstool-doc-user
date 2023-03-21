@@ -1,12 +1,12 @@
 # TSTool / Command / ReadStateModB #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-    + [`OutputVersion` Parameter Details](#outputversion-parameter-details)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+    +   [`OutputVersion` Parameter Details](#outputversion-parameter-details)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,6 +19,10 @@ If this causes performance issues due to the large number of time series that ma
 limit the time series that are read using the `TSID` parameter.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for
 reading `Available_Flow` output parameter for all locations.
@@ -107,5 +111,5 @@ ReadStateModB(InputFile="COLOFB.B43",Version="09.53")
 
 ## See Also ##
 
-* [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command
-* [`WriteStateMod`](../WriteStateMod/WriteStateMod.md) command
+*   [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command
+*   [`WriteStateMod`](../WriteStateMod/WriteStateMod.md) command

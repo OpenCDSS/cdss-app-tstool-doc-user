@@ -1,12 +1,12 @@
 # TSTool / Command / FillPrincipalComponentAnalysis #
 
-* [Overview](#overview)
-* [Principal Component Analysis Tool](#principal-component-analysis-tool)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Principal Component Analysis Tool](#principal-component-analysis-tool)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -32,20 +32,20 @@ Missing data in the dependent time series can be predicted using PCA results.
 
 The command is typically edited as follows:
 
-* The PCA tool is divided into 3 main sections.  The top section assists the user in creating a principal component analysis.
-A single dependent time series and multiple independent time series can be specified.
-Once the user has created an analysis by clicking the ***Analyze*** button,
-the ***View Results*** button becomes enabled to view the resulting file contents.
-* Once the analysis has been completed,
-the ***Fill Using Analysis Results*** section becomes enabled for the next step when utilizing this dialog.
-The regression equations are numbered starting with 1, as seen in the output file from the analysis.
-These numbers correspond with the ***Regression Equation*** selection.
-When filling the dependent time series,
-all missing data from the entire period of record will be filled unless otherwise specified.
-The results are written to the file specified in ***Filled TS Output*** file and can be viewed by clicking the ***View TS Results*** button.
-* Finally, a command which can be run within TSTool can be created and copied to the
-main TSTool commands area by using the final section, ***Transfer Analysis Parameters/Results to Commands***.
-* If desired, once the command exists, edit the command directly by double clicking it within the TSTool interface.
+*   The PCA tool is divided into 3 main sections.  The top section assists the user in creating a principal component analysis.
+    A single dependent time series and multiple independent time series can be specified.
+    Once the user has created an analysis by clicking the ***Analyze*** button,
+    the ***View Results*** button becomes enabled to view the resulting file contents.
+*   Once the analysis has been completed,
+    the ***Fill Using Analysis Results*** section becomes enabled for the next step when utilizing this dialog.
+    The regression equations are numbered starting with 1, as seen in the output file from the analysis.
+    These numbers correspond with the ***Regression Equation*** selection.
+    When filling the dependent time series,
+    all missing data from the entire period of record will be filled unless otherwise specified.
+    The results are written to the file specified in ***Filled TS Output*** file and can be viewed by clicking the ***View TS Results*** button.
+*   Finally, a command which can be run within TSTool can be created and copied to the
+    main TSTool commands area by using the final section, ***Transfer Analysis Parameters/Results to Commands***.
+*   If desired, once the command exists, edit the command directly by double clicking it within the TSTool interface.
 
 ## Principal Component Analysis Tool ##
 
@@ -60,6 +60,10 @@ Principal Component Analysis Tools (<a href="../PCA-tool.png">see also the full-
 </p>**
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command.
 
@@ -134,6 +138,6 @@ FillPrincipalComponentAnalysis(DependentTSList=AllMatchingTSID,DependentTSID="De
 
 ## See Also ##
 
-* [`FillMixedStation`](../FillMixedStation/FillMixedStation.md) command
-* [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command
-* [`FillRegression`](../FillRegression/FillRegression.md) command
+*   [`FillMixedStation`](../FillMixedStation/FillMixedStation.md) command
+*   [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command
+*   [`FillRegression`](../FillRegression/FillRegression.md) command

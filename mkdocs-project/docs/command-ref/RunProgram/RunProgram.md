@@ -1,11 +1,11 @@
 # TSTool / Command / RunProgram #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -35,23 +35,27 @@ Some operating systems may have limitations on command line length.
 
 The following are guidelines for using this command:
 
-1. A program can be run with our without using a command shell (see the ***Command shell*** tab).
-Using a command shell that is consistent for the operating system is the default,
-and can help ensure that the environment is properly handled.
-However, programs can often be run without a shell.
-2. It is generally easiest to specify the command line in full rather than parts.
-However, if quoting or or other syntax is complex, try specifying the command by its parts.
-3. Program output can be printed to standard output (stdout) and standard error (stderr),
-depending on how the software is written.
-It is possible to use shell redirection (`>`) to create an output file from stdout or stderr.
-However, this requires that a shell be used that recognizes the redirection.
-Alternatively, use the `StdoutFile` and `StderrFile` parameters to save output to files,
-which avoids the need to run in a shell.
-4. Program output to `stdout` can also be saved as a property (see `StdoutProperty`).
-This is particularly useful for short output such as program version,
-date/time, etc.
+1.  A program can be run with our without using a command shell (see the ***Command shell*** tab).
+    Using a command shell that is consistent for the operating system is the default,
+    and can help ensure that the environment is properly handled.
+    However, programs can often be run without a shell.
+2.  It is generally easiest to specify the command line in full rather than parts.
+    However, if quoting or or other syntax is complex, try specifying the command by its parts.
+3.  Program output can be printed to standard output (stdout) and standard error (stderr),
+    depending on how the software is written.
+    It is possible to use shell redirection (`>`) to create an output file from stdout or stderr.
+    However, this requires that a shell be used that recognizes the redirection.
+    Alternatively, use the `StdoutFile` and `StderrFile` parameters to save output to files,
+    which avoids the need to run in a shell.
+4.  Program output to `stdout` can also be saved as a property (see `StdoutProperty`).
+    This is particularly useful for short output such as program version,
+    date/time, etc.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
 
@@ -228,6 +232,6 @@ Example Command Status Messages (<a href="../RunProgram_OutputCheckTable_Status.
 
 ## See Also ##
 
-* [`RunCommands`](../RunCommands/RunCommands.md) command
-* [`RunPython`](../RunPython/RunPython.md) command
-* [`RunR`](../RunR/RunR.md) command
+*   [`RunCommands`](../RunCommands/RunCommands.md) command
+*   [`RunPython`](../RunPython/RunPython.md) command
+*   [`RunR`](../RunR/RunR.md) command

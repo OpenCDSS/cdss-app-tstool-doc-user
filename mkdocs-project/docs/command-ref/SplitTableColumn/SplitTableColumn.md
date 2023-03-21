@@ -1,11 +1,11 @@
 # TSTool / Command / SplitTableColumn #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,6 +17,10 @@ For example, the `ColumnToSplit` column in the table shown in the following exam
 can be split to produce the result in the second figure.  Several options for splitting are available.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -65,6 +69,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
-* [`SplitTableRow`](../SplitTableRow/SplitTableRow.md) command
+*   [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+*   [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
+*   [`SplitTableRow`](../SplitTableRow/SplitTableRow.md) command

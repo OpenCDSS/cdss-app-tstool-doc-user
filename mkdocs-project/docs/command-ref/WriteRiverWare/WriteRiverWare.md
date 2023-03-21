@@ -1,11 +1,11 @@
 # TSTool / Command / WriteRiverWare #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ See the [RiverWare Input Type Appendix](../../datastore-ref/RiverWare/RiverWare.
 for more information about the file format.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -67,5 +71,5 @@ WriteRiverWare(TSList=AllTS,OutputFile="08213500.Month.RiverWare",Precision=2)
 
 ## See Also ##
 
-* [`ReadRiverWare`](../ReadRiverWare/ReadRiverWare.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`ReadRiverWare`](../ReadRiverWare/ReadRiverWare.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

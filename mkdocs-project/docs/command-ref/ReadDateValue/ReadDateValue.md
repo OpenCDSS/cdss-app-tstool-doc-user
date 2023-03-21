@@ -1,11 +1,11 @@
 # TSTool / Command / ReadDateValue #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -20,6 +20,10 @@ DateValue files allow each time series to have an alias in addition to the time 
 however, the Alias parameter can be used to assign a new alias as the file is read.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -71,4 +75,4 @@ ReadDateValue(InputFile="Data\08251500.DWR.Streamflow.IRREGULAR.dv")
 
 ## See Also ##
 
-* [`WriteDateValue`](../WriteDateValue/WriteDateValue.md) command
+*   [`WriteDateValue`](../WriteDateValue/WriteDateValue.md) command

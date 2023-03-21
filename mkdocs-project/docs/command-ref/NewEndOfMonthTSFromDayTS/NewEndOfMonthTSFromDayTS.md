@@ -1,11 +1,11 @@
 # TSTool / Command / NewEndOfMonthTSFromDayTS #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -25,6 +25,10 @@ In this case, other fill commands (e.g.,
 [`FillInterpolate`](../FillInterpolate/FillInterpolate.md)) can be applied to estimate the remaining missing data.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -96,4 +100,4 @@ Results of `NewEndOfMonthTSFromDayTS` Command (<a href="../NewEndOfMonthTSFromDa
 
 ## See Also ##
 
-* [`FillInterpolate`](../FillInterpolate/FillInterpolate.md) command
+*   [`FillInterpolate`](../FillInterpolate/FillInterpolate.md) command

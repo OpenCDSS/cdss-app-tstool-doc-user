@@ -1,11 +1,11 @@
 # TSTool / Command / FillPattern #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -44,6 +44,10 @@ Multiple pattern files can be used, if appropriate.
 ```
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -99,7 +103,7 @@ using the pattern `09034500` (a stream gage for the region).
 
 ## See Also ##
 
-* [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern.md) command
-* [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
-* [`ReadPatternFile`](../ReadPatternFile/ReadPatternFile.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern.md) command
+*   [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
+*   [`ReadPatternFile`](../ReadPatternFile/ReadPatternFile.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

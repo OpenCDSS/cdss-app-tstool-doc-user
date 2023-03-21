@@ -1,11 +1,11 @@
 # TSTool / Command / FillDayTSFrom2MonthTSAnd1DayTS #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -31,6 +31,10 @@ For example, use this command to fill daily streamflow where filled
 monthly data are available at nearby locations and filled daily data is available at the independent (D2) station. 
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 For all the time series identifiers, the last matching identifier before the command will be matched for processing.
@@ -100,4 +104,4 @@ Example of Filled Data (<a href="../FillDayTSFrom2MonthTSAnd1DayTS_Graph.png">se
 
 ## See Also ##
 
-* [`FillRegression`](../FillRegression/FillRegression.md) command
+*   [`FillRegression`](../FillRegression/FillRegression.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / FreeObject #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,6 +17,10 @@ although a new object with the same name can be created and used with subsequent
 This command is useful, for example, when looping through blocks of commands where logic is repeated and the object contents are recreated.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Object Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -51,4 +55,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`NewObject`](../NewObject/NewObject.md) command
+*   [`NewObject`](../NewObject/NewObject.md) command

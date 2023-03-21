@@ -1,14 +1,14 @@
 # TSTool / Command / TableMath #
 
-* [Overview](#overview)
-    + [Input](#input)
-    + [Output](#output)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-    + [Supported Operators and Input](#supported-operators-and-input)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+    +   [Input](#input)
+    +   [Output](#output)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+    +   [Supported Operators and Input](#supported-operators-and-input)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -27,10 +27,10 @@ to understand data processing workflow.
 The input is specified by a table column name (`Input1`) and one of the following (`Input2`),
 depending on the operator:
 
-* no second input, for example for `ToInteger` operation
-* second input column, for example to add values of each column
-* constant input value, for example to add a constant to all values in a column
-* inputs can generally be any combination of double precision and integer values
+*   no second input, for example for `ToInteger` operation
+*   second input column, for example to add values of each column
+*   constant input value, for example to add a constant to all values in a column
+*   inputs can generally be any combination of double precision and integer values
 
 The second input value (`Input2`) can be a column name or a constant value,
 with the result being placed in the output column (`Output`).
@@ -39,15 +39,19 @@ with the result being placed in the output column (`Output`).
 
 The table output column values are computed as follows.
 
-* output that cannot be computed is set to the `NonValue` value
-* inputs can generally be any combination of double precision and integer values
-  and output will result from an automatic conversion:
-    + if a floating point number is in input (even if other input is an integer),
-      the output will be floating point
-    + the width and precision for column properties will be set to the maximum
-      of the input column properties
+*   output that cannot be computed is set to the `NonValue` value
+*   inputs can generally be any combination of double precision and integer values
+    and output will result from an automatic conversion:
+    +   if a floating point number is in input (even if other input is an integer),
+        the output will be floating point
+    +   the width and precision for column properties will be set to the maximum
+        of the input column properties
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the
 command (in this case illustrating how values in a column named `ts1` are added to the number `.1111.`
@@ -111,7 +115,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
-* [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime.md) command
-* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
+*   [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
+*   [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime.md) command
+*   [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+*   [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command

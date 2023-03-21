@@ -1,11 +1,11 @@
 # TSTool / Command / ReadStateCUB #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -21,6 +21,10 @@ the time series identifiers must be specified manually or use wildcards in ident
 Only data types that contain floating point numbers are read.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -83,5 +87,5 @@ ReadStateCUB(InputFile="Data\farmers.BD1")
 
 ## See Also ##
 
-* [`ReadStateCU`](../ReadStateCU/ReadStateCU.md) command
-* [`WriteStateCU`](../WriteStateCU/WriteStateCU.md) command
+*   [`ReadStateCU`](../ReadStateCU/ReadStateCU.md) command
+*   [`WriteStateCU`](../WriteStateCU/WriteStateCU.md) command
