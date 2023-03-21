@@ -1,11 +1,11 @@
 # TSTool / Command / Message #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,15 +15,19 @@ The `Message` command prints a status message to the log file (status level 2).
 Optionally, the `CommandStatus` parameter can be used to control the status level for the command.
 Examples of use include:
 
-* this command is useful for troubleshooting by printing out properties
-* generate a warning or failure status if a condition is not met
-(see also the [`If`](../If/If.md) command, which can be used to check for a condition
-and print a message to warn the user using `Message` command)
-* use the optional `PromptActions` parameter to show a dialog with
-buttons that allow the command workflow to be canceled,
-for example if a condition exists that is a severe error
+*   this command is useful for troubleshooting by printing out properties
+*   generate a warning or failure status if a condition is not met
+    (see also the [`If`](../If/If.md) command, which can be used to check for a condition
+    and print a message to warn the user using `Message` command)
+*   use the optional `PromptActions` parameter to show a dialog with
+    buttons that allow the command workflow to be canceled,
+    for example if a condition exists that is a severe error
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Logging and Messaging***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -60,4 +64,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`StartLog`](../StartLog/StartLog.md) command - controls log file where messages are written
+*   [`StartLog`](../StartLog/StartLog.md) command - controls log file where messages are written

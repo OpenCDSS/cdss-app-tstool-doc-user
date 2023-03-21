@@ -1,13 +1,13 @@
 # TSTool / Command / Comment `#` #
 
-* [Overview](#overview)
+*   [Overview](#overview)
     +   [Annotations](#annotations)
     +   [Best Practices](#best-practices)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -162,6 +162,10 @@ Command...
 ```
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Comments***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 

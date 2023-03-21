@@ -1,11 +1,11 @@
 # TSTool / Command / FillUsingDiversionComments #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -68,37 +68,37 @@ Structure CIU Flag Values and Meaning
 If `UseCIU=True` is specified for this command,
 the following logic will be used to fill missing time series values:
 
-1. If the HydroBase CIU value is H or I for the structure associated with the time series:
-	1. Fill using the diversion comments (see above for interpretation of comments).
-	2. The limits of the time series are recomputed based on diversion data and comments.
-	3. Missing data at the end of the period are filled with zeros,
-	reflecting the fact that the structure is off-line.
-	In this case, the limits are always recomputed,
-	regardless of the value of the RecalcLimits command parameter.
-	These values are not included in historical averages
-	because they do not occur in the active life of the structure.
-	4. Missing data within the data period remain missing,
-	and can be filled with other commands such as
-	[`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md).
-	5. Missing data prior to the first diversion values or comments remain missing,
-	and can be filled with other commands as appropriate, perhaps specific to each location.
-2. If in HydroBase `CIU=N`:
-	1. Fill using the diversion comments (see above for interpretation of comments).
-	2. The limits of the time series are recomputed based on diversion data and comments.
-	3. Missing data at the beginning of the period are filled with zeros.
-	In this case, the limits are always recomputed,
-	regardless of the value of the `RecalcLimits` command parameter.
-	4. The remaining missing data in the active data period or
-	at the end of the period remain missing and can be filled with other commands.
+1.  If the HydroBase CIU value is H or I for the structure associated with the time series:
+    1.  Fill using the diversion comments (see above for interpretation of comments).
+    2.  The limits of the time series are recomputed based on diversion data and comments.
+    3.  Missing data at the end of the period are filled with zeros,
+        reflecting the fact that the structure is off-line.
+        In this case, the limits are always recomputed,
+        regardless of the value of the RecalcLimits command parameter.
+        These values are not included in historical averages
+        because they do not occur in the active life of the structure.
+    4.  Missing data within the data period remain missing,
+        and can be filled with other commands such as
+        [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md).
+    5.  Missing data prior to the first diversion values or comments remain missing,
+        and can be filled with other commands as appropriate, perhaps specific to each location.
+2.  If in HydroBase `CIU=N`:
+    1.  Fill using the diversion comments (see above for interpretation of comments).
+    2.  The limits of the time series are recomputed based on diversion data and comments.
+    3.  Missing data at the beginning of the period are filled with zeros.
+        In this case, the limits are always recomputed,
+        regardless of the value of the `RecalcLimits` command parameter.
+    4.  The remaining missing data in the active data period or
+        at the end of the period remain missing and can be filled with other commands.
 
 The output period for filled time series is handled as follows:
 
-* If a global output period has been specified (e.g., with the
-[`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command) then the time series
-will NOT be extended to include diversion comments and CIU codes beyond the output period.
-* If NO output period has been specified,
-the time series WILL be extended to include the longer period from diversion comments.
-CIU information does not cause the time series to be extended.
+*   If a global output period has been specified (e.g., with the
+    [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command) then the time series
+    will NOT be extended to include diversion comments and CIU codes beyond the output period.
+*   If NO output period has been specified,
+    the time series WILL be extended to include the longer period from diversion comments.
+    CIU information does not cause the time series to be extended.
 
 After setting additional zero values using this command,
 the limits of the time series can be recomputed, if appropriate,
@@ -112,6 +112,10 @@ Refer to the [HydroBase Input Type Appendix](../../datastore-ref/CO-HydroBase/CO
 for more information about diversion time series.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for diversion comment parameters.
 
@@ -210,6 +214,6 @@ Example Table Showing Fill Flags (<a href="../FillUsingDiversionComments_Table.p
 
 ## See Also ##
 
-* [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
+*   [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command

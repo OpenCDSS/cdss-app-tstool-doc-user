@@ -1,11 +1,11 @@
 # TSTool / Command / ReadTableFromXml #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -70,6 +70,10 @@ Currently all values are added as text.  In the future an XSD file may be used t
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Read Table***
+
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
@@ -106,4 +110,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command
+*   [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command

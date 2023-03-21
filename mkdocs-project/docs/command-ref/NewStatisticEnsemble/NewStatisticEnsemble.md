@@ -1,11 +1,11 @@
 # TSTool / Command / NewStatisticEnsemble #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,11 +17,11 @@ and optionally an ensemble containing the time series.
 This command facilitates computation of “histogram” types of
 statistics such as counts and percentages.  Examples of use include:
 
-* For all temperature time series in an area, show the percentage of stations reporting above various thresholds.
-This indicates the variability of temperatures in an area.
-* After computing the nonexceedance probability on cumulative precipitation time series,
-compute the percentage of stations with different nonexceedance probabilities.
-This is an indicator of drought in an area.
+*   For all temperature time series in an area, show the percentage of stations reporting above various thresholds.
+    This indicates the variability of temperatures in an area.
+*   After computing the nonexceedance probability on cumulative precipitation time series,
+    compute the percentage of stations with different nonexceedance probabilities.
+    This is an indicator of drought in an area.
 
 Statistics like `Mean` are not computed by this command because they can be computed
 with the [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md)
@@ -31,6 +31,10 @@ whereas this command is designed to facilitate creating multiple output time ser
 See also the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Ensemble Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -117,6 +121,6 @@ NewStatisticEnsemble(NewEnsembleID="Group1",Alias="Group1-${c:Statistic}-${c:Tes
 
 ## See Also ##
 
-* [Statistic Examples](../../examples/examples.md#statistic-examples)
-* [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [Statistic Examples](../../examples/examples.md#statistic-examples)
+*   [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

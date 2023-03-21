@@ -1,11 +1,11 @@
 # TSTool / Command / WriteStateCU #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -22,6 +22,10 @@ Other StateCU files may be supported in the future.
 See also the StateDMI software, which processes other StateCU files.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -70,5 +74,5 @@ WriteStateCU(OutputFile="test.stm")
 
 ## See Also ##
 
-* [`ReadStateCU`](../ReadStateCU/ReadStateCU.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`ReadStateCU`](../ReadStateCU/ReadStateCU.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / SetTimeSeriesPropertiesFromTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,6 +17,10 @@ The time series can then be selected for processing by matching properties with 
 [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Table, Time Series Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax
 (in this case the location part of the time series identifier is used to
@@ -60,5 +64,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command

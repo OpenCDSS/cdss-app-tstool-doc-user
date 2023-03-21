@@ -1,11 +1,11 @@
 # TSTool / Command / Delta #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -33,10 +33,10 @@ In this case the command will attempt to compute the change across the reset val
 If this is not possible, then warnings will be generated and the result will be set to missing.
 Specific cases that are handled are:
 
-* The previous value is out of range – in this case the contribution from the out of
-range previous value is added to the delta and default flag value is assigned (see Flag parameter description).  A warning will be generated.
-* The current value is out of range – in this case the difference will be
-decreased because the reset value has not be achieved.  A warning will be generated.
+*   The previous value is out of range – in this case the contribution from the out of
+    range previous value is added to the delta and default flag value is assigned (see Flag parameter description).  A warning will be generated.
+*   The current value is out of range – in this case the difference will be
+    decreased because the reset value has not be achieved.  A warning will be generated.
 
 **The above special cases result in somewhat arbitrary difference values because
 the inputs do not conform to expected values.
@@ -46,6 +46,10 @@ Irregular-interval time series that result in differences not being computed wil
 missing values inserted at appropriate locations to maintain consistent data point spacing with the original data. 
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -89,5 +93,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

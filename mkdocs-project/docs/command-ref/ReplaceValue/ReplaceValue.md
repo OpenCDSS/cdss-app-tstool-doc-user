@@ -1,11 +1,11 @@
 # TSTool / Command / ReplaceValue #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -20,6 +20,10 @@ See also the [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command,
 which provides for a variety of checks and also allows values to be set to missing or removed.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Set Time Series Contents***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -76,6 +80,6 @@ ReplaceValue(TSList=AllTS,MinValue=-100000,MaxValue=0,NewValue=0)
 
 ## See Also ##
 
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetConstant`](../SetConstant/SetConstant.md) command
+*   [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetConstant`](../SetConstant/SetConstant.md) command

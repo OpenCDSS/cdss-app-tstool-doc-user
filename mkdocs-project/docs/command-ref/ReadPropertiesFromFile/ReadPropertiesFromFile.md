@@ -1,11 +1,11 @@
 # TSTool / Command / ReadPropertiesFromFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -21,10 +21,10 @@ and also user-defined properties set with the [`SetProperty`](../SetProperty/Set
 Internally, properties have a name and a value, which is of a certain type
 (string, integer, date/time, etc.).  Examples of using the command include:
 
-* creating tests to verify that properties are being set
-* passing information from TSTool to another program, such as a Python script
-* storing persistent information for later use, such as the date/time that data were last downloaded from a web service
-* reading text from a file to merge into a file
+*   creating tests to verify that properties are being set
+*   passing information from TSTool to another program, such as a Python script
+*   storing persistent information for later use, such as the date/time that data were last downloaded from a web service
+*   reading text from a file to merge into a file
 
 A number of property formats are supported as listed in the following table.
 
@@ -43,6 +43,10 @@ The command attempts to create objects of the proper type but if this is an issu
 it may be necessary to use the formats that include property type.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -79,6 +83,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SetProperty`](../SetProperty/SetProperty.md) command
-* [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command
-* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md) command
+*   [`SetProperty`](../SetProperty/SetProperty.md) command
+*   [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command
+*   [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md) command

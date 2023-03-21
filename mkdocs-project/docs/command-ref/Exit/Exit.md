@@ -1,11 +1,11 @@
 # TSTool / Command / Exit #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -22,6 +22,10 @@ insert commands above this command when the end line is selected (rather than ha
 In the future the command may be enhanced to have parameters that more explicitly control processing shut-down.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -56,4 +60,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`If`](../If/If.md) command
+*   [`If`](../If/If.md) command

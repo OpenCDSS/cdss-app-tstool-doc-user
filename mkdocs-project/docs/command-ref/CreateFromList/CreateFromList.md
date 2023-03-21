@@ -1,17 +1,17 @@
 # TSTool / Command / CreateFromList #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
 ## Overview ##
 
-**See also the [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command, which may replace this command in the future.**
+**This command has been replaced by the [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command.**
 
 The `CreateFromList` command creates one or more time series using identifiers from a list file,
 an example of which is shown below:
@@ -28,8 +28,8 @@ an example of which is shown below:
 The command is typically used when reading time series from a database or binary file
 and can streamline processing in the following situations:
 
-* A list of identifiers may have been generated from a database query and saved to a file.
-* A list of identifiers may have been extracted from a model data set.
+*   A list of identifiers may have been generated from a database query and saved to a file.
+*   A list of identifiers may have been extracted from a model data set.
 
 TSTool reads the list file and internally creates a list of time series identifiers.
 The time series are of the standard form:
@@ -39,7 +39,7 @@ Location.DataSource.DataType.Interval[.Scenario]~InputType[~InputName]
 ```
 where the brackets indicate optional information.
 TSTool then queries each time series, which can be processed further.
-	
+
 Although it is possible to specify an input type that reads from files by also using the `InputName`,
 this is not generally recommended because the `CreateFromList` command can only specify
 one input file name and the file will be reopened for each read.
@@ -48,6 +48,10 @@ are typically optimized to read multiple time series from the files.
 In summary, the `CreateFromList` command is useful with databases but performance may suffer when used with file input types.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -104,5 +108,5 @@ DataType=DivTotal,Interval=Month,InputType=HydroBase,IfNotFound=Default)
 
 ## See Also ##
 
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
-* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command
+*   [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
+*   [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / WriteDelimitedFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -26,6 +26,10 @@ for example a comma-separated-value (CSV) file.  The following constraints apply
 * Precision for data values and missing value for output can be specified.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -77,5 +81,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ReadDelimitedFile`](../ReadDelimitedFile/ReadDelimitedFile.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`ReadDelimitedFile`](../ReadDelimitedFile/ReadDelimitedFile.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

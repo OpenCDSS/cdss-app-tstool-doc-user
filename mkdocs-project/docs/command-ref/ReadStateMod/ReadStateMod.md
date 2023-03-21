@@ -1,11 +1,11 @@
 # TSTool / Command / ReadStateMod #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -13,23 +13,27 @@
 
 The `ReadStateMod` command reads all the time series in a StateMod time series file:
 
-* Standard time series file (see the [StateMod Input Type Appendix](../../datastore-ref/StateMod/StateMod.md)).
-Single time series can be read by using time series identifier (TSID) commands.
-* Water rights files can be read and converted to time series,
-which is useful for visualization, water supply analysis, and to test well right processing.
-Considering all water rights for a location based on the administration number results
-in a step function of decree over time.
-Monthly and yearly time series use calendar year and a right is active
-if it is turned on anywhere in the month or year.
-Free water rights (e.g., those having administration numbers > 90000.00000)
-are treated like other rights and therefore may not impact the results in the current
-period because the corresponding appropriation date is in the future.
-If processing well rights and multiple years of parcel data are processed,
-this command executes the same logic as the StateDMI `MergeWellRights` command.
-* Output (`*.x**`) files, currently only `*.xop` is supported.
-The data type is set to Operational.  Identifiers that include a period will have the period replaced with an underscore.
+*   Standard time series file (see the [StateMod Input Type Appendix](../../datastore-ref/StateMod/StateMod.md)).
+    Single time series can be read by using time series identifier (TSID) commands.
+*   Water rights files can be read and converted to time series,
+    which is useful for visualization, water supply analysis, and to test well right processing.
+    Considering all water rights for a location based on the administration number results
+    in a step function of decree over time.
+    Monthly and yearly time series use calendar year and a right is active
+    if it is turned on anywhere in the month or year.
+    Free water rights (e.g., those having administration numbers > 90000.00000)
+    are treated like other rights and therefore may not impact the results in the current
+    period because the corresponding appropriation date is in the future.
+    If processing well rights and multiple years of parcel data are processed,
+    this command executes the same logic as the StateDMI `MergeWellRights` command.
+*   Output (`*.x**`) files, currently only `*.xop` is supported.
+    The data type is set to Operational.  Identifiers that include a period will have the period replaced with an underscore.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
 
@@ -90,5 +94,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ReadStateModB`](../ReadStateModB/ReadStateModB.md) command
-* [`WriteStateMod`](../WriteStateMod/WriteStateMod.md) command
+*   [`ReadStateModB`](../ReadStateModB/ReadStateModB.md) command
+*   [`WriteStateMod`](../WriteStateMod/WriteStateMod.md) command

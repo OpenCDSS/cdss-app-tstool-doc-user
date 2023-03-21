@@ -1,11 +1,11 @@
 # TSTool / Command / ChangeInterval #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,8 +17,8 @@ in some cases using advanced logic consistent with hydrologic models.
 See also the following commands that focus on specific combinations of input and output and are
 simpler to use than the `ChangeInterval` command:
 
-* [`ChangeIntervalIrregularToRegular`](../ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md) - computes output interval value
-from input sample as a statistic
+*   [`ChangeIntervalIrregularToRegular`](../ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md) - computes output interval value
+    from input sample as a statistic
 
 A list of one or more time series or an ensemble of time series can be processed.
 The majority of the original header data (e.g., description, units) are copied to the new time series;
@@ -439,6 +439,10 @@ the input mean volume within 15 iterations, a warning will be written to the log
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
+
 The following dialog is used to edit the command and illustrates the syntax for the command.
 This example is converting a monthly volume time series to annual water year (October to September) volumes.
 
@@ -524,5 +528,5 @@ ChangeInterval(Alias=”3HourINST”,TSID="IrregularINST",NewInterval=3Hour,OldT
 
 ## See Also ##
 
-* [Statistic Examples](../../examples/examples.md#statistic-examples)
-* [`ChangeIntervalIrregularToRegular`](../ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md) command
+*   [Statistic Examples](../../examples/examples.md#statistic-examples)
+*   [`ChangeIntervalIrregularToRegular`](../ChangeIntervalIrregularToRegular/ChangeIntervalIrregularToRegular.md) command

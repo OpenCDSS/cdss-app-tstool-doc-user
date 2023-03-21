@@ -1,11 +1,11 @@
 # TSTool / Command / ShiftTimeByInterval #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,6 +17,10 @@ This command can be used to perform a simple shift (e.g., to shift hourly data b
 result in data being set at the desired hours) and to perform simple routing.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Manipulate Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -73,5 +77,5 @@ Results from `ShiftTimeByInterval` Command (<a href="../ShiftTimeByInterval_Grap
 
 ## See Also ##
 
-* [`Disaggregate`](../Disaggregate/Disaggregate.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`Disaggregate`](../Disaggregate/Disaggregate.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

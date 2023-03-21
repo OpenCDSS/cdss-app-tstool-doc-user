@@ -1,11 +1,11 @@
 # TSTool / Command / ReadReclamationHDB #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,9 +16,9 @@ See the [Reclamation HDB Datastore Reference](../../datastore-ref/ReclamationHDB
 for more information about the database features and limitations.
 Time series are read from:
 
-* a single "real" time series (observations)
-* a single "model" time series (results from a model)
-* a time series ensemble, indicated by the ensemble name, in which case each ensemble trace time series is read as a "model" time series
+*   a single "real" time series (observations)
+*   a single "model" time series (results from a model)
+*   a time series ensemble, indicated by the ensemble name, in which case each ensemble trace time series is read as a "model" time series
 
 The primary metadata necessary to read the time series are a site data type identifier (SDI) and,
 if reading a model time series, a model run identifier (MRI).
@@ -36,11 +36,15 @@ This ensures that only time series with data are read.
 
 Additional functionality includes:
 
-* When reading hour interval data, including NHour data: regardless of the requested input period,
-the time series that is read will have its start and end date/time set to actual date/time.
-This ensures that odd offsets such as hour 1 for 3Hour data will match the actual data.
+*   When reading hour interval data, including NHour data: regardless of the requested input period,
+    the time series that is read will have its start and end date/time set to actual date/time.
+    This ensures that odd offsets such as hour 1 for 3Hour data will match the actual data.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command
 when reading "real" or "model" data using filters.
@@ -69,13 +73,13 @@ The following figure illustrates reading a single "model" time series,
 in which case the model parameters are specified in addition
 to the site and data type parameters. There are two ways to select the MRI:
 
-1. Pick the MRI from the list at the bottom of the parameter section:
-	1. Additional information is shown in the choice, but only the MRI is saved in the command parameter
-2. Sequentially pick model-related metadata until a unique MRI is determined (multiple command parameters are saved):
-	1. Model name
-	2. Model run name
-	3. Hydrologic indicator (may be blank)
-	4. Run date (may be blank)
+1.  Pick the MRI from the list at the bottom of the parameter section:
+    1.  Additional information is shown in the choice, but only the MRI is saved in the command parameter
+2.  Sequentially pick model-related metadata until a unique MRI is determined (multiple command parameters are saved):
+    1.  Model name
+    2.  Model run name
+    3.  Hydrologic indicator (may be blank)
+    4.  Run date (may be blank)
 
 The following figure illustrates both approaches, although normally one or the other would be used. Selecting an MRI directly takes precedence over the other approach.
 
@@ -90,10 +94,10 @@ The following figure illustrates both approaches, although normally one or the o
 The following figure illustrates reading an ensemble of "model" time series,
 in which case an ensemble name is specified in addition to the SDI. Ensembles are stored in HDB as follows:
 
-* Ensemble (ensemble name is unique)
-	+ Trace(s) (trace number is unique)
-		- Model run identifier(s) (MRI is unique)
-			* `M_*` data tables
+*   Ensemble (ensemble name is unique)
+    +   Trace(s) (trace number is unique)
+        -   Model run identifier(s) (MRI is unique)
+            *   `M_*` data tables
 
 Consequently, in order to list the ensemble names for selection,
 the data table is checked for matching SDI, and additional queries map the data back to the ensemble data,
@@ -161,8 +165,8 @@ or because multiple time series intervals are written for the same SDI.
 For example, automated tests re-use the same SDI to read and write data
 for different time series intervals. The solution is to do one of the following.
 
-* Delete the bad data records in HDB. For exmaple, use the [`RunSql`](../RunSql/RunSql.md)
-command with an SQL file similar to the following (however, this does not seem to work.):
+*   Delete the bad data records in HDB. For exmaple, use the [`RunSql`](../RunSql/RunSql.md)
+    command with an SQL file similar to the following (however, this does not seem to work.):
 
 ```
 /* SQL to delete all records in period of test so old data does not interfere with test */
@@ -171,10 +175,10 @@ DELETE_R_BASE(100376,'hour',to_date('2010-03-12 00','YYYY-MM-DD HH24'),to_date('
 end;
 ```
 
-* Specify the `NHourIntervalOffset` commmand parameter as the expected hour offset from midnight
-for the first data value in the hourly time series,
-for the HDB time zone (e.g., MST for ECAO database).
-This tells TSTool to ignore all records that do not align.
+*   Specify the `NHourIntervalOffset` commmand parameter as the expected hour offset from midnight
+    for the first data value in the hourly time series,
+    for the HDB time zone (e.g., MST for ECAO database).
+    This tells TSTool to ignore all records that do not align.
 
 **<p style="text-align: center;">
 ![ReadReclamationHDB_AlignmentError](ReadReclamationHDB_AlignmentError.png)
@@ -196,5 +200,5 @@ HDB `R_HOUR` Table Illustrating Extra Data Records (should have every 3 hour but
 
 ## See Also ##
 
-* [`RunSql`](../RunSql/RunSql.md) command
-* [`WriteReclamationHDB`](../WriteReclamationHDB/WriteReclamationHDB.md) command
+*   [`RunSql`](../RunSql/RunSql.md) command
+*   [`WriteReclamationHDB`](../WriteReclamationHDB/WriteReclamationHDB.md) command

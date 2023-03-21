@@ -1,11 +1,11 @@
 # TSTool / Command / NewStatisticMonthTimeSeries #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -27,6 +27,10 @@ hour 0 or later of the following month.  **Handling other than daily data is not
 See also the [Statistic Examples](../../examples/examples.md#statistic-examples) for a list of commands that calculate statistics.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -106,10 +110,10 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [Statistic Examples](../../examples/examples.md#statistic-examples)
-* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
-* [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
-* [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command
-* [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) command
-* [`NewStatisticYearTS`](../NewStatisticYearTS/NewStatisticYearTS.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [Statistic Examples](../../examples/examples.md#statistic-examples)
+*   [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
+*   [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) commands.
+*   [`NewStatisticTimeSeries`](../NewStatisticTimeSeries/NewStatisticTimeSeries.md) command
+*   [`NewStatisticTimeSeriesFromEnsemble`](../NewStatisticTimeSeriesFromEnsemble/NewStatisticTimeSeriesFromEnsemble.md) command
+*   [`NewStatisticYearTS`](../NewStatisticYearTS/NewStatisticYearTS.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

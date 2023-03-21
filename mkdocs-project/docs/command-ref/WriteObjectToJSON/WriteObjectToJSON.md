@@ -1,11 +1,11 @@
 # TSTool / Command / WriteObjectToJSON #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ Any JSON object can be written, including objects read from GeoJSON files
 (for example using the [`NewObject`](../NewObject/NewObject.md) command).
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Object Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -55,4 +59,4 @@ Problems in JSON files can be checked by using online "JSON lint" websites.
 
 ## See Also ##
 
-* [`NewObject`](../NewObject/NewObject.md) command
+*   [`NewObject`](../NewObject/NewObject.md) command

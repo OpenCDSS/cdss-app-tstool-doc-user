@@ -1,11 +1,11 @@
 # TSTool / Command / CreateEnsembleFromOneTimeSeries #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -27,6 +27,10 @@ with the default being `Sequentially`, which results in a continuous record,
 suitable for hydrologic data.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Ensemble Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -91,5 +95,5 @@ The following figure illustrates a graph of the resulting ensemble:
 
 ## See Also ##
 
-* [`InsertTimeSeriesIntoEnsemble`](../InsertTimeSeriesIntoEnsemble/InsertTimeSeriesIntoEnsemble.md) command
-* [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command
+*   [`InsertTimeSeriesIntoEnsemble`](../InsertTimeSeriesIntoEnsemble/InsertTimeSeriesIntoEnsemble.md) command
+*   [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command

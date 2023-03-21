@@ -1,11 +1,11 @@
 # TSTool / Command / CopyTimeSeriesPropertiesToTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,11 +15,15 @@ The `CopyTimeSeriesPropertiesToTable` command copies time series properties to a
 Properties can be copied to an existing table, or a new table can be created.
 Time series properties typically are set in the following ways:
 
-1. Location and time series metadata from original data (e.g., database or web service) are set as properties when the time series are read.
-2. The [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command sets a property.
-3. Other commands set properties as a bi-product of processing.
+1.  Location and time series metadata from original data (e.g., database or web service) are set as properties when the time series are read.
+2.  The [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command sets a property.
+3.  Other commands set properties as a bi-product of processing.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Table, Time Series Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax
 (in this case the location part of the time series identifier is used to match the contents of the “loc” column in the table).
@@ -63,5 +67,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / SetPropertyFromObject #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,6 +19,10 @@ Typical uses of the command are:
 2.  Check whether an input JSON file contains expected properties.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Object Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax for general parameters.
 

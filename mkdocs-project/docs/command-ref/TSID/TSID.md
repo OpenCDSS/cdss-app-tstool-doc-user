@@ -1,11 +1,11 @@
 # TSTool / Command / TSID #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,16 +15,16 @@ A time series identifier (TSID) command reads a single time series.
 This is one of the few TSTool commands that does not follow the `Command(ParameterName=ParameterValue,...)` syntax.
 Time series are read using one of the following commands:
 
-* `TSID` - implicitly reads time series consistent with the datastore or data type specified by the `~datastore`
-at the end of the TSID.
-* [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command,
-which provides general parameters to control the read, such as alias to assign.
-* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command,
-which reads multiple time series given a list of time series in a table.
-* Specific `Read....` command consistent with the TSID, in order to provide controlling parameters
-specific to the datastore.
-For example, the [`ReadColoradoHydroBaseRest`](../ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command
-provides parameters to control filling additional missing values with zeros.
+*   `TSID` - implicitly reads time series consistent with the datastore or data type specified by the `~datastore`
+    at the end of the TSID.
+*   [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command,
+    which provides general parameters to control the read, such as alias to assign.
+*   [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command,
+    which reads multiple time series given a list of time series in a table.
+*   Specific `Read....` command consistent with the TSID, in order to provide controlling parameters
+    specific to the datastore.
+    For example, the [`ReadColoradoHydroBaseRest`](../ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command
+    provides parameters to control filling additional missing values with zeros.
 
 In order to read the time series from a persistent format (database, file, or web site),
 the TSID must contain the datastore name (or input type), and if necessary, the input name.
@@ -44,6 +44,10 @@ Use [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md)
 command to assign an alias to the time series, or use one of the specific read commands.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 Limited checks are done while editing the command (e.g., verify that a valid data interval is used).
@@ -107,5 +111,5 @@ A sample command file to read time series from the [State of Colorado’s HydroB
 
 ## See Also ##
 
-* [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command
-* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command
+*   [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command
+*   [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command

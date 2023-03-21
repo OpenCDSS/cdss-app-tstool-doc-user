@@ -1,11 +1,11 @@
 # TSTool / Command / SelectTimeSeries #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ commands that operate on a time series list can use `TSList=SelectedTS`.
 See also the [`DeselectTimeSeries`](../DeselectTimeSeries/DeselectTimeSeries.md) command.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Select, Free, Sort Time Series***
 
 The following dialog is used to edit the command and illustrates the command
 syntax for selecting time series using the `TSList` parameter.
@@ -106,5 +110,5 @@ SelectTimeSeries(TSList=AllMatchingTSID,TSID="40*",DeselectAllFirst=True)
 
 ## See Also ##
 
-* [`DeselectTimeSeries`](../DeselectTimeSeries/DeselectTimeSeries.md) command
-* [`Free`](../Free/Free.md) command
+*   [`DeselectTimeSeries`](../DeselectTimeSeries/DeselectTimeSeries.md) command
+*   [`Free`](../Free/Free.md) command

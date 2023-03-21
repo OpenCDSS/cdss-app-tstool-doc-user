@@ -1,11 +1,11 @@
 # TSTool / Command / SetEnsembleProperty #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ User-defined properties are handled as a list of properties that can be referenc
 using the `${tsensemble:Property}` notation.  Property names are case-specific.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Ensemble Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for built-in properties.
 
@@ -68,4 +72,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command
+*   [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command

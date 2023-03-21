@@ -1,11 +1,11 @@
 # TSTool / Command / ReadNwsrfsFS5Files #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,6 +15,10 @@ The `ReadNwsrfsFS5Files` command reads a single time series from an NWSRFS FS5Fi
 (see the [NWSRFS FS5Files Input Type Appendix](../../datastore-ref/NWSRFS-FS5Files/NWSRFS-FS5Files.md)) and assigns an alias to the result.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax:
 

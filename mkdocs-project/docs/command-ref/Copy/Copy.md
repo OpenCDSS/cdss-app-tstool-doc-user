@@ -1,11 +1,11 @@
 # TSTool / Command / Copy #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -22,6 +22,10 @@ and the second time series added to the copy – this ensures that there is not 
 Parameters are available to control how much of the original data are copied.
   
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -74,6 +78,6 @@ Copy(Alias=”Filled”,TSID="08223000.DWR.Streamflow.Month",NewTSID="08223000.D
 
 ## See Also ##
 
-* [`CopyFile`](../CopyFile/CopyFile.md) command
-* [`CopyTable`](../CopyTable/CopyTable.md) command
-* [`Free`](../Free/Free.md) command
+*   [`CopyFile`](../CopyFile/CopyFile.md) command
+*   [`CopyTable`](../CopyTable/CopyTable.md) command
+*   [`Free`](../Free/Free.md) command

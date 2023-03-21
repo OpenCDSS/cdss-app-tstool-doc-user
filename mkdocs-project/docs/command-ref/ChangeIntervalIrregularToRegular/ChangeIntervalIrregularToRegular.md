@@ -1,11 +1,11 @@
 # TSTool / Command / ChangeIntervalIrregularToRegular #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -46,24 +46,28 @@ In the following diagram, `(1)`, `(2)`, `(3)`, and `(4)` indicate sensor measure
   YYYY-MM-DD 00            YYYY-MM-DD 01              YYYY-MM-DD 02              YYYY-MM-DD 03
 ```
 
-1. For interval ending `YYYY-MM-DD 01`:
-	1. The sample is determined as data values `2`, `3`, and `4`.
-	The sample does not include value `1` because the output interval spans the time:
-	`> YYYY-MM-DD 00` and `<= YYYY-MM-DD 01`
-	2. The output value is computed as the mean of values `1`, `2`, and `3`.
-2. For interval ending `YYYY-MM-DD 02`:
-	1. The sample has no values.
-	2. However, because the `PersistInterval` is `1Hour`,
-	the last value `4` within the `PersistInterval` is used as the single sample value
-	and in this case is also the mean value.
-	If `PersistValue=0`, then an input value of `0` would be used,
-	which is suitable for data types such as precipitation increment.
-3. For interval ending `YYYY-MM-DD 03`:
-	1. The sample has no values.
-	2. The output value is missing since a value cannot be determined from
-	the sample or `PersistInterval`.
+1.  For interval ending `YYYY-MM-DD 01`:
+    1.  The sample is determined as data values `2`, `3`, and `4`.
+        The sample does not include value `1` because the output interval spans the time:
+        `> YYYY-MM-DD 00` and `<= YYYY-MM-DD 01`
+    2.  The output value is computed as the mean of values `1`, `2`, and `3`.
+2.  For interval ending `YYYY-MM-DD 02`:
+    1.  The sample has no values.
+    2.  However, because the `PersistInterval` is `1Hour`,
+        the last value `4` within the `PersistInterval` is used as the single sample value
+        and in this case is also the mean value.
+        If `PersistValue=0`, then an input value of `0` would be used,
+        which is suitable for data types such as precipitation increment.
+3.  For interval ending `YYYY-MM-DD 03`:
+    1.  The sample has no values.
+    2.  The output value is missing since a value cannot be determined from
+        the sample or `PersistInterval`.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax for the command.
 
@@ -165,4 +169,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
+*   [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command

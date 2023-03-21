@@ -1,11 +1,11 @@
 # TSTool / Command / ConfigureLogging #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,6 +17,10 @@ The command is particularly useful for disabling [`StartLog`](../StartLog/StartL
 used with automated testing so that all logging output goes to the main log file.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Logging and Messaging***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -51,6 +55,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel.md) command - controls debug output
-* [`SetWarningLevel`](../SetWarningLevel/SetWarningLevel.md) command - controls warning output
-* [`StartLog`](../StartLog/StartLog.md) command - controls log file where messages are written
+*   [`SetDebugLevel`](../SetDebugLevel/SetDebugLevel.md) command - controls debug output
+*   [`SetWarningLevel`](../SetWarningLevel/SetWarningLevel.md) command - controls warning output
+*   [`StartLog`](../StartLog/StartLog.md) command - controls log file where messages are written

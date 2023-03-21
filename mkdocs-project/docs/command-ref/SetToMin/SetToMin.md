@@ -1,11 +1,11 @@
 # TSTool / Command / SetToMin #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ the minimum of its own values and those of one or more additional (independent) 
 See also the [`SetToMax`](../SetToMax/SetToMax.md) command.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Set Time Series Contents***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -64,5 +68,5 @@ SetToMin(TSID="08236000.DWR.Streamflow.Month",IndependentTSList=SpecifiedTSID,In
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetToMax`](../SetToMax/SetToMax.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetToMax`](../SetToMax/SetToMax.md) command

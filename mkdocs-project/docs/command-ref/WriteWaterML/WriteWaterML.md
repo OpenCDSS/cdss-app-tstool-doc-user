@@ -1,11 +1,11 @@
 # TSTool / Command / WriteWaterML #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -21,6 +21,10 @@ See the [WaterML Input Type Appendix](../../datastore-ref/WaterML/WaterML.md) fo
 See also the [`WriteWaterML2`](../WriteWaterML2/WriteWaterML2.md) command, which focuses on WaterML 2.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -64,5 +68,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command
-* [`WriteWaterML2`](../WriteWaterML2/WriteWaterML2.md) command
+*   [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command
+*   [`WriteWaterML2`](../WriteWaterML2/WriteWaterML2.md) command

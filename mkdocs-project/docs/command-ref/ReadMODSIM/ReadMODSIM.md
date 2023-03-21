@@ -1,11 +1,11 @@
 # TSTool / Command / ReadMODSIM #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ Specify a node/link name and data type to read a single time series – if not
 specified all time series from the file will be read.  An alias can be assigned to each time series.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax.
 When a file is selected, the available data types are listed, based on the file extension (the types are not read from the file).
@@ -63,5 +67,5 @@ ReadMODSIM(Alias=”BIGTOM”,InputFile="BIGTOM17.RES",TSID="GREELEYCBT..STOR_TR
 
 ## See Also ##
 
-* [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command
-* [`ReadRiverWare`](../ReadRiverWare/ReadRiverWare.md) command
+*   [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command
+*   [`ReadRiverWare`](../ReadRiverWare/ReadRiverWare.md) command

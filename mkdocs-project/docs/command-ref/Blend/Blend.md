@@ -1,11 +1,11 @@
 # TSTool / Command / Blend #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -22,6 +22,10 @@ The `Blend` command ensures that single data values are used whereas
 The [`SetFromTS`](../SetFromTS/SetFromTS.md) does not extend the period.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Manipulate Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -69,6 +73,6 @@ Blend(TSID=”08236000.DWR.Streamflow.Month”,IndependentTSID=”08236500.DWR.S
 
 ## See Also ##
 
-* [`Add`](../Add/Add.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetFromTS`](../SetFromTS/SetFromTS.md) command
+*   [`Add`](../Add/Add.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetFromTS`](../SetFromTS/SetFromTS.md) command

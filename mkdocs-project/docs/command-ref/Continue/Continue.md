@@ -1,11 +1,11 @@
 # TSTool / Command / Continue #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ or will be complete and logic will continue with the command after the correspon
 [`EndFor`](../EndFor/EndFor.md) command.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -52,7 +56,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`Break`](../Break/Break.md) command
-* [`EndFor`](../EndFor/EndFor.md) command
-* [`For`](../For/For.md) command
-* [`If`](../If/If.md) command
+*   [`Break`](../Break/Break.md) command
+*   [`EndFor`](../EndFor/EndFor.md) command
+*   [`For`](../For/For.md) command
+*   [`If`](../If/If.md) command

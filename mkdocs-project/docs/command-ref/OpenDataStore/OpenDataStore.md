@@ -1,11 +1,11 @@
 # TSTool / Command / OpenDataStore #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -37,6 +37,10 @@ Datastore Information from *View / Datastores* (<a href="../View_Datastores.png"
 </p>**
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Datastore Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 The database engine (database software) dictates which datastore properties are used.
@@ -108,6 +112,6 @@ See the [Troubleshooting](../../troubleshooting/troubleshooting.md#issue-6-out-o
 
 ## See Also ##
 
-* [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
-* [`NewAccessDatabase`](../NewAccessDatabase/NewAccessDatabase.md) command
-* [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md) command
+*   [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
+*   [`NewAccessDatabase`](../NewAccessDatabase/NewAccessDatabase.md) command
+*   [`NewSQLiteDatabase`](../NewSQLiteDatabase/NewSQLiteDatabase.md) command

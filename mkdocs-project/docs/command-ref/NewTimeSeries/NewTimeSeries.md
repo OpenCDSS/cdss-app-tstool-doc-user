@@ -1,11 +1,11 @@
 # TSTool / Command / NewTimeSeries #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -23,6 +23,10 @@ Subsequent manipulation of the time series may require use of the
 other commands to ensure that the new time series properties are as desired.  
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax for the command.
 The new time series identifier, which provides critical information including the data interval,
@@ -84,6 +88,6 @@ NewTimeSeries(Alias=”station1”,NewTSID="Station1.MyModel.Streamflow.Month",D
 
 ## See Also ##
 
-* [`NewPatternTimeSeries`](../NewPatternTimeSeries/NewPatternTimeSeries.md) command
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
-* [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command
+*   [`NewPatternTimeSeries`](../NewPatternTimeSeries/NewPatternTimeSeries.md) command
+*   [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
+*   [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command

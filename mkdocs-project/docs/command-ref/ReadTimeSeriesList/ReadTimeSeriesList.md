@@ -1,11 +1,11 @@
 # TSTool / Command / ReadTimeSeriesList #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -27,8 +27,8 @@ an example of which is shown below as a comma-separated value file
 The command typically is used when reading time series from a single
 source and can streamline processing in the following situations:
 
-* A list of identifiers may have been generated from a database query
-* A list of identifiers may have been extracted from a model data set
+*   A list of identifiers may have been generated from a database query
+*   A list of identifiers may have been extracted from a model data set
 
 TSTool uses the location identifiers in the table with the command parameters
 and internally creates a list of time series identifiers.
@@ -51,6 +51,10 @@ these commands typically are optimized to read multiple time series from the fil
 Use the [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command to set the period to read.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series identifier parts.
 
@@ -146,6 +150,6 @@ ReadTimeSeriesList(TableID=”Diversions.csv",LocationColumn=”WDID”,DataSour
 
 ## See Also ##
 
-* [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command
-* [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
+*   [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command
+*   [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command
+*   [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command

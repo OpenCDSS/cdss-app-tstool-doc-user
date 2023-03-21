@@ -1,11 +1,11 @@
 # TSTool / Command / SetTimeSeriesValuesFromLookupTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,10 +14,10 @@
 The `SetTimeSeriesValuesFromLookupTable` command uses an input time series and lookup
 table to set values in the output time series.  Examples of using this command include:
 
-* Converting reservoir elevation to storage, surface area, seepage, or other values
-* Converting river stage to discharge
-* Converting a time series to category values
-* Lookup up values from a distribution
+*   Converting reservoir elevation to storage, surface area, seepage, or other values
+*   Converting river stage to discharge
+*   Converting a time series to category values
+*   Lookup up values from a distribution
 
 In many cases the lookup table will apply throughout the analysis period.
 The values in the table should be sorted in ascending order prior to lookup.
@@ -27,6 +27,10 @@ Missing (null) and NaN values in the lookup table are removed before
 processing so that lookups are performed only on rows with input and output values.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Set Time Series Contents***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
@@ -101,4 +105,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SetTimeSeriesValuesFromTable`](../SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable.md) command
+*   [`SetTimeSeriesValuesFromTable`](../SetTimeSeriesValuesFromTable/SetTimeSeriesValuesFromTable.md) command

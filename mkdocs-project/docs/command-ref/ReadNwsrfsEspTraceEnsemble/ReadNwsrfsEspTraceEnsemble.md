@@ -1,11 +1,11 @@
 # TSTool / Command / ReadNwsrfsEspTraceEnsemble #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,6 +19,10 @@ The sequence identifier (trace number) in the time series is set to the historic
 year for the start of the trace and the alias can be set dynamically to uniquely identify each trace.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Ensemble Processing***
 
 The following dialog is used to edit the command and illustrates the syntax for the command when reading a single time series.
 
@@ -64,4 +68,4 @@ ReadNwsrfsEspTraceEnsemble(InputFile="Data\CSCI.CSCI2.SQIN.06.CS",EnsembleID="En
 
 ## See Also ##
 
-* [`WriteNwsrfsEspTraceEnsemble`](../WriteNwsrfsEspTraceEnsemble/WriteNwsrfsEspTraceEnsemble.md) command
+*   [`WriteNwsrfsEspTraceEnsemble`](../WriteNwsrfsEspTraceEnsemble/WriteNwsrfsEspTraceEnsemble.md) command

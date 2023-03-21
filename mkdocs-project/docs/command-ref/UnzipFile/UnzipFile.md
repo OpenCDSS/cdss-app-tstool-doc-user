@@ -1,11 +1,11 @@
 # TSTool / Command / UnzipFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,6 +15,10 @@ The `UnzipFile` command unzips the contents of a zip (`*.zip`) or gzip (`*.gz`) 
 Existing files will be overwritten.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -54,4 +58,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`WebGet`](../WebGet/WebGet.md) command
+*   [`WebGet`](../WebGet/WebGet.md) command

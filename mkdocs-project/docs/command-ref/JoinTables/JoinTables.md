@@ -1,11 +1,11 @@
 # TSTool / Command / JoinTables #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,6 +19,10 @@ All or a subset of the columns and rows from the second table can be included in
 The functionality of the command is similar to database SQL join statements using left, right, center, etc. join syntax.  
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Append, Join Tables***
 
 The following dialog is used to edit the command and illustrates the syntax of the command
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
@@ -62,8 +66,8 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`AppendTable`](../AppendTable/AppendTable.md) command
-* [`CopyTable`](../CopyTable/CopyTable.md) command
-* [`FreeTable`](../FreeTable/FreeTable.md) command
-* [`NewTable`](../NewTable/NewTable.md) command
-* [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command
+*   [`AppendTable`](../AppendTable/AppendTable.md) command
+*   [`CopyTable`](../CopyTable/CopyTable.md) command
+*   [`FreeTable`](../FreeTable/FreeTable.md) command
+*   [`NewTable`](../NewTable/NewTable.md) command
+*   [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command

@@ -25,6 +25,10 @@ The output column can be the same as an existing table column.
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
+
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
@@ -88,5 +92,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime.md) command
-* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+*   [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime.md) command
+*   [`FormatTableString`](../FormatTableString/FormatTableString.md) command

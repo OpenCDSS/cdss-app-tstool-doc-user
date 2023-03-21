@@ -1,11 +1,11 @@
 # TSTool / Command / AnalyzeNetworkPointFlow #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,14 +19,14 @@ it also can represent other flow networks such as transportation or other mass/e
 
 This command differs from the functionality of other network analysis tools as follows:
 
-* Daily administration tools, such as the State of Colorado’s Colorado Water Rights Administration Tool (CWRAT)
-(**CWRAT is no longer used in production**) perform a point flow analysis for a single day,
-which only requires knowing one day’s input values,
-whereas the `AnalyzeNetworkPointFlow` analyzes time series for a specified period.
-* More sophisticated models, such as the State of Colorado’s StateMod water allocation model,
-perform allocation decisions within each time step for the full period,
-whereas the `AnalyzeNetworkPointFlow` command performs a sequence of
-basic time series manipulations that can be quickly configured.
+*   Daily administration tools, such as the State of Colorado’s Colorado Water Rights Administration Tool (CWRAT)
+    (**CWRAT is no longer used in production**) perform a point flow analysis for a single day,
+    which only requires knowing one day’s input values,
+    whereas the `AnalyzeNetworkPointFlow` analyzes time series for a specified period.
+*   More sophisticated models, such as the State of Colorado’s StateMod water allocation model,
+    perform allocation decisions within each time step for the full period,
+    whereas the `AnalyzeNetworkPointFlow` command performs a sequence of
+    basic time series manipulations that can be quickly configured.
 
 It may be possible to utilize the network data from tools such as those mentioned above with the `AnalyzeNetworkPointFlow` command.
 For example, the StateMod river network file (`*.rin`) can be read using the TSTool
@@ -34,10 +34,10 @@ For example, the StateMod river network file (`*.rin`) can be read using the TST
 
 Limitations to be addressed with future enhancements:
 
-* The command does not handle branching networks in calculations
-* The command does not handle reservoirs and storage calculations
-* The output time series identifiers and alias cannot be user-defined
-* Temporary known flows, for example at a diversion that dries the river, are not handled in calculations
+*   The command does not handle branching networks in calculations
+*   The command does not handle reservoirs and storage calculations
+*   The output time series identifiers and alias cannot be user-defined
+*   Temporary known flows, for example at a diversion that dries the river, are not handled in calculations
 
 The following figure illustrates the network connectivity and mass balance that is performed at each node.
 Currently “on-channel” reservoirs with storage are not supported and gain/loss
@@ -56,11 +56,11 @@ Consequently the command currently is suitable for analysis of a main stem river
 
 There are two main data configuration requirements:
 
-1. Define the node network using node identifiers, node type, and other information that control the analysis.
-2. Provide data that allows the command to locate the input time series for the analysis by matching with the node.
-The time series identifiers (or alias) used by TSTool generally have location
-identifiers that match the node identifier; however,
-this is not a requirement if the input TSID is specified directly.
+1.  Define the node network using node identifiers, node type, and other information that control the analysis.
+2.  Provide data that allows the command to locate the input time series for the analysis by matching with the node.
+    The time series identifiers (or alias) used by TSTool generally have location
+    identifiers that match the node identifier; however,
+    this is not a requirement if the input TSID is specified directly.
 
 Defaults are in place that allow the time series identifier to be created from the network data.
 However, for complicated networks where input time series may be accessed from multiple sources,
@@ -160,98 +160,98 @@ Currently this logic is performed by navigating the network from most upstream t
 downstream node and processing all timesteps for a node before moving to the next node.
 In the future the entire network may be traversed for each timestep to allow for temporary known flows within a reach.
 
-1. The network is navigated from top to bottom.
-When a confluence is found (a node with more than one upstream node),
-each confluence is processed from the top down to the confluence point.
-Of particular importance is the concept of a “stream reach”,
-which is the reach between known flow points,
-because mass balance is enforced at known flow points and gain/loss can be estimated between the known flow points.
-	1. The data type for the node (see `*DataType` command parameters)
-	is used to retrieve the relevant time series for the node.
-	The first time series that matches the location ID, data type, and interval is used as input for the node.
-	The time series must have been read prior to the `AnalyzeNetworkPointFlow` command.
-	For example, use the [`CopyTable`](../CopyTable/CopyTable) command to copy a
-	subset of the network table’s `NodeID` values and then use the
-	[`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command with the list of identifiers.
-	2. Calculate the node’s inflow:
-		1. Node types that set outflow, indicated by the `NodeOutflowDataTypes` parameter (e.g., `StreamGage`):
-			* `NodeInflow` = input time series for node
-		2. All other node types:
-			* `NodeInflow ` = sum of upstream node outflows
-	3.	Calculate the node’s outflow:
-		1. Node types that add, indicated by the `NodeAddDataTypes` parameter (e.g., `Return`, `Import`):
-			* `NodeOutflow` = `NodeInflow` + added time series
-		2. Node types that subtract, indicated by the `NodeSubtractDataTypes` parameter (e.g., `Diversion`):
-			* `NodeOutflow` = `NodeInflow` - subtracted time series
-		3. Node types that set outflow, indicated by the `NodeOutflowDataTypes` parameter (e.g., `StreamGage`):
-			* `NodeOutflow` = `NodeInflow`
-		4. Node types that let flow through, indicated by the `NodeFlowThroughDataTypes` parameter (e.g., `InstreamFlow`):
-			* `NodeOutflow` = `NodeInflow`.
-	4. For known flow points (e.g., `StreamGage` node type), set the reach gain/loss:
-		1. `NodeUpstreamReachGain` = difference between upstream node outflow and known flow at downstream node in reach
-	5. If gain/loss is being estimated and a known flow node encountered (e.g., `StreamGage`),
-	gain/loss between this node and the nearest upstream node(s) is compute.
-	This has only been implemented for the case where all intervening nodes are in a non-branching reach.
-		1. First calculate the distribution factor by which the reach gain (see previous step) will be distributed to each node in the reach:
-			* If the `GainMethod=None`, no adjustment to flows is made and the gain/loss
-			upstream of the know flow node will result in a discontinuous jump because no gain/loss adjustment is made.
-			* If the `GainMethod=Distance`, use the node distance
-			data from the network table to prorate the gain/loss in the stream reach.
-			The difference in distance between the upstream node and the current node is
-			set to weight for prorating the reach gain/loss.
-			Use this method if the gain/loss rate is the same throughout the reach and
-			therefore only the distance between nodes controls the gain/loss.
-			* If the `GainMethod=Weight`, the gain/loss is prorated by the weights
-			specified by the `NodeWeightColumn` parameter (or weight equally
-			if the weights are not specified in the network table).
-			The weight of the upstream known flow node is not used.
-			Use this method if the relative gain/loss for each node within the reach can be specified.
-			* If the `GainMethod=DistanceWeight`, the gain/loss is prorated
-			by the product of the weights specified by the `NodeWeightColumn` parameter
-			(or weight equally if the weights are not specified in the network table)
-			and by the values from the `NodeDistanceColumn`.
-			The weight of the upstream known flow node is not used.
-			Use this method if the relative rate of gain/loss for each node can be specified,
-			but overall gain/loss is also a function of the distance.
-			Even though a rate is specified, the calculated gain/loss may be
-			slightly different because the overall reach gain/loss must be
-			balanced at known flow points for each time step.
-			* Multiply `NodeUpstreamReachGain` by the gain/loss distribution
-			factor to calculate `NodeReadGain` for each node.
-			* Compute the cumulative gain/loss for the node by summing `NodeUpstreamNodeGain`
-			for each upstream node and set to `NodeUpstreamReachGain` for the current node. 
-2. Analysis statistics optionally are written to an output table,
-which contains a row for each network node.
-Statistics include information such as the number of missing values in the input time series.
-This information can be used to evaluate the quality of the analysis.
-**This feature has not yet been implemented.**
+1.  The network is navigated from top to bottom.
+    When a confluence is found (a node with more than one upstream node),
+    each confluence is processed from the top down to the confluence point.
+    Of particular importance is the concept of a “stream reach”,
+    which is the reach between known flow points,
+    because mass balance is enforced at known flow points and gain/loss can be estimated between the known flow points.
+    1.  The data type for the node (see `*DataType` command parameters)
+        is used to retrieve the relevant time series for the node.
+        The first time series that matches the location ID, data type, and interval is used as input for the node.
+        The time series must have been read prior to the `AnalyzeNetworkPointFlow` command.
+        For example, use the [`CopyTable`](../CopyTable/CopyTable) command to copy a
+        subset of the network table’s `NodeID` values and then use the
+        [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command with the list of identifiers.
+    2.  Calculate the node’s inflow:
+        1.  Node types that set outflow, indicated by the `NodeOutflowDataTypes` parameter (e.g., `StreamGage`):
+            *   `NodeInflow` = input time series for node
+        2.  All other node types:
+            *   `NodeInflow ` = sum of upstream node outflows
+    3.  Calculate the node’s outflow:
+        1.  Node types that add, indicated by the `NodeAddDataTypes` parameter (e.g., `Return`, `Import`):
+            *   `NodeOutflow` = `NodeInflow` + added time series
+        2.  Node types that subtract, indicated by the `NodeSubtractDataTypes` parameter (e.g., `Diversion`):
+            *   `NodeOutflow` = `NodeInflow` - subtracted time series
+        3.  Node types that set outflow, indicated by the `NodeOutflowDataTypes` parameter (e.g., `StreamGage`):
+            *   `NodeOutflow` = `NodeInflow`
+        4.  Node types that let flow through, indicated by the `NodeFlowThroughDataTypes` parameter (e.g., `InstreamFlow`):
+            *   `NodeOutflow` = `NodeInflow`.
+    4.  For known flow points (e.g., `StreamGage` node type), set the reach gain/loss:
+        1.  `NodeUpstreamReachGain` = difference between upstream node outflow and known flow at downstream node in reach
+    5.  If gain/loss is being estimated and a known flow node encountered (e.g., `StreamGage`),
+        gain/loss between this node and the nearest upstream node(s) is compute.
+        This has only been implemented for the case where all intervening nodes are in a non-branching reach.
+        1.  First calculate the distribution factor by which the reach gain (see previous step) will be distributed to each node in the reach:
+            *   If the `GainMethod=None`, no adjustment to flows is made and the gain/loss
+                upstream of the know flow node will result in a discontinuous jump because no gain/loss adjustment is made.
+            *   If the `GainMethod=Distance`, use the node distance
+                data from the network table to prorate the gain/loss in the stream reach.
+                The difference in distance between the upstream node and the current node is
+                set to weight for prorating the reach gain/loss.
+                Use this method if the gain/loss rate is the same throughout the reach and
+                therefore only the distance between nodes controls the gain/loss.
+            *   If the `GainMethod=Weight`, the gain/loss is prorated by the weights
+                specified by the `NodeWeightColumn` parameter (or weight equally
+                if the weights are not specified in the network table).
+                The weight of the upstream known flow node is not used.
+                Use this method if the relative gain/loss for each node within the reach can be specified.
+            *   If the `GainMethod=DistanceWeight`, the gain/loss is prorated
+                by the product of the weights specified by the `NodeWeightColumn` parameter
+                (or weight equally if the weights are not specified in the network table)
+                and by the values from the `NodeDistanceColumn`.
+                The weight of the upstream known flow node is not used.
+                Use this method if the relative rate of gain/loss for each node can be specified,
+                but overall gain/loss is also a function of the distance.
+                Even though a rate is specified, the calculated gain/loss may be
+                slightly different because the overall reach gain/loss must be
+                balanced at known flow points for each time step.
+            *   Multiply `NodeUpstreamReachGain` by the gain/loss distribution
+                factor to calculate `NodeReadGain` for each node.
+            *   Compute the cumulative gain/loss for the node by summing `NodeUpstreamNodeGain`
+                for each upstream node and set to `NodeUpstreamReachGain` for the current node. 
+2.  Analysis statistics optionally are written to an output table,
+    which contains a row for each network node.
+    Statistics include information such as the number of missing values in the input time series.
+    This information can be used to evaluate the quality of the analysis.
+    **This feature has not yet been implemented.**
 
 Issues that need to be considered include:
 
-1. Missing data in input result in missing data in calculated values.
-Use TSTool features to fill missing data in time series before using as input to the analysis.
-Because this may be a major effort, especially for a long analysis period,
-it may be appropriate to read time series from model data sets.
-It is envisioned that the output table will provide feedback on
-how much missing data there is and how it impacts the analysis.
-To review missing data, use the Period of Record graph or the Data Coverage tool in TSTool.
-2. TSTool’s graphing tool currently does not allow graphing lines
-as a step function in the case where no gain/loss is computed.
-Instead, the line connects the data points.  An enhancement to the graphing tool is needed.
-3. TSTool does not provide a way to graph a stream reach where the
-graph values are pulled from each time series for a point in time.
-Ideally a visualization tool would allow “scrolling” through dates and showing the
-river reach with flow on the Y axis and node distance on the X axis,
-although it would be tedious to have to scroll through the period.
-4. There may be cases where a subtraction at the node takes all of the flow
-resulting in a zero or negative value, essentially causing the node to be a known zero point flow.
-For example, in Colorado, a river call may result in a river drying up during the call.
-It is possible to estimate when this occurs, but the data quality may be low.
-Currently TSTool allows negative flows in this case, which indicates that
-input time series or the simple gain method calculations do not accurately represent the system.
-One option in this case is to use the TSTool
-[`AdjustExtremes`](../AdjustExtremes/AdjustExtremes.md) command,
-which maintains mass balance around the extreme values.
+1.  Missing data in input result in missing data in calculated values.
+    Use TSTool features to fill missing data in time series before using as input to the analysis.
+    Because this may be a major effort, especially for a long analysis period,
+    it may be appropriate to read time series from model data sets.
+    It is envisioned that the output table will provide feedback on
+    how much missing data there is and how it impacts the analysis.
+    To review missing data, use the Period of Record graph or the Data Coverage tool in TSTool.
+2.  TSTool’s graphing tool currently does not allow graphing lines
+    as a step function in the case where no gain/loss is computed.
+    Instead, the line connects the data points.  An enhancement to the graphing tool is needed.
+3.  TSTool does not provide a way to graph a stream reach where the
+    graph values are pulled from each time series for a point in time.
+    Ideally a visualization tool would allow “scrolling” through dates and showing the
+    river reach with flow on the Y axis and node distance on the X axis,
+    although it would be tedious to have to scroll through the period.
+4.  There may be cases where a subtraction at the node takes all of the flow
+    resulting in a zero or negative value, essentially causing the node to be a known zero point flow.
+    For example, in Colorado, a river call may result in a river drying up during the call.
+    It is possible to estimate when this occurs, but the data quality may be low.
+    Currently TSTool allows negative flows in this case, which indicates that
+    input time series or the simple gain method calculations do not accurately represent the system.
+    One option in this case is to use the TSTool
+    [`AdjustExtremes`](../AdjustExtremes/AdjustExtremes.md) command,
+    which maintains mass balance around the extreme values.
 
 It is important to understand that such a point flow analysis represents
 a snapshot of the system at any point in time, but does not route flows through the network.
@@ -269,6 +269,10 @@ One way to work around these limitations is to use a longer interval,
 for example monthly instead of daily, in input time series or convert the point flow analysis results.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Network Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the
 command for parameters to map network table columns to network nodes.
@@ -342,7 +346,7 @@ Command Parameters
 |`AnalysisStart`|The analysis start, which defines the period for output time series.  Specify to a precision consistent with Specify to a precision consistent with Interval.|Global output period.|
 |`AnalysisEnd`|The analysis end, which defines the period for output time series.  Specify to a precision consistent with `Interval`.|Global output period.|
 |`Units`|Units for output time series.  Warnings will be generated if input time series for the analysis are not consistent with these units.||
-|`GainMethod`|The method used to prorate the gain/loss between known point flow nodes to other nodes in the reach.  Currently this can be used only on non-branching networks.<br><ul><li>`Distance` – prorate the gain/loss using distance between nodes (as a portion of the total distance).  Use this method if a constant gain/loss rate applies over each reach in the network.</li><li>`None` – no gain/loss is estimated, resulting in a discontinuity in an outflow jump above each known point flow.</li><li>`DistanceWeight` – prorate the gain/loss using distance*weight as the weight for each node, where the rate is specified in the weight network table column.  Use this method when the gain/loss rate varies by location and should be represented as a rate.</li><li>`Weight` – prorate the gain/loss using the weights specified for each node.  Use this method if the gain/loss fraction in a reach is explicitly specified.</li></ul>|None|
+|`GainMethod`|The method used to prorate the gain/loss between known point flow nodes to other nodes in the reach.  Currently this can be used only on non-branching networks.<br><ul><li>`Distance` – prorate the gain/loss using distance between nodes (as a portion of the total distance).  Use this method if a constant gain/loss rate applies over each reach in the network.</li><li>`None` – no gain/loss is estimated, resulting in a discontinuity in an outflow jump above each known point flow.</li><li>`DistanceWeight` – prorate the gain/loss using distance`*`weight as the weight for each node, where the rate is specified in the weight network table column.  Use this method when the gain/loss rate varies by location and should be represented as a rate.</li><li>`Weight` – prorate the gain/loss using the weights specified for each node.  Use this method if the gain/loss fraction in a reach is explicitly specified.</li></ul>|None|
 |`OutputTableID`|The identifier for the output table to receive analysis results statistics. |No output table will be created.|
 |`TSIDColumn`|The name of the network table column containing time series identifiers or aliases for the input time series for the node.  Use `%I` in the column values to replace with the value of the Interval parameter.|Time series will be matched with nodes using the `NodeID` and data types specified with `NodeAddDataType`, etc.|
 
@@ -407,7 +411,7 @@ AnalyzeNetworkPointFlow(TableID="Network1",NodeIDColumn="NodeID",NodeNameColumn=
 
 ## See Also ##
 
-* [`AdjustExtremes`](../AdjustExtremes/AdjustExtremes.md) command
-* [`CopyTable`](../CopyTable/CopyTable.md) command
-* [`CreateNetworkFromTable`](../CreateNetworkFromTable/CreateNetworkFromTable.md) command
-* [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command
+*   [`AdjustExtremes`](../AdjustExtremes/AdjustExtremes.md) command
+*   [`CopyTable`](../CopyTable/CopyTable.md) command
+*   [`CreateNetworkFromTable`](../CreateNetworkFromTable/CreateNetworkFromTable.md) command
+*   [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command

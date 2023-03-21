@@ -1,11 +1,11 @@
 # TSTool / Command / WriteTableToShapefile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,11 +14,11 @@
 The `WriteTableToShapefile` command writes a table to an Esri Shapefile,
 which is a spatial data format that can be viewed in geographic information system (GIS) software and other visualization tools.  See:
 
-* [Shapefile on Wikipedia](https://en.wikipedia.org/wiki/Shapefile)
+*   [Shapefile on Wikipedia](https://en.wikipedia.org/wiki/Shapefile)
 
 The table must include columns for longitude and latitude or a column containing Well Known Text (WKT) geometry strings.  See:
 
-* [Well-known Text on Wikipedia](https://en.wikipedia.org/wiki/Well-known_text)
+*   [Well-known Text on Wikipedia](https://en.wikipedia.org/wiki/Well-known_text)
 
 Currently only point and polygon data can be processed but in the future support
 for well-known text for other geometry types will be added.
@@ -26,6 +26,10 @@ A future enhancement of this command will allow the geometry feature data to be 
 from an existing shapefile or other standard spatial data format.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Spatial Data Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -104,5 +108,5 @@ The following example illustrates a CSV table that specifies WKT for polygons:
 
 ## See Also ##
 
-* [`WriteTableToGeoJSON`](../WriteTableToGeoJSON/WriteTableToGeoJSON.md) command
-* [`WriteTableToKml`](../WriteTableToKml/WriteTableToKml.md) command
+*   [`WriteTableToGeoJSON`](../WriteTableToGeoJSON/WriteTableToGeoJSON.md) command
+*   [`WriteTableToKml`](../WriteTableToKml/WriteTableToKml.md) command

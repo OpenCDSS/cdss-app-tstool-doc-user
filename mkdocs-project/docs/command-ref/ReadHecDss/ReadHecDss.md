@@ -1,11 +1,11 @@
 # TSTool / Command / ReadHecDss #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -21,6 +21,10 @@ Current limitations for the command include:
     However, TSTool will convert this to `0000` of the next day.  Year, month, and day data are not impacted.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 In the future, it is envisioned that choices for A – F parts will be made available using data from the file.
@@ -73,4 +77,4 @@ ReadHecDss(InputFile="sample.dss",InputStart="1992-01-01",InputEnd="1992-12-31",
 
 ## See Also ##
 
-* [`WriteHecDss`](../WriteHecDss/WriteHecDss.md) command
+*   [`WriteHecDss`](../WriteHecDss/WriteHecDss.md) command

@@ -95,6 +95,10 @@ documentation, which provides a comparison of web services and database.
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
+
 The following dialog is used to edit the command and illustrates the syntax for the command.
 Two options are available for matching time series, based on historical software requirements.
 The following example illustrates how to read a single time series by specifying the time series identifier.
@@ -168,9 +172,9 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CopyTimeSeriesPropertiesToTable`](../CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command
-* [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
-* [`FillPattern`](../FillPattern/FillPattern.md) command
-* [`FillUsingDiversionComments`](../FillUsingDiversionComments/FillUsingDiversionComments.md) command
-* [`ReadColoradoHydroBaseRest`](../ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command
-* [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command
+*   [`CopyTimeSeriesPropertiesToTable`](../CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command
+*   [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
+*   [`FillPattern`](../FillPattern/FillPattern.md) command
+*   [`FillUsingDiversionComments`](../FillUsingDiversionComments/FillUsingDiversionComments.md) command
+*   [`ReadColoradoHydroBaseRest`](../ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command
+*   [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command

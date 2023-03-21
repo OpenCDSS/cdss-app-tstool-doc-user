@@ -1,11 +1,11 @@
 # TSTool / Command / FTPGet #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,6 +15,10 @@ The `FTPGet` command retrieves one or more files from a remote system using file
 The retrieval is not recursive to child folders.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -57,6 +61,6 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ListFiles`](../ListFiles/ListFiles.md) command
-* [`UnzipFile`](../UnzipFile/UnzipFile.md) command
-* [`WebGet`](../WebGet/WebGet.md) command
+*   [`ListFiles`](../ListFiles/ListFiles.md) command
+*   [`UnzipFile`](../UnzipFile/UnzipFile.md) command
+*   [`WebGet`](../WebGet/WebGet.md) command

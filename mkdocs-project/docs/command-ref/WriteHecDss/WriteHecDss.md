@@ -1,11 +1,11 @@
 # TSTool / Command / WriteHecDss #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -36,17 +36,21 @@ Current limitations of the command are:
 
 The A-F parts of the HEC-DSS time series pathname by default are taken from the time series properties, as follows:
 
-* The A part is taken from the time series location type.
-* The B part is taken from the time series location.
-* The C part is taken from the time series data type.
-* The D part is taken from the time series period in memory or as defined by the output period.
-* The E part is taken from the time series interval.
-* The F part is taken from the time series identifier scenario.
+*   The A part is taken from the time series location type.
+*   The B part is taken from the time series location.
+*   The C part is taken from the time series data type.
+*   The D part is taken from the time series period in memory or as defined by the output period.
+*   The E part is taken from the time series interval.
+*   The F part is taken from the time series identifier scenario.
 
 These conventions can be overruled by specifying the parts explicitly with command parameters.
 The parameter values will apply to all time series being written.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -102,5 +106,5 @@ WriteHecDss(OutputFile="sample.dss",TYPE=PER-AVER,OutputStart="1992-01-01",Outpu
 
 ## See Also ##
 
-* [`ReadHecDss`](../ReadHecDss/ReadHecDss.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`ReadHecDss`](../ReadHecDss/ReadHecDss.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

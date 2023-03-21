@@ -1,11 +1,11 @@
 # TSTool / Command / InsertTableColumn #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,6 +15,10 @@ The `InsertTableColumn` command inserts a column into a table.  An initial value
 [`SetTableValues`](../SetTableValues/SetTableValues.md) command to set values after inserting the column.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -56,4 +60,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [InsertTableRow](../InsertTableRow/InsertTableRow.md) command
+*   [InsertTableRow](../InsertTableRow/InsertTableRow.md) command

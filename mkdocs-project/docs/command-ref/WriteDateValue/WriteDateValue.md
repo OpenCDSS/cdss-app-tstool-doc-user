@@ -1,11 +1,11 @@
 # TSTool / Command / WriteDateValue #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ The time series being written must have the same data interval – use
 the `TSList` parameter to select appropriate time series.  
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 

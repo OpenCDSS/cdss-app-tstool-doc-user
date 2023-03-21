@@ -1,11 +1,11 @@
 # TSTool / Command / ExpandTemplateFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -13,13 +13,13 @@
 
 The `ExpandTemplateFile` command processes a template specified with one of the following methods:
 
-* template file, such as a command file, time series product file, or HTML, but can be any text file
-* input text
+*   template file, such as a command file, time series product file, or HTML, but can be any text file
+*   input text
 
 and creates a fully-expanded:
 
-* file
-* and/or processor property.
+*   file
+*   and/or processor property.
 
 Templates facilitate utilizing conditional logic, loops,
 and other dynamic processing functionality that is not provided directly
@@ -53,20 +53,24 @@ Common errors include variable names spelled incorrectly or incorrect FreeMarker
 
 The following information is automatically passed from TSTool to the `ExpandTemplateFile` command:
 
-* Properties set with the [`SetProperty`](../SetProperty/SetProperty.md) command are passed to the template processor.
-Consequently, the property names can be referenced with `${Property}` in
-the template without using a FreeMarker assign command.
-See also the `StringProperties` command parameter.
-* One-column tables are passed as FreeMarker lists,
-using the table identifier (`TableID`) as the list property name.
-Null values in the table are passed as an empty string so that list have the correct number of items for iteration.
-Use the [`CopyTable`](../CopyTable/CopyTable.md) command to create a one-column
-table that can be used as a list for template expansion or specify the `TableColumnProperties` command parameter.
-The `UseTables` command parameter can be used to turn off this transfer,
-for example in cases where an `ExpandTemplateFile` command is being repeated many times,
-does not use the tables, and is slowed down by converting the tables to FreeMarker lists.
+*   Properties set with the [`SetProperty`](../SetProperty/SetProperty.md) command are passed to the template processor.
+    Consequently, the property names can be referenced with `${Property}` in
+    the template without using a FreeMarker assign command.
+    See also the `StringProperties` command parameter.
+*   One-column tables are passed as FreeMarker lists,
+    using the table identifier (`TableID`) as the list property name.
+    Null values in the table are passed as an empty string so that list have the correct number of items for iteration.
+    Use the [`CopyTable`](../CopyTable/CopyTable.md) command to create a one-column
+    table that can be used as a list for template expansion or specify the `TableColumnProperties` command parameter.
+    The `UseTables` command parameter can be used to turn off this transfer,
+    for example in cases where an `ExpandTemplateFile` command is being repeated many times,
+    does not use the tables, and is slowed down by converting the tables to FreeMarker lists.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Template Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for input template parameters.
 
@@ -538,10 +542,10 @@ For example, see the TSTool [`If`](../If/If.md) and [`For`](../For/For.md) comma
 
 ## See Also ##
 
-* [`CopyTable`](../CopyTable/CopyTable.md) command
-* [`For`](../For/For.md) command
-* [`If`](../If/If.md) command
-* [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
-* [`SetProperty`](../SetProperty/SetProperty.md) command
-* [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md) command
+*   [`CopyTable`](../CopyTable/CopyTable.md) command
+*   [`For`](../For/For.md) command
+*   [`If`](../If/If.md) command
+*   [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
+*   [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
+*   [`SetProperty`](../SetProperty/SetProperty.md) command
+*   [`WritePropertiesToFile`](../WritePropertiesToFile/WritePropertiesToFile.md) command

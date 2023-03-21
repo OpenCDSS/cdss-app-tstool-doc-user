@@ -1,11 +1,11 @@
 # TSTool / Command / OpenHydroBase #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -90,4 +90,4 @@ OpenHydroBase(RunMode=GUIAndBatch,OdbcDsn="HydroBase_DIV1_20030701")
 
 ## See Also ##
 
-* [`ReadHydroBase`](../ReadHydroBase/ReadHydroBase.md) command
+*   [`ReadHydroBase`](../ReadHydroBase/ReadHydroBase.md) command

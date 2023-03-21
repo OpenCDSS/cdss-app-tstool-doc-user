@@ -1,11 +1,11 @@
 # TSTool / Command / DeleteTableColumns #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ The list of column names to delete is is determined from the `DeleteColumns` par
 except that any columns specified by the `KeepColumns` are not deleted.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -70,6 +74,6 @@ DeleteTableColumns(TableID="Table1",DeleteColumns="double1,integer1")
 
 ## See Also ##
 
-* [`DeleteTableRows`](../DeleteTableRows/DeleteTableRows.md) command
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
-* [`RenameTableColumns`](../RenameTableColumns/RenameTableColumns.md) command
+*   [`DeleteTableRows`](../DeleteTableRows/DeleteTableRows.md) command
+*   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`RenameTableColumns`](../RenameTableColumns/RenameTableColumns.md) command

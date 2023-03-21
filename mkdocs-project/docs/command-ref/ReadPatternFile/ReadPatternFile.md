@@ -1,11 +1,11 @@
 # TSTool / Command / ReadPatternFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -35,6 +35,10 @@ See also the [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern.md) command, wh
 ```
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -69,5 +73,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FillPattern`](../FillPattern/FillPattern.md) command
-* [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern.md) command
+*   [`FillPattern`](../FillPattern/FillPattern.md) command
+*   [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern.md) command

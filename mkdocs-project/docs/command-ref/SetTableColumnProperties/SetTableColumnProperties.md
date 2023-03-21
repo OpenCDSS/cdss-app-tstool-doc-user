@@ -1,11 +1,11 @@
 # TSTool / Command / SetTableColumnProperties #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ This is useful when the table read from a generic format such as comma-separated
 in inappropriate column width and precision, which is used to format output.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 

@@ -1,11 +1,11 @@
 # TSTool / Command / AddConstant #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -20,6 +20,10 @@ storage in order to compute the active storage (or inverse).
 Missing data values will remain missing in the result.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Manipulate Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -68,6 +72,6 @@ AddConstant(TSList=AllMatchingTSID,TSID="2003536.DWR.ResMeasStorage.Day",Constan
 
 ## See Also ##
 
-* [`FillConstant`](../FillConstant/FillConstant.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetConstant`](../SetConstant/SetConstant.md) command
+*   [`FillConstant`](../FillConstant/FillConstant.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetConstant`](../SetConstant/SetConstant.md) command

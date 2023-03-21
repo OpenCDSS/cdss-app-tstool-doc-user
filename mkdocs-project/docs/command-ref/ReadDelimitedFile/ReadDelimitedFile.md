@@ -1,11 +1,11 @@
 # TSTool / Command / ReadDelimitedFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -40,6 +40,10 @@ Additional functionality may be added in the future automate metadata discovery.
 Examples of use for the two cases are shown in the examples below.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
 
@@ -164,4 +168,4 @@ The following dialog is used to edit the command and illustrates the syntax for 
 
 ## See Also ##
 
-* [`WriteDelimitedFile`](../WriteDelimitedFile/WriteDelimitedFile.md) command
+*   [`WriteDelimitedFile`](../WriteDelimitedFile/WriteDelimitedFile.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / FormatFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#See Also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#See Also)
 
 -------------------------
 
@@ -15,9 +15,9 @@ The `FormatFile` command formats an input file to create a modified output file.
 The input file should be created using previous commands.
 Examples of use include:
 
-* add header and/or footer to the file because the original creator did not provide such functionality
-* wrap the file for output as HTML web page
-* wrap the file for output as CGI web server file
+*   add header and/or footer to the file because the original creator did not provide such functionality
+*   wrap the file for output as HTML web page
+*   wrap the file for output as CGI web server file
 
 The wrapper content can be provided as separate "prepend" and "append" files or can be auto-generated based on
 the type of input and output files.
@@ -27,6 +27,10 @@ For example, an input text file can be converted to CGI format by automatically 
 at the top of the file.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
 
 The following dialog is used to edit the command and illustrates the syntax for the command.
 If the `DiffProgram` property has been defined in the TSTool configuration file and input and output files exist,
@@ -75,4 +79,4 @@ For example, it should be possible to encode an image file as CGI output, but th
 
 ## See Also ##
 
-* [`WriteTableToHTML`](../WriteTableToHTML/WriteTableToHTML.md) command
+*   [`WriteTableToHTML`](../WriteTableToHTML/WriteTableToHTML.md) command

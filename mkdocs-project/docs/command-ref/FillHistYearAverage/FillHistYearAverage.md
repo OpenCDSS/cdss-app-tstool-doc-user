@@ -1,11 +1,11 @@
 # TSTool / Command / FillHistYearAverage #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ period – see the
 immediately after the time series is read and are then applied when this command is encountered.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -80,6 +84,6 @@ Non-missing data period: 1945 to 1997
 
 ## See Also ##
 
-* [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetAveragePeriod`](../SetAveragePeriod/SetAveragePeriod.md) command
+*   [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetAveragePeriod`](../SetAveragePeriod/SetAveragePeriod.md) command

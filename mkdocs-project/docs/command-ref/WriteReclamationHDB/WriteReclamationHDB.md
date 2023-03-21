@@ -1,13 +1,13 @@
 # TSTool / Command / WriteReclamationHDB #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-	+ [Command Editor for Single Real Time Series](#command-editor-for-single-real-time-series)
-	+ [Command Editor for General Parameters and Output Properties](#command-editor-for-general-parameters-and-output-properties)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+    +   [Command Editor for Single Real Time Series](#command-editor-for-single-real-time-series)
+    +   [Command Editor for General Parameters and Output Properties](#command-editor-for-general-parameters-and-output-properties)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -20,103 +20,107 @@ See the [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB.md) comm
 for information about reading the time series that are written by this command.
 The following time series can be written:
 
-* a single "real" time series (observations)
-* a single "model" time series (results from a model)
-* a time series ensemble, indicated by the ensemble name, in which case each ensemble trace time series is read as a "model" time series
+*   a single "real" time series (observations)
+*   a single "model" time series (results from a model)
+*   a time series ensemble, indicated by the ensemble name, in which case each ensemble trace time series is read as a "model" time series
 
 Command functionality includes:
 
-* **Time series metadata/new time series**:
-	+ In general, the command will not define new sites, data types, site datatype identifier (SDI) combinations,
-	models or other fundamental data. It is expected that such data have previously been defined in the database.
-	+ New real time series can be written by selecting the appropriate SDI.
-	New (non-ensemble) model time series can be specified by selecting a model run information
-	and if appropriate a new run date. New ensembles and corresponding trace time series
-	can be defined by specifying ensemble name, trace number, and model run date using the
-	`NewEnsembleName` and `NewEnsembleModelRunDate` command parameters.
-* **Date/time handling**:
-	+ TSTool uniformly uses the time at the end of the recorded interval for data values
-	(instantaneous time or end of interval for mean and accumulated values),
-	whereas HDB uses the time at the beginning of the recorded interval for hourly data.
-	See the [Reclamation HDB Datastore Reference](../../datastore-ref/ReclamationHDB/ReclamationHDB.md) for more information.
-	+ Writing NHour data uses `WRITE_TO_HDB` procedure where the `SAMPLE_END_DATETIME`
-	is set to the TSTool date/time and `SAMPLE_DATE_TIME` is set the TSTool date/time minus NHour.
-	Currently the procedure always stores the difference as one hour but this is being evaluated.
-* **Updating time series records**:
-	+ Time series data records for an existing time series will be updated if previously written.
-	The values in the write period are not removed before writing.
-	**It would be useful to have the ability to write null or a missing value in the database or delete values before writing**.
-* **Missing data**:
-	+ Missing data currently are not written. By convention missing values in HDB are simply not included in the database.
-	Currently the command will not delete previous records if the new value at a date/time is missing.
-	**It would be useful to have the ability to clear the time series
-	values in the write period before inserting the new values. This would ensure that the data are current.**
-* **Data units**:
-	+ Data units in the time series are not checked against data units in the database
-	because the units in TSTool data may originally have come from various
-	sources that do not use the same units abbreviations as HDB.
-	It is the user's responsibility to ensure that time series that are
-	being written have units that are compatible with HDB.
+*   **Time series metadata/new time series**:
+    +   In general, the command will not define new sites, data types, site datatype identifier (SDI) combinations,
+        models or other fundamental data. It is expected that such data have previously been defined in the database.
+    +   New real time series can be written by selecting the appropriate SDI.
+        New (non-ensemble) model time series can be specified by selecting a model run information
+        and if appropriate a new run date. New ensembles and corresponding trace time series
+        can be defined by specifying ensemble name, trace number, and model run date using the
+        `NewEnsembleName` and `NewEnsembleModelRunDate` command parameters.
+*   **Date/time handling**:
+    +   TSTool uniformly uses the time at the end of the recorded interval for data values
+        (instantaneous time or end of interval for mean and accumulated values),
+        whereas HDB uses the time at the beginning of the recorded interval for hourly data.
+        See the [Reclamation HDB Datastore Reference](../../datastore-ref/ReclamationHDB/ReclamationHDB.md) for more information.
+    +   Writing NHour data uses `WRITE_TO_HDB` procedure where the `SAMPLE_END_DATETIME`
+        is set to the TSTool date/time and `SAMPLE_DATE_TIME` is set the TSTool date/time minus NHour.
+        Currently the procedure always stores the difference as one hour but this is being evaluated.
+*   **Updating time series records**:
+    +   Time series data records for an existing time series will be updated if previously written.
+        The values in the write period are not removed before writing.
+        **It would be useful to have the ability to write null or a missing value in the database or delete values before writing**.
+*   **Missing data**:
+    +   Missing data currently are not written. By convention missing values in HDB are simply not included in the database.
+        Currently the command will not delete previous records if the new value at a date/time is missing.
+        **It would be useful to have the ability to clear the time series
+        values in the write period before inserting the new values. This would ensure that the data are current.**
+*   **Data units**:
+    +   Data units in the time series are not checked against data units in the database
+        because the units in TSTool data may originally have come from various
+        sources that do not use the same units abbreviations as HDB.
+        It is the user's responsibility to ensure that time series that are
+        being written have units that are compatible with HDB.
 * **Data flags**:
-	+ Data flags from the time series are not written to the database.
-	The `ValidationFlag`, `OverwriteFlag`, and `DataFlags` parameters are provided to specify HDB flags.
-	Additional capability may be added in the future.
-* **Time zone**:
-	+ Time zone can be indicated in TSTool time series by including in the
-	start and end date/time information; however,
-	time zones can be difficult to standardize when data comes from different sources.
-	The default time zone for HDB is configured for the Reclamation office that uses the database.
-	To ensure proper data loading, the TimeZone command parameter,
-	which indicates the time zone for the time series data, is required as of TSTool 11.09.02
-	(it was optional prior to this version). If the time zone for the data are different from the database,
-	the HDB `WRITE_TO_HDB` stored procedure will adjust the data in the
-	database to store as the database time zone.
-	It is the user's responsibility to verify that the correct time zone is being provided
-	to the `WriteReclamationHDB` command.
-	**It is strongly recommended that standard time be used for time series data and if
-	possible use the same time zone as the database.
-	A daylight savings time zone such as MDT or PDT could be used for a time series period
-	that is entirely in that zone; however,
-	switching between standard and daylight savings time in time series leads to confusion.**
-* **HDB data table**:
-	+ The time series interval is used to determine the HDB time series table to write,
-	with irregular data being written as instantaneous data with date/time precision to minute.
-	+ TSTool treats year-interval data generically and does not manage water year
-	(or other types of years) in special fashion,
-	other than when processing data into year interval time series.
-	Water year data can be saved in year interval data but currently
-	there is no way to write to the water-year tables in HDB.
-* **HDB database procedure**:
-	+ The write procedure is controlled by the `WriteProcedure` command parameter.
-	If `WriteProcedure=WRITE_DATA`, then the new HDB `TS_XFER.WRITE_REAL_DATA` and `TS_XFER.WRITE_MODEL_DATA`
-	stored procedures are used to write the data.
-	These procedures take arrays for the date/times and values, and consequently are faster.
-	If `WriteProcedure=OLD_WRITE_TO_HDB`, then the legacy HDB `WRITE_TO_HDB` stored procedure
-	is used to write individual time series data records.This has the disadvantage of higher overhead. For the legacy and new procedures:
-		- The time series is written to a model time series table if model parameters are specified.
-		- The model run date, for single time series and ensembles,
-		is truncated to minutes in time series identifiers and for query purposes.
-		In general, however, current software functionality uses the site datatype identifier (SDI)
-		and model run identifier (MRI) rather than the text versions of identifiers.
-	+ When writing ensembles, the HDB procedure `ENSEMBLE.GET_TSTOOL_ENSEMBLE_MRI` is
-	used to determine the model run identifier corresponding to model time series
-	and then the data-writing procedures (above) are used to write data records:
-		- The ensemble name is determined from the `EnsembleName` parameter
-		(or `NewEsembleName` parameter if creating a new ensemble).
-		Existing names can be selected or a new name can be specified.
-		- The trace number is determined from the `EnsembleTrace` command parameter,
-		and will result in the trace being taken from specific time series properties.
-		Currently this must be an integer but in the future string trace
-		identifiers may be supported (TSTool uses string identifiers internally).
-		- The model name is determined from the `EnsembleModelName` parameter.
-		Model names consistent with non-ensemble model time series are used.
-		- The model run date is determined from the `EnsembleModelRunDate` parameter
-		(or `NewEnsembleModelRunDate` parameter if writing data for a new run date).
-		If specified then the `P_IS_RUNDATE_KEY` procedure parameter is set to `Y`,
-		if not specified it is set to `N`).
-		Consequently, ensemble time series can be written with or without a model run date.
+    +   Data flags from the time series are not written to the database.
+        The `ValidationFlag`, `OverwriteFlag`, and `DataFlags` parameters are provided to specify HDB flags.
+        Additional capability may be added in the future.
+*   **Time zone**:
+    +   Time zone can be indicated in TSTool time series by including in the
+        start and end date/time information; however,
+        time zones can be difficult to standardize when data comes from different sources.
+        The default time zone for HDB is configured for the Reclamation office that uses the database.
+        To ensure proper data loading, the TimeZone command parameter,
+        which indicates the time zone for the time series data, is required as of TSTool 11.09.02
+        (it was optional prior to this version). If the time zone for the data are different from the database,
+        the HDB `WRITE_TO_HDB` stored procedure will adjust the data in the
+        database to store as the database time zone.
+        It is the user's responsibility to verify that the correct time zone is being provided
+        to the `WriteReclamationHDB` command.
+        **It is strongly recommended that standard time be used for time series data and if
+        possible use the same time zone as the database.
+        A daylight savings time zone such as MDT or PDT could be used for a time series period
+        that is entirely in that zone; however,
+        switching between standard and daylight savings time in time series leads to confusion.**
+*   **HDB data table**:
+    +   The time series interval is used to determine the HDB time series table to write,
+        with irregular data being written as instantaneous data with date/time precision to minute.
+    +   TSTool treats year-interval data generically and does not manage water year
+        (or other types of years) in special fashion,
+        other than when processing data into year interval time series.
+        Water year data can be saved in year interval data but currently
+        there is no way to write to the water-year tables in HDB.
+*   **HDB database procedure**:
+    +   The write procedure is controlled by the `WriteProcedure` command parameter.
+        If `WriteProcedure=WRITE_DATA`, then the new HDB `TS_XFER.WRITE_REAL_DATA` and `TS_XFER.WRITE_MODEL_DATA`
+        stored procedures are used to write the data.
+        These procedures take arrays for the date/times and values, and consequently are faster.
+        If `WriteProcedure=OLD_WRITE_TO_HDB`, then the legacy HDB `WRITE_TO_HDB` stored procedure
+        is used to write individual time series data records.This has the disadvantage of higher overhead. For the legacy and new procedures:
+        -   The time series is written to a model time series table if model parameters are specified.
+        -   The model run date, for single time series and ensembles,
+            is truncated to minutes in time series identifiers and for query purposes.
+            In general, however, current software functionality uses the site datatype identifier (SDI)
+            and model run identifier (MRI) rather than the text versions of identifiers.
+    +   When writing ensembles, the HDB procedure `ENSEMBLE.GET_TSTOOL_ENSEMBLE_MRI` is
+        used to determine the model run identifier corresponding to model time series
+        and then the data-writing procedures (above) are used to write data records:
+        -   The ensemble name is determined from the `EnsembleName` parameter
+            (or `NewEsembleName` parameter if creating a new ensemble).
+            Existing names can be selected or a new name can be specified.
+        -   The trace number is determined from the `EnsembleTrace` command parameter,
+            and will result in the trace being taken from specific time series properties.
+            Currently this must be an integer but in the future string trace
+            identifiers may be supported (TSTool uses string identifiers internally).
+        -   The model name is determined from the `EnsembleModelName` parameter.
+            Model names consistent with non-ensemble model time series are used.
+        -   The model run date is determined from the `EnsembleModelRunDate` parameter
+            (or `NewEnsembleModelRunDate` parameter if writing data for a new run date).
+            If specified then the `P_IS_RUNDATE_KEY` procedure parameter is set to `Y`,
+            if not specified it is set to `N`).
+            Consequently, ensemble time series can be written with or without a model run date.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 ### Command Editor for Single Real Time Series ###
 
@@ -173,14 +177,14 @@ data for a single time series, in which case the model parameters are
 specified via the Single model time series tab.
 The model run identifier can be specified in one of two ways.
 
-1. Select the MRI from the list at the bottom of the dialog
-2. Select the MRI by specifying multiple values that result in a unique MRI:
-	1. Model name
-	2. Model run name
-	3. Hydrologic indicator (can be blank)
-	4. Run date (can be blank) - currently a new run date cannot be specified
-The example in the following shows parameter values for both methods for illustration;
-	however, the directly selected `ModelRunID` will be used in this case.
+1.  Select the MRI from the list at the bottom of the dialog
+2.  Select the MRI by specifying multiple values that result in a unique MRI:
+    1.  Model name
+    2.  Model run name
+    3.  Hydrologic indicator (can be blank)
+    4.  Run date (can be blank) - currently a new run date cannot be specified
+    The example in the following shows parameter values for both methods for illustration;
+    however, the directly selected `ModelRunID` will be used in this case.
 
 **<p style="text-align: center;">
 ![WriteReclamationHDB_Model](WriteReclamationHDB_Model.png)
@@ -264,5 +268,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / SetWorkingDir #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -15,10 +15,10 @@ The `SetWorkingDir` command sets the working directory for following commands.
 The working directory is normally set in one of the following ways,
 with the current setting being defined by the most recent action that has occurred:
 
-1. The startup directory for the TSTool program,
-2. The directory containing the most recently opened or saved command file.
-3. The directory specified by a `SetWorkingDir` command,
-4. The directory specified by ***File / Set Working Directory*** menu in TSTool.
+1.  The startup directory for the TSTool program,
+2.  The directory containing the most recently opened or saved command file.
+3.  The directory specified by a `SetWorkingDir` command,
+4.  The directory specified by ***File / Set Working Directory*** menu in TSTool.
 
 **In most cases, a `SetWorkingDir` command is not needed and should be avoided because it may complicate commands and troubleshooting.**
 However, for complicated command files that process data in multiple directories,
@@ -34,6 +34,10 @@ using relative paths (relative to the command file) so that command files
 and associated data files can be easily moved from one computer to another.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -69,4 +73,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`Message`](../Message/Message.md) command - can be used to output the working directory
+*   [`Message`](../Message/Message.md) command - can be used to output the working directory

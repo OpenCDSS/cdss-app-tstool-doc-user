@@ -34,6 +34,10 @@ Zipped files can be unzipped using the [`UnzipFile`](../UnzipFile/UnzipFile.md) 
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
+
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">

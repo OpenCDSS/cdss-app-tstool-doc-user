@@ -1,11 +1,11 @@
 # TSTool / Command / SetAveragePeriod #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -22,6 +22,10 @@ Use a `SetAveragePeriod` command if a subset of the data should be used to compu
 Setting a global default with this command can make it more difficult to understand processing.**
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -57,5 +61,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
-* [`FillHistYearAverage`](../FillHistYearAverage/FillHistYearAverage.md) command
+*   [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command
+*   [`FillHistYearAverage`](../FillHistYearAverage/FillHistYearAverage.md) command

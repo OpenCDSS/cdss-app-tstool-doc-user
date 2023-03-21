@@ -1,11 +1,11 @@
 # TSTool / Command / Comment Block End `*/` #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ Commands between the `/*` and `*/` are not converted to comments but are skipped
 See the [`#`](../Comment/Comment.md) comment documentation for information about comment @ annotations.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Comments***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -52,5 +56,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [Comment - `#`](../Comment/Comment.md) command
-* [CommentBlockEnd - `*/`](../CommentBlockEnd/CommentBlockEnd.md) command
+*   [Comment - `#`](../Comment/Comment.md) command
+*   [CommentBlockEnd - `*/`](../CommentBlockEnd/CommentBlockEnd.md) command

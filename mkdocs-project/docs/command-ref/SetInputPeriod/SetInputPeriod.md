@@ -20,6 +20,10 @@ See also the [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command.
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
+
 The following dialog is used to edit this command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
@@ -55,7 +59,7 @@ CurrentToMinute.Round(5min).RoundDirection(>).TimeZone()
 ```
 
 **<p style="text-align: center;">
-CurrentTo* Modifiers
+`CurrentTo*` Modifiers
 </p>**
 
 | **Modifier**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
@@ -73,5 +77,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
-* [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md) command
+*   [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
+*   [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md) command

@@ -25,6 +25,10 @@ Specifying the output period is necessary when creating model files or filling a
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
+
 The following dialog is used to edit this command and illustrates the syntax of the command.
 Note that the output period should always use calendar month and year,
 even if other than calendar year are used for output (see [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md)).
@@ -62,7 +66,7 @@ CurrentToMinute.Round(5min).RoundDirection(>).TimeZone()
 ```
 
 **<p style="text-align: center;">
-CurrentTo* Modifiers
+`CurrentTo*` Modifiers
 </p>**
 
 | **Modifier**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
@@ -86,5 +90,5 @@ SetOutputPeriod(OutputStart="1950-01",OutputEnd="2002-12")
 
 ## See Also ##
 
-* [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command
-* [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md) command
+*   [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command
+*   [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md) command

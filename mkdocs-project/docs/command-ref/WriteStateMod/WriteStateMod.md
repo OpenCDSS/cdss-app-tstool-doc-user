@@ -1,11 +1,11 @@
 # TSTool / Command / WriteStateMod #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ The time series identifier location part is written as the identifier,
 even if an alias is assigned to a time series.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -70,5 +74,5 @@ WriteStateMod(TSList=AllTS,OutputFile="RioGrande.rih")
 
 ## See Also ##
 
-* [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

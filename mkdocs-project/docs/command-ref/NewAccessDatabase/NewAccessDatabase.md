@@ -1,11 +1,11 @@
 # TSTool / Command / NewAccessDatabase #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -21,21 +21,25 @@ and written to a database using
 The [`RunSql`](../RunSql/RunSql.md) command can be used to perform other operations.
 The following are technical considerations:
 
-* the datastore is dynamically created as a
-  [`GenericDatabase`](../../datastore-ref/GenericDatabase/GenericDatabase.md) using a JDBC connection
-* database names should have `.accdb` extension for versions 2007 and later,
-  and `.mdb` for older versions
-* if appropriate for a workflow, use the [`RemoveFile`](../RemoveFile/RemoveFile.md) or [`CopyFile`](../CopyFile/CopyFile.md)
-  commands to handle an existing database file before creating a new database with the same name
-* for databases that are dynamically created, a database file that is in use cannot be overwritten
-* use a [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command to close a previously created (and opened) datastore,
-  for example if rerunning a command file
+*   the datastore is dynamically created as a
+    [`GenericDatabase`](../../datastore-ref/GenericDatabase/GenericDatabase.md) using a JDBC connection
+*   database names should have `.accdb` extension for versions 2007 and later,
+    and `.mdb` for older versions
+*   if appropriate for a workflow, use the [`RemoveFile`](../RemoveFile/RemoveFile.md) or [`CopyFile`](../CopyFile/CopyFile.md)
+    commands to handle an existing database file before creating a new database with the same name
+*   for databases that are dynamically created, a database file that is in use cannot be overwritten
+*   use a [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command to close a previously created (and opened) datastore,
+    for example if rerunning a command file
 
 A file database may perform slowly on database inserts due to the need to write to disk and 
 the relatively slow speed of disk seek and write (compared to in-memory operations).
 It is generally much faster to read data than write data.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Datastore Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -72,8 +76,8 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
-* [`CopyFile`](../CopyFile/CopyFile.md) command
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
-* [`RemoveFile`](../RemoveFile/RemoveFile.md) command
-* [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command.
+*   [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
+*   [`CopyFile`](../CopyFile/CopyFile.md) command
+*   [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
+*   [`RemoveFile`](../RemoveFile/RemoveFile.md) command
+*   [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command.

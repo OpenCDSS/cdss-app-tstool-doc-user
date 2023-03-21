@@ -1,11 +1,11 @@
 # TSTool / Command / ReadWaterML2 #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -32,6 +32,10 @@ These issues need additional review, testing, and likely incremental software en
 to ensure that the software can support WaterML 2 from various data providers.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -90,10 +94,10 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ReadUsgsNwisDaily`](../ReadUsgsNwisDaily/ReadUsgsNwisDaily.md) command
-* [`ReadUsgsNwisGroundwater`](../ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater.md) command
-* [`ReadUsgsNwisInstantaneous`](../ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous.md) command
-* [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command
-* [`ReadWaterOneFlow`](../ReadWaterOneFlow/ReadWaterOneFlow.md) command
-* [`WebGet`](../WebGet/WebGet.md) command
-* [`WriteWaterML2`](../WriteWaterML2/WriteWaterML2.md) command
+*   [`ReadUsgsNwisDaily`](../ReadUsgsNwisDaily/ReadUsgsNwisDaily.md) command
+*   [`ReadUsgsNwisGroundwater`](../ReadUsgsNwisGroundwater/ReadUsgsNwisGroundwater.md) command
+*   [`ReadUsgsNwisInstantaneous`](../ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous.md) command
+*   [`ReadWaterML`](../ReadWaterML/ReadWaterML.md) command
+*   [`ReadWaterOneFlow`](../ReadWaterOneFlow/ReadWaterOneFlow.md) command
+*   [`WebGet`](../WebGet/WebGet.md) command
+*   [`WriteWaterML2`](../WriteWaterML2/WriteWaterML2.md) command

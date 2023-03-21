@@ -1,11 +1,11 @@
 # TSTool / Command / WeightTraces #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -13,11 +13,15 @@
 
 The `WeightTraces` command creates a new time series as a weighted sum of time series ensemble traces,
 for example as produced by a [`CreateEnsembleFromOneTimeSeries`](../CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md) command.
- If any trace contains missing data for a point, the resulting time series value will also be missing.
+If any trace contains missing data for a point, the resulting time series value will also be missing.
 Note that this approach may not be appropriate for some analyses – the user
 should evaluate the implications of whether the weighted result appropriately reflects the (in)dependence of input data.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Ensemble Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -78,4 +82,4 @@ Results of the `WeightTraces` Command (<a href="../WeightTraces_Graph.png">see a
 
 ## See Also ##
 
-* [`CreateEnsembleFromOneTimeSeries`](../CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md) command
+*   [`CreateEnsembleFromOneTimeSeries`](../CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md) command

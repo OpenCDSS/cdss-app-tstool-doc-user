@@ -1,11 +1,11 @@
 # TSTool / Command / Disaggregate #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -28,6 +28,10 @@ to time when using with other applications.  If necessary, use the
 [`ShiftTimeByInterval`](../ShiftTimeByInterval/ShiftTimeByInterval.md) command to manipulate the resulting output time series.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -94,6 +98,6 @@ Daily Input Time Series and 6-Hour Disaggregated Time Series using Ormsbee Metho
 
 ## See Also ##
 
-* [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`ShiftTimeByInterval`](../ShiftTimeByInterval/ShiftTimeByInterval.md) command
+*   [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`ShiftTimeByInterval`](../ShiftTimeByInterval/ShiftTimeByInterval.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / SetExcelCell #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -22,6 +22,10 @@ Unlike other commands that process a list of time series or a table,
 this command is intended for finer resolution control of modifying an Excel workbook.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Spreadsheet Processing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel file parameters.
 
@@ -120,4 +124,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook.md) command
+*   [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook.md) command

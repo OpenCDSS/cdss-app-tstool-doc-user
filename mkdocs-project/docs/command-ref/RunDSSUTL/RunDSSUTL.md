@@ -1,11 +1,11 @@
 # TSTool / Command / RunDSSUTL #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -60,6 +60,10 @@ Required arguments are for the `RunDSSUTL` command but may be optional if the pr
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
+
 The following dialog is used to edit the command and illustrates the command syntax.
 Note that the `DSSUTL.EXE` location is in this case not included in the `PATH` environment
 variable and is specified with the `DssutlProgram` parameter, using `${WorkingDir}`.
@@ -99,4 +103,4 @@ Command Parameters
 
 ## See Also ##
 
-* [`RunProgram`](../RunProgram/RunProgram.md) command
+*   [`RunProgram`](../RunProgram/RunProgram.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / RelativeDiff #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -20,6 +20,10 @@ The divisor can be either of the time series.
 The result is set to missing if either time series value is missing or the divisor is zero.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -95,4 +99,4 @@ Results of `RelativeDiff` Command
 
 ## See Also ##
 
-* [`Normalize`](../Normalize/Normalize.md) command
+*   [`Normalize`](../Normalize/Normalize.md) command

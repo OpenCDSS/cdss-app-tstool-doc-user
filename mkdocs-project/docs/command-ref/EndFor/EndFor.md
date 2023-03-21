@@ -1,11 +1,11 @@
 # TSTool / Command / EndFor #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ The [`For`](../For/For.md) and `EndFor` commands must have the same value for th
 determine the start and end of the block.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -50,4 +54,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`For`](../For/For.md) command
+*   [`For`](../For/For.md) command

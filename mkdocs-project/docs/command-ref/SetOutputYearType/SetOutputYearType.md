@@ -1,11 +1,11 @@
 # TSTool / Command / SetOutputYearType #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -29,6 +29,10 @@ and append `Year` to the year types where the end of the output year agrees with
 For example, `YearMayToApr` would indicate that the output year is May of the calendar year to Apr of the next calendar year.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit this command and illustrates the syntax of the command.
 Note that the output period should always use calendar month and year,
@@ -71,6 +75,6 @@ SetOutputYearType(OutputYearType=Calendar)
 
 ## See Also ##
 
-* [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
-* [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
+*   [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command
+*   [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command
+*   [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command

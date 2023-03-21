@@ -1,11 +1,11 @@
 # TSTool / Command / Multiply #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -16,6 +16,10 @@ Missing data in either time series causes the result to be missing.
 See also the [`Scale`](../Scale/Scale.md) command, which multiplies time series by a numerical value.  
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Manipulate Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -62,6 +66,6 @@ Multiply(TSID="2184.NOAA.TempMean.Month",MultiplierTSID="5706.NOAA.TempMean.Mont
 
 ## See Also ##
 
-* [`Divide`](../Divide/Divide.md) command
-* [`Scale`](../Scale/Scale.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`Divide`](../Divide/Divide.md) command
+*   [`Scale`](../Scale/Scale.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

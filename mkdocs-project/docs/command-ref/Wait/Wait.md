@@ -1,11 +1,11 @@
 # TSTool / Command / Wait #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -13,8 +13,8 @@
 
 The `Wait` command waits a specified time before continuing.  Examples of use include:
 
-* Testing to simulate slow datastores or long processes.
-* Waiting for an external process to finish.  Functionality will be added in the future to wait for a file to exist or not exist.
+*   Testing to simulate slow datastores or long processes.
+*   Waiting for an external process to finish.  Functionality will be added in the future to wait for a file to exist or not exist.
 
 The TSTool ***Run / Cancel Command Processing (interrupt processing)*** menu will initiate an interrupt on the processor.
 Because the `Wait` command uses an internal wait,
@@ -23,6 +23,10 @@ This case will be evaluated and enhanced over time.
 In most cases users will not need to interrupt command workflows that are using `Wait`.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -58,4 +62,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`Exit`](../Exit/Exit.md) command
+*   [`Exit`](../Exit/Exit.md) command

@@ -1,12 +1,12 @@
 # TSTool / Command / NewSQLiteDatabase #
 
-* [Overview](#overview)
-    + [In-Memory Database](#in-memory-database)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+    +   [In-Memory Database](#in-memory-database)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -22,15 +22,15 @@ and written to a database using
 [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command.
 The following are technical considerations:
 
-* database names typically have `.db` extension
-* a database file that is in use cannot be written over; therefore any software
-using an existing database file should close the connection before recreating
-* if appropriate for a workflow, use the [`RemoveFile`](../RemoveFile/RemoveFile.md) or [`CopyFile`](../CopyFile/CopyFile.md)
-commands to handle an existing database file before creating a new database with the same name
-* use a [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command to close a previously created (and opened) datastore,
-for example if rerunning a command file
-* the datastore is dynamically created as a
-[`GenericDatabase`](../../datastore-ref/GenericDatabase/GenericDatabase.md) using ODBC/JDBC connection
+*   database names typically have `.db` extension
+*   a database file that is in use cannot be written over; therefore any software
+    using an existing database file should close the connection before recreating
+*   if appropriate for a workflow, use the [`RemoveFile`](../RemoveFile/RemoveFile.md) or [`CopyFile`](../CopyFile/CopyFile.md)
+    commands to handle an existing database file before creating a new database with the same name
+*   use a [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command to close a previously created (and opened) datastore,
+    for example if rerunning a command file
+*   the datastore is dynamically created as a
+    [`GenericDatabase`](../../datastore-ref/GenericDatabase/GenericDatabase.md) using ODBC/JDBC connection
 
 ### In-Memory Database
 
@@ -46,6 +46,10 @@ RunSql(DataStore="DatastoreName",Sql="backup to ${WorkingDirPortable}/db/thedata
 ```
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Datastore Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -81,8 +85,8 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
-* [`CopyFile`](../CopyFile/CopyFile.md) command
-* [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
-* [`RemoveFile`](../RemoveFile/RemoveFile.md) command
-* [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command.
+*   [`CloseDataStore`](../CloseDataStore/CloseDataStore.md) command
+*   [`CopyFile`](../CopyFile/CopyFile.md) command
+*   [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
+*   [`RemoveFile`](../RemoveFile/RemoveFile.md) command
+*   [`WriteTableToDataStore`](../WriteTableToDataStore/WriteTableToDataStore.md) command.

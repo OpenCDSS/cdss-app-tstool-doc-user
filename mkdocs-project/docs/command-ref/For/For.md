@@ -1,11 +1,11 @@
 # TSTool / Command / For #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,11 +17,11 @@ A processor property is set to the value of the iteration property and can be us
 commands that support properties, using the `${Property}` notation.
 `For` commands can iterate over:
 
-* a list of supplied values (see the `List` parameter)
-* a sequence of integers or decimal numbers specified with start (`SequenceStart` parameter),
-end (`SequenceEnd` parameter), and increment (`SequenceIncrement` parameter)
-* values from a table column (see `TableID`, `TableColumn`, and `TablePropertyMap` parameters)
-* a list of time series and corresponding properties (see `TSList`, `TSID`, and `EnsembleID` parameters)
+*   a list of supplied values (see the `List` parameter)
+*   a sequence of integers or decimal numbers specified with start (`SequenceStart` parameter),
+    end (`SequenceEnd` parameter), and increment (`SequenceIncrement` parameter)
+*   values from a table column (see `TableID`, `TableColumn`, and `TablePropertyMap` parameters)
+*   a list of time series and corresponding properties (see `TSList`, `TSID`, and `EnsembleID` parameters)
 
 `For` commands can be nested.
 Status messages for run mode are accumulated in each command (this update is occurring over time –
@@ -38,6 +38,10 @@ which can be used with
 [`If`](../If/If.md) command to skip some commands in a `For` loop.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a list.
 
@@ -141,9 +145,9 @@ TestFor="Station4"
 
 ## See Also ##
 
-* [`Break`](../Break/Break.md) command
-* [`Continue`](../Continue/Continue.md) command
-* [`EndFor`](../EndFor/EndFor.md) command
-* [`ListFiles`](../ListFiles/ListFiles.md) command
-* [`Message`](../Message/Message.md) command
-* [`SetProperty`](../SetProperty/SetProperty.md) command (can be used to set list of strings for iteration)
+*   [`Break`](../Break/Break.md) command
+*   [`Continue`](../Continue/Continue.md) command
+*   [`EndFor`](../EndFor/EndFor.md) command
+*   [`ListFiles`](../ListFiles/ListFiles.md) command
+*   [`Message`](../Message/Message.md) command
+*   [`SetProperty`](../SetProperty/SetProperty.md) command (can be used to set list of strings for iteration)

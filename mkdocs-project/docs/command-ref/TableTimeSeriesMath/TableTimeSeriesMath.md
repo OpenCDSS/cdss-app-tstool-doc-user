@@ -1,11 +1,11 @@
 # TSTool / Command / TableTimeSeriesMath #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -26,6 +26,10 @@ command to generate an identifier column in the table that allows that match.
 Missing values in the time series generally will not be updated, although the assignment (`=`) operator will do so.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Manipulate Table Values***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -79,9 +83,9 @@ ts2,3
 
 ## See Also ##
 
-* [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
-* [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime.md) command
-* [`FormatTableString`](../FormatTableString/FormatTableString.md) command
-* [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
-* [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
-* [`TablesMath`](../TableMath/TableMath.md) command
+*   [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md) command
+*   [`FormatTableDateTime`](../FormatTableDateTime/FormatTableDateTime.md) command
+*   [`FormatTableString`](../FormatTableString/FormatTableString.md) command
+*   [`ManipulateTableString`](../ManipulateTableString/ManipulateTableString.md) command
+*   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`TablesMath`](../TableMath/TableMath.md) command

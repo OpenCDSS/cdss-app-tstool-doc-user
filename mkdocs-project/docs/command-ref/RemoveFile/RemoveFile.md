@@ -1,11 +1,11 @@
 # TSTool / Command / RemoveFile #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -20,6 +20,10 @@ the file is being used by another process).
 Even read-only files may be removed by this command, depending on how the operating system and computer environment handle access permissions.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - File Handling***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -55,4 +59,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CopyFile`](../CopyFile/CopyFile.md) command
+*   [`CopyFile`](../CopyFile/CopyFile.md) command

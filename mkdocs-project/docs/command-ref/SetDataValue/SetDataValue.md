@@ -1,11 +1,11 @@
 # TSTool / Command / SetDataValue #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,6 +18,10 @@ It is good practice to insert comments when editing data to explain the edits.
 See also the [`SetConstant`](../SetConstant/SetConstant.md) command.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Set Time Series Contents***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -65,6 +69,6 @@ SetDataValue(TSList=AllMatchingTSID,TSID=”08235700.DWR.Streamflow.Month”,Set
 
 ## See Also ##
 
-* [`FillRepeat`](../FillRepeat/FillRepeat.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetConstant`](../SetConstant/SetConstant.md) command
+*   [`FillRepeat`](../FillRepeat/FillRepeat.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetConstant`](../SetConstant/SetConstant.md) command

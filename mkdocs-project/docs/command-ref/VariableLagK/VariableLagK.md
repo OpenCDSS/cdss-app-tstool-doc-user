@@ -1,11 +1,11 @@
 # TSTool / Command / VariableLagK #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,8 +19,8 @@ For example, route 5-minute or 1-hour instantaneous streamflows measured as cubi
 where the interval for data typically depends on the travel time in the reach and the analysis/modeling framework.
 Lag and K routing is a common routing method that combines the concepts of:
 
-1. Lagging the inflow to simulate travel time in a reach and,
-2. Attenuating the wave to simulate the storage-outflow relationship for the reach (see figure below).
+1.  Lagging the inflow to simulate travel time in a reach and,
+2.  Attenuating the wave to simulate the storage-outflow relationship for the reach (see figure below).
 
 **<p style="text-align: center;">
 ![VariableLagK-graph](VariableLagK-graph.png)
@@ -62,8 +62,8 @@ However, there are cases where the values vary by flow, which is handled by this
 The approach that is implemented is an adaptation of that described in
 National Weather Service River Forecast System LAG/K documentation:
 
-* [NWS Lag and K Routing background](24lagk.pdf)
-* [NWS Lag and K Routing Operation](533lagk.pdf)
+*  [NWS Lag and K Routing background](24lagk.pdf)
+*  [NWS Lag and K Routing Operation](533lagk.pdf)
 
 ### VariableLagK States ###
 
@@ -101,22 +101,26 @@ VariableLagK States
 
 The saved states can then be used to restart the analysis, as follows:
 
-* **Output period** – The output period used to create the output time series
-is defined by the `OutputStart` and `OutputEnd` parameters.
-If not specified, the full time series period (or global output period) is used.
-* **Date/time for initial states** – The date/time corresponding to `OutputStart`
-is used to retrieve states that have been previously saved to the state table.
-* **Initialize states** – States are initialized for the algorithm as follows:
-	+ If the state table should be used to initialize states (`InitializeStatesFromTable=True`),
-	get the initial states from the state table by matching the `StateTableObjectID`, `OutputStart`,
-	and `TableStateNameColumn` (for example state name of `VariableLagK`).
-	+ If no states have been saved in the state table,
-	then the initial values will be set to the values from parameters
-	`InitialLaggedInflow`, `InitialOutflow`, `InitialStorage`, and `InitialQTLag`.
-	+ If no initial states are specified, the values will default to zero.
-	This will cause a start-up condition that will converge to accurate routed output after several intervals.
+*   **Output period** – The output period used to create the output time series
+    is defined by the `OutputStart` and `OutputEnd` parameters.
+    If not specified, the full time series period (or global output period) is used.
+*   **Date/time for initial states** – The date/time corresponding to `OutputStart`
+    is used to retrieve states that have been previously saved to the state table.
+*   **Initialize states** – States are initialized for the algorithm as follows:
+    +   If the state table should be used to initialize states (`InitializeStatesFromTable=True`),
+        get the initial states from the state table by matching the `StateTableObjectID`, `OutputStart`,
+        and `TableStateNameColumn` (for example state name of `VariableLagK`).
+    +   If no states have been saved in the state table,
+        then the initial values will be set to the values from parameters
+        `InitialLaggedInflow`, `InitialOutflow`, `InitialStorage`, and `InitialQTLag`.
+    +   If no initial states are specified, the values will default to zero.
+        This will cause a start-up condition that will converge to accurate routed output after several intervals.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Models - Routing***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -249,4 +253,4 @@ VariableLagK(TSID="Inflow",FlowUnits="CMS",LagInterval="Hour",
 
 ## See Also ##
 
-* [`LagK`](../LagK/LagK.md) command
+*   [`LagK`](../LagK/LagK.md) command

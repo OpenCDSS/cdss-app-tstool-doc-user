@@ -1,11 +1,11 @@
 # TSTool / Command / TimeSeriesToTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,35 +18,39 @@ outputting table formats (e.g., with the
 [`WriteTableToHTML`](../WriteTableToHTML/WriteTableToHTML.md) commands).
 The command can be configured to output one of two table forms:
 
-* Each time series in a separate column, with shared date/time column:
-	+ The time series must be regular interval (no irregular interval time series)
-	and the intervals must match in order to allow alignment of the date/times.
-	+ Do not specify the `TableTSIDColumn` or `TableTSIDFormat` parameters.
-* All time series values in a single column (useful for converting time series
-	to a stream of data for loading into a database)
-	+ Any interval is allowed although mixing time series of varying precision is discouraged.
-	+ Specify the `TableTSIDColumn` and optionally `TableTSIDFormat` parameters.
-	+ See also the [`WriteTimeSeriesToDataStream`](../WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream.md) command.
+*   Each time series in a separate column, with shared date/time column:
+    +   The time series must be regular interval (no irregular interval time series)
+        and the intervals must match in order to allow alignment of the date/times.
+    +   Do not specify the `TableTSIDColumn` or `TableTSIDFormat` parameters.
+*   All time series values in a single column (useful for converting time series
+        to a stream of data for loading into a database)
+    +   Any interval is allowed although mixing time series of varying precision is discouraged.
+    +   Specify the `TableTSIDColumn` and optionally `TableTSIDFormat` parameters.
+    +   See also the [`WriteTimeSeriesToDataStream`](../WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream.md) command.
 
 Time series can be appended to an existing table.
 If time series are being appended in multi-column mode (one time series per column),
 the following checks are done to align the time series into the existing table:
 
-1. If the output start and output end are specified, the specified period is used to write.
-If not specified, an overlapping period of the time series being written is determined.
-The first date/time in this period is matched with an existing date/time in the date/time column.
-If the time series being written do not overlap, new records are added to fill out the time sequence.
-Once the starting row is established, the time series are written as a “block” within the existing table.
-2. The date/time values must be sequential.
-For example, using a [`SortTable`](../SortTable/SortTable.md) command prior
-to this command that results in date/time column values being reordered is not supported
-because it would be a major performance penalty to search the
-date/time column when setting each time series data value.
-A warning will be generated if the date/time column is determined to be out of order. 
-3. As an additional check, when adding time series to an existing table if the
-date/time column value does not equal the time series date/time, a warning will be generated.
+1.  If the output start and output end are specified, the specified period is used to write.
+    If not specified, an overlapping period of the time series being written is determined.
+    The first date/time in this period is matched with an existing date/time in the date/time column.
+    If the time series being written do not overlap, new records are added to fill out the time sequence.
+    Once the starting row is established, the time series are written as a “block” within the existing table.
+2.  The date/time values must be sequential.
+    For example, using a [`SortTable`](../SortTable/SortTable.md) command prior
+    to this command that results in date/time column values being reordered is not supported
+    because it would be a major performance penalty to search the
+    date/time column when setting each time series data value.
+    A warning will be generated if the date/time column is determined to be out of order. 
+3.  As an additional check, when adding time series to an existing table if the
+    date/time column value does not equal the time series date/time, a warning will be generated.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands(Table) / Table, Time Series Processing***
 
 The following dialog is used to edit the command and illustrates the syntax
 of the command when writing a multi-column data table while also outputting data flags.
@@ -149,8 +153,8 @@ Single Data Column Table (<a href="../TimeSeriesToTable_Single2.png">see also th
 
 ## See Also ##
 
-* [`SortTable`](../SortTable/SortTable.md) command
-* [`TableToTimeSeries`](../TableToTimeSeries/TableToTimeSeries.md) command
-* [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command
-* [`WriteTimeSeriesToDataStream`](../WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream.md) command
-* [`WriteTableToHTML`](../WriteTableToHTML/WriteTableToHTML.md) command
+*   [`SortTable`](../SortTable/SortTable.md) command
+*   [`TableToTimeSeries`](../TableToTimeSeries/TableToTimeSeries.md) command
+*   [`WriteTableToDelimitedFile`](../WriteTableToDelimitedFile/WriteTableToDelimitedFile.md) command
+*   [`WriteTimeSeriesToDataStream`](../WriteTimeSeriesToDataStream/WriteTimeSeriesToDataStream.md) command
+*   [`WriteTableToHTML`](../WriteTableToHTML/WriteTableToHTML.md) command

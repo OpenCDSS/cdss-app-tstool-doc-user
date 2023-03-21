@@ -1,11 +1,11 @@
 # TSTool / Command / FormatDateTimeProperty #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,6 +19,10 @@ Date/time properties will by default be formatted using the ISO 8061 format (e.g
 Support for properties varies by command and command documentation should be consulted.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -88,5 +92,5 @@ FormatDateTimeProperty(PropertyName="DateTimePropString",DateTimePropertyName="D
 
 ## See Also ##
 
-* [`FormatStringProperty`](../FormatStringProperty/FormatStringProperty.md) command
-* [`SetProperty`](../SetProperty/SetProperty.md) command
+*   [`FormatStringProperty`](../FormatStringProperty/FormatStringProperty.md) command
+*   [`SetProperty`](../SetProperty/SetProperty.md) command

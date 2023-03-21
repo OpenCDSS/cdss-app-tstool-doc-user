@@ -1,11 +1,11 @@
 # TSTool / Command / ReadRiverWare #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -45,14 +45,14 @@ Because each time series in the ensemble has location identifier `ObjectName` an
 the relationship between time series and ensembles is clear.
 Additional guidelines for handling ensembles include:
 
-1. Date/times in the file generally follow the form `YYYY-MM-DD hh:mm`.
- Month, day, hour, and minute can be 1 or 2 digits.
-TSTool uses hour 0-23; consequently, for hour timestep,
-any times specified at hour 24 are converted to hour 0 of the next day.
-2. For ensembles (overlapping time series),
-the run start and end for all runs must be the same.
-Data are treated as sequential.
-How are leap years handled in the data array (assume sequential based on the specified overlapping run period)?
+1.  Date/times in the file generally follow the form `YYYY-MM-DD hh:mm`.
+    Month, day, hour, and minute can be 1 or 2 digits.
+    TSTool uses hour 0-23; consequently, for hour timestep,
+    any times specified at hour 24 are converted to hour 0 of the next day.
+2.  For ensembles (overlapping time series),
+    the run start and end for all runs must be the same.
+    Data are treated as sequential.
+    How are leap years handled in the data array (assume sequential based on the specified overlapping run period)?
 
 See the following figure for examples of TSTool time series results when reading RDF ensembles.
 
@@ -75,6 +75,10 @@ See the following figure for examples of TSTool ensemble results when reading RD
 </p>**
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Read Time Series***
 
 The following dialog is used to edit the command and illustrates the command syntax for a single time series `*.dat` file:
 
@@ -129,4 +133,4 @@ ReadRiverWare(Alias=”ts1”,InputFile="OSO.Diversion.dat")
 
 ## See Also ##
 
-* [`WriteRiverWare`](../WriteRiverWare/WriteRiverWare.md) command
+*   [`WriteRiverWare`](../WriteRiverWare/WriteRiverWare.md) command

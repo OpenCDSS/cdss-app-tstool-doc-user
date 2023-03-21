@@ -1,11 +1,11 @@
 # TSTool / Command / FillHistMonthAverage #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -17,6 +17,10 @@ The average values are computed using the available data period
 immediately after the time series is read and are then applied when this command is encountered.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Fill Time Series Missing Data***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -93,6 +97,6 @@ Dec         0.0 1949-12        0.2 1948-12        0.2      0   0.00      2 100.0
 
 ## See Also ##
 
-* [`FillHistYearAverage`](../FillHistYearAverage/FillHistYearAverage.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`SetAveragePeriod`](../SetAveragePeriod/SetAveragePeriod.md) command
+*   [`FillHistYearAverage`](../FillHistYearAverage/FillHistYearAverage.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`SetAveragePeriod`](../SetAveragePeriod/SetAveragePeriod.md) command

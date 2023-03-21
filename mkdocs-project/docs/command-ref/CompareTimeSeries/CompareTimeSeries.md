@@ -1,11 +1,11 @@
 # TSTool / Command / CompareTimeSeries #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -18,11 +18,10 @@ It is designed to process many time series in bulk fashion.
 Time series to compare are determined by trying to match each available time series
 with another time series in the list (ignoring itself) using one of the following options for input:
 
-* Two lists of time series, for example the same set of time series from two different databases
-or model results.
-Typically the location identifiers and possibly data types will be the same in the two lists.
-* Compare two time series directly.
-* Compare time series from two ensembles.
+*   Two lists of time series, for example the same set of time series from two different databases or model results.
+    Typically the location identifiers and possibly data types will be the same in the two lists.
+*   Compare two time series directly.
+*   Compare time series from two ensembles.
 
 Time series that are not matched are listed in output and the second time series is treated
 as completely missing.
@@ -37,32 +36,37 @@ Differences and simple statistics are optionally printed to output files
 (see `DifferenceFile` and `SummaryFile` command parameters).
 Values that are different can optionally be indicated using the following:
 
-* set a character flag, for use with the graphing package
-* create a time series of the differences that can be visualized using graph or raster graph
-* generate a command warning if a difference is detected, or if no differences are detected
-* create a table record listing the difference, which can viewed or output with other commands
-* set a processor property with count of the number of time series that are different
+*   set a character flag, for use with the graphing package
+*   create a time series of the differences that can be visualized using graph or raster graph
+*   generate a command warning if a difference is detected, or if no differences are detected
+*   create a table record listing the difference, which can viewed or output with other commands
+*   set a processor property with count of the number of time series that are different
 
 Date/time in time series is handled as follows:
 
-* In order to compare time series, it is important that the date/times for data values align.
-Lack of alignment can result in differences.
-**There is currently no command feature to accept date/time differences within a tolerance.**
-* The date/time precision of the time series should be the same.
-For regular-interval time series, the interval base and date/time precision are the same (e.g., 5Min interval
-has a precision of minute).
-For irregular interval time series the time series interval may be `irregular` and the precision must
-be determined from the period date/times.
-TSTool is being updated over time to support irregular interval with base (e.g., "IrregDay") but this is not universal.
-* To help ensure alignment of time series, the following approach is taken:
-	+ Regular interval time series:  Are compared as usual because the times should line up.
-	+ Irregular interval time series:  If at least one of the two time series are irregular interval,
-	the date/times for both time series are added to a sorted list, which is used to retrieve data from
-	both time series.  Any date/times that result in only one value will result in a difference.
+*   In order to compare time series, it is important that the date/times for data values align.
+    Lack of alignment can result in differences.
+    **There is currently no command feature to accept date/time differences within a tolerance.**
+*   The date/time precision of the time series should be the same.
+    For regular-interval time series, the interval base and date/time precision are the same (e.g., 5Min interval
+    has a precision of minute).
+    For irregular interval time series the time series interval may be `irregular` and the precision must
+    be determined from the period date/times.
+    TSTool is being updated over time to support irregular interval with base (e.g., "IrregDay") but this is not universal.
+*   To help ensure alignment of time series, the following approach is taken:
+    +   Regular interval time series:  Are compared as usual because the times should line up.
+    +   Irregular interval time series:  If at least one of the two time series are irregular interval,
+        the date/times for both time series are added to a sorted list, which is used to retrieve data from
+        both time series.  Any date/times that result in only one value will result in a difference.
 
 See also the [`CompareFiles`](../CompareFiles/CompareFiles.md) and [`CompareTables`](../CompareTables/CompareTables.md) commands.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Analyze Time Series***
+*   ***Commands / General - Test Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax when comparing two time series.
 
@@ -151,7 +155,7 @@ Command Parameters
 
 ## Examples ##
 
-* See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/CompareTimeSeries).
+*   See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/CompareTimeSeries).
 
 The following example illustrates how time series from two files can be compared.
 For example, use similar commands to compare results from two model runs or two database queries:
@@ -180,8 +184,8 @@ AnalysisStart="OutputStart",AnalysisEnd="OutputEnd",DiffFlag="x")
 
 ## See Also ##
 
-* [`CompareFiles`](../CompareFiles/CompareFiles.md) command
-* [`CompareTables`](../CompareTables/CompareTables.md) command
-* [`ProcessRasterGraph`](../ProcessRasterGraph/ProcessRasterGraph.md) command
-* [`RunCommands`](../RunCommands/RunCommands.md) command
-* [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command
+*   [`CompareFiles`](../CompareFiles/CompareFiles.md) command
+*   [`CompareTables`](../CompareTables/CompareTables.md) command
+*   [`ProcessRasterGraph`](../ProcessRasterGraph/ProcessRasterGraph.md) command
+*   [`RunCommands`](../RunCommands/RunCommands.md) command
+*   [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command

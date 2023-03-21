@@ -1,11 +1,11 @@
 # TSTool / Command / WriteTimeSeriesToDataStream #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -25,27 +25,31 @@ as shown below (see the `OutputLineFormatFile` parameter):
 
 The command expands the output format line for each time series value being output, as follows:
 
-* The notation `${Property}` is replaced with the corresponding TSTool global property.
-These properties can be set with [`SetProperty`](../SetProperty/SetProperty.md),
-[`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty.md),
-[`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md), and other commands.
-* The notation `${ts:Property}` is replaced with the corresponding property from the time series that is being processed.
-Time series properties are set when a time series is read,
-depending on data that are available from a particular data source.
-The [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md)
-command can also be used, for example in cases where time series metadata are available in a table.
-* The notation `%L` (for location identifier), etc. also is replaced with standard time series properties.
-See read commands that have Alias parameters for a list of possible values.
-In the future corresponding standard `${ts:Property}` values may be defined.
+*   The notation `${Property}` is replaced with the corresponding TSTool global property.
+    These properties can be set with [`SetProperty`](../SetProperty/SetProperty.md),
+    [`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty.md),
+    [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md), and other commands.
+*   The notation `${ts:Property}` is replaced with the corresponding property from the time series that is being processed.
+    Time series properties are set when a time series is read,
+    depending on data that are available from a particular data source.
+    The [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md)
+    command can also be used, for example in cases where time series metadata are available in a table.
+*   The notation `%L` (for location identifier), etc. also is replaced with standard time series properties.
+    See read commands that have Alias parameters for a list of possible values.
+    In the future corresponding standard `${ts:Property}` values may be defined.
 * The notation `${tsdata:Property}` is replaced with the corresponding data from time series data records, in particular:
-	+ `${tsdata:datetime}` – corresponds to the date/time of the measurement (see the
-	`DateTimeFormatterType` and `DateTimeFormat` command parameters)
-	+ `${tsdata:value}` – corresponds to the time series data value at a date/time
-	(see the `Precision` and `MissingValue` command parameters)
-	+ `${tsdata:flag}` – corresponds to the time series flag at a date/time
-* Any properties that are not found will result in output including the property name notation in the output.
+    +   `${tsdata:datetime}` – corresponds to the date/time of the measurement (see the
+        `DateTimeFormatterType` and `DateTimeFormat` command parameters)
+    +   `${tsdata:value}` – corresponds to the time series data value at a date/time
+        (see the `Precision` and `MissingValue` command parameters)
+    +   `${tsdata:flag}` – corresponds to the time series flag at a date/time
+*   Any properties that are not found will result in output including the property name notation in the output.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command, in this case writing time series to an XML file.
 
@@ -166,7 +170,7 @@ var timeseries=[
 
 ## See Also ##
 
-* [`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty.md) command
-* [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md) command
-* [`SetProperty`](../SetProperty/SetProperty.md) command
-* [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command
+*   [`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty.md) command
+*   [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md) command
+*   [`SetProperty`](../SetProperty/SetProperty.md) command
+*   [`SetTimeSeriesPropertiesFromTable`](../SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / CheckTimeSeries #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -26,6 +26,10 @@ which creates new time series as the change between each value – this command 
 in cases where data periodically reset to a starting value, prior to performing a Change> check, for example.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Check Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
@@ -107,10 +111,10 @@ Command Parameters
 |`AnalysisWindowEnd`|Specify date/time for the analysis end within each year.  See `AnalysisWindowStart` for details.|Analyze the full year.|
 |`TableID`|Identifier for output table to contain check results.  Specify an existing table or new table to create.  Can be specified using processor `${Property}`.|No table output.|
 |`TableTSIDColumn`|Table column name for time series TSID.|Required for table.|
-|`TableTSIDFormat`|The specification to format the time series identifier to insert into the TSID column.  Use the format choices and other characters to define a unique identifier.|Required for table.
+|`TableTSIDFormat`|The specification to format the time series identifier to insert into the `TSID` column.  Use the format choices and other characters to define a unique identifier.|Required for table.
 |`TableDateTimeColumn`|Table column name for date/time.|Column is not output.|
 |`TableValueColumn`|Table column name for time series data values.|Column is not output.|
-|`TableValuePrecision`|Precision for values in TableValueColumn column.|`4`|
+|`TableValuePrecision`|Precision for values in `TableValueColumn` column.|`4`|
 |`TableFlagColumn`|Table column name for time series data flag values.|Column is not output.|
 |`TableCheckTypeColumn`|Table column name for data check type.|Column is not output.|
 |`TableCheckMessageColumn`|Table column name for data check message.|Column is not output.|
@@ -125,7 +129,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) command
-* [`Delta`](../Delta/Delta.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile.md) command
+*   [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) command
+*   [`Delta`](../Delta/Delta.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`WriteCheckFile`](../WriteCheckFile/WriteCheckFile.md) command

@@ -40,6 +40,10 @@ A warning can be generated if a difference is detected or if no differences are 
 
 ## Command Editor ##
 
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Test Processing***
+
 The following dialog is used to edit the command and illustrates the syntax for the command.
 If the `DiffProgram` property has been defined in the TSTool configuration file and both files exist,
 the ***View Diff*** button will be enabled to display a visual difference.

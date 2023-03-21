@@ -1,12 +1,12 @@
 # TSTool / Command / FormatStringProperty #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-     + [Endianness](#endianness)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+    +   [Endianness](#endianness)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -19,23 +19,27 @@ it can also set a property that is another type by converting the formatted stri
 
 Examples of use include:
 
-* concatenate values from several properties
-to create a string that can be used in a command
-* assign a literal string to a property,
-although [`SetProperty`](../SetProperty/SetProperty.md) is more suitable
-* manipulate strings to create a number and set as a number or `DateTime` property
-* format an integer's bytes as hex codes, for example for data representations that use hex format
+*   concatenate values from several properties
+    to create a string that can be used in a command
+*   assign a literal string to a property,
+    although [`SetProperty`](../SetProperty/SetProperty.md) is more suitable
+*   manipulate strings to create a number and set as a number or `DateTime` property
+*   format an integer's bytes as hex codes, for example for data representations that use hex format
 
 Formatting occurs as follows:
 
-* The data types for input properties control the type of formatting that can be done.
-For example, properties that are floating-point numbers must use the format specifiers for floating-point numbers.
-* Format specifiers are consistent with the C programming language
-that have similarly been implemented by Java
-* A newline character can be inserted using `\n`, although properties with newlines may cause issues if output to a file.
-* Null input properties will result in blanks in output.
+*   The data types for input properties control the type of formatting that can be done.
+    For example, properties that are floating-point numbers must use the format specifiers for floating-point numbers.
+*   Format specifiers are consistent with the C programming language
+    that have similarly been implemented by Java
+*   A newline character can be inserted using `\n`, although properties with newlines may cause issues if output to a file.
+*   Null input properties will result in blanks in output.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Running and Properties***
 
 The following dialog is used to edit the command and illustrates the command syntax for general parameters.
 
@@ -84,10 +88,10 @@ Command Parameters
 Endianness is important when formatting integers in byte representations, such as hexadecimal (`IntegerFormat=HexBytes`).
 Endianness indicates the order of bytes.  See [Endianness on Wikipedia](https://en.wikipedia.org/wiki/Endianness).
 
-* Big endian format numbers are shown with the most significant bytes at the lowest (leftmost) address when written as text.
-* Little endian format numbers are shown with the least significant bytes at the lowest (leftmost) address when written as text.
-* The 8 bits within a byte are always represented with the most significant bit on the left, regardless of whether big or little endian
-* Normal numbers are written with most significant digits on the left, similar to big-endian format.
+*   Big endian format numbers are shown with the most significant bytes at the lowest (leftmost) address when written as text.
+*   Little endian format numbers are shown with the least significant bytes at the lowest (leftmost) address when written as text.
+*   The 8 bits within a byte are always represented with the most significant bit on the left, regardless of whether big or little endian
+*   Normal numbers are written with most significant digits on the left, similar to big-endian format.
 
 An unsigned one byte integer is able to store a maximum value of 255, as shown below.
 A four byte signed integer can be treated as 3 unsigned byte and 1 signed byte.
@@ -129,5 +133,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty.md) command
-* [`SetProperty`](../SetProperty/SetProperty.md) command
+*   [`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty.md) command
+*   [`SetProperty`](../SetProperty/SetProperty.md) command

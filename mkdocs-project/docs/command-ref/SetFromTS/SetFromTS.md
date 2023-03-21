@@ -1,11 +1,11 @@
 # TSTool / Command / SetFromTS #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -32,6 +32,10 @@ then the values from the independent time series will be used multiple times
 for the dependent time series (e.g., annual value used for each month).
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Set Time Series Contents***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -112,5 +116,5 @@ SetFromTS(TSList=AllMatchingTSID,TSID="08241000.DWR.Streamflow.Month",Independen
 
 ## See Also ##
 
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
-* [`FillFromTS`](../FillFromTS/FillFromTS.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`FillFromTS`](../FillFromTS/FillFromTS.md) command

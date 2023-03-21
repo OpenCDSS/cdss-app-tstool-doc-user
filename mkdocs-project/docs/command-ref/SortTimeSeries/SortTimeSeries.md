@@ -1,11 +1,11 @@
 # TSTool / Command / SortTimeSeries #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -13,13 +13,17 @@
 
 The `SortTimeSeries` command sorts time series based on the specified criteria:
 
-* the time series identifier or alias
-* a time series property
-* a string formatted from time series properties
+*   the time series identifier or alias
+*   a time series property
+*   a string formatted from time series properties
 
 This command is useful for ordering time series before writing output or visualization.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Select, Free, Sort Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 

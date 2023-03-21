@@ -1,11 +1,11 @@
 # TSTool / Command / LookupTimeSeriesFromTable #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -14,9 +14,9 @@
 The `LookupTimeSeriesFromTable` command uses an input time series and
 lookup table to create the output time series.  Examples of using this command include:
 
-* Converting reservoir elevation to storage, surface area, seepage, or other values
-* Converting river stage to discharge
-* Converting a time series to category values
+*   Converting reservoir elevation to storage, surface area, seepage, or other values
+*   Converting river stage to discharge
+*   Converting a time series to category values
 
 In many cases the lookup table will apply throughout the analysis period.
 However, it is possible that the table will change over time (e.g., as a
@@ -29,6 +29,10 @@ This command currently does not handle rating table shifts; however,
 this capability may be added in the future.  
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Create Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -79,4 +83,4 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`SetTimeSeriesValuesFromLookupTable`](../SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable.md) command
+*   [`SetTimeSeriesValuesFromLookupTable`](../SetTimeSeriesValuesFromLookupTable/SetTimeSeriesValuesFromLookupTable.md) command

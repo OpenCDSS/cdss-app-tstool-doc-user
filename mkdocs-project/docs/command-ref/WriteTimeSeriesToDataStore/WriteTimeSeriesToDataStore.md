@@ -1,11 +1,11 @@
 # TSTool / Command / WriteTimeSeriesToDataStore #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -21,6 +21,10 @@ This command is useful in particular for bulk data loading such as for database
 initialization and when tight integration with TSTool is not required or has not been implemented.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / Output Time Series***
 
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
@@ -69,5 +73,5 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## See Also ##
 
-* [`ReadTimeSeriesFromDataStore`](../ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md) command
-* [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command
+*   [`ReadTimeSeriesFromDataStore`](../ReadTimeSeriesFromDataStore/ReadTimeSeriesFromDataStore.md) command
+*   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

@@ -1,11 +1,11 @@
 # TSTool / Command / StartRegressionTestResultsReport #
 
-* [Overview](#overview)
-* [Command Editor](#command-editor)
-* [Command Syntax](#command-syntax)
-* [Examples](#examples)
-* [Troubleshooting](#troubleshooting)
-* [See Also](#see-also)
+*   [Overview](#overview)
+*   [Command Editor](#command-editor)
+*   [Command Syntax](#command-syntax)
+*   [Examples](#examples)
+*   [Troubleshooting](#troubleshooting)
+*   [See Also](#see-also)
 
 -------------------------
 
@@ -21,6 +21,10 @@ which is the same as that for `OutputFile` but test numbers are removed.
 This allows the output files to be compared to identify differences in output.
 
 ## Command Editor ##
+
+The command is available in the following TSTool menu:
+
+*   ***Commands / General - Test Processing***
 
 The following dialog is used to edit the command and illustrates the command syntax.
 
@@ -112,6 +116,6 @@ Total          = 18
 
 ## See Also ##
 
-* [`CreateRegressionTestCommandFile`](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command
-* [`RunCommands`](../RunCommands/RunCommands.md) command
-* [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile.md) command
+*   [`CreateRegressionTestCommandFile`](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command
+*   [`RunCommands`](../RunCommands/RunCommands.md) command
+*   [`WriteCommandSummaryToFile`](../WriteCommandSummaryToFile/WriteCommandSummaryToFile.md) command
