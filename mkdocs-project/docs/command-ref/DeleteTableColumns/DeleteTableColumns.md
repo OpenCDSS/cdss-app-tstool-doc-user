@@ -72,6 +72,8 @@ DeleteTableColumns(TableID="Table1",DeleteColumns="double1,integer1")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`DeleteTableRows`](../DeleteTableRows/DeleteTableRows.md) command

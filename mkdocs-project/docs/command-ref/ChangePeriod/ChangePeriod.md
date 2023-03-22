@@ -63,6 +63,8 @@ ChangePeriod(TSList=AllTS,NewStart="1900-01")
 ```
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

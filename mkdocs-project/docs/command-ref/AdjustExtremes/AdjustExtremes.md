@@ -82,6 +82,8 @@ Results from `AdjustExtremes` Command
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`AddConstant`](../AddConstant/AddConstant.md) command

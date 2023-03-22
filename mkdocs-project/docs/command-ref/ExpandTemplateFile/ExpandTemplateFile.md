@@ -540,6 +540,8 @@ For example, see the TSTool [`If`](../If/If.md) and [`For`](../For/For.md) comma
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`CopyTable`](../CopyTable/CopyTable.md) command

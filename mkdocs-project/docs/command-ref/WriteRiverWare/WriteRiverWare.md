@@ -69,6 +69,8 @@ WriteRiverWare(TSList=AllTS,OutputFile="08213500.Month.RiverWare",Precision=2)
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadRiverWare`](../ReadRiverWare/ReadRiverWare.md) command

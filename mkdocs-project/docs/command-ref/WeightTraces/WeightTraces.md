@@ -80,6 +80,8 @@ Results of the `WeightTraces` Command (<a href="../WeightTraces_Graph.png">see a
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`CreateEnsembleFromOneTimeSeries`](../CreateEnsembleFromOneTimeSeries/CreateEnsembleFromOneTimeSeries.md) command

@@ -109,6 +109,8 @@ ReadStateModB(InputFile="COLOFB.B43",Version="09.53")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command

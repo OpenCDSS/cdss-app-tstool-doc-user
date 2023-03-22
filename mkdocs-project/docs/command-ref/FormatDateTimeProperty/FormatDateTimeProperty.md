@@ -90,6 +90,8 @@ FormatDateTimeProperty(PropertyName="DateTimePropString",DateTimePropertyName="D
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`FormatStringProperty`](../FormatStringProperty/FormatStringProperty.md) command

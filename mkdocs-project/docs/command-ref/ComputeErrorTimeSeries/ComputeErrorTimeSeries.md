@@ -76,6 +76,8 @@ CompareFiles(InputFile1="Results\Test_ComputeErrorTimeSeries_1_out.dv",InputFile
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

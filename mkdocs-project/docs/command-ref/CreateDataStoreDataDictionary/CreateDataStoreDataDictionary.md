@@ -159,6 +159,8 @@ The following is an example of an Excel workbook with ER Diagram layout data, wh
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command

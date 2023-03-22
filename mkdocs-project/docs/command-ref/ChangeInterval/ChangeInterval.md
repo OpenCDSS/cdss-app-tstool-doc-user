@@ -526,6 +526,8 @@ ChangeInterval(Alias=”3HourINST”,TSID="IrregularINST",NewInterval=3Hour,OldT
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [Statistic Examples](../../examples/examples.md#statistic-examples)

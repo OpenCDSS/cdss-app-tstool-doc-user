@@ -72,6 +72,8 @@ WriteStateMod(TSList=AllTS,OutputFile="RioGrande.rih")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command

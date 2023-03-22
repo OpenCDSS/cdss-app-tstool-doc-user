@@ -155,6 +155,8 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ### Data Alignment Error for NHour Time Series ###
 
 The error shown in the following figure may be generated if data were previously

@@ -65,6 +65,8 @@ InsertTimeSeriesIntoEnsemble(Ensemble2=”TestEnsemble”)
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`NewEnsemble`](../NewEnsemble/NewEnsemble.md) command

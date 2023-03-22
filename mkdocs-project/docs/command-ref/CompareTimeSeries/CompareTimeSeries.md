@@ -182,6 +182,8 @@ AnalysisStart="OutputStart",AnalysisEnd="OutputEnd",DiffFlag="x")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`CompareFiles`](../CompareFiles/CompareFiles.md) command

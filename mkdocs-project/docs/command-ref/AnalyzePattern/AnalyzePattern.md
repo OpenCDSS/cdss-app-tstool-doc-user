@@ -124,6 +124,8 @@ Statistics from Pattern Analysis
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`FillPattern`](../FillPattern/FillPattern.md) command

@@ -156,6 +156,8 @@ Result of `NewDayTSFromMonthAndDayTS` Command (<a href="../NewDayTSFromMonthAndD
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

@@ -73,6 +73,8 @@ WriteDateValue(OutputFile=",Example_NewPatternTimeSeries_out.dv")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`NewTimeSeries`](../NewTimeSeries/NewTimeSeries.md) command

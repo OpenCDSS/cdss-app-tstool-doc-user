@@ -101,6 +101,8 @@ using the pattern `09034500` (a stream gage for the region).
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`AnalyzePattern`](../AnalyzePattern/AnalyzePattern.md) command

@@ -150,6 +150,8 @@ Command Parameters
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`RunCommands`](../RunCommands/RunCommands.md) command

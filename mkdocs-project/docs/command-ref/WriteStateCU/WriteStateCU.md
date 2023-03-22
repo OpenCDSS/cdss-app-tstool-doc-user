@@ -72,6 +72,8 @@ WriteStateCU(OutputFile="test.stm")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadStateCU`](../ReadStateCU/ReadStateCU.md) command

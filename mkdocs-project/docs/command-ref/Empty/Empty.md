@@ -39,6 +39,8 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`UnknownCommand`](../UnknownCommand/UnknownCommand.md) command - unknown commands that are not empty lines

@@ -148,6 +148,8 @@ ReadTimeSeriesList(TableID=”Diversions.csv",LocationColumn=”WDID”,DataSour
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command

@@ -409,6 +409,8 @@ AnalyzeNetworkPointFlow(TableID="Network1",NodeIDColumn="NodeID",NodeNameColumn=
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`AdjustExtremes`](../AdjustExtremes/AdjustExtremes.md) command

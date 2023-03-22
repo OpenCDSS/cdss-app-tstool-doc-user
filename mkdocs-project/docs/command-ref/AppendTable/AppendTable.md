@@ -88,6 +88,8 @@ Table Corresponding to Results from Parameters in Command Editor
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`FreeTable`](../FreeTable/FreeTable.md) command

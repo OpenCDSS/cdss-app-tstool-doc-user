@@ -65,6 +65,8 @@ ReadMODSIM(Alias=”BIGTOM”,InputFile="BIGTOM17.RES",TSID="GREELEYCBT..STOR_TR
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadStateMod`](../ReadStateMod/ReadStateMod.md) command

@@ -221,6 +221,8 @@ Example Graph Showing Results of `Cumulate` Command (<a href="../Cumulate_Graph.
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

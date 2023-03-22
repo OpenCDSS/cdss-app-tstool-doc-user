@@ -143,6 +143,8 @@ TestFor="Station4"
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`Break`](../Break/Break.md) command

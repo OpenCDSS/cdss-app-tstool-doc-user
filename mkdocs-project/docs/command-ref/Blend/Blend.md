@@ -71,6 +71,8 @@ Blend(TSID=”08236000.DWR.Streamflow.Month”,IndependentTSID=”08236500.DWR.S
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`Add`](../Add/Add.md) command

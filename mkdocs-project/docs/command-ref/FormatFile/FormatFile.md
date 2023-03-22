@@ -77,6 +77,8 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 Not all combinations of parameters are fully supported, pending additional testing.
 For example, it should be possible to encode an image file as CGI output, but this is not fully implemented.
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`WriteTableToHTML`](../WriteTableToHTML/WriteTableToHTML.md) command

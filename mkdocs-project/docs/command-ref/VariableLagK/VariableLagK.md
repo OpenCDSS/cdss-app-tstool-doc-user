@@ -251,6 +251,8 @@ VariableLagK(TSID="Inflow",FlowUnits="CMS",LagInterval="Hour",
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`LagK`](../LagK/LagK.md) command

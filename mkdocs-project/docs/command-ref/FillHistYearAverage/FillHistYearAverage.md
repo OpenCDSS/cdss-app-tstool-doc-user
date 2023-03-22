@@ -82,6 +82,8 @@ Non-missing data period: 1945 to 1997
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md) command

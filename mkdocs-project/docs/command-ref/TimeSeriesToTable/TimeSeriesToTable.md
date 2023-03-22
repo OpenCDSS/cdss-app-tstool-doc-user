@@ -151,6 +151,8 @@ Single Data Column Table (<a href="../TimeSeriesToTable_Single2.png">see also th
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`SortTable`](../SortTable/SortTable.md) command

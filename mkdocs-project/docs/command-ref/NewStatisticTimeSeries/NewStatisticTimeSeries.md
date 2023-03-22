@@ -112,6 +112,8 @@ This can be controlled by the `AllowMissingCount` and `MinimumSampleSize` parame
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [Statistic Examples](../../examples/examples.md#statistic-examples)

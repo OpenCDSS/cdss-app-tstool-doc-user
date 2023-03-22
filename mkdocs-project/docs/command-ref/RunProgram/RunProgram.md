@@ -230,6 +230,8 @@ Example Command Status Messages (<a href="../RunProgram_OutputCheckTable_Status.
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`RunCommands`](../RunCommands/RunCommands.md) command

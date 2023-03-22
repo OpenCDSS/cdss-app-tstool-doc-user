@@ -93,6 +93,8 @@ The following figure illustrates a graph of the resulting ensemble:
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`InsertTimeSeriesIntoEnsemble`](../InsertTimeSeriesIntoEnsemble/InsertTimeSeriesIntoEnsemble.md) command

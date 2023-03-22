@@ -265,6 +265,8 @@ Examples were also shown in the [Command Editor section above](#command-editor)
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`FreeTable`](../FreeTable/FreeTable.md) command

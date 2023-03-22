@@ -20,15 +20,15 @@ The documentation for each command indicates which command parameters can be spe
 This command should not be confused with the [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command,
 which sets a property on specific time series.  The following functionality is provided:
 
-* Set a property to a specified value, where the property can be a Boolean, String, DateTime, Double, or Integer type.
-* Set a property to a special value such as empty string or other special values.
-* Remove an existing property so that it is no longer available to the processor.
-Care should be taken to understand the implications of removing a property.
-For example, if the property is used in later commands, then removing will cause the processor to not find the property.
-It may be more appropriate, for example, to set a string property to an empty string rather than removing.
-* Set a property by modifying a previous processor property using basic math manipulations.
-In this case, specify the initial property value with `${Property}` and then use the ***Math*** tab parameters
-to manipulate the initial value.
+*   Set a property to a specified value, where the property can be a Boolean, String, DateTime, Double, or Integer type.
+*   Set a property to a special value such as empty string or other special values.
+*   Remove an existing property so that it is no longer available to the processor.
+    Care should be taken to understand the implications of removing a property.
+    For example, if the property is used in later commands, then removing will cause the processor to not find the property.
+    It may be more appropriate, for example, to set a string property to an empty string rather than removing.
+*   Set a property by modifying a previous processor property using basic math manipulations.
+    In this case, specify the initial property value with `${Property}` and then use the ***Math*** tab parameters
+    to manipulate the initial value.
 
 ## Command Editor ##
 
@@ -142,6 +142,8 @@ Command Parameters
 See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/SetProperty).
 
 ## Troubleshooting ##
+
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
 
 ## See Also ##
 

@@ -104,6 +104,8 @@ WriteHecDss(OutputFile="sample.dss",TYPE=PER-AVER,OutputStart="1992-01-01",Outpu
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadHecDss`](../ReadHecDss/ReadHecDss.md) command

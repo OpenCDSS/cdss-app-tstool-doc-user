@@ -106,6 +106,8 @@ DataType=DivTotal,Interval=Month,InputType=HydroBase,IfNotFound=Default)
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command

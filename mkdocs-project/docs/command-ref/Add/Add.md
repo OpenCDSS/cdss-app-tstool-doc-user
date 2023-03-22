@@ -82,6 +82,8 @@ AddTSID="0100503.DWR.DivTotal.Month",HandleMissingHow=IgnoreMissing)
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`NewTimeSeries`](../NewTimeSeries/NewTimeSeries.md) command

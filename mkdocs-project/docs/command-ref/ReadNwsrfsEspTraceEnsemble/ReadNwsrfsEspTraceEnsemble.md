@@ -66,6 +66,8 @@ ReadNwsrfsEspTraceEnsemble(InputFile="Data\CSCI.CSCI2.SQIN.06.CS",EnsembleID="En
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`WriteNwsrfsEspTraceEnsemble`](../WriteNwsrfsEspTraceEnsemble/WriteNwsrfsEspTraceEnsemble.md) command

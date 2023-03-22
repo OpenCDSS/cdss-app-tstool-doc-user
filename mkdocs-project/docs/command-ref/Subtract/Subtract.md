@@ -82,6 +82,8 @@ Subtract(TSID="0100501.DWR.DivTotal.Month",SubtractTSList=SpecifiedTSID,Subtract
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`Add`](../Add/Add.md) command

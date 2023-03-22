@@ -96,6 +96,8 @@ Daily Input Time Series and 6-Hour Disaggregated Time Series using Ormsbee Metho
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ChangeInterval`](../ChangeInterval/ChangeInterval.md) command

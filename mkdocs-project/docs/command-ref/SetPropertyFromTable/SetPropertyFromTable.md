@@ -87,6 +87,8 @@ The command shown in the editor dialog, used with the following table, will set 
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`For`](../For/For.md) command

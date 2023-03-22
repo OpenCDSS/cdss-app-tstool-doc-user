@@ -66,6 +66,8 @@ SetToMin(TSID="08236000.DWR.Streamflow.Month",IndependentTSList=SpecifiedTSID,In
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

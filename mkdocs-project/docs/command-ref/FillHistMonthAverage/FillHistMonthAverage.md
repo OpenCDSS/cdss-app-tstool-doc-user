@@ -95,6 +95,8 @@ Dec         0.0 1949-12        0.2 1948-12        0.2      0   0.00      2 100.0
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`FillHistYearAverage`](../FillHistYearAverage/FillHistYearAverage.md) command
