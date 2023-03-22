@@ -63,6 +63,8 @@ WriteNWSCard(OutputFile="Alamosa.NOAA.PTPX.24Hour",TSList=AllTS)
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadNwsCard`](../ReadNwsCard/ReadNwsCard.md) command

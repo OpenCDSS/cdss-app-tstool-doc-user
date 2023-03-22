@@ -122,6 +122,8 @@ LagK(Alias=”LKPN6routed”,TSID=LKPN6.USGS.QIN.1HOUR,Lag=3,K=2,FillNearest=tru
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`VariableLagK`](../VariableLagK/VariableLagK.md) command

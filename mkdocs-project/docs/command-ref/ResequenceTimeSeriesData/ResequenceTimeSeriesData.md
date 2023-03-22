@@ -117,6 +117,8 @@ Variations on the example can be implemented, for example, to process output pro
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command

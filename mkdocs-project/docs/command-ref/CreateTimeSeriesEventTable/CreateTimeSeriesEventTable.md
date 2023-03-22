@@ -210,6 +210,8 @@ Event Data after Relating to Time Series (<a href="../CreateTimeSeriesEventTable
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command

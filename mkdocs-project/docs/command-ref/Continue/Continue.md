@@ -54,6 +54,8 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`Break`](../Break/Break.md) command

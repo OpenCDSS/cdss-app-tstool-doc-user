@@ -57,6 +57,8 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 Problems in JSON files can be checked by using online "JSON lint" websites.
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`NewObject`](../NewObject/NewObject.md) command

@@ -50,6 +50,9 @@ Issues may also be included in other repositories that are TSTool components.
 *   ![bug](bug.png) [14.7.0] Fix a minor bug in
     [`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md) where the `ReadData`
     parameter was not being handled in the command editor.
+*   ![change](change.png) [14.7.0] The [`Delta`](../command-ref/Delta/Delta.md) command has been enhanced:
+    +   The `ResetType` parameter indicate the reset type for cumulative time series.
+    +   The `ResetType=Auto` parameter automatically handles data with resets.
 *   ![new](new.png) [14.7.0] The [`SetPropertyFromDataStore`](../command-ref/SetPropertyFromDataStore/SetPropertyFromDataStore.md)
     command has been added to set a propcessor property from a datastore configuration property.
 

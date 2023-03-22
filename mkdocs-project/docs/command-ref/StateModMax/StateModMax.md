@@ -74,6 +74,8 @@ WriteStateMod(OutputFile="rgTW.ddm")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`WriteStateMod`](../WriteStateMod/WriteStateMod.md) command

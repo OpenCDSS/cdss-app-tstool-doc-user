@@ -156,6 +156,8 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 * SQL statements that do not run can often be tested with database utility software that is provided with a database,
 for example `psql` program for PostgreSQL.
 * Attempting to specify an SQL statement as a parameter can be difficult when characters such as quotes

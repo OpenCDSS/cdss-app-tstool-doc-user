@@ -131,6 +131,8 @@ ReadRiverWare(Alias=”ts1”,InputFile="OSO.Diversion.dat")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`WriteRiverWare`](../WriteRiverWare/WriteRiverWare.md) command

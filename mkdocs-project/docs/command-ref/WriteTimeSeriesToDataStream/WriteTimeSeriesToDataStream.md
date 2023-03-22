@@ -168,6 +168,8 @@ var timeseries=[
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`FormatDateTimeProperty`](../FormatDateTimeProperty/FormatDateTimeProperty.md) command

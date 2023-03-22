@@ -136,6 +136,8 @@ FillPrincipalComponentAnalysis(DependentTSList=AllMatchingTSID,DependentTSID="De
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`FillMixedStation`](../FillMixedStation/FillMixedStation.md) command

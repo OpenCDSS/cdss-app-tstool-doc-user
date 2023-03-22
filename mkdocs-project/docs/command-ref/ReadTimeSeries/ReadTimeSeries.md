@@ -74,6 +74,8 @@ ReadTimeSeries(TSID="08235350.USGS.Streamflow.Day~HydroBase",Alias=TS1)
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command

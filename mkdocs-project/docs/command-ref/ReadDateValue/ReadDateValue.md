@@ -73,6 +73,8 @@ ReadDateValue(InputFile="Data\08251500.DWR.Streamflow.IRREGULAR.dv")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`WriteDateValue`](../WriteDateValue/WriteDateValue.md) command

@@ -314,6 +314,8 @@ ReadTableFromJSON(TableID="Table1",InputFile="Data/named-array-nested.json",Arra
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`NewObject`](../NewObject/NewObject.md) command

@@ -75,6 +75,8 @@ ReadHecDss(InputFile="sample.dss",InputStart="1992-01-01",InputEnd="1992-12-31",
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`WriteHecDss`](../WriteHecDss/WriteHecDss.md) command

@@ -76,6 +76,8 @@ ConvertDataUnits(TSList=AllMatchingTSID,TSID="08236000.DWR.Streamflow.Month",New
 ```
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`Scale`](../Scale/Scale.md) command

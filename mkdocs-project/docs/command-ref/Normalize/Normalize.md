@@ -77,6 +77,8 @@ Results of `Normalize` Command (<a href="../Normalize_Graph.png">see also the fu
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`RelativeDiff`](../RelativeDiff/RelativeDiff.md) command

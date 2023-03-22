@@ -80,6 +80,8 @@ In this case, the object property is specified with `ObjectProperty=float`.
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`SetProperty`](../SetProperty/SetProperty.md) command

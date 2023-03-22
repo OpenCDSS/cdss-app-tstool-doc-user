@@ -101,6 +101,8 @@ Command Parameters
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`RunProgram`](../RunProgram/RunProgram.md) command

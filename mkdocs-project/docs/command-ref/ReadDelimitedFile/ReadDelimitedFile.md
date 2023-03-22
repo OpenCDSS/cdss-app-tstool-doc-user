@@ -166,6 +166,8 @@ The following dialog is used to edit the command and illustrates the syntax for 
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`WriteDelimitedFile`](../WriteDelimitedFile/WriteDelimitedFile.md) command

@@ -86,6 +86,8 @@ NewTimeSeries(Alias=”station1”,NewTSID="Station1.MyModel.Streamflow.Month",D
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`NewPatternTimeSeries`](../NewPatternTimeSeries/NewPatternTimeSeries.md) command

@@ -88,6 +88,8 @@ SetOutputPeriod(OutputStart="1950-01",OutputEnd="2002-12")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command

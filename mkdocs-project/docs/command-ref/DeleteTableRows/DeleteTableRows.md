@@ -87,6 +87,8 @@ DeleteTableRows(TableID="Table1",DeleteRowNumbers="last")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`DeleteTableColumns`](../DeleteTableColumns/DeleteTableColumns.md) command

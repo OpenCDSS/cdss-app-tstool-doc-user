@@ -14,9 +14,9 @@
 The `RemoveFolder` command removes a folder and its contained files and folders.
 Common uses for the command are:
 
-*  remove workflow output files before regenerating the results so that no old files might be mistaken for current results
-*  remove temporary and working files that are not needed at the end of a workflow
-*  remove folders during software testing to ensure that commands are generating output as expected
+*   remove workflow output files before regenerating the results so that no old files might be mistaken for current results
+*   remove temporary and working files that are not needed at the end of a workflow
+*   remove folders during software testing to ensure that commands are generating output as expected
 
 A failure will be generated if the folder exists and cannot be removed (e.g., due to file permissions or because
 a file in the folder is being used by another process).
@@ -67,6 +67,8 @@ Command Parameters
 See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/RemoveFolder).
 
 ## Troubleshooting ##
+
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
 
 ## See Also ##
 

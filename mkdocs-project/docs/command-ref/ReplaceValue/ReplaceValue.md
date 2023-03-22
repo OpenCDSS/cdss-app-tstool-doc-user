@@ -78,6 +78,8 @@ ReplaceValue(TSList=AllTS,MinValue=-100000,MaxValue=0,NewValue=0)
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command

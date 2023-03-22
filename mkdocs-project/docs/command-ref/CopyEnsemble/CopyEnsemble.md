@@ -66,6 +66,8 @@ CopyEnsemble(NewEnsembleID="Ensemble_2",NewEnsembleName="Test ensemble 2",NewTSI
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`Copy`](../Copy/Copy.md) command, to copy a time series

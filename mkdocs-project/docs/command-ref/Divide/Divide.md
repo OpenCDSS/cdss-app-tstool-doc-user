@@ -76,6 +76,8 @@ Results from `Divide` Command (<a href="../Divide_Graph.png">see also the full-s
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`RelativeDiff`](../RelativeDiff/RelativeDiff.md) command

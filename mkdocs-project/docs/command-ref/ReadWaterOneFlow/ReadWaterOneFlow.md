@@ -22,6 +22,8 @@ however, the WaterML response currently cannot be saved to a file
 
 ## Command Editor ##
 
+Need to add documentation.
+
 ## Command Syntax ##
 
 The command syntax is as follows:
@@ -44,6 +46,8 @@ Command Parameters
 See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ReadWaterOneFlow).
 
 ## Troubleshooting ##
+
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
 
 ## See Also ##
 

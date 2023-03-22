@@ -169,7 +169,6 @@ nav:
   - ReadRccAcis: command-ref/ReadRccAcis/ReadRccAcis.md
   - ReadReclamationHDB: command-ref/ReadReclamationHDB/ReadReclamationHDB.md
   - ReadReclamationPisces: command-ref/ReadReclamationPisces/ReadReclamationPisces.md
-  - ReadRiversideDB: command-ref/ReadRiversideDB/ReadRiversideDB.md
   - ReadRiverWare: command-ref/ReadRiverWare/ReadRiverWare.md
   - ReadStateCU: command-ref/ReadStateCU/ReadStateCU.md
   - ReadStateCUB: command-ref/ReadStateCUB/ReadStateCUB.md
@@ -274,7 +273,6 @@ nav:
   - WriteObjectToJSON: command-ref/WriteObjectToJSON/WriteObjectToJSON.md
   - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
   - WriteReclamationHDB: command-ref/WriteReclamationHDB/WriteReclamationHDB.md
-  - WriteRiversideDB: command-ref/WriteRiversideDB/WriteRiversideDB.md
   - WriteRiverWare: command-ref/WriteRiverWare/WriteRiverWare.md
   - WriteSHEF: command-ref/WriteSHEF/WriteSHEF.md
   - WriteStateCU: command-ref/WriteStateCU/WriteStateCU.md

@@ -119,6 +119,8 @@ Any warnings or errors should be reviewed and problem URLs should be corrected i
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`For`](../For/For.md) command

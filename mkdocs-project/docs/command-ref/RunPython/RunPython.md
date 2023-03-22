@@ -167,7 +167,10 @@ WebGet(URI="https://www.esrl.noaa.gov/psd/data/correlation/mei.data",LocalFile="
 # Convert the MEI data file to a CSV file that can be read by TSTool
 RunPython(Interpreter="Python",InputFile="mei2csv.py",Arguments="\"InputFile=${WorkingDir}/mei.data\"
 ```
+
 ## Troubleshooting ##
+
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
 
 ## See Also ##
 

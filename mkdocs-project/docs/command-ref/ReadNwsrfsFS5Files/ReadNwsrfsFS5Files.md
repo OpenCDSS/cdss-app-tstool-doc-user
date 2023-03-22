@@ -62,4 +62,6 @@ ReadNwsrfsFS5Files(Alias=”x”,TSID="DWRI1IU.NWSRFS.MAP.6Hour~NWSRFS_FS5Files~
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##

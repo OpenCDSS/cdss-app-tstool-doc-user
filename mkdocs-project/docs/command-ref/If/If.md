@@ -201,6 +201,8 @@ EndIf(Name="SampleSizeCheck3Outer")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`Break`](../Break/Break.md) command

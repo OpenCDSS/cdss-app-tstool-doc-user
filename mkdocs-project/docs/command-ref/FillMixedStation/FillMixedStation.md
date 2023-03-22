@@ -205,6 +205,8 @@ FillMixedStation(BestFitIndicator=SEP,NumberOfEquations="MonthlyEquations,OneEqu
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command

@@ -170,6 +170,8 @@ Example Graph Showing Original and ARMA-Routed Time Series as Cumulative Values 
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`Cumulate`](../Cumulate/Cumulate.md) command

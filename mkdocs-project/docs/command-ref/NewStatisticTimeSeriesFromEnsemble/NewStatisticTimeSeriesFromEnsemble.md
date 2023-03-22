@@ -178,6 +178,8 @@ The following figure illustrates the results:
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [Statistic Examples](../../examples/examples.md#statistic-examples)

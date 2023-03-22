@@ -97,6 +97,8 @@ Results of `RelativeDiff` Command
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`Normalize`](../Normalize/Normalize.md) command

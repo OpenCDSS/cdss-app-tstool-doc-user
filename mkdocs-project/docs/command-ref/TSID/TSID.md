@@ -109,6 +109,8 @@ A sample command file to read time series from the [State of Colorado’s HydroB
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ReadTimeSeries`](../ReadTimeSeries/ReadTimeSeries.md) command

@@ -76,6 +76,8 @@ Copy(Alias=”Filled”,TSID="08223000.DWR.Streamflow.Month",NewTSID="08223000.D
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`CopyFile`](../CopyFile/CopyFile.md) command

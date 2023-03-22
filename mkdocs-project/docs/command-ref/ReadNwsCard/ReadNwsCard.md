@@ -99,6 +99,8 @@ ReadNwsCard(InputFile="Data/TDAO3.QA.ESP",EnsembleID="Ensemble_TDAO3",NewUnits="
 
 ## Troubleshooting
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also
 
 *   [`WriteNwsCard`](../WriteNwsCard/WriteNwsCard.md) command

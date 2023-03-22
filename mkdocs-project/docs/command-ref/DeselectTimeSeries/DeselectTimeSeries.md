@@ -65,6 +65,8 @@ DeselectTimeSeries(TSList=AllMatchingTSID,TSID="40*",SelectAllFirst=True)
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command

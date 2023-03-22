@@ -156,6 +156,8 @@ The following example illustrates a CSV table that specifies WKT for polygons:
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`WriteTableToKml`](../WriteTableToKml/WriteTableToKml.md) command

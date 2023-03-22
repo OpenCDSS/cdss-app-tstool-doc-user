@@ -192,6 +192,8 @@ Formatted Date/time Output for Increment Data (<a href="../FormatTableDateTime_I
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`FormatTableString`](../FormatTableString/FormatTableString.md) command

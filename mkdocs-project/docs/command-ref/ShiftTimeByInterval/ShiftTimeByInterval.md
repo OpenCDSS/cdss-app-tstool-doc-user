@@ -75,6 +75,8 @@ Results from `ShiftTimeByInterval` Command (<a href="../ShiftTimeByInterval_Grap
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`Disaggregate`](../Disaggregate/Disaggregate.md) command

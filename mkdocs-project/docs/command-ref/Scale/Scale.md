@@ -80,7 +80,10 @@ Scale(TSList=AllMatchingTSID,TSID="06754000.DWR.Streamflow.Month",ScaleValue=.50
 Scale(TSList=AllMatchingTSID,TSID="06754000.DWR.Streamflow.Month",ScaleValue=DaysInMonthInverse,NewUnits="CFS")
 06754000.DWR.Streamflow.Month~HydroBase
 ```
+
 ## Troubleshooting ##
+
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
 
 ## See Also ##
 

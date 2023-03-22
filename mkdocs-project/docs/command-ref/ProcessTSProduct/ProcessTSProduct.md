@@ -162,6 +162,8 @@ ProcessTSProduct(TSProductFile="Example_ProcessTSProduct.tsp")
 
 ## Troubleshooting ##
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command

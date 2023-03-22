@@ -148,6 +148,8 @@ or whether to delete or add a value.
 
 Problems in JSON files can be checked by using online "JSON lint" websites.
 
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
 ## See Also ##
 
 *   [`NewObject`](../NewObject/NewObject.md) command

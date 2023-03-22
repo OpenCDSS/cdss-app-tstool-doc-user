@@ -26,9 +26,15 @@ The command is available in the following TSTool menu:
 
 ## Command Syntax ##
 
+This documentation needs to be completed.
+
 ## Examples ##
 
+This documentation needs to be completed.
+
 ## Troubleshooting ##
+
+See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
 
 ## See Also ##
 
