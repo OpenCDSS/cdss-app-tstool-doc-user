@@ -24,7 +24,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![ReadStateCU](ReadStateCU.png)
+![ReadStateCU command editor](ReadStateCU.png)
 </p>**
 
 **<p style="text-align: center;">

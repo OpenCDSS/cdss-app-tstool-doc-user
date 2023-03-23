@@ -32,7 +32,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![Message](Message.png)
+![Message command editor](Message.png)
 </p>**
 
 **<p style="text-align: center;">

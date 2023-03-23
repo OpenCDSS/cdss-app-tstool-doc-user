@@ -36,7 +36,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![AdjustExtremes](AdjustExtremes.png)
+![AdjustExtremes command editor](AdjustExtremes.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -73,7 +73,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 The following example shows results using the above command editor values (adjusted on left, original on right):
 
 **<p style="text-align: center;">
-![AdjustExtremes Table](AdjustExtremes_Table.png)
+![Results from AdjustExtremes Command](AdjustExtremes_Table.png)
 </p>**
 
 **<p style="text-align: center;">

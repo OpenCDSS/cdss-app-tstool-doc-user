@@ -28,7 +28,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![AppendTable](AppendTable.png)
+![AppendTable command editor](AppendTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -63,7 +63,7 @@ The following figures show the input tables and results (modified first table) c
 Note that the column names for “Table2” have a “2”.
 
 **<p style="text-align: center;">
-![AppendTable1](AppendTable_Table1.png)
+![Table corresponding to TableID in Command Edtior](AppendTable_Table1.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -71,7 +71,7 @@ Table Corresponding to TableID in Command Editor
 </p>**
 
 **<p style="text-align: center;">
-![AppendTable2](AppendTable_Table2.png)
+![Table corresponding to AppendTableID in command editor](AppendTable_Table2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -79,7 +79,7 @@ Table Corresponding to AppendTableID in Command Editor
 </p>**
 
 **<p style="text-align: center;">
-![AppendTable results](AppendTable_Table1Appended.png)
+![Table correspponding to results fromlParameters in command editor](AppendTable_Table1Appended.png)
 </p>**
 
 **<p style="text-align: center;">

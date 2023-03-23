@@ -18,7 +18,7 @@ The `UnknownCommand` is used to store commands that are not recognized as valid 
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![UnknownCommand](UnknownCommand.png)
+![UnknownCommand command editor](UnknownCommand.png)
 </p>**
 
 **<p style="text-align: center;">

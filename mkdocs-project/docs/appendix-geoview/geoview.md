@@ -31,7 +31,8 @@ The GeoView package has been developed using Java technology.
 GeoView interfaces can be embedded in Java applications (e.g.,
 use GeoView as the main window interface), can be enabled as a separate
 floating window (e.g., to support an application's features without being embedded in the main window),
-and can be used in web pages either as embedded map applets or stand-alone map windows.  GeoView tools operate similarly on various operating systems.
+and can be used in web pages either as embedded map applets or stand-alone map windows.
+GeoView tools operate similarly on various operating systems.
 
 This appendix describes general GeoView features and can be used as a
 reference for how to configure and use GeoView components.
@@ -74,7 +75,7 @@ If the map is in the main window, the menus at the top of the window will be tho
 specific to the software (whereas below the single GeoView ***File ***menu is shown).
 
 **<p style="text-align: center;">
-![GeoView_Frame](GeoView_Frame.png)
+![Example GeoView Interface from TSTool](GeoView_Frame.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -105,11 +106,11 @@ GeoView Tools
 
 |**Tool Icon**|**Tool**|**Description**|
 |--|--|--|
-|![Print](Tool_Print_Icon.png)|***Print***|Print the visible map.  You will be able to pick the printer and orientation.|
-|![Save Image](Tool_Save_Image_Icon.png)|***Save Image***|Saves the map as a Portable Network Graphics (PNG), JPEG, or other supported graphic file format.|
-|![Refresh](Tool_Refresh_Icon.png)|***Refresh***|Refresh the map display by redrawing features in enabled layers that are in the visible window.  This does not re-read the original data.  GeoView normally refreshes automatically as needed.|
-|![Zoom out](Tool_Zoom_Out_Icon.png)|***Zoom Out***|Zoom to the maximum data extents.|
-|![Zoom in](Tool_Zoom_Icon.png) ![Info](Tool_Info_Icon.png) ![Select](Tool_Select_Icon.png)|***Select the Mode as Zoom, Info, or Select***|Select the interaction mode.  The ***Zoom*** mode allows a rectangle to be drawn on the map to zoom to the specified region and is the default mode if no layer is selected.  The ***Info*** mode allows features to be selected (by clicking on or drawing a box around), after which geographic information about the features is displayed.  The ***Select*** mode is similar to ***Info***; however, its purpose is to select features for an additional action (e.g., exporting data or performing a query).  The ***Info*** and ***Select*** modes are only enabled if one or more layers are selected in the table of contents.<br><br>See the next section for more information about using these features.|
+|![Print icon](Tool_Print_Icon.png)|***Print***|Print the visible map.  You will be able to pick the printer and orientation.|
+|![Save Image icon](Tool_Save_Image_Icon.png)|***Save Image***|Saves the map as a Portable Network Graphics (PNG), JPEG, or other supported graphic file format.|
+|![Refresh icon](Tool_Refresh_Icon.png)|***Refresh***|Refresh the map display by redrawing features in enabled layers that are in the visible window.  This does not re-read the original data.  GeoView normally refreshes automatically as needed.|
+|![Zoom out icon](Tool_Zoom_Out_Icon.png)|***Zoom Out***|Zoom to the maximum data extents.|
+|![Zoom in icon](Tool_Zoom_Icon.png) ![Info icon](Tool_Info_Icon.png) ![Select icon](Tool_Select_Icon.png)|***Select the Mode as Zoom, Info, or Select***|Select the interaction mode.  The ***Zoom*** mode allows a rectangle to be drawn on the map to zoom to the specified region and is the default mode if no layer is selected.  The ***Info*** mode allows features to be selected (by clicking on or drawing a box around), after which geographic information about the features is displayed.  The ***Select*** mode is similar to ***Info***; however, its purpose is to select features for an additional action (e.g., exporting data or performing a query).  The ***Info*** and ***Select*** modes are only enabled if one or more layers are selected in the table of contents.<br><br>See the next section for more information about using these features.|
 
 The GeoView Panel components work with each other to provide interaction with the maps, as described below.
 
@@ -124,12 +125,12 @@ GeoView Interactions
 
 |**Action**|**Description**|
 |--|--|
-|Disable/Enable a layer view|Layers can be enabled/disabled to make the map more readable or useful:<br><ol><li>Use the check boxes in the table of contents to disable and enable layer views, as appropriate.  The map will automatically refresh, resulting in a slight delay as the map is redrawn.</li><li>If necessary, use the ***Refresh*** tool (![Refresh](Tool_Refresh_Icon.png) to cause the map to be updated (automatic refresh may be disabled for some applications, due to performance reasons).</li></ol>|
+|Disable/Enable a layer view|Layers can be enabled/disabled to make the map more readable or useful:<br><ol><li>Use the check boxes in the table of contents to disable and enable layer views, as appropriate.  The map will automatically refresh, resulting in a slight delay as the map is redrawn.</li><li>If necessary, use the ***Refresh*** tool (![Refresh icon](Tool_Refresh_Icon.png) to cause the map to be updated (automatic refresh may be disabled for some applications, due to performance reasons).</li></ol>|
 |Change layer view order|**Currently the layer view order can only be changed by editing the GeoView Project file.**|
-|Zoom in/out|Zooming is useful make symbols and labels more readable.  To zoom in:<br><ol><li>Set the GeoView interaction mode to "zoom" by selecting the zoom tool (![Zoom](Tool_Zoom_Icon.png) at the top of the window.</li><li>Use the mouse to draw a box around an area of interest (left mouse button down to start, move the mouse, and then release).  The main GeoView map will zoom to the selected region and the reference map will show the zoom extent.</li><li>Use the ***Zoom Out*** tool (![Zoom Out](Tool_Zoom_Out_Icon.png) to zoom to the full extent or use the reference GeoView to zoom to a different region.</li></ol>|
+|Zoom in/out|Zooming is useful make symbols and labels more readable.  To zoom in:<br><ol><li>Set the GeoView interaction mode to "zoom" by selecting the zoom tool (![Zoom icon](Tool_Zoom_Icon.png) at the top of the window.</li><li>Use the mouse to draw a box around an area of interest (left mouse button down to start, move the mouse, and then release).  The main GeoView map will zoom to the selected region and the reference map will show the zoom extent.</li><li>Use the ***Zoom Out*** tool (![Zoom Out icon](Tool_Zoom_Out_Icon.png) to zoom to the full extent or use the reference GeoView to zoom to a different region.</li></ol>|
 |Change symbols for a layer view|To change the symbols and labels for a layer view:<br><ol><li>Select the layer view in the table of contents</li><li>Right-click and select the ***Properties*** menu.  See the [Setting GeoView Properties section](#setting-geoview-properties) below for information about the properties.</li></ol>|
-|Display geographic information for features|The GeoView interface can display information about geographic features (shape and attribute data) from the original geographic data.  To do so:<br><ol><li>Select layer views in the table of contents that are to be searched for information.</li><li>Set the GeoView interaction mode to Info (![Info](Tool_Info_Icon.png)).</li><li>Click near the feature or draw a box around multiple features.  The layers will be searched and the following dialog will be shown.</li></ol><br>![Info Dialog](GeoView_InfoDialog.png)<br>The resulting dialog will show information about the selected features, including basic layer information, and information about the specific shapes and attributes.  **The display is for geographic data only.  Attribute names and values are as they appear in the original data.  Additional application-specific data are typically provided by a separate software interface.**|
-|Select features|Features can be selected for a number of reasons.  Currently, GeoView has limited select tools, which are mainly used internally when integrated with an application (e.g., an application can select features internally, which are then highlighted on the map).  In the future, interfaces to select features from the GeoView interface using query criteria may be added.<br>Features can be selected (![Select](Tool_Select_Icon.png) similar to the ***Info*** mode described above.  The selected features are highlighted on the map.  In the past, yellow, or cyan have been used to highlight selected features.  However, yellow is not clearly visible when earth-tone colors are used for background layers and cyan is not clearly visible when water-tone colors are used for background layers.  Therefore, GeoView is phasing in a magenta/pink selection color, which is rarely used for background layers.
+|Display geographic information for features|The GeoView interface can display information about geographic features (shape and attribute data) from the original geographic data.  To do so:<br><ol><li>Select layer views in the table of contents that are to be searched for information.</li><li>Set the GeoView interaction mode to Info (![Info icon](Tool_Info_Icon.png)).</li><li>Click near the feature or draw a box around multiple features.  The layers will be searched and the following dialog will be shown.</li></ol><br>![Info Dialog](GeoView_InfoDialog.png)<br>The resulting dialog will show information about the selected features, including basic layer information, and information about the specific shapes and attributes.  **The display is for geographic data only.  Attribute names and values are as they appear in the original data.  Additional application-specific data are typically provided by a separate software interface.**|
+|Select features|Features can be selected for a number of reasons.  Currently, GeoView has limited select tools, which are mainly used internally when integrated with an application (e.g., an application can select features internally, which are then highlighted on the map).  In the future, interfaces to select features from the GeoView interface using query criteria may be added.<br>Features can be selected (![Select icon](Tool_Select_Icon.png) similar to the ***Info*** mode described above.  The selected features are highlighted on the map.  In the past, yellow, or cyan have been used to highlight selected features.  However, yellow is not clearly visible when earth-tone colors are used for background layers and cyan is not clearly visible when water-tone colors are used for background layers.  Therefore, GeoView is phasing in a magenta/pink selection color, which is rarely used for background layers.
 
 ## Setting GeoView Properties ##
 
@@ -141,7 +142,7 @@ Refer to the [GeoView Configuration – the GeoView Project File](#geoview-confi
 section below for a complete list of properties that can be defined in a GeoView Project file.
 
 **<p style="text-align: center;">
-![GeoView_Props](GeoView_Props.png)
+![Main GeoView Properties](GeoView_Props.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -171,7 +172,7 @@ GeoView layer properties, as shown in the following figure, apply to the input s
 Currently these properties are used for information purposes and cannot be interactively edited.
 
 **<p style="text-align: center;">
-![GeoView_Props_Layer](GeoView_Props_Layer.png)
+![GeoView Layer Properties](GeoView_Props_Layer.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -184,7 +185,7 @@ A sample of the symbol is shown in the dialog, although it may appear slightly d
 Symbol terminology corresponds to standard GIS tools.
 
 **<p style="text-align: center;">
-![GeoView_Props_Symbol](GeoView_Props_Symbol.png)
+![Layer View Symbol Properties](GeoView_Props_Symbol.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -199,7 +200,7 @@ To label features, select the attribute fields from the available choices,
 in the order that they should appear in the label.
 
 **<p style="text-align: center;">
-![GeoView_Props_Label](GeoView_Props_Label.png)
+![Layer View Label Properties](GeoView_Props_Label.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -226,7 +227,7 @@ The [Using GeoView with a Software Application section](#using-geoview-with-a-so
 describes this functionality in more detail.
 
 **<p style="text-align: center;">
-![GeoView_Props_Application](GeoView_Props_Application.png)
+![Application Layer Type](GeoView_Props_Application.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -238,7 +239,7 @@ Animation properties will define, for example,
 the time series data that are used for symbolization during animation.
 
 **<p style="text-align: center;">
-![GeoView_Props_Animation](GeoView_Props_Animation.png)
+![Layer View Animation Properties](GeoView_Props_Animation.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -255,7 +256,7 @@ then right-click and press the ***View Attribute Table*** menu choice.
 A window similar to the following will be shown.
 
 **<p style="text-align: center;">
-![GeoView_Attributes](GeoView_Attributes.png)
+![Attributes table for a layer](GeoView_Attributes.png)
 </p>**
 
 **<p style="text-align: center;">

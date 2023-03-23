@@ -79,7 +79,7 @@ The blue markers indicate the location of events for a test dataset, marked at t
 The green markers indicate the location of peaks, marked at the first peak value in each event.
 
 **<p style="text-align: center;">
-![CreateTimeSeriesEventTable_Analysis](CreateTimeSeriesEventTable_Analysis.png)
+![Time Series event analysis results](CreateTimeSeriesEventTable_Analysis.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -125,7 +125,7 @@ Location data can be specified in multiple columns,
 as shown in the far right of the figure, where non-blank values indicate the locations that are applicable for a location type.
 
 **<p style="text-align: center;">
-![CreateTimeSeriesEventTable InputTable](CreateTimeSeriesEventTable_InputTable.png)
+![Event data before relating to time series InputTable](CreateTimeSeriesEventTable_InputTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -145,7 +145,7 @@ It is envisioned that additional methods will be enabled in the future to create
 for example to estimate extreme events from data.
 
 **<p style="text-align: center;">
-![CreateTimeSeriesEventTable](CreateTimeSeriesEventTable.png)
+![CreateTimeSeriesEventTable command editor](CreateTimeSeriesEventTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -201,7 +201,7 @@ The results can then be used when processing time series products to
 annotate the graphs (see the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command).
 
 **<p style="text-align: center;">
-![CreateTimeSeriesEventTable OutputTable](CreateTimeSeriesEventTable_OutputTable.png)
+![Event data after relating to time series](CreateTimeSeriesEventTable_OutputTable.png)
 </p>**
 
 **<p style="text-align: center;">

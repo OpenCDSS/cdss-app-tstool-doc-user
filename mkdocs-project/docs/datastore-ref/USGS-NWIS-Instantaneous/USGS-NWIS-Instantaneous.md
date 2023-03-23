@@ -1,9 +1,9 @@
 # TSTool / Datastore Reference / USGS-NWIS-Instantaneous #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [Datastore Configuration File](#datastore-configuration-file)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [Datastore Configuration File](#datastore-configuration-file)
 
 ------------
 
@@ -13,11 +13,11 @@ The UsgsNwisInstantaneous datastore corresponds to the
 
 The following online query page is available for interactive queries:
 
-* [USGS Instantaneous Values Web Service](https://waterservices.usgs.gov/rest/IV-Service.html)
+*   [USGS Instantaneous Values Web Service](https://waterservices.usgs.gov/rest/IV-Service.html)
 
 The following online query page is available for interactive queries:
 
-* [USGS Instantaneous Values REST Web Service URL Generation Tool](https://waterservices.usgs.gov/rest/IV-Test-Tool.html)
+*   [USGS Instantaneous Values REST Web Service URL Generation Tool](https://waterservices.usgs.gov/rest/IV-Test-Tool.html)
 
 Although the USGS NWIS services are largely compatible with TSTool conventions,
 there are a number of limitations, which are discussed below.

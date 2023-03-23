@@ -64,7 +64,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![AnalyzePattern](AnalyzePattern.png)
+![AnalyzePattern command editor](AnalyzePattern.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -115,7 +115,7 @@ The following figure illustrates the resulting statistics:
 <a href="../AnalyzePattern_Table.png">See also the full-size image.</a>
 
 **<p style="text-align: center;">
-![AnalyzePattern Table](AnalyzePattern_Table.png)
+![Statistics from Pattern Analysis](AnalyzePattern_Table.png)
 </p>**
 
 **<p style="text-align: center;">

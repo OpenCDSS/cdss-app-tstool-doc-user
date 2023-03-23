@@ -34,7 +34,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
 **<p style="text-align: center;">
-![CheckTimeSeries](CheckTimeSeries.png)
+![CheckTimeSeries command editor for time series parameters](CheckTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -44,7 +44,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for criteria and action parameters.
 
 **<p style="text-align: center;">
-![CheckTimeSeries Criteria](CheckTimeSeries_Criteria.png)
+![CheckTimeSeries command editor for check Criteria and Action parameters](CheckTimeSeries_Criteria.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -54,7 +54,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for analysis period and window parameters.
 
 **<p style="text-align: center;">
-![CheckTimeSeries Time](CheckTimeSeries_Time.png)
+![CheckTimeSeries command editor for Analysis Period and Window parameters](CheckTimeSeries_Time.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -64,7 +64,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for output table parameters.
 
 **<p style="text-align: center;">
-![CheckTimeSeries Table](CheckTimeSeries_Table.png)
+![CheckTimeSeries command editor for Output Table parameters](CheckTimeSeries_Table.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -74,7 +74,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for output property parameters.
 
 **<p style="text-align: center;">
-![CheckTimeSeries Properties](CheckTimeSeries_Properties.png)
+![CheckTimeSeries command editor for Output Properties parameters](CheckTimeSeries_Properties.png)
 </p>**
 
 **<p style="text-align: center;">

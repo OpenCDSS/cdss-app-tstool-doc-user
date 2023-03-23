@@ -89,7 +89,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax for the command, in this case creating a database index.
 
 **<p style="text-align: center;">
-![RunSql](RunSql.png)
+![RunSql command editor](RunSql.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -99,7 +99,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 The following dialog is used to edit the command and illustrates the syntax for the command when using a file to specify the SQL statement.
 
 **<p style="text-align: center;">
-![RunSql File](RunSql_File.png)
+![RunSql command editor for SQL file](RunSql_File.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -110,7 +110,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 The ***Edit*** dialog will automatically populate the list of parameters if the database metadata provides such information.
 
 **<p style="text-align: center;">
-![RunSql Function](RunSql_Function.png)
+![RunSql command editor for function](RunSql_Function.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -121,7 +121,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 The ***Edit*** dialog will automatically populate the list of parameters if the database metadata provides such information.
 
 **<p style="text-align: center;">
-![RunSql Procedure](RunSql_Procedure.png)
+![RunSql command editor for procedure](RunSql_Procedure.png)
 </p>**
 
 **<p style="text-align: center;">

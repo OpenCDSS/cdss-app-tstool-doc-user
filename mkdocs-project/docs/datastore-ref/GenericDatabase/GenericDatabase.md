@@ -1,17 +1,17 @@
 # TSTool / Datastore Reference / GenericDatabase #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [Datastore Configuration File](#datastore-configuration-file)
-    + [Microsoft Access Database Example (New)](#microsoft-access-database-example-new)
-    + [Microsoft Access Database Example (Old, before TSTool 12)](#microsoft-access-database-example-old-before-tstool-12)
-    + [PostgreSQL Database Example](#postgresql-database-example)
-    + [SQLite Database Example](#sqlite-database-example)
-    + [SQL Server Database Example](#sql-server-database-example)
-    + [Time Series Datastore Configuration Properties](#time-series-datastore-configuration-properties)
-* [Using an ODBC Data Source](#using-an-odbc-data-source)
-    + [Microsoft SQL Server and ODBC](#microsoft-sql-server-and-odbc)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [Datastore Configuration File](#datastore-configuration-file)
+    +   [Microsoft Access Database Example (New)](#microsoft-access-database-example-new)
+    +   [Microsoft Access Database Example (Old, before TSTool 12)](#microsoft-access-database-example-old-before-tstool-12)
+    +   [PostgreSQL Database Example](#postgresql-database-example)
+    +   [SQLite Database Example](#sqlite-database-example)
+    +   [SQL Server Database Example](#sql-server-database-example)
+    +   [Time Series Datastore Configuration Properties](#time-series-datastore-configuration-properties)
+*   [Using an ODBC Data Source](#using-an-odbc-data-source)
+    +   [Microsoft SQL Server and ODBC](#microsoft-sql-server-and-odbc)
 
 ------------
 
@@ -289,10 +289,10 @@ is safe unless the user's account is compromised.
 If `SystemPassword = ${pgpass:password}`,
 the PostgreSQL `.pgpass` file for the user is searched to match:
 
-* `DatabaseServer`
-* `DatabasePort`
-* `DatabaseName`
-* `SystemLogin`
+*   `DatabaseServer`
+*   `DatabasePort`
+*   `DatabaseName`
+*   `SystemLogin`
 
 The password for the matching line is then used for the password.
 Using this approach ensures that the user's password is not included in plain text
@@ -420,10 +420,10 @@ identifiers (`LocationType:Location.DataSource.DataType.Interval.Scenario`) and 
 key properties can be provided (e.g., data units).
 Core tables in a compatible database design contain the following data:
 
-* Definitions, such as data types, data units, data source (providers)
-* Locations
-* Time series metadata (typically relationships to the above)
-* Time series data records (associated with a time series metadata record)
+*   Definitions, such as data types, data units, data source (providers)
+*   Locations
+*   Time series metadata (typically relationships to the above)
+*   Time series data records (associated with a time series metadata record)
 
 Relationships between the above tables that use database keys can be complicated to configure.
 Consequently, it is recommended that a database view be configured to provide time series
@@ -433,7 +433,7 @@ For performance reasons, it may also be appropriate to copy the view to a
 The following figure illustrates time series metadata from a database view:
 
 **<p style="text-align: center;">
-![Datastore_Generic_TimeSeriesMeta](Datastore_Generic_TimeSeriesMeta.png)
+![Time Series Metadata View](Datastore_Generic_TimeSeriesMeta.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -546,11 +546,11 @@ The following example focuses on a single user to avoid needing administrator pr
 The following figure shows an initial condition before defining a SQL Server ODBC DSN.
 
 **<p style="text-align: center;">
-![odbc-dsn-sql-server-1](odbc-dsn-sql-server-1.png)
+![ODBC DSN Before Defining SQL Server ODBC DSN](odbc-dsn-sql-server-1.png)
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - Before Defining SQL Server ODBC DSN(<a href="../odbc-dsn-sql-server-1.png">see also the full-size image</a>)
+Before Defining SQL Server ODBC DSN(<a href="../odbc-dsn-sql-server-1.png">see also the full-size image</a>)
 </p>**
 
 Press ***Add...*** to start adding an ODBC DSN, which displays the following.
@@ -560,7 +560,7 @@ If a SQL Server driver is not listed or a new version is needed,
 [download the driver](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server) and install.
 
 **<p style="text-align: center;">
-![odbc-dsn-sql-server-2](odbc-dsn-sql-server-2.png)
+![Add an ODBC DSN](odbc-dsn-sql-server-2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -573,7 +573,7 @@ The ***Server*** selection may not list expected databases and in this case the 
 It may be necessary to contact IT staff for the organization to obtain the correct information.
 
 **<p style="text-align: center;">
-![odbc-dsn-sql-server-3](odbc-dsn-sql-server-3.png)
+![Create a New Data Source to SQL Server](odbc-dsn-sql-server-3.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -587,11 +587,11 @@ will enable the ***Login ID*** and ***Password*** fields.
 In the following the CDSS service account is used with password `cdss%tools`.
 
 **<p style="text-align: center;">
-![odbc-dsn-sql-server-4](odbc-dsn-sql-server-4.png)
+![Authentication for New Data Source to SQL Server](odbc-dsn-sql-server-4.png)
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - Create a New Data Source to SQL Server (Autentication) (<a href="../odbc-dsn-sql-server-4.png">see also the full-size image</a>)
+ODBC DSN - Create a New Data Source to SQL Server (Authentication) (<a href="../odbc-dsn-sql-server-4.png">see also the full-size image</a>)
 </p>**
 
 The above may result in the following error.
@@ -600,18 +600,18 @@ In this case the error resulted from a bad server name generated for illustratio
 Check the database name and other information.
 
 **<p style="text-align: center;">
-![odbc-dsn-sql-server-5](odbc-dsn-sql-server-5.png)
+![Microsoft SQL Server Login Error](odbc-dsn-sql-server-5.png)
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - Microsoft SQL Server Login Error (Autentication) (<a href="../odbc-dsn-sql-server-5.png">see also the full-size image</a>)
+ODBC DSN - Microsoft SQL Server Login Error (Authentication) (<a href="../odbc-dsn-sql-server-5.png">see also the full-size image</a>)
 </p>**
 
 If the configuration information is corrected, press ***Next >*** to continue.
 Select the database name as shown in the following.
 
 **<p style="text-align: center;">
-![odbc-dsn-sql-server-6](odbc-dsn-sql-server-6.png)
+![Select Database for Create a New Data Source to SQL Server](odbc-dsn-sql-server-6.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -622,7 +622,7 @@ Press ***Next >*** to continue, which displays the following.
 The defaults can be used.
 
 **<p style="text-align: center;">
-![odbc-dsn-sql-server-7](odbc-dsn-sql-server-7.png)
+![Database Properties for Create a New Data Source to SQL Server](odbc-dsn-sql-server-7.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -632,7 +632,7 @@ ODBC DSN - Create a New Data Source to SQL Server (Database Properties) (<a href
 Press ***Finish*** to continue, which displays the following.
 
 **<p style="text-align: center;">
-![odbc-dsn-sql-server-8](odbc-dsn-sql-server-8.png)
+![More Database Properties for Create a New Data Source to SQL Server](odbc-dsn-sql-server-8.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -643,7 +643,7 @@ Use the ***Test Data Source...*** button to test the correction,
 which results in output similar to the following for a successful configuration.
 
 **<p style="text-align: center;">
-![odbc-dsn-sql-server-9](odbc-dsn-sql-server-9.png)
+![SQL Server ODBC Data Source Test](odbc-dsn-sql-server-9.png)
 </p>**
 
 **<p style="text-align: center;">

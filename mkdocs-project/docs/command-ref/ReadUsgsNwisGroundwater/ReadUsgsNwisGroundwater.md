@@ -57,7 +57,7 @@ is not provided due to performance issues.
 Additional query features will be enabled as web service integration is enhanced.
 
 **<p style="text-align: center;">
-![ReadUsgsNwisGroundwater](ReadUsgsNwisGroundwater.png)
+![ReadUsgsNwisGroundwater command editor](ReadUsgsNwisGroundwater.png)
 </p>**
 
 **<p style="text-align: center;">

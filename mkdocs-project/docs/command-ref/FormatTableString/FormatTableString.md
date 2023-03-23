@@ -32,7 +32,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 (in this case illustrating how values in a column named `LocationID` are copied to a new table).  
 
 **<p style="text-align: center;">
-![FormatTableString](FormatTableString.png)
+![FormatTableString command editor](FormatTableString.png)
 </p>**
 
 **<p style="text-align: center;">

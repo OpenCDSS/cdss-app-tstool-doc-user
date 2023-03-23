@@ -36,7 +36,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![Disaggregate](Disaggregate.png)
+![Disaggregate command editor](Disaggregate.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -79,7 +79,7 @@ Disaggregate(TSID="DayTS",Alias=”HourTS”,Method=Ormsbee,NewInterval=6Hour)
 Examples of graphs for the original and disaggregated data are shown below, for the two disaggregation methods:
 
 **<p style="text-align: center;">
-![Disaggregate SameValue](Disaggregate_SameValue.png)
+![Daily input time series and six hour diaggregated time series using samevalue method](Disaggregate_SameValue.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -87,7 +87,7 @@ Daily Input Time Series and 6-Hour Disaggregated Time Series using SameValue Met
 </p>**
 
 **<p style="text-align: center;">
-![Disaggregate Ormsbee](Disaggregate_Ormsbee.png)
+![Daily input time series and six hour disaggregated time series using Ormsbee method](Disaggregate_Ormsbee.png)
 </p>**
 
 **<p style="text-align: center;">

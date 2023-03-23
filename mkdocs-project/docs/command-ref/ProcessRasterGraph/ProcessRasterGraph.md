@@ -25,7 +25,7 @@ For example, the following figure illustrates a raster graph
 for a daily maximum temperature time series.
 
 **<p style="text-align: center;">
-![ProcessRasterGraph ExampleGraph](ProcessRasterGraph_ExampleGraph.png)
+![ProcessRasterGraph example graph](ProcessRasterGraph_ExampleGraph.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -204,7 +204,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![ProcessRasterGraph](ProcessRasterGraph.png)
+![ProcessRasterGraph command editor](ProcessRasterGraph.png)
 </p>**
 
 **<p style="text-align: center;">

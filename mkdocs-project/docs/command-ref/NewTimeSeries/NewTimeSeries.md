@@ -33,7 +33,7 @@ The new time series identifier, which provides critical information including th
 is edited by pressing the ***Edit*** button.
 
 **<p style="text-align: center;">
-![NewTimeSeries](NewTimeSeries.png)
+![NewTimeSeries command editor](NewTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">

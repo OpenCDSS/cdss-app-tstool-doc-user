@@ -451,7 +451,7 @@ a weighted time series (based on three traces), and the current daily data,
 all at the same streamflow gage, as shown in the following figure.
 
 **<p style="text-align: center;">
-![Example_LobatosCurrent_TSTool](Example_LobatosCurrent_TSTool.png)
+![Example Graph of Time Series Traces](Example_LobatosCurrent_TSTool.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -473,11 +473,11 @@ The following features are useful for selecting appropriate traces:
 Key traces and output time series can be selected and graphed, as shown below.
 
 **<p style="text-align: center;">
-![Example_LobatosCurrent_Graph](Example_LobatosCurrent_Graph.png)
+![Example Graph of Traces and Combined Real-Time and Historical Time Series](Example_LobatosCurrent_Graph.png)
 </p>**
 
 **<p style="text-align: center;">
-Example Graph of Traces and Combined Real-time/Historical Time Series (<a href="../Example_LobatosCurrent_Graph.png">see also the full-size image</a>)
+Example Graph of Traces and Combined Real-time and Historical Time Series (<a href="../Example_LobatosCurrent_Graph.png">see also the full-size image</a>)
 </p>**
 
 ## Statistic Examples ##
@@ -598,7 +598,7 @@ TSID = "08236000.DWR.Streamflow.Month~HydroBase"
 The resulting graph is shown in the following figure.  Pressing ***Close*** will exit TSTool.
 
 **<p style="text-align: center;">
-![Example_NoMainGUI_Graph](Example_NoMainGUI_Graph.png)
+![Example Stand-alone Graph](Example_NoMainGUI_Graph.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -708,7 +708,7 @@ The above commands can be run from the TSTool GUI or in batch mode to produce th
 having difficulty finding good labels – resize the graph window to improve labeling).
 
 **<p style="text-align: center;">
-![Example_Scatter_Graph](Example_Scatter_Graph.png)
+![Example Scatter Graph](Example_Scatter_Graph.png)
 </p>**
 
 **<p style="text-align: center;">

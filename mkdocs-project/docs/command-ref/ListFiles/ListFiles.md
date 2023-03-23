@@ -29,7 +29,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![ListFiles](ListFiles.png)
+![ListFiles command editor](ListFiles.png)
 </p>**
 
 **<p style="text-align: center;">

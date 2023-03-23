@@ -1,8 +1,8 @@
 # TSTool / Datastore Reference / NDFD #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
 
 --------------
 
@@ -26,20 +26,20 @@ via the SOAP for getting either instantaneous or daily average data at the follo
 This site provides the following forecast data using web services (bold indicates primary data types for data services).
 See the following table for corresponding data type strings.
 
-* **Maximum Temperature**
-* **Minimum Temperature**
-* **3 Hourly Temperature**
-* Dewpoint Temperature
-* Apparent Temperature
-* **12 Hour Probability of Precipitation**
-* **Liquid Precipitation Amount**
-* **Snowfall Amount*
-* Cloud Cover Amount
-* Relative Humidity
-* Wind Speed
-* Wind Direction
-* Weather
-* Wave Heights
+*   **Maximum Temperature**
+*   **Minimum Temperature**
+*   **3 Hourly Temperature**
+*   Dewpoint Temperature
+*   Apparent Temperature
+*   **12 Hour Probability of Precipitation**
+*   **Liquid Precipitation Amount**
+*   **Snowfall Amount*
+*   Cloud Cover Amount
+*   Relative Humidity
+*   Wind Speed
+*   Wind Direction
+*   Weather
+*   Wave Heights
 
 These data can be instantaneous or a daily average and are available as a grid.
 This implies that the Data Services can be called iteratively to obtain a geospatial context to the time-series data.
@@ -56,19 +56,19 @@ Additional reference information on the NWS NDFD SOAP implementation, functions,
 [http://www.nws.noaa.gov/xml](http://www.nws.noaa.gov/xml)
 
 **<p style="text-align: center;">
-Input Variables to the NDFDgen() Web Service Request
+![Input Variables to the NDFDget Web Service Request](NDFDgen.png)
 </p>**
 
 **<p style="text-align: center;">
-![NDFDgen](NDFDgen.png)
+Input Variables to the NDFDgen() Web Service Request (<a href="../NDFDgen.png">see also the full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
-Input Variables to the NDFDgenByDay() Web Service Request
+![Input Variables to the NDFDgenByDay Web Service Request](NDFDgenByDay.png)
 </p>**
 
 **<p style="text-align: center;">
-![NDFDgenByDay](NDFDgenByDay.png)
+Input Variables to the NDFDgenByDay() Web Service Request (<a href="../NDFDgenByDay.png">see also the full-size image</a>)
 </p>**
 
 ## Standard Time Series Properties ##

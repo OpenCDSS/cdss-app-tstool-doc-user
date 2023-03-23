@@ -1,14 +1,14 @@
 # TSTool / Datastore Reference / ColoradoHydroBaseRest #
 
-* [Overview](#overview)
-    + [Web Service to Time Series Mapping](#web-service-to-time-series-mapping)
-    + [ColoradoHydroBaseRest Time Series Data Types](#coloradohydrobaserest-time-series-data-types)
-    + [Diversion Record Coding](#diversion-record-coding)
-    + [Calculation of Statistics for Interval Data](#calculation-of-statistics-for-interval-data)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [Datastore Configuration File](#datastore-configuration-file)
-* [See Also](#see-also)
+*   [Overview](#overview)
+    +   [Web Service to Time Series Mapping](#web-service-to-time-series-mapping)
+    +   [ColoradoHydroBaseRest Time Series Data Types](#coloradohydrobaserest-time-series-data-types)
+    +   [Diversion Record Coding](#diversion-record-coding)
+    +   [Calculation of Statistics for Interval Data](#calculation-of-statistics-for-interval-data)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [Datastore Configuration File](#datastore-configuration-file)
+*   [See Also](#see-also)
 
 --------------------
 
@@ -53,7 +53,7 @@ TSTool integrates with web services by specifying appropriate web service reques
 The TSTool log file and the time series `dataUrl` property after reading
 includes the URL that is used to request data.
 
-* [Colorado Division of Water Resources REST Web Services Help](https://dwr.state.co.us/rest/get/help)
+*   [Colorado Division of Water Resources REST Web Services Help](https://dwr.state.co.us/rest/get/help)
 
 See also the following documentation that is helpful when trying to understand
 similarity and differences between database and web service datastores,
@@ -63,9 +63,9 @@ which requires using data type and interval to define unique time series identif
 This is different than legacy datastores where multiple web services each provided access to some of the HydroBase data
 and uniqueness was within the specific datastore.
 
-* [HydroBase Database Datastore](../CO-HydroBase/CO-HydroBase.md) - **current software for historical data**
-* [ColoradoWaterHBGuest Datastore](../ColoradoWaterHBGuest/ColoradoWaterHBGuest.md) - **legacy (obsolete) datastore for historical data replaced by ColoradoHydroBaseRest web services**
-* [ColoradoWaterSMS Datastore](../ColoradoWaterSMS/ColoradoWaterSMS.md) - **legacy (obsolete) data datastore for real-time data replaced by ColoradoHydroBaseRest web services**
+*   [HydroBase Database Datastore](../CO-HydroBase/CO-HydroBase.md) - **current software for historical data**
+*   [ColoradoWaterHBGuest Datastore](../ColoradoWaterHBGuest/ColoradoWaterHBGuest.md) - **legacy (obsolete) datastore for historical data replaced by ColoradoHydroBaseRest web services**
+*   [ColoradoWaterSMS Datastore](../ColoradoWaterSMS/ColoradoWaterSMS.md) - **legacy (obsolete) data datastore for real-time data replaced by ColoradoHydroBaseRest web services**
 
 The ColoradoHydroBaseRest datastore uses new DWR HydroBase web services.
 The following sections list data types and intervals that are available in this datastore.
@@ -76,9 +76,9 @@ Time series data objects in TSTool consist of various properties such as locatio
 and data arrays for data values and flags.
 To populate data in a time series typically requires joining the following:
 
-* station or structure data (for location identifier)
-* parameter or data type (for data type, data source, and units)
-* time series data records as original measurement or calculated interval value
+*   station or structure data (for location identifier)
+*   parameter or data type (for data type, data source, and units)
+*   time series data records as original measurement or calculated interval value
 
 The TSTool main interface browsing tool requires a join of information in order to list time series for selection,
 typically using one of the "datatypes" services.
@@ -198,13 +198,13 @@ The single quotes are added automatically by TSTool when necessary.
 
 For structure diversion records, additional zero values are added to facilitate data use, as follows:
 
-1. The diversion records for the appropriate interval are queried and set in time series.
-2. The diversion comments for the structure are queried.
-   Any irrigation year (November to October) where diversion comments are available and have `notUsed` values of `A`, `B`, `C`, or `D` 
-   will cause any missing values in the time series for the year to be set to zero and the flag will be set to the `notUsed` value.
-   See also the [`FillUsingDiversionComments`](../../command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md) command.
-3. Additionally, any daily and monthly diversion records for start of year (November 1) until the end of the year (October 1) will be set to
-   zero if missing because the State does not fill in zeros at the start of the year.
+1.  The diversion records for the appropriate interval are queried and set in time series.
+2.  The diversion comments for the structure are queried.
+    Any irrigation year (November to October) where diversion comments are available and have `notUsed` values of `A`, `B`, `C`, or `D` 
+    will cause any missing values in the time series for the year to be set to zero and the flag will be set to the `notUsed` value.
+    See also the [`FillUsingDiversionComments`](../../command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md) command.
+3.  Additionally, any daily and monthly diversion records for start of year (November 1) until the end of the year (October 1) will be set to
+    zero if missing because the State does not fill in zeros at the start of the year.
 
 **It is a [known issue](https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-rest-java/issues/29)
 that monthly diversion records read from the HydroBase database and web services handle
@@ -218,12 +218,12 @@ original data sources should be consulted.
 
 Raw data measurements are collected using various methods, including:
 
-* manual observations reported using "instantaneous" time such as to second,
-  or a less precise time such as day, depending on the data type,
-* "continuous monitoring" stations that measure data relatively frequently,
-  such as every minute or 15 minutes
-* "polled" stations that may be contacted less frequently, such as once a day
-* values that are estimated from operations, such as no diversions in a year
+*   manual observations reported using "instantaneous" time such as to second,
+    or a less precise time such as day, depending on the data type,
+*   "continuous monitoring" stations that measure data relatively frequently,
+    such as every minute or 15 minutes
+*   "polled" stations that may be contacted less frequently, such as once a day
+*   values that are estimated from operations, such as no diversions in a year
 
 The raw values may or may not be provided in web services.
 For example `Telemetry Station` 15 minute data are considered "raw" data and for most purposes can be considered as
@@ -261,85 +261,85 @@ LocType:Location.DataSource.DataType.Interval~HydroBaseWeb
 
 The meaning of the parts is as follows:
 
-* The `LocationType` is used where necessary to clarify which location identifier
-  is used and avoid ambiguity in interpreting identifiers, for example:
-    + `wellid` for internal database well identifiers
-    + `abbrev` for telemetry stations
-    + `usgs` for USGS site identifiers for surface water stations, used when `abbrev` is also available
-* The `Location` is set to one of the following depending on the measurement location type:
-    + the State of Colorado’s water district identifier (WDID) for structures.
-    + the State of Colorado’s abbreviation for telemetry stations
-    + the State of Colorado's numerical identifier for wells (for water level and depth)
-    + a third party data provider's identifier, such as USGS site identifier
-    + if the database contains more than one identifier, the `LocationType` (see above)
-      may be used to differentiate which identifier is used
-* The `DataSource` is set to the primary data provider agency:
-    + for example, `DWR` for diversion data
-    + for example, `USGS` for USGS stream gages
-* The `DataType` is set to:
-    + The water class `divrectype` for structure time series
-    + `parameter` for telemetry stations
-    + `WaterLevelDepth` and `WaterLevelElev` for groundwater levels
-    + `Stage` and `Volume` for `structures/divrec/stagevolume` web services
-    + climate station `measType` (see statistic below)
-    + surface water station `measType` (see statistic below)
-    + Interval time series such as climate station and surface water station time series may require a statistic to
-      accurately describe the data and uniquely identify the time series.
-      For example, historical monthly streamflow can be the average value (full data type is `Streamflow-Avg`, statistic is `Avg`),
-      minimum value (statistic is `Min`), maximum value (statistic is `Max`), and total (statistic is `Total`).
-      Statistics also require an appropriate data unit.
-    + Refer to the [HydroBase datastore appendix](../CO-HydroBase/CO-HydroBase.md)
-      for a full list of time series data available in the HydroBase database,
-      which are published in web services.
-      In some cases, the data type used by TSTool will not exactly match HydroBase.
-      For example, TSTool uses `ResMeasStorage` and HydroBase uses `ResMeas` to indicate reservoir measurements,
-      which can contain several observations.
-      The additional “Storage” is needed in TSTool to uniquely identify the time series for the specific data type.
-      Because web services are a newer generation of data access tools,
-      it has been possible to improve the consistency of data types used in web services and TSTool software.
-* `Interval` is `Hour`, `Day`, `Month`, or `Year`, as requested, and `15Min` for raw telemetry data.
-    + The `Day` interval is used for telemetry station and climate station data;
-      consequently, case-specific data type is needed to ensure unique time series identifiers
-      for data types such as `Evap`/`EVAP`.
-    + the meaning of the `Year` interval varies:
-        - calendar year for climate station data and as a general default
-        - water year (October to September) for `Streamflow`, in particular when read from third party sources that use water year
-        - irrigation year (November to October) for State of Colorado diversion records
-        - if necessary, monthly data can be processed into alternative `Year` intervals
-* The datastore name (`HydroBaseWeb` by default) indicates that the data
-  are being read from the ColoradoHydroBaseRest web service.
+*   The `LocationType` is used where necessary to clarify which location identifier
+    is used and avoid ambiguity in interpreting identifiers, for example:
+    +   `wellid` for internal database well identifiers
+    +   `abbrev` for telemetry stations
+    +   `usgs` for USGS site identifiers for surface water stations, used when `abbrev` is also available
+*   The `Location` is set to one of the following depending on the measurement location type:
+    +   the State of Colorado’s water district identifier (WDID) for structures.
+    +   the State of Colorado’s abbreviation for telemetry stations
+    +   the State of Colorado's numerical identifier for wells (for water level and depth)
+    +   a third party data provider's identifier, such as USGS site identifier
+    +   if the database contains more than one identifier, the `LocationType` (see above)
+        may be used to differentiate which identifier is used
+*   The `DataSource` is set to the primary data provider agency:
+    +   for example, `DWR` for diversion data
+    +   for example, `USGS` for USGS stream gages
+*   The `DataType` is set to:
+    +   The water class `divrectype` for structure time series
+    +   `parameter` for telemetry stations
+    +   `WaterLevelDepth` and `WaterLevelElev` for groundwater levels
+    +   `Stage` and `Volume` for `structures/divrec/stagevolume` web services
+    +   climate station `measType` (see statistic below)
+    +   surface water station `measType` (see statistic below)
+    +   Interval time series such as climate station and surface water station time series may require a statistic to
+        accurately describe the data and uniquely identify the time series.
+        For example, historical monthly streamflow can be the average value (full data type is `Streamflow-Avg`, statistic is `Avg`),
+        minimum value (statistic is `Min`), maximum value (statistic is `Max`), and total (statistic is `Total`).
+        Statistics also require an appropriate data unit.
+    +   Refer to the [HydroBase datastore appendix](../CO-HydroBase/CO-HydroBase.md)
+        for a full list of time series data available in the HydroBase database,
+        which are published in web services.
+        In some cases, the data type used by TSTool will not exactly match HydroBase.
+        For example, TSTool uses `ResMeasStorage` and HydroBase uses `ResMeas` to indicate reservoir measurements,
+        which can contain several observations.
+        The additional “Storage” is needed in TSTool to uniquely identify the time series for the specific data type.
+        Because web services are a newer generation of data access tools,
+        it has been possible to improve the consistency of data types used in web services and TSTool software.
+*   `Interval` is `Hour`, `Day`, `Month`, or `Year`, as requested, and `15Min` for raw telemetry data.
+    +   The `Day` interval is used for telemetry station and climate station data;
+        consequently, case-specific data type is needed to ensure unique time series identifiers
+        for data types such as `Evap`/`EVAP`.
+    +   the meaning of the `Year` interval varies:
+        -   calendar year for climate station data and as a general default
+        -   water year (October to September) for `Streamflow`, in particular when read from third party sources that use water year
+        -   irrigation year (November to October) for State of Colorado diversion records
+        -   if necessary, monthly data can be processed into alternative `Year` intervals
+*   The datastore name (`HydroBaseWeb` by default) indicates that the data
+    are being read from the ColoradoHydroBaseRest web service.
 
 ## Limitations ##
 
 The following limitations of the web service may impact users of the data.
 
-* The REST web services are enhanced as services are integrated with CDSS software tools.
-  See the [repository issues](https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-rest-java/issues) for more information.
-* Data type – The goal of the datastore is to provide access to all time series that are available in HydroBase.
-  However, data access is limited by features of the web services and funding to integrate with TSTool and other software.
-  The legacy [ColoradoWaterHBGuest web services](../ColoradoWaterHBGuest/ColoradoWaterHBGuest.md) and
-  [HydroBase Datastore](../CO-HydroBase/CO-HydroBase.md) documentation
-  indicate a complete list of available data types that may ultimately be supported.
-  Note that creating a complete diversion time series,
-  in particular for structures that are not frequently measured,
-  may require considering several data types, including `DivTotal` (total through headgate),
-  `IDivTotal` (infrequent measurement, not currently implemented in this datastore), and `DivComment` (implemented as default).
-  The following table lists HydroBase database data and corresponding web service data types.
-* Water Classes - The REST web services provide water classes using new diversion coding.
-  The same functionality is not yet implemented in HydroBase direct database connection.
-* Roundoff – a comparison of data values read directly from HydroBase and from the web
-  service may show very slight differences when values are rounded.
-  This is due to numbers being read and formatted during processing.  The differences should not be large enough to significantly impact final results.
-* Performance – time series metadata (lists of location/data type/interval combinations)
-  are retrievable from the web service by water district, water division, and single entry.
-  In order for TSTool to provide the user with “drill down”
-  capability starting with a full list of available data,
-  it is necessary to request blocks of data from the web service.
-  However, requesting too large a block results in performance problems
-  due to the bandwidth necessary to transmit data across the network.
-  TSTool is designed to utilize caching to store lists of time series metadata,
-  grouped by water district, data type, and interval. The cache can be populated based on user requests.
-  Caching will be phased in over time as resources are made available to enhance software.
+*   The REST web services are enhanced as services are integrated with CDSS software tools.
+    See the [repository issues](https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-rest-java/issues) for more information.
+*   Data type – The goal of the datastore is to provide access to all time series that are available in HydroBase.
+    However, data access is limited by features of the web services and funding to integrate with TSTool and other software.
+    The legacy [ColoradoWaterHBGuest web services](../ColoradoWaterHBGuest/ColoradoWaterHBGuest.md) and
+    [HydroBase Datastore](../CO-HydroBase/CO-HydroBase.md) documentation
+    indicate a complete list of available data types that may ultimately be supported.
+    Note that creating a complete diversion time series,
+    in particular for structures that are not frequently measured,
+    may require considering several data types, including `DivTotal` (total through headgate),
+    `IDivTotal` (infrequent measurement, not currently implemented in this datastore), and `DivComment` (implemented as default).
+    The following table lists HydroBase database data and corresponding web service data types.
+*   Water Classes - The REST web services provide water classes using new diversion coding.
+    The same functionality is not yet implemented in HydroBase direct database connection.
+*   Roundoff – a comparison of data values read directly from HydroBase and from the web
+    service may show very slight differences when values are rounded.
+    This is due to numbers being read and formatted during processing.  The differences should not be large enough to significantly impact final results.
+*   Performance – time series metadata (lists of location/data type/interval combinations)
+    are retrievable from the web service by water district, water division, and single entry.
+    In order for TSTool to provide the user with “drill down”
+    capability starting with a full list of available data,
+    it is necessary to request blocks of data from the web service.
+    However, requesting too large a block results in performance problems
+    due to the bandwidth necessary to transmit data across the network.
+    TSTool is designed to utilize caching to store lists of time series metadata,
+    grouped by water district, data type, and interval. The cache can be populated based on user requests.
+    Caching will be phased in over time as resources are made available to enhance software.
 
 
 ## Datastore Configuration File ##
@@ -351,14 +351,14 @@ in the user's datastore files, as discussed below.
 
 A datastore is typically configured by one or both of the following options:
 
-1. Enable ColoradoHydroBaseRest datastores in the installation `system/TSTool.cfg` configuration file
-   and create a datastore configuration file `datastores/HydroBaseWeb.cfg` to configure the datastore.
-   TSTool is distributed with a default file that does not define the `ApiKey` property.
-2. Create a user datastore configuration `.tstool/NN/datastores/HydroBaseWeb.cfg`,
-   for example by copying and modifying the installation datastore configuration file.
-   The installation configuration file can be copied and modified.
-   Typically, the `ApiKey` can be specified to increase the amount of data that can be queried.
-   If found, this configuration file will override the configuration in option 1.
+1.  Enable ColoradoHydroBaseRest datastores in the installation `system/TSTool.cfg` configuration file
+    and create a datastore configuration file `datastores/HydroBaseWeb.cfg` to configure the datastore.
+    TSTool is distributed with a default file that does not define the `ApiKey` property.
+2.  Create a user datastore configuration `.tstool/NN/datastores/HydroBaseWeb.cfg`,
+    for example by copying and modifying the installation datastore configuration file.
+    The installation configuration file can be copied and modified.
+    Typically, the `ApiKey` can be specified to increase the amount of data that can be queried.
+    If found, this configuration file will override the configuration in option 1.
 
 Configurations are processed at software startup.
 An example of the TSTool configuration file is shown below.
@@ -411,10 +411,10 @@ ColoradoHydroBaseRest Datastore Configuration File
 
 ## See Also 
 
-* [`FillUsingDiversionComments`](../../command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md) command
-* [`ReadColoradoHydroBaseRest`](../../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command
-* [`ReadStateMod`](../../command-ref/ReadStateMod/ReadStateMod.md) command
-* [`ReadTableFromDelimitedFile`](../../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
-* [`ReadTableFromJSON`](../../command-ref/ReadTableFromJSON/ReadTableFromJSON.md) command
-* [`WebGet`](../../command-ref/WebGet/WebGet.md) command
-* [`WriteStateCU`](../../command-ref/WriteStateCU/WriteStateCU.md) command
+*   [`FillUsingDiversionComments`](../../command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md) command
+*   [`ReadColoradoHydroBaseRest`](../../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command
+*   [`ReadStateMod`](../../command-ref/ReadStateMod/ReadStateMod.md) command
+*   [`ReadTableFromDelimitedFile`](../../command-ref/ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`ReadTableFromJSON`](../../command-ref/ReadTableFromJSON/ReadTableFromJSON.md) command
+*   [`WebGet`](../../command-ref/WebGet/WebGet.md) command
+*   [`WriteStateCU`](../../command-ref/WriteStateCU/WriteStateCU.md) command

@@ -28,7 +28,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![RelativeDiff](RelativeDiff.png)
+![RelativeDiff command editor](RelativeDiff.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -78,7 +78,7 @@ RelativeDiff(TSID1="DelNorte",TSID2="Alamosa",Divisor=DivideByTS1,Alias=”Relat
 The input time series for the command are shown in the following figure:
 
 **<p style="text-align: center;">
-![RelativeDiff GraphData](RelativeDiff_GraphData.png)
+![RelativeDiff data](RelativeDiff_GraphData.png)
 </p>**
 
 **<p style="text-align: center;">

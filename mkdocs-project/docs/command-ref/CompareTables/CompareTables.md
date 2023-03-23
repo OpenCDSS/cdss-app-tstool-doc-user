@@ -43,7 +43,7 @@ The command is available in the following TSTool menus:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![CompareTables](CompareTables.png)
+![CompareTables command editor](CompareTables.png)
 </p>**
 
 **<p style="text-align: center;">

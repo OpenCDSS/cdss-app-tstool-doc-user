@@ -33,7 +33,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel](WriteTimeSeriesToExcel.png)
+![WriteTimeSeriesToExcel command editor](WriteTimeSeriesToExcel.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -43,7 +43,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel ExcelOutput](WriteTimeSeriesToExcel_ExcelOutput.png)
+![WriteTimeSeriesToExcel command editor for Output parameters](WriteTimeSeriesToExcel_ExcelOutput.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -53,7 +53,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for column and cell comment parameters.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel CellComments0](WriteTimeSeriesToExcel_CellComments0.png)
+![WriteTimeSeriesToExcel command editor for Column and Cell Comments parameters](WriteTimeSeriesToExcel_CellComments0.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -63,7 +63,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for column style formatting parameters.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel ColumnStyleFormat](WriteTimeSeriesToExcel_ColumnStyleFormat.png)
+![WriteTimeSeriesToExcel command editor for Column Style Formatting parameters](WriteTimeSeriesToExcel_ColumnStyleFormat.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -73,7 +73,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for data value cell style formatting parameters.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel StyleFormat](WriteTimeSeriesToExcel_StyleFormat.png)
+![WriteTimeSeriesToExcel Command Editor for Data Value Cell Style Formatting parameters](WriteTimeSeriesToExcel_StyleFormat.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -140,7 +140,7 @@ This approach is implemented similarly in the
 [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel DataTable](WriteTimeSeriesToExcel_DataTable.png)
+![Data table used with command style formatting](WriteTimeSeriesToExcel_DataTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -152,7 +152,7 @@ This table can be defined as a CSV file, Excel worksheet or other format and rea
 The following figure illustrates a basic style table, which can be shared among commands.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel StyleTable](WriteTimeSeriesToExcel_StyleTable.png)
+![Style table used with command for specific checks and formatting](WriteTimeSeriesToExcel_StyleTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -177,7 +177,7 @@ The following example indicates that any time series with identifier (or alias)
 starting with `ts` should be processed to evaluate for missing, negative, and zero values.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel ConditionTable](WriteTimeSeriesToExcel_ConditionTable.png)
+![Condition table used with command for specific checks and formatting](WriteTimeSeriesToExcel_ConditionTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -216,7 +216,7 @@ Multiple conditions can be specified by using AND (surrounded by a single space)
 The following figure illustrates the output from the above example.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel Output](WriteTimeSeriesToExcel_Output.png)
+![Example output for specific checks and formatting](WriteTimeSeriesToExcel_Output.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -226,7 +226,7 @@ The following figure illustrates the output from the above example.
 The following example illustrates using multiple conditions to implement a color scale.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel StyleTable2](WriteTimeSeriesToExcel_StyleTable2.png)
+![Style table used with command for a color scale](WriteTimeSeriesToExcel_StyleTable2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -234,7 +234,7 @@ Style Table used with `WriteTimeSeriesToExcel` Command for a Color Scale (<a hre
 </p>**
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel ConditionTable2](WriteTimeSeriesToExcel_ConditionTable2.png)
+![Condition table used with a color scale](WriteTimeSeriesToExcel_ConditionTable2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -244,7 +244,7 @@ Condition Table used with `WriteTimeSeriesToExcel` Command for a Color Scale
 The following is the output.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToExcel Output2](WriteTimeSeriesToExcel_Output2.png)
+![Example output for style formatting](WriteTimeSeriesToExcel_Output2.png)
 </p>**
 
 **<p style="text-align: center;">

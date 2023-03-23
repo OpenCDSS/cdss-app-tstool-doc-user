@@ -57,7 +57,7 @@ of the command when writing a multi-column data table while also outputting data
 Note that the value columns can be specified using time series properties.
 
 **<p style="text-align: center;">
-![TimeSeriesToTable](TimeSeriesToTable.png)
+![TimeSeriesToTable command editor to create multi-column data table](TimeSeriesToTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -117,7 +117,7 @@ The resulting table will be listed in the Tables area of the TSTool interface an
 the TestTable identifier will display the table similar to the following:
 
 **<p style="text-align: center;">
-![TimeSeriesToTable results](TimeSeriesToTable2.png)
+![TimeSeriesToTable multi-column data table output](TimeSeriesToTable2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -132,7 +132,7 @@ the data value and corresponding data flag column names are specified literally 
 The column and format for the TSID also must be specified.
 
 **<p style="text-align: center;">
-![TimeSeriesToTable Single](TimeSeriesToTable_Single.png)
+![TimeSeriesToTable command editor to create single data column table](TimeSeriesToTable_Single.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -142,7 +142,7 @@ The column and format for the TSID also must be specified.
 The resulting table is as shown in the following figure
 
 **<p style="text-align: center;">
-![TimeSeriesToTable Single2](TimeSeriesToTable_Single2.png)
+![Single data column table](TimeSeriesToTable_Single2.png)
 </p>**
 
 **<p style="text-align: center;">

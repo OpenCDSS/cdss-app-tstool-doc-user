@@ -35,7 +35,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![ReadWaterML](ReadWaterML.png)
+![ReadWaterML command editor](ReadWaterML.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -38,7 +38,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
 
 **<p style="text-align: center;">
-![ReadStateMod](ReadStateMod.png)
+![ReadStateMod command editor](ReadStateMod.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -48,7 +48,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for water right file parameters.
 
 **<p style="text-align: center;">
-![ReadStateMod Rights](ReadStateMod_Rights.png)
+![ReadStateMod command editor for water right file parameters](ReadStateMod_Rights.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -58,7 +58,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for output file parameters.
 
 **<p style="text-align: center;">
-![ReadStateMod X](ReadStateMod_X.png)
+![ReadStateMod command editor for output file parameters](ReadStateMod_X.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -35,7 +35,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax for the command when reading a single time series.
 
 **<p style="text-align: center;">
-![ReadNwsCard_SingleAlias](ReadNwsCard_SingleAlias.png)
+![ReadNwsCard command editor for reading a single time series](ReadNwsCard_SingleAlias.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -45,7 +45,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 The following dialog illustrates reading an ensemble file, assigning the alias to `Location-DataType-Interval-TraceNumber`.
 
 **<p style="text-align: center;">
-![ReadNwsCard](ReadNwsCard.png)
+![ReadNwsCard command editor for reading an ensemble](ReadNwsCard.png)
 </p>**
 
 **<p style="text-align: center;">

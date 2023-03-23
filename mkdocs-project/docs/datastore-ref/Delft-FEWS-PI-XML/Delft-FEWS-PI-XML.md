@@ -92,7 +92,7 @@ The following example illustrates the PI XML file (PI XML version is 1.9):
 ## Standard Time Series Properties ##
 
 TSTool does not currently recognize a TSID for the PI XML format because only the
-[`ReadDelftFewsPiXml`](../../command-ref/ReadDelftFewsPiXml/ReadDelftFewsPiXml) command is implemented to read time series.
+[`ReadDelftFewsPiXml`](../../command-ref/ReadDelftFewsPiXml/ReadDelftFewsPiXml.md) command is implemented to read time series.
 The time series identifier for PI XML as constructed by this command is:
 
 ```
@@ -103,10 +103,10 @@ where the following file elements are used for the above:
 
 *   `LocationID` is specified by the `<locationId>` element value.
 *   `DataSource` defaults to FEWS and can be overridden by the
-    [`ReadDelftFewsPiXml`](../../command-ref/ReadDelftFewsPiXml/ReadDelftFewsPiXml) command `DataSource` parameter – it is
+    [`ReadDelftFewsPiXml`](../../command-ref/ReadDelftFewsPiXml/ReadDelftFewsPiXml.md) command `DataSource` parameter – it is
     for information only (may be able to use a `<qualifierId>` if conventions are standardized).
 *   `DataType` defaults to the `<parameterId>` element value and can be overridden by the
-    [`ReadDelftFewsPiXml`](../../command-ref/ReadDelftFewsPiXml/ReadDelftFewsPiXml) command `DataType` parameter,
+    [`ReadDelftFewsPiXml`](../../command-ref/ReadDelftFewsPiXml/ReadDelftFewsPiXml.md) command `DataType` parameter,
     for example to specify `QINE` rather than the file value `QINE INSTANTANEOUS`.
     In order to implement full TSID support such that time series can be matched in the file, the override may not be allowed.
 *   `Interval` is determined from the `<timeStep>` element value – seconds are converted to
@@ -134,12 +134,11 @@ The following additional conventions are implemented:
     instantaneous values and interval-ending time for accumulated or mean values.
 *   Precision of date/time elements are set based on the `<timeStep>`.
     If date/time elements include more precision, that information is ignored.
-*   Delft FEWS internal time zone is always GMT
-    (see:  [xxx](https://www.nws.noaa.gov/oh/hrl/general/chps/Calibration/Calibration_Configuration_Guide.pdf)).
+*   Delft FEWS internal time zone is always GMT.
     The following describes how timezone is handled in the PI XML file:
-+   The `<timeZone>0.0</timeZone>` element means that there is no offset from GMT.
-+   The `<timeZone>2.0</timeZone>` element means that the date/times in the file are
-    offset by two hours to represent local time (all times will have two hours added, for example GMT=12, local=14).
+    +   The `<timeZone>0.0</timeZone>` element means that there is no offset from GMT.
+    +   The `<timeZone>2.0</timeZone>` element means that the date/times in the file are
+        offset by two hours to represent local time (all times will have two hours added, for example GMT=12, local=14).
 
 ## Limitations ##
 

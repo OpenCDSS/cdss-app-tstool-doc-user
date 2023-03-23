@@ -28,11 +28,11 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![SetPropertyFromEnsemble](SetPropertyFromEnsemble.png)
+![SetPropertyFromEnsemble command editor](SetPropertyFromEnsemble.png)
 </p>**
 
 **<p style="text-align: center;">
-`SetPropertyFromEnsemble` Command Editor for General Set Parameters (<a href="../SetPropertyFromEnsemble.png">see also the full-size image</a>)
+`SetPropertyFromEnsemble` Command Editor (<a href="../SetPropertyFromEnsemble.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##

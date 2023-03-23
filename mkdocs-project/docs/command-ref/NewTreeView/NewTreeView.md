@@ -42,7 +42,7 @@ Consequently, the view allows the results of processing to be presented in a way
 It is envisioned that additional functionality will be implemented, for example to output the view as HTML with navigation links.
 
 **<p style="text-align: center;">
-![NewTreeView_Results](NewTreeView_Results.png)
+![Example of tree view in TSTool results](NewTreeView_Results.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -58,7 +58,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![NewTreeView](NewTreeView.png)
+![NewTreeView command editor](NewTreeView.png)
 </p>**
 
 **<p style="text-align: center;">

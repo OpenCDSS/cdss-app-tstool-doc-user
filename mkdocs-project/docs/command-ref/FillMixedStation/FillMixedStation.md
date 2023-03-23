@@ -93,7 +93,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![FillMixedStation_Data](FillMixedStation_Data.png)
+![FillMixedStation command editor for Analysis parameters](FillMixedStation_Data.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -101,7 +101,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-![FillMixedStation_Criteria](FillMixedStation_Criteria.png)
+![FillMixedStation command editor for Criteria parameters](FillMixedStation_Criteria.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -109,7 +109,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-![FillMixedStation_Fill](FillMixedStation_Fill.png)
+![FillMixedStation command editor for Fill parameters](FillMixedStation_Fill.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -117,7 +117,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-![FillMixedStation_Output](FillMixedStation_Output.png)
+![FillMixedStation command editor for Output parameters](FillMixedStation_Output.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -169,7 +169,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 The FillFlag parameter shows more information about how the time series were filled:
 
 **<p style="text-align: center;">
-![FillMixedStation_FlagI](FillMixedStation_FlagI.png)
+![Example of using a fill flag](FillMixedStation_FlagI.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -177,7 +177,7 @@ Example of using the `I` fill flag (<a href="../FillMixedStation_FlagI.png">see 
 </p>**
 
 **<p style="text-align: center;">
-![FillMixedStation_Auto](FillMixedStation_FlagAuto.png)
+![Example of using the auto fill flag](FillMixedStation_FlagAuto.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -187,7 +187,7 @@ Example of using the `Auto` fill flag (<a href="../FillMixedStation_FlagAuto.png
 Various statistics for each combination of time series, such as count, mean, and standard deviation, can be output in a table:
 
 **<p style="text-align: center;">
-![FillMixedStation_Table](FillMixedStation_Table.png)
+![Example of FillMixedStation output table](FillMixedStation_Table.png)
 </p>**
 
 **<p style="text-align: center;">

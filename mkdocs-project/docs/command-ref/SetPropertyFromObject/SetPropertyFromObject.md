@@ -27,7 +27,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax for general parameters.
 
 **<p style="text-align: center;">
-![SetPropertyFromObject](SetPropertyFromObject.png)
+![SetPropertyFromObject command editor](SetPropertyFromObject.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -243,7 +243,7 @@ The following references can be consulted for other Windows versions:
 To define a task, first go to the ***System and Security*** subpanel of the ***Control Panel***, then click on ***Schedule tasks***.
 
 **<p style="text-align: center;">
-![RunningTSTool_ScheduleTasks](RunningTSTool_ScheduleTasks.png)
+![Running TSTool Schedule as a Task](RunningTSTool_ScheduleTasks.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -253,7 +253,7 @@ Running TSTool – Schedule as a Task (<a href="../RunningTSTool_ScheduleTasks.p
 A screen showing currently scheduled tasks will appear. Click on the ***Action*** menu in the upper left, and the ***Create Task...*** option.
  
 **<p style="text-align: center;">
-![RunningTSTool_TaskScheduler](RunningTSTool_TaskScheduler.png)
+![Running TSTool Creating a Task in the Task Scheduler](RunningTSTool_TaskScheduler.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -263,7 +263,7 @@ Running TSTool – Creating a Task in the Task Scheduler (<a href="../RunningTST
 A tabbed dialog will appear.  Go to the ***Actions*** tab, and click ***New...*** to create a new task.
 
 **<p style="text-align: center;">
-![RunningTSTool_NewTask0](RunningTSTool_NewTask0.png)
+![Running TSTool Create a New Task](RunningTSTool_NewTask0.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -274,7 +274,7 @@ Specify the program to run by using the ***Browse...*** button to pick the TSToo
 The example shown on the right is a typical location for the install (specify an appropriate version number).
 
 **<p style="text-align: center;">
-![RunningTSTool_NewTask1](RunningTSTool_NewTask1.png)
+![Running TSTool Specify Program to Run for Task](RunningTSTool_NewTask1.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -286,7 +286,7 @@ Also specify that TSTool should run without the user interface and specify comma
 use (`-commands CommandFileName`), as shown in the following figure:
 
 **<p style="text-align: center;">
-![RunningTSTool_NewTask2](RunningTSTool_NewTask2.png)
+![Running TSTool Specify Program and Command Line Parameters to Run for Task](RunningTSTool_NewTask2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -299,7 +299,7 @@ Use the [`StartLog`](../command-ref/StartLog/StartLog.md) command to control the
 To actually run the task, define a trigger in the ***Triggers*** tab of the ***Create Task*** dialog (press ***New...*** to create a trigger):
 
 **<p style="text-align: center;">
-![RunningTSTool_Triggers](RunningTSTool_Triggers.png)
+![Running TSTool Specify Trigger to Indicate Run Task Schedule](RunningTSTool_Triggers.png)
 </p>**
 
 **<p style="text-align: center;">

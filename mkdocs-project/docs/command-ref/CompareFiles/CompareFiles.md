@@ -52,27 +52,27 @@ The KDiff3 software is one option for a visual difference program.
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![CompareFiles](CompareFiles.png)
+![CompareFiles command editor for Comparing File Contents](CompareFiles.png)
 </p>**
 
 **<p style="text-align: center;">
-`CompareFiles` Command Editor for Comparing Contents (<a href="../CompareFiles.png">see also the full-size image</a>)
+`CompareFiles` Command Editor for Comparing File Contents (<a href="../CompareFiles.png">see also the full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
-![CompareFiles-Properties](CompareFiles-Properties.png)
+![CompareFiles command editor for comparing file properties](CompareFiles-Properties.png)
 </p>**
 
 **<p style="text-align: center;">
-`CompareFiles` Command Editor for Comparing File Properties (<a href="../CompareFiles-Properties.png">see also the full-size image</a>)
+`CompareFiles` Command Editor for Comparing File Properites (<a href="../CompareFiles-Properties.png">see also the full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
-![CompareFiles-Wait](CompareFiles-Wait.png)
+![CompareFiles command editor for Wait Parameters](CompareFiles-Wait.png)
 </p>**
 
 **<p style="text-align: center;">
-`CompareFiles` Command Editor for Wait Properties (<a href="../CompareFiles-Wait.png">see also the full-size image</a>)
+`CompareFiles` Command Editor for Wait Parameters (<a href="../CompareFiles-Wait.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##

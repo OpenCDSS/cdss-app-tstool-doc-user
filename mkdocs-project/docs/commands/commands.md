@@ -40,7 +40,7 @@ See also the [Command Reference overview](../command-ref/overview.md).
 The ***Commands*** menu provides choices to insert commands in the ***Commands*** list.
 
 **<p style="text-align: center;">
-![Menu_Commands](Menu_Commands.png)
+![Commands Menu](Menu_Commands.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -115,7 +115,7 @@ The standard values for the `TSList` parameter are as follows:
 The ***Commands / Select, Free, Sort Time Series*** menu inserts commands for selecting, deselecting, freeing, and sorting time series.
 
 **<p style="text-align: center;">
-![Menu_Commands_SelectTimeSeries](Menu_Commands_SelectTimeSeries.png)
+![Commands: Select, Free, Sort, Time Series Menu](Menu_Commands_SelectTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -132,7 +132,7 @@ for example when temporary time series are no longer needed or to free up memory
 The ***Commands / Create Time Series*** menu inserts commands for creating new time series.
 
 **<p style="text-align: center;">
-![Menu_Commands_CreateTimeSeries](Menu_Commands_CreateTimeSeries.png)
+![Commands: Create Time Series Menu](Menu_Commands_CreateTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -157,7 +157,7 @@ This allows command editors to provide time series choices even when the command
 The ***Commands / Read Time Series*** menu inserts commands to read time series from a database, file, or web service (internet).
 
 **<p style="text-align: center;">
-![Menu_Commands_ReadTimeSeries](Menu_Commands_ReadTimeSeries.png)
+![Commands: Read Time Series Menu](Menu_Commands_ReadTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -181,7 +181,7 @@ command uses a delimited input file to provide location information and internal
 The ***Commands / Fill Time Series Missing Data*** menu inserts commands for filling missing data in time series.
 
 **<p style="text-align: center;">
-![Menu_Commands_FillTimeSeries](Menu_Commands_FillTimeSeries.png)
+![Commands: Fill Time Series Missing Data Menu](Menu_Commands_FillTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -278,7 +278,7 @@ The ***Commands / Set Time Series Contents*** menu inserts commands that set tim
 Unlike fill commands, set commands reset values regardless of whether the values were missing in the time series.
 
 **<p style="text-align: center;">
-![Menu_Commands_SetTimeSeries](Menu_Commands_SetTimeSeries.png)
+![Commands: Set Time Series Contents Menu](Menu_Commands_SetTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -290,7 +290,7 @@ Commands / Set Time Series Contents Menu
 The ***Commands / Manipulate Time Series*** menus insert commands for manipulating time series.
 
 **<p style="text-align: center;">
-![Menu_Commands_Manipulate](Menu_Commands_Manipulate.png)
+![Commands:  Manipulate Time Series Menu](Menu_Commands_Manipulate.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -312,7 +312,7 @@ The ***Commands / Analyze Time Series*** menu inserts commands for analyzing tim
 which typically produce a report, result time series, or other output product:
 
 **<p style="text-align: center;">
-![Menu_Commands_AnalyzeTimeSeries](Menu_Commands_AnalyzeTimeSeries.png)
+![Commands: Analyze Time Series Menu](Menu_Commands_AnalyzeTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -327,7 +327,7 @@ TSTool does not retrieve or save model states, leaving the handling of states to
 Currently, the following routing models are available:
 
 **<p style="text-align: center;">
-![Menu_Commands_Models](Menu_Commands_Models.png)
+![Commands: Models for Routing Menu](Menu_Commands_Models.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -342,7 +342,7 @@ However, it is envisioned that additional capabilities will be added in the futu
 The ***Commands / Output Time Series*** menu inserts commands for outputting time series.
 
 **<p style="text-align: center;">
-![Menu_Commands_OutputTimeSeries](Menu_Commands_OutputTimeSeries.png)
+![Commands: Output Time Series Menu](Menu_Commands_OutputTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -375,7 +375,7 @@ the following steps may be taken to increase overall efficiency:
 The ***Commands / Check Time Series*** menu inserts commands for checking time series.
 
 **<p style="text-align: center;">
-![Menu_Commands_CheckTimeSeries](Menu_Commands_CheckTimeSeries.png)
+![Commands: Check Time Series Menu](Menu_Commands_CheckTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -390,7 +390,7 @@ A summary of check results can be written to a file to preserve an artifact of d
 The ***Commands / Datastore Processing*** menu provides commands specific to database datastore processing,
 
 **<p style="text-align: center;">
-![Menu_Commands_DatastoreProcessing](Menu_Commands_DatastoreProcessing.png)
+![Commands: Datastore Processing Menu](Menu_Commands_DatastoreProcessing.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -406,7 +406,7 @@ by processing all of the time series in the ensemble.
 See the `TSList=EnsembleID` parameter in commands.
  
 **<p style="text-align: center;">
-![Menu_Commands_EnsembleProcessing](Menu_Commands_EnsembleProcessing.png)
+![Commands: Ensemble Processing Menu](Menu_Commands_EnsembleProcessing.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -418,7 +418,7 @@ Commands / Ensemble Processing Menu
 The ***Commands / Network Processing*** menu provides commands specific to network processing,
 
 **<p style="text-align: center;">
-![Menu_Commands_NetworkProcessing](Menu_Commands_NetworkProcessing.png)
+![Commands: Network Processing Menu](Menu_Commands_NetworkProcessing.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -430,7 +430,7 @@ Commands / Network Processing Menu
 The ***Commands / Spatial Processing*** menu provides commands specific to spatial data processing.
 
 **<p style="text-align: center;">
-![Menu_Commands_SpatialProcessing](Menu_Commands_SpatialProcessing.png)
+![Commands: Spatial Data Processing Menu](Menu_Commands_SpatialProcessing.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -442,7 +442,7 @@ Commands / Spatial Processing Menu
 The ***Commands / Spreadsheet Processing*** menu provides commands specific to spreadsheet processing.
 
 **<p style="text-align: center;">
-![Menu_Commands_SpreadsheetProcessing](Menu_Commands_SpreadsheetProcessing.png)
+![Commands: Spreadsheet Processing Menu](Menu_Commands_SpreadsheetProcessing.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -471,7 +471,7 @@ command provides examples of how templates can be used.
 The ***Commands / Visualization Processing*** menu provides commands specific to view processing.
 
 **<p style="text-align: center;">
-![Menu_Commands_VisualizationProcessing](Menu_Commands_VisualizationProcessing.png)
+![Commands: Visualization Processing Menu](Menu_Commands_VisualizationProcessing.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -489,7 +489,7 @@ Other views may be implemented in the future to facilitate viewing results.
 The ***Commands / General – Comments*** menu provides choices to insert comments.
 
 **<p style="text-align: center;">
-![Menu_Commands_General_Comments](Menu_Commands_General_Comments.png)
+![Commands: General Comments Menu](Menu_Commands_General_Comments.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -514,7 +514,7 @@ The command editor will automatically insert the `#` character.
 The following dialog is used to edit comments.
 
 **<p style="text-align: center;">
-![Menu_Commands_General_Comments2](Menu_Commands_General_Comments2.png)
+![Comment Edtior](Menu_Commands_General_Comments2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -548,7 +548,7 @@ Use the ***Commands / General / `*/` <end comment>*** menu to end a multi-line c
 The ***Commands / General – File Handling*** menu provides choices to insert commands that process files.
 
 **<p style="text-align: center;">
-![Menu_Commands_General_FileHandling](Menu_Commands_General_FileHandling.png)
+![Commands: General File Handling Menu](Menu_Commands_General_FileHandling.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -568,7 +568,7 @@ to create a log file that can facilitate troubleshooting and reviewing work at a
 Setting the debug and warning level with commands can facilitate troubleshooting specific command logic.
 
 **<p style="text-align: center;">
-![Menu_Commands_General_Logging](Menu_Commands_General_Logging.png)
+![Commands: General Logging and Messaging Menu](Menu_Commands_General_Logging.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -581,7 +581,7 @@ The ***Commands / General - Running and Properties*** menu provides choices to i
 related to logic control, running programs, and setting processor properties
 
 **<p style="text-align: center;">
-![Menu_Commands_General_Running](Menu_Commands_General_Running.png)
+![Commands: General Running and Properties Menu](Menu_Commands_General_Running.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -615,7 +615,7 @@ verify that a process is certified and gives expected results.
 Comparing the results from a specific software version with expected results is useful for diagnosing errors.
 
 **<p style="text-align: center;">
-![Menu_Commands_General_Testing](Menu_Commands_General_Testing.png)
+![Commands: General Test Processing Menu](Menu_Commands_General_Testing.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -659,7 +659,7 @@ These commands should be avoided and newer alternatives should be used.
 Refer to the command documentation for information in migrating to other commands.
  
 **<p style="text-align: center;">
-![Menu_Commands_Deprecated](Menu_Commands_Deprecated.png)
+![Commands: Deprecated Commands Menu](Menu_Commands_Deprecated.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -677,7 +677,7 @@ Table rows can be related to a time series by using time series
 properties such as the location part of the time series identifier.
 
 **<p style="text-align: center;">
-![Menu_Commands_Table](Menu_Commands_Table.png)
+![Commands: Table Menu](Menu_Commands_Table.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -691,7 +691,7 @@ These commands are distributed separately from the main TSTool software and
 allow custom commands to be added.  **These features are under development.**
 
 **<p style="text-align: center;">
-![Menu_Commands_Plugin](Menu_Commands_Plugin.png)
+![Commands Plugin Menu](Menu_Commands_Plugin.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -80,7 +80,7 @@ In this case the distribution does not need to be specified.
 Refer to the sequence of figures to see input fields for all parameters.
 
 **<p style="text-align: center;">
-![RunningStatisticTimeSeries](RunningStatisticTimeSeries.png)
+![RunningStatisticTimeSeries command editor for distribution parameters](RunningStatisticTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -90,7 +90,7 @@ Refer to the sequence of figures to see input fields for all parameters.
 The following dialog is used to edit the command and illustrates the centered running average command syntax.
 
 **<p style="text-align: center;">
-![RunningStatisticTimeSeries-Centered-Sample](RunningStatisticTimeSeries-Centered-Sample.png)
+![RunningStatisticTimeSeries command editor for centered running average](RunningStatisticTimeSeries-Centered-Sample.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -98,7 +98,7 @@ The following dialog is used to edit the command and illustrates the centered ru
 </p>**
 
 **<p style="text-align: center;">
-![RunningStatisticTimeSeries-Normal](RunningStatisticTimeSeries-Normal.png)
+![RunningStatisticTimeSeries command editor for normal period parameters(RunningStatisticTimeSeries-Normal.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -106,7 +106,7 @@ The following dialog is used to edit the command and illustrates the centered ru
 </p>**
 
 **<p style="text-align: center;">
-![RunningStatisticTimeSeries-Output](RunningStatisticTimeSeries-Output.png)
+![RunningStatisticTimeSeries command editor for Output parameters](RunningStatisticTimeSeries-Output.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -164,7 +164,7 @@ Statistic Summary
 | `ChangePercent` | Change in magnitude from first to last value, as percent 0.0 to 100.0: `100*(last - first)/first`. | |
 | `ChangePercentAbs` | Change in magnitude from first to last value, as percent 0.0 to 100.0, absolute value: `abs(100*(last - first)/first)`. | |
 | `GeometricMean` | Geometric mean value. | |
-| `Lag-1AutoCorrelation` | The autocorrelation between values and the those that follow in the next time step, given by:<br> ![lag1-autocorrelation](lag1-autocorrelation.png) |
+| `Lag-1AutoCorrelation` | The autocorrelation between values and the those that follow in the next time step, given by:<br> ![lag1 autocorrelation equation](lag1-autocorrelation.png) |
 | `Max` | Maximum value. | |
 | `Mean` | Arithmetic mean of values. | |
 | `Median` | Median value. | |
@@ -178,7 +178,7 @@ Statistic Summary
 | `PercentOfMin` | Percent of the `Min` statistic output. | |
 | `PlottingPosition` | Plotting position for distribution (see `ExceedanceProbability` calculation explanation in **Statistic Computation Details** table. | Requires distribution parameters. |
 | `Rank` | Rank order, based on `SortOrder` command parameter.  Duplicate values are each assigned a rank that is the average of the ranks for the duplicate values.  This is necessary because selecting one of the ranks would be arbitrary.  A new command parameter may be added to allow control of this behavior. | |
-| `Skew` | Skew coefficient, as follows:<br> ![skew](skew.png)<br> where `s` = standard deviation. | |
+| `Skew` | Skew coefficient, as follows:<br> ![skew equation](skew.png)<br> where `s` = standard deviation. | |
 | `StdDev` | Sample standard deviation. | |
 | `Total` | Sum of values. | |
 | `Variance` | Sample variance. | |
@@ -221,7 +221,7 @@ ProcessTSProduct(TSProductFile="Test_RunningStatisticTimeSeries_Example.tsp")
 The resulting graph is as follows:
 
 **<p style="text-align: center;">
-![RunningStatisticTimeSeries-graph](RunningStatisticTimeSeries-graph.png)
+![RunningStatisticTimeSeries results graph](RunningStatisticTimeSeries-graph.png)
 </p>**
 
 **<p style="text-align: center;">

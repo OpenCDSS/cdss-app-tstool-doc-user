@@ -28,7 +28,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for reading a single time series.
 
 **<p style="text-align: center;">
-![ReadRccAcis Single](ReadRccAcis_Single.png)
+![ReadRccAcis command editor for reading a single time series](ReadRccAcis_Single.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -41,7 +41,7 @@ This is appropriate when performing bulk processing.
 Mouse over the ***Where*** data entry fields to see information about choices.
 
 **<p style="text-align: center;">
-![ReadRccAcis Multiple](ReadRccAcis_Multiple.png)
+![ReadRccAcis command editor for reading multiple time series](ReadRccAcis_Multiple.png)
 </p>**
 
 **<p style="text-align: center;">

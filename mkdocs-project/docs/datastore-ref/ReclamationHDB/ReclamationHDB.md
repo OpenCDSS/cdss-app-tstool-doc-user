@@ -1,14 +1,14 @@
 # TSTool / Datastore Reference / ReclamationHDB #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [Datastore Configuration File](#datastore-configuration-file)
-* [Technical Note – Handling Time Zone](#technical-note–handling-time-zone)
-* [Writing to HDB](#writing-to-hdb)
-* [Reading from HDB](#reading-from-hdb)
-* [Examples](#examples)
-    + [Writing State of Colorado Streamflow Station Time Series to HDB](#writing-state-of-colorado-streamflow-station-time-series-to-hdb)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [Datastore Configuration File](#datastore-configuration-file)
+*   [Technical Note – Handling Time Zone](#technical-note–handling-time-zone)
+*   [Writing to HDB](#writing-to-hdb)
+*   [Reading from HDB](#reading-from-hdb)
+*   [Examples](#examples)
+    +   [Writing State of Colorado Streamflow Station Time Series to HDB](#writing-state-of-colorado-streamflow-station-time-series-to-hdb)
 
 ------------
 
@@ -261,7 +261,7 @@ The `SystemLogin` and `SystemPassword` datastore configuration parameters are us
 If either are set to `Prompt` in the configuration file, then the following dialog will be shown when TSTool starts.
 
 **<p style="text-align: center;">
-![ReclamationHDB_login](ReclamationHDB_login.png)
+![ReclamationHDB Datastore Login Dialog for Initial Login](ReclamationHDB_login.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -274,7 +274,7 @@ After TSTool starts, the ***File / Open / Reclamation HDB*** menu can be
 used to change a datastore login to a different account, as shown below:
 
 **<p style="text-align: center;">
-![ReclamationHDB_login2](ReclamationHDB_login2.png)
+![ReclamationHDB Datastore Login Dialog after Startup](ReclamationHDB_login2.png)
 </p>**
 
 **<p style="text-align: center;">

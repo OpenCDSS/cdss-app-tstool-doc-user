@@ -40,7 +40,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![ReadWaterML2_General](ReadWaterML2_General.png)
+![ReadWaterML2 command editor for general parameters](ReadWaterML2_General.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -48,7 +48,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-![ReadWaterML2_InstantaneousData](ReadWaterML2_InstantaneousData.png)
+![ReadWaterML2 command editor for instantaneous data parameters](ReadWaterML2_InstantaneousData.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -56,7 +56,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-![ReadWaterML2_DailyData](ReadWaterML2_DailyData.png)
+![ReadWaterML2 command editor for daily data parameters](ReadWaterML2_DailyData.png)
 </p>**
 
 **<p style="text-align: center;">

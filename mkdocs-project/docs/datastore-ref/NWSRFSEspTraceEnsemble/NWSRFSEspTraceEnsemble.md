@@ -1,8 +1,8 @@
 # TSTool / Datastore Reference / NWSRFSEspTraceEnsemble #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
 
 --------------
 
@@ -150,10 +150,10 @@ For hourly time series, the number of records will be:
 
 There are some qualifications on the format of the data records.  These include:
 
-* All the data values within a trace are sequential.  This means that the May 1 data always follow the April 30 data.
-* Traces consist of sequential data.  February 28 is always followed by data values, whether taken from February 29 or March 1 of historical data.
-* Each trace begins at the start of a new record.  Therefore, a trace may not fill its final record to the 496th byte.
-* If a trace does not fill the end of its final record, the end of the record will be filled with null bytes.
+*   All the data values within a trace are sequential.  This means that the May 1 data always follow the April 30 data.
+*   Traces consist of sequential data.  February 28 is always followed by data values, whether taken from February 29 or March 1 of historical data.
+*   Each trace begins at the start of a new record.  Therefore, a trace may not fill its final record to the 496th byte.
+*   If a trace does not fill the end of its final record, the end of the record will be filled with null bytes.
 
 Due to these complexities, it is recommended that users not try to read data values from an ESP
 trace ensemble file – software like TSTool can read the trace file and translate the data into a format that can be more easily manipulated.
@@ -186,26 +186,26 @@ GRCCH.NWSRFS.SQIN.6[2003]~NWSRFS_ESPTraceEnsemble~PathToFile
 
 When reading a trace ensemble file:
 
-* Each trace is converted to a separate time series,
-where the period is consistent with the overlapping period (e.g.,
-the carryover date +1 interval forward through the end of a simulation).
-* Each time series has redundant header information matching the ensemble header information.
-* Each time series is given a sequence number (a time series property)
-corresponding to the starting year for the trace input data.
-For example, if the period that the traces are being generated is 2002-01-01 to 2002-12-31
-and historical data starting in 1950 are being used,
-then the first trace time series will have a period 2002-01-01 to 2002-12-31 and a sequence number 1950.
-The second trace time series will have a period 2002-01-01 to 2002-12-31 and a sequence number 1951.
-* Each time series is assigned an alias of the format `Segment_Trace_Seq`,
-where the segment identifier is taken from the file, `_Trace_` is a literal string,
-and sequence number is as described above.
-* The location is set to the segment identifier.
-* The data source is set to `NWSRFS`, because the NWSRFS system has generated the simulated time series.
-* Data type is assigned based on the value in the file.
-* Data units are assigned based on the value in the file.
-* The interval is set based on the value in the file.
-* The input type is set to `NWSRFS_ESPTraceEnsemble`.
-* The input name is set to the ESP trace ensemble file name.
+*   Each trace is converted to a separate time series,
+    where the period is consistent with the overlapping period (e.g.,
+    the carryover date +1 interval forward through the end of a simulation).
+*   Each time series has redundant header information matching the ensemble header information.
+*   Each time series is given a sequence number (a time series property)
+    corresponding to the starting year for the trace input data.
+    For example, if the period that the traces are being generated is 2002-01-01 to 2002-12-31
+    and historical data starting in 1950 are being used,
+    then the first trace time series will have a period 2002-01-01 to 2002-12-31 and a sequence number 1950.
+    The second trace time series will have a period 2002-01-01 to 2002-12-31 and a sequence number 1951.
+*   Each time series is assigned an alias of the format `Segment_Trace_Seq`,
+    where the segment identifier is taken from the file, `_Trace_` is a literal string,
+    and sequence number is as described above.
+*   The location is set to the segment identifier.
+*   The data source is set to `NWSRFS`, because the NWSRFS system has generated the simulated time series.
+*   Data type is assigned based on the value in the file.
+*   Data units are assigned based on the value in the file.
+*   The interval is set based on the value in the file.
+*   The input type is set to `NWSRFS_ESPTraceEnsemble`.
+*   The input name is set to the ESP trace ensemble file name.
 
 Some header information may be lost when converting between different time series input types
 (i.e., if the time series traces read from an ESP trace ensemble file are saved to a DateValue file.
@@ -268,6 +268,6 @@ ESP Trace Ensemble File Data and Associated Time Series Data
 
 ESP trace ensemble files have the following limitations:
 
-* The format is specific to hourly data.
-* Multi-year trace periods are difficult to process.
-* The binary, fixed record length format is not as flexible as text-based time series structures.
+*   The format is specific to hourly data.
+*   Multi-year trace periods are difficult to process.
+*   The binary, fixed record length format is not as flexible as text-based time series structures.

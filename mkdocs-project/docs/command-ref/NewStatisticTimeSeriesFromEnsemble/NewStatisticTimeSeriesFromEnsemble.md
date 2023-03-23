@@ -33,7 +33,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax for the command.
 
 **<p style="text-align: center;">
-![NewStatisticTimeSeriesFromEnsemble_Input](NewStatisticTimeSeriesFromEnsemble_Input.png)
+![NewStatisticTimeSeriesFromEnsemble command editor for Input parameters](NewStatisticTimeSeriesFromEnsemble_Input.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -41,7 +41,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-![NewStatisticTimeSeriesFromEnsemble_Distribution](NewStatisticTimeSeriesFromEnsemble_Distribution.png)
+![NewStatisticTimeSeriesFromEnsemble command editor for Distribution parameters](NewStatisticTimeSeriesFromEnsemble_Distribution.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -49,7 +49,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-![NewStatisticTimeSeriesFromEnsemble_Analysis](NewStatisticTimeSeriesFromEnsemble_Analysis.png)
+![NewStatisticTimeSeriesFromEnsemble command editor for Analysis parameters](NewStatisticTimeSeriesFromEnsemble_Analysis.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -57,7 +57,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-![NewStatisticTimeSeriesFromEnsemble_Output](NewStatisticTimeSeriesFromEnsemble_Output.png)
+![NewStatisticTimeSeriesFromEnsemble command editor for Output parameters](NewStatisticTimeSeriesFromEnsemble_Output.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -133,7 +133,7 @@ Available Statistics
 | `NonmissingPercent` | The percent of values that are not missing. | See above. |
 | `RankAscending`<br>**[DEV]** | Rank based on ascending sort order.  Duplicate values are each assigned a rank that is the average of the ranks for the duplicate values.  This is necessary because selecting one of the ranks would be arbitrary.  A new command parameter may be added to allow control of this behavior. | None. |
 | `RankDescending`<br>**[DEV]** | Rank based on descending sort order.  See `RankAscending` for discussion of duplicates. | None. |
-| `Skew`<br>**[DEV]** | Skew coefficient, as follows:<br> ![Skew-equation](Skew-equation.png)<br>where *s* = standard deviation. | None. |
+| `Skew`<br>**[DEV]** | Skew coefficient, as follows:<br> ![Skew equation](Skew-equation.png)<br>where *s* = standard deviation. | None. |
 | `StdDev`<br>**[DEV]** | Sample standard deviation. | None. |
 | `Total` | Total of values in the sample. | None. |
 
@@ -169,11 +169,11 @@ NewStatisticTimeSeriesFromEnsemble(Alias=”Mean”,EnsembleID="TestEnsemble",Ne
 The following figure illustrates the results:
 
 **<p style="text-align: center;">
-![NewStatisticTimeSeriesFromEnsemble_Table](NewStatisticTimeSeriesFromEnsemble_Table.png)
+![NewStatisticTimeSeriesFromEnsemble command results](NewStatisticTimeSeriesFromEnsemble_Table.png)
 </p>**
 
 **<p style="text-align: center;">
-`NewStatisticTimeSeriesFromEnsemble` Command Editor Results (<a href="../NewStatisticTimeSeriesFromEnsemble_Table.png">see also the full-size image</a>)
+`NewStatisticTimeSeriesFromEnsemble` Command Results (<a href="../NewStatisticTimeSeriesFromEnsemble_Table.png">see also the full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

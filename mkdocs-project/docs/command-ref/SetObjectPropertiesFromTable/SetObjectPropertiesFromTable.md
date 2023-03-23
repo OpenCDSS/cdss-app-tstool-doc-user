@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the command syn
 See the example below for a full explanation of input.
 
 **<p style="text-align: center;">
-![SetObjectPropertiesFromTable](SetObjectPropertiesFromTable.png)
+![SetObjectPropertiesFromTable command editor](SetObjectPropertiesFromTable.png)
 </p>**
 
 **<p style="text-align: center;">

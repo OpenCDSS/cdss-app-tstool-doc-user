@@ -19,7 +19,7 @@ However, if an ensemble of points is estimated from OLS regression,
 the estimated values will have lesser variability than the true values.
 
 **<p style="text-align: center;">
-![ols-graph](ols-graph.png)
+![Ordinary least squares graph](ols-graph.png)
 </p>**
 
 See also the [`FillMOVE2`](../FillMOVE2/FillMOVE2.md) command, which utilizes additional variance
@@ -42,7 +42,7 @@ processing as possible so that data manipulation does not introduce derived valu
 The following OLS equation is used to estimate values for the dependent time series from the independent time series:
 
 **<p style="text-align: center;">
-![ols-equation](ols-equation.png)
+![ordinary least squares equation](ols-equation.png)
 </p>**
 
 A number of statistics are computed and are available for output to a table, as described below
@@ -94,10 +94,10 @@ Statistics from Regression Analysis
 ||||
 | `MeanY1est` | Dependent | Raw, Transformed | The mean for `N1` values computed from the relationship (estimate the dependent values where values were previously known). |
 | `SY1est` | Dependent | Raw, Transformed | The standard deviation for `N1` values computed from the relationship (estimate the dependent at locations where values are known). |
-| `RMSE` | Dependent | Raw, Transformed | The “room mean squared error” for `N1` overlapping values, which is a measure of the overall error of using the regression equation to estimate values, is calculated as:<br> ![rmse-equation](rmse-equation.png) |
-| `SEE` | Dependent | Raw, Transformed | The standard error of estimate for N1 overlapping values, which is a measure of the overall error of using the regression equation to estimate values, calculated as:<br> ![see-equation](see-equation.png) |
-| `SEP` | Both | Raw | The standard error of prediction for each estimated value, calculated as:<br>![sep-equation](sep-equation.png)<br>Note that when using the mixed station analysis in the [`FillMixedStation`](../FillMixedStation/FillMixedStation.md) command, this value may be used to determine the relationship.  The SEP is not actually output in the statistics table but may be added as an optional output time series in the future. |
-| `SESlope` | Both | N/A - unitless | The standard error (SE) of the slope (b) for N1 overlapping values, calculated as:<br> ![se-equation](se-equation.png) |
+| `RMSE` | Dependent | Raw, Transformed | The “room mean squared error” for `N1` overlapping values, which is a measure of the overall error of using the regression equation to estimate values, is calculated as:<br> ![root mean square error equation](rmse-equation.png) |
+| `SEE` | Dependent | Raw, Transformed | The standard error of estimate for N1 overlapping values, which is a measure of the overall error of using the regression equation to estimate values, calculated as:<br> ![standard error of estimate equation](see-equation.png) |
+| `SEP` | Both | Raw | The standard error of prediction for each estimated value, calculated as:<br>![standard error of prediction equation](sep-equation.png)<br>Note that when using the mixed station analysis in the [`FillMixedStation`](../FillMixedStation/FillMixedStation.md) command, this value may be used to determine the relationship.  The SEP is not actually output in the statistics table but may be added as an optional output time series in the future. |
+| `SESlope` | Both | N/A - unitless | The standard error (SE) of the slope (b) for N1 overlapping values, calculated as:<br> ![standard error equation](se-equation.png) |
 | `TestScore` | Both | N/A - unitless | b/SESlope.  See [https://en.wikipedia.org/wiki/Student’s_t-test#Slope_of_a_regression_line](https://en.wikipedia.org/wiki/Student's_t-test#Slope_of_a_regression_line) for more details. |
 ||||
 | `TestQuantile` | Both | N/A - unitless | The value at which the confidence interval is satisfied. Comes from the Student’s T-test, which is a function of the confidence interval and degrees of freedom (DF), where DF is equal to `N1 – 2` (corresponding to the intercept and the slope of the regression equation).  Specifically, this is from the two-tailed test. |
@@ -117,7 +117,7 @@ and the value at which the desired confidence level is satisfied is calculated.
 For example, a confidence level of approximately 40%, or .4, would require a test score of at least .5 given a sample size of 10.
 
 **<p style="text-align: center;">
-![ttest-graph](ttest-graph.png)
+![students t test example](ttest-graph.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -133,7 +133,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax for the command when reading a single time series.
 
 **<p style="text-align: center;">
-![FillRegression_Data](FillRegression_Data.png)
+![FillRegression command editor for data parameters](FillRegression_Data.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -141,7 +141,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-![FillRegression_Criteria](FillRegression_Criteria.png)
+![FillRegression command editor for valid relationships parameters](FillRegression_Criteria.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -149,7 +149,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-![FillRegression_Fill](FillRegression_Fill.png)
+![FillRegression command editor for fill parameters](FillRegression_Fill.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -157,7 +157,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-![FillRegression_Table](FillRegression_Table.png)
+![FillRegression command editor for output table parameters](FillRegression_Table.png)
 </p>**
 
 **<p style="text-align: center;">

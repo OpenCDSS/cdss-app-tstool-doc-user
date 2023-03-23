@@ -186,13 +186,13 @@ Administrator privileges are required to set registry settings to facilitate nor
 (this may be changed in the future).
 
 **<p style="text-align: center;">
-![Install_AdministratorWarning](Install_AdministratorWarning.png)
+![Install Administrator Privileges Warning](Install_AdministratorWarning.png)
 </p>**
 
 If you have administrative privileges, the following welcome will be displayed, and the installation can continue:
 
 **<p style="text-align: center;">
-![Install_Welcome](Install_Welcome.png)
+![TSTool Install Welcome](Install_Welcome.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -202,7 +202,7 @@ TSTool Install - Welcome (<a href="../Install_Welcome.png">see also the full-siz
 Press ***Next*** to continue with the installation.
  
 **<p style="text-align: center;">
-![Install_License](Install_License.png)
+![TSTool Install License Agreement](Install_License.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -217,7 +217,7 @@ Press ***I Agree*** to continue with the installation.
 Position the mouse over a component to see its description.
 
 **<p style="text-align: center;">
-![Install_SelectComponents](Install_SelectComponents.png)
+![TSTool Install Choose Components](Install_SelectComponents.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -232,7 +232,7 @@ Multiple versions of TSTool can be installed and there are no dependencies betwe
 It is recommended that the default install location shown is used.
 
 **<p style="text-align: center;">
-![Install_SelectFolder](Install_SelectFolder.png)
+![TSTool Install Choose Install Location](Install_SelectFolder.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -249,7 +249,7 @@ and to allow the standard software uninstall procedure to work correctly.
 #### 4. The following dialog will be shown to select the Start menu for the software: ####
 
 **<p style="text-align: center;">
-![Install_StartMenuFolder](Install_StartMenuFolder.png)
+![TSTool Install Choose Start Menu Folder](Install_StartMenuFolder.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -261,7 +261,7 @@ After selecting the folder, press ***Install***.
 #### 5. The following dialog will show the progress of the installation:####
 
 **<p style="text-align: center;">
-![Install_Complete](Install_Complete.png)
+![TSTool Install Installtion Complete](Install_Complete.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -273,7 +273,7 @@ Press ***Show details*** to see the files that were installed or press ***Next**
 #### 6. If the CDSS Base Components were selected for install, the following dialog will be displayed: ####
 
 **<p style="text-align: center;">
-![Install_HydroBaseQuestion](Install_HydroBaseQuestion.png)
+![TSTool Setup HydroBase Configuration Question](Install_HydroBaseQuestion.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -294,7 +294,7 @@ The dialog will initially show previous settings from the `\CDSS\TSTool-Version\
 file and settings typically only need to be changed after installing a new HydroBase version.
 
 **<p style="text-align: center;">
-![Install_HydroBaseConfiguration](Install_HydroBaseConfiguration.png)
+![TSTool SEtup Configure HydroBase Settings](Install_HydroBaseConfiguration.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -306,7 +306,7 @@ After entering the name of a HydroBase server and the default server to use, pre
 #### 8. The following dialog will then be shown indicating how to run the software: ####
 
 **<p style="text-align: center;">
-![Install_RunTSToolInstructions](Install_RunTSToolInstructions.png)
+![TSTool Setup Run Software Instructions](Install_RunTSToolInstructions.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -377,7 +377,7 @@ menu and select the ***Uninstall*** menu, as shown in the following image.
 The next steps are similar to those described below.
 
 **<p style="text-align: center;">
-![uninstall-start-menu](uninstall-start-menu.png)
+![Uninstall start menu](uninstall-start-menu.png)
 </p>**
 
 The second way to uninstall TSTool is as follows.
@@ -385,7 +385,7 @@ Use the windows ***Run*** search field (lower left of desktop).
 Enter `uninstall`.  This should display an option to open ***Add or remove programs***.
 
 **<p style="text-align: center;">
-![uninstall-apps-and-features1](uninstall-apps-and-features1.png)
+![Add remove programs](uninstall-apps-and-features1.png)
 </p>**
 
 Search for `TSTool` as shown above.

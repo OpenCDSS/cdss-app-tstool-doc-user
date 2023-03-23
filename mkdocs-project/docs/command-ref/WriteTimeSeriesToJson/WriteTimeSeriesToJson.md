@@ -101,7 +101,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToJson](WriteTimeSeriesToJson.png)
+![WriteTimeSeriesToJson command editor](WriteTimeSeriesToJson.png)
 </p>**
 
 **<p style="text-align: center;">

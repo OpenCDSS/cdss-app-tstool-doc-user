@@ -52,7 +52,7 @@ This approach can be used when reading one or more time series in bulk.
 ***Where*** criteria should be specified in sequential order without intervening blank specifiers.
 
 **<p style="text-align: center;">
-![ReadReclamationHDB](ReadReclamationHDB.png)
+![ReadReclamationHDB command editor when using filters to read multiple time series](ReadReclamationHDB.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -62,7 +62,7 @@ This approach can be used when reading one or more time series in bulk.
 The following figure illustrates reading a single "real" time series (note that the model parameters are not specified).
 
 **<p style="text-align: center;">
-![ReadReclamationHDB_Real](ReadReclamationHDB_Real.png)
+![ReadReclamationHDB_Real command editor to read a single real time series](ReadReclamationHDB_Real.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -84,7 +84,7 @@ to the site and data type parameters. There are two ways to select the MRI:
 The following figure illustrates both approaches, although normally one or the other would be used. Selecting an MRI directly takes precedence over the other approach.
 
 **<p style="text-align: center;">
-![ReadReclamationHDB_Model](ReadReclamationHDB_Model.png)
+![ReadReclamationHDB_Model command editor for single model time series](ReadReclamationHDB_Model.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -104,7 +104,7 @@ the data table is checked for matching SDI, and additional queries map the data 
 which provide the list of ensemble names to choose from.
 
 **<p style="text-align: center;">
-![ReadReclamationHDB_Ensemble](ReadReclamationHDB_Ensemble.png)
+![ReadReclamationHDB_Ensemble to read an ensemble of model time series](ReadReclamationHDB_Ensemble.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -183,7 +183,7 @@ end;
     This tells TSTool to ignore all records that do not align.
 
 **<p style="text-align: center;">
-![ReadReclamationHDB_AlignmentError](ReadReclamationHDB_AlignmentError.png)
+![Error generated when database records do not align with hour interval](ReadReclamationHDB_AlignmentError.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -193,7 +193,7 @@ Error Generated When Database Records do not Align with NHOur Interval (<a href=
 The database records are shown below.
 
 **<p style="text-align: center;">
-![ReadReclamationHDB_AlignmentErrorData](ReadReclamationHDB_AlignmentErrorData.png)
+![HDB table illustrating extra data records](ReadReclamationHDB_AlignmentErrorData.png)
 </p>**
 
 **<p style="text-align: center;">

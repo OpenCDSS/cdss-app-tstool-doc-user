@@ -101,7 +101,7 @@ A HydroBase database can also be selected from the ***File / Open / HydroBase...
 The following example illustrates using HydroBase on a local computer.
 
 **<p style="text-align: center;">
-![Menu_Open_HydroBase](Menu_Open_HydroBase.png)
+![Select HydroBase Database Dialog](Menu_Open_HydroBase.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -124,7 +124,7 @@ data connections are still being initialized for configured datastores.
 Trying to use commands that depend on data connections that have not been initialized will result in errors.
 
 **<p style="text-align: center;">
-![GUI_MainWait](GUI_MainWait.png)
+![TSTool at Startup, Waiting for Data Connections to be Initialized](GUI_MainWait.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -143,7 +143,7 @@ window and also in the borders around main panels (e.g.,
 to show how many items are in a list and how many are selected).
 
 **<p style="text-align: center;">
-![GUI_MainBlank](GUI_MainBlank.png)
+![Initial TSTool Interface](GUI_MainBlank.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -221,7 +221,7 @@ and an indicator will be shown for time series that could not be retrieved.
 This may result in a slight pause but helps ensure that commands are functional.
 
 **<p style="text-align: center;">
-![GUI_MainWithCommands](GUI_MainWithCommands.png)
+![TSTool after Pressing Get Time Series List and selecting from Time Series List](GUI_MainWithCommands.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -282,7 +282,7 @@ The following figure illustrates a command with an error (the first time series
 identifier has been edited to include an x, resulting in an invalid identifier). 
 
 **<p style="text-align: center;">
-![CommandListError](CommandListError.png)
+![Command List Illustrating Error](CommandListError.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -316,9 +316,9 @@ Command List Graphics for Problems
 |**Problem Graphic**|**Description**|
 |--|--|
 |No graphic|Command is successful (a warning or failure has not been detected).|
-|![unknown](status-unknown.png)|The status is unknown, typically because the command has just been inserted.
-|![warning](status-warning.png)|The command has a problem that has been classified as non-fatal.  For example, an input file has not been found.  In general, commands with warnings need to be fixed unless work is preliminary.|
-|![error](status-error.png)|The command has failed, meaning that output is likely incomplete.  A problem summary and recommendation to fix the problem are available in the status information.  Commands with failures generally need to be fixed.  Software support should be contacted if the fix is not evident.|
+|![unknown command icon](status-unknown.png)|The status is unknown, typically because the command has just been inserted.
+|![warning icon](status-warning.png)|The command has a problem that has been classified as non-fatal.  For example, an input file has not been found.  In general, commands with warnings need to be fixed unless work is preliminary.|
+|![error icon](status-error.png)|The command has failed, meaning that output is likely incomplete.  A problem summary and recommendation to fix the problem are available in the status information.  Commands with failures generally need to be fixed.  Software support should be contacted if the fix is not evident.|
 
 It is possible that a problem indicator will be shown during
 command editing and will be cleared when commands are run.
@@ -334,7 +334,7 @@ The time series and other output that result from processing are
 listed in the bottom of the main interface, as shown in the following figure:
 
 **<p style="text-align: center;">
-![GUI_MainWithTS](GUI_MainWithTS.png)
+![TSTool after Running Commands](GUI_MainWithTS.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -380,7 +380,7 @@ Right-click on an ensemle to access the popup menu for ensemble tools,
 for example to graph the ensemble.
 
 **<p style="text-align: center;">
-![results-ensembles](results-ensembles.png)
+![Results: Ensembles](results-ensembles.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -399,7 +399,7 @@ See the ***Commands / Network Processing*** menu for commands that process netwo
 Right-click on a network to access the popup menu for network tools.
 
 **<p style="text-align: center;">
-![results-networks](results-networks.png)
+![Results: Networks](results-networks.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -416,7 +416,7 @@ See the ***Commands / Object Processing*** menu for commands that process object
 Right-click on an object to access the popup menu for object tools.
 
 **<p style="text-align: center;">
-![results-objects](results-objects.png)
+![Results: Objects](results-objects.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -434,7 +434,7 @@ Single-click on an output file to view the file using the operating system defau
 If an associated program is not available, open the file using the file explorer tool.
 
 **<p style="text-align: center;">
-![results-output-files](results-output-files.png)
+![Results: Output files](results-output-files.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -451,7 +451,7 @@ Click to (un)select cells and right-click on problems to copy and paste into oth
 Use left and right click to select multiple cells.
 
 **<p style="text-align: center;">
-![results-problems](results-problems.png)
+![Results: Problems](results-problems.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -472,7 +472,7 @@ Click to (un)select cells and right-click on properties to copy and paste into o
 Use left and right click to select multiple cells.
 
 **<p style="text-align: center;">
-![results-properties](results-properties.png)
+![Results: Properties](results-properties.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -539,7 +539,7 @@ for example [`ListFiles`](../command-ref/ListFiles/ListFiles.md) and
 [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md).
 
 **<p style="text-align: center;">
-![results-tables](results-tables.png)
+![Results: Tables](results-tables.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -598,7 +598,7 @@ graph templates specifically for ensembles.
 If ***Graph – Ensemble*** is selected for a time series, the following dialog will be shown.
 
 **<p style="text-align: center;">
-![Menu_Results_Graph_Ensemble](Menu_Results_Graph_Ensemble.png)
+![Results: Graph Ensemble Dialog](Menu_Results_Graph_Ensemble.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -626,7 +626,7 @@ Therefore, input is provided to add statistics time series to the output,
 and specify the graph template to configure the graph.
 
 **<p style="text-align: center;">
-![Menu_Results_Graph_Ensemble](Menu_Results_Graph_Ensemble.png)
+![Results: Graph Ensemble Dialog](Menu_Results_Graph_Ensemble.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -642,7 +642,7 @@ See the ***Commands / Visualization Processing*** menu and
 which can be used at the end of a command file to create a view.
 
 **<p style="text-align: center;">
-![results-views](results-views.png)
+![Results: Views](results-views.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -655,7 +655,7 @@ The File menu provides standard input and output features as described below.
 Some menus are visible only when certain input types are enabled or when time series have been processed.
 
 **<p style="text-align: center;">
-![Menu_File](Menu_File.png)
+![File Menu](Menu_File.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -670,7 +670,7 @@ A new command file name will be requested when the commands are saved.
 ### File / Open – Open Command File or Databases ###
 
 **<p style="text-align: center;">
-![Menu_File_Open](Menu_File_Open.png)
+![File Open Menu](Menu_File_Open.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -704,7 +704,7 @@ however, the menus are useful for development and troubleshooting.
 ### File / Save – Save Command File, and Time Series ###
 
 **<p style="text-align: center;">
-![Menu_File_Save](Menu_File_Save.png)
+![File Save Menu](Menu_File_Save.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -739,7 +739,7 @@ This is useful when editing and troubleshooting commands.
 ### Properties for Commands Run, TSTool Session, and Input Types ###
 
 **<p style="text-align: center;">
-![Menu_File_Properties](Menu_File_Properties.png)
+![File Properties Menu](Menu_File_Properties.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -750,7 +750,7 @@ The ***File / Properties / Commands Run*** menu item displays information from t
 last time that the commands were run, including global properties that impact results.
 
 **<p style="text-align: center;">
-![Menu_File_PropertiesRun](Menu_File_PropertiesRun.png)
+![Properties of the Last Commands Run](Menu_File_PropertiesRun.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -761,7 +761,7 @@ This information is useful for troubleshooting processing.
 The ***File / Properties / TSTool Session*** menu item displays information about the current TSTool session, as follows.
 
 **<p style="text-align: center;">
-![Menu_File_Properties_TSToolSession](Menu_File_Properties_TSToolSession.png)
+![TSTool Session Properties](Menu_File_Properties_TSToolSession.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -777,7 +777,7 @@ The water districts are determined from the structure table in HydroBase.
 The information that is shown is consistent with that shown by other State of Colorado tools and is useful for troubleshooting.
 
 **<p style="text-align: center;">
-![Menu_File_Properties_HydroBase](Menu_File_Properties_HydroBase.png)
+![HydroBase Properties Dialog](Menu_File_Properties_HydroBase.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -815,7 +815,7 @@ Specific edit features are described below.
 Right clicking over the ***Commands*** list provides a popup menu with choices similar to those described below.
 
 **<p style="text-align: center;">
-![Menu_Edit](Menu_Edit.png)
+![Edit Menu](Menu_Edit.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -891,7 +891,7 @@ Alternatively, insert a read command using the ***Commands*** menu choices.
 ## View Menu - Display Useful Information and Map Interface ##
 
 **<p style="text-align: center;">
-![Menu_View](Menu_View.png)
+![View Menu](Menu_View.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -919,7 +919,7 @@ This is useful if the command file has generated many graphs and the user wishes
 The ***Commands*** menu provides several menus (as shown in the following figure), which insert commands into the Commands list.
 
 **<p style="text-align: center;">
-![Menu_Commands](Menu_Commands.png)
+![Commands Menu](Menu_Commands.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -955,7 +955,7 @@ Time series commands are organized into the following categories:
 The ***Commands(Table)*** menu provides commands for table processing.
 
 **<p style="text-align: center;">
-![Menu_CommandsTable](Menu_CommandsTable.png)
+![Commands Table Menu](Menu_CommandsTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -981,7 +981,7 @@ The [Commands Chapter](../commands/commands.md) discusses commands in more detai
 The ***Run menu*** processes the ***Commands*** list to generate results.
 
 **<p style="text-align: center;">
-![Menu_Run](Menu_Run.png)
+![Run Menu](Menu_Run.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -1032,7 +1032,7 @@ right-clicking on results in the ***Time Series Results*** area.
 The time series can be viewed multiple times, using the same time series results.
 
 **<p style="text-align: center;">
-![Menu_Results](Menu_Results.png)
+![Results Menu](Menu_Results.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -1083,7 +1083,7 @@ The ***Tools*** menu lists tools that control TSTool behavior or that require in
 such as performing additional analysis on time series that are selected in the ***Time Series Results*** list.
 
 **<p style="text-align: center;">
-![Menu_Tools](Menu_Tools.png)
+![Tools Menu](Menu_Tools.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -1120,7 +1120,7 @@ file by default and must be added to the file with a text editor.
 Once added, the ***Tools / Options*** editor will allow the settings to be toggled and rewritten to the configuration files.
 
 **<p style="text-align: center;">
-![Menu_Tools_Options_InputTypes](Menu_Tools_Options_InputTypes.png)
+![Data and Input Types that are Enabled based on Installation Configuration File](Menu_Tools_Options_InputTypes.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -1137,7 +1137,7 @@ These tools are useful for troubleshooting problems.  Refer to the [Tools Chapte
 ## Help Menu ##
 
 **<p style="text-align: center;">
-![Menu_Help](Menu_Help.png)
+![Help Menu](Menu_Help.png)
 </p>**
 
 **<p style="text-align: center;">

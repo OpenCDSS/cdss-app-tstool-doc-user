@@ -45,7 +45,7 @@ The command is available in the following TSTool menu:
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a list.
 
-![For_List](For_List.png)
+![For command editor for list iteration values](For_List.png)
 
 **<p style="text-align: center;">
 `For` Command Editor Illustrating Using a List for Iteration Values (<a href="../For_List.png">see also the full-size image</a>)
@@ -53,7 +53,7 @@ The following dialog is used to edit the command and illustrates the command syn
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a sequence of numbers.
 
-![For_Sequence](For_Sequence.png)
+![For command editor for sequence of integers](For_Sequence.png)
 
 **<p style="text-align: center;">
 `For` Command Editor Illustrating Using a Sequence of Integers for Iteration Values (<a href="../For_Sequence.png">see also the full-size image</a>)
@@ -61,7 +61,7 @@ The following dialog is used to edit the command and illustrates the command syn
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over table column values.
 
-![For_Table](For_Table.png)
+![For command editor for table](For_Table.png)
 
 **<p style="text-align: center;">
 `For` Command Editor Illustrating Using a Table for Iteration Values (<a href="../For_Table.png">see also the full-size image</a>)
@@ -69,7 +69,7 @@ The following dialog is used to edit the command and illustrates the command syn
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a list of time series.
 
-![For_TSList](For_TSList.png)
+![For command editor for list of time series](For_TSList.png)
 
 **<p style="text-align: center;">
 `For` Command Editor Illustrating Using a List of Time Series (<a href="../For_TSList.png">see also the full-size image</a>)

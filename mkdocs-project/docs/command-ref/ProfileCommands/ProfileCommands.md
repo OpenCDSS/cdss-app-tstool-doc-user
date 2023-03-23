@@ -14,8 +14,7 @@
 The `ProfileCommands` command summarizes run times and memory use for each command in the command list,
 and outputs the information to detail (row for each command)
 and summary (one row for each command name) tables.
-This command is useful for evaluating which commands are
-slow or use more memory in a command workflow,
+This command is useful for evaluating which commands are slow or use more memory in a command workflow,
 so that software and command file logic improvements can occur.
 The command is usually placed at the end of a command file.  The following apply to command profiling:
 
@@ -89,7 +88,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
 
 **<p style="text-align: center;">
-![ProfileCommands](ProfileCommands.png)
+![ProfileCommands command editor](ProfileCommands.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -101,7 +100,7 @@ Because command execution may be very fast, times are shown in milliseconds (1/1
 The table can be output to a file with other commands.
 
 **<p style="text-align: center;">
-![ProfileCommands Summary](ProfileCommands_Summary.png)
+![ProfileCommands Summary output table](ProfileCommands_Summary.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -113,7 +112,7 @@ Note that the heap memory is increased in blocks by the Java Runtime Environment
 so only large memory footprint commands trigger immediate heap memory increases.
 
 **<p style="text-align: center;">
-![ProfileCommands Detail](ProfileCommands_Detail.png)
+![ProfileCommands command Detail output table](ProfileCommands_Detail.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -27,7 +27,7 @@ The following dialog is used to edit the command and illustrates the command syn
 match the contents of the “loc” column in the table).
 
 **<p style="text-align: center;">
-![SetTimeSeriesPropertiesFromTable](SetTimeSeriesPropertiesFromTable.png)
+![SetTimeSeriesPropertiesFromTable command editor](SetTimeSeriesPropertiesFromTable.png)
 </p>**
 
 **<p style="text-align: center;">

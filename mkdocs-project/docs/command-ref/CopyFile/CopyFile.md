@@ -35,7 +35,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax for a specific output file.
 
 **<p style="text-align: center;">
-![CopyFile](CopyFile.png)
+![CopyFile command editor for an output file](CopyFile.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -45,7 +45,7 @@ The following dialog is used to edit the command and illustrates the command syn
 The following is used to specify a temporary file.
 
 **<p style="text-align: center;">
-![CopyFile-Temp](CopyFile-Temp.png)
+![CopyFile command editor for a temporary file](CopyFile-Temp.png)
 </p>**
 
 **<p style="text-align: center;">

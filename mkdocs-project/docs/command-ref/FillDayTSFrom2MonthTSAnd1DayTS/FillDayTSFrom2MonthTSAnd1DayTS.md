@@ -41,7 +41,7 @@ For all the time series identifiers, the last matching identifier before the com
 Currently there is no way to fill multiple time series with one command.
 
 **<p style="text-align: center;">
-![FillDayTSFrom2MonthTSAnd1DayTS](FillDayTSFrom2MonthTSAnd1DayTS.png)
+![FillDayTSFrom2MonthTSAnd1DayTS command editor](FillDayTSFrom2MonthTSAnd1DayTS.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -94,7 +94,7 @@ FillDayTSFrom2MonthTSAnd1DayTS(TSID_D1="08235350.USGS.Streamflow.Day",TSID_M1="0
 The following graph shows the two daily time series used in the command (zoomed in).
 Note that the shape of the filled time series is similar to the other time series.
 
-![FillDayTSFrom2MonthTSAnd1DayTS_Graph](FillDayTSFrom2MonthTSAnd1DayTS_Graph.png)
+![Graph example of Filled Data](FillDayTSFrom2MonthTSAnd1DayTS_Graph.png)
 
 **<p style="text-align: center;">
 Example of Filled Data (<a href="../FillDayTSFrom2MonthTSAnd1DayTS_Graph.png">see also the full-size image</a>)

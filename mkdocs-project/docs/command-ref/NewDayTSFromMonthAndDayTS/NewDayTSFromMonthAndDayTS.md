@@ -21,7 +21,7 @@ The new time series is assigned the given identifier and alias.
 The following calculations are performed:
 
 **<p style="text-align: center;">
-![equation](equation.png)
+![NewDayTSFromMonthAndDayTS equation](equation.png)
 </p>**
 
 where, for days in a month:
@@ -97,7 +97,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![NewDayTSFromMonthAndDayTS](NewDayTSFromMonthAndDayTS.png)
+![NewDayTSFromMonthAndDayTS command editor](NewDayTSFromMonthAndDayTS.png)
 </p>**
 
 **<p style="text-align: center;">

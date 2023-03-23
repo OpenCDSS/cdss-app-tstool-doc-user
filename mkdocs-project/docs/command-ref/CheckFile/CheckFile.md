@@ -33,7 +33,7 @@ The following dialog is used to edit the command and illustrates the command syn
 for statistic parameters.
 
 **<p style="text-align: center;">
-![CheckFile-Statistic](CheckFile-Statistic.png)
+![CheckFile command editor for Statistic parameters](CheckFile-Statistic.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -43,7 +43,7 @@ for statistic parameters.
 The following parameters indicate the check criteria.
 
 **<p style="text-align: center;">
-![CheckFile-Criteria](CheckFile-Criteria.png)
+![CheckFile command editor for Criteria and Action parameters](CheckFile-Criteria.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -54,7 +54,7 @@ The following parameters will output the check results to a table,
 which can be further manipulated.
 
 **<p style="text-align: center;">
-![CheckFile-Output](CheckFile-Output.png)
+![CheckFile command editor for Output parameters](CheckFile-Output.png)
 </p>**
 
 **<p style="text-align: center;">

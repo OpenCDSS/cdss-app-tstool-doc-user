@@ -23,7 +23,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax:
 
 **<p style="text-align: center;">
-![ReadNwsrfsFS5Files](ReadNwsrfsFS5Files.png)
+![ReadNwsrfsFS5Files command editor](ReadNwsrfsFS5Files.png)
 </p>**
 
 **<p style="text-align: center;">

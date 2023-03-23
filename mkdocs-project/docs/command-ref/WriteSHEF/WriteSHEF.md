@@ -31,7 +31,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![WriteSHEF](WriteSHEF.png)
+![WriteSHEF command editor for input time series parameters](WriteSHEF.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-![WriteSHEF-Data](WriteSHEF-Data.png)
+![WriteSHEF command editor for SHEF data parameters](WriteSHEF-Data.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -47,7 +47,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-![WriteSHEF-Output](WriteSHEF-Output.png)
+![WriteSHEF command editor for output parameters](WriteSHEF-Output.png)
 </p>**
 
 **<p style="text-align: center;">

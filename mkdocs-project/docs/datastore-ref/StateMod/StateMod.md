@@ -2,11 +2,11 @@
 
 The StateMod time series input type corresponds to the file format used by the State of Colorado's StateMod model.
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [Water Right Files](#water-right-files)
-* [Text Output Files](#text-output-files)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [Water Right Files](#water-right-files)
+*   [Text Output Files](#text-output-files)
 
 ------------
 
@@ -14,9 +14,9 @@ The StateMod time series input type corresponds to the file format used by the S
 
 The StateMod time series input type corresponds to the file format used by the State of Colorado's StateMod model, including:
 
-* standard daily, monthly, average monthly (referred to as annual in the StateMod documentation) time series file formats
-* water right input files that can be converted to cumulative decree time series
-* specific output (`*.x*`) text files, including the `*.xop` and `*.xpl` files
+*   standard daily, monthly, average monthly (referred to as annual in the StateMod documentation) time series file formats
+*   water right input files that can be converted to cumulative decree time series
+*   specific output (`*.x*`) text files, including the `*.xop` and `*.xpl` files
 
 See also the [StateModB input type](../StateModB/StateModB),
 which corresponds to StateMod binary output files and the StateCU input type,
@@ -26,18 +26,18 @@ The following example illustrates the format of the three main standard time ser
 See the StateMod Documentation for a complete description of StateMod input files.
 Important comments about the file format are:
 
-* The file is divided into a header section (top) and data section (bottom).
-Comments can occur only at the top and are lines that begin with `#`.
-* One or more time series can be stored in a file.
-* Consistency in the order and number of the stations is required for each year of data, within the file.
-* Other than comments, the file is fixed-format, compatible with Fortran applications.
-See the StateMod Documentation for field specifications.
-* The format is optimized to allow a full year of data to be read for the entire data set.
-Reading a time series for a single location for the full period requires reading through the entire file.
-* In addition to the required values, a total/average value is accepted as the far-right value on each data line.
-This value may be ignored by applications (it can be computed from the data values on the line if necessary).
-* The precision of data values may be controlled by software, resulting in more or fewer fractional digits.
-This may lead to round-off differences when comparing raw data values with the total/average in the optional end column.
+*   The file is divided into a header section (top) and data section (bottom).
+    Comments can occur only at the top and are lines that begin with `#`.
+*   One or more time series can be stored in a file.
+*   Consistency in the order and number of the stations is required for each year of data, within the file.
+*   Other than comments, the file is fixed-format, compatible with Fortran applications.
+    See the StateMod Documentation for field specifications.
+*   The format is optimized to allow a full year of data to be read for the entire data set.
+    Reading a time series for a single location for the full period requires reading through the entire file.
+*   In addition to the required values, a total/average value is accepted as the far-right value on each data line.
+    This value may be ignored by applications (it can be computed from the data values on the line if necessary).
+*   The precision of data values may be controlled by software, resulting in more or fewer fractional digits.
+    This may lead to round-off differences when comparing raw data values with the total/average in the optional end column.
 
 ```
 # StateMod time series files can have 3 main forms (monthly, average monthly, daily) as
@@ -121,46 +121,46 @@ Location...Interval~StateMod~PathToFile
 
 StateMod files contain limited header information.  Time series properties are set using the following guidelines:
 
-* The location part of the time series identifier is taken from the identifier field in the
-data records (from the first year of data).  A change in the year indicates that all time series have been identified.
-* The data source part of the time series identifier is set to StateMod or blank.
-In the past this information was used to indicate the input type (file format) in the time series identifier;
-however, the new input type notation has a specific field for the input type and
-therefore data source can be used more appropriately.
-In the future, it may be possible to pass along the original input source but
-this information cannot currently be saved in the StateMod file format.
-* The data type is often not assigned because it is not defined in the file.
-Currently no interpretation of the file name extension occurs.
-Some specific applications (e.g., the StateMod GUI) may set the data type,
-based on reading a StateMod data set response file (and therefore knowing the specific contents of the file).
-* The data interval is assigned as Day or Month based on the file format (determined automatically).
-* The scenario is typically not assigned.  Older software may use the scenario to store the file name;
-however, the new time series identifier notation stores the file name as the input name field (see below).
-* The input type part of the time series identifier is set to StateMod, indicating the file format.
-Software will use the interval and/or examine the file contents to verify whether the data are in daily or monthly format.
-* The input name part of the time series identifier is set to the file name,
-either as the full path or a relative path to the working directory.
-* The units are assigned to those indicated in the file header.
-* The missing data value is assigned to `-999.0`.
-* The description is set to the same value as the location.
-A verbose description can typically be determined by cross-referencing the
-identifier with another StateMod data file (e.g., diversion stations).
-* The period is set based on the header information.
+*   The location part of the time series identifier is taken from the identifier field in the
+    data records (from the first year of data).  A change in the year indicates that all time series have been identified.
+*   The data source part of the time series identifier is set to StateMod or blank.
+    In the past this information was used to indicate the input type (file format) in the time series identifier;
+    however, the new input type notation has a specific field for the input type and
+    therefore data source can be used more appropriately.
+    In the future, it may be possible to pass along the original input source but
+    this information cannot currently be saved in the StateMod file format.
+*   The data type is often not assigned because it is not defined in the file.
+    Currently no interpretation of the file name extension occurs.
+    Some specific applications (e.g., the StateMod GUI) may set the data type,
+    based on reading a StateMod data set response file (and therefore knowing the specific contents of the file).
+*   The data interval is assigned as Day or Month based on the file format (determined automatically).
+*   The scenario is typically not assigned.  Older software may use the scenario to store the file name;
+    however, the new time series identifier notation stores the file name as the input name field (see below).
+*   The input type part of the time series identifier is set to StateMod, indicating the file format.
+    Software will use the interval and/or examine the file contents to verify whether the data are in daily or monthly format.
+*   The input name part of the time series identifier is set to the file name,
+    either as the full path or a relative path to the working directory.
+*   The units are assigned to those indicated in the file header.
+*   The missing data value is assigned to `-999.0`.
+*   The description is set to the same value as the location.
+    A verbose description can typically be determined by cross-referencing the
+    identifier with another StateMod data file (e.g., diversion stations).
+*   The period is set based on the header information.
 
 ## Limitations ##
 
 StateMod files have the following limitations:
 
-* The format of the does not facilitate extracting one time series from the file.
-Software has been optimized to perform this within current constraints.
-* Some time series properties are not explicitly included in StateMod files (e.g., data type).
-Therefore, general software like TSTool may not be able to provide default information.
-For example, a graph may show multiple time series with nearly the same
-legend text because more detailed information cannot be defaulted.
-* If two time series for the same station are stored in the same file (e.g.,
-reservoir maximum and minimum targets), there is no way to uniquely identify the two time series.
-The application or user must understand the file type and data organization.
-Some specific software (e.g., StateMod GUI) may be able to recognize the specific format.
+*   The format of the does not facilitate extracting one time series from the file.
+    Software has been optimized to perform this within current constraints.
+*   Some time series properties are not explicitly included in StateMod files (e.g., data type).
+    Therefore, general software like TSTool may not be able to provide default information.
+    For example, a graph may show multiple time series with nearly the same
+    legend text because more detailed information cannot be defaulted.
+*   If two time series for the same station are stored in the same file (e.g.,
+    reservoir maximum and minimum targets), there is no way to uniquely identify the two time series.
+    The application or user must understand the file type and data organization.
+    Some specific software (e.g., StateMod GUI) may be able to recognize the specific format.
 
 ## Water Right Files ##
 
@@ -171,11 +171,11 @@ See the explanation in the in the [`ReadStateMod`](../../command-ref/ReadStateMo
 
 StateMod text output files (`*.x*`) can be read by the [`ReadStateMod`](../../command-ref/ReadStateMod/ReadStateMod) command, with the following notes:
 
-* Identifiers that include period have the period replaced by underscore.
-* The file formats are different from the standard time series files and
-include additional metadata information.
-For example, information about each time series often is listed above the numerical tables of time series data.
-This information is saved as time series properties.
+*   Identifiers that include period have the period replaced by underscore.
+*   The file formats are different from the standard time series files and
+    include additional metadata information.
+    For example, information about each time series often is listed above the numerical tables of time series data.
+    This information is saved as time series properties.
 
 The `*.xpl` file has sections similar to the following where each “Plan ID” has a metadata
 section and blocks of “Plan Uses” containing 12 months and a total for the year.
@@ -210,29 +210,29 @@ to be understood without referencing other data.
 Each column in the output matching metadata results in a
 time series and a total annual time series also is created.
 
-* The first month in the data section indicates the year type for the run and the
-year is always the calendar year (in the example above irrigation
-year 1980 is shown, which starts in NOV of 1979.
-* The location part of the time series is set to:
-	+ Plan:Plan ID-Use:Use ID with periods replaced with underscores,
-	for example `Plan:AgDSplit-Use:AgDitch_17`.
-	(Need to evaluate if this and scenario part is OK.
-	An alternative would be to include source and destination in the location).
-	+ `Plan:Plan ID-Src:Src` ID, for example `Plan:ArvBDCRFs-Src:In_Priority`.
-	+ If the detailed time series metadata are not parsed,
-	then the Use ID or Src ID will be set to the column number
-	(this is not desirable because it is inefficient for modelers and may result in lookup errors).
-* The data source part of the time series is set to StateMod.
-* The data type part of the time series is set to:
-	+ If the detailed time series metadata are parsed: `PlanType-Description-OprType` (e.g., `11-AccountingPlan-46`)
-	+ If the detailed time series metadata are not parsed or operating rule is < 0:  PlanType-Description (e.g., `11-AccountingPlan`)
-* The time series intervals for columns is Month, with Year being used for the
-annual total time series (year time series will be added if resources allow).
-* The scenario part of the time series is set to the plan source and
-destination information as appropriate (Need to evaluate if this and the location part is OK):	
-	+ For plan type 1:  `Source:Plan Source-Source`, for example:  `Source:0700502-In_Priority`
-	+ For plan types 3 and 4:  `Source:Plan Source`, for example:  `Source:0203910`
-	+ For plan types 2, 8, 9, 10, 11 and 12:  `Source:Plan Source-Destination:Use Destination`, for example:  `Source:0700502-Destination:CMAgPln`
-* The time series description/name is set to:
-	+ If the detailed time series metadata are parsed:  the Plan Name-Use Name is used, for example `AgriculturalDitchSplit-Opr_AgDitchSplit-Accts`.
-	+ If the detailed time series metadata are not parsed:  the Plan Name is used, for example `AgriculturalDitchSplit`.
+*   The first month in the data section indicates the year type for the run and the
+    year is always the calendar year (in the example above irrigation
+    year 1980 is shown, which starts in NOV of 1979.
+*   The location part of the time series is set to:
+    +   Plan:Plan ID-Use:Use ID with periods replaced with underscores,
+        for example `Plan:AgDSplit-Use:AgDitch_17`.
+        (Need to evaluate if this and scenario part is OK.
+        An alternative would be to include source and destination in the location).
+    +   `Plan:Plan ID-Src:Src` ID, for example `Plan:ArvBDCRFs-Src:In_Priority`.
+    +   If the detailed time series metadata are not parsed,
+        then the Use ID or Src ID will be set to the column number
+        (this is not desirable because it is inefficient for modelers and may result in lookup errors).
+*   The data source part of the time series is set to StateMod.
+*   The data type part of the time series is set to:
+    +   If the detailed time series metadata are parsed: `PlanType-Description-OprType` (e.g., `11-AccountingPlan-46`)
+    +   If the detailed time series metadata are not parsed or operating rule is < 0:  PlanType-Description (e.g., `11-AccountingPlan`)
+*   The time series intervals for columns is Month, with Year being used for the
+    annual total time series (year time series will be added if resources allow).
+*   The scenario part of the time series is set to the plan source and
+    destination information as appropriate (Need to evaluate if this and the location part is OK):    
+    +   For plan type 1:  `Source:Plan Source-Source`, for example:  `Source:0700502-In_Priority`
+    +   For plan types 3 and 4:  `Source:Plan Source`, for example:  `Source:0203910`
+    +   For plan types 2, 8, 9, 10, 11 and 12:  `Source:Plan Source-Destination:Use Destination`, for example:  `Source:0700502-Destination:CMAgPln`
+*   The time series description/name is set to:
+    +   If the detailed time series metadata are parsed:  the Plan Name-Use Name is used, for example `AgriculturalDitchSplit-Opr_AgDitchSplit-Accts`.
+    +   If the detailed time series metadata are not parsed:  the Plan Name is used, for example `AgriculturalDitchSplit`.

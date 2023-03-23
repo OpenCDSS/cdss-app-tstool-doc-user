@@ -50,7 +50,7 @@ that are available) is not provided due to performance issues.
 Additional query features will be enabled as web service integration is enhanced.
 
 **<p style="text-align: center;">
-![ReadUsgsNwisDaily](ReadUsgsNwisDaily.png)
+![ReadUsgsNwisDaily command editor](ReadUsgsNwisDaily.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -1,9 +1,9 @@
 # TSTool / Datastore Reference / USGS NWIS Groundwater (UsgsNwisGroundwater) #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [Datastore Configuration File](#datastore-configuration-file)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [Datastore Configuration File](#datastore-configuration-file)
 
 ------------
 
@@ -14,7 +14,7 @@ The UsgsNwisGroundwater datastore corresponds to the
 
 The following online query page is available for interactive queries:
 
-* [USGS Groundwater Levels REST Web Service URL Generation Tool](https://waterservices.usgs.gov/rest/GW-Levels-Test-Tool.html)
+*   [USGS Groundwater Levels REST Web Service URL Generation Tool](https://waterservices.usgs.gov/rest/GW-Levels-Test-Tool.html)
 
 Although the USGS NWIS services are largely compatible with TSTool conventions,
 there are a number of limitations, which are discussed below.

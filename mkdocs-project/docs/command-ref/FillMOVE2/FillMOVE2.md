@@ -23,7 +23,7 @@ The MOVE.2 procedure has been shown to be marginally better than MOVE.1.
 The following MOVE.2 equation is used to estimate values for the dependent time series from the independent time series:
 
 **<p style="text-align: center;">
-![MOVE2](MOVE2-equation.png)
+![MOVE2 equation](MOVE2-equation.png)
 </p>**
 
 ## Command Editor ##
@@ -35,7 +35,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax,
 
 **<p style="text-align: center;">
-![FillMOVE2](FillMOVE2.png)
+![FillMOVE2 command editor](FillMOVE2.png)
 </p>**
 
 **<p style="text-align: center;">

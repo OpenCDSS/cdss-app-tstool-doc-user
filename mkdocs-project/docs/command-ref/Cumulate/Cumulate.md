@@ -75,7 +75,7 @@ This behavior is because the date/time `2000-01-01 00` is equivalent to `1999-12
 which is the end of the last interval of the year.
 
 **<p style="text-align: center;">
-![Cumulate_hour_table](Cumulate_hour_table.png)
+![Cumulate results for hourly data with reset](Cumulate_hour_table.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -91,7 +91,7 @@ If used with regular interval time series, `InsertResetPoint=True` will ensure t
 is preset at the `Reset` date/time, using zero if the value was originally missing.
 
 **<p style="text-align: center;">
-![Cumulate_insert](Cumulate_insert.png)
+![Cumulate results for irregular time series with inserted reset point](Cumulate_insert.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -164,7 +164,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![Cumulate](Cumulate.png)
+![Cumulate command editor](Cumulate.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -212,7 +212,7 @@ The following graph illustrates cumulative data for two precipitation gages in t
 where missing data results in carrying forward the last known value.
 
 **<p style="text-align: center;">
-![Cumulate Graph](Cumulate_Graph.png)
+![Example graph showing results of cumulate command](Cumulate_Graph.png)
 </p>**
 
 **<p style="text-align: center;">

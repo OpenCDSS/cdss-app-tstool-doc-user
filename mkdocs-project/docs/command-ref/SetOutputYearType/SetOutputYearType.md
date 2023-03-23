@@ -39,7 +39,7 @@ Note that the output period should always use calendar month and year,
 even if other than calendar year are used for output (see [`SetOutputYearType`](../SetOutputYearType/SetOutputYearType.md)).
 
 **<p style="text-align: center;">
-![SetOutputYearType](SetOutputYearType.png)
+![SetOutputYearType command editor](SetOutputYearType.png)
 </p>**
 
 **<p style="text-align: center;">

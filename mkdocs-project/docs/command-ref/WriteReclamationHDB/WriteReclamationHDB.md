@@ -131,7 +131,7 @@ Currently the `site_name` and `site_common_name` are not required to be unique i
 therefore specifying the unique `site_datatype_id` (SDI) is the only way to ensure that the proper time series is being selected.
 
 **<p style="text-align: center;">
-![WriteReclamationHDB](WriteReclamationHDB.png)
+![WriteReclamationHDB command editor for real time series](WriteReclamationHDB.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -143,7 +143,7 @@ therefore specifying the unique `site_datatype_id` (SDI) is the only way to ensu
 The following figure illustrates general command parameters.
 
 **<p style="text-align: center;">
-![WriteReclamationHDB_General](WriteReclamationHDB_General.png)
+![WriteReclamationHDB_General command editor for general parameters](WriteReclamationHDB_General.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -153,7 +153,7 @@ The following figure illustrates general command parameters.
 The following figure illustrates output property parameters.
 
 **<p style="text-align: center;">
-![WriteReclamationHDB_OutputProperties](WriteReclamationHDB_OutputProperties.png)
+![WriteReclamationHDB command editor for Output Property parameters](WriteReclamationHDB_OutputProperties.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -163,7 +163,7 @@ The following figure illustrates output property parameters.
 The following figure illustrates developer property parameters.
 
 **<p style="text-align: center;">
-![WriteReclamationHDB_Developer](WriteReclamationHDB_Developer.png)
+![WriteReclamationHDB command editor for Developer Property parameters](WriteReclamationHDB_Developer.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -187,7 +187,7 @@ The model run identifier can be specified in one of two ways.
     however, the directly selected `ModelRunID` will be used in this case.
 
 **<p style="text-align: center;">
-![WriteReclamationHDB_Model](WriteReclamationHDB_Model.png)
+![WriteReclamationHDB command editor for single model time series](WriteReclamationHDB_Model.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -204,7 +204,7 @@ In the following example a new ensemble is being written.
 The time series trace number and model run date are both taken from the ensemble time series properties when the command is run.
 
 **<p style="text-align: center;">
-![WriteReclamationHDB_Ensemble](WriteReclamationHDB_Ensemble.png)
+![WriteReclamationHDB command editor for ensemble of model time series](WriteReclamationHDB_Ensemble.png)
 </p>**
 
 **<p style="text-align: center;">

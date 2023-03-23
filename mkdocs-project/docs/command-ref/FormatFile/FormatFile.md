@@ -40,7 +40,7 @@ The KDiff3 software is one option for a visual difference program.
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![FormatFile](FormatFile.png)
+![FormatFile command editor](FormatFile.png)
 </p>**
 
 **<p style="text-align: center;">

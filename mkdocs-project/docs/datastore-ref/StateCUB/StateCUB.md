@@ -1,8 +1,8 @@
 # TSTool / Datastore Reference / StateCUB #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
 
 -----------------
 
@@ -144,30 +144,30 @@ Location.StateCU.DataType.Interval~StateCUB~PathToFile
 
 Time series properties are set using the following guidelines:
 
-* The location part of the time series identifier is taken from the structure identifier field in the data.
-* The data source part of the time series identifier is set to `StateCU`, because StateCU has created the output time series.
-* The data type is assigned as the variable (parameter) name described above – See the StateCU documentation for more information.
-* The data interval is assigned as Month.
-* The scenario is set to blank (not used).
-* The input type is set to `StateCUB`.
-* The input name is set to the name of the file.
-* The units are determined from the time series variable metadata.
-* The missing data value is assigned to `-999.0`.
-* The description is set to the structure name.
-* The period is set to the information in the first time series record incremented by
-the number of timesteps in the file (minus one).
-Current the file only contains calendar year data (January to December).
+*   The location part of the time series identifier is taken from the structure identifier field in the data.
+*   The data source part of the time series identifier is set to `StateCU`, because StateCU has created the output time series.
+*   The data type is assigned as the variable (parameter) name described above – See the StateCU documentation for more information.
+*   The data interval is assigned as Month.
+*   The scenario is set to blank (not used).
+*   The input type is set to `StateCUB`.
+*   The input name is set to the name of the file.
+*   The units are determined from the time series variable metadata.
+*   The missing data value is assigned to `-999.0`.
+*   The description is set to the structure name.
+*   The period is set to the information in the first time series record incremented by
+    the number of timesteps in the file (minus one).
+    Current the file only contains calendar year data (January to December).
 
 ## Limitations ##
 
 StateCU binary files have the following limitations:
 
-* The file does not contain a format version; therefore, it is difficult for software to
-handle changes in the file format.  However, the current format is designed to
-allow for changing structure and time series parameters without changing the file format.
-* The file does not contain header information indicating the source of the
-file (e.g., the creation date, user, directory, StateCU response file, command line).
-Therefore, it is difficult to know with certainty how a file was created.
-* Leap years are not explicitly handled with 29 days during model calculations.
-Therefore there may be some loss of precision as data are processed through the model.
-Refer to the StateCU documentation for more information on how values are calculated.
+*   The file does not contain a format version; therefore, it is difficult for software to
+    handle changes in the file format.  However, the current format is designed to
+    allow for changing structure and time series parameters without changing the file format.
+*   The file does not contain header information indicating the source of the
+    file (e.g., the creation date, user, directory, StateCU response file, command line).
+    Therefore, it is difficult to know with certainty how a file was created.
+*   Leap years are not explicitly handled with 29 days during model calculations.
+    Therefore there may be some loss of precision as data are processed through the model.
+    Refer to the StateCU documentation for more information on how values are calculated.

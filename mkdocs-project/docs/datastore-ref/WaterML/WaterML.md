@@ -1,9 +1,9 @@
 # TSTool / Datastore Reference / WaterML #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [TSTool Configuration File](#tstool-configuration-file)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [TSTool Configuration File](#tstool-configuration-file)
 
 --------------
 
@@ -14,8 +14,8 @@
 The WaterML input type corresponds to the WaterML time series file format.
 WaterML is now an Open Geospacial Consortium (OGC) standard.  See the following resources:
 
-* [OGC WaterML website](https://www.opengeospatial.org/standards/waterml)
-* [CUAHSI WaterOneFlow web services website](https://his.cuahsi.org/wofws.html)
+*   [OGC WaterML website](https://www.opengeospatial.org/standards/waterml)
+*   [CUAHSI WaterOneFlow web services website](https://his.cuahsi.org/wofws.html)
 
 WaterML 1.1 and 2.0 formats are supported at various levels in the following TSTool commands:
 [`ReadUsgsNwisDaily`](../../command-ref/ReadUsgsNwisDaily/ReadUsgsNwisDaily.md),

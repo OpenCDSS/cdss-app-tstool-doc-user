@@ -1,8 +1,8 @@
 # TSTool / Datastore Reference / SHEF #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
 
 --------------
 
@@ -18,8 +18,8 @@ Refer to the Standard Hydrologic Exchange Format, Version 1.3.1 (or later),
 Weather Service Hydrology Handbook No. 1., U.S. Department of Commerce,
 National Oceanic and Atmospheric Administration, National Weather Service.
 
-* [SHEF Code Manual (July 5, 2012)](https://www.weather.gov/media/mdl/SHEF_CodeManual_5July2012.pdf)
-* [SHEF Code Manual (archive of July 5, 2012 version)](SHEF_CodeManual_5July2012.pdf)
+*   [SHEF Code Manual (July 5, 2012)](https://www.weather.gov/media/mdl/SHEF_CodeManual_5July2012.pdf)
+*   [SHEF Code Manual (archive of July 5, 2012 version)](SHEF_CodeManual_5July2012.pdf)
 
 ## Limitations ##
 

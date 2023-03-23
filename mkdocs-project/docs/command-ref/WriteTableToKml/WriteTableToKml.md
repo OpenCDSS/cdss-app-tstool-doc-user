@@ -32,7 +32,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
 
 **<p style="text-align: center;">
-![WriteTableToKml](WriteTableToKml.png)
+![WriteTableToKml command editor for general parameters](WriteTableToKml.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -42,7 +42,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following figure illustrates the command syntax for point data in separate columns.
 
 **<p style="text-align: center;">
-![WriteTableToKml_Point](WriteTableToKml_Point.png)
+![WriteTableToKml command editor for Point Data parameters](WriteTableToKml_Point.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -52,7 +52,7 @@ The following figure illustrates the command syntax for point data in separate c
 The following figure illustrates the command syntax for layers specified with a geometry data column.
 
 **<p style="text-align: center;">
-![WriteTableToKml_Geometry](WriteTableToKml_Geometry.png)
+![WriteTableToKml command editor for Geometry Data parameters](WriteTableToKml_Geometry.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -62,7 +62,7 @@ The following figure illustrates the command syntax for layers specified with a 
 The following figure illustrates the command syntax for KML inserts.  This allows KML elements to be inserted in the KML file.
 
 **<p style="text-align: center;">
-![WriteTableToKml_KmlInsert](WriteTableToKml_KmlInsert.png)
+![WriteTableToKml command editor for KML Insert parameters](WriteTableToKml_KmlInsert.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -72,7 +72,7 @@ The following figure illustrates the command syntax for KML inserts.  This allow
 The following figure illustrates the command syntax for marker style parameters.
 
 **<p style="text-align: center;">
-![WriteTableToKml_Styles](WriteTableToKml_Styles.png)
+![WriteTableToKml command editor for Marker Style parameters](WriteTableToKml_Styles.png)
 </p>**
 
 **<p style="text-align: center;">

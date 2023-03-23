@@ -28,7 +28,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 reading `Available_Flow` output parameter for all locations.
 
 **<p style="text-align: center;">
-![ReadStateModB](ReadStateModB.png)
+![ReadStateModB command editor when matching a TSID pattern](ReadStateModB.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -39,7 +39,7 @@ The following example illustrates how to specify multiple data types (parameters
 in order to limit the number of time series that are read.
 
 **<p style="text-align: center;">
-![ReadStateModB-IncludeDataTypes](ReadStateModB-IncludeDataTypes.png)
+![ReadStateModB command edtior when matching multiple data types](ReadStateModB-IncludeDataTypes.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -112,7 +112,7 @@ The `DivClass` and `RelClass` data type can match multiple time series and there
 parameter is specified if a single time series should be matched.
 
 **<p style="text-align: center;">
-![ReadHydroBase TSID](ReadHydroBase_TSID.png)
+![ReadHydroBase command editor to read a single time series](ReadHydroBase_TSID.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -122,7 +122,7 @@ parameter is specified if a single time series should be matched.
 The following figure illustrates how to query multiple time series.
 
 **<p style="text-align: center;">
-![ReadHydroBase Multiple](ReadHydroBase_Multiple.png)
+![ReadHydroBase command editor to read multiple time series](ReadHydroBase_Multiple.png)
 </p>**
 
 **<p style="text-align: center;">

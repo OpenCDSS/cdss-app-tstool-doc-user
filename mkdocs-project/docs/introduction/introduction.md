@@ -100,11 +100,11 @@ the main function of TSTool is to automate data processing using a workflow of c
 The following figure illustrates overall workflow concepts.
 
 **<p style="text-align: center;">
-![TSTool_DataFlow](TSTool_DataFlow.png)
+![TSTool Data Flow Concepts](TSTool_DataFlow.png)
 </p>**
 
 **<p style="text-align: center;">
-TSTool Data  Flow Concepts (<a href="../TSTool_DataFlow.png">See also the full-size image)</a>
+TSTool Data Flow Concepts (<a href="../TSTool_DataFlow.png">See also the full-size image)</a>
 </p>**
 
 Input data are retrieved using unique identifiers,
@@ -767,7 +767,7 @@ or other unique identifier.
 The following figure illustrates an ensemble of annual time series created from a long historical time series.
 
 **<p style="text-align: center;">
-![TSView_Graph_Traces](TSView_Graph_Traces.png)
+![Example Ensemble Plot Showing Historical Years](TSView_Graph_Traces.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -827,7 +827,7 @@ See the [`CreateNetworkFromTable`](../command-ref/CreateNetworkFromTable/CreateN
 Time series are associated with the nodes in the network.
 
 **<p style="text-align: center;">
-![AnalyzeNetworkPointFlow_InputTable](../command-ref/AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow_InputTable.png)
+![Network Definition Input Table](../command-ref/AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow_InputTable.png)
 </p>**
 
 **<p style="text-align: center;">

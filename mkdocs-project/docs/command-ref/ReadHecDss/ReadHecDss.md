@@ -30,7 +30,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 In the future, it is envisioned that choices for A – F parts will be made available using data from the file.
 
 **<p style="text-align: center;">
-![ReadHecDss](ReadHecDss.png)
+![ReadHecDss command editor](ReadHecDss.png)
 </p>**
 
 **<p style="text-align: center;">

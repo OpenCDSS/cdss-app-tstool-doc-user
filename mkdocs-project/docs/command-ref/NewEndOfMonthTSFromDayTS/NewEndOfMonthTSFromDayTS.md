@@ -33,7 +33,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![NewEndOfMonthTSFromDayTS](NewEndOfMonthTSFromDayTS.png)
+![NewEndOfMonthTSFromDayTS command editor](NewEndOfMonthTSFromDayTS.png)
 </p>**
 
 **<p style="text-align: center;">

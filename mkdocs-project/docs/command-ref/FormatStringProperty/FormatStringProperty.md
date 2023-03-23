@@ -44,7 +44,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax for general parameters.
 
 **<p style="text-align: center;">
-![FormatStringProperty](FormatStringProperty.png)
+![FormatStringProperty command editor for General parameters](FormatStringProperty.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -54,7 +54,7 @@ The following dialog is used to edit the command and illustrates the command syn
 The following is used to edit the command and illustrates the command syntax for integer parameters.
 
 **<p style="text-align: center;">
-![FormatStringProperty-Integer](FormatStringProperty-Integer.png)
+![FormatStringProperty command editor for Integer parameters](FormatStringProperty-Integer.png)
 </p>**
 
 **<p style="text-align: center;">

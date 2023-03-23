@@ -40,7 +40,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToKml](WriteTimeSeriesToKml.png)
+![WriteTimeSeriesToKml command editor](WriteTimeSeriesToKml.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -50,7 +50,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following figure illustrates the command syntax for point data specified with time series properties.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToKml_Point](WriteTimeSeriesToKml_Point.png)
+![WriteTimeSeriesToKml command editor for Point Data parameters](WriteTimeSeriesToKml_Point.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -60,7 +60,7 @@ The following figure illustrates the command syntax for point data specified wit
 The following figure illustrates the command syntax for layers specified with a WKT geometry property.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToKml_Geometry](WriteTimeSeriesToKml_Geometry.png)
+![WriteTimeSeriesToKml command editor for well known text geometry parameters](WriteTimeSeriesToKml_Geometry.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -70,7 +70,7 @@ The following figure illustrates the command syntax for layers specified with a 
 The following figure illustrates the command syntax for KML inserts.  This allows KML elements to be inserted in the KML file.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToKml_KmlInsert](WriteTimeSeriesToKml_KmlInsert.png)
+![WriteTimeSeriesToKml command editor for KML Insert parameters](WriteTimeSeriesToKml_KmlInsert.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -80,7 +80,7 @@ The following figure illustrates the command syntax for KML inserts.  This allow
 The following figure illustrates the command syntax for marker style parameters.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToKml_Styles](WriteTimeSeriesToKml_Styles.png)
+![WriteTimeSeriesToKml command editor for Marker Style parameters](WriteTimeSeriesToKml_Styles.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -91,7 +91,7 @@ The following figure illustrates the command syntax for time series data paramet
 In the future this tab will be used to control how time series values are used to animate a KML layer.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToKml_TimeSeries](WriteTimeSeriesToKml_TimeSeries.png)
+![WriteTimeSeriesToKml command editor for Time Series Data parameters](WriteTimeSeriesToKml_TimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">

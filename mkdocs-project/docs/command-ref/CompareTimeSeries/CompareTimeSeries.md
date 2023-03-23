@@ -71,51 +71,51 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax when comparing two time series.
 
 **<p style="text-align: center;">
-![CompareTimeSeries 2](CompareTimeSeries_2.png)
+![CompareTimeSeries command editor to compare two time series](CompareTimeSeries_2.png)
 </p>**
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor Showing Parameters to Compare 2 Time Series (<a href="../CompareTimeSeries_2.png">see also the full-size image</a>)
+`CompareTimeSeries` Command Editor to Compare 2 Time Series (<a href="../CompareTimeSeries_2.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when comparing two ensembles.
 
 **<p style="text-align: center;">
-![CompareTimeSeries 2 Ensembles](CompareTimeSeries_2Ensembles.png)
+![CompareTimeSeries command editor to compare two ensembles](CompareTimeSeries_2Ensembles.png)
 </p>**
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor Showing Parameters to Compare 2 Ensembles (<a href="../CompareTimeSeries_2Ensembles.png">see also the full-size image</a>)
+`CompareTimeSeries` Command Editor to Compare 2 Ensembles (<a href="../CompareTimeSeries_2Ensembles.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when comparing many time series.
 
 **<p style="text-align: center;">
-![CompareTimeSeries Many](CompareTimeSeries_Many.png)
+![CompareTimeSeries Command Editor to compare many time series](CompareTimeSeries_Many.png)
 </p>**
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor Showing Parameters to Compare Many Time Series (<a href="../CompareTimeSeries_Many.png">see also the full-size image</a>)
+`CompareTimeSeries` Command Editor to Compare Many Time Series (<a href="../CompareTimeSeries_Many.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for analysis parameters.
 
 **<p style="text-align: center;">
-![CompareTimeSeries Analysis](CompareTimeSeries_Analysis.png)
+![CompareTimeSeries command editor for Analysis parameters](CompareTimeSeries_Analysis.png)
 </p>**
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor Showing Analysis Parameters (<a href="../CompareTimeSeries_Analysis.png">see also the full-size image</a>)
+`CompareTimeSeries` Command Editor for Analysis Parameters (<a href="../CompareTimeSeries_Analysis.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for output parameters.
 
 **<p style="text-align: center;">
-![CompareTimeSeries Output](CompareTimeSeries_Output.png)
+![CompareTimeSeries command editor for Output parameters](CompareTimeSeries_Output.png)
 </p>**
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor showing Output Parameters (<a href="../CompareTimeSeries_Output.png">see also the full-size image</a>)
+`CompareTimeSeries` Command Editor for Output Parameters (<a href="../CompareTimeSeries_Output.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##

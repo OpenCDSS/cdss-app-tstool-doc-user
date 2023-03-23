@@ -31,7 +31,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![ReadTableFromFixedFormatFile](ReadTableFromFixedFormatFile.png)
+![ReadTableFromFixedFormatFile command editor](ReadTableFromFixedFormatFile.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -101,7 +101,7 @@ The `ColumnNames` parameter is used to assign column names to the output table.
 The following table in TSTool illustrates the resulting output:
 
 **<p style="text-align: center;">
-![ReadTableFromFixedFormatFile Output](ReadTableFromFixedFormatFile_Output.png)
+![ReadTableFromFixedFormatFile Output output table example](ReadTableFromFixedFormatFile_Output.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -18,7 +18,7 @@ By default this command will replace the original time series values
 The ARMA method preserves the “mass” of the data.  The general equation for ARMA is:
 
 **<p style="text-align: center;">
-![ARMA-equation](ARMA-equation.png)
+![ARMA equation](ARMA-equation.png)
 </p>**
 
 The ARMA coefficients are determined by analyzing historical data and may be developed
@@ -78,7 +78,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![ARMA](ARMA-input.png)
+![ARMA command editor for input parameters](ARMA-input.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -86,7 +86,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-![ARMA](ARMA-ARMA.png)
+![ARMA command editor for ARMA parameters](ARMA-ARMA.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -94,7 +94,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-![ARMA](ARMA-output.png)
+![ARMA command editor for Output Parameters](ARMA-output.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -148,7 +148,7 @@ ARMA(TSList=AllMatchingTSID,TSID="Routed",ARMAInterval=2Hour,a="0.7325,
 The following figure shows the original and routed time series.
 
 **<p style="text-align: center;">
-![ARMA](ARMA-graph.png)
+![ARMA graph](ARMA-graph.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -161,7 +161,7 @@ and routed time series.  For example, insert a `Cumulate` command near the end o
 The following figure shows the time series from the previous graph, this time as cumulative time series.
 
 **<p style="text-align: center;">
-![ARMA](ARMA-graph-cumulate.png)
+![Example graph showing original and routed time series](ARMA-graph-cumulate.png)
 </p>**
 
 **<p style="text-align: center;">

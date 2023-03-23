@@ -30,7 +30,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![WriteWaterML2](WriteWaterML2.png)
+![WriteWaterML2 command editor](WriteWaterML2.png)
 </p>**
 
 **<p style="text-align: center;">

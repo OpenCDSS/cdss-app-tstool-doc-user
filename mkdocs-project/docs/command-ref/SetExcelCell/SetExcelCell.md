@@ -30,7 +30,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel file parameters.
 
 **<p style="text-align: center;">
-![SetExcelCell File](SetExcelCell_File.png)
+![SetExcelCell command file for Excel file parameters](SetExcelCell_File.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -40,7 +40,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel address parameters.
 
 **<p style="text-align: center;">
-![SetExcelCell Address](SetExcelCell_Address.png)
+![SetExcelCell command editor for Excel address parameters](SetExcelCell_Address.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -50,7 +50,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel address parameters.
 
 **<p style="text-align: center;">
-![SetExcelCell ColumnRow](SetExcelCell_ColumnRow.png)
+![SetExcelCell command editor for Excel column and row parameters](SetExcelCell_ColumnRow.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -60,7 +60,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel data values parameters.
 
 **<p style="text-align: center;">
-![SetExcelCell Value](SetExcelCell_Value.png)
+![SetExcelCell command editor for Excel data value parameters](SetExcelCell_Value.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -70,7 +70,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel comment parameters.
 
 **<p style="text-align: center;">
-![SetExcelCell Comment](SetExcelCell_Comment.png)
+![SetExcelCell command editor for Excel command parameters](SetExcelCell_Comment.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -80,7 +80,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel formatting parameters.
 
 **<p style="text-align: center;">
-![SetExcelCell Formatting](SetExcelCell_Formatting.png)
+![SetExcelCell command editor for Excel formatting parameters](SetExcelCell_Formatting.png)
 </p>**
 
 **<p style="text-align: center;">

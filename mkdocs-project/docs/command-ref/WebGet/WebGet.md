@@ -41,7 +41,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![WebGet-Request](WebGet-Request.png)
+![WebGet command editor for Request parameters](WebGet-Request.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -49,7 +49,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-![WebGet-Timeout](WebGet-Timeout.png)
+![WebGet command editor for Timeout parameters](WebGet-Timeout.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -57,7 +57,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-![WebGet-Response](WebGet-Response.png)
+![WebGet command editor for Response parameters](WebGet-Response.png)
 </p>**
 
 **<p style="text-align: center;">
