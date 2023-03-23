@@ -26,7 +26,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![Divide](Divide.png)
+![Divide command editor](Divide.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -67,7 +67,7 @@ Divide(TSID="2184.NOAA.TempMean.Month",DivisorTSID="5706.NOAA.TempMean.Month")
 The resulting graph is as follows:
 
 **<p style="text-align: center;">
-![Divide Graph](Divide_Graph.png)
+![Divide command results Graph](Divide_Graph.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -2,10 +2,10 @@
 
 **This format is a prototype. It is unclear whether it will become a production standard.**
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [Examples](#examples)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [Examples](#examples)
 
 ------------------
 
@@ -49,8 +49,8 @@ Location.DataSource.DataType.Interval.Scenario~DateValue~PathToFile.
 
 HydroJSON files have the following limitations:
 
-* Need to understand the specification better in order to document limitations.
-* Should the HydroJSON version number be included in the file?
+*   Need to understand the specification better in order to document limitations.
+*   Should the HydroJSON version number be included in the file?
 
 ## Examples ##
 

@@ -26,7 +26,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![WeightTraces](WeightTraces.png)
+![WeightTraces command editor](WeightTraces.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -71,7 +71,7 @@ WriteDateValue(OutputFile="Results/WeightTraces_out.dv")
 The results from the commands are shown in the following graph:
 
 **<p style="text-align: center;">
-![WeightTraces Graph](WeightTraces_Graph.png)
+![WeightTraces results Graph](WeightTraces_Graph.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -40,7 +40,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![SetFromTS](SetFromTS.png)
+![SetFromTS command editor](SetFromTS.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -51,7 +51,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 command for analysis window and period parameters.
 
 **<p style="text-align: center;">
-![SetFromTS Period](SetFromTS_Period.png)
+![SetFromTS command editor for Period and Window parameters](SetFromTS_Period.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -61,7 +61,7 @@ command for analysis window and period parameters.
 The following dialog is used to edit the command and illustrates the syntax of the command for control parameters.
 
 **<p style="text-align: center;">
-![SetFromTS Control](SetFromTS_Control.png)
+![SetFromTS command editor for set control parameters](SetFromTS_Control.png)
 </p>**
 
 **<p style="text-align: center;">

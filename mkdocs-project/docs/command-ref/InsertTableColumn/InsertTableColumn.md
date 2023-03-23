@@ -23,7 +23,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![InsertTableColumn](InsertTableColumn.png)
+![InsertTableColumn command editor](InsertTableColumn.png)
 </p>**
 
 **<p style="text-align: center;">

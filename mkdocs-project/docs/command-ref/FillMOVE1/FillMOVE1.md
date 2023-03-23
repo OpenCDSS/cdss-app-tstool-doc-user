@@ -37,13 +37,13 @@ and uses all the data at the dependent time series to estimate the mean and vari
 The MOVE.2 procedure has been shown to be marginally better than MOVE.1.
 
 **<p style="text-align: center;">
-![MOVE](MOVE.png)
+![MOVE equation](MOVE.png)
 </p>**
 
 The MOVE.1 equation is used to estimate values for the dependent time series from the independent time series:
 
 **<p style="text-align: center;">
-![MOVE1-equation](MOVE1-equation.png)
+![MOVE1 equation](MOVE1-equation.png)
 </p>**
 
 Note that the slope of the line does not include the correlation coefficient.

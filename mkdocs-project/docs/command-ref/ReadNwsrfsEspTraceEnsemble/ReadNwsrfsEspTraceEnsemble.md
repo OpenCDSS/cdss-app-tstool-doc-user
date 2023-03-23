@@ -27,7 +27,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax for the command when reading a single time series.
 
 **<p style="text-align: center;">
-![ReadNwsrfsEspTraceEnsemble](ReadNwsrfsEspTraceEnsemble.png)
+![ReadNwsrfsEspTraceEnsemble command editor](ReadNwsrfsEspTraceEnsemble.png)
 </p>**
 
 **<p style="text-align: center;">

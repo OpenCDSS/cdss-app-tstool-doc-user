@@ -34,7 +34,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![SetPropertyFromTable_cell](SetPropertyFromTable_cell.png)
+![SetPropertyFromTable command editor for Cell parameters](SetPropertyFromTable_cell.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -42,11 +42,11 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-![SetPropertyFromTable_table](SetPropertyFromTable_table.png)
+![SetPropertyFromTable command editor for Table Row and Column Count Parameters](SetPropertyFromTable_table.png)
 </p>**
 
 **<p style="text-align: center;">
-`SetPropertyFromTable` Command Editor for Table Row and Column Count  Parameters (<a href="../SetPropertyFromTable_table.png">see also the full-size image</a>)
+`SetPropertyFromTable` Command Editor for Table Row and Column Count Parameters (<a href="../SetPropertyFromTable_table.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -78,7 +78,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 The command shown in the editor dialog, used with the following table, will set `StringProp=“Abba”`
 
 **<p style="text-align: center;">
-![SetPropertyFromTable example](SetPropertyFromTable_example.png)
+![SetPropertyFromTable example table](SetPropertyFromTable_example.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -153,7 +153,7 @@ This can be applied to indicate data types collected at a location, and also dat
 The following example shows this approach to indicate station type:
 
 **<p style="text-align: center;">
-![SymbolExample](SymbolExample.png)
+![Example of Symbol Layering](SymbolExample.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -169,7 +169,7 @@ More common are maps that show a layer for real-time data and a layer for histor
 as shown in the following figure:
 
 **<p style="text-align: center;">
-![GeoView_StreamSymbols](GeoView_StreamSymbols.png)
+![Example Map Showing Real-time and Historical Data Layers](GeoView_StreamSymbols.png)
 </p>**
  
 **<p style="text-align: center;">
@@ -268,7 +268,7 @@ The following sections describe more specifically how to utilize the links betwe
 To open a map in TSTool, first select the ***View / Map*** menu item, which will display the following window.
 
 **<p style="text-align: center;">
-![GeoView_Window_Blank](GeoView_Window_Blank.png)
+![Map Window when First Opened](GeoView_Window_Blank.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -278,7 +278,7 @@ Map (GeoView) Window when First Opened (<a href="../GeoView_Window_Blank.png">se
 In this window, select ***File / Open Project*** and select a GeoView Project File (`*.gvp`), as shown below.
 
 **<p style="text-align: center;">
-![GeoView_Window_OpenProject](GeoView_Window_OpenProject.png)
+![Opening a Map File](GeoView_Window_OpenProject.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -300,7 +300,7 @@ TSTool interface and then select the
 ***Tools / Select*** on Map menu item, as illustrated in the following figure:
  
 **<p style="text-align: center;">
-![Menu_Tools_SelectOnMap](Menu_Tools_SelectOnMap.png)
+![Example of Selecting Time Series on the Map](Menu_Tools_SelectOnMap.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -324,7 +324,7 @@ When ***Tools / Select on Map*** is selected, features on the map are selected a
     as shown in the following figure (the arrows have been added for illustration).
 
 **<p style="text-align: center;">
-![Menu_Tools_SelectOnMap2](Menu_Tools_SelectOnMap2.png)
+![Map After Using Time Series to Select Features](Menu_Tools_SelectOnMap2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -354,9 +354,9 @@ To select time series from the map:
     This layer should correspond to time series in the list from the first step.
     For example, if the time series list contains daily streamflow time series,
     select the map layer that corresponds to such data.  For example:<br><br>
-    ![GeoView_SelectLayer](GeoView_SelectLayer.png)<br>
+    ![Select Map Layer](GeoView_SelectLayer.png)<br>
 3.  Activate the select tool on the map interface toolbar:<br><br>
-    ![GeoView_SelectLayer2](GeoView_SelectLayer2.png)<br>
+    ![Activate the Select Tool](GeoView_SelectLayer2.png)<br>
 4.  Draw a box around features of interest on the map.
     The software will attempt to match the features in the time series list in the TSTool main window.
     To do so, it first matches the layer name with the similar value in the lookup file.
@@ -365,11 +365,11 @@ To select time series from the map:
     `Layer_DataSource` lookup file (`Layer_Interval` can also be used).
     Matched time series are selected in the list.
     Previous selections are not cleared – use the right click popup menu to clear selections first if appropriate.<br><br>
-    ![GeoView_SelectLayer3](GeoView_SelectLayer3.png)<br>
+    ![Clear Map Layer Selections](GeoView_SelectLayer3.png)<br>
     **<p style="text-align: center;">
     Selecting Features on the Map
     </p>**
-    ![GeoView_SelectLayer4](GeoView_SelectLayer4.png)<br>
+    ![Select Features on teh Map](GeoView_SelectLayer4.png)<br>
     **<p style="text-align: center;">
     Time Series List After Select from Map<br>
     </p>**
@@ -380,7 +380,7 @@ To select time series from the map:
 If not all selected features in a layer correspond to time series, a warning similar to the following may be shown:
  
 **<p style="text-align: center;">
-![GeoView_SelectLayer_Warning](GeoView_SelectLayer_Warning.png)
+![Selection Warning](GeoView_SelectLayer_Warning.png)
 </p>**
 
 **<p style="text-align: center;">

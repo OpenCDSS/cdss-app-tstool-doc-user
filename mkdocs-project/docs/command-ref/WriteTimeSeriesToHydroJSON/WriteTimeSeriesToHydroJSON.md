@@ -35,7 +35,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToHydroJSON TS](WriteTimeSeriesToHydroJSON_TS.png)
+![WriteTimeSeriesToHydroJSON command editor for time series parameters](WriteTimeSeriesToHydroJSON_TS.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -45,7 +45,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for station parameters.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToHydroJSON Station](WriteTimeSeriesToHydroJSON_Station.png)
+![WriteTimeSeriesToHydroJSON command editor for station parameters](WriteTimeSeriesToHydroJSON_Station.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -55,7 +55,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesToHydroJSON File](WriteTimeSeriesToHydroJSON_File.png)
+![WriteTimeSeriesToHydroJSON command editor for Output parameters](WriteTimeSeriesToHydroJSON_File.png)
 </p>**
 
 **<p style="text-align: center;">

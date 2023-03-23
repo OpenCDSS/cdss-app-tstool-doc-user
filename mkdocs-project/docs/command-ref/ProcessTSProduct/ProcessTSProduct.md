@@ -90,7 +90,7 @@ The following dialog is used to edit the `ProcessTSProduct` command and illustra
 The path to the time series product file can be absolute or relative to the working directory.
 
 **<p style="text-align: center;">
-![ProcessTSProduct](ProcessTSProduct.png)
+![ProcessTSProduct command editor for Input parameters](ProcessTSProduct.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -98,7 +98,7 @@ The path to the time series product file can be absolute or relative to the work
 </p>**
 
 **<p style="text-align: center;">
-![ProcessTSProduct-output](ProcessTSProduct-output.png)
+![ProcessTSProduct command editor for Output parameters](ProcessTSProduct-output.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -106,7 +106,7 @@ The path to the time series product file can be absolute or relative to the work
 </p>**
 
 **<p style="text-align: center;">
-![ProcessTSProduct-product](ProcessTSProduct-product.png)
+![ProcessTSProduct command editor for Output Product parameters](ProcessTSProduct-product.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -114,7 +114,7 @@ The path to the time series product file can be absolute or relative to the work
 </p>**
 
 **<p style="text-align: center;">
-![ProcessTSProduct-edit](ProcessTSProduct-edit.png)
+![ProcessTSProduct command editor for Editing parameters](ProcessTSProduct-edit.png)
 </p>**
 
 **<p style="text-align: center;">

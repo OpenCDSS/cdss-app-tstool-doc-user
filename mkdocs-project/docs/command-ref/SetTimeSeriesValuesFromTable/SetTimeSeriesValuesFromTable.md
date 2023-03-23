@@ -25,21 +25,21 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command showing time series parameters.
 
 **<p style="text-align: center;">
-![SetTimeSeriesValuesFromTable](SetTimeSeriesValuesFromTable.png)
+![SetTimeSeriesValuesFromTable command editor for Time Series parameters](SetTimeSeriesValuesFromTable.png)
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromTable` Command Editor Showing Time Series Parameters (<a href="../SetTimeSeriesValuesFromTable.png">see also the full-size image</a>)
+`SetTimeSeriesValuesFromTable` Command Editor for Time Series Parameters (<a href="../SetTimeSeriesValuesFromTable.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing table parameters.
 
 **<p style="text-align: center;">
-![SetTimeSeriesValuesFromTable_Table](SetTimeSeriesValuesFromTable_Table.png)
+![SetTimeSeriesValuesFromTable command editor for Table parmaeters](SetTimeSeriesValuesFromTable_Table.png)
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromTable` Command Editor Showing Table Parameters (<a href="../SetTimeSeriesValuesFromTable_Table.png">see also the full-size image</a>)
+`SetTimeSeriesValuesFromTable` Command Editor for Table Parameters (<a href="../SetTimeSeriesValuesFromTable_Table.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##

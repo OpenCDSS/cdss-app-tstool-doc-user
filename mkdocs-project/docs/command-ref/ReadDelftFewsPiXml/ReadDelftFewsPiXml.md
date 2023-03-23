@@ -31,7 +31,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
 **<p style="text-align: center;">
-![ReadDelftFewsPiXml](ReadDelftFewsPiXml.png)
+![ReadDelftFewsPiXml command editor for Time Series parameters](ReadDelftFewsPiXml.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -41,7 +41,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for ensemble parameters.
 
 **<p style="text-align: center;">
-![ReadDelftFewsPiXml Ensemble](ReadDelftFewsPiXml_Ensemble.png)
+![ReadDelftFewsPiXml Command editor for Ensemble parameters](ReadDelftFewsPiXml_Ensemble.png)
 </p>**
 
 **<p style="text-align: center;">

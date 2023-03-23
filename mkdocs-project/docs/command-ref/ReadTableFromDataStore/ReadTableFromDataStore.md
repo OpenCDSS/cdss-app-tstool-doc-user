@@ -101,7 +101,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 in this case reading a small table from the State of Colorado’s HydroBase.
 
 **<p style="text-align: center;">
-![ReadTableFromDataStore](ReadTableFromDataStore_Table.png)
+![ReadTableFromDataStore command editor when querying a single table or view](ReadTableFromDataStore_Table.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -111,7 +111,7 @@ in this case reading a small table from the State of Colorado’s HydroBase.
 The corresponding output table is as shown below:
 
 **<p style="text-align: center;">
-![ReadTableFromDataStore Results](ReadTableFromDataStore_Results.png)
+![ReadTableFromDataStore command output table](ReadTableFromDataStore_Results.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -123,7 +123,7 @@ in this case to read diversion records for a specific structure in the State of 
 Use `Enter` to add new lines, which will be represented by `\n` in the command parameter.
 
 **<p style="text-align: center;">
-![ReadTableFromDataStore SQL](ReadTableFromDataStore_SQL.png)
+![ReadTableFromDataStore command editor when specifying an SQL query string](ReadTableFromDataStore_SQL.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -133,7 +133,7 @@ Use `Enter` to add new lines, which will be represented by `\n` in the command p
 The following example illustrates using an SQL file:
 
 **<p style="text-align: center;">
-![ReadTableFromDataStore SQL File](ReadTableFromDataStore_SQLFile.png)
+![ReadTableFromDataStore command editor when specifying an SQL file](ReadTableFromDataStore_SQLFile.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -144,7 +144,7 @@ The following example illustrates using a database function.
 The ***Edit*** dialog will automatically populate the list of parameters if the database metadata provides such information.
 
 **<p style="text-align: center;">
-![ReadTableFromDataStore Function](ReadTableFromDataStore_Function.png)
+![ReadTableFromDataStore command editor when specifying a function](ReadTableFromDataStore_Function.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -155,7 +155,7 @@ The following example illustrates using a database procedure.
 The ***Edit*** dialog will automatically populate the list of parameters if the database metadata provides such information.
 
 **<p style="text-align: center;">
-![ReadTableFromDataStore Procedure](ReadTableFromDataStore_Procedure.png)
+![ReadTableFromDataStore command editor when specifying a procedure](ReadTableFromDataStore_Procedure.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -166,7 +166,7 @@ The following illustrates how to set properties if the result is a single row.
 This is useful when querying configuration or controlling data from the database.
 
 **<p style="text-align: center;">
-![ReadTableFromDataStore OutputProperties](ReadTableFromDataStore_OutputProperties.png)
+![ReadTableFromDataStore command editor when specifying output properties](ReadTableFromDataStore_OutputProperties.png)
 </p>**
 
 **<p style="text-align: center;">

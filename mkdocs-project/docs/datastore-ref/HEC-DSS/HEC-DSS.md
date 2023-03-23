@@ -1,8 +1,8 @@
 # TSTool / Datastore Reference / HEC-DSS #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
 
 --------------
 
@@ -12,9 +12,9 @@ HEC-DSS input type refers to the United States Army Corps of Engineers’
 Hydrologic Engineering Center (HEC) Data Storage System (DSS).
 Refer to the following web sites for more information:
 
-* [HEC Main website](https://www.hec.usace.army.mil)
-* [HEC software website](https://www.hec.usace.army.mil/software/)
-* [DSS Programmers Guide for Java](https://www.hec.usace.army.mil/confluence/dssjavaprogrammer)
+*   [HEC Main website](https://www.hec.usace.army.mil)
+*   [HEC software website](https://www.hec.usace.army.mil/software/)
+*   [DSS Programmers Guide for Java](https://www.hec.usace.army.mil/confluence/dssjavaprogrammer)
 
 ## Standard Time Series Properties ##
 

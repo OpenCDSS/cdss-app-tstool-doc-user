@@ -39,11 +39,11 @@ The following dialog is used to edit the command and illustrates the syntax for 
     and then modify to converge on an appropriate set of filters for optimal performance.
 
 **<p style="text-align: center;">
-![ReadNrcsAwdb](ReadNrcsAwdb.png)
+![ReadNrcsAwdb command editor for General parameters](ReadNrcsAwdb.png)
 </p>**
 
 **<p style="text-align: center;">
-`ReadNrcsAwdb` Command Editor for General Command Parameters (<a href="../ReadNrcsAwdb.png">see also the full-size image</a>)
+`ReadNrcsAwdb` Command Editor for General Parameters (<a href="../ReadNrcsAwdb.png">see also the full-size image</a>)
 </p>**
 
 The following figure illustrates the ***Reservoirs*** tab of the dialog.
@@ -51,7 +51,7 @@ No additional parameters are provided; however, the notes explain that reservoir
 available only from the BOR network and appropriate network element codes must be selected.
 
 **<p style="text-align: center;">
-![ReadNrcsAwdb_Reservoir](ReadNrcsAwdb_Reservoir.png)
+![ReadNrcsAwdb_Reservoir command editor for reservoir query parameters](ReadNrcsAwdb_Reservoir.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -65,7 +65,7 @@ the `ReadForecast` parameter is provided to specifically indicate that a forecas
 The forecast is uniquely identified by the forecast period and publication date (typically the first day of a month).
 
 **<p style="text-align: center;">
-![ReadNrcsAwdb_Forecast](ReadNrcsAwdb_Forecast.png)
+![ReadNrcsAwdb_Forecast command editor for forecast query parameters](ReadNrcsAwdb_Forecast.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -77,7 +77,7 @@ includes all the relevant information about the forecast.
 Use table processing commands to filter the table for a specific station and publication date.
 
 **<p style="text-align: center;">
-![ReadNrcsAwdb_ForecastTable](ReadNrcsAwdb_ForecastTable.png)
+![ReadNrcsAwdb command output forecast table](ReadNrcsAwdb_ForecastTable.png)
 </p>**
 
 **<p style="text-align: center;">

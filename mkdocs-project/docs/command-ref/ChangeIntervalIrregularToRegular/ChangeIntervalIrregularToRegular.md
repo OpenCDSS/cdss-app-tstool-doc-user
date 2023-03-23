@@ -72,7 +72,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax for the command.
 
 **<p style="text-align: center;">
-![ChangeIntervalIrregularToRegular](ChangeIntervalIrregularToRegular.png)
+![ChangeIntervalIrregularToRegular command editor for Input parameters](ChangeIntervalIrregularToRegular.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -80,7 +80,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-![ChangeIntervalIrregularToRegular_AnalysisLarger](ChangeIntervalIrregularToRegular_AnalysisLarger.png)
+![ChangeIntervalIrregularToRegular command editor for Analysis to larger Parameters](ChangeIntervalIrregularToRegular_AnalysisLarger.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -88,7 +88,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-![ChangeIntervalIrregularToRegular_AnalysisSmaller](ChangeIntervalIrregularToRegular_AnalysisSmaller.png)
+![ChangeIntervalIrregularToRegular command editor for analysis to smaller parameters](ChangeIntervalIrregularToRegular_AnalysisSmaller.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -96,7 +96,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-![ChangeIntervalIrregularToRegular_Output](ChangeIntervalIrregularToRegular_Output.png)
+![ChangeIntervalIrregularToRegular command editor for output parameters](ChangeIntervalIrregularToRegular_Output.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -104,7 +104,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-![ChangeIntervalIrregularToRegular_EnsOutput](ChangeIntervalIrregularToRegular_EnsOutput.png)
+![ChangeIntervalIrregularToRegular command editor for ensemble output parameters](ChangeIntervalIrregularToRegular_EnsOutput.png)
 </p>**
 
 **<p style="text-align: center;">

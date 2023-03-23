@@ -75,7 +75,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for input template parameters.
 
 **<p style="text-align: center;">
-![ExpandTemplateFile](ExpandTemplateFile.png)
+![ExpandTemplateFile command editor for Input Template parameters](ExpandTemplateFile.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -85,7 +85,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for input property parameters.
 
 **<p style="text-align: center;">
-![ExpandTemplateFile Properties](ExpandTemplateFile_Properties.png)
+![ExpandTemplateFile command editor for Input Property parameters](ExpandTemplateFile_Properties.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -95,7 +95,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for table input property parameters.
 
 **<p style="text-align: center;">
-![ExpandTemplateFile Properties](ExpandTemplateFile_TableProperties.png)
+![ExpandTemplateFile command editor for Table Input Property parameters](ExpandTemplateFile_TableProperties.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -105,7 +105,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for expanded output parameters.
 
 **<p style="text-align: center;">
-![ExpandTemplateFile Out](ExpandTemplateFile_Out.png)
+![ExpandTemplateFile command editor for Expanded Output parameters](ExpandTemplateFile_Out.png)
 </p>**
 
 **<p style="text-align: center;">

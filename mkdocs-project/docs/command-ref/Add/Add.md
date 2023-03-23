@@ -34,7 +34,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![Add](Add.png)
+![Add command editor](Add.png)
 </p>**
 
 **<p style="text-align: center;">

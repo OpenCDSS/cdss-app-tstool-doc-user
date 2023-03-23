@@ -57,7 +57,7 @@ Additional guidelines for handling ensembles include:
 See the following figure for examples of TSTool time series results when reading RDF ensembles.
 
 **<p style="text-align: center;">
-![ReadRiverWare_RDF_TimeSeries](ReadRiverWare_RDF_TimeSeries.png)
+![ReadRiverWare ensemble time series results](ReadRiverWare_RDF_TimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -67,7 +67,7 @@ See the following figure for examples of TSTool time series results when reading
 See the following figure for examples of TSTool ensemble results when reading RDF ensembles.
 
 **<p style="text-align: center;">
-![ReadRiverWare_RDF_Ensembles](ReadRiverWare_RDF_Ensembles.png)
+![ReadRiverWare ensemble results
 </p>**
 
 **<p style="text-align: center;">
@@ -83,7 +83,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax for a single time series `*.dat` file:
 
 **<p style="text-align: center;">
-![ReadRiverWare](ReadRiverWare.png)
+![ReadRiverWare command editor](ReadRiverWare.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -93,7 +93,7 @@ The following dialog is used to edit the command and illustrates the command syn
 The following dialog is used to edit the command and illustrates the command syntax for an RDF file:
 
 **<p style="text-align: center;">
-![ReadRiverWare_RDF](ReadRiverWare_RDF.png)
+![ReadRiverWare command editor for RDF](ReadRiverWare_RDF.png)
 </p>**
 
 **<p style="text-align: center;">

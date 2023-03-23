@@ -60,7 +60,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
 
 **<p style="text-align: center;">
-![RunProgram](RunProgram.png)
+![RunProgram command editor for full command line](RunProgram.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -70,7 +70,7 @@ The following dialog is used to edit the command and illustrates the command syn
 The following dialog is used to edit the command and illustrates the command syntax when specifying the command line in parts.
 
 **<p style="text-align: center;">
-![RunProgram Parts](RunProgram_Parts.png)
+![RunProgram command editor for command line parts](RunProgram_Parts.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -80,63 +80,63 @@ The following dialog is used to edit the command and illustrates the command syn
 The following dialog is used to edit the command and illustrates the command syntax when using a command shell.
 
 **<p style="text-align: center;">
-![RunProgram Shell](RunProgram_Shell.png)
+![RunProgram command editor for command shell parameters](RunProgram_Shell.png)
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor showing Command Shell Parameters (<a href="../RunProgram_Shell.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Command Shell Parameters (<a href="../RunProgram_Shell.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying additional environment variables.
 The variables are defined in addition to the parent (TSTool) process environment.
 
 **<p style="text-align: center;">
-![RunProgram Environment](RunProgram_Environment.png)
+![RunProgram command editor for environment variable parameters](RunProgram_Environment.png)
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor showing Command Environment Variable Parameters (<a href="../RunProgram_Environment.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Command Environment Variable Parameters (<a href="../RunProgram_Environment.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying timeout parameters.
 
 **<p style="text-align: center;">
-![RunProgram Timeout](RunProgram_Timeout.png)
+![RunProgram command editor for timeout parameters](RunProgram_Timeout.png)
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor showing Timeout Parameters (<a href="../RunProgram_Timeout.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Timeout Parameters (<a href="../RunProgram_Timeout.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying exit code parameters.
 
 **<p style="text-align: center;">
-![RunProgram Exit Code](RunProgram_ExitStatusIndicator.png)
+![RunProgram command editor for exit code parameters](RunProgram_ExitStatusIndicator.png)
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor showing Exit Code Parameters (<a href="../RunProgram_ExitStatusIndicator.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Exit Code Parameters (<a href="../RunProgram_ExitStatusIndicator.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying output files for
 standard output and standard error.
 
 **<p style="text-align: center;">
-![RunProgram Output Files](RunProgram_OutputFiles.png)
+![RunProgram command editor for output file parameters](RunProgram_OutputFiles.png)
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor showing Output File Parameters (<a href="../RunProgram_OutputFiles.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Output File Parameters (<a href="../RunProgram_OutputFiles.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying output check parameters.
 
 **<p style="text-align: center;">
-![RunProgram Exit Code](RunProgram_OutputChecks.png)
+![RunProgram command editor for output check parameters](RunProgram_OutputChecks.png)
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor showing Output Check Parameters (<a href="../RunProgram_OutputChecks.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Output Check Parameters (<a href="../RunProgram_OutputChecks.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##

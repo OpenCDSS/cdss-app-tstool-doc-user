@@ -120,7 +120,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for diversion comment parameters.
 
 **<p style="text-align: center;">
-![FillUsingDiversionComments](FillUsingDiversionComments.png)
+![FillUsingDiversionComments command editor for Diversion Comment parameters](FillUsingDiversionComments.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -130,7 +130,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for CIU parameters.
 
 **<p style="text-align: center;">
-![FillUsingDiversionComments_CIU](FillUsingDiversionComments_CIU.png)
+![FillUsingDiversionComments command editor for currently in use parameters](FillUsingDiversionComments_CIU.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -193,7 +193,7 @@ It may be necessary to change the graph properties to display the
 data labels above the point in order to see labels at the bottom of the graph.
 
 **<p style="text-align: center;">
-![FillUsingDiversionComments_Graph](FillUsingDiversionComments_Graph.png)
+![Example graph showing fill flag for zero values](FillUsingDiversionComments_Graph.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -203,7 +203,7 @@ Example Graph Showing Fill Flag (D labels indicate additional zero values) (<a h
 The following figure illustrates how data flags can be displayed in the table view.
 
 **<p style="text-align: center;">
-![FillUsingDiversionComments_Table](FillUsingDiversionComments_Table.png)
+![Example table showing fill flags ](FillUsingDiversionComments_Table.png)
 </p>**
 
 **<p style="text-align: center;">

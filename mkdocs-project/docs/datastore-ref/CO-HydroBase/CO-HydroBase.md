@@ -1,24 +1,24 @@
 # TSTool / Datastore Reference / Colorado HydroBase #
 
 *   [Overview](#overview)
-    + [Installing HydroBase](#installing-hydrobase)
-    + [Database Contents](#database-contents)
-    + [Database Connections](#database-connections)
-    + [Versioning](#versioning)
+    +   [Installing HydroBase](#installing-hydrobase)
+    +   [Database Contents](#database-contents)
+    +   [Database Connections](#database-connections)
+    +   [Versioning](#versioning)
 *   [Standard Time Series Properties](#standard-time-series-properties)
 *   [Limitations](#limitations)
 *   [Datastore Configuration File](#datastore-configuration-file)
 *   [Troubleshooting](#troubleshooting)
 *   [Available Time Series by Data Type Categories](#available-time-series-by-data-type-categories)
-    + [Agricultural Crop and Livestock Data](#agricultural-crop-and-livestock-data)
-    + [Climate Data](#climate-data)
-    + [Demographic Data](#demographic-data)
-    + [Diversion Data](#diversion-data)
-    + [Hardware Data](#hardware-data)
-    + [Reservoir Data](#reservoir-data)
-    + [Stream Data](#stream-data)
-    + [Water Information Sheet Data](#water-information-sheet-data)
-    + [Well Data](#well-data)
+    +   [Agricultural Crop and Livestock Data](#agricultural-crop-and-livestock-data)
+    +   [Climate Data](#climate-data)
+    +   [Demographic Data](#demographic-data)
+    +   [Diversion Data](#diversion-data)
+    +   [Hardware Data](#hardware-data)
+    +   [Reservoir Data](#reservoir-data)
+    +   [Stream Data](#stream-data)
+    +   [Water Information Sheet Data](#water-information-sheet-data)
+    +   [Well Data](#well-data)
 *   [Database Views](#database-views)
 *   [Database Stored Procedures](#database-stored-procedures)
 
@@ -420,12 +420,16 @@ Connection is busy with results for another command
 In this case it is necessary to edit the registry with the `regedit` program as follows solved the problem.
 Search for the ODBC name that was assigned to find the registry settings to edit.
 An attempt was made to determine how to set the property in the connection URL but no documentation could be found.
-See the following for background.  <a href="../mars-regedit.png">See also the full-size image.</a>
+See the following for background.
 
 * [ODBC (SQL Server): How do I turn on Multiple Active Result Sets(MARS) for a System DSN?](https://serverfault.com/questions/302169/odbc-sql-server-how-do-i-turn-on-multiple-active-result-setsmars-for-a-syst)
 
 **<p style="text-align: center;">
 ![mars-regedit](mars-regedit.png)
+</p>**
+
+**<p style="text-align: center;">
+Registry Editor (<a href="../mars-regedit.png">see also the full-size image</a>)
 </p>**
 
 ### HydroBase Datastore Using HBGuest Account and Generic Database Datastore ###

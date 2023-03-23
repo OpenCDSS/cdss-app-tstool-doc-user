@@ -61,7 +61,7 @@ date/time from the values in the old intervals prior to this date/time.
 The following illustrates the conversion from NHour to NHour (1Hour to 3Hour example):
 
 **<p style="text-align: center;">
-![ChangeInterval-small-ACCM-to-large-ACCM](ChangeInterval-small-ACCM-to-large-ACCM.png)
+![ChangeInterval small accumulation to large accumulation](ChangeInterval-small-ACCM-to-large-ACCM.png)
 </p>**
 
 #### Large Interval ACCM to Small Interval ACCM ####
@@ -73,7 +73,7 @@ prior to this date/time in the new time series since the previous non-missing da
 The following illustrates the conversion from NHour to NHour (3Hour to 1Hour example):
 
 **<p style="text-align: center;">
-![ChangeInterval-large-ACCM-to-small-ACCM](ChangeInterval-large-ACCM-to-small-ACCM.png)
+![ChangeInterval large accumulation to small accumulation](ChangeInterval-large-ACCM-to-small-ACCM.png)
 </p>**
 
 #### Small Interval MEAN or INST to Large Interval MEAN ####
@@ -85,7 +85,7 @@ from the values in the old intervals prior to this date/time.
 The following illustrates the conversion from NHour to NHour (1Hour to 3Hour example):
 
 **<p style="text-align: center;">
-![ChangeInterval-small-MEAN-or-INST-to-large-MEAN](ChangeInterval-small-MEAN-or-INST-to-large-MEAN.png)
+![ChangeInterval small MEAN or instantaneous to large MEAN](ChangeInterval-small-MEAN-or-INST-to-large-MEAN.png)
 </p>**
 
 #### Large Interval MEAN or INST to Small Interval MEAN ####
@@ -96,7 +96,7 @@ values from the old time series are copied to the new interval-ending date/time 
 The following illustrates the conversion from NHour to NHour (3Hour to 1Hour example):
 
 **<p style="text-align: center;">
-![ChangeInterval-large-MEAN-or-INST-to-small-MEAN](ChangeInterval-large-MEAN-or-INST-to-small-MEAN.png)
+![ChangeInterval large MEAN or instantaneous to small MEAN](ChangeInterval-large-MEAN-or-INST-to-small-MEAN.png)
 </p>**
 
 #### Small Interval INST to Large Interval INST ####
@@ -108,7 +108,7 @@ If the data is missing, the most recent previous valid data is used.
 The following illustrates the conversion from NHour to NHour (1Hour to 3Hour example):
 
 **<p style="text-align: center;">
-![ChangeInterval-small-INST-to-large-INST](ChangeInterval-small-INST-to-large-INST.png)
+![ChangeInterval small instantaneous to large instantaneous](ChangeInterval-small-INST-to-large-INST.png)
 </p>**
 
 #### Large Interval INST to Small Interval INST ####
@@ -119,7 +119,7 @@ values from the old time series are linearly interpolated to calculate values fo
 The following illustrates the conversion from NHour to NHour (3Hour to 1Hour example):
 
 **<p style="text-align: center;">
-![ChangeInterval-large-INST-to-small-INST](ChangeInterval-large-INST-to-small-INST.png)
+![ChangeInterval large instantaneous to small instantaneous](ChangeInterval-large-INST-to-small-INST.png)
 </p>**
 
 ### Regular Time Series to Regular Time Series ###
@@ -142,13 +142,13 @@ In the following examples, the general representation is shown first, followed b
 The following illustrates the conversion from NHour to Day (6Hour to Day example, i equals the hour multiplier):
 
 **<p style="text-align: center;">
-![ChangeInterval-small-ACCM-to-large-ACCM2](ChangeInterval-small-ACCM-to-large-ACCM2.png)
+![ChangeInterval small 6 hour accumulation to large day accumulation](ChangeInterval-small-ACCM-to-large-ACCM2.png)
 </p>**
 
 The following illustrates the conversion from NDay to Month (example for a month with 30 days):
 
 **<p style="text-align: center;">
-![ChangeInterval-small-ACCM-to-large-ACCM3](ChangeInterval-small-ACCM-to-large-ACCM3.png)
+![ChangeInterval small day accumulation to large month accumulation](ChangeInterval-small-ACCM-to-large-ACCM3.png)
 </p>**
 
 ##### Large Interval ACCM (Accumulation) to Small Interval ACCM (Accumulation) #####
@@ -159,7 +159,7 @@ dividing each accumulated value by the number of new values for that same period
 The following illustrates the conversion from Day to 6Hour (Day to 6Hour example, i equals the hour multiplier):
 
 **<p style="text-align: center;">
-![ChangeInterval-large-ACCM-to-small-ACCM2](ChangeInterval-large-ACCM-to-small-ACCM2.png)
+![ChangeInterval large day accumulation to small 6 hour accumulation](ChangeInterval-large-ACCM-to-small-ACCM2.png)
 </p>**
 
 #### ACCM (Accumulation) to INST (Instantaneous) ####
@@ -180,7 +180,7 @@ involves copying the data from the old time series to the new time series (no ch
 The following illustrates the conversion from 6Hour to 6Hour (6Hour to 6Hour example, i equals the hour multiplier):
 
 **<p style="text-align: center;">
-![ChangeInterval-ACCM-to-same-ACCM](ChangeInterval-ACCM-to-same-MEAN.png)
+![ChangeInterval accumulation to same accumulation](ChangeInterval-ACCM-to-same-MEAN.png)
 </p>**
 
 ##### Large Interval ACCM to Small Interval MEAN #####
@@ -210,7 +210,7 @@ additionally the `AllowMissingCount` parameter is recognized to control computat
 The following illustrates the conversion from NHour to Day (6Hour to Day example where `HandleMissingInputHow=Repeat`, i equals the hour multiplier):
 
 **<p style="text-align: center;">
-![ChangeInterval-small-INST-to-large-INST2](ChangeInterval-small-INST-to-large-INST2.png)
+![ChangeInterval small 6 hour instantaneous to large day instantaneous](ChangeInterval-small-INST-to-large-INST2.png)
 </p>**
 
 ##### Large Interval INST (Instantaneous) to Small Interval INST (Instantaneous) #####
@@ -224,7 +224,7 @@ the method specified by the user in the `HandleMissingInputHow` parameter is use
 The following illustrates the conversion from Day to NHour (Day to 6Hour example, *i* equals the hour multiplier):
 
 **<p style="text-align: center;">
-![ChangeInterval-large-INST-to-small-INST2](ChangeInterval-large-INST-to-small-INST2.png)
+![ChangeInterval large day instantaneous to small 6 hour instantaneous](ChangeInterval-large-INST-to-small-INST2.png)
 </p>**
 
 These values are an interpolated value between the Day 1 instantaneous
@@ -254,14 +254,14 @@ The following illustrates the conversion from NHour to Day
 (6Hour to Day example with `HandleEndpointHow=IncludeFirstOnly`, *i* equals the hour multiplier):
 
 **<p style="text-align: center;">
-![ChangeInterval-small-INST-to-large-MEAN](ChangeInterval-small-INST-to-large-MEAN.png)
+![ChangeInterval small instantaneous to large MEAN](ChangeInterval-small-INST-to-large-MEAN.png)
 </p>**
 
 The following illustrates the conversion from NHour to Day (6Hour to Day example with
 `HandleEndpointHow=AverageEndpoints`, *i* equals the hour multiplier):
 
 **<p style="text-align: center;">
-![ChangeInterval-small-INST-to-large-MEAN2](ChangeInterval-small-INST-to-large-MEAN2.png)
+![ChangeInterval small 6 hour instantaneous to large day MEAN with average endpoints](ChangeInterval-small-INST-to-large-MEAN2.png)
 </p>**
 
 ##### Interval INST (Instantaneous) to Same Interval MEAN #####
@@ -273,7 +273,7 @@ The following illustrates the conversion from 6Hour to 6Hour
 (6Hour to 6Hour example with `OutputFillMethod=Repeat`, *i* equals the hour multiplier):
 
 **<p style="text-align: center;">
-![ChangeInterval-INST-to-same-MEAN](ChangeInterval-INST-to-same-MEAN.png)
+![ChangeInterval instantaneous to same MEAN](ChangeInterval-INST-to-same-MEAN.png)
 </p>**
 
 ##### Large Interval INST (Instantaneous) to Small Interval MEAN #####
@@ -286,7 +286,7 @@ The following illustrates the conversion from Day to 6Hour (Day to 6Hour example
 with `OutputFillMethod=Repeat`, i equals the hour multiplier):
 
 **<p style="text-align: center;">
-![ChangeInterval-large-INST-to-small-MEAN](ChangeInterval-large-INST-to-small-MEAN.png)
+![ChangeInterval large instantaneous to small MEAN](ChangeInterval-large-INST-to-small-MEAN.png)
 </p>**
 
 Each of these values is equal to the instantaneous value for that day.
@@ -305,7 +305,7 @@ copying values from the old time series into the new time series for that same p
 The following illustrates the conversion from Month to Day (Example for a month with 30):
 
 **<p style="text-align: center;">
-![ChangeInterval-large-MEAN-to-small-MEAN](ChangeInterval-large-MEAN-to-small-MEAN.png)
+![ChangeInterval large MEAN to small MEAN](ChangeInterval-large-MEAN-to-small-MEAN.png)
 </p>**
 
 #### MEAN to ACCM (Accumulation) ####
@@ -344,7 +344,7 @@ A general representation is shown first followed by an example.
 The following illustrates the conversion from Day to NHour (Day to 6Hour example, i equals the hour multiplier):
 
 **<p style="text-align: center;">
-![ChangeInterval-large-MEAN-to-small-INST](ChangeInterval-large-MEAN-to-small-INST.png)
+![ChangeInterval large MEAN to small instantaneous](ChangeInterval-large-MEAN-to-small-INST.png)
 </p>**
 
 In computing instantaneous values, the volume of the original mean time series needs to be maintained.
@@ -361,11 +361,11 @@ The following paragraphs describe how the initial instantaneous time series valu
 Prior to converting from a large interval mean to small interval instantaneous,
 special cases are handled associated with missing data:
 
-* Missing data is initially converted using the method specified by the user in the `HandleMissingInputHow` parameter.
-* If the current input value is still missing, the instantaneous time series is
-also filled with missing data for each interval that falls in the larger interval.
-* If the previous or next mean values are missing, the current mean value
-for that interval is copied directly to the instantaneous time series.
+*   Missing data is initially converted using the method specified by the user in the `HandleMissingInputHow` parameter.
+*   If the current input value is still missing, the instantaneous time series is
+    also filled with missing data for each interval that falls in the larger interval.
+*   If the previous or next mean values are missing, the current mean value
+    for that interval is copied directly to the instantaneous time series.
 
 The output instantaneous values for each input interval are computed using the current, next, and previous mean values.
 All three values are useful because together they indicate whether the current
@@ -373,43 +373,43 @@ value is part of a continuous rise or fall, a peak or trough or simply a continu
 These conditions are illustrated in the following figure.
 
 **<p style="text-align: center;">
-![ChangeInterval_SQMEPic](ChangeInterval_SQMEPic.png)
+![ChangeInterval mean data illustration](ChangeInterval_SQMEPic.png)
 </p>**
 
 **<p style="text-align: center;">
 Mean data illustration
 </p>**
 
-* The first condition that may exist is a peak or trough.
-A peak exists when the current value is greater than the previous and next values.
-A trough is when the current value is less than the next and previous values.
-	1. In this case, an instantaneous peak (or trough) is calculated.
-	Referring to the above illustration, the magnitude of the peak is
-	calculated by adding (or subtracting for a trough) *1/4 x (a+b)/2* to the current mean.
-	2. The time of the instantaneous peak is initially set to the start date/time
-	of the current interval then shifted forward in time using the following calculation.
-	The number of instantaneous intervals per larger interval is multiplied by *b/(a+b)*.
-	That result is added to the start date/time.
-	The time of the instantaneous peak will not necessarily correspond to the output interval.
-	3. The value for the starting endpoint of the interval is set to the current value minus *1/4 a*.
-	4. The value for the ending endpoint of the interval is set to the current value minus *1/4 b*.
-	5. The remaining intermediate instantaneous values for the interval are
-	linearly interpolated between the peak (or trough) and both endpoints.
-* The second condition that may exist is a continuous rise or fall.
-A continuous rise or fall exists when the current value is between the previous and next values.
-	1. In the case of a continuous rise, the starting endpoint of the interval is set to the current value minus *1/4 c* (again using the above illustration).
-	In the case of a continuous fall, *1/4 c* is added to the current value.
-	2. The ending endpoint of the interval of a continuous rise is set to the current value plus *1/4 c* (minus *1/4 c* for a continuous fall)
-	3. The remaining intermediate instantaneous values are calculated based on the following.
-		1. The difference between the starting and ending endpoints is computed.
-		2. The values *c* and *a* are calculated.
-		The ratio of mean differences is computed: If *c > a*, the mean *ratio = c / a*. If *a > c*, the mean *ratio = a / c*.
-		3. If *c* is less than *a*, then the intermediate instantaneous values are computed by adding
-		small but increasing increments to the starting endpoint until the last point of the interval is reached.
-		If *a* is less than *c* then the output values are computed by subtracting small
-		but increasing increments to the last endpoint until the first point of the interval is reached.
-		For intermediate interval n from the appropriate endpoint:
-		*Incrementn = (1/([number intervals] – n) * [endpoint difference] * [mean ratio])*
+*   The first condition that may exist is a peak or trough.
+    A peak exists when the current value is greater than the previous and next values.
+    A trough is when the current value is less than the next and previous values.
+    1.  In this case, an instantaneous peak (or trough) is calculated.
+        Referring to the above illustration, the magnitude of the peak is
+        calculated by adding (or subtracting for a trough) *1/4 x (a+b)/2* to the current mean.
+    2.  The time of the instantaneous peak is initially set to the start date/time
+        of the current interval then shifted forward in time using the following calculation.
+        The number of instantaneous intervals per larger interval is multiplied by *b/(a+b)*.
+        That result is added to the start date/time.
+        The time of the instantaneous peak will not necessarily correspond to the output interval.
+    3.  The value for the starting endpoint of the interval is set to the current value minus *1/4 a*.
+    4.  The value for the ending endpoint of the interval is set to the current value minus *1/4 b*.
+    5.  The remaining intermediate instantaneous values for the interval are
+        linearly interpolated between the peak (or trough) and both endpoints.
+*   The second condition that may exist is a continuous rise or fall.
+    A continuous rise or fall exists when the current value is between the previous and next values.
+    1.  In the case of a continuous rise, the starting endpoint of the interval is set to the current value minus *1/4 c* (again using the above illustration).
+        In the case of a continuous fall, *1/4 c* is added to the current value.
+    2.  The ending endpoint of the interval of a continuous rise is set to the current value plus *1/4 c* (minus *1/4 c* for a continuous fall)
+    3.  The remaining intermediate instantaneous values are calculated based on the following.
+        1.  The difference between the starting and ending endpoints is computed.
+        2.  The values *c* and *a* are calculated.
+            The ratio of mean differences is computed: If *c > a*, the mean *ratio = c / a*. If *a > c*, the mean *ratio = a / c*.
+        3.  If *c* is less than *a*, then the intermediate instantaneous values are computed by adding
+            small but increasing increments to the starting endpoint until the last point of the interval is reached.
+            If *a* is less than *c* then the output values are computed by subtracting small
+            but increasing increments to the last endpoint until the first point of the interval is reached.
+            For intermediate interval n from the appropriate endpoint:
+            *Incrementn = (1/([number intervals] – n) * [endpoint difference] * [mean ratio])*
 
 ### Instantaneous Time Series Volume Adjustment ###
 
@@ -447,7 +447,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 This example is converting a monthly volume time series to annual water year (October to September) volumes.
 
 **<p style="text-align: center;">
-![ChangeInterval](ChangeInterval.png)
+![ChangeInterval command editor](ChangeInterval.png)
 </p>**
 
 **<p style="text-align: center;">

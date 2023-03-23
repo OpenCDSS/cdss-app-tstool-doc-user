@@ -33,7 +33,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![ReadPropertiesFromExcel](ReadPropertiesFromExcel.png)
+![ReadPropertiesFromExcel command editor for Excel parameters](ReadPropertiesFromExcel.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -43,7 +43,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel to properties map.
 
 **<p style="text-align: center;">
-![ReadPropertiesFromExcel Map](ReadPropertiesFromExcel_Map.png)
+![ReadPropertiesFromExcel command editor for Excel to properties map parameters](ReadPropertiesFromExcel_Map.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -53,7 +53,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for properties parameters.
 
 **<p style="text-align: center;">
-![ReadPropertiesFromExcel Properties](ReadPropertiesFromExcel_Properties.png)
+![ReadPropertiesFromExcel for Properties parameters](ReadPropertiesFromExcel_Properties.png)
 </p>**
 
 **<p style="text-align: center;">

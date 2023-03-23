@@ -28,7 +28,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![CloseExcelWorkbook](CloseExcelWorkbook.png)
+![CloseExcelWorkbook command editor](CloseExcelWorkbook.png)
 </p>**
 
 **<p style="text-align: center;">

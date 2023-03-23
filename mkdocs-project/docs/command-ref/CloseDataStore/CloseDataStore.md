@@ -32,7 +32,7 @@ menu as shown in the following figure (the Status ***Message*** column on the fa
 not visible in the figure, provides additional information about the datastore):
 
 **<p style="text-align: center;">
-![View_Datastores](View_Datastores.png)
+![Datastore information from View Datastores menu](View_Datastores.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -48,7 +48,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![CloseDataStore](CloseDataStore.png)
+![CloseDataStore command editor](CloseDataStore.png)
 </p>**
 
 **<p style="text-align: center;">

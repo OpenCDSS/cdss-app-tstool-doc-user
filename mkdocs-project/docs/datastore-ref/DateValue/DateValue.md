@@ -2,11 +2,11 @@
 
 The DateValue time series file format can be used to store one or more time series of consistent time interval.
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [Format Versions](#format-versions)
-* [Examples](#examples)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [Format Versions](#format-versions)
+*   [Examples](#examples)
 
 ------
 
@@ -15,31 +15,31 @@ The DateValue time series file format can be used to store one or more time seri
 The DateValue format has been developed to facilitate data management and processing with the TSTool software.
 The example below shows the format of the file.  Important comments about the file format are:
 
-* The file is divided into a header section with time series properties (top) and data section (bottom).
-Comments can occur anywhere in the file and are lines that start with `#`.
-* The default delimiter between property columns and data columns is a space.
-Use the `Delimiter` property to reset the delimiter (e.g., to a tab).
-Adjacent delimiters WILL NOT be merged into one column; consequently,
-do not use extra delimiters (i.e., whitespace) to format output.
-* If not specified, many of the header properties will be set to reasonable
-defaults as data are read by software such as TSTool.
-However, as much information as possible should be specified to allow complete time series handling.
-Header information is displayed by applications like TSTool to allow selection of time series before the data section is read.
-* If multiple irregular interval time series are stored in the file,
-non-overlapping date/times will result in blanks rather than the missing value
-indicator (missing value indicators indicate actual values in the irregular time series;
-“missing” values are allowed to have data flags, whereas “no value” are represented as blanks).  
-* Property names are case-independent.
-* The `TSID`, `Start`, `End`, and `Units` properties are important for basic time series handling.
-    + The interval part of the `TSID` is used to determine how memory should be allocated for data.
-    + The `Start` and `End` values are used to allocate memory for regular interval time series.
-    Dates associated with data values are used to allocate memory for irregular interval time series.
-    + For regular interval time series, if data lines between the start and end dates are omitted,
-    the unspecified values are set to the missing data value for the time series.
-    + The `Units` indicates data units and is used to determine the precision
-    (number of digits after the decimal point) for output.
-    The precision determined from units can be overridden in command parameters
-    if the precision from units is not acceptable.
+*   The file is divided into a header section with time series properties (top) and data section (bottom).
+    Comments can occur anywhere in the file and are lines that start with `#`.
+*   The default delimiter between property columns and data columns is a space.
+    Use the `Delimiter` property to reset the delimiter (e.g., to a tab).
+    Adjacent delimiters WILL NOT be merged into one column; consequently,
+    do not use extra delimiters (i.e., whitespace) to format output.
+*   If not specified, many of the header properties will be set to reasonable
+    defaults as data are read by software such as TSTool.
+    However, as much information as possible should be specified to allow complete time series handling.
+    Header information is displayed by applications like TSTool to allow selection of time series before the data section is read.
+*   If multiple irregular interval time series are stored in the file,
+    non-overlapping date/times will result in blanks rather than the missing value
+    indicator (missing value indicators indicate actual values in the irregular time series;
+    “missing” values are allowed to have data flags, whereas “no value” are represented as blanks).  
+*   Property names are case-independent.
+*   The `TSID`, `Start`, `End`, and `Units` properties are important for basic time series handling.
+    +   The interval part of the `TSID` is used to determine how memory should be allocated for data.
+    +   The `Start` and `End` values are used to allocate memory for regular interval time series.
+        Dates associated with data values are used to allocate memory for irregular interval time series.
+    +   For regular interval time series, if data lines between the start and end dates are omitted,
+        the unspecified values are set to the missing data value for the time series.
+    +   The `Units` indicates data units and is used to determine the precision
+        (number of digits after the decimal point) for output.
+        The precision determined from units can be overridden in command parameters
+        if the precision from units is not acceptable.
 
 ```
 # DateValueTS 1.5 file
@@ -139,28 +139,28 @@ The data source typically agrees with that determined from a data-supplying agen
 
 DateValue files have the following limitations:
 
-* The header information in DateValue files may be too technical for some general tools.
-However, simple delimited files require additional information for TSTool
-to properly handle the data as time series with properties.
-Spreadsheets can import DateValue files easily by ignoring the header lines.
-* Because date/time values are included on every data line,
-processing DateValue time series files requires more disk space and processing time.
-However, using the dates on each line also allows gaps in data to be omitted from the file.
-Inclusion of the date/times for each data point is considered a reasonable
-trade-off to ensure data quality and readability.
-Many other time series file formats also include the date/time on each line.
+*   The header information in DateValue files may be too technical for some general tools.
+    However, simple delimited files require additional information for TSTool
+    to properly handle the data as time series with properties.
+    Spreadsheets can import DateValue files easily by ignoring the header lines.
+*   Because date/time values are included on every data line,
+    processing DateValue time series files requires more disk space and processing time.
+    However, using the dates on each line also allows gaps in data to be omitted from the file.
+    Inclusion of the date/times for each data point is considered a reasonable
+    trade-off to ensure data quality and readability.
+    Many other time series file formats also include the date/time on each line.
 
 ## Format Versions ##
 
 DateValue file format versions have changed as follows:
 
-* 1.6 – add support for time series properties and data flag descriptions.
-String, integer, date, and floating point number properties are supported and in the future other object types may be supported.
-* 1.5 – change ensemble trace time series to use string SequenceID (surround
-identifiers with double quotes and use blank for missing) rather than previous
-integer SequenceNum (does not surround values with quotes, uses `-1` for missing)
-* 1.4 – treat consecutive delimiters as separate data fields
-* 1.3 – treated consecutive delimiters as one delimiter
+*   1.6 – add support for time series properties and data flag descriptions.
+    String, integer, date, and floating point number properties are supported and in the future other object types may be supported.
+*   1.5 – change ensemble trace time series to use string `SequenceID`
+    (surround identifiers with double quotes and use blank for missing) rather than previous
+    integer SequenceNum (does not surround values with quotes, uses `-1` for missing)
+*   1.4 – treat consecutive delimiters as separate data fields
+*   1.3 – treated consecutive delimiters as one delimiter
 
 ## Examples ##
 

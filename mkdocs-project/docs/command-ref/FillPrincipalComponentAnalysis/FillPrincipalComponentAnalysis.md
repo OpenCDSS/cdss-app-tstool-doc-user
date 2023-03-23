@@ -27,7 +27,7 @@ In general these principal components allow discerning between important data an
 Missing data in the dependent time series can be predicted using PCA results.
 
 **<p style="text-align: center;">
-![PCA-equation](PCA-equation.png)
+![PCA equation](PCA-equation.png)
 </p>**
 
 The command is typically edited as follows:
@@ -52,7 +52,7 @@ The command is typically edited as follows:
 The following dialog is used to create and utilize principal component analysis.
 
 **<p style="text-align: center;">
-![PCA-tool](PCA-tool.png)
+![PCA tools](PCA-tool.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -68,7 +68,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command.
 
 **<p style="text-align: center;">
-![FillPrincipalComponentAnalysis](FillPrincipalComponentAnalysis.png)
+![FillPrincipalComponentAnalysis command editor](FillPrincipalComponentAnalysis.png)
 </p>**
 
 **<p style="text-align: center;">

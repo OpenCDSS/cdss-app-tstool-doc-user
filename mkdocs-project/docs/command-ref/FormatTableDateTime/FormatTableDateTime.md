@@ -52,41 +52,41 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command, showing input parameters.
 
 **<p style="text-align: center;">
-![FormatTableDateTime](FormatTableDateTime.png)
+![FormatTableDateTime command editor for Input parameters](FormatTableDateTime.png)
 </p>**
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor Showing Input Parameters (<a href="../FormatTableDateTime.png">see also the full-size image</a>)
+`FormatTableDateTime` Command Editor for Input Parameters (<a href="../FormatTableDateTime.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing time increment parameters.
 
 **<p style="text-align: center;">
-![FormatTableDateTime](FormatTableDateTime_Increment.png)
+![FormatTableDateTime command editor for Increment parameters](FormatTableDateTime_Increment.png)
 </p>**
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor Showing Increment Parameters (<a href="../FormatTableDateTime_Increment.png">see also the full-size image</a>)
+`FormatTableDateTime` Command Editor for Increment Parameters (<a href="../FormatTableDateTime_Increment.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing format parameters.
 
 **<p style="text-align: center;">
-![FormatTableDateTime](FormatTableDateTime_Format.png)
+![FormatTableDateTime command editor for Format parameters](FormatTableDateTime_Format.png)
 </p>**
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor Showing Format Parameters (<a href="../FormatTableDateTime_Format.png">see also the full-size image</a>)
+`FormatTableDateTime` Command Editor for Format Parameters (<a href="../FormatTableDateTime_Format.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing output parameters.
 
 **<p style="text-align: center;">
-![FormatTableDateTime](FormatTableDateTime_Output.png)
+![FormatTableDateTime command editor for Output parameters](FormatTableDateTime_Output.png)
 </p>**
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor Showing Output Parameters (<a href="../FormatTableDateTime_Output.png">see also the full-size image</a>)
+`FormatTableDateTime` Command Editor for Output Parameters (<a href="../FormatTableDateTime_Output.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -163,7 +163,7 @@ OuputType=DateTime
 Output is as shown below.
 
 **<p style="text-align: center;">
-![FormatTableDateTime](FormatTableDateTime_Data.png)
+![FormatTableDateTime command output](FormatTableDateTime_Data.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -183,7 +183,7 @@ OutputColumn=DateTime
 Output is as shown below.
 
 **<p style="text-align: center;">
-![FormatTableDateTime](FormatTableDateTime_IncrementData.png)
+![Formatted output for increment data](FormatTableDateTime_IncrementData.png)
 </p>**
 
 **<p style="text-align: center;">

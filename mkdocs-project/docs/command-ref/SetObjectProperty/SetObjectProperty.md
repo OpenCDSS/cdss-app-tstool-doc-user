@@ -37,7 +37,7 @@ The following dialog is used to edit the command and illustrates the command syn
 See the examples below for an explanation of input.
 
 **<p style="text-align: center;">
-![SetObjectProperty](SetObjectProperty.png)
+![SetObjectProperty command editor](SetObjectProperty.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -30,7 +30,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![ReadTimeSeries](ReadTimeSeries.png)
+![ReadTimeSeries command editor](ReadTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">

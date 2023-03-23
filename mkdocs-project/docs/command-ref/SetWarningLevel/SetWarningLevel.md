@@ -35,11 +35,11 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![SetWarningLevel](SetWarningLevel.png)
+![SetWarningLevel command editor](SetWarningLevel.png)
 </p>**
 
 **<p style="text-align: center;">
-`SetWarningLevel` Command Editor Showing Conditions Test (<a href="../SetWarningLevel.png">see also the full-size image</a>)
+`SetWarningLevel` Command Editor (<a href="../SetWarningLevel.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##

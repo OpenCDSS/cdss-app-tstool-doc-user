@@ -57,7 +57,7 @@ Time series identifiers that include filenames should typically be adjusted to a
 relative path to allow the files to be moved to another location and run without errors.
 
 **<p style="text-align: center;">
-![TSID-StateMod](TSID-StateMod.png)
+![TSID command editor for statemod time series](TSID-StateMod.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -69,7 +69,7 @@ The following example is for a TSID for the
 In this case the datastore name is specified at the end of the TSID.
 
 **<p style="text-align: center;">
-![TSID-HydroBase](TSID-HydroBase.png)
+![TSID for HydroBase time series](TSID-HydroBase.png)
 </p>**
 
 **<p style="text-align: center;">

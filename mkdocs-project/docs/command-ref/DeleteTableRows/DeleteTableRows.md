@@ -31,7 +31,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![DeleteTableRows_Condition](DeleteTableRows_Condition.png)
+![DeleteTableRows command editor for Condition parameter](DeleteTableRows_Condition.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-![DeleteTableRows_RowNum](DeleteTableRows_RowNum.png)
+![DeleteTableRows command editor for Row Number parameter](DeleteTableRows_RowNum.png)
 </p>**
 
 **<p style="text-align: center;">

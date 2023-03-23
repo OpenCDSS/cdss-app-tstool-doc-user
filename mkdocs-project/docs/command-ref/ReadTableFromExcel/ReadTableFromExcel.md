@@ -63,7 +63,7 @@ Excel Data Table Conversion to Table
 Consider the following Excel worksheet example, which is equivalent to a comma-separated-value (CSV) file that has comments at the top and four columns:
 
 **<p style="text-align: center;">
-![ReadTableFromExcel Sheet Comments](ReadTableFromExcel_SheetComments.png)
+![ReadTableFromExcel example worksheet](ReadTableFromExcel_SheetComments.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -93,7 +93,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax for the command when reading the above Excel worksheet.
 
 **<p style="text-align: center;">
-![ReadTableFromExcel](ReadTableFromExcel_Table.png)
+![ReadTableFromExcel command editor for Table parameters](ReadTableFromExcel_Table.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -103,7 +103,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 The following dialog is used to edit the command and illustrates main Excel parameters.
 
 **<p style="text-align: center;">
-![ReadTableFromExcel Excel](ReadTableFromExcel_Excel.png)
+![ReadTableFromExcel command editor for main Excel parameters](ReadTableFromExcel_Excel.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -113,7 +113,7 @@ The following dialog is used to edit the command and illustrates main Excel para
 The following dialog is used to edit the command and illustrates filter parameters.
 
 **<p style="text-align: center;">
-![ReadTableFromExcel SQL](ReadTableFromExcel_Filters.png)
+![ReadTableFromExcel command editor for filter parameters](ReadTableFromExcel_Filters.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -123,7 +123,7 @@ The following dialog is used to edit the command and illustrates filter paramete
 The following dialog is used to edit the command and illustrates column type parameters.
 
 **<p style="text-align: center;">
-![ReadTableFromExcel SQL File](ReadTableFromExcel_Types.png)
+![ReadTableFromExcel command editor for column type parameters](ReadTableFromExcel_Types.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -133,7 +133,7 @@ The following dialog is used to edit the command and illustrates column type par
 The following dialog is used to edit the command and illustrates properties parameters.
 
 **<p style="text-align: center;">
-![ReadTableFromExcel Properties](ReadTableFromExcel_Properties.png)
+![ReadTableFromExcel command editor for properties parameters](ReadTableFromExcel_Properties.png)
 </p>**
 
 **<p style="text-align: center;">

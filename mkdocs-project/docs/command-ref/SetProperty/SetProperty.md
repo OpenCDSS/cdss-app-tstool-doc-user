@@ -39,7 +39,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax for general parameters.
 
 **<p style="text-align: center;">
-![SetProperty](SetProperty.png)
+![SetProperty command editor for general set parameters](SetProperty.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -49,7 +49,7 @@ The following dialog is used to edit the command and illustrates the command syn
 The following dialog is used to edit the command and illustrates the command syntax for environment variable parameters.
 
 **<p style="text-align: center;">
-![SetProperty-EnvVar](SetProperty_EnvVar.png)
+![SetProperty command editor for environment variable parameters](SetProperty_EnvVar.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -59,7 +59,7 @@ The following dialog is used to edit the command and illustrates the command syn
 The following dialog is used to edit the command and illustrates the command syntax for Java property parameters.
 
 **<p style="text-align: center;">
-![SetProperty-Java](SetProperty_Java.png)
+![SetProperty command editor for Java property parameters](SetProperty_Java.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -69,7 +69,7 @@ The following dialog is used to edit the command and illustrates the command syn
 The following dialog is used to edit the command and illustrates the command syntax for special value parameters.
 
 **<p style="text-align: center;">
-![SetProperty_Special](SetProperty_Special.png)
+![SetProperty command editor for special value parameters](SetProperty_Special.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -79,7 +79,7 @@ The following dialog is used to edit the command and illustrates the command syn
 The following dialog is used to edit the command and illustrates the command syntax for removing a property.
 
 **<p style="text-align: center;">
-![SetProperty_Remove](SetProperty_Remove.png)
+![SetProperty command editor for removing a property](SetProperty_Remove.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -93,21 +93,21 @@ This causes the old value to be retrieved and then the math operation is perform
 A common operation would be to increment a property’s value in a [`For`](../For/For.md) loop.
 
 **<p style="text-align: center;">
-![SetProperty_Math1](SetProperty_Math1.png)
+![SetProperty command editor for performing math with main property parameters](SetProperty_Math1.png)
 </p>**
 
 **<p style="text-align: center;">
-`SetProperty` Command Editor for Performing Math showing Main Property Parameters (<a href="../SetProperty_Math1.png">see also the full-size image</a>)
+`SetProperty` Command Editor for Performing Math with Main Property Parameters (<a href="../SetProperty_Math1.png">see also the full-size image</a>)
 </p>**
 
 The following illustrates the math input parameters.
 
 **<p style="text-align: center;">
-![SetProperty_Math2](SetProperty_Math2.png)
+![SetProperty command editor for performing math with math input](SetProperty_Math2.png)
 </p>**
 
 **<p style="text-align: center;">
-`SetProperty` Command Editor for Performing Math showing Math Input (<a href="../SetProperty_Math2.png">see also the full-size image</a>)
+`SetProperty` Command Editor for Performing Math with Math Input (<a href="../SetProperty_Math2.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -26,7 +26,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![CommentBlockEnd](CommentBlockEnd.png)
+![CommentBlockEnd command editor](CommentBlockEnd.png)
 </p>**
 
 **<p style="text-align: center;">

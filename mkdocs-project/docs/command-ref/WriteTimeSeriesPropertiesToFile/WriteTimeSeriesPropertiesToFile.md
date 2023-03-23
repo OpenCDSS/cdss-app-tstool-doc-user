@@ -38,7 +38,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![WriteTimeSeriesPropertiesToFile](WriteTimeSeriesPropertiesToFile.png)
+![WriteTimeSeriesPropertiesToFile command editor](WriteTimeSeriesPropertiesToFile.png)
 </p>**
 
 **<p style="text-align: center;">

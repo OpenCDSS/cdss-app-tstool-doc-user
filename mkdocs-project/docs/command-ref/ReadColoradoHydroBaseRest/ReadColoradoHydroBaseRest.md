@@ -147,7 +147,7 @@ A query of the HydroBase `vw_CDSS_AnnualAmt` view returns the following.
 Note the zeros for monthly values and there are no missing values.
 
 **<p style="text-align: center;">
-![ReadColoradoHydroBaseRest_Example_AnnualAmt](ReadColoradoHydroBaseRest_Example_AnnualAmt.png)
+![ReadColoradoHydroBaseRest Query Results for Monthly Data](ReadColoradoHydroBaseRest_Example_AnnualAmt.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -171,7 +171,7 @@ The TSTool table view ***Flags*** choice is set to `Superscript` to display the 
 and `c` indicates a value set by the carry forward algorithm.
 
 **<p style="text-align: center;">
-![ReadColoradoHydroBaseRest_Example_Month](ReadColoradoHydroBaseRest_Example_Month.png)
+![ReadColoradoHydroBaseRest Results for Monthly Data](ReadColoradoHydroBaseRest_Example_Month.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -203,7 +203,7 @@ The following example for daily data is consistent with the above monthly data.
 The daily diversion total values from HydroBase are as follows:
 
 **<p style="text-align: center;">
-![ReadColoradoHydroBaseRest_Example_DivTotal_Day](ReadColoradoHydroBaseRest_Example_DivTotal_Day.png)
+![HydroBase Query results for Daily Data](ReadColoradoHydroBaseRest_Example_DivTotal_Day.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -225,7 +225,7 @@ ReadColoradoHydroBaseRest(DataStore="HydroBaseWeb",TSID="0300915..DivTotal.Day~H
 The resulting time series for periods of interest are as follows:
 
 **<p style="text-align: center;">
-![ReadColoradoHydroBaseRest_Example_Day0](ReadColoradoHydroBaseRest_Example_Day0.png)
+![ReadColoradoHydroBaseRest Results for Daily Data, Start of Period](ReadColoradoHydroBaseRest_Example_Day0.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -233,7 +233,7 @@ The resulting time series for periods of interest are as follows:
 </p>**
 
 **<p style="text-align: center;">
-![ReadColoradoHydroBaseRest_Example_Day](ReadColoradoHydroBaseRest_Example_Day.png)
+![ReadColoradoHydroBaseRest Results for Daily Data](ReadColoradoHydroBaseRest_Example_Day.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -309,7 +309,7 @@ The `WaterClass` data type can match multiple time series and therefore requires
 parameter is specified if a single time series should be matched.
 
 **<p style="text-align: center;">
-![ReadColoradoHydroBaseRest TSID](ReadColoradoHydroBaseRest_TSID.png)
+![ReadColoradoHydroBaseRest command editor to read a single time series](ReadColoradoHydroBaseRest_TSID.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -320,7 +320,7 @@ The following figure illustrates how to query multiple time series,
 in this case all available water class time series for the specified structure WDID.
 
 **<p style="text-align: center;">
-![ReadColoradoHydroBase Multiple](ReadColoradoHydroBaseRest_Multiple.png)
+![ReadColoradoHydroBase command editor to read multiple time series](ReadColoradoHydroBaseRest_Multiple.png)
 </p>**
 
 **<p style="text-align: center;">

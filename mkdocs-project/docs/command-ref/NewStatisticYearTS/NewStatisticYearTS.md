@@ -35,7 +35,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for input parameters.
 
 **<p style="text-align: center;">
-![NewStatisticYearTS](NewStatisticYearTS.png)
+![NewStatisticYearTS command editor](NewStatisticYearTS.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -45,7 +45,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for distribution parameters.
 
 **<p style="text-align: center;">
-![NewStatisticYearTS Distribution](NewStatisticYearTS_Distribution.png)
+![NewStatisticYearTS command editor for Distribution parameters](NewStatisticYearTS_Distribution.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -55,7 +55,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for analysis parameters.
 
 **<p style="text-align: center;">
-![NewStatisticYearTS Analysis](NewStatisticYearTS_Analysis.png)
+![NewStatisticYearTS command editor for Analysis parameters](NewStatisticYearTS_Analysis.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -65,7 +65,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
 
 **<p style="text-align: center;">
-![NewStatisticYearTS Output](NewStatisticYearTS_Output.png)
+![NewStatisticYearTS command editor for Output parameters](NewStatisticYearTS_Output.png)
 </p>**
 
 **<p style="text-align: center;">

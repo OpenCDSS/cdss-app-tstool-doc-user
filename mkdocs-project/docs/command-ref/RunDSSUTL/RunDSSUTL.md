@@ -70,7 +70,7 @@ variable and is specified with the `DssutlProgram` parameter, using `${WorkingDi
 The HEC-DSS and input files are relative to the working directory.
 
 **<p style="text-align: center;">
-![RunDSSUTL](RunDSSUTL.png)
+![RunDSSUTL command editor](RunDSSUTL.png)
 </p>**
 
 **<p style="text-align: center;">

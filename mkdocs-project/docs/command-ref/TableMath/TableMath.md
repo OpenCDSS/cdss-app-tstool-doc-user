@@ -57,7 +57,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 command (in this case illustrating how values in a column named `ts1` are added to the number `.1111.`
 
 **<p style="text-align: center;">
-![TableMath](TableMath.png)
+![TableMath command editor](TableMath.png)
 </p>**
 
 **<p style="text-align: center;">

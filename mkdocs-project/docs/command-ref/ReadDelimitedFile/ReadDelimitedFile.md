@@ -45,14 +45,14 @@ The command is available in the following TSTool menu:
 
 *   ***Commands / Read Time Series***
 
-The following dialog is used to edit the command and illustrates the command syntax when specifying a full command line.
+The following dialog is used to edit the command and illustrates command syntax.  See below for specific examples.
 
 **<p style="text-align: center;">
-![ReadDelimitedFile](ReadDelimitedFile.png)
+![ReadDelimitedFile command editor to map file to time series](ReadDelimitedFile.png)
 </p>**
 
 **<p style="text-align: center;">
-`ReadDelimitedFile` Command Editor when Specifying Command Line in Full (<a href="../ReadDelimitedFile.png">see also the full-size image</a>)
+`ReadDelimitedFile` Command Editor to Map File Columns to Time Series(<a href="../ReadDelimitedFile.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -121,7 +121,7 @@ Because the delimiter is a tab, the space between date and time columns is NOT u
 as a delimiter and the date/time information is treated as one column.
 
 **<p style="text-align: center;">
-![ReadDelimitedFile](ReadDelimitedFile.png)
+![ReadDelimitedFile command editor for literal column name](ReadDelimitedFile.png)
 </p>
 
 **<p style="text-align: center;">
@@ -132,7 +132,7 @@ as a delimiter and the date/time information is treated as one column.
 The following dialog is the second data tab.
 
 **<p style="text-align: center;">
-![ReadDelimitedFile2](ReadDelimitedFile2.png)
+![ReadDelimitedFile command editor for second data tab](ReadDelimitedFile2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -157,7 +157,7 @@ County,COLORADO,Adams,Alamosa,Arapahoe,Archuleta,Baca,Bent,Boulder,Broomfield,Ch
 The following dialog is used to edit the command and illustrates the syntax for the command when reading column names from the file.
 
 **<p style="text-align: center;">
-![ReadDelimitedFile3](ReadDelimitedFile3.png)
+![ReadDelimitedFile command editor when reading column names from the file](ReadDelimitedFile3.png)
 </p>**
 
 **<p style="text-align: center;">

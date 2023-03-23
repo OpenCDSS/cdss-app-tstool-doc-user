@@ -33,7 +33,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax (in this case printing to a Microsoft XPS file).
 
 **<p style="text-align: center;">
-![PrintTextFile](PrintTextFile.png)
+![PrintTextFile command editor](PrintTextFile.png)
 </p>**
 
 **<p style="text-align: center;">

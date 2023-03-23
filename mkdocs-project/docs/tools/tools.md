@@ -15,7 +15,7 @@ Tools are therefore appropriate for one-off interactive data viewing,
 whereas commands should be used to automate processing on large datasets.
 
 **<p style="text-align: center;">
-![Menu_Tools](Menu_Tools.png)
+![Tools Menu](Menu_Tools.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -49,7 +49,7 @@ Where possible, TSTool functionality is included in commands to facilitate autom
 Analysis tools analyze time series and typically produce an output report.
 
 **<p style="text-align: center;">
-![Menu_Tools_Analysis](Menu_Tools_Analysis.png)
+![Tools Analysis Menu](Menu_Tools_Analysis.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -72,7 +72,7 @@ The optimal results can then optionally be used as parameters for the
 The following figure illustrates the ***Mixed Station Analysis*** tool.
 
 **<p style="text-align: center;">
-![Menu_Tools_Analysis_MixedStationAnalysis](Menu_Tools_Analysis_MixedStationAnalysis.png)
+![Mixed Station Analysis Interface](Menu_Tools_Analysis_MixedStationAnalysis.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -86,7 +86,7 @@ with the command file stored in an online repository or other source.
 This helps with version control and maintenance of the command file.
 
 **<p style="text-align: center;">
-![Menu_Tools_Commands](Menu_Tools_Commands.png)
+![Tools Commands Menu](Menu_Tools_Commands.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -133,7 +133,7 @@ The comparison is helpful to understanding differences before synchronizing the 
 Report tools analyze time series, typically creating a summary report.  
  
 **<p style="text-align: center;">
-![Menu_Tools_Report](Menu_Tools_Report.png)
+![Tools Report Menu](Menu_Tools_Report.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -149,7 +149,7 @@ Although effort has been taken to make the report as compact as possible,
 it may need to be printed in landscape format on a large paper size.
 
 **<p style="text-align: center;">
-![Menu_Tools_Report_DataCoverage](Menu_Tools_Report_DataCoverage.png)
+![Data Coverage by Year Report](Menu_Tools_Report_DataCoverage.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -167,7 +167,7 @@ All other data intervals shown overall period summaries.
 The value `-999` is used to indicate missing data.
 
 **<p style="text-align: center;">
-![Menu_Tools_Report_DataLimits](Menu_Tools_Report_DataLimits.png)
+![Data Limits Summary Report](Menu_Tools_Report_DataLimits.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -188,7 +188,7 @@ The report includes a header for the time series, the report, and footnotes.
 Values are only shown if full data are available for a month and statistics are computed using only complete months.
 
 **<p style="text-align: center;">
-![Menu_Tools_Report_MonthSummary_DailyMean](Menu_Tools_Report_MonthSummary_DailyMean.png)
+![Monthly Summary Daily Mean Report](Menu_Tools_Report_MonthSummary_DailyMean.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -211,7 +211,7 @@ corresponding year-to-date totals will consequently be zero.
 Refer to the data coverage and data limit reports for more detail.
 
 **<p style="text-align: center;">
-![Menu_Tools_Report_YearToDateTotal](Menu_Tools_Report_YearToDateTotal.png)
+![Year to Date Total Report](Menu_Tools_Report_YearToDateTotal.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -239,7 +239,7 @@ Diagnostics features are useful for troubleshooting.
 When an error occurs, a small warning dialog may be displayed, as shown in the following figure:
 
 **<p style="text-align: center;">
-![Diagnostics_Warning](Diagnostics_Warning.png)
+![Example Warning Message Dialog](Diagnostics_Warning.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -255,7 +255,7 @@ which is used to set message levels and view messages as the application runs.
 The ***Diagnostics*** dialog (see the following figure) can be used to evaluate a problem.
 
 **<p style="text-align: center;">
-![Diagnostics](Diagnostics.png)
+![Diagnostics Interface](Diagnostics.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -290,7 +290,7 @@ Selecting this menu item is equivalent to selecting the View Log File button in 
 The log file viewer will be displayed in a window as shown in the following figure.
 
 **<p style="text-align: center;">
-![Diagnostics_ViewLog](Diagnostics_ViewLog.png)
+![Log File Viewer Window](Diagnostics_ViewLog.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -31,7 +31,7 @@ The following dialog is used to edit the command and illustrates the command syn
 in this case to check for time series that have >= 5% missing data values.
 
 **<p style="text-align: center;">
-![CheckTimeSeriesStatistic](CheckTimeSeriesStatistic.png)
+![CheckTimeSeriesStatistic command editor for Statistic parameters](CheckTimeSeriesStatistic.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -42,7 +42,7 @@ The following parameters will output the location part of the TSID to a
 column named TSID and the missing percentage to a column named `MissingPercent` in the output table named `Table1`.
 
 **<p style="text-align: center;">
-![CheckTimeSeriesStatistic Output](CheckTimeSeriesStatistic_Output.png)
+![CheckTimeSeriesStatistic command editor for Output parameters](CheckTimeSeriesStatistic_Output.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -53,7 +53,7 @@ The percentage of missing values is then checked to see if `>= 10` and if so the
 fail and the time series will have a property set `MissingPercentCheck=Fail`.
 
 **<p style="text-align: center;">
-![CheckTimeSeriesStatistic Criteria](CheckTimeSeriesStatistic_Criteria.png)
+![CheckTimeSeriesStatistic command editor for Criteria and Action parameters](CheckTimeSeriesStatistic_Criteria.png)
 </p>**
 
 **<p style="text-align: center;">

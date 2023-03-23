@@ -59,7 +59,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for tuple split.
 
 **<p style="text-align: center;">
-![SplitTableRow Tuple](SplitTableRow_Tuple.png)
+![SplitTableRow command editor for tuple split](SplitTableRow_Tuple.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -69,7 +69,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for measure split.
 
 **<p style="text-align: center;">
-![SplitTableRowTuple](SplitTableRow.png)
+![SplitTableRowTuple for measure split](SplitTableRow.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -1,9 +1,9 @@
 # TSTool / Datastore Reference / ReclamationPisces #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
-* [Datastore Configuration File](#datastore-configuration-file)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
+*   [Datastore Configuration File](#datastore-configuration-file)
 
 ------------
 
@@ -40,19 +40,19 @@ SiteID.Server.Parameter.TimeInterval~DataStoreName
 
 Time series identifier parts and other time series metadata are described below:
 
-* The TSID location identifier is set to the `seriescatalog.siteid` column value.
-`SiteID` is a short unique name for each location in a Pisces database.
-* The TSID data source is set to the `view_seriescatalog.server` column value,
-which indicates the data collection network.
-* The TSID data type is set to the `view_seriescatalog.parameter` column value,
-which is a short parameter type matching values in the `ref_parameter table`.
-* Interval is the data interval using TSTool standards (e.g., `Hour`, `Day`, `Month`, `Year`, `Irregular`).
-Weekly data were used with MODSIM model data sets.
-Irregular interval in Pisces is typically used for real-time data or
-multiples of a base interval (e.g., `10-minute`, `15-minute` data).
-Within TSTool, the precision of date/times for irregular data is typically set when the
-time series is read and the period of record end dates assigned.
-The following conversion is made between TSTool and Pisces interval:
+*   The TSID location identifier is set to the `seriescatalog.siteid` column value.
+    `SiteID` is a short unique name for each location in a Pisces database.
+*   The TSID data source is set to the `view_seriescatalog.server` column value,
+    which indicates the data collection network.
+*   The TSID data type is set to the `view_seriescatalog.parameter` column value,
+    which is a short parameter type matching values in the `ref_parameter table`.
+*   Interval is the data interval using TSTool standards (e.g., `Hour`, `Day`, `Month`, `Year`, `Irregular`).
+    Weekly data were used with MODSIM model data sets.
+    Irregular interval in Pisces is typically used for real-time data or
+    multiples of a base interval (e.g., `10-minute`, `15-minute` data).
+    Within TSTool, the precision of date/times for irregular data is typically set when the
+    time series is read and the period of record end dates assigned.
+    The following conversion is made between TSTool and Pisces interval:
 
 |**Pisces Time Interval**|**TSTool Interval**|
 |--|--|
@@ -63,17 +63,17 @@ The following conversion is made between TSTool and Pisces interval:
 |`Yearly`|`Year`|
 |`Irregular`|`Irregular`|
 
-* The TSID scenario (the optional 5th part of the TSID) currently is not used with Pisces.
-* The ensemble trace identifier (optional [identifier] at end of TSID) currently is not used with Pisces.
-* `DataStoreName` is the user-defined datastore name from the configuration information.
-* The time zone for hourly time series is set to the `sitecatalog.timezone` column value.
-This is not fully implemented because TSTool only fully supports daily Pisces time series.
-The `sitecatalog.tz_offset` indicates the offset from UTC.
-* Missing numerical values in Pisces may be null or are indicated by a special
-numerical value that is specific to the original data provider and the flag will include `m`.
-Once read, missing values are indicated by `NaN` and the missing data flag will be retained.
-The following table lists possible flag values,
-which may be present singularly or concatenated if more than one flag applies.
+*   The TSID scenario (the optional 5th part of the TSID) currently is not used with Pisces.
+*   The ensemble trace identifier (optional [identifier] at end of TSID) currently is not used with Pisces.
+*   `DataStoreName` is the user-defined datastore name from the configuration information.
+*   The time zone for hourly time series is set to the `sitecatalog.timezone` column value.
+    This is not fully implemented because TSTool only fully supports daily Pisces time series.
+    The `sitecatalog.tz_offset` indicates the offset from UTC.
+*   Missing numerical values in Pisces may be null or are indicated by a special
+    numerical value that is specific to the original data provider and the flag will include `m`.
+    Once read, missing values are indicated by `NaN` and the missing data flag will be retained.
+    The following table lists possible flag values,
+    which may be present singularly or concatenated if more than one flag applies.
 
 |**Pisces Data Flag**|**Description**|
 |--|--|--|
@@ -90,18 +90,18 @@ which may be present singularly or concatenated if more than one flag applies.
 |`-`|Quality low|
 |`^`|Quality rate of change|
 
-* Time series data units are set using seriescatalog.units.
-* All other column data from sitecatalog and seriescatalog are set as time series
-properties and can be accessed in TSTool using `${ts:Property}` notation.
+*   Time series data units are set using seriescatalog.units.
+*   All other column data from sitecatalog and seriescatalog are set as time series
+    properties and can be accessed in TSTool using `${ts:Property}` notation.
 
 ## Limitations ##
 
 ReclamationPisces datastore limitations relative to TSTool standard features are as follows:
 
-* Only daily time interval is currently fully supported.
-`Hour`, `Month`, `Year` and `Irregular` intervals are enabled similar to `Day`;
-however, additional intricacies are not handled (such as time zone for `Hour` interval,
-other than calendar year for `Year` data).
+*   Only daily time interval is currently fully supported.
+    `Hour`, `Month`, `Year` and `Irregular` intervals are enabled similar to `Day`;
+    however, additional intricacies are not handled (such as time zone for `Hour` interval,
+    other than calendar year for `Year` data).
 
 ## Datastore Configuration File ##
 

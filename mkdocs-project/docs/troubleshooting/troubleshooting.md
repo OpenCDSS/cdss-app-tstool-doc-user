@@ -370,7 +370,7 @@ Specific troubleshooting for commands is discused in the [Command Reference](../
 **Behavior** – The following error is displayed when trying to start TSTool:
 
 **<p style="text-align: center;">
-![could-not-create-vm](could-not-create-vm.png)
+![could not create virtual machine error](could-not-create-vm.png)
 </p>**
 
 **Possible Cause** – TSTool was updated from Java 6 to Java 7 as of version 11.00.00.
@@ -450,7 +450,7 @@ Specifically for this issue, HydroBase databases are listed in the selector but 
 a database an error similar to the following is shown connecting to the database:
 
 **<p style="text-align: center;">
-![hydrobase-login-error](hydrobase-login-error.png)
+![hydrobase login error](hydrobase-login-error.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -471,7 +471,7 @@ Double click on the file in Windows ***File Explorer***.
 A dialog will open as shown in the following figure.
 
 **<p style="text-align: center;">
-![hydrobase-login-test1](hydrobase-login-test1.png)
+![Select hydrobase login](hydrobase-login-test1.png)
 </p>**
 
 Select a HydroBase database and then press ***Test Connection***.
@@ -507,7 +507,7 @@ The ***SQL Server (CDSS)*** and ***SQL Server Browser*** services
 need to be running and should be configured to automatically start.
 
 **<p style="text-align: center;">
-![hydrobase-login-sql-server-configuration-manager0.png](hydrobase-login-sql-server-configuration-manager0.png)
+![Check SQL Server Services](hydrobase-login-sql-server-configuration-manager0.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -521,7 +521,7 @@ If changes are made, restart TSTool and try selecting a HydroBase database and l
 If errors still exist, check the TSTool ***View / Datastores*** list for errors, which may offer suggestions.
 
 **<p style="text-align: center;">
-![hydrobase-login-sql-server-configuration-manager1.png](hydrobase-login-sql-server-configuration-manager1.png)
+![Check SQL Server Network Connection](hydrobase-login-sql-server-configuration-manager1.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -592,7 +592,7 @@ Microsoft SQL Server database and driver compatibility:
 **Behavior** – when starting TSTool, the following is displayed:
 
 **<p style="text-align: center;">
-![Troubleshooting_LaunchError](Troubleshooting_LaunchError.png)
+![TSTool Launch Error](Troubleshooting_LaunchError.png)
 </p>**
 
 **Possible Cause 1** – This error may be shown if software files have been manually moved.
@@ -863,7 +863,7 @@ Edit the configuration files appropriately to enable/disable the HydroBase datas
 **Behavior** – HydroBase Database Manager displays the following error when trying to attach a new HydroBase database: 
 
 **<p style="text-align: center;">
-![SQL-server-express](SQL-server-express.png)
+![HydroBase Database Manager error](SQL-server-express.png)
 </p>**
 
 **Possible Causes** – The following are possible causes

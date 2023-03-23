@@ -59,7 +59,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for time series identifier parts.
 
 **<p style="text-align: center;">
-![ReadTimeSeriesList](ReadTimeSeriesList.png)
+![ReadTimeSeriesList command editor for time series identifier part parameters](ReadTimeSeriesList.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -69,7 +69,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for time series properties.
 
 **<p style="text-align: center;">
-![ReadTimeSeriesList TimeSeriesProperties](ReadTimeSeriesList_TimeSeriesProperties.png)
+![ReadTimeSeriesList command editor for time series properties parameters](ReadTimeSeriesList_TimeSeriesProperties.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -79,7 +79,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters if the time series is not found.
 
 **<p style="text-align: center;">
-![ReadTimeSeriesList IfNotFound](ReadTimeSeriesList_IfNotFound.png)
+![ReadTimeSeriesList command editor for time series not found parameters](ReadTimeSeriesList_IfNotFound.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -89,7 +89,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters used in checks.
 
 **<p style="text-align: center;">
-![ReadTimeSeriesList Check](ReadTimeSeriesList_Check.png)
+![ReadTimeSeriesList command editor for check parameters](ReadTimeSeriesList_Check.png)
 </p>**
 
 **<p style="text-align: center;">

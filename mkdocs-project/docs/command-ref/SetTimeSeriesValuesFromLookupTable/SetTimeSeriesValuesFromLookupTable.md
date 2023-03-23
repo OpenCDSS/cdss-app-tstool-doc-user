@@ -35,7 +35,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
 
 **<p style="text-align: center;">
-![SetTimeSeriesValuesFromLookupTable](SetTimeSeriesValuesFromLookupTable.png)
+![SetTimeSeriesValuesFromLookupTable command editor for Time Series parameters](SetTimeSeriesValuesFromLookupTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -45,21 +45,21 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for lookup parameters.
 
 **<p style="text-align: center;">
-![SetTimeSeriesValuesFromLookupTable_Lookup](SetTimeSeriesValuesFromLookupTable_Lookup.png)
+![SetTimeSeriesValuesFromLookupTable_Lookup command editor for Lookup parameters](SetTimeSeriesValuesFromLookupTable_Lookup.png)
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromLookupTable` Command Editor for Time Series Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Lookup.png">see also the full-size image</a>)
+`SetTimeSeriesValuesFromLookupTable` Command Editor for Lookup Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Lookup.png">see also the full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time-related parameters.
 
 **<p style="text-align: center;">
-![SetTimeSeriesValuesFromLookupTable_Time](SetTimeSeriesValuesFromLookupTable_Time.png)
+![SetTimeSeriesValuesFromLookupTable_Time command editor for Period and Window parameters](SetTimeSeriesValuesFromLookupTable_Time.png)
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromLookupTable` Command Editor for Time-related Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Time.png">see also the full-size image</a>)
+`SetTimeSeriesValuesFromLookupTable` Command Editor for Period and Window Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Time.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -34,7 +34,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![StartLog](StartLog.png)
+![StartLog command editor](StartLog.png)
 </p>**
 
 **<p style="text-align: center;">

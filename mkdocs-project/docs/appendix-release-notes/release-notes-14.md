@@ -45,6 +45,9 @@ Issues may also be included in other repositories that are TSTool components.
     Canceling the HydroBase selection now shows an additional dialog explaining how to disable HydroBase.
 *   ![change](change.png) [14.7.0] Update the command reference documentation to indicate which menu
     a command editor is found.
+*   ![change](change.png) [14.7.0] Update the documentation for disabilities compliance:
+    +   Links are now shown as underlined.
+    +   Images use human-readable "alt text".
 *   ![change](change.png) [14.7.0] TSTool has been tested with the new Synoptic data web services plugin.
     See the [Plugins Reference](../plugin-ref/overview.md).
 *   ![bug](bug.png) [14.7.0] Fix a minor bug in

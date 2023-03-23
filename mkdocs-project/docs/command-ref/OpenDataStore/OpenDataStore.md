@@ -29,7 +29,7 @@ menu as shown in the following figure (the Status ***Message*** column on the fa
 not visible in the figure, provides additional information about the datastore):
 
 **<p style="text-align: center;">
-![View_Datastores](View_Datastores.png)
+![View Datastores display](View_Datastores.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -47,7 +47,7 @@ The database engine (database software) dictates which datastore properties are 
 Refer to the [`GenericDatabaseDataStore`](../../datastore-ref/GenericDatabase/GenericDatabase.md) documentation for information.
 
 **<p style="text-align: center;">
-![OpenDataStore](OpenDataStore.png)
+![OpenDataStore command editor using Properties](OpenDataStore.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -55,7 +55,7 @@ Refer to the [`GenericDatabaseDataStore`](../../datastore-ref/GenericDatabase/Ge
 </p>**
 
 **<p style="text-align: center;">
-![OpenDataStore-config](OpenDataStore-config.png)
+![OpenDataStore command editor using configuration file](OpenDataStore-config.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -24,7 +24,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![SendEmailMessage](SendEmailMessage.png)
+![SendEmailMessage command editor](SendEmailMessage.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -44,7 +44,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for table parameters.
 
 **<p style="text-align: center;">
-![CreateDataStoreDataDictionary Tables](CreateDataStoreDataDictionary_Tables.png)
+![CreateDataStoreDataDictionary command editor for Table parameters](CreateDataStoreDataDictionary_Tables.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -54,7 +54,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for metadata parameters.
 
 **<p style="text-align: center;">
-![CreateDataStoreDataDictionary Metadata](CreateDataStoreDataDictionary_Metadata.png)
+![CreateDataStoreDataDictionary command for Metadata parameters](CreateDataStoreDataDictionary_Metadata.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -64,7 +64,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for data dictionary parameters.
 
 **<p style="text-align: center;">
-![CreateDataStoreDataDictionary_Dict](CreateDataStoreDataDictionary_Dict.png)
+![CreateDataStoreDataDictionary for Data Dictionary parameters](CreateDataStoreDataDictionary_Dict.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -74,7 +74,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for entity relationship parameters.
 
 **<p style="text-align: center;">
-![CreateDataStoreDataDictionary ERDiagram](CreateDataStoreDataDictionary_ERDiagram.png)
+![CreateDataStoreDataDictionary for Entity Relationship Diagram parameters](CreateDataStoreDataDictionary_ERDiagram.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -150,7 +150,7 @@ The following is an example of an Excel workbook with ER Diagram layout data, wh
 [`ReadTableFromExcel`](../ReadTableFromExcel/ReadTableFromExcel.md) command.
 
 **<p style="text-align: center;">
-![CreateDataStoreDataDictionary Layout](CreateDataStoreDataDictionary_Layout.png)
+![CreateDataStoreDataDictionary Command editor for Entity Relationship Layout Parameters](CreateDataStoreDataDictionary_Layout.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -34,7 +34,7 @@ those that do utilize the `Value*` parameters to specify additional information.
 See the documentation below and move the mouse over the entry fields in the dialog.
 
 **<p style="text-align: center;">
-![CalculateTimeSeriesStatistic](CalculateTimeSeriesStatistic.png)
+![CalculateTimeSeriesStatistic command editorfor Input parameters](CalculateTimeSeriesStatistic.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -42,7 +42,7 @@ See the documentation below and move the mouse over the entry fields in the dial
 </p>**
 
 **<p style="text-align: center;">
-![CalculateTimeSeriesStatistic_Analysis](CalculateTimeSeriesStatistic_Analysis.png)
+![CalculateTimeSeriesStatistic command editor for Analysis parameters](CalculateTimeSeriesStatistic_Analysis.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -50,7 +50,7 @@ See the documentation below and move the mouse over the entry fields in the dial
 </p>**
 
 **<p style="text-align: center;">
-![CalculateTimeSeriesStatistic_OutputTable](CalculateTimeSeriesStatistic_OutputTable.png)
+![CalculateTimeSeriesStatistic command editor for Output Table parameters](CalculateTimeSeriesStatistic_OutputTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -58,7 +58,7 @@ See the documentation below and move the mouse over the entry fields in the dial
 </p>**
 
 **<p style="text-align: center;">
-![CalculateTimeSeriesStatistic_OutputProperty](CalculateTimeSeriesStatistic_OutputProperty.png)
+![CalculateTimeSeriesStatistic command editor for Output Property parameters](CalculateTimeSeriesStatistic_OutputProperty.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -121,7 +121,7 @@ Statistic Details
 | `DeficitSeqMin`| Minimum sum of sequential values where each value is less than the mean (for example minimum drought water volume). | No | | |
 | `GECount`| Count of values greater than or equal to `Value1`. | Yes |  | `Value1` – criteria to check |
 | `GTCount`| Count of values greater than `Value1`. | Yes | | `Value1` – criteria to check |
-| `Lag-1AutoCorrelation` | Autocorrelation between values and the those that follow in the next time step, given by:<br> ![lag1-autocorrelation](lag1-autocorrelation.png) | No | | |
+| `Lag-1AutoCorrelation` | Autocorrelation between values and the those that follow in the next time step, given by:<br> ![lag1 autocorrelation equation](lag1-autocorrelation.png) | No | | |
 | `Last` | Last non-missing or missing value.  Second statistic is the date/time of the value. | Yes | Yes | |
 | `LastNonmissing` | Last non-missing value.  Second statistic is the date/time of the value. | Yes | Yes | |
 | `LECount` | Count of values less than or equal to `Value1`. |  Yes | | `Value1` – criteria to check |
@@ -135,7 +135,7 @@ Statistic Details
 | `NonmissingCount` | Number of non-missing values. | Yes | | |
 | `NonmissingPercent` | Percent of values that are not missing. | Yes | | |
 | `NqYY` | This statistic is typically used to evaluate the return period of low flows and is implemented only for daily data.  The `N` indicates the number of daily values to be averaged and `YY` indicates the return interval.  For example, `7q10` indicates the flow corresponding to the 10-year recurrence interval for minimum average daily flow (for 7 days) in a year.  This statistic is computed as follows, using `7q10` as an example:<ol><li>Determine the number of years to be analyzed (from analysis period command parameters or time series data).</li><li>For each year, loop through each day from January 1 to December 31.  Compute an average flow by averaging 7 days, in this case with 3 values on each side of the current day and including the current day.  If at the end of the year, use 3 values from adjoining years.  The number of missing data allowed is controlled by the `Value3` command parameter.</li><li>For the year, save the minimum 7-day average.</li><li>Utilize the minimum values for all years, with log-Pearson Type III distribution, to determine the value for the 10-year recurrence interval.  See [https://pubs.usgs.gov/sir/2008/5126/section3.html](https://pubs.usgs.gov/sir/2008/5126/section3.html) for a description of `NqYY` and “Hydrology for Engineers, 3rd Edition,” Linsley, Kohler, Paulhus for a description of log-Pearson Type III distribution.</li></ol> | No |  | `Value1` – specify the number of daily values to be averaged.  Currently this must be an odd number to allow bracketing the current day.<br><br>`Value2` – specify the return interval (e.g., `10`).<br><br>`Value3` – specify the number of missing values allowed in the average (e.g., `0` for most rigorous analysis).  It may be useful to set this value if, for example, a single daily value is available in the time series, for example entered on the first day of the month. |
-| `Skew` | Skew coefficient, as follows: ![skew](skew.png)<br> where s = standard deviation | No | | |
+| `Skew` | Skew coefficient, as follows: ![skew equation](skew.png)<br> where s = standard deviation | No | | |
 | `StdDev` | Standard deviation. | No | | |
 | `SurplusMin` | Maximum surplus value (where surplus is value minus mean). | No | | |
 | `SurplusMean` | Mean surplus value (where surplus is value minus mean). | No | | |

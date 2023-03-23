@@ -26,7 +26,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for built-in properties.
 
 **<p style="text-align: center;">
-![SetEnsembleProperty BuiltIn](SetEnsembleProperty_BuiltIn.png)
+![SetEnsembleProperty command editor for built-in properties](SetEnsembleProperty_BuiltIn.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -36,7 +36,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for user-defined properties.
 
 **<p style="text-align: center;">
-![SetEnsembleProperty User](SetEnsembleProperty_User.png)
+![SetEnsembleProperty command editor for user-defined properties](SetEnsembleProperty_User.png)
 </p>**
 
 **<p style="text-align: center;">

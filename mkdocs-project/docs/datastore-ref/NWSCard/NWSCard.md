@@ -1,8 +1,8 @@
 # TSTool / Datastore Reference / NWSCard #
 
-* [Overview](#overview)
-* [Standard Time Series Properties](#standard-time-series-properties)
-* [Limitations](#limitations)
+*   [Overview](#overview)
+*   [Standard Time Series Properties](#standard-time-series-properties)
+*   [Limitations](#limitations)
 
 --------------
 
@@ -14,12 +14,12 @@ This documentation is retained for reference and may be removed in the future.**
 
 The NWSCard time series file format (also referred to as NWS DATACARD) can be used to store 1 to 24 hour time series data for:
 
-* A single time series, referred to as the “NWS Card single time series” format.
-* One or more time series traces, as written by the ESPADP software, referred to as the “NWS Card trace” format.
-In this case, additional header information is included in the file and the remainder of
-the file contains a sequence of sections consistent with the single time series format.
-The initial header is used to allocate the memory for the time series,
-while the subsequent headers indicate historical trace years that are identified with a sequence number after reading.
+*   A single time series, referred to as the “NWS Card single time series” format.
+*   One or more time series traces, as written by the ESPADP software, referred to as the “NWS Card trace” format.
+    In this case, additional header information is included in the file and the remainder of
+    the file contains a sequence of sections consistent with the single time series format.
+    The initial header is used to allocate the memory for the time series,
+    while the subsequent headers indicate historical trace years that are identified with a sequence number after reading.
 
 The format has been developed by the National Weather Service and the single time
 series format is often used with the NWSRFS (National Weather Service River Forecast System)
@@ -27,17 +27,17 @@ for historical data (e.g., for model calibration).
 The examples below shows the format of the single time series and trace files.
 Important comments about the file format are:
 
-* The file is divided into a header section (top) and data section (bottom).
-Comments can occur only at the top and are lines that begin with `$`.
-(For the trace file, comments can occur throughout the file, before each trace.)
-The `#` comments shown below are for illustration.
-* If possible, all header information should be included.
-Header information is displayed by applications like TSTool to allow selection of time series before the data section is read.
-Omitting station descriptions can lead to confusion when reviewing output.
-* The data units and dimension (e.g., `L3/T`) are NWS standards and help general applications
-like TSTool determine how to convert units and display data to appropriate precision.
-* Formatting information in the file was originally implemented to help FORTRAN software read the files.
-This information is key to interpreting the fixed-format data records.
+*   The file is divided into a header section (top) and data section (bottom).
+    Comments can occur only at the top and are lines that begin with `$`.
+    (For the trace file, comments can occur throughout the file, before each trace.)
+    The `#` comments shown below are for illustration.
+*   If possible, all header information should be included.
+    Header information is displayed by applications like TSTool to allow selection of time series before the data section is read.
+    Omitting station descriptions can lead to confusion when reviewing output.
+*   The data units and dimension (e.g., `L3/T`) are NWS standards and help general applications
+    like TSTool determine how to convert units and display data to appropriate precision.
+*   Formatting information in the file was originally implemented to help FORTRAN software read the files.
+    This information is key to interpreting the fixed-format data records.
 
 The following example illustrates the format of an NWSCard single time series file.
 
@@ -181,37 +181,37 @@ Location..DataType.Interval[Year]~NWSCard~PathToFile
 
 Most standard time series properties can be properly assigned from an NWSCard file:
 
-* The identifier is used for the location.
-* For the time series identifier, the data source is left blank.
-* The data type and interval are determined from the file header.
-* For trace files, the first year in the historical trace is used for the sequence number (`[Year]` in the above example).
-* `NWSCard` is used for the input type.
-* The filename is used for the input name.
+*   The identifier is used for the location.
+*   For the time series identifier, the data source is left blank.
+*   The data type and interval are determined from the file header.
+*   For trace files, the first year in the historical trace is used for the sequence number (`[Year]` in the above example).
+*   `NWSCard` is used for the input type.
+*   The filename is used for the input name.
 
 ## Limitations ##
 
 NWSCard files have the following limitations:
 
-* Only hourly data can be saved.
-Daily data can be saved by treating as 24-hour values but can cause confusion due to the hour 24/0 conversion issue.
-For example, hour 24 of day N is automatically converted to hour 0 of day N + 1 when reading the file.
-* The identifier is used for the location part of the time series identifier and should not
-contain '.' characters because this conflicts with the time series identifier standards.
-* NWSCard data are often used with the NWSRFS.
-The NWSRFS uses Zulu (GMT) time to store data in its database.
-However, historical and real-time data are often viewed as local time.
-Additionally, systems may be defined where, although the data interval is 6 hour,
-the start of the computational day may be shifted so that it starts at 8 AM local time (or local standard time).
-All of these factors can complicate managing time series data.
-Unfortunately, the NWSCard file format does not support specifying a time zone.
-Therefore, the end-user must understand how the times in the file relate to the current use of the data.
-* Only one time series can be saved per file, unless the file contains traces.
-In other words, a card file is not suitable for storing multiple time series (e.g., time series at different locations).
-* Years within the body of the file are not 4-digit (the header does use 4-digit years).
-To increase processing speed and avoid converting to 4-digit values,
-years within the body of the file are ignored (the sequence is used to store data).
-Therefore, errors in the dates in the data section may result in data values being placed in the wrong dates in the result.
-* A record count is included in each record after the date.
-When writing large files, the record count should be limited to less than or equal to `9999` because of a 4-digit limit in the field.
-* Trace files have often been noted to contain formatting that is different from the documented NWSCard standard.
-Files may need to be edited to allow software to read the files.
+*   Only hourly data can be saved.
+    Daily data can be saved by treating as 24-hour values but can cause confusion due to the hour 24/0 conversion issue.
+    For example, hour 24 of day N is automatically converted to hour 0 of day N + 1 when reading the file.
+*   The identifier is used for the location part of the time series identifier and should not
+    contain '.' characters because this conflicts with the time series identifier standards.
+*   NWSCard data are often used with the NWSRFS.
+    The NWSRFS uses Zulu (GMT) time to store data in its database.
+    However, historical and real-time data are often viewed as local time.
+    Additionally, systems may be defined where, although the data interval is 6 hour,
+    the start of the computational day may be shifted so that it starts at 8 AM local time (or local standard time).
+    All of these factors can complicate managing time series data.
+    Unfortunately, the NWSCard file format does not support specifying a time zone.
+    Therefore, the end-user must understand how the times in the file relate to the current use of the data.
+*   Only one time series can be saved per file, unless the file contains traces.
+    In other words, a card file is not suitable for storing multiple time series (e.g., time series at different locations).
+*   Years within the body of the file are not 4-digit (the header does use 4-digit years).
+    To increase processing speed and avoid converting to 4-digit values,
+    years within the body of the file are ignored (the sequence is used to store data).
+    Therefore, errors in the dates in the data section may result in data values being placed in the wrong dates in the result.
+*   A record count is included in each record after the date.
+    When writing large files, the record count should be limited to less than or equal to `9999` because of a 4-digit limit in the field.
+*   Trace files have often been noted to contain formatting that is different from the documented NWSCard standard.
+    Files may need to be edited to allow software to read the files.

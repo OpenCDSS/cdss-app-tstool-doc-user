@@ -11,16 +11,13 @@
 
 ## Overview ##
 
-The `NewStatisticTimeSeries` command uses data from a time series to calculate a statistic
-for each interval in the year, and assigns the statistic value to each
-corresponding interval for the full period.
+The `NewStatisticTimeSeries` command uses data from a time series to calculate a statistic for each interval in the year,
+and assigns the statistic value to each corresponding interval for the full period.
 For example, for a statistic of Mean calculated from a daily time series,
 all January 1 values are averaged and the resulting January 1 values for the
-entire time series are set to the mean value.  Similarly, if monthly data are analyzed,
-all January values in the result will be set to the mean of the
-January values in the original time series.
-This command is useful for superimposing the long-term historical statistic on the
-original time series or real-time conditions.
+entire time series are set to the mean value.
+Similarly, if monthly data are analyzed, all January values in the result will be set to the mean of the January values in the original time series.
+This command is useful for superimposing the long-term historical statistic on the original time series or real-time conditions.
 Leap year statistics are computed from Feb 29 values and are visible only in leap years of the output time series.
 Missing data in the original time series will by default still result in the statistic being computed,
 but the `AllowMissingCount` and `MinimumSampleSize` parameters control the impacts of missing values.
@@ -36,7 +33,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![NewStatisticTimeSeries](NewStatisticTimeSeries.png)
+![NewStatisticTimeSeries command editor](NewStatisticTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">

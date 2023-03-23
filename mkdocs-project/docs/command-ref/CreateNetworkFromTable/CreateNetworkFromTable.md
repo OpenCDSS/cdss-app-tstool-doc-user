@@ -21,7 +21,7 @@ However, the network created by the `CreateNetworkFromTable` command does not ha
 knowledge of node type or calculations – this may be enhanced later.
 
 **<p style="text-align: center;">
-![AnalyzeNetworkPointFlow_Diagram](AnalyzeNetworkPointFlow_Diagram.png)
+![Node-based Network](AnalyzeNetworkPointFlow_Diagram.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -40,7 +40,7 @@ The network can then be used with commands such as
 [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) to select time series that were read for the network.
 
 **<p style="text-align: center;">
-![AnalyzeNetworkPointFlow_InputTable](AnalyzeNetworkPointFlow_InputTable.png)
+![Network Definition Input Table](AnalyzeNetworkPointFlow_InputTable.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -56,7 +56,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command for general parameters.
 
 **<p style="text-align: center;">
-![CreateNetworkFromTable_General](CreateNetworkFromTable_General.png)
+![CreateNetworkFromTable command editor for general parameters](CreateNetworkFromTable_General.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -66,7 +66,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters that map table columns to network node types.
 
 **<p style="text-align: center;">
-![CreateNetworkFromTable_Map](CreateNetworkFromTable_Map.png)
+![CreateNetworkFromTable command editor for column map parameters](CreateNetworkFromTable_Map.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -76,7 +76,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters that define node behavior.
 
 **<p style="text-align: center;">
-![CreateNetworkFromTable_Behavior](CreateNetworkFromTable_Behavior.png)
+![CreateNetworkFromTable command editor for node behavior parameters](CreateNetworkFromTable_Behavior.png)
 </p>**
 
 **<p style="text-align: center;">

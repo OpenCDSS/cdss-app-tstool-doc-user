@@ -30,7 +30,7 @@ The `TSPosition` parameter is generally not available in other commands - its us
 most cases because time series position in the output list can vary.
 
 **<p style="text-align: center;">
-![SelectTimeSeries](SelectTimeSeries.png)
+![SelectTimeSeries command editor](SelectTimeSeries.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -40,7 +40,7 @@ most cases because time series position in the output list can vary.
 The following dialog is used to edit the command and illustrates selecting time series by matching a property value.
 
 **<p style="text-align: center;">
-![SelectTimeSeries Property](SelectTimeSeries_Property.png)
+![SelectTimeSeries command editor specifying a property to match](SelectTimeSeries_Property.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -50,7 +50,7 @@ The following dialog is used to edit the command and illustrates selecting time 
 The following dialog is used to edit the command and illustrates selecting time series by evaluating a time series statistic.
 
 **<p style="text-align: center;">
-![SelectTimeSeries Statistic](SelectTimeSeries_Statistic.png)
+![SelectTimeSeries command editor specifying a statistic to check](SelectTimeSeries_Statistic.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -60,7 +60,7 @@ The following dialog is used to edit the command and illustrates selecting time 
 The following dialog is used to edit the command and illustrates selecting time series by matching locations in a network.
 
 **<p style="text-align: center;">
-![SelectTimeSeries Network](SelectTimeSeries_Network.png)
+![SelectTimeSeries command editor specifying network nodes](SelectTimeSeries_Network.png)
 </p>**
 
 **<p style="text-align: center;">

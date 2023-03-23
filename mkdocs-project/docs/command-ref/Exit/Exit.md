@@ -30,7 +30,7 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![Exit](Exit.png)
+![Exit command editor](Exit.png)
 </p>**
 
 **<p style="text-align: center;">
