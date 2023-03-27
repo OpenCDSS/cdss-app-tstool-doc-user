@@ -35,29 +35,46 @@ Issues may also be included in other repositories that are TSTool components.
 **Feature release to improve the experience for new TSTool users.**
 
 *   ![change](change.png) [14.7.0] The ***Datastore*** tab in the ***Input/Query Options***
-    in the main TSTool window is now selected by default.
-    The ***Input Type*** tab can be selected if necessary,
-    but the use of web service datastores and plugin datastores is increasing.
+    area of the main TSTool window is now selected by default.
+    The ***Input Type*** tab can be selected if necessary.
+    The use of web service datastores and plugin datastores is increasing and therefore
+    the ***Datastore*** tab is the new default.
 *   ![change](change.png) [14.7.0] TSTool is configured by default to show the ***Select HydroBase*** dialog at startup.
     HydroBase is enabled by default because of TSTool's use by the State of Colorado.
     Most users do not install a local version of HydroBase and therefore the dialog is not relevant,
     shows no HydroBase databases, and slows startup because TSTool searches for HydroBase databases.
-    Canceling the HydroBase selection now shows an additional dialog explaining how to disable HydroBase.
-*   ![change](change.png) [14.7.0] Update the command reference documentation to indicate which menu
-    a command editor is found.
-*   ![change](change.png) [14.7.0] Update the documentation for disabilities compliance:
+    Using the ***Cancel*** button on the HydroBase selection dialog
+    now shows an additional dialog explaining how to disable HydroBase.
+*   ![change](change.png) [14.7.0] Update the command reference documentation to indicates the menu
+    in which a command editor is found.
+*   ![change](change.png) [14.7.0] Update the documentation for web accessibility compliance
+    and site review checks:
     +   Links are now shown as underlined.
     +   Images use human-readable "alt text".
+    +   The Troubleshooting documentation for each command now links to the main TSTool troubleshooting.
 *   ![change](change.png) [14.7.0] TSTool has been tested with the new Synoptic data web services plugin.
     See the [Plugins Reference](../plugin-ref/overview.md).
+*   ![bug](bug.png) [14.7.0] Many commands that include `TableID` and similar parameters
+    provide a drop-down choice in the command editor to select a table.
+    These parameters can often be specified with `${Property}` syntax by typing into the form,
+    to allow for flexibility in workflows
+    and because it may be difficult to provide an accurate list of tables from previous commands.
+    Previously, typing into the editor field did not update the commmand shown at the bottom of the editor.
+    This has been fixed.
+*   ![bug](bug.png) [14.7.0] Fix the [`NewPatternTimeSeries`](../command-ref/NewPatternTimeSeries/NewPatternTimeSeries.md) command editor
+    to enable the `IrregularInterval` parameter when the `NewTSID` use `${Property}` and any occurrence of `IRR`, ignoring case.
 *   ![bug](bug.png) [14.7.0] Fix a minor bug in
     [`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md) where the `ReadData`
     parameter was not being handled in the command editor.
 *   ![change](change.png) [14.7.0] The [`Delta`](../command-ref/Delta/Delta.md) command has been enhanced:
     +   The `ResetType` parameter indicate the reset type for cumulative time series.
     +   The `ResetType=Auto` parameter automatically handles data with resets.
+    +   The `ResetType=Rollever` parameter handles data with rollover at a maximum value.
+    +   Additional checks have been implemented to help with review of data
+        such as cumulative precipitation.
+    +   Data problems that are detected can be output to a table to help with data quality control.
 *   ![new](new.png) [14.7.0] The [`SetPropertyFromDataStore`](../command-ref/SetPropertyFromDataStore/SetPropertyFromDataStore.md)
-    command has been added to set a propcessor property from a datastore configuration property.
+    command has been added to set a processor property from a datastore configuration property.
 
 ## Changes in Version 14.6.0 ##
 
