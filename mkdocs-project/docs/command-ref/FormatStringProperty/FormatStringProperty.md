@@ -81,7 +81,7 @@ Command Parameters
 | ***Integer*** | `Delimiter` | The delimiter used with `IntegerFormat`, to separate byte values. Use `\s` for space. | None, values are packed together. |
 | ***Integer*** | `NumBytes` | Number of bytes to output, for example specify `2` to output only two bytes from a 4-byte integer (the size in Java).  The most significant 0-bytes in an integer can be discarded without changing the value of the integer. |  Determine automatically based on the input properties.  |
 | ***All*** | `OutputProperty`<br>**required**|The name of the processor property to be set.|None – must be specified.|
-| ***All*** | `PropertyType`|Indicate the output property type, which allows the command to create properties other than strings.  The formatted string must have an appropriate value to allow the conversion:<ul><li>`Boolean` – string must be true or false (case-insensitive)</li><li>`DateTime` – string must be a standard date/time format such as supported by [`SetProperty`](../SetProperty/SetProperty.md)</li><li>`Double` – floating point number</li><li>`Integer` – integer number</li><li>`String` – any text</li><ul>|`String`|
+| ***All*** | `PropertyType`|Indicate the output property type, which allows the command to create properties other than strings.  The formatted string must have an appropriate value to allow the conversion:<ul><li>`Boolean` – string must be true or false (case-insensitive)</li><li>`DateTime` – string must be a standard date/time format such as supported by [`SetProperty`](../SetProperty/SetProperty.md)</li><li>`Double` – floating point number</li><li>`Integer` – integer number</li><li>`String` – any text</li></ul>|`String`|
 
 ### Endianness ###
 
@@ -117,7 +117,7 @@ For example `ff` is equivalent to 8-bits set to `1` or decimal `255`.
 A four byte unsigned integer has a value range of `0` to `4,294,967,295`,
 whereas a signed integer has a value range of `-2,147,483,648` to `2,147,483,647`.
 
-A decimal value of `25000` has a big-endian hexidecimal value of `000061a8`,
+A decimal value of `25000` has a big-endian hexadecimal value of `000061a8`,
 meaning that the byte values from left to right are (`00`, `00`, `61`, `a8`).
 
 The same number in little-endian format is the reverse order (`a8`, `61`, `00`, `00`).

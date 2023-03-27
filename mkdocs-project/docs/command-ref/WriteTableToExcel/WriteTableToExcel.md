@@ -14,8 +14,8 @@
 The `WriteTableToExcel` command writes a table to a worksheet in a Microsoft Excel workbook file.
 A contiguous block of cells (rectangle) must be specified in one of the following ways to receive the table:
 
-*   Specify the upper-left cell in a range of cells using Excel address notation (e.g., `A1`)
-*   Specify a range of cells using Excel address notation (e.g., `A1:D10`)
+*   Specify the upper-left cell in a range of cells using Excel address notation (e.g., `A1`).
+*   Specify a range of cells using Excel address notation (e.g., `A1:D10`).
 *   Specify the name of an Excel named range.
 *   Specify a table name (essentially a named range).
 
@@ -100,7 +100,7 @@ Command Parameters
 |`ExcelColumnNames`|Indicate how to determine the column names for the Excel table (in order to not overwrite with data rows), one of:<br><ul><li>`FirstRowInRange` – column names are written to the first row in the Excel address range</li><li>`None` – column names are not written</li><li>`RowBeforeRange` – column names are written to the row before the Excel address range</li></ul>|`None`|
 |`ColumnNamedRanges`|The map of column names to named ranges, useful when the column of values is used as choices in Excel data validation.|No named ranges will be defined.|
 |`KeepOpen`|Indicate whether to keep the Excel file open (`True`) or close after creating (`False`).  Keeping the file open will increase performance because later commands will not need to reread the workbook.  Make sure to close the file in the last Excel command.|`False`|
-|`ColumnCellTypes`|Column names and corresponding cell types using notation: `ColumnName1:CellType1,ColumnName2:CellType2`<br>Column name can be Default to set the default for all output columns.  Supported cell types are:<ul><li>`Auto` – determine cell type from table column</li><li>`Text` – Excel text cell</li><ul>|`Auto`|
+|`ColumnCellTypes`|Column names and corresponding cell types using notation: `ColumnName1:CellType1,ColumnName2:CellType2`<br>Column name can be Default to set the default for all output columns.  Supported cell types are:<ul><li>`Auto` – determine cell type from table column</li><li>`Text` – Excel text cell</li></ul>|`Auto`|
 |`ColumnWidths`|Column names and corresponding widths using notation:<br>`ColumnName1:Width1,ColumnName2:Width2`<br>Column name can be `Default` to set the default for all output columns and `EmptyColumns` to set the width for columns with no data values.  Supported width values are:<br><ul><li>`Auto` – determine width from table contents</li><li>`N` – number of 1/256 of character widths (maximum is 256*256)|Default column with determined by Excel.|
 |`ColumnDecimalPlaces`|Column names and corresponding number of decimal places, for floating point numbers, using notation:<br>`ColumnName1:Num1,ColumnName2:Num2`|Determine from table column precision, or 6 if unable to determine from table.|
 |`ConditionTableID`|Identifier for condition table (see below).  Can be specified using processor `${Property}`.|Style formatting is not used.|

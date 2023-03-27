@@ -51,7 +51,7 @@ Command Parameters
 |--------------|-----------------|-----------------|
 |`Alias`<br>**required**|The alias to assign to the time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing, as an alternative to the time series identifier (`TSID`).  Can be specified using processor `${Property}`.|None – must be specified.|
 |`NewTSID`<br>**required**|The time series identifier to be assigned to the new time series, which is useful to avoid confusion with the original time series.  Can be specified using processor `${Property}`.|None – must be specified.|
-|`IrregularInterval`|Interval to use to populate irregular time series (e.g., `1Hour`, `Month`), necessary because data need to be assigned somehow.|None – must be specified for irregular time series.|
+|`IrregularInterval`| Interval to use when populating irregular interval time series.  It is recommended that the newer convention interval like `IrregHour` is used in the `NewTSID` rather than generic `Irregular`. In any case, this parameter defines the spacing of the irregular data (e.g., `06Hour` would result in 4 values per day for a time series with `IrregHour` interval). | Must be specified for irregular interval time series.|
 |`Description`|Description for the time series.  Can be specified using processor `${Property}`.|None.|
 |`SetStart`<br>**required**|Start date/time to set data.  Can be specified using processor `${Property}`.|None – must be specified.|
 |`SetEnd`<br>**required**|End date/time to set data.  Can be specified using processor `${Property}`.|None – must be specified.|
