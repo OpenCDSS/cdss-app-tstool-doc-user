@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.7.1](#changes-in-version-1471)
 *   [Changes in Version 14.7.0](#changes-in-version-1470)
 *   [Changes in Version 14.6.0](#changes-in-version-1460)
 *   [Changes in Version 14.5.4](#changes-in-version-1454)
@@ -29,6 +30,18 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.7.1 ##
+
+**Maintenance release to address bugs and limitations.**
+
+*   ![bug](bug.png) [14.7.1] Update the ***View / Datastores*** view table
+    to enable select for copy and paste.
+*   ![change](change.png) [14.7.1] Enhance the [`Delta`](../command-ref/Delta/Delta.md) command:
+    +   Add the `CopyDataFlags`, `AutoRestFlag`, `RolloverFlag`, and `ManualResetFlag` parameters
+        to allow setting flags to check the output.
+    +   Add the `RolloverDeltaLimit` parameter to control whether a rollover should
+        be handled as a manual rese.
 
 ## Changes in Version 14.7.0 ##
 

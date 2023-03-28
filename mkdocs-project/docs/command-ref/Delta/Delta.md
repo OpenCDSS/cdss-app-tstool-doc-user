@@ -27,7 +27,8 @@ Examples of use include:
 The output value in the simplest case with default command parameters is
 the current value minus the previous value.
 The result is set to missing if this value cannot be computed due to missing input values,
-and can also be set to missing if certain conditions met by optional data checks.
+and can also be set to missing if certain conditions met by optional data checks
+(see the `DeltaLimitAction` and `IntervalLimitAction` parameters).
 
 Irregular-interval time series that result in differences not being computed will have
 missing values inserted in output at appropriate locations to maintain a consistent
@@ -138,6 +139,7 @@ By default, the reset is assumed to be relative to a zero datum value
 For example, annual rain or snow cumulative precipitation can be processed to determine incremental precipitation.
 Because no upper bound is set, it is not possible to add a delta above value before the reset,
 as can be done with `ResetType=Rollover`.
+Therefore, the value after the reset is the value.
 
 The following example is for flood warning system cumulative precipitation data.
 
@@ -218,17 +220,40 @@ Precipitation Time Series input for Variable Reset (<a href="../overview-reset-a
 
 #### Rollover Reset with Bounding Values ####
 
-If the cumulative time series is allowed to increase (or decrease) with reset using known bounding values,
-use `RestType=Rollover` and specify the `ResetMin` and `ResetMax` parameters to bound the values.
 This is appropriate, for example, where the cumulative value correspond to sensor counts such as
 precipitation sensor bucket tips.
 
-For `ExpectedTrend=Increasing` and cumulative time series,
-the input time series value for a reset will have a small value that follows a large value.
+If the cumulative time series is allowed to increase (or decrease) with reset using known bounding values, specify:
+
+*   `ExpectedTrend=Increasing` - to indicate an increasing accumulation (the following assumes increasing)
+*   `RestType=Rollover` - to indicate that rollover is expected
+*   `ResetMax` - maximum data value (rollover will use *`ResetMax` - previous value* as an "upper delta")
+*   `ResetMin` - minimum data value (rollover will add this to the above "upper delta")
+*   `RolloverDeltaLimit`:
+    +   if *`ResetMax` minus the previous value* is <= `RolloverDeltaLimit`, a rollover will occur as described above
+    +   otherwise, a manual reset is assumed because values have not reached the `ResetMax`
+        and the delta value is the difference between the value and `ResetMin`
+*   `RolloverFlag` - use to mark rollover resets
+*   `ManualResetFlag` - use to mark manual resets
+
+The normal case for rollover is that he input time series value will have a small value that follows a large value.
 The delta is computed as:
 
 *   The difference between `ResetMax` and the previous value.
 *   Plus the difference between the value and `ResetMin`.
+
+The normal case for a manual reset is that the delta after the reset is set to the value minus the datum.
+
+The following example is for `ResetMin=0`, `ReetMax=20`, and `RolloverDeltaLimit=.3`,
+which cause both rollover and manual resets to occur.
+
+**<p style="text-align: center;">
+![Example data showing rollover and manual reset](overview-reset-rollover-table.png)
+</p>**
+
+**<p style="text-align: center;">
+Example Data Showing Rollover (`R` flag) and Manual Reset (`r flag) (<a href="../overview-reset-rollover-table.png">see also the full-size image</a>)
+</p>**
 
 Specific cases outside of normal data are:
 
@@ -244,10 +269,10 @@ the inputs do not conform to expected values.
 Out of range values indicate erroneous data that should be corrected before being used in further analysis.
 Additional checks may be implemented in the future to detect and deal with bad data.**
 
-Using the `DeltaLImit` and `IntervalLimit` parameters may cause issues with rollover resets
-in cases where a sensor is taken offline for a period.
-For example if stations are winterized to avoid damage to sensors a period longer than `IntervalLimit`
-may be flagged when stations are turned online.
+The `DeltaLimit` and `IntervalLimit` parameters can be used to identify potential data issues.
+The `IntervalLimit` parameter may not be appropriate if data collection stations are taken out of service
+for some seasons.
+
 
 ## Command Editor ##
 
@@ -322,36 +347,41 @@ Command Parameters
 ||`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 ||`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |***General***|`ExpectedTrend`|Indicates the expected trend of data for cumulative time series, used when values can reset:<ul><li>`Decreasing` – values should decrease and then reset (**has not been fully tested**)</li><li>`Increasing` – values should increase and then reset</li><li>`Variable` – variable pattern increasing and decreasing and don’t reset at fixed thresholds|`Variable`|
-||`ResetType`| The reset type:<ul><li>`Auto` - automatically reset when a cumulative time series trend direction changes (see the ***Reset - Auto*** tab)</li><li>`Rollover` - automatically reset when a cumulative time series trend direction changes and values are bounded</li><li>`Unknown` - reset behavior is unknown (delta is simple calculation of current minus previous)</li></ul> | `Unknown` |
+||`ResetType`| The reset type:<ul><li>`Auto` - automatically reset when a cumulative time series trend direction changes (see the ***Reset - Auto*** tab)</li><li>`Rollover` - automatically reset when a cumulative time series trend direction changes and values are bounded (see the ***Reset - Rollover*** tab)</li><li>`Unknown` - reset behavior is unknown (delta is simple calculation of current minus previous)</li></ul> | `Unknown` |
 ||`AnalysisStart`|The date/time to start analyzing data.  Can be specified using `${Property}`.|Full period is analyzed.|
 ||`AnalysisEnd`|The date/time to end analyzing data.  Can be specified using `${Property}`.|Full period is analyzed.|
-||`Flag`|A string to flag problem values.  Use a `+` in front of the flag to append. These flags can be overridden by more specific flag parameters.<br>If specified as `Auto`, the following, default flags will be used with `ResetType=Rollover`:</li><li>`R` – indicates reset previous value out of range > `ResetMax`</li><li>`r` – indicates reset previous value out of range < `ResetMin`</li><li>`V` – indicates value out of range > `ResetMax`</li><li>`v` – indicates value out of range < `ResetMin`</li><ul><br>Can be specified using `${Property}`.|Do not flag problem values.|
+||`Flag`|A string to flag problem values.  Use a `+` in front of the flag to append. These flags can be overridden by more specific flag parameters.<br>If specified as `Auto`, the following, default flags will be used with `ResetType=Rollover`:<ul><li>`R` – indicates reset previous value out of range > `ResetMax`</li><li>`r` – indicates reset previous value out of range < `ResetMin`</li><li>`V` – indicates value out of range > `ResetMax`</li><li>`v` – indicates value out of range < `ResetMin`</li></ul><br>Can be specified using `${Property}`.|Do not flag problem values.|
 ||`Alias`|Alias to assign to created time series.  A literal string can be specified or use %-specifiers to set the alias dynamically (e.g., `%L-delta`) to use the location part of the identifier.|None (but is highly recommended).|
+||`CopyDataFlags` | Whether to copy the data flags from the input time series to the delta time series (`True`) or not (`False`). Other flags can be specified with a leading `+` to append flags. | `False` |
 |***Delta Limit*** | `DeltaLimit` | Use this and the following parameters to check for larger than expected delta values. The absolute value for the delta that is allowed.  Larger delta values will result in a record in the output table (see the ***Output Table*** tab) and an action can be taken (see below). | |
-| | `DeltaLimitAction` | The action to be taken when a delta value is larger than `DeltaLimit`:<ul><li>`Keep` - keep the out of range delta value</li><li>`SetMissing` - replace the out of range value with the missing data value</li></ul> | `Keep` |
-| | `DeltaLimitFlag` | The data flag to set when a delta value is larger than `DeltaLimit`.  Use a `+` in front of the flag to append. | No flag is set. |
-| | `IntervalLimit` | Use this and the following parameters to check for larger than expected interval between previous and current values, only used with irregular interval time series. A larger than expected interval will result in a record in the output able (see the ***Output Table*** tab) and an action can be taken (see below). | |
-| | `IntervalLimitAction` | The action to be taken when an interval value is larger than `IntervalLimit`:<ul><li>`Keep` - keep the delta value</li><li>`SetMissing` - replace the delta value with the missing data value</li></ul> | `Keep` |
-| | `IntervalLimitFlag` | The data flag to set when an interval is larger than `IntervalLimit`.  Use a `+` in front of the flag to append. | `Keep` |
-|***Reset - Auto***<br>For `RestType=` `Auto` |`AutoResetDatum`| When the data values reset, calculate the first delta value after the reset relative to the specified datum.  Only used with `ExpectedTrend=Increasing`. | `0` (zero).|
-|***Reste - Rollover***<br>For `ResetType=` `Rollover` |`ResetMin`| The minimum expected data value, used when data are expected to roll over at `ResetMax` and reset to `ResetMin`, for example raw precipitation values that reset to zero when an accumulation sensor reaches its maximum value.|Data bounds are not checked.|
-||`ResetMax`| The maximum expected data value, used when data are expected to roll over at `RestMax` and reset to `ResetMin`, for example raw precipitation values that reset to zero when an accumulation sensor reaches its maximum value.| Reset bounds are not checked.|
-||`ResetProximityLimit` | **Future feature.** The allowed delta that occurs prior to or after a reset, within the `ResetProximityLimitInterval`, used to check for bad data around a manual reset, such as calibration data. | |
-||`ResetProximityLimitInterval` | **Future feature.** The interval used to check for `ResetProximityLevel` around a manual reset, such as calibration data that should not be included in data values. | |
-||`ResetProximityLimitFlag` | **Future feature.** The flag to set when a `ProximityLimit` condition is met.  Use a `+` in front of the flag to append. | |
+| | `DeltaLimit`<br>`Action` | The action to be taken when a delta value is larger than `DeltaLimit`:<ul><li>`Keep` - keep the out of range delta value</li><li>`SetMissing` - replace the out of range value with the missing data value</li></ul> | `Keep` |
+| | `DeltaLimit`<br>`Flag` | The data flag to set when a delta value is larger than `DeltaLimit`.  Use a `+` in front of the flag to append. Can be specified using `${Property}`. | No flag is set. |
+| | `IntervalLimit` | Use this and the following parameters to check for larger than expected interval between previous and current values, only used with irregular interval time series. A larger than expected interval will result in a record in the output able (see the ***Output Table*** tab) and an action can be taken (see below). Can be specified using `${Property}`.| |
+| | `IntervalLimit`<br>`Action` | The action to be taken when an interval value is larger than `IntervalLimit`:<ul><li>`Keep` - keep the delta value</li><li>`SetMissing` - replace the delta value with the missing data value</li></ul> | `Keep` |
+| | `IntervalLimit`<br>`Flag` | The data flag to set when an interval is larger than `IntervalLimit`.  Use a `+` in front of the flag to append. Can be specified using `${Property}`. | `Keep` |
+|***Reset - Auto***<br>For `RestType=` `Auto` |`AutoReset`<br>`Datum`| When the data values reset, calculate the first delta value after the reset relative to the specified datum.  Only used with `ExpectedTrend=Increasing`. Can be specified using `${Property}`.| `0` (zero).|
+| | `AutoResetFlag` | Flag to set for automatic resets.  Use a `+` in front of the flag to append.  Can be specified with `${Property}`. | `+A` is used if `Auto` is specified. |
+|***Reset - Rollover***<br>For `ResetType=` `Rollover` |`ResetMin`| The minimum expected data value, used when data are expected to roll over at `ResetMax` and reset to `ResetMin`, for example raw precipitation values that reset to zero when an accumulation sensor reaches its maximum value.|Data bounds are not checked. Can be specified using `${Property}`.|
+||`ResetMax`| The maximum expected data value, used when data are expected to roll over at `RestMax` and reset to `ResetMin`, for example raw precipitation values that reset to zero when an accumulation sensor reaches its maximum value.| Reset bounds are not checked. Can be specified using `${Property}`. |
+||`RolloverDelta`<br>`Limit` | If specified: <ul><li>rollover reset will occur if the `ResetMax` - delta (previous) is <= `RolloverDeltaLimit`, used to differentiate between rollover and manual resets</li><li>otherwise, manual reset will occur</li></ul> | Rollover is allowed for any delta reset. |
+||`RolloverFlag` | Flag to set for rollovers.  Use a `+` in front of the flag to append.  Can be specified with `${Property}`. | `+R` is used if `Auto` is specified. |
+||`ManualReset`<br>`Flag` | Flag to set for manual resets.  Use a `+` in front of the flag to append.  Can be specified with `${Property}`. | `+r` is used if `Auto` is specified. |
+||`Reset`<br>`Proximity`<br>`Limit` | **Future feature.** The allowed delta that occurs prior to or after a reset, within the `ResetProximityLimitInterval`, used to check for bad data around a manual reset, such as calibration data. Can be specified using `${Property}`.  | |
+||`Reset`<br>`Proximity`<br>`LimitInterval` | **Future feature.** The interval used to check for `ResetProximityLevel` around a manual reset, such as calibration data that should not be included in data values. Can be specified using `${Property}`.  | |
+||`Reset`<br>`Proximity`<br>`LimitFlag` | **Future feature.** The flag to set when a `ProximityLimit` condition is met.  Use a `+` in front of the flag to append.  Can be specified using `${Property}`. | |
 |***Output Table*** |`TableID`|Identifier for output table to contain check results.  Specify an existing table or new table to create.  Can be specified using processor `${Property}`.|No table output.|
-||`TableTSIDColumn`|Table column name for time series TSID.|Required for table.|
-||`TableTSIDFormat`|The specification to format the time series identifier to insert into the `TSID` column.  Use the format choices and other characters to define a unique identifier.|Required for table.|
-||`TableDateTimeColumn`|Table column name for date/time.|Column is not output.|`DateTime`|
-||`TableValuePreviousColumn`|Table column name for time series data values for date/time previous to the current value matching `DateTimeColumn` .|`ValuePrevious`|
-||`TableValueColumn`|Table column name for time series data values matching `DateTimeColumn` .|`Value`|
-||`TableDeltaCalculatedColumn`|Table column name for delta after initial calculation.|`DeltaCalculated`|
-||`TableActionColumn`|Table column name for action taken due to checks.|`Action`|
-||`TableDeltaColumn`|Table column name for delta after actions are taken (e.g., if set to missing).|`Delta`|
-||`TableFlagColumn`|Table column name for the flag corresponding to the action. |`Flag`|
-||`TableProblemColumn`|Table column name for data check problem messages.|`Problem`|
-||`ProblemCountProperty`|Name of processor property to set with count of problems (table length).  Can use processor `${Property}` and time series `%` or `${ts:Property}`.|No property is set.|
-||`ProblemCountTimeSeriesProperty`|Name of time series property to set with count of problems (table length).  Can use processor `${Property}` and time series `%` or `${ts:Property}`.|No property is set.|
+||`TableTSID`<br>`Column`|Table column name for time series TSID.|Required for table.|
+||`TableTSID`<br>`Format`|The specification to format the time series identifier to insert into the `TSID` column.  Use the format choices and other characters to define a unique identifier.|Required for table.|
+||`TableDateTime`<br>`Column`|Table column name for date/time.|Column is not output.|`DateTime`|
+||`TableValue`<br>`Previous`<br>`Column`|Table column name for time series data values for date/time previous to the current value matching `DateTimeColumn` .|`ValuePrevious`|
+||`TableValue`<br>`Column`|Table column name for time series data values matching `DateTimeColumn` .|`Value`|
+||`TableDelta`<br>`Calculated`<br>`Column`|Table column name for delta after initial calculation.|`DeltaCalculated`|
+||`TableAction`<br>`Column`|Table column name for action taken due to checks.|`Action`|
+||`TableDelta`<br>`Column`|Table column name for delta after actions are taken (e.g., if set to missing).|`Delta`|
+||`TableFlag`<br>`Column`|Table column name for the flag corresponding to the action. |`Flag`|
+||`TableProblem`<br>`Column`|Table column name for data check problem messages.|`Problem`|
+||`ProblemCount`<br>`Property`|Name of processor property to set with count of problems (table length).  Can use processor `${Property}` and time series `%` or `${ts:Property}`.|No property is set.|
+||`ProblemCount`<br>`TimeSeries`<br>`Property`|Name of time series property to set with count of problems (table length).  Can use processor `${Property}` and time series `%` or `${ts:Property}`.|No property is set.|
 
 ## Examples ##
 

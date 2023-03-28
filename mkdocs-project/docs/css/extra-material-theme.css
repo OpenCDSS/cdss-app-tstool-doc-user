@@ -5,7 +5,7 @@
  */
 
 /**
- * ADA compliance requires underline for links so that colorblind people can see the link.
+ * Web accessibility requires underline for links so that colorblind people can see the link.
  */
 a:link {
   text-decoration: underline;
