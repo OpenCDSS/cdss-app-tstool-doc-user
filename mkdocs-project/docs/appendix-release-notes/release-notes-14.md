@@ -5,7 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
-*   [Changes in Version 14.7.1](#changes-in-version-1471)
+*   [Changes in Version 14.8.0](#changes-in-version-1480)
 *   [Changes in Version 14.7.0](#changes-in-version-1470)
 *   [Changes in Version 14.6.0](#changes-in-version-1460)
 *   [Changes in Version 14.5.4](#changes-in-version-1454)
@@ -31,17 +31,22 @@ Issues may also be included in other repositories that are TSTool components.
 
 ----------
 
-## Changes in Version 14.7.1 ##
+## Changes in Version 14.8.0 ##
 
 **Maintenance release to address bugs and limitations.**
 
-*   ![bug](bug.png) [14.7.1] Update the ***View / Datastores*** view table
+*   ![bug](bug.png) [14.8.0] Update the ***View / Datastores*** view table
     to enable select for copy and paste.
-*   ![change](change.png) [14.7.1] Enhance the [`Delta`](../command-ref/Delta/Delta.md) command:
+*   ![change](change.png) [14.8.0] Enhance the [`Delta`](../command-ref/Delta/Delta.md) command
+    to improve handling of rollover:
     +   Add the `CopyDataFlags`, `AutoRestFlag`, `RolloverFlag`, and `ManualResetFlag` parameters
         to allow setting flags to check the output.
     +   Add the `RolloverDeltaLimit` parameter to control whether a rollover should
         be handled as a manual rese.
+*   ![change](change.png) [14.8.0] Enhance the [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command:
+    +   Add `First` and `Last` parameters to simplify deleting table rows at the start and end of a table.
+    +   Add `DeleteCountProperty` and `RowCountProperty` parameters to allow checking
+        that the delete happened as expected
 
 ## Changes in Version 14.7.0 ##
 

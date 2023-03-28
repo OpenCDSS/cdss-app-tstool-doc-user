@@ -13,14 +13,19 @@
 
 The `DeleteTableRows` command deletes specified rows from a table using one of the following approaches:
 
-*   ***Condition***
+*   ***Condition:***
     +   delete rows where a column value matches a condition
-*   ***Row Number***
+*   ***Row Number:***
     +   delete specific row numbers
     +   delete all rows
+    +   delete first N or last N rows, useful when used with the
+        [`SortTable`](../SortTable/SortTable.md`) command
+        to process the first or last item(s) in a table
 
 Because the deletion is a destructive action,
-one of the above conditions is required to be specified.
+only one of the above conditions is required to be specified.
+The number of rows deleted and the table row count after the delete can be set as processor
+properties so that the delete can be checked.
 
 ## Command Editor ##
 
@@ -39,11 +44,19 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-![DeleteTableRows command editor for Row Number parameter](DeleteTableRows_RowNum.png)
+![DeleteTableRows command editor for Row Number parameters](DeleteTableRows_RowNum.png)
 </p>**
 
 **<p style="text-align: center;">
-`DeleteTableRows` Command Editor for Row Number Parameter (<a href="../DeleteTableRows_RowNum.png">see also the full-size image</a>)
+`DeleteTableRows` Command Editor for Row Number Parameters (<a href="../DeleteTableRows_RowNum.png">see also the full-size image</a>)
+</p>**
+
+**<p style="text-align: center;">
+![DeleteTableRows command editor for Output Properties parameters](DeleteTableRows_OutputProperties.png)
+</p>**
+
+**<p style="text-align: center;">
+`DeleteTableRows` Command Editor for Output Properties Parameters (<a href="../DeleteTableRows_OutputProperties.png">see also the full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -57,11 +70,15 @@ DeleteTableRows(Parameter="Value",...)
 Command Parameters
 </p>**
 
-| **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| --------------|-----------------|----------------- |
-|`TableID`<br>**required**|The table identifier for the table to process. Can specify with `${Property}`.|None - must be specified.|
-|`Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information in the [Tables appendix](../../appendix-tables/tables.md#condition-evaluation-for-rows).|Condition or row number must be specified.|
-|`DeleteRowNumbers`|The row number(s) to delete:<ul><li>Comma-separated list of row numbers (1+)</li><li>`last` to delete the last row</li><li>`*` to delete all rows.</li></ul><br> Can use `${Property}`.|Condition or row number must be specified.|
+| **Tab** | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| --------|------|-----------------|----------------- |
+| ***All*** | `TableID`<br>**required**|The table identifier for the table to process. Can specify with `${Property}`.|None - must be specified.|
+| ***Condition*** | `Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information in the [Tables appendix](../../appendix-tables/tables.md#condition-evaluation-for-rows).||
+| ***Row Number*** |`DeleteRowNumbers`|The row number(s) to delete:<ul><li>comma-separated list of row numbers (1+)</li><li>`last` to delete the last row</li><li>`*` to delete all rows.</li></ul><br> Can use `${Property}`.||
+| | `First` | <ul><li>If a number `N` is specified, the first `N` rows will be deleted.</li><li>If a number `-N` is specified, all rows except the first `N` will be deleted.</li></ul> | |
+| | `Last` | <ul><li>If a number `N` is specified, the last `N` rows will be deleted.</li><li>If a number `-N` is specified, all rows except the last `N` will be deleted.</li></ul> | |
+| ***Output Properties*** | `DeleteCountProperty` | The name of a property to set to the number of rows deleted. | |
+| | `RowCountProperty` | The name of a property to set to the number of table rows after the delete. | |
 
 ## Examples ##
 
@@ -93,3 +110,4 @@ See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) 
 
 *   [`DeleteTableColumns`](../DeleteTableColumns/DeleteTableColumns.md) command
 *   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
+*   [`SortTable`](../SortTable/SortTable.md) command
