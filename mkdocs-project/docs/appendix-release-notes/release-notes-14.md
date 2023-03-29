@@ -47,6 +47,15 @@ Issues may also be included in other repositories that are TSTool components.
     +   Add `First` and `Last` parameters to simplify deleting table rows at the start and end of a table.
     +   Add `DeleteCountProperty` and `RowCountProperty` parameters to allow checking
         that the delete happened as expected
+*   ![change](change.png) [14.8.0] Enhance the [`ListFiles`](../command-ref/ListFiles/ListFiles.md) command:
+    +   Update to list folders in addition to files as controlled by the `ListFiles` and `ListFolders` parameters.
+    +   Add the `ListScope` parameter to allow listing files in the specified folder or also all subfolders.
+    +   Add additional information to the output table including type as `File` or `Folder`, `Size`, `Owner`, `ParentFolder`,
+        `LastModified` time.
+    +   Change the output table column `FileName` to `Name` to handle files and folders.
+    +   Change the `IncludeFiles` parameter to `IncludeNames` to handle files and folders.
+    +   Change the `ExcludeFiles` parameter to `ExcludeNames` to handle files and folders.
+    +   The command parameter defaults match previous functionality.
 
 ## Changes in Version 14.7.0 ##
 
