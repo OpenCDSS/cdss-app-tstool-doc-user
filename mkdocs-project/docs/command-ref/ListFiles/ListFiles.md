@@ -11,14 +11,32 @@
 
 ## Overview ##
 
-The `ListFiles` command lists files in a folder and saves the list to a table.
+The `ListFiles` command lists files and folders in a starting folder and saves the list to a table.
 The table can then be used to drive processes, such as looping with [`For`](../For/For.md) command
 and working with a template.
+
+Parameters are available to control the listing:
+
+*   List files and/or folders.
+*   Process a single folder or also process sub-folders.
+*   Provide names to include and exclude.
+
 The resulting table will include the following columns:
 
-*   `FileName` – name of the file without leading path
-*   `RelativePath` – name of the file as a relative path (relative to the command file working directory)
-*   `AbsolutePath` – name of the file as the full absolute path
+**<p style="text-align: center;">
+`ListFiles` Output Table
+</p>**
+
+| **Column** | **Description** |
+| -- | -- |
+| `Name` | Name of the file without leading path (prior to TSTool 14.8.0 this column is called `FileName`). |
+| `RelativePath` | File or folder path relative to the command file working directory. |
+| `AbsolutePath` | File or folder absolute path. |
+| `ParentFolder` | Parent folder absolute path path. |
+| `Type` | <ul><li>`File` - for files</li><li>`Folder` - for folders</li></ul> |
+| `Size` | File size in bytes, blank for folders. |
+| `Owner` | The file or folder owner. |
+| `LastModified` | The last modification time for the file or folder in local time. |
 
 ## Command Editor ##
 
@@ -49,11 +67,14 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`Folder`<br>**required**|The path of the folder for which to list files. | None - must be specified. |
-|`IncludeFiles`|A pattern indicating files to include from Folder.  Use `*` in the filename for a wildcard.| All files will be included.|
-|`ExcludeFiles`|A pattern indicating files to exclude from Folder, checked after the `IncludeFiles` parameter is checked.  Use `*` in the filename for a wildcard.| No files will be excluded.|
-|`TableID`<br>**required**|The identifier for the table to output the list.  If the table does not exist, it will be created.  See also `Append`.|None - must be specified.|
-|`Append`|Indicate whether list output should be appended to the table.  This allows multiple `ListFiles` commands to be used to create a larger list.|`False` - the table will contain only the current output list.|
+|`Folder`<br>**required**|The starting folder. | None - must be specified. |
+|`ListScope` | The scope for the listing:<ul><li>`All` - `Folder` and its sub-folders</li><li>`Folder` - only list the contents immediately in `Folder`</li></ul> | `Folder` |
+|`ListFiles` | Whether files should be listed (`True`) or not (`False`). | `True` |
+|`ListFolders` | Whether folders should be listed (`True`) or not (`False`). | `False` |
+|`IncludeNames`|A pattern indicating names to include. The pattern is only checked for the name, not the leading path. Use `*` in the name for a wildcard.| All names will be included.|
+|`ExcludeNames`|A pattern indicating names to exclude. The pattern is only checked for the name, not the leading path. Use `*` in the name for a wildcard.| No names will be excluded.|
+|`TableID`<br>**required**|The identifier for the output table.  If the table does not exist, it will be created.  See also `Append`.|None - must be specified.|
+|`Append`|Indicate whether list output should be appended to the table (`True`).  This allows multiple `ListFiles` commands to be used to create a larger list.|`False` - the table will contain only the current output list.|
 
 ## Examples ##
 
