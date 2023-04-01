@@ -35,7 +35,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToDelimitedFile` Command Editor (<a href="../WriteTableToDelimitedFile.png">see also the full-size image</a>)
+`WriteTableToDelimitedFile` Command Editor (<a href="../WriteTableToDelimitedFile.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

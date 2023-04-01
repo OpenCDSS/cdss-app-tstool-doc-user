@@ -26,7 +26,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetConstant` Command Editor (<a href="../SetConstant.png">see also the full-size image</a>)
+`SetConstant` Command Editor (<a href="../SetConstant.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

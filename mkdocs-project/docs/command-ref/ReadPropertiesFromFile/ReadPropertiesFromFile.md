@@ -55,7 +55,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ReadPropertiesFromFile` Command Editor (<a href="../ReadPropertiesFromFile.png">see also the full-size image</a>)
+`ReadPropertiesFromFile` Command Editor (<a href="../ReadPropertiesFromFile.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -56,7 +56,7 @@ The following dialog is used to create and utilize principal component analysis.
 </p>**
 
 **<p style="text-align: center;">
-Principal Component Analysis Tools (<a href="../PCA-tool.png">see also the full-size image</a>)
+Principal Component Analysis Tools (<a href="../PCA-tool.png">see full-size image</a>)
 </p>**
 
 ## Command Editor ##
@@ -72,7 +72,7 @@ The following dialog is used to edit the command.
 </p>**
 
 **<p style="text-align: center;">
-`FillPrincipalComponentAnalysis` Command Editor (<a href="../FillPrincipalComponentAnalysis.png">see also the full-size image</a>)
+`FillPrincipalComponentAnalysis` Command Editor (<a href="../FillPrincipalComponentAnalysis.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

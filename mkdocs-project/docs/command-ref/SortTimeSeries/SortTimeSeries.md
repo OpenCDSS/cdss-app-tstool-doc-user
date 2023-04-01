@@ -32,7 +32,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SortTimeSeries` Command Editor to Sort by TSID or Alias (<a href="../SortTimeSeries.png">see also the full-size image</a>)
+`SortTimeSeries` Command Editor to Sort by TSID or Alias (<a href="../SortTimeSeries.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command when sorting by a property.
@@ -42,7 +42,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SortTimeSeries` Command Editor to Sort by a Time Series Property (<a href="../SortTimeSeries_Property.png">see also the full-size image</a>)
+`SortTimeSeries` Command Editor to Sort by a Time Series Property (<a href="../SortTimeSeries_Property.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for property formatting.
@@ -52,7 +52,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SortTimeSeries` Command Editor to Sort by a Time Series Formatted Property (<a href="../SortTimeSeries_PropertyFormat.png">see also the full-size image</a>)
+`SortTimeSeries` Command Editor to Sort by a Time Series Formatted Property (<a href="../SortTimeSeries_PropertyFormat.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

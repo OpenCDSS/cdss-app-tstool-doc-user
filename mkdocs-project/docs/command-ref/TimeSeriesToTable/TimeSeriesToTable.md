@@ -61,7 +61,7 @@ Note that the value columns can be specified using time series properties.
 </p>**
 
 **<p style="text-align: center;">
-`TimeSeriesToTable` Command Editor to Create Multi-Column Data Table (<a href="../TimeSeriesToTable.png">see also the full-size image</a>)
+`TimeSeriesToTable` Command Editor to Create Multi-Column Data Table (<a href="../TimeSeriesToTable.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -121,7 +121,7 @@ the TestTable identifier will display the table similar to the following:
 </p>**
 
 **<p style="text-align: center;">
-`TimeSeriesToTable` Multi-Column Data Table (<a href="../TimeSeriesToTable2.png">see also the full-size image</a>)
+`TimeSeriesToTable` Multi-Column Data Table (<a href="../TimeSeriesToTable2.png">see full-size image</a>)
 </p>**
 
 ### Example for Single Column Output Data Table ###
@@ -136,7 +136,7 @@ The column and format for the TSID also must be specified.
 </p>**
 
 **<p style="text-align: center;">
-`TimeSeriesToTable` Command Editor to Create Single Data Column Table (<a href="../TimeSeriesToTable_Single.png">see also the full-size image</a>)
+`TimeSeriesToTable` Command Editor to Create Single Data Column Table (<a href="../TimeSeriesToTable_Single.png">see full-size image</a>)
 </p>**
 
 The resulting table is as shown in the following figure
@@ -146,7 +146,7 @@ The resulting table is as shown in the following figure
 </p>**
 
 **<p style="text-align: center;">
-Single Data Column Table (<a href="../TimeSeriesToTable_Single2.png">see also the full-size image</a>)
+Single Data Column Table (<a href="../TimeSeriesToTable_Single2.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

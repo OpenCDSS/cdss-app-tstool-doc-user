@@ -31,7 +31,7 @@ When a file is selected, the available data types are listed, based on the file 
 </p>**
 
 **<p style="text-align: center;">
-`ReadMODSIM` Command Editor (<a href="../ReadMODSIM.png">see also the full-size image</a>)
+`ReadMODSIM` Command Editor (<a href="../ReadMODSIM.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

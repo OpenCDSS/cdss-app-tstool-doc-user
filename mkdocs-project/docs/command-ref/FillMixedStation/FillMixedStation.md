@@ -97,7 +97,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FillMixedStation` Command Editor for Analysis Parameters (<a href="../FillMixedStation_Data.png">see also the full-size image</a>)
+`FillMixedStation` Command Editor for Analysis Parameters (<a href="../FillMixedStation_Data.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -105,7 +105,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FillMixedStation` Command Editor for Criteria Parameters (<a href="../FillMixedStation_Criteria.png">see also the full-size image</a>)
+`FillMixedStation` Command Editor for Criteria Parameters (<a href="../FillMixedStation_Criteria.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -113,7 +113,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FillMixedStation` Command Editor for Fill Parameters (<a href="../FillMixedStation_Fill.png">see also the full-size image</a>)
+`FillMixedStation` Command Editor for Fill Parameters (<a href="../FillMixedStation_Fill.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -121,7 +121,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FillMixedStation` Command Editor for Output Parameters (<a href="../FillMixedStation_Output.png">see also the full-size image</a>)
+`FillMixedStation` Command Editor for Output Parameters (<a href="../FillMixedStation_Output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -173,7 +173,7 @@ The FillFlag parameter shows more information about how the time series were fil
 </p>**
 
 **<p style="text-align: center;">
-Example of using the `I` fill flag (<a href="../FillMixedStation_FlagI.png">see also the full-size image</a>)
+Example of using the `I` fill flag (<a href="../FillMixedStation_FlagI.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -181,7 +181,7 @@ Example of using the `I` fill flag (<a href="../FillMixedStation_FlagI.png">see 
 </p>**
 
 **<p style="text-align: center;">
-Example of using the `Auto` fill flag (<a href="../FillMixedStation_FlagAuto.png">see also the full-size image</a>)
+Example of using the `Auto` fill flag (<a href="../FillMixedStation_FlagAuto.png">see full-size image</a>)
 </p>**
 
 Various statistics for each combination of time series, such as count, mean, and standard deviation, can be output in a table:
@@ -191,7 +191,7 @@ Various statistics for each combination of time series, such as count, mean, and
 </p>**
 
 **<p style="text-align: center;">
-Example of `FillMixedStation` output table (<a href="../FillMixedStation_Table.png">see also the full-size image</a>)
+Example of `FillMixedStation` output table (<a href="../FillMixedStation_Table.png">see full-size image</a>)
 </p>**
 
 More information on the statistics in this table can be found in the [`FillRegression`](../FillRegression/FillRegression.md) command documentation.

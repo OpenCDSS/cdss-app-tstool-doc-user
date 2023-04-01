@@ -38,7 +38,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcelBlock` Command Editor for Time Series Parameters (<a href="../WriteTimeSeriesToExcelBlock_TimeSeries.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcelBlock` Command Editor for Time Series Parameters (<a href="../WriteTimeSeriesToExcelBlock_TimeSeries.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel output parameters.
@@ -48,7 +48,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcelBlock` Command Editor for Excel Output Parameters (<a href="../WriteTimeSeriesToExcelBlock_ExcelOutput.png">See also the full-size image</a>)
+`WriteTimeSeriesToExcelBlock` Command Editor for Excel Output Parameters (<a href="../WriteTimeSeriesToExcelBlock_ExcelOutput.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Layout parameters.
@@ -58,7 +58,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcelBlock` Command Editor for Layout Parameters (<a href="../WriteTimeSeriesToExcelBlock_Layout.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcelBlock` Command Editor for Layout Parameters (<a href="../WriteTimeSeriesToExcelBlock_Layout.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Statistics parameters.
@@ -68,7 +68,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcelBlock` Command Editor for Statistics Parameters (<a href="../WriteTimeSeriesToExcelBlock_Statistics.png">See also the full-size image</a>)
+`WriteTimeSeriesToExcelBlock` Command Editor for Statistics Parameters (<a href="../WriteTimeSeriesToExcelBlock_Statistics.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for cell comment (data flag) parameters.
@@ -78,7 +78,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcelBlock` Command Editor for Cell Comment (Data Flag) Parameters (<a href="../WriteTimeSeriesToExcelBlock_DataFlags.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcelBlock` Command Editor for Cell Comment (Data Flag) Parameters (<a href="../WriteTimeSeriesToExcelBlock_DataFlags.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for style formatting parameters.
@@ -88,7 +88,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcelBlock` Command Editor for Style Parameters (<a href="../WriteTimeSeriesToExcelBlock_Style.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcelBlock` Command Editor for Style Parameters (<a href="../WriteTimeSeriesToExcelBlock_Style.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -135,7 +135,7 @@ This approach is implemented similarly in the
 </p>**
 
 **<p style="text-align: center;">
-Data Table used with `WriteTimeSeriesToExcelBlock` Command Style Formatting (<a href="../WriteTimeSeriesToExcelBlock_DataTable.png">see also the full-size image</a>)
+Data Table used with `WriteTimeSeriesToExcelBlock` Command Style Formatting (<a href="../WriteTimeSeriesToExcelBlock_DataTable.png">see full-size image</a>)
 </p>**
 
 To configure style-based formatting, a style table is defined listing properties for formatting cells.
@@ -148,7 +148,7 @@ The following figure illustrates a basic style table, which can be shared among 
 </p>**
 
 **<p style="text-align: center;">
-Style Table used with `WriteTimeSeriesToExcelBlock` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcelBlock_StyleTable.png">see also the full-size image</a>)
+Style Table used with `WriteTimeSeriesToExcelBlock` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcelBlock_StyleTable.png">see full-size image</a>)
 </p>**
 
 The following style table column names are recognized.
@@ -173,7 +173,7 @@ starting with `ts` should be processed to evaluate for missing, negative, and ze
 </p>**
 
 **<p style="text-align: center;">
-Condition Table used with `WriteTimeSeriesToExcelBlock` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcelBlock_ConditionTable.png">see also the full-size image</a>)
+Condition Table used with `WriteTimeSeriesToExcelBlock` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcelBlock_ConditionTable.png">see full-size image</a>)
 </p>**
 
 The column names for the condition table must be specified as shown.
@@ -208,7 +208,7 @@ If the ***Display*** column is not provided, the ***Condition*** column contents
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcelBlock` Command Example Output for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcelBlock_Output.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcelBlock` Command Example Output for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcelBlock_Output.png">see full-size image</a>)
 </p>**
 
 The following example illustrates using multiple conditions to implement a color scale.
@@ -236,7 +236,7 @@ The resulting output is as shown below.
 </p>**
  
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcelBlock` Command Example Output for Style Formatting (<a href="../WriteTimeSeriesToExcelBlock_Output.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcelBlock` Command Example Output for Style Formatting (<a href="../WriteTimeSeriesToExcelBlock_Output.png">see full-size image</a>)
 </p>**
 
 ## Examples ##

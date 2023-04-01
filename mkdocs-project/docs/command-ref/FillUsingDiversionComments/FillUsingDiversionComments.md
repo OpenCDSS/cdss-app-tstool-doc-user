@@ -124,7 +124,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FillUsingDiversionComments` Command Editor for Diversion Comment Parameters (<a href="../FillUsingDiversionComments.png">see also the full-size image</a>)
+`FillUsingDiversionComments` Command Editor for Diversion Comment Parameters (<a href="../FillUsingDiversionComments.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for CIU parameters.
@@ -134,7 +134,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FillUsingDiversionComments` Command Editor for CIU Parameters (<a href="../FillUsingDiversionComments_CIU.png">see also the full-size image</a>)
+`FillUsingDiversionComments` Command Editor for CIU Parameters (<a href="../FillUsingDiversionComments_CIU.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -197,7 +197,7 @@ data labels above the point in order to see labels at the bottom of the graph.
 </p>**
 
 **<p style="text-align: center;">
-Example Graph Showing Fill Flag (D labels indicate additional zero values) (<a href="../FillUsingDiversionComments_Graph.png">see also the full-size image</a>)
+Example Graph Showing Fill Flag (D labels indicate additional zero values) (<a href="../FillUsingDiversionComments_Graph.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates how data flags can be displayed in the table view.
@@ -207,7 +207,7 @@ The following figure illustrates how data flags can be displayed in the table vi
 </p>**
 
 **<p style="text-align: center;">
-Example Table Showing Fill Flags (<a href="../FillUsingDiversionComments_Table.png">see also the full-size image</a>)
+Example Table Showing Fill Flags (<a href="../FillUsingDiversionComments_Table.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

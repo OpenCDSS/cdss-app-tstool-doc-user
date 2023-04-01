@@ -54,7 +54,7 @@ Additional query features will be enabled as web service integration is enhanced
 </p>**
 
 **<p style="text-align: center;">
-`ReadUsgsNwisDaily` Command Editor (<a href="../ReadUsgsNwisDaily.png">see also the full-size image</a>)
+`ReadUsgsNwisDaily` Command Editor (<a href="../ReadUsgsNwisDaily.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

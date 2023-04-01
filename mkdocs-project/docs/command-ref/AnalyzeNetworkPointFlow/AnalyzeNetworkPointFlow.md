@@ -51,7 +51,7 @@ Consequently the command currently is suitable for analysis of a main stem river
 </p>**
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Network and Node Mass Balance (<a href="../AnalyzeNetworkPointFlow_Diagram.png">see also the full-size image</a>)
+`AnalyzeNetworkPointFlow` Network and Node Mass Balance (<a href="../AnalyzeNetworkPointFlow_Diagram.png">see full-size image</a>)
 </p>**
 
 There are two main data configuration requirements:
@@ -81,7 +81,7 @@ identifier and the data type provided with the `NodeAddDataTypes` and similar co
 </p>**
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Network Input Table – Input Time Series Matched with NodeID (<a href="../AnalyzeNetworkPointFlow_InputTable.png">see also the full-size image</a>)
+`AnalyzeNetworkPointFlow` Network Input Table – Input Time Series Matched with NodeID (<a href="../AnalyzeNetworkPointFlow_InputTable.png">see full-size image</a>)
 </p>**
 
 The following example illustrates how the input time series identifier can be specified in the network data.
@@ -96,7 +96,7 @@ identifier is still used with the time series but the alias takes precedence).
 </p>**
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Network Input Table – Input Time Series Specified with TSID Column (<a href="../AnalyzeNetworkPointFlow_InputTable_TSID.png">see also the full-size image</a>)
+`AnalyzeNetworkPointFlow` Network Input Table – Input Time Series Specified with TSID Column (<a href="../AnalyzeNetworkPointFlow_InputTable_TSID.png">see full-size image</a>)
 </p>**
 
 In the above examples the network is defined in an Excel file, the
@@ -151,7 +151,7 @@ The following figure illustrates the output time series corresponding to the dat
 ![AnalyzeNetworkPointFlow output time series table](AnalyzeNetworkPointFlow_OutputTS.png)
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Output Time Series Table (<a href="../AnalyzeNetworkPointFlow_OutputTS.png">see also the full-size image</a>)
+`AnalyzeNetworkPointFlow` Output Time Series Table (<a href="../AnalyzeNetworkPointFlow_OutputTS.png">see full-size image</a>)
 </p>**
  
 
@@ -282,7 +282,7 @@ command for parameters to map network table columns to network nodes.
 </p>**
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Command Editor for Parameters to Map Network Table Columns to Network Nodes (<a href="../AnalyzeNetworkPointFlow.png">see also the full-size image</a>)
+`AnalyzeNetworkPointFlow` Command Editor for Parameters to Map Network Table Columns to Network Nodes (<a href="../AnalyzeNetworkPointFlow.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for node type behavior parameters.
@@ -292,7 +292,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Command Editor for Node Type Behavior Parameters (<a href="../AnalyzeNetworkPointFlow2.png">see also the full-size image</a>)
+`AnalyzeNetworkPointFlow` Command Editor for Node Type Behavior Parameters (<a href="../AnalyzeNetworkPointFlow2.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for analysis parameters.
@@ -302,7 +302,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Command Editor for Analysis Parameters (<a href="../AnalyzeNetworkPointFlow_AnalysisTab.png">see also the full-size image</a>)
+`AnalyzeNetworkPointFlow` Command Editor for Analysis Parameters (<a href="../AnalyzeNetworkPointFlow_AnalysisTab.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series parameters.
@@ -312,7 +312,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`AnalyzeNetworkPointFlow` Command Editor for Analysis Parameters (<a href="../AnalyzeNetworkPointFlow_TSIDTab.png">see also the full-size image</a>)
+`AnalyzeNetworkPointFlow` Command Editor for Analysis Parameters (<a href="../AnalyzeNetworkPointFlow_TSIDTab.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

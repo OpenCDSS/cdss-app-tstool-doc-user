@@ -41,7 +41,7 @@ See the examples below for an explanation of input.
 </p>**
 
 **<p style="text-align: center;">
-`SetObjectProperty` Command Editor (<a href="../SetObjectProperty.png">see also the full-size image</a>)
+`SetObjectProperty` Command Editor (<a href="../SetObjectProperty.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

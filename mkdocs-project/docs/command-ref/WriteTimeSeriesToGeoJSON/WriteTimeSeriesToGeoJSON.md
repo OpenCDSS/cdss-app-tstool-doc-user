@@ -37,7 +37,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToGeoJSON` Command Editor (<a href="../WriteTimeSeriesToGeoJSON.png">see also the full-size image</a>)
+`WriteTimeSeriesToGeoJSON` Command Editor (<a href="../WriteTimeSeriesToGeoJSON.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for layers specified with a WKT geometry property.
@@ -47,7 +47,7 @@ The following figure illustrates the command syntax for layers specified with a 
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToGeoJSON` Command Editor for WKT Geometry Data Parameters (<a href="../WriteTimeSeriesToGeoJSON_WKT.png">see also the full-size image</a>)
+`WriteTimeSeriesToGeoJSON` Command Editor for WKT Geometry Data Parameters (<a href="../WriteTimeSeriesToGeoJSON_WKT.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for specifying time series properties to include as properties in the GeoJSON output.
@@ -57,7 +57,7 @@ The following figure illustrates the command syntax for specifying time series p
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToGeoJSON` Command Editor for Property Parameters (<a href="../WriteTimeSeriesToGeoJSON_Properties.png">see also the full-size image</a>)
+`WriteTimeSeriesToGeoJSON` Command Editor for Property Parameters (<a href="../WriteTimeSeriesToGeoJSON_Properties.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for specifying the JavaScript variable for the output.
@@ -67,7 +67,7 @@ The following figure illustrates the command syntax for specifying the JavaScrip
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToGeoJSON` Command Editor for JavaScript Parameters (<a href="../WriteTimeSeriesToGeoJSON_JavaScriptVar.png">see also the full-size image</a>)
+`WriteTimeSeriesToGeoJSON` Command Editor for JavaScript Parameters (<a href="../WriteTimeSeriesToGeoJSON_JavaScriptVar.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for specifying inserts around the GeoJSON content.
@@ -77,7 +77,7 @@ The following figure illustrates the command syntax for specifying inserts aroun
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToGeoJSON` Command Editor for Text Insert Parameters (<a href="../WriteTimeSeriesToGeoJSON_Inserts.png">see also the full-size image</a>)
+`WriteTimeSeriesToGeoJSON` Command Editor for Text Insert Parameters (<a href="../WriteTimeSeriesToGeoJSON_Inserts.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

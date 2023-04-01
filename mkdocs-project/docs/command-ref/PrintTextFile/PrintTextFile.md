@@ -37,7 +37,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`PrintTextFile` Command Editor (<a href="../PrintTextFile.png">see also the full-size image</a>)
+`PrintTextFile` Command Editor (<a href="../PrintTextFile.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -82,7 +82,7 @@ the ***General*** tab on the print dialog will be similar to the following:
 </p>**
 
 **<p style="text-align: center;">
-Print Job Dialog General Properties (<a href="../PrintTextFile_DialogGeneral.png">see also the full-size image</a>)
+Print Job Dialog General Properties (<a href="../PrintTextFile_DialogGeneral.png">see full-size image</a>)
 </p>**
 
 Note that Print to File is checked; however, the name of the file may not be displayed.
@@ -94,7 +94,7 @@ with the initial choice matching the value of the `OutputFile` parameter:
 </p>**
 
 **<p style="text-align: center;">
-Print to File Dialog (<a href="../PrintTextFile_PrintToFile.png">see also the full-size image</a>)
+Print to File Dialog (<a href="../PrintTextFile_PrintToFile.png">see full-size image</a>)
 </p>**
 
 If running a command to write a PDF file, the following may be displayed:
@@ -104,7 +104,7 @@ If running a command to write a PDF file, the following may be displayed:
 </p>**
 
 **<p style="text-align: center;">
-Adobe PDF Error (<a href="../PrintTextFile_DistillerFontError.png">see also the full-size image</a>)
+Adobe PDF Error (<a href="../PrintTextFile_DistillerFontError.png">see full-size image</a>)
 </p>**
 
 Unfortunately, there does not seem to be any way to change the printer setting

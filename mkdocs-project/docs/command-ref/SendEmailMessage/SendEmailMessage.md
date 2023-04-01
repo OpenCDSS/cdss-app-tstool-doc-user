@@ -28,7 +28,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SendEmailMessage` Command Editor (<a href="../SendEmailMessage.png">see also the full-size image</a>)
+`SendEmailMessage` Command Editor (<a href="../SendEmailMessage.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

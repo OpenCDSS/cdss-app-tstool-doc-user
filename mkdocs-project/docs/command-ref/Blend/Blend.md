@@ -34,7 +34,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Blend` Command Editor (<a href="../Blend.png">see also the full-size image</a>)
+`Blend` Command Editor (<a href="../Blend.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -34,7 +34,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteStateCU` Command Editor (<a href="../WriteStateCU.png">see also the full-size image</a>)
+`WriteStateCU` Command Editor (<a href="../WriteStateCU.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

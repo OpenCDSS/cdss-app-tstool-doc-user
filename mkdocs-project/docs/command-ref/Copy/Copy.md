@@ -34,7 +34,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`Copy` Command Editor (<a href="../Copy.png">see also the full-size image</a>)
+`Copy` Command Editor (<a href="../Copy.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

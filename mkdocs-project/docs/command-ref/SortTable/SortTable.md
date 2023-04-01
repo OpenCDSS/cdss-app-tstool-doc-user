@@ -28,7 +28,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SortTable` Command Editor (<a href="../SortTable.png">see also the full-size image</a>)
+`SortTable` Command Editor (<a href="../SortTable.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

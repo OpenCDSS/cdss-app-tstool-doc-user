@@ -43,7 +43,7 @@ See the example below for a full explanation of input.
 </p>**
 
 **<p style="text-align: center;">
-`SetObjectPropertiesFromTable` Command Editor (<a href="../SetObjectPropertiesFromTable.png">see also the full-size image</a>)
+`SetObjectPropertiesFromTable` Command Editor (<a href="../SetObjectPropertiesFromTable.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

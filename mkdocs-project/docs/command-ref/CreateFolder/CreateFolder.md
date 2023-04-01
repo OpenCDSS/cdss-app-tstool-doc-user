@@ -26,7 +26,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`CreateFolder` Command Editor (<a href="../CreateFolder.png">see also the full-size image</a>)
+`CreateFolder` Command Editor (<a href="../CreateFolder.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

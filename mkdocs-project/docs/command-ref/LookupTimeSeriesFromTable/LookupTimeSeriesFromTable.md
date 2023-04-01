@@ -41,7 +41,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`LookupTimeSeriesFromTable` Command Editor (<a href="../LookupTimeSeriesFromTable.png">see also the full-size image</a>)
+`LookupTimeSeriesFromTable` Command Editor (<a href="../LookupTimeSeriesFromTable.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

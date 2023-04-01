@@ -21,7 +21,7 @@ The data dictionary output from the command is an HTML file that provides:
     remarks (description), whether null is allowed, and indication of whether the columns are primary or foreign keys.
 *   Reference tables have all of their data listed to help understand relationships.
 
-The Java DatabaseMetaData class is used to access database metadata.
+The Java `DatabaseMetaData` class is used to access database metadata.
 Current limitations are as follows:
 
 *   The command has been tested with SQL Server, Microsoft Access, MySQL, Oracle, and PostgreSQL databases.
@@ -48,7 +48,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`CreateDataStoreDataDictionary` Command Editor for Table Parameters (<a href="../CreateDataStoreDataDictionary_Tables.png">see also the full-size image</a>)
+`CreateDataStoreDataDictionary` Command Editor for Table Parameters (<a href="../CreateDataStoreDataDictionary_Tables.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for metadata parameters.
@@ -58,7 +58,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`CreateDataStoreDataDictionary` Command Editor for Metadata Parameters (<a href="../CreateDataStoreDataDictionary_Metadata.png">see also the full-size image</a>)
+`CreateDataStoreDataDictionary` Command Editor for Metadata Parameters (<a href="../CreateDataStoreDataDictionary_Metadata.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for data dictionary parameters.
@@ -68,7 +68,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`CreateDataStoreDataDictionary` Command Editor for Data Dictionary Parameters (<a href="../CreateDataStoreDataDictionary_Dict.png">see also the full-size image</a>)
+`CreateDataStoreDataDictionary` Command Editor for Data Dictionary Parameters (<a href="../CreateDataStoreDataDictionary_Dict.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for entity relationship parameters.
@@ -78,7 +78,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`CreateDataStoreDataDictionary` Command Editor for Entity Relationship Diagram Parameters (<a href="../CreateDataStoreDataDictionary_ERDiagram.png">see also the full-size image</a>)
+`CreateDataStoreDataDictionary` Command Editor for Entity Relationship Diagram Parameters (<a href="../CreateDataStoreDataDictionary_ERDiagram.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -154,7 +154,7 @@ The following is an example of an Excel workbook with ER Diagram layout data, wh
 </p>**
 
 **<p style="text-align: center;">
-`CreateDataStoreDataDictionary` Command Editor for Entity Relationship Layout Parameters (<a href="../CreateDataStoreDataDictionary_Layout.png">see also the full-size image</a>)
+`CreateDataStoreDataDictionary` Command Editor for Entity Relationship Layout Parameters (<a href="../CreateDataStoreDataDictionary_Layout.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`ReadNwsCard` Command Editor for Reading a Single Time Series (<a href="../ReadNwsCard_SingleAlias.png">see also the full-size image</a>)
+`ReadNwsCard` Command Editor for Reading a Single Time Series (<a href="../ReadNwsCard_SingleAlias.png">see full-size image</a>)
 </p>**
 
 The following dialog illustrates reading an ensemble file, assigning the alias to `Location-DataType-Interval-TraceNumber`.
@@ -49,7 +49,7 @@ The following dialog illustrates reading an ensemble file, assigning the alias t
 </p>**
 
 **<p style="text-align: center;">
-`ReadNwsCard` Command Editor for Reading an Ensemble (<a href="../ReadNwsCard.png">see also the full-size image</a>)
+`ReadNwsCard` Command Editor for Reading an Ensemble (<a href="../ReadNwsCard.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax

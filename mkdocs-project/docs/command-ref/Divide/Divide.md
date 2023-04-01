@@ -30,7 +30,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Divide` Command Editor (<a href="../Divide.png">see also the full-size image</a>)
+`Divide` Command Editor (<a href="../Divide.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -71,7 +71,7 @@ The resulting graph is as follows:
 </p>**
 
 **<p style="text-align: center;">
-Results from `Divide` Command (<a href="../Divide_Graph.png">see also the full-size image</a>)
+Results from `Divide` Command (<a href="../Divide_Graph.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

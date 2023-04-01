@@ -27,7 +27,7 @@ The following dialog is used to edit the command and illustrates the syntax:
 </p>**
 
 **<p style="text-align: center;">
-`ReadNwsrfsFS5Files` Command Editor (<a href="../ReadNwsrfsFS5Files.png">see also the full-size image</a>)
+`ReadNwsrfsFS5Files` Command Editor (<a href="../ReadNwsrfsFS5Files.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

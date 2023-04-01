@@ -29,7 +29,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`FreeObject` Command Editor (<a href="../FreeObject.png">see also the full-size image</a>)
+`FreeObject` Command Editor (<a href="../FreeObject.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -45,7 +45,7 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`ObjectID`<br>**required**|The identifier for the object.  Can be specified using ${Property} syntax.|None – must be specified.|
+|`ObjectID`<br>**required**|The identifier for the object.  Can be specified using `${Property}` syntax.|None – must be specified.|
 
 ## Examples ##
 

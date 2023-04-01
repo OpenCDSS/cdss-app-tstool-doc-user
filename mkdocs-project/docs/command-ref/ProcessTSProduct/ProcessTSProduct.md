@@ -94,7 +94,7 @@ The path to the time series product file can be absolute or relative to the work
 </p>**
 
 **<p style="text-align: center;">
-`ProcessTSProduct` Command Editor for Input Parameters (<a href="../ProcessTSProduct.png">see also the full-size image</a>)
+`ProcessTSProduct` Command Editor for Input Parameters (<a href="../ProcessTSProduct.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -102,7 +102,7 @@ The path to the time series product file can be absolute or relative to the work
 </p>**
 
 **<p style="text-align: center;">
-`ProcessTSProduct` Command Editor for Output Parameters (<a href="../ProcessTSProduct-output.png">see also the full-size image</a>)
+`ProcessTSProduct` Command Editor for Output Parameters (<a href="../ProcessTSProduct-output.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -110,7 +110,7 @@ The path to the time series product file can be absolute or relative to the work
 </p>**
 
 **<p style="text-align: center;">
-`ProcessTSProduct` Command Editor for Output Product Parameters (<a href="../ProcessTSProduct-product.png">see also the full-size image</a>)
+`ProcessTSProduct` Command Editor for Output Product Parameters (<a href="../ProcessTSProduct-product.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -118,7 +118,7 @@ The path to the time series product file can be absolute or relative to the work
 </p>**
 
 **<p style="text-align: center;">
-`ProcessTSProduct` Command Editor for Editing Parameters (<a href="../ProcessTSProduct-edit.png">see also the full-size image</a>)
+`ProcessTSProduct` Command Editor for Editing Parameters (<a href="../ProcessTSProduct-edit.png">see full-size image</a>)
 </p>**
 
 After using the above dialog to edit the command, the time series product can be processed from TSTool as follows:

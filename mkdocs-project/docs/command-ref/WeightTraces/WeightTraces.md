@@ -30,7 +30,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WeightTraces` Command Editor (<a href="../WeightTraces.png">see also the full-size image</a>)
+`WeightTraces` Command Editor (<a href="../WeightTraces.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -75,7 +75,7 @@ The results from the commands are shown in the following graph:
 </p>**
 
 **<p style="text-align: center;">
-Results of the `WeightTraces` Command (<a href="../WeightTraces_Graph.png">see also the full-size image</a>)
+Results of the `WeightTraces` Command (<a href="../WeightTraces_Graph.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

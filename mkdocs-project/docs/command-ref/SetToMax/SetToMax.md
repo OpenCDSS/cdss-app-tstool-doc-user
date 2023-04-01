@@ -29,7 +29,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetToMax` Command Editor (<a href="../SetToMax.png">see also the full-size image</a>)
+`SetToMax` Command Editor (<a href="../SetToMax.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

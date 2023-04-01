@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ReadWaterML` Command Editor (<a href="../ReadWaterML.png">see also the full-size image</a>)
+`ReadWaterML` Command Editor (<a href="../ReadWaterML.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

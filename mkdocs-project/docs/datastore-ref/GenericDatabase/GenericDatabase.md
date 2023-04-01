@@ -437,7 +437,7 @@ The following figure illustrates time series metadata from a database view:
 </p>**
 
 **<p style="text-align: center;">
-Time Series Metadata View (<a href="../Datastore_Generic_TimeSeriesMeta.png">see also the full-size image</a>)
+Time Series Metadata View (<a href="../Datastore_Generic_TimeSeriesMeta.png">see full-size image</a>)
 </p>**
 
 The following example illustrates datastore properties that are used to describe
@@ -550,7 +550,7 @@ The following figure shows an initial condition before defining a SQL Server ODB
 </p>**
 
 **<p style="text-align: center;">
-Before Defining SQL Server ODBC DSN(<a href="../odbc-dsn-sql-server-1.png">see also the full-size image</a>)
+Before Defining SQL Server ODBC DSN(<a href="../odbc-dsn-sql-server-1.png">see full-size image</a>)
 </p>**
 
 Press ***Add...*** to start adding an ODBC DSN, which displays the following.
@@ -564,7 +564,7 @@ If a SQL Server driver is not listed or a new version is needed,
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - Add an ODBC DSN(<a href="../odbc-dsn-sql-server-2.png">see also the full-size image</a>)
+ODBC DSN - Add an ODBC DSN(<a href="../odbc-dsn-sql-server-2.png">see full-size image</a>)
 </p>**
 
 Select the "SQL Server" driver and ***Finish***.
@@ -577,7 +577,7 @@ It may be necessary to contact IT staff for the organization to obtain the corre
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - Create a New Data Source to SQL Server (<a href="../odbc-dsn-sql-server-3.png">see also the full-size image</a>)
+ODBC DSN - Create a New Data Source to SQL Server (<a href="../odbc-dsn-sql-server-3.png">see full-size image</a>)
 </p>**
 
 Press ***Next >*** to configure authentication information.
@@ -591,7 +591,7 @@ In the following the CDSS service account is used with password `cdss%tools`.
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - Create a New Data Source to SQL Server (Authentication) (<a href="../odbc-dsn-sql-server-4.png">see also the full-size image</a>)
+ODBC DSN - Create a New Data Source to SQL Server (Authentication) (<a href="../odbc-dsn-sql-server-4.png">see full-size image</a>)
 </p>**
 
 The above may result in the following error.
@@ -604,7 +604,7 @@ Check the database name and other information.
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - Microsoft SQL Server Login Error (Authentication) (<a href="../odbc-dsn-sql-server-5.png">see also the full-size image</a>)
+ODBC DSN - Microsoft SQL Server Login Error (Authentication) (<a href="../odbc-dsn-sql-server-5.png">see full-size image</a>)
 </p>**
 
 If the configuration information is corrected, press ***Next >*** to continue.
@@ -615,7 +615,7 @@ Select the database name as shown in the following.
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - Create a New Data Source to SQL Server (Database Selection) (<a href="../odbc-dsn-sql-server-6.png">see also the full-size image</a>)
+ODBC DSN - Create a New Data Source to SQL Server (Database Selection) (<a href="../odbc-dsn-sql-server-6.png">see full-size image</a>)
 </p>**
 
 Press ***Next >*** to continue, which displays the following.
@@ -626,7 +626,7 @@ The defaults can be used.
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - Create a New Data Source to SQL Server (Database Properties) (<a href="../odbc-dsn-sql-server-7.png">see also the full-size image</a>)
+ODBC DSN - Create a New Data Source to SQL Server (Database Properties) (<a href="../odbc-dsn-sql-server-7.png">see full-size image</a>)
 </p>**
 
 Press ***Finish*** to continue, which displays the following.
@@ -636,7 +636,7 @@ Press ***Finish*** to continue, which displays the following.
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - Create a New Data Source to SQL Server (Database Properties) (<a href="../odbc-dsn-sql-server-8.png">see also the full-size image</a>)
+ODBC DSN - Create a New Data Source to SQL Server (Database Properties) (<a href="../odbc-dsn-sql-server-8.png">see full-size image</a>)
 </p>**
 
 Use the ***Test Data Source...*** button to test the correction,
@@ -647,7 +647,7 @@ which results in output similar to the following for a successful configuration.
 </p>**
 
 **<p style="text-align: center;">
-ODBC DSN - SQL Server ODBC Data Source Test (<a href="../odbc-dsn-sql-server-9.png">see also the full-size image</a>)
+ODBC DSN - SQL Server ODBC Data Source Test (<a href="../odbc-dsn-sql-server-9.png">see full-size image</a>)
 </p>**
 
 Once configured, create a TSTool datastore configuration file with contents similar to the following and restart TSTool to use.

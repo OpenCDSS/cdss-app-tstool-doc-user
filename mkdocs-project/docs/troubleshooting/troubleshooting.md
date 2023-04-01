@@ -511,7 +511,7 @@ need to be running and should be configured to automatically start.
 </p>**
 
 **<p style="text-align: center;">
-***Check SQL Server Services*** (<a href="../hydrobase-login-sql-server-configuration-manager0.png">see also the full-size image</a>)
+***Check SQL Server Services*** (<a href="../hydrobase-login-sql-server-configuration-manager0.png">see full-size image</a>)
 </p>**
 
 Clicking on ***SQL Server Network Configuration*** displays network configuration settings
@@ -525,7 +525,7 @@ If errors still exist, check the TSTool ***View / Datastores*** list for errors,
 </p>**
 
 **<p style="text-align: center;">
-***Check SQL Server Network Configuration*** (<a href="../hydrobase-login-sql-server-configuration-manager1.png">see also the full-size image</a>)
+***Check SQL Server Network Configuration*** (<a href="../hydrobase-login-sql-server-configuration-manager1.png">see full-size image</a>)
 </p>**
 
 **Possible Solution 2** – Firewall software can prevent TSTool software network
@@ -961,18 +961,18 @@ TSTool Command Summary – Obsolete Commands
 |**Command**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Replacement**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--|--|--|
 |`add(TSID,TSID1,TSID2,...)`|Add the 2nd+ time series to the first time series, retaining the original identifier.  This form of the command is obsolete and should be updated to use the new form described that includes a flag for handling missing data.|[`Add`](../command-ref/Add/Add.md) command.|
-|`-archive_dbhost HostName`|This legacy option is normally set during installation and is typically not specified in command files.  Specify the Internet host name for the remote HydroBase database server.  This is configured at installation time and will be either `localpc` (for a local Microsoft Access HydroBase database, indicating that no remote server is used) or a machine name for the Informix database server.  To change the defaults from those in the tstool.bat file, specify this option again on the command line or edit the batch file.  See also `-dbhost`.  This option is used in addition to the `-dbhost` information to allow a TSTool user to switch between the local PC and the main database server.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md) configuration information|
+|`-archive_dbhost HostName`|This legacy option is normally set during installation and is typically not specified in command files.  Specify the Internet host name for the remote HydroBase database server.  This is configured at installation time and will be either `localpc` (for a local Microsoft Access HydroBase database, indicating that no remote server is used) or a machine name for the Informix database server.  To change the defaults from those in the `tstool.bat` file, specify this option again on the command line or edit the batch file.  See also `-dbhost`.  This option is used in addition to the `-dbhost` information to allow a TSTool user to switch between the local PC and the main database server.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md) configuration information|
 |`-averageperiod MM/YYYY MM/YYYY`|Specify the period to be used to compute averages when the `-fillhistave` option is specified.|[`SetAveragePeriod`](../command-ref/SetAveragePeriod/SetAveragePeriod.md) command and command parameters for specific commands.|
 |`-batch`|Indicates to run in batch mode.   This is automatically set if `-commands` is specified.|None – no longer used.|
 |`-browser Path`|This option is normally set during installation and is typically not specified in command files.  Specify the path to the web browser to use for on-line documentation.|None – no longer used.|
 |`CreateTraces()`|Create an ensemble from a time series.|[`NewEnsemble`](../command-ref/NewEnsemble/NewEnsemble.md) command.|
 |`-cy`|Output in calendar year format.|[`SetOutputYearType`](../command-ref/SetOutputYearType/SetOutputYearType.md) command|
 |`-d#[,#]`|Set the debug level.  The first number is the debug level for the screen.  The second is for the log file.  If one level is specified, it is applied to the screen and log file output.|[`SetDebugLevel`](../command-ref/SetDebugLevel/SetDebugLevel.md)|
-|`-data_interval Interval`|Indicate the data interval (e.g., `MONTH`, `DAY`) to use with all structures/stations indicated by the -slist option.  This option is only available in batch mode.|[`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md) and [`CreateFromList`](../command-ref/CreateFromList/CreateFromList.md) commands|
+|`-data_interval Interval`|Indicate the data interval (e.g., `MONTH`, `DAY`) to use with all structures/stations indicated by the `-slist` option.  This option is only available in batch mode.|[`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md) and [`CreateFromList`](../command-ref/CreateFromList/CreateFromList.md) commands|
 |`-datasource ODBCDataSourceName`|Specify an ODBC Data Source Name to use for the HydroBase database.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md) configuration information.|
 |`-data_type Type`|Indicate the data type (e.g., `DivTotal`, `DQME`) to use with all structures/stations indicated by the `-slist` option. This option is only available in batch mode. This command is obsolete.|[`ReadTimeSeriesList`](../command-ref/ReadTimeSeriesList/ReadTimeSeriesList.md) and [`CreateFromList`](../command-ref/CreateFromList/CreateFromList.md) commands|
 |`day_to_month_reservoir(TSID,ndays,flag)`|Read a daily time series and convert to a monthly time series using the reservoir method. This is generally only applied to reservoir storage.|[`NewEndOfMonthTSFromDayTS`](../command-ref/NewEndOfMonthTSFromDayTS/NewEndOfMonthTSFromDayTS.md) and [`FillInterpolate`](../command-ref/FillInterpolate/FillInterpolate.md) commands|
-|`-dbhost HostName`|This option is normally set during installation and is typically not specified in command files.  Specify the Internet host name for the primary HydroBase database server.  This is configured at installation time and will be either localpc (for a local Microsoft Access database) or a machine name for the Informix database server.  To change the defaults from those in the `tstool.bat` file, specify this option again on the command line or edit the batch file.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md) configuration information.|
+|`-dbhost HostName`|This option is normally set during installation and is typically not specified in command files.  Specify the Internet host name for the primary HydroBase database server.  This is configured at installation time and will be either `localpc` (for a local Microsoft Access database) or a machine name for the Informix database server.  To change the defaults from those in the `tstool.bat` file, specify this option again on the command line or edit the batch file.|[HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md) configuration information.|
 |`-detailedheader`|Insert time series creation information in output headers.  This preserves information from the log file that may otherwise be lost.  The default is not to generate detailed headers.|See output command parameters.|
 |`fillCarryForward()`|Fill by repeating value.|[`FillRepeat`](../command-ref/FillRepeat/FillRepeat.md) command|
 |`fillconst(TSID,Value)`|Fill the time series with a constant value.|[`FillConstant`](../command-ref/FillConstant/FillConstant.md) command|
@@ -994,7 +994,7 @@ TSTool Command Summary – Obsolete Commands
 |`regress(TSID1,TSID2)`|Performs a linear regression analysis between the two time series, filling missing data of the first time series.  Regression information is printed to the log file.|[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command|
 |`regress12(TSID1,TSID2)`<br>`regressMonthly(TSID1,TSID2)`|Same as regress() except 12 separate monthly regressions values are calculated.|[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command|
 |`regresslog(TSID1,TSID2)`|Same as regress() except regressions values are calculated logarithmically.|[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command|
-|`regresslog12(TSID1,TSID2)`<br>`regressMonthlyLog(TSID1,TSID2)`|Same as regresslog() except 12 monthly regressions values are calculated.|[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command|
+|`regresslog12(TSID1,TSID2)`<br>`regressMonthlyLog(TSID1,TSID2)`|Same as `regresslog()` except 12 monthly regressions values are calculated.|[`FillRegression`](../command-ref/FillRegression/FillRegression.md) command|
 |`setconst(TSID,Value)`|Set the time series to the given value for all data.  If the time series is not in the database, created an empty time series and then set to a constant value.|[`SetConstant`](../command-ref/SetConstant/SetConstant.md) command|
 |`setconstbefore(TSID,Value,Date)`|The time series to the given value for all data on and before the specified date (`YYYY-MM` or `MM/YYYY`).|[`SetConstant`](../command-ref/SetConstant/SetConstant.md) command|
 |`setConstantBefore()`|Set a value constant before a date/time.|[`SetConstant`](../command-ref/SetConstant/SetConstant.md) command|

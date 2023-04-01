@@ -36,7 +36,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FormatTableString` Command Editor (<a href="../FormatTableString.png">see also the full-size image</a>)
+`FormatTableString` Command Editor (<a href="../FormatTableString.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -54,7 +54,7 @@ Command Parameters
 | --------------|-----------------|----------------- |
 |`TableID`|The identifier for the table to process.  Can specify using processor `${Property}`.|None – must be specified.|
 |`InputColumns`|The names of one or more input columns.  Values from the columns will be formatted according to the `Format` parameter.  Input columns can be omitted if the format string is a literal value.|Required if format specifiers are given.|
-|`Format`|The format specifier string used to format the data values.  See the editor dialog for examples and refer to [printf documentation](https://en.wikipedia.org/wiki/Printf_format_string).  Specify as many format specifiers as there are input columns.  All other characters will be transferred literally to the output string.|None – must be specified.|
+|`Format`|The format specifier string used to format the data values.  See the editor dialog for examples and refer to [`printf` documentation](https://en.wikipedia.org/wiki/Printf_format_string).  Specify as many format specifiers as there are input columns.  All other characters will be transferred literally to the output string.|None – must be specified.|
 |`OutputColumn`|The name of the column to receive the output.|None – must be specified.|
 |`InsertBeforeColumn`|The name of the column before which to insert the new column.|After last column.|
 

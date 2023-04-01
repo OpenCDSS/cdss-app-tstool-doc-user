@@ -63,7 +63,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SplitTableRow` Command Editor for Tuple Split (<a href="../SplitTableRow_Tuple.png">see also the full-size image</a>)
+`SplitTableRow` Command Editor for Tuple Split (<a href="../SplitTableRow_Tuple.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for measure split.
@@ -73,7 +73,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SplitTableRow` Command Editor for Measure Split (<a href="../SplitTableRow.png">see also the full-size image</a>)
+`SplitTableRow` Command Editor for Measure Split (<a href="../SplitTableRow.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

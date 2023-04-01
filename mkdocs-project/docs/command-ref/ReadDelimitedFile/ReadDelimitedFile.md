@@ -52,7 +52,7 @@ The following dialog is used to edit the command and illustrates command syntax.
 </p>**
 
 **<p style="text-align: center;">
-`ReadDelimitedFile` Command Editor to Map File Columns to Time Series(<a href="../ReadDelimitedFile.png">see also the full-size image</a>)
+`ReadDelimitedFile` Command Editor to Map File Columns to Time Series(<a href="../ReadDelimitedFile.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -125,7 +125,7 @@ as a delimiter and the date/time information is treated as one column.
 </p>
 
 **<p style="text-align: center;">
-`ReadDelimitedFile` Command Editor when Literally Specifying Column Names (<a href="../ReadDelimitedFile.png">see also the full-size image.</a>)
+`ReadDelimitedFile` Command Editor when Literally Specifying Column Names (<a href="../ReadDelimitedFile.png">see full-size image.</a>)
 </p>
 **
 
@@ -136,7 +136,7 @@ The following dialog is the second data tab.
 </p>**
 
 **<p style="text-align: center;">
-`ReadDelimitedFile` Command Editor when Literally Specifying Column Names - Second Data Tab (<a href="../ReadDelimitedFile2.png">see also the full-size image</a>)
+`ReadDelimitedFile` Command Editor when Literally Specifying Column Names - Second Data Tab (<a href="../ReadDelimitedFile2.png">see full-size image</a>)
 </p>**
 
 ### Example of Column Names Read from the File ###
@@ -161,7 +161,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`ReadDelimitedFile` Command Editor when Reading Column Names from the File (<a href="../ReadDelimitedFile3.png">see also the full-size image</a>)
+`ReadDelimitedFile` Command Editor when Reading Column Names from the File (<a href="../ReadDelimitedFile3.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

@@ -45,7 +45,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`WebGet` Command Editor for Request Parameters (<a href="../WebGet-Request.png">see also the full-size image</a>)
+`WebGet` Command Editor for Request Parameters (<a href="../WebGet-Request.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -53,7 +53,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`WebGet` Command Editor for Timeout Parameters (<a href="../WebGet-Timeout.png">see also the full-size image</a>)
+`WebGet` Command Editor for Timeout Parameters (<a href="../WebGet-Timeout.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -61,7 +61,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`WebGet` Command Editor for Response Parameters (<a href="../WebGet-Response.png">see also the full-size image</a>)
+`WebGet` Command Editor for Response Parameters (<a href="../WebGet-Response.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -31,7 +31,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Normalize` Command Editor (<a href="../Normalize.png">see also the full-size image</a>)
+`Normalize` Command Editor (<a href="../Normalize.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -72,7 +72,7 @@ The results are as follows.
 </p>**
 
 **<p style="text-align: center;">
-Results of `Normalize` Command (<a href="../Normalize_Graph.png">see also the full-size image</a>)
+Results of `Normalize` Command (<a href="../Normalize_Graph.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

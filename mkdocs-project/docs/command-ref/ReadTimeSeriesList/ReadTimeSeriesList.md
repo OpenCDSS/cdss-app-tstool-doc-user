@@ -63,7 +63,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadTimeSeriesList` Command Editor for Time Series Identifier Parts Parameters (<a href="../ReadTimeSeriesList.png">see also the full-size image</a>)
+`ReadTimeSeriesList` Command Editor for Time Series Identifier Parts Parameters (<a href="../ReadTimeSeriesList.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time series properties.
@@ -73,7 +73,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadTimeSeriesList` Command Editor for Time Series Propeties Parameters (<a href="../ReadTimeSeriesList_TimeSeriesProperties.png">see also the full-size image</a>)
+`ReadTimeSeriesList` Command Editor for Time Series Propeties Parameters (<a href="../ReadTimeSeriesList_TimeSeriesProperties.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters if the time series is not found.
@@ -83,7 +83,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadTimeSeriesList` Command Editor for Parameters if Time Series is Not Found (<a href="../ReadTimeSeriesList_IfNotFound.png">see also the full-size image</a>)
+`ReadTimeSeriesList` Command Editor for Parameters if Time Series is Not Found (<a href="../ReadTimeSeriesList_IfNotFound.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters used in checks.
@@ -93,7 +93,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadTimeSeriesList` Command Editor for Parameters Used in Checks (<a href="../ReadTimeSeriesList_Check.png">see also the full-size image</a>)
+`ReadTimeSeriesList` Command Editor for Parameters Used in Checks (<a href="../ReadTimeSeriesList_Check.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

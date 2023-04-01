@@ -79,7 +79,7 @@ which is the end of the last interval of the year.
 </p>**
 
 **<p style="text-align: center;">
-`Cumulate` Results for Hourly Data with Reset (<a href="../Cumulate_hour_table.png">see also the full-size image</a>)
+`Cumulate` Results for Hourly Data with Reset (<a href="../Cumulate_hour_table.png">see full-size image</a>)
 </p>**
 
 The reset for irregular interval time series may lead to the first value in the year being
@@ -95,7 +95,7 @@ is preset at the `Reset` date/time, using zero if the value was originally missi
 </p>**
 
 **<p style="text-align: center;">
-`Cumulate` Results for Irregular Time Series with Inserted Reset Point (<a href="../Cumulate_insert.png">see also the full-size image</a>)
+`Cumulate` Results for Irregular Time Series with Inserted Reset Point (<a href="../Cumulate_insert.png">see full-size image</a>)
 </p>**
 
 ## Limitations ##
@@ -129,9 +129,9 @@ to regular interval time series to perform a traditional double mass analysis.
 
 See the following resources for double mass plots:
 
-* [Double-Mass Curves, USGS, 1960](https://pubs.usgs.gov/wsp/1541b/report.pdf)
-* [Analysis and Presentation of Rainfall Data](https://theconstructor.org/water-resources/analysis-presentation-of-rainfall-data/4493/)
-* See also the topic in many hydrology books and online videos
+*   [Double-Mass Curves, USGS, 1960](https://pubs.usgs.gov/wsp/1541b/report.pdf)
+*   [Analysis and Presentation of Rainfall Data](https://theconstructor.org/water-resources/analysis-presentation-of-rainfall-data/4493/)
+*   See also the topic in many hydrology books and online videos
 
 TSTool does not currently provide traditional double mass curve plots,
 where values from two time series are plotted against each other,
@@ -168,7 +168,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Cumulate` Command Editor (<a href="../Cumulate.png">see also the full-size image</a>)
+`Cumulate` Command Editor (<a href="../Cumulate.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -216,7 +216,7 @@ where missing data results in carrying forward the last known value.
 </p>**
 
 **<p style="text-align: center;">
-Example Graph Showing Results of `Cumulate` Command (<a href="../Cumulate_Graph.png">see also the full-size image</a>)
+Example Graph Showing Results of `Cumulate` Command (<a href="../Cumulate_Graph.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

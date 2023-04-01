@@ -34,7 +34,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToMarkdown` Command Editor (<a href="../WriteTableToMarkdown.png">see also the full-size image</a>)
+`WriteTableToMarkdown` Command Editor (<a href="../WriteTableToMarkdown.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

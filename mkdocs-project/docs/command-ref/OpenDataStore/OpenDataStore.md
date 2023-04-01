@@ -33,7 +33,7 @@ not visible in the figure, provides additional information about the datastore):
 </p>**
 
 **<p style="text-align: center;">
-Datastore Information from *View / Datastores* (<a href="../View_Datastores.png">see also the full-size image</a>)
+Datastore Information from *View / Datastores* (<a href="../View_Datastores.png">see full-size image</a>)
 </p>**
 
 ## Command Editor ##
@@ -51,7 +51,7 @@ Refer to the [`GenericDatabaseDataStore`](../../datastore-ref/GenericDatabase/Ge
 </p>**
 
 **<p style="text-align: center;">
-`OpenDataStore` Command Editor using Properties (<a href="../OpenDataStore.png">see also the full-size image</a>)
+`OpenDataStore` Command Editor using Properties (<a href="../OpenDataStore.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -59,7 +59,7 @@ Refer to the [`GenericDatabaseDataStore`](../../datastore-ref/GenericDatabase/Ge
 </p>**
 
 **<p style="text-align: center;">
-`OpenDataStore` Command Editor using Configuration File (<a href="../OpenDataStore-config.png">see also the full-size image</a>)
+`OpenDataStore` Command Editor using Configuration File (<a href="../OpenDataStore-config.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

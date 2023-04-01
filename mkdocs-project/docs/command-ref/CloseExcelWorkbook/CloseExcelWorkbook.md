@@ -32,7 +32,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`CloseExcelWorkbook` Command Editor (<a href="../CloseExcelWorkbook.png">see also the full-size image</a>)
+`CloseExcelWorkbook` Command Editor (<a href="../CloseExcelWorkbook.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

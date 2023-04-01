@@ -12,7 +12,7 @@ This documentation provides information about datastore processing.
 ## Introduction ##
 
 TSTool implements "datastores" as data sources that provide time series and other data.
-A datastores may provide integration with a databases, web services, or other data souces.
+A datastores may provide integration with a databases, web services, or other data sources.
 See the [Datastores Overview](../../datastore-ref/overview.md) for an overview.
 TSTool datastore features include interactive data browsing and commands to automate processing.
 

@@ -27,7 +27,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`UnzipFile` Command Editor (<a href="../UnzipFile.png">see also the full-size image</a>)
+`UnzipFile` Command Editor (<a href="../UnzipFile.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

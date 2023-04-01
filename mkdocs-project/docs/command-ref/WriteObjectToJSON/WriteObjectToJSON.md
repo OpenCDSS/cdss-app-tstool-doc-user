@@ -28,7 +28,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`WriteObjectToJSON` Command Editor (<a href="../WriteObjectToJSON.png">see also the full-size image</a>)
+`WriteObjectToJSON` Command Editor (<a href="../WriteObjectToJSON.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

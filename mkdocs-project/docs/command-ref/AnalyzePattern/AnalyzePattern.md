@@ -68,7 +68,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`AnalyzePattern` Command Editor (<a href="../AnalyzePattern.png">see also the full-size image</a>)
+`AnalyzePattern` Command Editor (<a href="../AnalyzePattern.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -112,14 +112,13 @@ AnalyzePattern(TSList=AllTS,Method=Percentile,Percentile="0.25,0.75",PatternID="
 ```
 
 The following figure illustrates the resulting statistics:
-<a href="../AnalyzePattern_Table.png">See also the full-size image.</a>
 
 **<p style="text-align: center;">
 ![Statistics from Pattern Analysis](AnalyzePattern_Table.png)
 </p>**
 
 **<p style="text-align: center;">
-Statistics from Pattern Analysis
+Statistics from Pattern Analysis (<a href="../AnalyzePattern_Table.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

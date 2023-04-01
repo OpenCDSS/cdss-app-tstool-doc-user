@@ -48,7 +48,7 @@ The following dialog is used to edit the command and illustrates the command syn
 ![For command editor for list iteration values](For_List.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a List for Iteration Values (<a href="../For_List.png">see also the full-size image</a>)
+`For` Command Editor Illustrating Using a List for Iteration Values (<a href="../For_List.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a sequence of numbers.
@@ -56,7 +56,7 @@ The following dialog is used to edit the command and illustrates the command syn
 ![For command editor for sequence of integers](For_Sequence.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a Sequence of Integers for Iteration Values (<a href="../For_Sequence.png">see also the full-size image</a>)
+`For` Command Editor Illustrating Using a Sequence of Integers for Iteration Values (<a href="../For_Sequence.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over table column values.
@@ -64,7 +64,7 @@ The following dialog is used to edit the command and illustrates the command syn
 ![For command editor for table](For_Table.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a Table for Iteration Values (<a href="../For_Table.png">see also the full-size image</a>)
+`For` Command Editor Illustrating Using a Table for Iteration Values (<a href="../For_Table.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a list of time series.
@@ -72,7 +72,7 @@ The following dialog is used to edit the command and illustrates the command syn
 ![For command editor for list of time series](For_TSList.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a List of Time Series (<a href="../For_TSList.png">see also the full-size image</a>)
+`For` Command Editor Illustrating Using a List of Time Series (<a href="../For_TSList.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

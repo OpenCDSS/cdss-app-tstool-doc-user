@@ -22,7 +22,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`UnknownCommand` Command Editor (<a href="../UnknownCommand.png">see also the full-size image</a>)
+`UnknownCommand` Command Editor (<a href="../UnknownCommand.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

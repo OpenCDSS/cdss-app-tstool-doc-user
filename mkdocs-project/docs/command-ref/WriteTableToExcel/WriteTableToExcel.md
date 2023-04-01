@@ -41,7 +41,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToExcel` Command Editor (<a href="../WriteTableToExcel.png">see also the full-size image</a>)
+`WriteTableToExcel` Command Editor (<a href="../WriteTableToExcel.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates Excel output parameters.
@@ -51,7 +51,7 @@ The following dialog is used to edit the command and illustrates Excel output pa
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToExcel` Command Editor for Excel Output Parameters (<a href="../WriteTableToExcel_Excel.png">see also the full-size image</a>)
+`WriteTableToExcel` Command Editor for Excel Output Parameters (<a href="../WriteTableToExcel_Excel.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates Excel formatting parameters.
@@ -61,7 +61,7 @@ The following dialog is used to edit the command and illustrates Excel formattin
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToExcel` Command Editor for Excel Formatting Parameters (<a href="../WriteTableToExcel_ExcelFormat.png">see also the full-size image</a>)
+`WriteTableToExcel` Command Editor for Excel Formatting Parameters (<a href="../WriteTableToExcel_ExcelFormat.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates style formatting parameters.
@@ -71,7 +71,7 @@ The following dialog is used to edit the command and illustrates style formattin
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToExcel` Command Editor for Style Formatting Parameters (<a href="../WriteTableToExcel_Style.png">see also the full-size image</a>)
+`WriteTableToExcel` Command Editor for Style Formatting Parameters (<a href="../WriteTableToExcel_Style.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

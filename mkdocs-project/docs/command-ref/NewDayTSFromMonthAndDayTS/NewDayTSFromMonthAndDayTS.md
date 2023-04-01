@@ -101,7 +101,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`NewDayTSFromMonthAndDayTS` Command Editor (<a href="../NewDayTSFromMonthAndDayTS.png">see also the full-size image</a>)
+`NewDayTSFromMonthAndDayTS` Command Editor (<a href="../NewDayTSFromMonthAndDayTS.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -151,7 +151,7 @@ Note that the each time series has a similar pattern, but at different levels.
 </p>**
 
 **<p style="text-align: center;">
-Result of `NewDayTSFromMonthAndDayTS` Command (<a href="../NewDayTSFromMonthAndDayTS_Graph.png">see also the full-size image</a>)
+Result of `NewDayTSFromMonthAndDayTS` Command (<a href="../NewDayTSFromMonthAndDayTS_Graph.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

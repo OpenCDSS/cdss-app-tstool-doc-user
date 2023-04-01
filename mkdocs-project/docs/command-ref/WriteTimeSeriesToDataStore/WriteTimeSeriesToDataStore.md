@@ -33,7 +33,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStore` Command Editor (<a href="../WriteTimeSeriesToDataStore.png">see also the full-size image</a>)
+`WriteTimeSeriesToDataStore` Command Editor (<a href="../WriteTimeSeriesToDataStore.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

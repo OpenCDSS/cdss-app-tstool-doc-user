@@ -37,7 +37,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadPropertiesFromExcel` Command Editor for Excel Parameters (<a href="../ReadPropertiesFromExcel.png">see also the full-size image</a>)
+`ReadPropertiesFromExcel` Command Editor for Excel Parameters (<a href="../ReadPropertiesFromExcel.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel to properties map.
@@ -47,7 +47,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadPropertiesFromExcel` Command Editor for Excel to Properties Map Parameter (<a href="../ReadPropertiesFromExcel_Map.png">see also the full-size image</a>)
+`ReadPropertiesFromExcel` Command Editor for Excel to Properties Map Parameter (<a href="../ReadPropertiesFromExcel_Map.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for properties parameters.
@@ -57,7 +57,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadPropertiesFromExcel` Command Editor for Properties Parameters (<a href="../ReadPropertiesFromExcel_Properties.png">see also the full-size image</a>)
+`ReadPropertiesFromExcel` Command Editor for Properties Parameters (<a href="../ReadPropertiesFromExcel_Properties.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

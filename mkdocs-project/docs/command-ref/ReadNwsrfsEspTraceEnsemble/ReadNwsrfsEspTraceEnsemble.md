@@ -31,7 +31,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`ReadNwsrfsEspTraceEnsemble` Command Editor (<a href="../ReadNwsrfsEspTraceEnsemble.png">see also the full-size image</a>)
+`ReadNwsrfsEspTraceEnsemble` Command Editor (<a href="../ReadNwsrfsEspTraceEnsemble.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

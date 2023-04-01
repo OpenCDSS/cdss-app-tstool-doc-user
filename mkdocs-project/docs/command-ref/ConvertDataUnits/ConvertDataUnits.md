@@ -28,7 +28,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ConvertDataUnits` Command Editor (<a href="../ConvertDataUnits.png">see also the full-size image</a>)
+`ConvertDataUnits` Command Editor (<a href="../ConvertDataUnits.png">see full-size image</a>)
 </p>**
 
 The ***Dimension*** choice should be selected to narrow the list of available units to the appropriate dimension.

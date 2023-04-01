@@ -37,7 +37,7 @@ for statistic parameters.
 </p>**
 
 **<p style="text-align: center;">
-`CheckFile` Command Editor for Statistic Parameters (<a href="../CheckFile-Statistic.png">see also the full-size image</a>)
+`CheckFile` Command Editor for Statistic Parameters (<a href="../CheckFile-Statistic.png">see full-size image</a>)
 </p>**
 
 The following parameters indicate the check criteria.
@@ -47,7 +47,7 @@ The following parameters indicate the check criteria.
 </p>**
 
 **<p style="text-align: center;">
-`CheckFile` Command Editor for Criteria and Action Parameters (<a href="../CheckFile-Criteria.png">see also the full-size image</a>)
+`CheckFile` Command Editor for Criteria and Action Parameters (<a href="../CheckFile-Criteria.png">see full-size image</a>)
 </p>**
 
 The following parameters will output the check results to a table,
@@ -58,7 +58,7 @@ which can be further manipulated.
 </p>**
 
 **<p style="text-align: center;">
-`CheckFile` Command Editor for Output Parameters (<a href="../CheckFile-Output.png">see also the full-size image</a>)
+`CheckFile` Command Editor for Output Parameters (<a href="../CheckFile-Output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

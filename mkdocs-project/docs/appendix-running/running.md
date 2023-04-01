@@ -247,7 +247,7 @@ To define a task, first go to the ***System and Security*** subpanel of the ***C
 </p>**
 
 **<p style="text-align: center;">
-Running TSTool – Schedule as a Task (<a href="../RunningTSTool_ScheduleTasks.png">see also the full-size image</a>)
+Running TSTool – Schedule as a Task (<a href="../RunningTSTool_ScheduleTasks.png">see full-size image</a>)
 </p>**
 
 A screen showing currently scheduled tasks will appear. Click on the ***Action*** menu in the upper left, and the ***Create Task...*** option.
@@ -257,7 +257,7 @@ A screen showing currently scheduled tasks will appear. Click on the ***Action**
 </p>**
 
 **<p style="text-align: center;">
-Running TSTool – Creating a Task in the Task Scheduler (<a href="../RunningTSTool_TaskScheduler.png">see also the full-size image</a>)
+Running TSTool – Creating a Task in the Task Scheduler (<a href="../RunningTSTool_TaskScheduler.png">see full-size image</a>)
 </p>**
 
 A tabbed dialog will appear.  Go to the ***Actions*** tab, and click ***New...*** to create a new task.
@@ -278,7 +278,7 @@ The example shown on the right is a typical location for the install (specify an
 </p>**
 
 **<p style="text-align: center;">
-Running TSTool – Specify Program to Run for Task (<a href="../RunningTSTool_NewTask1.png">see also the full-size image</a>)
+Running TSTool – Specify Program to Run for Task (<a href="../RunningTSTool_NewTask1.png">see full-size image</a>)
 </p>**
 
 Specifying the absolute path to the command (starting at the drive) is recommended.

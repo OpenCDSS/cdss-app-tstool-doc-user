@@ -76,7 +76,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`ChangeIntervalIrregularToRegular` Command Editor for Input Parameters (<a href="../ChangeIntervalIrregularToRegular.png">see also the full-size image</a>)
+`ChangeIntervalIrregularToRegular` Command Editor for Input Parameters (<a href="../ChangeIntervalIrregularToRegular.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -84,7 +84,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`ChangeIntervalIrregularToRegular` Command Editor for Analysis (to Larger) Parameters (<a href="../ChangeIntervalIrregularToRegular_AnalysisLarger.png">see also the full-size image</a>)
+`ChangeIntervalIrregularToRegular` Command Editor for Analysis (to Larger) Parameters (<a href="../ChangeIntervalIrregularToRegular_AnalysisLarger.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -92,7 +92,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`ChangeIntervalIrregularToRegular` Command Editor for Analysis (to Smaller) Parameters (<a href="../ChangeIntervalIrregularToRegular_AnalysisSmaller.png">see also the full-size image</a>)
+`ChangeIntervalIrregularToRegular` Command Editor for Analysis (to Smaller) Parameters (<a href="../ChangeIntervalIrregularToRegular_AnalysisSmaller.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -100,7 +100,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`ChangeIntervalIrregularToRegular` Command Editor for Output Parameters (<a href="../ChangeIntervalIrregularToRegular_Output.png">see also the full-size image</a>)
+`ChangeIntervalIrregularToRegular` Command Editor for Output Parameters (<a href="../ChangeIntervalIrregularToRegular_Output.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -108,7 +108,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`ChangeIntervalIrregularToRegular` Command Editor for Ensemble Output Parameters (<a href="../ChangeIntervalIrregularToRegular_EnsOutput.png">see also the full-size image</a>)
+`ChangeIntervalIrregularToRegular` Command Editor for Ensemble Output Parameters (<a href="../ChangeIntervalIrregularToRegular_EnsOutput.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

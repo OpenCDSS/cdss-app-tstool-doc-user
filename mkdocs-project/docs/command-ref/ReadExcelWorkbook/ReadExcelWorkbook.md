@@ -14,14 +14,14 @@
 The `ReadExcelWorkbook` command reads a Microsoft Excel workbook file (`*.xls`, `*.xlsx`, `*.xlsm`).
 The workbook is retained in memory and can be manipulated using commands that write to Excel, for example:
 
-1.   Create an Excel workbook template with desired analysis, formatting, charts, etc.
+1.  Create an Excel workbook template with desired analysis, formatting, charts, etc.
     Leave placeholders for data sheets.  Refer to the data sheets using named ranges.
-2.   Read the Excel workbook template using the `ReadExcelWorkbook` command.
-3.   Manipulate the Excel workbook using TSTool commands that write to Excel, for example
+2.  Read the Excel workbook template using the `ReadExcelWorkbook` command.
+3.  Manipulate the Excel workbook using TSTool commands that write to Excel, for example
     [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md).
     If the `KeepOpen=False` parameter is used, the original file will not be re-written.
     Therefore, use `KeepOpen=True` in combination with the following.
-4.   Use the [`CloseExcelWorkbook`](../CloseExcelWorkbook/CloseExcelWorkbook.md) command and specify
+4.  Use the [`CloseExcelWorkbook`](../CloseExcelWorkbook/CloseExcelWorkbook.md) command and specify
     `WriteFile=True` to force writing the Excel workbook.
     The `NewOutputFile` parameter can also be specified to write a new output file, leaving the original Excel file intact.
 
@@ -42,7 +42,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadExcelWorkbook` Command Editor (<a href="../ReadExcelWorkbook.png">see also the full-size image</a>)
+`ReadExcelWorkbook` Command Editor (<a href="../ReadExcelWorkbook.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

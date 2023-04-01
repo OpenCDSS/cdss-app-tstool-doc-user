@@ -32,7 +32,7 @@ This is appropriate when a specific location is being processed.
 </p>**
 
 **<p style="text-align: center;">
-`ReadTimeSeriesFromDataStore` Command Editor for Reading a Single Time Series (<a href="../ReadTimeSeriesFromDataStore_Single.png">see also the full-size image</a>)
+`ReadTimeSeriesFromDataStore` Command Editor for Reading a Single Time Series (<a href="../ReadTimeSeriesFromDataStore_Single.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax
@@ -45,7 +45,7 @@ Mouse over the Where data entry fields to see information about choices.
 </p>**
 
 **<p style="text-align: center;">
-`ReadTimeSeriesFromDataStore` Command Editor for Reading Multiple Time Series (<a href="../ReadTimeSeriesFromDataStore_Multiple.png">see also the full-size image</a>)
+`ReadTimeSeriesFromDataStore` Command Editor for Reading Multiple Time Series (<a href="../ReadTimeSeriesFromDataStore_Multiple.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

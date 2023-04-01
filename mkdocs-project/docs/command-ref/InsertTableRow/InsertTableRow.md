@@ -29,7 +29,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`InsertTableRow` Command Editor (<a href="../InsertTableRow.png">see also the full-size image</a>)
+`InsertTableRow` Command Editor (<a href="../InsertTableRow.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

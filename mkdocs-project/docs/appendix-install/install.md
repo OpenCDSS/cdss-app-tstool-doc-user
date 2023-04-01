@@ -196,7 +196,7 @@ If you have administrative privileges, the following welcome will be displayed, 
 </p>**
 
 **<p style="text-align: center;">
-TSTool Install - Welcome (<a href="../Install_Welcome.png">see also the full-size image</a>)
+TSTool Install - Welcome (<a href="../Install_Welcome.png">see full-size image</a>)
 </p>**
 
 Press ***Next*** to continue with the installation.
@@ -206,7 +206,7 @@ Press ***Next*** to continue with the installation.
 </p>**
 
 **<p style="text-align: center;">
-TSTool Install - License Agreement (<a href="../Install_License.png">see also the full-size image</a>)
+TSTool Install - License Agreement (<a href="../Install_License.png">see full-size image</a>)
 </p>**
 
 TSTool is distributed with CDSS with GPL v3+ license.
@@ -221,7 +221,7 @@ Position the mouse over a component to see its description.
 </p>**
 
 **<p style="text-align: center;">
-TSTool Install - Choose Components (<a href="../Install_SelectComponents.png">see also the full-size image</a>)
+TSTool Install - Choose Components (<a href="../Install_SelectComponents.png">see full-size image</a>)
 </p>**
 
 Select the components to install and press ***Next***.
@@ -236,7 +236,7 @@ It is recommended that the default install location shown is used.
 </p>**
 
 **<p style="text-align: center;">
-TSTool Install - Choose Install Location (<a href="../Install_SelectFolder.png">see also the full-size image</a>)
+TSTool Install - Choose Install Location (<a href="../Install_SelectFolder.png">see full-size image</a>)
 </p>**
 
 After selecting the install location, press ***Next***.
@@ -253,7 +253,7 @@ and to allow the standard software uninstall procedure to work correctly.
 </p>**
 
 **<p style="text-align: center;">
-TSTool Install - Choose Start Menu Folder (<a href="../Install_StartMenuFolder.png">see also the full-size image</a>)
+TSTool Install - Choose Start Menu Folder (<a href="../Install_StartMenuFolder.png">see full-size image</a>)
 </p>**
 
 After selecting the folder, press ***Install***.
@@ -265,7 +265,7 @@ After selecting the folder, press ***Install***.
 </p>**
 
 **<p style="text-align: center;">
-TSTool Install - Installation Complete (<a href="../Install_Complete.png">see also the full-size image</a>)
+TSTool Install - Installation Complete (<a href="../Install_Complete.png">see full-size image</a>)
 </p>**
 
 Press ***Show details*** to see the files that were installed or press ***Next*** to continue.
@@ -277,7 +277,7 @@ Press ***Show details*** to see the files that were installed or press ***Next**
 </p>**
 
 **<p style="text-align: center;">
-TSTool Setup - HydroBase Configuration Question (<a href="../Install_HydroBaseQuestion.png">see also the full-size image</a>)
+TSTool Setup - HydroBase Configuration Question (<a href="../Install_HydroBaseQuestion.png">see full-size image</a>)
 </p>**
 
 TSTool and other CDSS software can utilize HydroBase running on the local computer as well as other computers.
@@ -298,7 +298,7 @@ file and settings typically only need to be changed after installing a new Hydro
 </p>**
 
 **<p style="text-align: center;">
-TSTool Setup - Configure HydroBase Settings (<a href="../Install_HydroBaseConfiguration.png">see also the full-size image</a>)
+TSTool Setup - Configure HydroBase Settings (<a href="../Install_HydroBaseConfiguration.png">see full-size image</a>)
 </p>**
 
 After entering the name of a HydroBase server and the default server to use, press ***Done***.
@@ -310,7 +310,7 @@ After entering the name of a HydroBase server and the default server to use, pre
 </p>**
 
 **<p style="text-align: center;">
-TSTool Setup - Run Software Instructions (<a href="../Install_RunTSToolInstructions.png">see also the full-size image</a>)
+TSTool Setup - Run Software Instructions (<a href="../Install_RunTSToolInstructions.png">see full-size image</a>)
 </p>**
 
 Press ***Yes*** to run the software or ***No*** to exit the installation procedure.

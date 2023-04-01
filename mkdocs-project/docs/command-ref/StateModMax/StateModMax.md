@@ -42,7 +42,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`StateModMax` Command Editor (<a href="../StateModMax.png">see also the full-size image</a>)
+`StateModMax` Command Editor (<a href="../StateModMax.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

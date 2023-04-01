@@ -32,7 +32,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ComputeErrorTimeSeries` Command Editor (<a href="../ComputeErrorTimeSeries.png">see also the full-size image</a>)
+`ComputeErrorTimeSeries` Command Editor (<a href="../ComputeErrorTimeSeries.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

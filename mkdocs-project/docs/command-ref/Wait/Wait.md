@@ -35,7 +35,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`Wait` Command Editor Showing Conditions Test (<a href="../Wait.png">see also the full-size image</a>)
+`Wait` Command Editor Showing Conditions Test (<a href="../Wait.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

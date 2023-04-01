@@ -34,7 +34,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetAveragePeriod` Command Editor (<a href="../SetAveragePeriod.png">see also the full-size image</a>)
+`SetAveragePeriod` Command Editor (<a href="../SetAveragePeriod.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

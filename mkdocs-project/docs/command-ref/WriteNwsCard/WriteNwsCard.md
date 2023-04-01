@@ -28,7 +28,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteNwsCard` Command Editor (<a href="../WriteNwsCard.png">see also the full-size image</a>)
+`WriteNwsCard` Command Editor (<a href="../WriteNwsCard.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -36,7 +36,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadReclamationPisces` Command Editor (<a href="../ReadReclamationPisces.png">see also the full-size image</a>)
+`ReadReclamationPisces` Command Editor (<a href="../ReadReclamationPisces.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -35,7 +35,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteSHEF` Command Editor for Input Time Series Parameters (<a href="../WriteSHEF.png">see also the full-size image</a>)
+`WriteSHEF` Command Editor for Input Time Series Parameters (<a href="../WriteSHEF.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -43,7 +43,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteSHEF` Command Editor for SHEF Data Parameters (<a href="../WriteSHEF-Data.png">see also the full-size image</a>)
+`WriteSHEF` Command Editor for SHEF Data Parameters (<a href="../WriteSHEF-Data.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -51,7 +51,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteSHEF` Command Editor for Output Parameters (<a href="../WriteSHEF-Output.png">see also the full-size image</a>)
+`WriteSHEF` Command Editor for Output Parameters (<a href="../WriteSHEF-Output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

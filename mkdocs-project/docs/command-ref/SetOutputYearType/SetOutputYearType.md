@@ -43,7 +43,7 @@ even if other than calendar year are used for output (see [`SetOutputYearType`](
 </p>**
 
 **<p style="text-align: center;">
-`SetOutputYearType` Command Editor (<a href="../SetOutputYearType.png">see also the full-size image</a>)
+`SetOutputYearType` Command Editor (<a href="../SetOutputYearType.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

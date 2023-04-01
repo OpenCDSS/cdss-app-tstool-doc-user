@@ -36,7 +36,7 @@ not visible in the figure, provides additional information about the datastore):
 </p>**
 
 **<p style="text-align: center;">
-Datastore Information from *View/Datastores* (<a href="../View_Datastores.png">see also the full-size image</a>)
+Datastore Information from *View/Datastores* (<a href="../View_Datastores.png">see full-size image</a>)
 </p>**
 
 ## Command Editor ##
@@ -52,7 +52,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`CloseDataStore` Command Editor (<a href="../CloseDataStore.png">see also the full-size image</a>)
+`CloseDataStore` Command Editor (<a href="../CloseDataStore.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -43,7 +43,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`ReadNrcsAwdb` Command Editor for General Parameters (<a href="../ReadNrcsAwdb.png">see also the full-size image</a>)
+`ReadNrcsAwdb` Command Editor for General Parameters (<a href="../ReadNrcsAwdb.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the ***Reservoirs*** tab of the dialog.
@@ -55,7 +55,7 @@ available only from the BOR network and appropriate network element codes must b
 </p>**
 
 **<p style="text-align: center;">
-`ReadNrcsAwdb` Command Editor for Reservoir Query Parameters (<a href="../ReadNrcsAwdb_Reservoir.png">see also the full-size image</a>)
+`ReadNrcsAwdb` Command Editor for Reservoir Query Parameters (<a href="../ReadNrcsAwdb_Reservoir.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the Forecasts tab of the dialog.
@@ -69,7 +69,7 @@ The forecast is uniquely identified by the forecast period and publication date 
 </p>**
 
 **<p style="text-align: center;">
-`ReadNrcsAwdb` Command Editor for Forecast Query Parameters (<a href="../ReadNrcsAwdb_Forecast.png">see also the full-size image</a>)
+`ReadNrcsAwdb` Command Editor for Forecast Query Parameters (<a href="../ReadNrcsAwdb_Forecast.png">see full-size image</a>)
 </p>**
 
 The resulting forecast table, as shown in the following figure,
@@ -81,7 +81,7 @@ Use table processing commands to filter the table for a specific station and pub
 </p>**
 
 **<p style="text-align: center;">
-`ReadNrcsAwdb` Command Output Forecast Table (<a href="../ReadNrcsAwdb_ForecastTable.png">see also the full-size image</a>)
+`ReadNrcsAwdb` Command Output Forecast Table (<a href="../ReadNrcsAwdb_ForecastTable.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -47,7 +47,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadPatternFile` Command Editor (<a href="../ReadPatternFile.png">see also the full-size image</a>)
+`ReadPatternFile` Command Editor (<a href="../ReadPatternFile.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

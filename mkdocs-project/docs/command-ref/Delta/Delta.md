@@ -78,7 +78,7 @@ Delta(Alias="%L-delta")
 </p>**
 
 **<p style="text-align: center;">
-Streamflow Time Series input for Simple Delta (<a href="../overview-simple-streamflow-graph.png">see also the full-size image</a>)
+Streamflow Time Series input for Simple Delta (<a href="../overview-simple-streamflow-graph.png">see full-size image</a>)
 </p>**
 
 The corresponding simple delta output time series shown below includes positive and negative values,
@@ -89,7 +89,7 @@ with the flood event controlling the y-axis scale.
 </p>**
 
 **<p style="text-align: center;">
-Simpl Delta (<a href="../overview-simple-streamflow-delta-graph.png">see also the full-size image</a>)
+Simple Delta (<a href="../overview-simple-streamflow-delta-graph.png">see full-size image</a>)
 </p>**
 
 Additional parameters such as `DataLimit` and `IntervalLimit` can be used to check for unexpected values
@@ -148,7 +148,7 @@ The following example is for flood warning system cumulative precipitation data.
 </p>**
 
 **<p style="text-align: center;">
-Precipitation Time Series input for Variable Reset (<a href="../overview-reset-auto-precipitation-graph.png">see also the full-size image</a>)
+Precipitation Time Series input for Variable Reset (<a href="../overview-reset-auto-precipitation-graph.png">see full-size image</a>)
 </p>**
 
 Computing a delta using `ResetType=Auto`, `ExpectedTrend=Increasing`,
@@ -170,7 +170,7 @@ Delta(ExpectedTrend="Increasing",ResetType="Auto",Alias="%L-delta")
 </p>**
 
 **<p style="text-align: center;">
-Precipitation Time Series input for Variable Reset (<a href="../overview-reset-auto-precipitation-delta-graph.png">see also the full-size image</a>)
+Precipitation Time Series input for Variable Reset (<a href="../overview-reset-auto-precipitation-delta-graph.png">see full-size image</a>)
 </p>**
 
 The delta spike around 2021-01-25 is due to the cumulative precipitation values `1.46`, `1.42`, `1.46`,
@@ -215,7 +215,7 @@ SetInputPeriod(InputStart="2020-01-01 00:00",InputEnd="CurrentToMinute")
 </p>**
 
 **<p style="text-align: center;">
-Precipitation Time Series input for Variable Reset (<a href="../overview-reset-auto-variable-precipitation-graph.png">see also the full-size image</a>)
+Precipitation Time Series input for Variable Reset (<a href="../overview-reset-auto-variable-precipitation-graph.png">see full-size image</a>)
 </p>**
 
 #### Rollover Reset with Bounding Values ####
@@ -252,7 +252,7 @@ which cause both rollover and manual resets to occur.
 </p>**
 
 **<p style="text-align: center;">
-Example Data Showing Rollover (`R` flag) and Manual Reset (`r flag) (<a href="../overview-reset-rollover-table.png">see also the full-size image</a>)
+Example Data Showing Rollover (`R` flag) and Manual Reset (`r flag) (<a href="../overview-reset-rollover-table.png">see full-size image</a>)
 </p>**
 
 Specific cases outside of normal data are:
@@ -287,7 +287,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Delta` Command Editor for General Parameters (<a href="../Delta-General.png">see also the full-size image</a>)
+`Delta` Command Editor for General Parameters (<a href="../Delta-General.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -295,7 +295,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Delta` Command Editor for Delta Limit Parameters (<a href="../Delta-DeltaLimit.png">see also the full-size image</a>)
+`Delta` Command Editor for Delta Limit Parameters (<a href="../Delta-DeltaLimit.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -303,7 +303,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Delta` Command Editor for Reset (Auto) Parameters (<a href="../Delta-ResetAuto.png">see also the full-size image</a>)
+`Delta` Command Editor for Reset (Auto) Parameters (<a href="../Delta-ResetAuto.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -311,7 +311,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Delta` Command Editor for Reset (Rollover) Parameters (<a href="../Delta-ResetRollover.png">see also the full-size image</a>)
+`Delta` Command Editor for Reset (Rollover) Parameters (<a href="../Delta-ResetRollover.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -319,7 +319,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Delta` Command Editor for Output Table Parameters (<a href="../Delta-OutputTable.png">see also the full-size image</a>)
+`Delta` Command Editor for Output Table Parameters (<a href="../Delta-OutputTable.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -327,7 +327,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Delta` Command Editor for Output Properties Parameters (<a href="../Delta-OutputProperties.png">see also the full-size image</a>)
+`Delta` Command Editor for Output Properties Parameters (<a href="../Delta-OutputProperties.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -399,7 +399,7 @@ in this case for cumulative precipitation that resets at minute 53 of each hour.
 </p>**
 
 **<p style="text-align: center;">
-`Delta` Graph for `ResetType=Auto` (<a href="../Delta-auto-graph.png">see also the full-size image</a>)
+`Delta` Graph for `ResetType=Auto` (<a href="../Delta-auto-graph.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -407,7 +407,7 @@ in this case for cumulative precipitation that resets at minute 53 of each hour.
 </p>**
 
 **<p style="text-align: center;">
-`Delta` Table for `ResetType=Auto` (<a href="../Delta-auto-table.png">see also the full-size image</a>)
+`Delta` Table for `ResetType=Auto` (<a href="../Delta-auto-table.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

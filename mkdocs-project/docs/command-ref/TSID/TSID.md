@@ -61,7 +61,7 @@ relative path to allow the files to be moved to another location and run without
 </p>**
 
 **<p style="text-align: center;">
-`TSID` Command Editor for a Time Series Read from a StateMod File (<a href="../TSID-StateMod.png">see also the full-size image</a>)
+`TSID` Command Editor for a Time Series Read from a StateMod File (<a href="../TSID-StateMod.png">see full-size image</a>)
 </p>**
 
 The following example is for a TSID for the
@@ -73,7 +73,7 @@ In this case the datastore name is specified at the end of the TSID.
 </p>**
 
 **<p style="text-align: center;">
-`TSID` Command Editor for a Time Series Read from a HydroBase Database (<a href="../TSID-HydroBase.png">see also the full-size image</a>)
+`TSID` Command Editor for a Time Series Read from a HydroBase Database (<a href="../TSID-HydroBase.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

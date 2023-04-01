@@ -75,7 +75,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor to Compare 2 Time Series (<a href="../CompareTimeSeries_2.png">see also the full-size image</a>)
+`CompareTimeSeries` Command Editor to Compare 2 Time Series (<a href="../CompareTimeSeries_2.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when comparing two ensembles.
@@ -85,7 +85,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor to Compare 2 Ensembles (<a href="../CompareTimeSeries_2Ensembles.png">see also the full-size image</a>)
+`CompareTimeSeries` Command Editor to Compare 2 Ensembles (<a href="../CompareTimeSeries_2Ensembles.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when comparing many time series.
@@ -95,7 +95,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor to Compare Many Time Series (<a href="../CompareTimeSeries_Many.png">see also the full-size image</a>)
+`CompareTimeSeries` Command Editor to Compare Many Time Series (<a href="../CompareTimeSeries_Many.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for analysis parameters.
@@ -105,7 +105,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor for Analysis Parameters (<a href="../CompareTimeSeries_Analysis.png">see also the full-size image</a>)
+`CompareTimeSeries` Command Editor for Analysis Parameters (<a href="../CompareTimeSeries_Analysis.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for output parameters.
@@ -115,7 +115,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`CompareTimeSeries` Command Editor for Output Parameters (<a href="../CompareTimeSeries_Output.png">see also the full-size image</a>)
+`CompareTimeSeries` Command Editor for Output Parameters (<a href="../CompareTimeSeries_Output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -61,7 +61,7 @@ See the following figure for examples of TSTool time series results when reading
 </p>**
 
 **<p style="text-align: center;">
-`ReadRiverWare` Ensemble Time Series Results (<a href="../ReadRiverWare_RDF_TimeSeries.png">see also the full-size image</a>)
+`ReadRiverWare` Ensemble Time Series Results (<a href="../ReadRiverWare_RDF_TimeSeries.png">see full-size image</a>)
 </p>**
 
 See the following figure for examples of TSTool ensemble results when reading RDF ensembles.
@@ -71,7 +71,7 @@ See the following figure for examples of TSTool ensemble results when reading RD
 </p>**
 
 **<p style="text-align: center;">
-`ReadRiverWare` Ensemble Results (<a href="../ReadRiverWare_RDF_Ensembles.png">see also the full-size image</a>)
+`ReadRiverWare` Ensemble Results (<a href="../ReadRiverWare_RDF_Ensembles.png">see full-size image</a>)
 </p>**
 
 ## Command Editor ##
@@ -87,7 +87,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ReadRiverWare` Command Editor (<a href="../ReadRiverWare.png">see also the full-size image</a>)
+`ReadRiverWare` Command Editor (<a href="../ReadRiverWare.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for an RDF file:
@@ -97,7 +97,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ReadRiverWare` Command Editor for RDF (<a href="../ReadRiverWare_RDF.png">see also the full-size image</a>)
+`ReadRiverWare` Command Editor for RDF (<a href="../ReadRiverWare_RDF.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -38,7 +38,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`WriteDelimitedFile` Command Editor (<a href="../WriteDelimitedFile.png">see also the full-size image</a>)
+`WriteDelimitedFile` Command Editor (<a href="../WriteDelimitedFile.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

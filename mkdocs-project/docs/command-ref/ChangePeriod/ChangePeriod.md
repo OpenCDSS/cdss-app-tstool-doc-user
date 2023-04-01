@@ -27,7 +27,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ChangePeriod` Command Editor (<a href="../ChangePeriod.png">see also the full-size image</a>)
+`ChangePeriod` Command Editor (<a href="../ChangePeriod.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -82,7 +82,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ARMA` Command Editor for Input Parameters (<a href="../ARMA-input.png">see also the full-size image</a>)
+`ARMA` Command Editor for Input Parameters (<a href="../ARMA-input.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -90,7 +90,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ARMA` Command Editor for ARMA Parameters (<a href="../ARMA-ARMA.png">see also the full-size image</a>)
+`ARMA` Command Editor for ARMA Parameters (<a href="../ARMA-ARMA.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -98,7 +98,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ARMA` Command Editor for Output Parameters (<a href="../ARMA-output.png">see also the full-size image</a>)
+`ARMA` Command Editor for Output Parameters (<a href="../ARMA-output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -152,7 +152,7 @@ The following figure shows the original and routed time series.
 </p>**
 
 **<p style="text-align: center;">
-Example Graph Showing Original and ARMA-Routed Time Series (<a href="../ARMA-graph.png">see also the full-size image</a>)
+Example Graph Showing Original and ARMA-Routed Time Series (<a href="../ARMA-graph.png">see full-size image</a>)
 </p>**
 
 The [`Cumulate`](../Cumulate/Cumulate.md) command can be used to verify mass balance of the original
@@ -165,7 +165,7 @@ The following figure shows the time series from the previous graph, this time as
 </p>**
 
 **<p style="text-align: center;">
-Example Graph Showing Original and ARMA-Routed Time Series as Cumulative Values (<a href="../ARMA-graph-cumulate.png">see also the full-size image</a>)
+Example Graph Showing Original and ARMA-Routed Time Series as Cumulative Values (<a href="../ARMA-graph-cumulate.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

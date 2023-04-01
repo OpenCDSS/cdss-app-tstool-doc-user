@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`CopyFile` Command Editor for an Output File (<a href="../CopyFile.png">see also the full-size image</a>)
+`CopyFile` Command Editor for an Output File (<a href="../CopyFile.png">see full-size image</a>)
 </p>**
 
 The following is used to specify a temporary file.
@@ -49,7 +49,7 @@ The following is used to specify a temporary file.
 </p>**
 
 **<p style="text-align: center;">
-`CopyFile` Command Editor for a Temporary File (<a href="../CopyFile-Temp.png">see also the full-size image</a>)
+`CopyFile` Command Editor for a Temporary File (<a href="../CopyFile-Temp.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

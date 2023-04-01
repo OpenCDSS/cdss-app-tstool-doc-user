@@ -35,7 +35,7 @@ in this case to check for time series that have >= 5% missing data values.
 </p>**
 
 **<p style="text-align: center;">
-`CheckTimeSeriesStatistic` Command Editor for Statistic Parameters (<a href="../CheckTimeSeriesStatistic.png">see also the full-size image</a>)
+`CheckTimeSeriesStatistic` Command Editor for Statistic Parameters (<a href="../CheckTimeSeriesStatistic.png">see full-size image</a>)
 </p>**
 
 The following parameters will output the location part of the TSID to a
@@ -46,7 +46,7 @@ column named TSID and the missing percentage to a column named `MissingPercent` 
 </p>**
 
 **<p style="text-align: center;">
-`CheckTimeSeriesStatistic` Command Editor for Output Parameters (<a href="../CheckTimeSeriesStatistic_Output.png">see also the full-size image</a>)
+`CheckTimeSeriesStatistic` Command Editor for Output Parameters (<a href="../CheckTimeSeriesStatistic_Output.png">see full-size image</a>)
 </p>**
 
 The percentage of missing values is then checked to see if `>= 10` and if so the command will
@@ -57,7 +57,7 @@ fail and the time series will have a property set `MissingPercentCheck=Fail`.
 </p>**
 
 **<p style="text-align: center;">
-`CheckTimeSeriesStatistic` Command Editor for Criteria and Action Parameters (<a href="../CheckTimeSeriesStatistic_Output.png">see also the full-size image</a>)
+`CheckTimeSeriesStatistic` Command Editor for Criteria and Action Parameters (<a href="../CheckTimeSeriesStatistic_Output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

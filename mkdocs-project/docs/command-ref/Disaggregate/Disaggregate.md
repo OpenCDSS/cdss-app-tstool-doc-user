@@ -40,7 +40,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Disaggregate` Command Editor (<a href="../Disaggregate.png">see also the full-size image</a>)
+`Disaggregate` Command Editor (<a href="../Disaggregate.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

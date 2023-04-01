@@ -128,7 +128,7 @@ Trying to use commands that depend on data connections that have not been initia
 </p>**
 
 **<p style="text-align: center;">
-TSTool At Startup, Waiting for Data Connections to be Initialized (<a href="../GUI_MainWait.png">see also the full-size image</a>)
+TSTool At Startup, Waiting for Data Connections to be Initialized (<a href="../GUI_MainWait.png">see full-size image</a>)
 </p>**
  
 The following figure illustrates the main TSTool interface after data connections are initialized.
@@ -147,7 +147,7 @@ to show how many items are in a list and how many are selected).
 </p>**
 
 **<p style="text-align: center;">
-Initial TSTool Interface (<a href="../GUI_MainBlank.png">see also the full-size image</a>)
+Initial TSTool Interface (<a href="../GUI_MainBlank.png">see full-size image</a>)
 </p>**
 
 ### Input/Query Options and Time Series List Area ###
@@ -225,7 +225,7 @@ This may result in a slight pause but helps ensure that commands are functional.
 </p>**
 
 **<p style="text-align: center;">
-TSTool after Pressing Get Time Series List and selecting from Time Series List (<a href="../GUI_MainWithCommands.png">see also the full-size image</a>)
+TSTool after Pressing Get Time Series List and selecting from Time Series List (<a href="../GUI_MainWithCommands.png">see full-size image</a>)
 </p>**
 
 ### Command List and Command Error Indicators ###
@@ -338,7 +338,7 @@ listed in the bottom of the main interface, as shown in the following figure:
 </p>**
 
 **<p style="text-align: center;">
-TSTool after Running Commands (<a href="../GUI_MainWithTS.png">see also the full-size image</a>)
+TSTool after Running Commands (<a href="../GUI_MainWithTS.png">see full-size image</a>)
 </p>**
 
 The time series listed in the ***Results / Time Series*** list can then viewed using the
@@ -384,7 +384,7 @@ for example to graph the ensemble.
 </p>**
 
 **<p style="text-align: center;">
-***Results / Ensembles*** (<a href="../results-ensembles.png">see also the full-size image</a>)
+***Results / Ensembles*** (<a href="../results-ensembles.png">see full-size image</a>)
 </p>**
 
 #### Results / Networks ####
@@ -403,7 +403,7 @@ Right-click on a network to access the popup menu for network tools.
 </p>**
 
 **<p style="text-align: center;">
-***Results / Networks*** (<a href="../results-networks.png">see also the full-size image</a>)
+***Results / Networks*** (<a href="../results-networks.png">see full-size image</a>)
 </p>**
 
 #### Results / Objects ####
@@ -420,7 +420,7 @@ Right-click on an object to access the popup menu for object tools.
 </p>**
 
 **<p style="text-align: center;">
-***Results / Objects*** (<a href="../results-objects.png">see also the full-size image</a>)
+***Results / Objects*** (<a href="../results-objects.png">see full-size image</a>)
 </p>**
 
 #### Results / Output Files ####
@@ -438,7 +438,7 @@ If an associated program is not available, open the file using the file explorer
 </p>**
 
 **<p style="text-align: center;">
-***Results / Output Files*** (<a href="../results-output-files.png">see also the full-size image</a>)
+***Results / Output Files*** (<a href="../results-output-files.png">see full-size image</a>)
 </p>**
 
 #### Results / Problems ####
@@ -455,7 +455,7 @@ Use left and right click to select multiple cells.
 </p>**
 
 **<p style="text-align: center;">
-***Results / Problems*** (<a href="../results-problems.png">see also the full-size image</a>)
+***Results / Problems*** (<a href="../results-problems.png">see full-size image</a>)
 </p>**
 
 #### Results / Properties ####
@@ -476,7 +476,7 @@ Use left and right click to select multiple cells.
 </p>**
 
 **<p style="text-align: center;">
-***Results / Properties*** (<a href="../results-properties.png">see also the full-size image</a>)
+***Results / Properties*** (<a href="../results-properties.png">see full-size image</a>)
 </p>**
 
 The following table lists built-in properties.
@@ -543,7 +543,7 @@ for example [`ListFiles`](../command-ref/ListFiles/ListFiles.md) and
 </p>**
 
 **<p style="text-align: center;">
-***Results / Tables*** (<a href="../results-tables.png">see also the full-size image</a>)
+***Results / Tables*** (<a href="../results-tables.png">see full-size image</a>)
 </p>**
 
 #### Results / Time Series ####
@@ -602,7 +602,7 @@ If ***Graph – Ensemble*** is selected for a time series, the following dialog 
 </p>**
 
 **<p style="text-align: center;">
-Results – Graph Ensemble Dialog (<a href="../Menu_Results_Graph_Ensemble.png">see also the full-size image</a>)
+Results – Graph Ensemble Dialog (<a href="../Menu_Results_Graph_Ensemble.png">see full-size image</a>)
 </p>**
 
 This dialog provides the ability to indicate how the selected
@@ -630,7 +630,7 @@ and specify the graph template to configure the graph.
 </p>**
 
 **<p style="text-align: center;">
-Results – Graph Ensemble Dialog (<a href="../Menu_Results_Graph_Ensemble.png">see also the full-size image</a>)
+Results – Graph Ensemble Dialog (<a href="../Menu_Results_Graph_Ensemble.png">see full-size image</a>)
 </p>**
 
 #### Results / Views ####
@@ -646,7 +646,7 @@ which can be used at the end of a command file to create a view.
 </p>**
 
 **<p style="text-align: center;">
-***Results / Views*** (<a href="../results-views.png">see also the full-size image</a>)
+***Results / Views*** (<a href="../results-views.png">see full-size image</a>)
 </p>**
 
 ## File Menu - Main Input and Output Control ##
@@ -754,7 +754,7 @@ last time that the commands were run, including global properties that impact re
 </p>**
 
 **<p style="text-align: center;">
-Properties of the Last Commands Run (<a href="../Menu_File_PropertiesRun.png">see also the full-size image</a>)
+Properties of the Last Commands Run (<a href="../Menu_File_PropertiesRun.png">see full-size image</a>)
 </p>**
 
 This information is useful for troubleshooting processing. 
@@ -765,7 +765,7 @@ The ***File / Properties / TSTool Session*** menu item displays information abou
 </p>**
 
 **<p style="text-align: center;">
-TSTool Session Properties (<a href="../Menu_File_Properties_TSToolSession.png">see also the full-size image</a>)
+TSTool Session Properties (<a href="../Menu_File_Properties_TSToolSession.png">see full-size image</a>)
 </p>**
 
 This information is useful for checking the TSTool configuration. 
@@ -781,7 +781,7 @@ The information that is shown is consistent with that shown by other State of Co
 </p>**
 
 **<p style="text-align: center;">
-HydroBase Properties Dialog (<a href="../Menu_File_Properties_HydroBase.png">see also the full-size image</a>)
+HydroBase Properties Dialog (<a href="../Menu_File_Properties_HydroBase.png">see full-size image</a>)
 </p>**
 
 ### Set Working Directory ###
@@ -1124,7 +1124,7 @@ Once added, the ***Tools / Options*** editor will allow the settings to be toggl
 </p>**
 
 **<p style="text-align: center;">
-Datastore and Input Types that are Enabled based on Installation Configuration File (<a href="../Menu_Tools_Options_InputTypes.png">see also the full-size image</a>)
+Datastore and Input Types that are Enabled based on Installation Configuration File (<a href="../Menu_Tools_Options_InputTypes.png">see full-size image</a>)
 </p>**
 
 ### Diagnostics ###

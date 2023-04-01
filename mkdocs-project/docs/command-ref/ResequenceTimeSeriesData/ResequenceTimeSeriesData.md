@@ -53,7 +53,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ResequenceTimeSeries` Command Editor (<a href="../ResequenceTimeSeriesData.png">see also the full-size image</a>)
+`ResequenceTimeSeries` Command Editor (<a href="../ResequenceTimeSeriesData.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

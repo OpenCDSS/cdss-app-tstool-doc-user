@@ -37,7 +37,7 @@ is edited by pressing the ***Edit*** button.
 </p>**
 
 **<p style="text-align: center;">
-`NewTimeSeries` Command Editor (<a href="../NewTimeSeries.png">see also the full-size image</a>)
+`NewTimeSeries` Command Editor (<a href="../NewTimeSeries.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
