@@ -27,7 +27,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`NewPatternTimeSeries` Command Editor (<a href="../NewPatternTimeSeries.png">see also the full-size image</a>)
+`NewPatternTimeSeries` Command Editor (<a href="../NewPatternTimeSeries.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -62,7 +62,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`NewObject` Command Editor (<a href="../NewObject.png">see also the full-size image</a>)
+`NewObject` Command Editor (<a href="../NewObject.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

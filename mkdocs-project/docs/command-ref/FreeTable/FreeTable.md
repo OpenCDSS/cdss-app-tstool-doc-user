@@ -29,7 +29,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`FreeTable` Command Editor (<a href="../FreeTable.png">see also the full-size image</a>)
+`FreeTable` Command Editor (<a href="../FreeTable.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

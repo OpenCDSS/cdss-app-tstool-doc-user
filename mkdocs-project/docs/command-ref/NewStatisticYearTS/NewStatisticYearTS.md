@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`NewStatisticYearTS` Command Editor (<a href="../NewStatisticYearTS.png">see also the full-size image</a>)
+`NewStatisticYearTS` Command Editor (<a href="../NewStatisticYearTS.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for distribution parameters.
@@ -49,7 +49,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`NewStatisticYearTS` Command Editor for Distribution Parameters (<a href="../NewStatisticYearTS_Distribution.png">see also the full-size image</a>)
+`NewStatisticYearTS` Command Editor for Distribution Parameters (<a href="../NewStatisticYearTS_Distribution.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for analysis parameters.
@@ -59,7 +59,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`NewStatisticYearTS` Command Editor for Analysis Parameters (<a href="../NewStatisticYearTS_Analysis.png">see also the full-size image</a>)
+`NewStatisticYearTS` Command Editor for Analysis Parameters (<a href="../NewStatisticYearTS_Analysis.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
@@ -69,7 +69,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`NewStatisticYearTS` Command Editor for Output Parameters (<a href="../NewStatisticYearTS_Output.png">see also the full-size image</a>)
+`NewStatisticYearTS` Command Editor for Output Parameters (<a href="../NewStatisticYearTS_Output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

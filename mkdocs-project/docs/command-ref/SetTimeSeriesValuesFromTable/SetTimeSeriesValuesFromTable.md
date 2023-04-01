@@ -29,7 +29,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromTable` Command Editor for Time Series Parameters (<a href="../SetTimeSeriesValuesFromTable.png">see also the full-size image</a>)
+`SetTimeSeriesValuesFromTable` Command Editor for Time Series Parameters (<a href="../SetTimeSeriesValuesFromTable.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing table parameters.
@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromTable` Command Editor for Table Parameters (<a href="../SetTimeSeriesValuesFromTable_Table.png">see also the full-size image</a>)
+`SetTimeSeriesValuesFromTable` Command Editor for Table Parameters (<a href="../SetTimeSeriesValuesFromTable_Table.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

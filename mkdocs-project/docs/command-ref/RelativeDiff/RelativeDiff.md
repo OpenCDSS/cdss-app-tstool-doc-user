@@ -32,7 +32,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`RelativeDiff` Command Editor (<a href="../RelativeDiff.png">see also the full-size image</a>)
+`RelativeDiff` Command Editor (<a href="../RelativeDiff.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

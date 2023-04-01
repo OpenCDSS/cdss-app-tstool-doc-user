@@ -265,7 +265,7 @@ If either are set to `Prompt` in the configuration file, then the following dial
 </p>**
 
 **<p style="text-align: center;">
-ReclamationHDB Datastore Login Dialog for Initial Login (<a href="../ReclamationHDB_login.png">see also the full-size image</a>)
+ReclamationHDB Datastore Login Dialog for Initial Login (<a href="../ReclamationHDB_login.png">see full-size image</a>)
 </p>**
 
 Only the login and password can be specified.
@@ -278,7 +278,7 @@ used to change a datastore login to a different account, as shown below:
 </p>**
 
 **<p style="text-align: center;">
-ReclamationHDB Datastore Login Dialog after Startup (<a href="../ReclamationHDB_login2.png">see also the full-size image</a>)
+ReclamationHDB Datastore Login Dialog after Startup (<a href="../ReclamationHDB_login2.png">see full-size image</a>)
 </p>**
 
 HDB database connections can timeout or drop.

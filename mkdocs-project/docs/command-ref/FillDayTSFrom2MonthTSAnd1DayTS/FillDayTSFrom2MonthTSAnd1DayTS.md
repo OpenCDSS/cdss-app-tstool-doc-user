@@ -45,7 +45,7 @@ Currently there is no way to fill multiple time series with one command.
 </p>**
 
 **<p style="text-align: center;">
-`FillDayTSFrom2MonthTSAnd1DayTS` Command Editor (<a href="../FillDayTSFrom2MonthTSAnd1DayTS.png">see also the full-size image</a>)
+`FillDayTSFrom2MonthTSAnd1DayTS` Command Editor (<a href="../FillDayTSFrom2MonthTSAnd1DayTS.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -97,7 +97,7 @@ Note that the shape of the filled time series is similar to the other time serie
 ![Graph example of Filled Data](FillDayTSFrom2MonthTSAnd1DayTS_Graph.png)
 
 **<p style="text-align: center;">
-Example of Filled Data (<a href="../FillDayTSFrom2MonthTSAnd1DayTS_Graph.png">see also the full-size image</a>)
+Example of Filled Data (<a href="../FillDayTSFrom2MonthTSAnd1DayTS_Graph.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

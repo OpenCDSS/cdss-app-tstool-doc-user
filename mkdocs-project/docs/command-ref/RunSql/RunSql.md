@@ -93,7 +93,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`RunSql` Command Editor (<a href="../RunSql.png">see also the full-size image</a>)
+`RunSql` Command Editor (<a href="../RunSql.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax for the command when using a file to specify the SQL statement.
@@ -103,7 +103,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`RunSql` Command Editor when Specifying the SQL Statement Using a File (<a href="../RunSql_File.png">see also the full-size image</a>)
+`RunSql` Command Editor when Specifying the SQL Statement Using a File (<a href="../RunSql_File.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax for the command when running a function.
@@ -114,7 +114,7 @@ The ***Edit*** dialog will automatically populate the list of parameters if the 
 </p>**
 
 **<p style="text-align: center;">
-`RunSql` Command Editor when Specifying a Function to Run (<a href="../RunSql_Function.png">see also the full-size image</a>)
+`RunSql` Command Editor when Specifying a Function to Run (<a href="../RunSql_Function.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax for the command when running a stored procedure.
@@ -125,7 +125,7 @@ The ***Edit*** dialog will automatically populate the list of parameters if the 
 </p>**
 
 **<p style="text-align: center;">
-`RunSql` Command Editor when Specifying a Stored Procedure to Run (<a href="../RunSql_Procedure.png">see also the full-size image</a>)
+`RunSql` Command Editor when Specifying a Stored Procedure to Run (<a href="../RunSql_Procedure.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

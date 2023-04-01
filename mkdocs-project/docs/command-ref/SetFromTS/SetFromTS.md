@@ -44,7 +44,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetFromTS` Command Editor (<a href="../SetFromTS.png">see also the full-size image</a>)
+`SetFromTS` Command Editor (<a href="../SetFromTS.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the
@@ -55,7 +55,7 @@ command for analysis window and period parameters.
 </p>**
 
 **<p style="text-align: center;">
-`SetFromTS` Command Editor for Period and Window Parameters (<a href="../SetFromTS_Period.png">see also the full-size image</a>)
+`SetFromTS` Command Editor for Period and Window Parameters (<a href="../SetFromTS_Period.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for control parameters.
@@ -65,7 +65,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetFromTS` Command Editor for Set Control Parameters (<a href="../SetFromTS_Control.png">see also the full-size image</a>)
+`SetFromTS` Command Editor for Set Control Parameters (<a href="../SetFromTS_Control.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

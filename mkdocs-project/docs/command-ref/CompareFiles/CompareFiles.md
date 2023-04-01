@@ -56,7 +56,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`CompareFiles` Command Editor for Comparing File Contents (<a href="../CompareFiles.png">see also the full-size image</a>)
+`CompareFiles` Command Editor for Comparing File Contents (<a href="../CompareFiles.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -64,7 +64,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`CompareFiles` Command Editor for Comparing File Properites (<a href="../CompareFiles-Properties.png">see also the full-size image</a>)
+`CompareFiles` Command Editor for Comparing File Properites (<a href="../CompareFiles-Properties.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -72,7 +72,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`CompareFiles` Command Editor for Wait Parameters (<a href="../CompareFiles-Wait.png">see also the full-size image</a>)
+`CompareFiles` Command Editor for Wait Parameters (<a href="../CompareFiles-Wait.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

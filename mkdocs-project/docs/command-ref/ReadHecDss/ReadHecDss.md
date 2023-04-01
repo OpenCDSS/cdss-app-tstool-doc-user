@@ -34,7 +34,7 @@ In the future, it is envisioned that choices for A – F parts will be made avai
 </p>**
 
 **<p style="text-align: center;">
-`ReadHecDss` Command Editor (<a href="../ReadHecDss.png">see also the full-size image</a>)
+`ReadHecDss` Command Editor (<a href="../ReadHecDss.png">see also full-size image</a>)
 </p>**
 
 ## Command Syntax ##

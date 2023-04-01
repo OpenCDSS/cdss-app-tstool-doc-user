@@ -455,7 +455,7 @@ all at the same streamflow gage, as shown in the following figure.
 </p>**
 
 **<p style="text-align: center;">
-Example Graph of Time Series Traces (<a href="../Example_LobatosCurrent_TSTool.png">see also the full-size image</a>)
+Example Graph of Time Series Traces (<a href="../Example_LobatosCurrent_TSTool.png">see full-size image</a>)
 </p>**
 
 Any of the time series can be selected and viewed.
@@ -477,7 +477,7 @@ Key traces and output time series can be selected and graphed, as shown below.
 </p>**
 
 **<p style="text-align: center;">
-Example Graph of Traces and Combined Real-time and Historical Time Series (<a href="../Example_LobatosCurrent_Graph.png">see also the full-size image</a>)
+Example Graph of Traces and Combined Real-time and Historical Time Series (<a href="../Example_LobatosCurrent_Graph.png">see full-size image</a>)
 </p>**
 
 ## Statistic Examples ##
@@ -602,7 +602,7 @@ The resulting graph is shown in the following figure.  Pressing ***Close*** will
 </p>**
 
 **<p style="text-align: center;">
-Example Stand-alone Graph (<a href="../Example_NoMainGUI_Graph.png">see also the full-size image</a>)
+Example Stand-alone Graph (<a href="../Example_NoMainGUI_Graph.png">see full-size image</a>)
 </p>**
 
 ### Automating Graphs to Compare Observed and Simulated Time Series ###
@@ -712,7 +712,7 @@ having difficulty finding good labels – resize the graph window to improve lab
 </p>**
 
 **<p style="text-align: center;">
-Example Scatter Graph (<a href="../Example_Scatter_Graph.png">see also the full-size image</a>)
+Example Scatter Graph (<a href="../Example_Scatter_Graph.png">see full-size image</a>)
 </p>**
 
 Because this approach relies primarily on the time series identifiers to

@@ -61,7 +61,7 @@ command (in this case illustrating how values in a column named `ts1` are added 
 </p>**
 
 **<p style="text-align: center;">
-`TableMath` Command Editor (<a href="../TableMath.png">see also the full-size image</a>)
+`TableMath` Command Editor (<a href="../TableMath.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

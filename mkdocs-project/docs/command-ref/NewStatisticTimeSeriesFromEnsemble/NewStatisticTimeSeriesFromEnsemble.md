@@ -37,7 +37,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`NewStatisticTimeSeriesFromEnsemble` Command Editor for Input Parameters (<a href="../NewStatisticTimeSeriesFromEnsemble_Input.png">see also the full-size image</a>)
+`NewStatisticTimeSeriesFromEnsemble` Command Editor for Input Parameters (<a href="../NewStatisticTimeSeriesFromEnsemble_Input.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -45,7 +45,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`NewStatisticTimeSeriesFromEnsemble` Command Editor for Distribution Parameters (<a href="../NewStatisticTimeSeriesFromEnsemble_Distribution.png">see also the full-size image</a>)
+`NewStatisticTimeSeriesFromEnsemble` Command Editor for Distribution Parameters (<a href="../NewStatisticTimeSeriesFromEnsemble_Distribution.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -53,7 +53,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`NewStatisticTimeSeriesFromEnsemble` Command Editor for Analysis Parameters (<a href="../NewStatisticTimeSeriesFromEnsemble_Analysis.png">see also the full-size image</a>)
+`NewStatisticTimeSeriesFromEnsemble` Command Editor for Analysis Parameters (<a href="../NewStatisticTimeSeriesFromEnsemble_Analysis.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -61,7 +61,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`NewStatisticTimeSeriesFromEnsemble` Command Editor for Output Parameters (<a href="../NewStatisticTimeSeriesFromEnsemble_Output.png">see also the full-size image</a>)
+`NewStatisticTimeSeriesFromEnsemble` Command Editor for Output Parameters (<a href="../NewStatisticTimeSeriesFromEnsemble_Output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -173,7 +173,7 @@ The following figure illustrates the results:
 </p>**
 
 **<p style="text-align: center;">
-`NewStatisticTimeSeriesFromEnsemble` Command Results (<a href="../NewStatisticTimeSeriesFromEnsemble_Table.png">see also the full-size image</a>)
+`NewStatisticTimeSeriesFromEnsemble` Command Results (<a href="../NewStatisticTimeSeriesFromEnsemble_Table.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

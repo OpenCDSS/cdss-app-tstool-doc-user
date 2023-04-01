@@ -36,7 +36,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ManipulateTableString` Command Editor (<a href="../ManipulateTableString.png">see also the full-size image</a>)
+`ManipulateTableString` Command Editor (<a href="../ManipulateTableString.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

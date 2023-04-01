@@ -48,7 +48,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`NewAccessDatabase` Command Editor (<a href="../NewAccessDatabase.png">see also the full-size image</a>)
+`NewAccessDatabase` Command Editor (<a href="../NewAccessDatabase.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -38,7 +38,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`TableTimeSeriesMath` Command Editor (<a href="../TableTimeSeriesMath.png">see also the full-size image</a>)
+`TableTimeSeriesMath` Command Editor (<a href="../TableTimeSeriesMath.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -70,7 +70,7 @@ Command Parameters
 See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/TableTimeSeriesMath).
 
 The delimited file corresponding to that used in the above dialog example is shown below.
-In this example, the time series identifiers have location parts with values ts1 and ts2.
+In this example, the time series identifiers have location parts with values `ts1` and `ts2`.
 
 ```
 # Simple test data

@@ -84,7 +84,7 @@ Refer to the sequence of figures to see input fields for all parameters.
 </p>**
 
 **<p style="text-align: center;">
-`RunningStatisticTimeSeries` Command Editor for Distribution Parameters (<a href="../RunningStatisticTimeSeries.png">see also the full-size image</a>)
+`RunningStatisticTimeSeries` Command Editor for Distribution Parameters (<a href="../RunningStatisticTimeSeries.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the centered running average command syntax.
@@ -94,7 +94,7 @@ The following dialog is used to edit the command and illustrates the centered ru
 </p>**
 
 **<p style="text-align: center;">
-`RunningStatisticTimeSeries` Command Editor for Centered Running Average (<a href="../RunningStatisticTimeSeries-Centered-Sample.png">see also the full-size image</a>)
+`RunningStatisticTimeSeries` Command Editor for Centered Running Average (<a href="../RunningStatisticTimeSeries-Centered-Sample.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -102,7 +102,7 @@ The following dialog is used to edit the command and illustrates the centered ru
 </p>**
 
 **<p style="text-align: center;">
-`RunningStatisticTimeSeries` Command Editor for Normal Period Parameters (<a href="../RunningStatisticTimeSeries-Normal.png">see also the full-size image</a>)
+`RunningStatisticTimeSeries` Command Editor for Normal Period Parameters (<a href="../RunningStatisticTimeSeries-Normal.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -110,7 +110,7 @@ The following dialog is used to edit the command and illustrates the centered ru
 </p>**
 
 **<p style="text-align: center;">
-`RunningStatisticTimeSeries` Command Editor for Output Parameters (<a href="../RunningStatisticTimeSeries-Output.png">see also the full-size image</a>)
+`RunningStatisticTimeSeries` Command Editor for Output Parameters (<a href="../RunningStatisticTimeSeries-Output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -225,7 +225,7 @@ The resulting graph is as follows:
 </p>**
 
 **<p style="text-align: center;">
-Results from `RunningStatisticTimeSeries` Commands (<a href="../RunningStatisticTimeSeries-graph.png">see also the full-size image</a>)
+Results from `RunningStatisticTimeSeries` Commands (<a href="../RunningStatisticTimeSeries-graph.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

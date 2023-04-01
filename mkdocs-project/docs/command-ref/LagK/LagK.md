@@ -26,7 +26,7 @@ Lag and K routing is a common routing method that combines the concepts of:
 </p>**
 
 **<p style="text-align: center;">
-Lag and K Routing (<a href="../LagK.png">see also the full-size image</a>)
+Lag and K Routing (<a href="../LagK.png">see full-size image</a>)
 </p>**
 
 At its fundamental level, the method solves the continuity equation using an approach similar
@@ -77,7 +77,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`LagK` Command Editor (<a href="../LagK.png">see also the full-size image</a>)
+`LagK` Command Editor (<a href="../LagK.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

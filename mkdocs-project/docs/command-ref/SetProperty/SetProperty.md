@@ -43,7 +43,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetProperty` Command Editor for General Set Parameters (<a href="../SetProperty.png">see also the full-size image</a>)
+`SetProperty` Command Editor for General Set Parameters (<a href="../SetProperty.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for environment variable parameters.
@@ -53,7 +53,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetProperty` Command Editor for Environment Variable Parameters (<a href="../SetProperty_EnvVar.png">see also the full-size image</a>)
+`SetProperty` Command Editor for Environment Variable Parameters (<a href="../SetProperty_EnvVar.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for Java property parameters.
@@ -63,7 +63,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetProperty` Command Editor for Java Property Parameters (<a href="../SetProperty_Java.png">see also the full-size image</a>)
+`SetProperty` Command Editor for Java Property Parameters (<a href="../SetProperty_Java.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for special value parameters.
@@ -73,7 +73,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetProperty` Command Editor for Special Value Parameters (<a href="../SetProperty_Special.png">see also the full-size image</a>)
+`SetProperty` Command Editor for Special Value Parameters (<a href="../SetProperty_Special.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for removing a property.
@@ -83,7 +83,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetProperty` Command Editor for Removing a Property (<a href="../SetProperty_Remove.png">see also the full-size image</a>)
+`SetProperty` Command Editor for Removing a Property (<a href="../SetProperty_Remove.png">see full-size image</a>)
 </p>**
 
 The following illustrates how to perform a math operation on a property.
@@ -97,7 +97,7 @@ A common operation would be to increment a property’s value in a [`For`](../Fo
 </p>**
 
 **<p style="text-align: center;">
-`SetProperty` Command Editor for Performing Math with Main Property Parameters (<a href="../SetProperty_Math1.png">see also the full-size image</a>)
+`SetProperty` Command Editor for Performing Math with Main Property Parameters (<a href="../SetProperty_Math1.png">see full-size image</a>)
 </p>**
 
 The following illustrates the math input parameters.
@@ -107,7 +107,7 @@ The following illustrates the math input parameters.
 </p>**
 
 **<p style="text-align: center;">
-`SetProperty` Command Editor for Performing Math with Math Input (<a href="../SetProperty_Math2.png">see also the full-size image</a>)
+`SetProperty` Command Editor for Performing Math with Math Input (<a href="../SetProperty_Math2.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

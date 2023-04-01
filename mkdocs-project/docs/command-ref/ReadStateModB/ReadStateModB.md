@@ -32,7 +32,7 @@ reading `Available_Flow` output parameter for all locations.
 </p>**
 
 **<p style="text-align: center;">
-`ReadStateModB` Command Editor when Matching a TSID Pattern (<a href="../ReadStateModB.png">see also the full-size image</a>)
+`ReadStateModB` Command Editor when Matching a TSID Pattern (<a href="../ReadStateModB.png">see full-size image</a>)
 </p>**
 
 The following example illustrates how to specify multiple data types (parameters) to read,
@@ -43,7 +43,7 @@ in order to limit the number of time series that are read.
 </p>**
 
 **<p style="text-align: center;">
-`ReadStateModB-IncludeDataTypes` Command Editor when Matching Multiple Data Types (<a href="../ReadStateModB-IncludeDataTypes.png">see also the full-size image</a>)
+`ReadStateModB-IncludeDataTypes` Command Editor when Matching Multiple Data Types (<a href="../ReadStateModB-IncludeDataTypes.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -40,7 +40,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`AdjustExtremes` Command Editor (<a href="../AdjustExtremes.png">see also the full-size image</a>)
+`AdjustExtremes` Command Editor (<a href="../AdjustExtremes.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

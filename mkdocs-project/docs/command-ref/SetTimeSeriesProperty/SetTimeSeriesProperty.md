@@ -37,7 +37,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesProperty` Command Editor for Built-in Properties (<a href="../SetTimeSeriesProperty.png">see also the full-size image</a>)
+`SetTimeSeriesProperty` Command Editor for Built-in Properties (<a href="../SetTimeSeriesProperty.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax for user-defined properties.
@@ -47,7 +47,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesProperty` Command Editor for User-defined Properties (<a href="../SetTimeSeriesProperty_User.png">see also the full-size image</a>)
+`SetTimeSeriesProperty` Command Editor for User-defined Properties (<a href="../SetTimeSeriesProperty_User.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

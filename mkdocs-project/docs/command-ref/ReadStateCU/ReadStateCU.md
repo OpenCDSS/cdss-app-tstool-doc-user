@@ -28,7 +28,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadStateCU` Command Editor (<a href="../ReadStateCU.png">see also the full-size image</a>)
+`ReadStateCU` Command Editor (<a href="../ReadStateCU.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

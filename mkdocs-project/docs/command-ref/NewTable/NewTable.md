@@ -19,7 +19,7 @@ Common uses for tables are:
 *   facilitate conversion of data between tables and time series
 *   hold analysis results information such as statistics for time series and data check warnings
     +   commands like [`CalculateTimeSeriesStatistic`](../CalculateTimeSeriesStatistic/CalculateTimeSeriesStatistic.md)
-    can add information to tables.
+        can add information to tables.
 *   simple "flat" data representation that can be output be written as final data products or artifacts of processing
 
 Characteristics of the table are as follows:
@@ -46,7 +46,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`NewTable` Command Editor (<a href="../NewTable.png">see also the full-size image</a>)
+`NewTable` Command Editor (<a href="../NewTable.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

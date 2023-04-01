@@ -31,7 +31,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`WriteNwsrfsEspTraceEnsemble` Command Editor (<a href="../WriteNwsrfsEspTraceEnsemble.png">see also the full-size image</a>)
+`WriteNwsrfsEspTraceEnsemble` Command Editor (<a href="../WriteNwsrfsEspTraceEnsemble.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

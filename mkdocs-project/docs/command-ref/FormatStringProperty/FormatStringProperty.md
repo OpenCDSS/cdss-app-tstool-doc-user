@@ -48,7 +48,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`FormatStringProperty` Command Editor for General Parameters (<a href="../FormatStringProperty.png">see also the full-size image</a>)
+`FormatStringProperty` Command Editor for General Parameters (<a href="../FormatStringProperty.png">see full-size image</a>)
 </p>**
 
 The following is used to edit the command and illustrates the command syntax for integer parameters.
@@ -58,7 +58,7 @@ The following is used to edit the command and illustrates the command syntax for
 </p>**
 
 **<p style="text-align: center;">
-`FormatStringProperty` Command Editor for Integer Parameters (<a href="../FormatStringProperty-Integer.png">see also the full-size image</a>)
+`FormatStringProperty` Command Editor for Integer Parameters (<a href="../FormatStringProperty-Integer.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

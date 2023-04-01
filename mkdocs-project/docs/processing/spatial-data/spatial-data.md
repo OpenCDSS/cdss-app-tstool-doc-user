@@ -157,7 +157,7 @@ The following example shows this approach to indicate station type:
 </p>**
 
 **<p style="text-align: center;">
-Example of Symbol Layering (<a href="../SymbolExample.png">see also the full-size image</a>)
+Example of Symbol Layering (<a href="../SymbolExample.png">see full-size image</a>)
 </p>**
 
 Using many layers and symbols to indicate time series data interval may not be
@@ -173,7 +173,7 @@ as shown in the following figure:
 </p>**
  
 **<p style="text-align: center;">
-Example Map Showing Real-time and Historical Data Layers (<a href="../GeoView_StreamSymbols.png">see also the full-size image</a>)
+Example Map Showing Real-time and Historical Data Layers (<a href="../GeoView_StreamSymbols.png">see full-size image</a>)
 </p>**
 
 The map is useful because the user and software can determine where
@@ -272,7 +272,7 @@ To open a map in TSTool, first select the ***View / Map*** menu item, which will
 </p>**
 
 **<p style="text-align: center;">
-Map (GeoView) Window when First Opened (<a href="../GeoView_Window_Blank.png">see also the full-size image</a>)
+Map (GeoView) Window when First Opened (<a href="../GeoView_Window_Blank.png">see full-size image</a>)
 </p>**
 
 In this window, select ***File / Open Project*** and select a GeoView Project File (`*.gvp`), as shown below.
@@ -282,7 +282,7 @@ In this window, select ***File / Open Project*** and select a GeoView Project Fi
 </p>**
 
 **<p style="text-align: center;">
-Opening a Map (GeoView Project) File (<a href="../GeoView_Window_OpenProject.png">see also the full-size image</a>)
+Opening a Map (GeoView Project) File (<a href="../GeoView_Window_OpenProject.png">see full-size image</a>)
 </p>**
 
 The format for a GVP file is described in the [GeoView Mapping Tools Appendix](../../appendix-geoview/geoview.md).
@@ -304,7 +304,7 @@ TSTool interface and then select the
 </p>**
 
 **<p style="text-align: center;">
-Example of Selecting Time Series on the Map (<a href="../Menu_Tools_SelectOnMap.png">see also the full-size image</a>)
+Example of Selecting Time Series on the Map (<a href="../Menu_Tools_SelectOnMap.png">see full-size image</a>)
 </p>**
 
 Note that in the above example,
@@ -328,7 +328,7 @@ When ***Tools / Select on Map*** is selected, features on the map are selected a
 </p>**
 
 **<p style="text-align: center;">
-Map after Using Time Series to Select Features (<a href="../Menu_Tools_SelectOnMap2.png">see also the full-size image</a>)
+Map after Using Time Series to Select Features (<a href="../Menu_Tools_SelectOnMap2.png">see full-size image</a>)
 </p>**
 
 If the lookup file does not include a `Layer_DataSource`, then this value is ignored in the search.

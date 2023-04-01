@@ -34,7 +34,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetExcelWorksheetViewProperties` Command Editor (<a href="../SetExcelWorksheetViewProperties.png">see also the full-size image</a>)
+`SetExcelWorksheetViewProperties` Command Editor (<a href="../SetExcelWorksheetViewProperties.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

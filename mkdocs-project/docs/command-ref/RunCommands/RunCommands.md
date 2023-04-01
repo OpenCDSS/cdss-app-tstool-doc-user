@@ -47,7 +47,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`RunCommands` Command Editor (<a href="../RunCommands.png">see also the full-size image</a>)
+`RunCommands` Command Editor (<a href="../RunCommands.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -96,7 +96,7 @@ RunCommands(InputFile="..\..\..\commands\general\ReadStateMod\Test_ReadStateMod_
 Each of the above command files should produce expected results, without warnings.
 If any command file unexpectedly produces a warning, a warning will also be visible in TSTool.
 The issue can then be evaluated to determine whether a software or configuration change is necessary.
-See the [StartRegressionTestResultsReport](../StartRegressionTestResultsReport/StartRegressionTestResultsReport.md)
+See the [`StartRegressionTestResultsReport`](../StartRegressionTestResultsReport/StartRegressionTestResultsReport.md)
 command documentation for an explanation of how to disable a command file with `#@enabled False`
 or indicate its expected status for testing (e.g., `@#expectedStatus Warning`).
 

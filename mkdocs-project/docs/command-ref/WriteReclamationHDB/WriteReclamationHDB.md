@@ -135,7 +135,7 @@ therefore specifying the unique `site_datatype_id` (SDI) is the only way to ensu
 </p>**
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for "Real" Time Series (<a href="../WriteReclamationHDB.png">see also the full-size image</a>)
+`WriteReclamationHDB` Command Editor for "Real" Time Series (<a href="../WriteReclamationHDB.png">see full-size image</a>)
 </p>**
 
 ### Command Editor for General Parameters and Output Properties ###
@@ -147,7 +147,7 @@ The following figure illustrates general command parameters.
 </p>**
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for General Parameters (<a href="../WriteReclamationHDB_General.png">see also the full-size image</a>)
+`WriteReclamationHDB` Command Editor for General Parameters (<a href="../WriteReclamationHDB_General.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates output property parameters.
@@ -157,7 +157,7 @@ The following figure illustrates output property parameters.
 </p>**
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for Output Property Parameters (<a href="../WriteReclamationHDB_OutputProperties.png">see also the full-size image</a>)
+`WriteReclamationHDB` Command Editor for Output Property Parameters (<a href="../WriteReclamationHDB_OutputProperties.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates developer property parameters.
@@ -167,7 +167,7 @@ The following figure illustrates developer property parameters.
 </p>**
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for Developer Property Parameters (<a href="../WriteReclamationHDB_Developer.png">see also the full-size image</a>)
+`WriteReclamationHDB` Command Editor for Developer Property Parameters (<a href="../WriteReclamationHDB_Developer.png">see full-size image</a>)
 </p>**
 
 ### Command Editor for Single Model Time Series ###
@@ -191,7 +191,7 @@ The model run identifier can be specified in one of two ways.
 </p>**
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for Single Model Time Series (<a href="../WriteReclamationHDB_Model.png">see also the full-size image</a>)
+`WriteReclamationHDB` Command Editor for Single Model Time Series (<a href="../WriteReclamationHDB_Model.png">see full-size image</a>)
 </p>**
 
 ### Command Editor for Ensemble of Model Time Series ###
@@ -208,7 +208,7 @@ The time series trace number and model run date are both taken from the ensemble
 </p>**
 
 **<p style="text-align: center;">
-`WriteReclamationHDB` Command Editor for Ensemble of Model Time Series (<a href="../WriteReclamationHDB_Ensemble.png">see also the full-size image</a>)
+`WriteReclamationHDB` Command Editor for Ensemble of Model Time Series (<a href="../WriteReclamationHDB_Ensemble.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

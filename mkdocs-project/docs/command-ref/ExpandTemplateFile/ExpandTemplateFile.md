@@ -79,7 +79,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ExpandTemplateFile` Command Editor for Input Template Parameters (<a href="../ExpandTemplateFile.png">see also the full-size image</a>)
+`ExpandTemplateFile` Command Editor for Input Template Parameters (<a href="../ExpandTemplateFile.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for input property parameters.
@@ -89,7 +89,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ExpandTemplateFile` Command Editor for Input Property Parameters (<a href="../ExpandTemplateFile_Properties.png">see also the full-size image</a>)
+`ExpandTemplateFile` Command Editor for Input Property Parameters (<a href="../ExpandTemplateFile_Properties.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for table input property parameters.
@@ -99,7 +99,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ExpandTemplateFile` Command Editor for Table Input Property Parameters (<a href="../ExpandTemplateFile_TableProperties.png">see also the full-size image</a>)
+`ExpandTemplateFile` Command Editor for Table Input Property Parameters (<a href="../ExpandTemplateFile_TableProperties.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for expanded output parameters.
@@ -109,7 +109,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ExpandTemplateFile` Command Editor for Expanded Output Parameters (<a href="../ExpandTemplateFile_Out.png">see also the full-size image</a>)
+`ExpandTemplateFile` Command Editor for Expanded Output Parameters (<a href="../ExpandTemplateFile_Out.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

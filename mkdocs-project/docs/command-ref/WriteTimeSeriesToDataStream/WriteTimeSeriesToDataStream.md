@@ -58,7 +58,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Time Series Parameters (<a href="../WriteTimeSeriesToDataStream.png">see also the full-size image</a>)
+`WriteTimeSeriesToDataStream` Command Editor for Time Series Parameters (<a href="../WriteTimeSeriesToDataStream.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates output period parameters.
@@ -68,7 +68,7 @@ The following dialog is used to edit the command and illustrates output period p
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Output Period Parameters (<a href="../WriteTimeSeriesToDataStream_Period.png">see also the full-size image</a>)
+`WriteTimeSeriesToDataStream` Command Editor for Output Period Parameters (<a href="../WriteTimeSeriesToDataStream_Period.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates output file parameters.
@@ -78,7 +78,7 @@ The following dialog is used to edit the command and illustrates output file par
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Output File Parameters (<a href="../WriteTimeSeriesToDataStream_File.png">see also the full-size image</a>)
+`WriteTimeSeriesToDataStream` Command Editor for Output File Parameters (<a href="../WriteTimeSeriesToDataStream_File.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates output file header parameters.
@@ -88,7 +88,7 @@ The following dialog is used to edit the command and illustrates output file hea
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Output File Header Parameters (<a href="../WriteTimeSeriesToDataStream_Header.png">see also the full-size image</a>)
+`WriteTimeSeriesToDataStream` Command Editor for Output File Header Parameters (<a href="../WriteTimeSeriesToDataStream_Header.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates data parameters.
@@ -98,7 +98,7 @@ The following dialog is used to edit the command and illustrates data parameters
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Data Parameters (<a href="../WriteTimeSeriesToDataStream_Data.png">see also the full-size image</a>)
+`WriteTimeSeriesToDataStream` Command Editor for Data Parameters (<a href="../WriteTimeSeriesToDataStream_Data.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates output file footer parameters.
@@ -108,7 +108,7 @@ The following dialog is used to edit the command and illustrates output file foo
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToDataStream` Command Editor for Output File Footer Parameters (<a href="../WriteTimeSeriesToDataStream_Footer.png">see also the full-size image</a>)
+`WriteTimeSeriesToDataStream` Command Editor for Output File Footer Parameters (<a href="../WriteTimeSeriesToDataStream_Footer.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

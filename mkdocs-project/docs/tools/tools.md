@@ -76,7 +76,7 @@ The following figure illustrates the ***Mixed Station Analysis*** tool.
 </p>**
 
 **<p style="text-align: center;">
-Mixed Station Analysis Interface (<a href="../Menu_Tools_Analysis_MixedStationAnalysis.png">see also the full-size image</a>)
+Mixed Station Analysis Interface (<a href="../Menu_Tools_Analysis_MixedStationAnalysis.png">see full-size image</a>)
 </p>**
 
 ## Command Tools ##
@@ -101,11 +101,11 @@ which is typically stored in a GitHub repository or other online location,
 in order to determine which copy is more recent.
 For example, use this tool to evaluate whether a newer command file version
 has been published on the web and needs to be downloaded,
-or whether local changes need to be saved in the respository.
+or whether local changes need to be saved in the repository.
 This requires that the following are defined:
 
 *   Use a `#@sourceUrl` comment to indicate the source location of the command file.
-*   Use a `#@version` and/or `#@versionDate` commnt to indicate the command file version.
+*   Use a `#@version` and/or `#@versionDate` comment to indicate the command file version.
 
 The version information from the source command file and the commands in the TSTool interface are compared
 and version information is displayed.
@@ -153,7 +153,7 @@ it may need to be printed in landscape format on a large paper size.
 </p>**
 
 **<p style="text-align: center;">
-Data Coverage by Year Report (<a href="../Menu_Tools_Report_DataCoverage.png">see also the full-size image</a>)
+Data Coverage by Year Report (<a href="../Menu_Tools_Report_DataCoverage.png">see full-size image</a>)
 </p>**
  
 ### Data Limits Summary Report ###
@@ -171,7 +171,7 @@ The value `-999` is used to indicate missing data.
 </p>**
 
 **<p style="text-align: center;">
-Data Limits Summary Report (<a href="../Menu_Tools_Report_DataLimits.png">see also the full-size image</a>)
+Data Limits Summary Report (<a href="../Menu_Tools_Report_DataLimits.png">see full-size image</a>)
 </p>**
  
 ### Month Summary Reports ###
@@ -192,7 +192,7 @@ Values are only shown if full data are available for a month and statistics are 
 </p>**
 
 **<p style="text-align: center;">
-Monthly Summary (Daily Mean) Report (<a href="../Menu_Tools_Report_MonthSummary_DailyMean.png">see also the full-size image</a>)
+Monthly Summary (Daily Mean) Report (<a href="../Menu_Tools_Report_MonthSummary_DailyMean.png">see full-size image</a>)
 </p>**
  
 ### Year to Date Total Report ###
@@ -215,7 +215,7 @@ Refer to the data coverage and data limit reports for more detail.
 </p>**
 
 **<p style="text-align: center;">
-Year to Date Total Report (<a href="../Menu_Tools_Report_YearToDateTotal.png">see also the full-size image</a>)
+Year to Date Total Report (<a href="../Menu_Tools_Report_YearToDateTotal.png">see full-size image</a>)
 </p>**
  
 ## Map Tools ##
@@ -259,7 +259,7 @@ The ***Diagnostics*** dialog (see the following figure) can be used to evaluate 
 </p>**
 
 **<p style="text-align: center;">
-Diagnostics Interface (<a href="../Diagnostics.png">see also the full-size image</a>)
+Diagnostics Interface (<a href="../Diagnostics.png">see full-size image</a>)
 </p>**
 
 The settings at the top of the dialog are used to specify the level of detail
@@ -294,7 +294,7 @@ The log file viewer will be displayed in a window as shown in the following figu
 </p>**
 
 **<p style="text-align: center;">
-Log File Viewer Window (<a href="../Diagnostics_ViewLog.png">see also the full-size image</a>)
+Log File Viewer Window (<a href="../Diagnostics_ViewLog.png">see full-size image</a>)
 </p>**
 
 The log file messages can be scrolled.

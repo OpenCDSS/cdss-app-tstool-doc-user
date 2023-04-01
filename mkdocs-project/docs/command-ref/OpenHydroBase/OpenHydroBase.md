@@ -34,7 +34,7 @@ The following dialog is used to edit this command and illustrates the command sy
 </p>**
 
 **<p style="text-align: center;">
-`OpenHydroBase` Command Editor (<a href="../OpenHydroBase.png">see also the full-size image</a>)
+`OpenHydroBase` Command Editor (<a href="../OpenHydroBase.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

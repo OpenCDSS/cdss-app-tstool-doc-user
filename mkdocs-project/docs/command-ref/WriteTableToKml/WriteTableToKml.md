@@ -36,7 +36,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToKml` Command Editor for General Parameters (<a href="../WriteTableToKml.png">see also the full-size image</a>)
+`WriteTableToKml` Command Editor for General Parameters (<a href="../WriteTableToKml.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for point data in separate columns.
@@ -46,7 +46,7 @@ The following figure illustrates the command syntax for point data in separate c
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToKml` Command Editor for Point Data Parameters (<a href="../WriteTableToKml_Point.png">see also the full-size image</a>)
+`WriteTableToKml` Command Editor for Point Data Parameters (<a href="../WriteTableToKml_Point.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for layers specified with a geometry data column.
@@ -56,7 +56,7 @@ The following figure illustrates the command syntax for layers specified with a 
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToKml` Command Editor for Geometry Data Parameters (<a href="../WriteTableToKml_Geometry.png">see also the full-size image</a>)
+`WriteTableToKml` Command Editor for Geometry Data Parameters (<a href="../WriteTableToKml_Geometry.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for KML inserts.  This allows KML elements to be inserted in the KML file.
@@ -66,7 +66,7 @@ The following figure illustrates the command syntax for KML inserts.  This allow
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToKml` Command Editor for KML Insert Parameters (<a href="../WriteTableToKml_KmlInsert.png">see also the full-size image</a>)
+`WriteTableToKml` Command Editor for KML Insert Parameters (<a href="../WriteTableToKml_KmlInsert.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for marker style parameters.
@@ -76,7 +76,7 @@ The following figure illustrates the command syntax for marker style parameters.
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToKml` Command Editor for Marker Style Parameters (<a href="../WriteTableToKml_Styles.png">see also the full-size image</a>)
+`WriteTableToKml` Command Editor for Marker Style Parameters (<a href="../WriteTableToKml_Styles.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

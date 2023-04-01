@@ -47,7 +47,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ChangeTimeZone` Command Editor (<a href="../ChangeTimeZone.png">see also the full-size image</a>)
+`ChangeTimeZone` Command Editor (<a href="../ChangeTimeZone.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

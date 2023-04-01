@@ -38,7 +38,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToShapefile` Command Editor (<a href="../WriteTableToShapefile.png">see also the full-size image</a>)
+`WriteTableToShapefile` Command Editor (<a href="../WriteTableToShapefile.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for layers specified with a geometry data column.
@@ -48,7 +48,7 @@ The following figure illustrates the command syntax for layers specified with a 
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToShapefile` Command Editor for Geometry Data Parameters (<a href="../WriteTableToShapefile_WKT.png">see also the full-size image</a>)
+`WriteTableToShapefile` Command Editor for Geometry Data Parameters (<a href="../WriteTableToShapefile_WKT.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the command syntax for specifying columns to include as attributes.
@@ -58,7 +58,7 @@ The following figure illustrates the command syntax for specifying columns to in
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToShapefile` Command Editor for Attribute Parameters (<a href="../WriteTableToShapefile_Attributes.png">see also the full-size image</a>)
+`WriteTableToShapefile` Command Editor for Attribute Parameters (<a href="../WriteTableToShapefile_Attributes.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

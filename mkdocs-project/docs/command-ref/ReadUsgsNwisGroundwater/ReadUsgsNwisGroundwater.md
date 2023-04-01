@@ -61,7 +61,7 @@ Additional query features will be enabled as web service integration is enhanced
 </p>**
 
 **<p style="text-align: center;">
-`ReadUsgsNwisGroundwater` Command Editor (<a href="../ReadUsgsNwisGroundwater.png">see also the full-size image</a>)
+`ReadUsgsNwisGroundwater` Command Editor (<a href="../ReadUsgsNwisGroundwater.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

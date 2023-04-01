@@ -34,7 +34,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetIncludeMissingTS` Command Editor (<a href="../SetIncludeMissingTS.png">see also the full-size image</a>)
+`SetIncludeMissingTS` Command Editor (<a href="../SetIncludeMissingTS.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

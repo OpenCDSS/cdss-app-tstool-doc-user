@@ -33,7 +33,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetPropertyFromTimeSeries` Command Editor (<a href="../SetPropertyFromTimeSeries.png">see also the full-size image</a>)
+`SetPropertyFromTimeSeries` Command Editor (<a href="../SetPropertyFromTimeSeries.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -38,7 +38,7 @@ even if other than calendar year are used for output (see [`SetOutputYearType`](
 </p>**
 
 **<p style="text-align: center;">
-`SetOutputPeriod` Command Editor (<a href="../SetOutputPeriod.png">see also the full-size image</a>)
+`SetOutputPeriod` Command Editor (<a href="../SetOutputPeriod.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

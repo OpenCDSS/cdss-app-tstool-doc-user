@@ -116,7 +116,7 @@ parameter is specified if a single time series should be matched.
 </p>**
 
 **<p style="text-align: center;">
-`ReadHydroBase` Command Editor to Read a Single Time Series (<a href="../ReadHydroBase_TSID.png">see also the full-size image</a>)
+`ReadHydroBase` Command Editor to Read a Single Time Series (<a href="../ReadHydroBase_TSID.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates how to query multiple time series.
@@ -126,7 +126,7 @@ The following figure illustrates how to query multiple time series.
 </p>**
 
 **<p style="text-align: center;">
-`ReadHydroBase` Command Editor to Read Multiple Time Series (<a href="../ReadHydroBase_Multiple.png">see also the full-size image</a>)
+`ReadHydroBase` Command Editor to Read Multiple Time Series (<a href="../ReadHydroBase_Multiple.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

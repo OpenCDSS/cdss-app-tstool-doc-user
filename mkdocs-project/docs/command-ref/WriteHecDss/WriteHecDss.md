@@ -59,7 +59,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteHecDss` Command Editor (<a href="../WriteHecDss.png">see also the full-size image</a>)
+`WriteHecDss` Command Editor (<a href="../WriteHecDss.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -29,7 +29,7 @@ for a daily maximum temperature time series.
 </p>**
 
 **<p style="text-align: center;">
-Example Raster Graph (<a href="../ProcessRasterGraph_ExampleGraph.png">see also the full-size image</a>)
+Example Raster Graph (<a href="../ProcessRasterGraph_ExampleGraph.png">see full-size image</a>)
 </p>**
 
 General concepts related to a raster graph are as follows.
@@ -208,7 +208,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ProcessRasterGraph` Command Editor (<a href="../ProcessRasterGraph.png">see also the full-size image</a>)
+`ProcessRasterGraph` Command Editor (<a href="../ProcessRasterGraph.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

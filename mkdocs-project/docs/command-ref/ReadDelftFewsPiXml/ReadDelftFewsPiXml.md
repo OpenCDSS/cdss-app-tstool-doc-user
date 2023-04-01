@@ -35,7 +35,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadDelftFewsPiXml` Command Editor for Time Series Parameters (<a href="../ReadDelftFewsPiXml.png">see also the full-size image</a>)
+`ReadDelftFewsPiXml` Command Editor for Time Series Parameters (<a href="../ReadDelftFewsPiXml.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for ensemble parameters.
@@ -45,7 +45,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadDelftFewsPiXml` Command Editor for Ensemble Parameters (<a href="../ReadDelftFewsPiXml_Ensemble.png">see also the full-size image</a>)
+`ReadDelftFewsPiXml` Command Editor for Ensemble Parameters (<a href="../ReadDelftFewsPiXml_Ensemble.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

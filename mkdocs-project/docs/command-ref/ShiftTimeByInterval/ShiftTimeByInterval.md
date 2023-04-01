@@ -29,7 +29,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ShiftTimeByInterval` Command Editor (<a href="../ShiftTimeByInterval.png">see also the full-size image</a>)
+`ShiftTimeByInterval` Command Editor (<a href="../ShiftTimeByInterval.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -70,7 +70,7 @@ The following is the result.
 </p>**
 
 **<p style="text-align: center;">
-Results from `ShiftTimeByInterval` Command (<a href="../ShiftTimeByInterval_Graph.png">see also the full-size image</a>)
+Results from `ShiftTimeByInterval` Command (<a href="../ShiftTimeByInterval_Graph.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

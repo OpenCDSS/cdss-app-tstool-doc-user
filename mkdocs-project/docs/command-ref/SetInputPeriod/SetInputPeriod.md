@@ -31,7 +31,7 @@ The following dialog is used to edit this command and illustrates the syntax of 
 </p>**
 
 **<p style="text-align: center;">
-`SetInputPeriod` Command Editor (<a href="../SetInputPeriod.png">see also the full-size image</a>)
+`SetInputPeriod` Command Editor (<a href="../SetInputPeriod.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

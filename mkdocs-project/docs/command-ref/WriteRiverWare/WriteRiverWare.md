@@ -28,7 +28,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteRiverWare` Command Editor (<a href="../WriteRiverWare.png">see also the full-size image</a>)
+`WriteRiverWare` Command Editor (<a href="../WriteRiverWare.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

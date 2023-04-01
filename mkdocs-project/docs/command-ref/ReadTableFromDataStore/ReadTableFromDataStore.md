@@ -105,7 +105,7 @@ in this case reading a small table from the State of Colorado’s HydroBase.
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Querying a Single Table or View (<a href="../ReadTableFromDataStore_Table.png">see the full-size image</a>)
+`ReadTableFromDataStore` Command Editor when Querying a Single Table or View (<a href="../ReadTableFromDataStore_Table.png">see full-size image</a>)
 </p>**
 
 The corresponding output table is as shown below:
@@ -115,7 +115,7 @@ The corresponding output table is as shown below:
 </p>**
 
 **<p style="text-align: center;">
-Example `ReadTableFromDataStore` Command Output Table (<a href="../ReadTableFromDataStore_Results.png">see the full-size image</a>)
+Example `ReadTableFromDataStore` Command Output Table (<a href="../ReadTableFromDataStore_Results.png">see full-size image</a>)
 </p>**
 
 The following example illustrates using an SQL query string,
@@ -127,7 +127,7 @@ Use `Enter` to add new lines, which will be represented by `\n` in the command p
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specifying an SQL Query String (<a href="../ReadTableFromDataStore_SQL.png">see the full-size image</a>)
+`ReadTableFromDataStore` Command Editor when Specifying an SQL Query String (<a href="../ReadTableFromDataStore_SQL.png">see full-size image</a>)
 </p>**
 
 The following example illustrates using an SQL file:
@@ -137,7 +137,7 @@ The following example illustrates using an SQL file:
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specifying an SQL File (<a href="../ReadTableFromDataStore_SQLFile.png">see the full-size image.</a>)
+`ReadTableFromDataStore` Command Editor when Specifying an SQL File (<a href="../ReadTableFromDataStore_SQLFile.png">see full-size image.</a>)
 </p>**
 
 The following example illustrates using a database function.
@@ -148,7 +148,7 @@ The ***Edit*** dialog will automatically populate the list of parameters if the 
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specifying a Function (<a href="../ReadTableFromDataStore_Function.png">see the full-size image</a>)
+`ReadTableFromDataStore` Command Editor when Specifying a Function (<a href="../ReadTableFromDataStore_Function.png">see full-size image</a>)
 </p>**
 
 The following example illustrates using a database procedure.
@@ -159,7 +159,7 @@ The ***Edit*** dialog will automatically populate the list of parameters if the 
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specifying a Procedure (<a href="../ReadTableFromDataStore_Procedure.png">see the full-size image</a>)
+`ReadTableFromDataStore` Command Editor when Specifying a Procedure (<a href="../ReadTableFromDataStore_Procedure.png">see full-size image</a>)
 </p>**
 
 The following illustrates how to set properties if the result is a single row.
@@ -170,7 +170,7 @@ This is useful when querying configuration or controlling data from the database
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor when Specifying Output Properties (<a href="../ReadTableFromDataStore_OutputProperties.png">see the full-size image</a>)
+`ReadTableFromDataStore` Command Editor when Specifying Output Properties (<a href="../ReadTableFromDataStore_OutputProperties.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

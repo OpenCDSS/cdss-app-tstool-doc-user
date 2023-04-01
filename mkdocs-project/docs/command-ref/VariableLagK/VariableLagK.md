@@ -27,7 +27,7 @@ Lag and K routing is a common routing method that combines the concepts of:
 </p>**
 
 **<p style="text-align: center;">
-Lag and K Routing (<a href="../VariableLagK.png">see also the full-size image</a>)
+Lag and K Routing (<a href="../VariableLagK.png">see full-size image</a>)
 </p>**
 
 At its fundamental level, the method solves the continuity equation using an approach similar
@@ -129,7 +129,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`VariableLagK` Command Editor for Input Time Series Parameters (<a href="../VariableLagK.png">see also the full-size image</a>)
+`VariableLagK` Command Editor for Input Time Series Parameters (<a href="../VariableLagK.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -137,7 +137,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`VariableLagK` Command Editor for Analysis Parameters (<a href="../VariableLagK-Analysis.png">see also the full-size image</a>)
+`VariableLagK` Command Editor for Analysis Parameters (<a href="../VariableLagK-Analysis.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -145,7 +145,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`VariableLagK` Command Editor for Input State Parameters (<a href="../VariableLagK-StatesInput.png">see also the full-size image</a>)
+`VariableLagK` Command Editor for Input State Parameters (<a href="../VariableLagK-StatesInput.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -153,7 +153,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`VariableLagK` Command Editor for Output State Parameters (<a href="../VariableLagK-StatesOutput.png">see also the full-size image</a>)
+`VariableLagK` Command Editor for Output State Parameters (<a href="../VariableLagK-StatesOutput.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -161,7 +161,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`VariableLagK` Command Editor for State Table Parameters (<a href="../VariableLagK-StatesTable.png">see also the full-size image</a>)
+`VariableLagK` Command Editor for State Table Parameters (<a href="../VariableLagK-StatesTable.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -169,7 +169,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`VariableLagK` Command Editor for Output Time Series Parameters (<a href="../VariableLagK-Output.png">see also the full-size image</a>)
+`VariableLagK` Command Editor for Output Time Series Parameters (<a href="../VariableLagK-Output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -246,7 +246,7 @@ VariableLagK(TSID="Inflow",FlowUnits="CMS",LagInterval="Hour",
 </p>**
 
 **<p style="text-align: center;">
-`VariableLagK` Command Editor for Output Parameters (<a href="../VariableLagK-StateTable-Out.png">see also the full-size image</a>)
+`VariableLagK` Command Editor for Output Parameters (<a href="../VariableLagK-StateTable-Out.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

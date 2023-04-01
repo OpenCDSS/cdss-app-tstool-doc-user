@@ -40,7 +40,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`DeleteTableRows` Command Editor for Condition Parameter (<a href="../DeleteTableRows_Condition.png">see also the full-size image</a>)
+`DeleteTableRows` Command Editor for Condition Parameter (<a href="../DeleteTableRows_Condition.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -48,7 +48,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`DeleteTableRows` Command Editor for Row Number Parameters (<a href="../DeleteTableRows_RowNum.png">see also the full-size image</a>)
+`DeleteTableRows` Command Editor for Row Number Parameters (<a href="../DeleteTableRows_RowNum.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -56,7 +56,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`DeleteTableRows` Command Editor for Output Properties Parameters (<a href="../DeleteTableRows_OutputProperties.png">see also the full-size image</a>)
+`DeleteTableRows` Command Editor for Output Properties Parameters (<a href="../DeleteTableRows_OutputProperties.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

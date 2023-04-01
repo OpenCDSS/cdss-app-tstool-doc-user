@@ -451,7 +451,7 @@ This example is converting a monthly volume time series to annual water year (Oc
 </p>**
 
 **<p style="text-align: center;">
-`ChangeInterval` Command Editor (<a href="../ChangeInterval.png">see also the full-size image</a>)
+`ChangeInterval` Command Editor (<a href="../ChangeInterval.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

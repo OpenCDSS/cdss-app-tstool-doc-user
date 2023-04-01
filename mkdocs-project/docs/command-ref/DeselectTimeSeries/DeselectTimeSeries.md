@@ -30,7 +30,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`DeselectTimeSeries` Command Editor (<a href="../DeselectTimeSeries.png">see also the full-size image</a>)
+`DeselectTimeSeries` Command Editor (<a href="../DeselectTimeSeries.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

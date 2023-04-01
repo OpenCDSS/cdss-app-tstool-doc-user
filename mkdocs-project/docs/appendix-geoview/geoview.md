@@ -79,7 +79,7 @@ specific to the software (whereas below the single GeoView ***File ***menu is sh
 </p>**
 
 **<p style="text-align: center;">
-Example GeoView Interface (from TSTool) (<a href="../GeoView_Frame.png">see also the full-size image</a>)
+Example GeoView Interface (from TSTool) (<a href="../GeoView_Frame.png">see full-size image</a>)
 </p>**
 
 The GeoView Panel is a self-contained component that offers a
@@ -146,7 +146,7 @@ section below for a complete list of properties that can be defined in a GeoView
 </p>**
 
 **<p style="text-align: center;">
-Main GeoView Properties (<a href="../GeoView_Props.png">see also the full-size image</a>)
+Main GeoView Properties (<a href="../GeoView_Props.png">see full-size image</a>)
 </p>**
 
 GeoView properties, as shown in the above figure,
@@ -176,7 +176,7 @@ Currently these properties are used for information purposes and cannot be inter
 </p>**
 
 **<p style="text-align: center;">
-GeoView Layer Properties (<a href="../GeoView_Props_Layer.png">see also the full-size image</a>)
+GeoView Layer Properties (<a href="../GeoView_Props_Layer.png">see full-size image</a>)
 </p>**
 
 Symbol properties, as shown in the following figure, indicate how the layer is to be
@@ -189,7 +189,7 @@ Symbol terminology corresponds to standard GIS tools.
 </p>**
 
 **<p style="text-align: center;">
-Layer View Symbol Properties (<a href="../GeoView_Props_Symbol.png">see also the full-size image</a>)
+Layer View Symbol Properties (<a href="../GeoView_Props_Symbol.png">see full-size image</a>)
 </p>**
 
 Label properties, as shown in the following figure, can be modified to label
@@ -204,7 +204,7 @@ in the order that they should appear in the label.
 </p>**
 
 **<p style="text-align: center;">
-Layer View Label Properties (<a href="../GeoView_Props_Label.png">see also the full-size image</a>)
+Layer View Label Properties (<a href="../GeoView_Props_Label.png">see full-size image</a>)
 </p>**
  
 The label format, if not specified, defaults to the use the full field with of the attribute.
@@ -231,7 +231,7 @@ describes this functionality in more detail.
 </p>**
 
 **<p style="text-align: center;">
-Application Layer Type (<a href="../GeoView_Props_Application.png">see also the full-size image</a>)
+Application Layer Type (<a href="../GeoView_Props_Application.png">see full-size image</a>)
 </p>**
 
 Layer view animation properties, as shown in the following figure, are currently under development.
@@ -243,7 +243,7 @@ the time series data that are used for symbolization during animation.
 </p>**
 
 **<p style="text-align: center;">
-Layer View Animation Properties (<a href="../GeoView_Props_Animation.png">see also the full-size image</a>)
+Layer View Animation Properties (<a href="../GeoView_Props_Animation.png">see full-size image</a>)
 </p>**
 
 ## Viewing a Layer’s Attributes ##
@@ -260,7 +260,7 @@ A window similar to the following will be shown.
 </p>**
 
 **<p style="text-align: center;">
-Attributes Table for a Layer (<a href="../GeoView_Attributes.png">see also the full-size image</a>)
+Attributes Table for a Layer (<a href="../GeoView_Attributes.png">see full-size image</a>)
 </p>**
 
 The attributes are displayed in the order and format determined from the input data.

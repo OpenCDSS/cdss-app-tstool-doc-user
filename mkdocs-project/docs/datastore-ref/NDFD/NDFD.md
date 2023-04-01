@@ -60,7 +60,7 @@ Additional reference information on the NWS NDFD SOAP implementation, functions,
 </p>**
 
 **<p style="text-align: center;">
-Input Variables to the NDFDgen() Web Service Request (<a href="../NDFDgen.png">see also the full-size image</a>)
+Input Variables to the NDFDgen() Web Service Request (<a href="../NDFDgen.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -68,7 +68,7 @@ Input Variables to the NDFDgen() Web Service Request (<a href="../NDFDgen.png">s
 </p>**
 
 **<p style="text-align: center;">
-Input Variables to the NDFDgenByDay() Web Service Request (<a href="../NDFDgenByDay.png">see also the full-size image</a>)
+Input Variables to the NDFDgenByDay() Web Service Request (<a href="../NDFDgenByDay.png">see full-size image</a>)
 </p>**
 
 ## Standard Time Series Properties ##

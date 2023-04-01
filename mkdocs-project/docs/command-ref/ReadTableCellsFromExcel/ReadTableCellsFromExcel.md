@@ -34,7 +34,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableCellsFromExcel` Command Editor for Excel File Parameters (<a href="../ReadTableCellsFromExcel_Excel.png">see also the full-size image</a>)
+`ReadTableCellsFromExcel` Command Editor for Excel File Parameters (<a href="../ReadTableCellsFromExcel_Excel.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing Excel cell map parameters.
@@ -44,7 +44,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableCellsFromExcel` Command Editor for Excel Cell Map Parameters (<a href="../ReadTableCellsFromExcel_Map.png">see also the full-size image</a>)
+`ReadTableCellsFromExcel` Command Editor for Excel Cell Map Parameters (<a href="../ReadTableCellsFromExcel_Map.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command showing table parameters.
@@ -54,7 +54,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableCellsFromExcel` Command Editor for Table Parameters (<a href="../ReadTableCellsFromExcel_Table.png">see also the full-size image</a>)
+`ReadTableCellsFromExcel` Command Editor for Table Parameters (<a href="../ReadTableCellsFromExcel_Table.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

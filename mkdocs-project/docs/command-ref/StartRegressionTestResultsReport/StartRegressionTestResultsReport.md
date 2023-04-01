@@ -33,7 +33,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`StartRegressionTestResultsReport` Command Editor (<a href="../StartRegressionTestResultsReport.png">see also the full-size image</a>)
+`StartRegressionTestResultsReport` Command Editor (<a href="../StartRegressionTestResultsReport.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

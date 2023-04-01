@@ -92,7 +92,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ProfileCommands` Command Editor (<a href="../ProfileCommands.png">see also the full-size image</a>)
+`ProfileCommands` Command Editor (<a href="../ProfileCommands.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the output summary table.
@@ -104,7 +104,7 @@ The table can be output to a file with other commands.
 </p>**
 
 **<p style="text-align: center;">
-`ProfileCommands` Command Summary Output Table (<a href="../ProfileCommands_Summary.png">see also the full-size image</a>)
+`ProfileCommands` Command Summary Output Table (<a href="../ProfileCommands_Summary.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates the output detail table.
@@ -116,7 +116,7 @@ so only large memory footprint commands trigger immediate heap memory increases.
 </p>**
 
 **<p style="text-align: center;">
-`ProfileCommands` Command Detail Output Table (<a href="../ProfileCommands_Detail.png">see also the full-size image</a>)
+`ProfileCommands` Command Detail Output Table (<a href="../ProfileCommands_Detail.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -121,7 +121,7 @@ For example, a confidence level of approximately 40%, or .4, would require a tes
 </p>**
 
 **<p style="text-align: center;">
-Student's T-Test Example (<a href="../ttest-graph.png">see also the full-size image</a>)
+Student's T-Test Example (<a href="../ttest-graph.png">see full-size image</a>)
 </p>**
 
 ## Command Editor ##
@@ -137,7 +137,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`FillRegression` Command Editor for "Data for Analysis" Parameters (<a href="../FillRegression_Data.png">see also the full-size image</a>)
+`FillRegression` Command Editor for "Data for Analysis" Parameters (<a href="../FillRegression_Data.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -145,7 +145,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`FillRegression` Command Editor for "Criteria for Valid Relationships" Parameters (<a href="../FillRegression_Criteria.png">see also the full-size image</a>)
+`FillRegression` Command Editor for "Criteria for Valid Relationships" Parameters (<a href="../FillRegression_Criteria.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -153,7 +153,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`FillRegression` Command Editor for "Fill Period and Flag" Parameters (<a href="../FillRegression_Fill.png">see also the full-size image</a>)
+`FillRegression` Command Editor for "Fill Period and Flag" Parameters (<a href="../FillRegression_Fill.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -161,7 +161,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`FillRegression` Command Editor for "Output Table" Parameters (<a href="../FillRegression_Table.png">see also the full-size image</a>)
+`FillRegression` Command Editor for "Output Table" Parameters (<a href="../FillRegression_Table.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

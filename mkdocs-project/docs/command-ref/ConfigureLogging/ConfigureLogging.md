@@ -29,7 +29,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ConfigureLogging` Command Editor Showing Conditions Test (<a href="../ConfigureLogging.png">see also the full-size image</a>)
+`ConfigureLogging` Command Editor Showing Conditions Test (<a href="../ConfigureLogging.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

@@ -34,7 +34,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel File Parameters (<a href="../SetExcelCell_File.png">see also the full-size image</a>)
+`SetExcelCell` Command Editor for Excel File Parameters (<a href="../SetExcelCell_File.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel address parameters.
@@ -44,7 +44,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel Address Parameters (<a href="../SetExcelCell_Address.png">see also the full-size image</a>)
+`SetExcelCell` Command Editor for Excel Address Parameters (<a href="../SetExcelCell_Address.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel address parameters.
@@ -54,7 +54,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel Column/Row Parameters (<a href="../SetExcelCell_ColumnRow.png">see also the full-size image</a>)
+`SetExcelCell` Command Editor for Excel Column/Row Parameters (<a href="../SetExcelCell_ColumnRow.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel data values parameters.
@@ -64,7 +64,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel Data Value Parameters (<a href="../SetExcelCell_Value.png">see also the full-size image</a>)
+`SetExcelCell` Command Editor for Excel Data Value Parameters (<a href="../SetExcelCell_Value.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel comment parameters.
@@ -74,7 +74,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel Comment Parameters (<a href="../SetExcelCell_Comment.png">see also the full-size image</a>)
+`SetExcelCell` Command Editor for Excel Comment Parameters (<a href="../SetExcelCell_Comment.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for Excel formatting parameters.
@@ -84,7 +84,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetExcelCell` Command Editor for Excel Formatting Parameters (<a href="../SetExcelCell_Formatting.png">see also the full-size image</a>)
+`SetExcelCell` Command Editor for Excel Formatting Parameters (<a href="../SetExcelCell_Formatting.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

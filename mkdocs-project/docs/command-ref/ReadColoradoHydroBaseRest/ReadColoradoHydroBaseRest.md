@@ -151,7 +151,7 @@ Note the zeros for monthly values and there are no missing values.
 </p>**
 
 **<p style="text-align: center;">
-HydroBase Query Results for Monthly Data (<a href="../ReadColoradoHydroBaseRest_Example_AnnualAmt.png">see also the full-size image)</a>
+HydroBase Query Results for Monthly Data (<a href="../ReadColoradoHydroBaseRest_Example_AnnualAmt.png">see full-size image)</a>
 </p>**
 
 TSTool commands to read from the database and web services are as follows:
@@ -175,7 +175,7 @@ and `c` indicates a value set by the carry forward algorithm.
 </p>**
 
 **<p style="text-align: center;">
-`ReadColoradoHydroBaseRest` Results for Monthly Data (<a href="../ReadColoradoHydroBaseRest_Example_Month.png">see also the full-size image)</a>
+`ReadColoradoHydroBaseRest` Results for Monthly Data (<a href="../ReadColoradoHydroBaseRest_Example_Month.png">see full-size image)</a>
 </p>**
 
 The time series value columns are explained as follows:
@@ -207,7 +207,7 @@ The daily diversion total values from HydroBase are as follows:
 </p>**
 
 **<p style="text-align: center;">
-HydroBase Query Results for Daily Data (<a href="../ReadColoradoHydroBaseRest_Example_DivTotal_Day.png">see also the full-size image)</a>
+HydroBase Query Results for Daily Data (<a href="../ReadColoradoHydroBaseRest_Example_DivTotal_Day.png">see full-size image)</a>
 </p>**
 
 The commands to query the daily time series in TSTool are as follows:
@@ -229,7 +229,7 @@ The resulting time series for periods of interest are as follows:
 </p>**
 
 **<p style="text-align: center;">
-`ReadColoradoHydroBaseRest` Results for Daily Data, Start of Period (<a href="../ReadColoradoHydroBaseRest_Example_Day0.png">see also the full-size image)</a>
+`ReadColoradoHydroBaseRest` Results for Daily Data, Start of Period (<a href="../ReadColoradoHydroBaseRest_Example_Day0.png">see full-size image)</a>
 </p>**
 
 **<p style="text-align: center;">
@@ -237,7 +237,7 @@ The resulting time series for periods of interest are as follows:
 </p>**
 
 **<p style="text-align: center;">
-`ReadColoradoHydroBaseRest` Results for Daily Data (<a href="../ReadColoradoHydroBaseRest_Example_Day.png">see also the full-size image)</a>
+`ReadColoradoHydroBaseRest` Results for Daily Data (<a href="../ReadColoradoHydroBaseRest_Example_Day.png">see full-size image)</a>
 </p>**
 
 The time series value columns in the two images are explained as follows:
@@ -313,7 +313,7 @@ parameter is specified if a single time series should be matched.
 </p>**
 
 **<p style="text-align: center;">
-`ReadColoradoHydroBaseRest` Command Editor to Read a Single Time Series (<a href="../ReadColoradoHydroBaseRest_TSID.png">see also the full-size image)</a>
+`ReadColoradoHydroBaseRest` Command Editor to Read a Single Time Series (<a href="../ReadColoradoHydroBaseRest_TSID.png">see full-size image)</a>
 </p>**
 
 The following figure illustrates how to query multiple time series,
@@ -324,7 +324,7 @@ in this case all available water class time series for the specified structure W
 </p>**
 
 **<p style="text-align: center;">
-`ReadColoradoHydroBaseRest` Command Editor to Read Multiple Time Series (<a href="../ReadColoradoHydroBaseRest_Multiple.png">see also the full-size image)</a>
+`ReadColoradoHydroBaseRest` Command Editor to Read Multiple Time Series (<a href="../ReadColoradoHydroBaseRest_Multiple.png">see full-size image)</a>
 </p>**
 
 ## Command Syntax ##

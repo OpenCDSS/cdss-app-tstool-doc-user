@@ -25,7 +25,7 @@ knowledge of node type or calculations – this may be enhanced later.
 </p>**
 
 **<p style="text-align: center;">
-Node-based Network (<a href="../AnalyzeNetworkPointFlow_Diagram.png">see also the full-size image</a>)
+Node-based Network (<a href="../AnalyzeNetworkPointFlow_Diagram.png">see full-size image</a>)
 </p>**
 
 The network is defined by simple “NodeID” and “DownstreamNodeID” notation and can be applied
@@ -44,7 +44,7 @@ The network can then be used with commands such as
 </p>**
 
 **<p style="text-align: center;">
-Network Definition Input Table (<a href="../AnalyzeNetworkPointFlow_InputTable.png">see also the full-size image</a>)
+Network Definition Input Table (<a href="../AnalyzeNetworkPointFlow_InputTable.png">see full-size image</a>)
 </p>**
 
 ## Command Editor ##
@@ -60,7 +60,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`CreateNetworkFromTable` Command Editor for General Parameters (<a href="../CreateNetworkFromTable_General.png">see also the full-size image</a>)
+`CreateNetworkFromTable` Command Editor for General Parameters (<a href="../CreateNetworkFromTable_General.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters that map table columns to network node types.
@@ -70,7 +70,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`CreateNetworkFromTable` Command Editor for Parameters that Map Table Columns to Network Nodes (<a href="../CreateNetworkFromTable_Map.png">see also the full-size image</a>)
+`CreateNetworkFromTable` Command Editor for Parameters that Map Table Columns to Network Nodes (<a href="../CreateNetworkFromTable_Map.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for parameters that define node behavior.
@@ -80,7 +80,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`CreateNetworkFromTable` Command Editor for Parameters that Define Node Behavior (<a href="../CreateNetworkFromTable_Behavior.png">see also the full-size image</a>)
+`CreateNetworkFromTable` Command Editor for Parameters that Define Node Behavior (<a href="../CreateNetworkFromTable_Behavior.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

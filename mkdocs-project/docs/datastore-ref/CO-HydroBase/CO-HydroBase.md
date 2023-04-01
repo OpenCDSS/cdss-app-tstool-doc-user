@@ -429,7 +429,7 @@ See the following for background.
 </p>**
 
 **<p style="text-align: center;">
-Registry Editor (<a href="../mars-regedit.png">see also the full-size image</a>)
+Registry Editor (<a href="../mars-regedit.png">see full-size image</a>)
 </p>**
 
 ### HydroBase Datastore Using HBGuest Account and Generic Database Datastore ###

@@ -74,7 +74,7 @@ The HEC-DSS and input files are relative to the working directory.
 </p>**
 
 **<p style="text-align: center;">
-`RunDSSUTL` Command Editor when Specifying Command Line (<a href="../RunDSSUTL.png">see also the full-size image</a>)
+`RunDSSUTL` Command Editor when Specifying Command Line (<a href="../RunDSSUTL.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

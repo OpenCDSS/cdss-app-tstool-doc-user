@@ -64,7 +64,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor when Specifying Command Line in Full (<a href="../RunProgram.png">see also the full-size image</a>)
+`RunProgram` Command Editor when Specifying Command Line in Full (<a href="../RunProgram.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying the command line in parts.
@@ -74,7 +74,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor when Specifying Command Line in Parts (<a href="../RunProgram_Parts.png">see also the full-size image</a>)
+`RunProgram` Command Editor when Specifying Command Line in Parts (<a href="../RunProgram_Parts.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when using a command shell.
@@ -84,7 +84,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor for Command Shell Parameters (<a href="../RunProgram_Shell.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Command Shell Parameters (<a href="../RunProgram_Shell.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying additional environment variables.
@@ -95,7 +95,7 @@ The variables are defined in addition to the parent (TSTool) process environment
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor for Command Environment Variable Parameters (<a href="../RunProgram_Environment.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Command Environment Variable Parameters (<a href="../RunProgram_Environment.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying timeout parameters.
@@ -105,7 +105,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor for Timeout Parameters (<a href="../RunProgram_Timeout.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Timeout Parameters (<a href="../RunProgram_Timeout.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying exit code parameters.
@@ -115,7 +115,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor for Exit Code Parameters (<a href="../RunProgram_ExitStatusIndicator.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Exit Code Parameters (<a href="../RunProgram_ExitStatusIndicator.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying output files for
@@ -126,7 +126,7 @@ standard output and standard error.
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor for Output File Parameters (<a href="../RunProgram_OutputFiles.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Output File Parameters (<a href="../RunProgram_OutputFiles.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when specifying output check parameters.
@@ -136,7 +136,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`RunProgram` Command Editor for Output Check Parameters (<a href="../RunProgram_OutputChecks.png">see also the full-size image</a>)
+`RunProgram` Command Editor for Output Check Parameters (<a href="../RunProgram_OutputChecks.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -180,7 +180,7 @@ The following figure illustrates the output check table specified by the `Output
 </p>**
 
 **<p style="text-align: center;">
-Example Output Check Table (<a href="../RunProgram_OutputCheckTable.png">see also the full-size image</a>)
+Example Output Check Table (<a href="../RunProgram_OutputCheckTable.png">see full-size image</a>)
 </p>**
 
 The table columns are described below.  The column names must be adhered to.
@@ -225,7 +225,7 @@ The status messages for the `RunProgram` command from the above example are simi
 </p>**
 
 **<p style="text-align: center;">
-Example Command Status Messages (<a href="../RunProgram_OutputCheckTable_Status.png">see also the full-size image</a>)
+Example Command Status Messages (<a href="../RunProgram_OutputCheckTable_Status.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

@@ -37,7 +37,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`NewEndOfMonthTSFromDayTS` Command Editor (<a href="../NewEndOfMonthTSFromDayTS.png">see also the full-size image</a>)
+`NewEndOfMonthTSFromDayTS` Command Editor (<a href="../NewEndOfMonthTSFromDayTS.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -93,7 +93,7 @@ changing the graph properties to add symbols to see the individual measurements,
 </p>**
 
 **<p style="text-align: center;">
-Results of `NewEndOfMonthTSFromDayTS` Command (<a href="../NewEndOfMonthTSFromDayTS_Graph.png">see also the full-size image</a>)
+Results of `NewEndOfMonthTSFromDayTS` Command (<a href="../NewEndOfMonthTSFromDayTS_Graph.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

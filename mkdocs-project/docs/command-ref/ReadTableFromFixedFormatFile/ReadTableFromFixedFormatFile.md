@@ -35,7 +35,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromFixedFormatFile` Command Editor (<a href="../ReadTableFromFixedFormatFile.png">see also the full-size image</a>)
+`ReadTableFromFixedFormatFile` Command Editor (<a href="../ReadTableFromFixedFormatFile.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -105,7 +105,7 @@ The following table in TSTool illustrates the resulting output:
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromFixedFormatFile` Command Output Table Example (<a href="../ReadTableFromFixedFormatFile_Output.png">see also the full-size image</a>)
+`ReadTableFromFixedFormatFile` Command Output Table Example (<a href="../ReadTableFromFixedFormatFile_Output.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

@@ -83,7 +83,7 @@ The green markers indicate the location of peaks, marked at the first peak value
 </p>**
 
 **<p style="text-align: center;">
-Time Series Event Analysis Results (<a href="../CreateTimeSeriesEventTable_Analysis.png">see also the full-size image</a>)
+Time Series Event Analysis Results (<a href="../CreateTimeSeriesEventTable_Analysis.png">see full-size image</a>)
 </p>**
 
 ### Associate Historical Events with Time Series
@@ -129,7 +129,7 @@ as shown in the far right of the figure, where non-blank values indicate the loc
 </p>**
 
 **<p style="text-align: center;">
-Event Data before Relating to Time Series (<a href="../CreateTimeSeriesEventTable_InputTable.png">see also the full-size image</a>)
+Event Data before Relating to Time Series (<a href="../CreateTimeSeriesEventTable_InputTable.png">see full-size image</a>)
 </p>**
 
 ## Command Editor ##
@@ -149,7 +149,7 @@ for example to estimate extreme events from data.
 </p>**
 
 **<p style="text-align: center;">
-`CreateTimeSeriesEventTable` Command Editor (<a href="../CreateTimeSeriesEventTable.png">see also the full-size image</a>)
+`CreateTimeSeriesEventTable` Command Editor (<a href="../CreateTimeSeriesEventTable.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -205,7 +205,7 @@ annotate the graphs (see the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSP
 </p>**
 
 **<p style="text-align: center;">
-Event Data after Relating to Time Series (<a href="../CreateTimeSeriesEventTable_OutputTable.png">see also the full-size image</a>)
+Event Data after Relating to Time Series (<a href="../CreateTimeSeriesEventTable_OutputTable.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

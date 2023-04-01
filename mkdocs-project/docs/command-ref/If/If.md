@@ -77,7 +77,7 @@ The following dialog is used to edit the command and illustrates the command syn
 ![If command editor for conditions test](If.png)
 
 **<p style="text-align: center;">
-`If` Command Editor for Conditions Test (<a href="../If.png">see also the full-size image</a>)
+`If` Command Editor for Conditions Test (<a href="../If.png">see full-size image</a>)
 </p>**
 
 The following illustrates checking for file existence.
@@ -87,7 +87,7 @@ The following illustrates checking for file existence.
 </p>**
 
 **<p style="text-align: center;">
-`If` Command Editor for Check for File Existence (<a href="../If_FileExists.png">see also the full-size image</a>)
+`If` Command Editor for Check for File Existence (<a href="../If_FileExists.png">see full-size image</a>)
 </p>**
 
 The following illustrates checking for object existence.
@@ -97,7 +97,7 @@ The following illustrates checking for object existence.
 </p>**
 
 **<p style="text-align: center;">
-`If` Command Editor for Check for Object Existence (<a href="../If_ObjectExists.png">see also the full-size image</a>)
+`If` Command Editor for Check for Object Existence (<a href="../If_ObjectExists.png">see full-size image</a>)
 </p>**
 
 The following illustrates checking for a property to make sure it is defined and not empty.
@@ -108,7 +108,7 @@ This is useful for detecting logic and data problems.
 </p>**
 
 **<p style="text-align: center;">
-`If` Command Editor for Check for Whether a Property is Not Defined or is Empty (<a href="../If_PropDefined.png">see also the full-size image</a>)
+`If` Command Editor for Check for Whether a Property is Not Defined or is Empty (<a href="../If_PropDefined.png">see full-size image</a>)
 </p>**
 
 The following illustrates checking for table existence.
@@ -118,7 +118,7 @@ The following illustrates checking for table existence.
 </p>**
 
 **<p style="text-align: center;">
-`If` Command Editor for Check for Table Existence (<a href="../If_TableExists.png">see also the full-size image</a>)
+`If` Command Editor for Check for Table Existence (<a href="../If_TableExists.png">see full-size image</a>)
 </p>**
 
 The following illustrates how to detect if a time series exists.
@@ -130,7 +130,7 @@ This is useful for executing only blocks of commands that operate on the time se
 </p>**
 
 **<p style="text-align: center;">
-`If` Command Editor for Check for Time Series Existance (<a href="../If_TSExists.png">see also the full-size image</a>)
+`If` Command Editor for Check for Time Series Existance (<a href="../If_TSExists.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

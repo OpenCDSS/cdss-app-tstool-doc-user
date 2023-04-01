@@ -42,7 +42,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadStateMod` Command Editor (<a href="../ReadStateMod.png">see also the full-size image</a>)
+`ReadStateMod` Command Editor (<a href="../ReadStateMod.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for water right file parameters.
@@ -52,7 +52,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadStateMod` Command Editor for Water Right File Parameters (<a href="../ReadStateMod_Rights.png">see also the full-size image</a>)
+`ReadStateMod` Command Editor for Water Right File Parameters (<a href="../ReadStateMod_Rights.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output file parameters.
@@ -62,7 +62,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`ReadStateMod` Command Editor for Output File Parameters (<a href="../ReadStateMod_X.png">see also the full-size image</a>)
+`ReadStateMod` Command Editor for Output File Parameters (<a href="../ReadStateMod_X.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

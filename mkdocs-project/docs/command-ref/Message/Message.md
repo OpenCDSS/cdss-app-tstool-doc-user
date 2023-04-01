@@ -36,7 +36,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`Message` Command Editor Showing Conditions Test (<a href="../Message.png">see also the full-size image</a>)
+`Message` Command Editor Showing Conditions Test (<a href="../Message.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

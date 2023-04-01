@@ -31,7 +31,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`WriteTableToHTML` Command Editor (<a href="../WriteTableToHTML.png">see also the full-size image</a>)
+`WriteTableToHTML` Command Editor (<a href="../WriteTableToHTML.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

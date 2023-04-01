@@ -34,7 +34,7 @@ most cases because time series position in the output list can vary.
 </p>**
 
 **<p style="text-align: center;">
-`SelectTimeSeries` Command Editor (<a href="../SelectTimeSeries.png">see also the full-size image</a>)
+`SelectTimeSeries` Command Editor (<a href="../SelectTimeSeries.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates selecting time series by matching a property value.
@@ -44,7 +44,7 @@ The following dialog is used to edit the command and illustrates selecting time 
 </p>**
 
 **<p style="text-align: center;">
-`SelectTimeSeries` Command Editor Specifying a Property to Match (<a href="../SelectTimeSeries_Property.png">see also the full-size image</a>)
+`SelectTimeSeries` Command Editor Specifying a Property to Match (<a href="../SelectTimeSeries_Property.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates selecting time series by evaluating a time series statistic.
@@ -54,7 +54,7 @@ The following dialog is used to edit the command and illustrates selecting time 
 </p>**
 
 **<p style="text-align: center;">
-`SelectTimeSeries` Command Editor Specifying a Statistic to Check (<a href="../SelectTimeSeries_Statistic.png">see also the full-size image</a>)
+`SelectTimeSeries` Command Editor Specifying a Statistic to Check (<a href="../SelectTimeSeries_Statistic.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates selecting time series by matching locations in a network.
@@ -64,7 +64,7 @@ The following dialog is used to edit the command and illustrates selecting time 
 </p>**
 
 **<p style="text-align: center;">
-`SelectTimeSeries` Command Editor Specifying Network Nodes (<a href="../SelectTimeSeries_Network.png">see also the full-size image</a>)
+`SelectTimeSeries` Command Editor Specifying Network Nodes (<a href="../SelectTimeSeries_Network.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

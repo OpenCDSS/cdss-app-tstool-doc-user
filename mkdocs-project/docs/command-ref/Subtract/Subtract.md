@@ -40,7 +40,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`Subtract` Command Editor (<a href="../Subtract.png">see also the full-size image</a>)
+`Subtract` Command Editor (<a href="../Subtract.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

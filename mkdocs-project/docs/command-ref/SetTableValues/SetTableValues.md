@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetTableValues` Command Editor (<a href="../SetTableValues.png">see also the full-size image</a>)
+`SetTableValues` Command Editor (<a href="../SetTableValues.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

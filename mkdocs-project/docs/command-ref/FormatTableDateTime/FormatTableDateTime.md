@@ -56,7 +56,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor for Input Parameters (<a href="../FormatTableDateTime.png">see also the full-size image</a>)
+`FormatTableDateTime` Command Editor for Input Parameters (<a href="../FormatTableDateTime.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing time increment parameters.
@@ -66,7 +66,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor for Increment Parameters (<a href="../FormatTableDateTime_Increment.png">see also the full-size image</a>)
+`FormatTableDateTime` Command Editor for Increment Parameters (<a href="../FormatTableDateTime_Increment.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing format parameters.
@@ -76,7 +76,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor for Format Parameters (<a href="../FormatTableDateTime_Format.png">see also the full-size image</a>)
+`FormatTableDateTime` Command Editor for Format Parameters (<a href="../FormatTableDateTime_Format.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command, showing output parameters.
@@ -86,7 +86,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FormatTableDateTime` Command Editor for Output Parameters (<a href="../FormatTableDateTime_Output.png">see also the full-size image</a>)
+`FormatTableDateTime` Command Editor for Output Parameters (<a href="../FormatTableDateTime_Output.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -167,7 +167,7 @@ Output is as shown below.
 </p>**
 
 **<p style="text-align: center;">
-Formatted Date/time Output (<a href="../FormatTableDateTime_Data.png">see also the full-size image</a>)
+Formatted Date/time Output (<a href="../FormatTableDateTime_Data.png">see full-size image</a>)
 </p>**
 
 The following example illustrates how to convert increment data into a full date/time column string, with the following input (surrounding quotes will be added automatically by command editor):
@@ -187,7 +187,7 @@ Output is as shown below.
 </p>**
 
 **<p style="text-align: center;">
-Formatted Date/time Output for Increment Data (<a href="../FormatTableDateTime_IncrementData.png">See also the full-size image</a>)
+Formatted Date/time Output for Increment Data (<a href="../FormatTableDateTime_IncrementData.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

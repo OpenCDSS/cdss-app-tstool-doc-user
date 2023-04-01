@@ -104,7 +104,7 @@ The following figure illustrates overall workflow concepts.
 </p>**
 
 **<p style="text-align: center;">
-TSTool Data Flow Concepts (<a href="../TSTool_DataFlow.png">See also the full-size image)</a>
+TSTool Data Flow Concepts (<a href="../TSTool_DataFlow.png">See full-size image)</a>
 </p>**
 
 Input data are retrieved using unique identifiers,
@@ -771,7 +771,7 @@ The following figure illustrates an ensemble of annual time series created from 
 </p>**
 
 **<p style="text-align: center;">
-Example Ensemble Plot Showing Historical Years (<a href="../TSView_Graph_Traces.png">see also the full-size image)</a>
+Example Ensemble Plot Showing Historical Years (<a href="../TSView_Graph_Traces.png">see full-size image)</a>
 </p>**
 
 In general, ensembles provide a way to process a group of time series.
@@ -831,7 +831,7 @@ Time series are associated with the nodes in the network.
 </p>**
 
 **<p style="text-align: center;">
-Network Definition Input Table (<a href="../../command-ref/AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow_InputTable.png">see also the full-size image</a>)
+Network Definition Input Table (<a href="../../command-ref/AnalyzeNetworkPointFlow/AnalyzeNetworkPointFlow_InputTable.png">see full-size image</a>)
 </p>**
 
 The time series associated with a network can be analyzed,

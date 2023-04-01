@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromLookupTable` Command Editor for Time Series Parameters (<a href="../SetTimeSeriesValuesFromLookupTable.png">see also the full-size image</a>)
+`SetTimeSeriesValuesFromLookupTable` Command Editor for Time Series Parameters (<a href="../SetTimeSeriesValuesFromLookupTable.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for lookup parameters.
@@ -49,7 +49,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromLookupTable` Command Editor for Lookup Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Lookup.png">see also the full-size image</a>)
+`SetTimeSeriesValuesFromLookupTable` Command Editor for Lookup Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Lookup.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for time-related parameters.
@@ -59,7 +59,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesValuesFromLookupTable` Command Editor for Period and Window Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Time.png">see also the full-size image</a>)
+`SetTimeSeriesValuesFromLookupTable` Command Editor for Period and Window Parameters (<a href="../SetTimeSeriesValuesFromLookupTable_Time.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

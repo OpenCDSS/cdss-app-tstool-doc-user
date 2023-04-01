@@ -34,7 +34,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDBF` Command Editor (<a href="../ReadTableFromDBF.png">see also the full-size image</a>)
+`ReadTableFromDBF` Command Editor (<a href="../ReadTableFromDBF.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

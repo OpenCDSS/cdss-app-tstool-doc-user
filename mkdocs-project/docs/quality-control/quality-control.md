@@ -266,7 +266,7 @@ software (in some cases commands are difficult to test and more development on t
 </p>**
 
 **<p style="text-align: center;">
-TSTool Main Interface Showing Regression Test Results (<a href="../GUI_MainRegressionTest.png">see also the full-size image</a>)
+TSTool Main Interface Showing Regression Test Results (<a href="../GUI_MainRegressionTest.png">see full-size image</a>)
 </p>**
 
 An excerpt from the output file is shown below (normally the test number would be
@@ -344,7 +344,7 @@ However, there are special conditions that will cause the normal testing procedu
 Any of these conditions can cause a test case to fail,
 leading to inappropriate errors and wasted time tracking down problems that do not exist or need to be solved.
 To address this issue, TSTool recognizes special comment annotations that can be included in test case command files.
-See the [`#` Comment command](../command-ref/Comment/Comment.md) documentation for detials.
+See the [`#` Comment command](../command-ref/Comment/Comment.md) documentation for details.
 For example, the `#@expectedStatus` annotation provides information for to the
 [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md)
 command and command processor.  The syntax of the special comments is illustrated by the following example:
@@ -361,11 +361,11 @@ Examples of `#` Comment Annotation Tags used in Testing
 |-------------|---------------|
 |`#enabled False` | Indicate that a test should be disabled.  This is useful when a new test is not yet ready to be included in tests or an old test is obsolete and needs to be updated with new syntax. |
 |`@expectedStatus Failure`<br>`@expectedStatus Warning`|The [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command `ExpectedStatus` parameter is by default `Success`.  However, a different status can be specified if it is expected that a command file will result in `Warning` or `Failure` and still be a successful test.  For example, if a command is obsolete and should generate a failure, the expected status can be specified as `Failure` and the test will pass only if the command fails.  Another example is to test that the software properly treats a missing file as a failure.|
-|`@os Windows`<br>`@os UNIX`|Using this tag indicates that the test is designed to work only on the specified operating system (OS) and will be included in the test suite by the [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command only if the `IncludeOS` parameter includes the corresponding OS.  This is primarily used to test specific features of the OS and similar but separate test cases should be implemented for e3ach OS.  If the OS type is not specified as a tag in a command file, the test is always included.|
+|`@os Windows`<br>`@os UNIX`|Using this tag indicates that the test is designed to work only on the specified operating system (OS) and will be included in the test suite by the [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command only if the `IncludeOS` parameter includes the corresponding OS.  This is primarily used to test specific features of the OS and similar but separate test cases should be implemented for each OS.  If the OS type is not specified as a tag in a command file, the test is always included.|
 |`@readOnly`|Use this tag to indicate that a command file is read-only.  This is useful when legacy command files are being tested because the TSTool user interface will automatically update old command syntax to new.  Consequently, saving the command file will overwrite the legacy syntax and modify the original test.  If this tag is included, the TSTool interface will warn the user that the file is read-only and will only save if the user indicates to do so.|
 |`@require application TSTool >= 13.03.00` | Indicate that a specific version of TSTool is required to run the command file. TSTool is usually backward compatible; however, a specific version or later will be needed to run new commands, corresponding to release notes. |
 |`@require datastore HydroBase >= 20210321` | Indicate that a specific datastore version (in this case for datastore named `HydroBase`) is required to run the command file. Additional test control such as using test suites and using datastore names with version may be necessary to control which database is used for tests. |
-|`@testSuite ABC`|Indicate that the command file should be considered part of the specified test suite, as specified with the `IncludeTestSuite` parameter of the [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command.  Do not specify a test suite tag for general tests.  This tag is useful if a group of tests require special setup, for example a specifid database.  The suite names should be decided upon by the test developer.|
+|`@testSuite ABC`|Indicate that the command file should be considered part of the specified test suite, as specified with the `IncludeTestSuite` parameter of the [`CreateRegressionTestCommandFile`](../command-ref/CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command.  Do not specify a test suite tag for general tests.  This tag is useful if a group of tests require special setup, for example a specific database.  The suite names should be decided upon by the test developer.|
 
 Using the above special comment tags, it is possible to create test suites that are appropriate for specific environments.
 For example, using `@testSuite` HydroBase indicates that a test case should be included in the

@@ -56,7 +56,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`TextEdit` Command Editor (<a href="../TextEdit.png">see also the full-size image</a>)
+`TextEdit` Command Editor (<a href="../TextEdit.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

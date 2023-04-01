@@ -38,7 +38,7 @@ See the documentation below and move the mouse over the entry fields in the dial
 </p>**
 
 **<p style="text-align: center;">
-`CalculteTimeSeriesStatistic` Command Editor for Input Parameters (<a href="../CalculateTimeSeriesStatistic.png">see also the full-size image</a>)
+`CalculteTimeSeriesStatistic` Command Editor for Input Parameters (<a href="../CalculateTimeSeriesStatistic.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -46,7 +46,7 @@ See the documentation below and move the mouse over the entry fields in the dial
 </p>**
 
 **<p style="text-align: center;">
-`CalculteTimeSeriesStatistic` Command Editor for Analysis Parameters (<a href="../CalculateTimeSeriesStatistic_Analysis.png">see also the full-size image</a>)
+`CalculteTimeSeriesStatistic` Command Editor for Analysis Parameters (<a href="../CalculateTimeSeriesStatistic_Analysis.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -54,7 +54,7 @@ See the documentation below and move the mouse over the entry fields in the dial
 </p>**
 
 **<p style="text-align: center;">
-`CalculteTimeSeriesStatistic` Command Editor for Output Table Parameters (<a href="../CalculateTimeSeriesStatistic_OutputTable.png">see also the full-size image</a>)
+`CalculteTimeSeriesStatistic` Command Editor for Output Table Parameters (<a href="../CalculateTimeSeriesStatistic_OutputTable.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -62,7 +62,7 @@ See the documentation below and move the mouse over the entry fields in the dial
 </p>**
 
 **<p style="text-align: center;">
-`CalculteTimeSeriesStatistic` Command Editor for Output Property Parameters (<a href="../CalculateTimeSeriesStatistic_OutputProperty.png">see also the full-size image</a>)
+`CalculteTimeSeriesStatistic` Command Editor for Output Property Parameters (<a href="../CalculateTimeSeriesStatistic_OutputProperty.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

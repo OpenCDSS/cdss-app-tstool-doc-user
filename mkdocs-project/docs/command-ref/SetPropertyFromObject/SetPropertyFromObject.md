@@ -31,7 +31,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetPropertyFromObject` Command Editor (<a href="../SetPropertyFromObject.png">see also the full-size image</a>)
+`SetPropertyFromObject` Command Editor (<a href="../SetPropertyFromObject.png">see full-size image</a>)
 </p>**
 
 The object property name (`ObjectProperty`) is specified using a period-delimited string,

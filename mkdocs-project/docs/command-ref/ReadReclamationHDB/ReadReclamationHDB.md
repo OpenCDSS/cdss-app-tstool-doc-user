@@ -22,7 +22,7 @@ Time series are read from:
 
 The primary metadata necessary to read the time series are a site data type identifier (SDI) and,
 if reading a model time series, a model run identifier (MRI).
-hese values can be selected directly (from long lists),
+these values can be selected directly (from long lists),
 or selected through incremental selection of other data.
 Both options are provided for flexibility where appropriate.
 
@@ -56,7 +56,7 @@ This approach can be used when reading one or more time series in bulk.
 </p>**
 
 **<p style="text-align: center;">
-`ReadReclamationHDB` Command Editor when Using Filters to Read 1+ Time Series (<a href="../ReadReclamationHDB.png">see also the full-size image</a>)
+`ReadReclamationHDB` Command Editor when Using Filters to Read 1+ Time Series (<a href="../ReadReclamationHDB.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates reading a single "real" time series (note that the model parameters are not specified).
@@ -66,7 +66,7 @@ The following figure illustrates reading a single "real" time series (note that 
 </p>**
 
 **<p style="text-align: center;">
-`ReadReclamationHDB` Command Editor to Read a Single Real Time Series (<a href="../ReadReclamationHDB_Real.png">see also the full-size image</a>)
+`ReadReclamationHDB` Command Editor to Read a Single Real Time Series (<a href="../ReadReclamationHDB_Real.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates reading a single "model" time series,
@@ -88,7 +88,7 @@ The following figure illustrates both approaches, although normally one or the o
 </p>**
 
 **<p style="text-align: center;">
-`ReadReclamationHDB` Command Editor for Single Model Time Series (<a href="../ReadReclamationHDB_Model.png">see also the full-size image</a>)
+`ReadReclamationHDB` Command Editor for Single Model Time Series (<a href="../ReadReclamationHDB_Model.png">see full-size image</a>)
 </p>**
 
 The following figure illustrates reading an ensemble of "model" time series,
@@ -108,7 +108,7 @@ which provide the list of ensemble names to choose from.
 </p>**
 
 **<p style="text-align: center;">
-`ReadReclamationHDB` Command Editor to Read an Ensemble of Model Time Series (<a href="../ReadReclamationHDB_Ensemble.png">see also the full-size image</a>)
+`ReadReclamationHDB` Command Editor to Read an Ensemble of Model Time Series (<a href="../ReadReclamationHDB_Ensemble.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -187,7 +187,7 @@ end;
 </p>**
 
 **<p style="text-align: center;">
-Error Generated When Database Records do not Align with NHOur Interval (<a href="../ReadReclamationHDB_AlignmentError.png">see also the full-size image</a>)
+Error Generated When Database Records do not Align with NHOur Interval (<a href="../ReadReclamationHDB_AlignmentError.png">see full-size image</a>)
 </p>**
 
 The database records are shown below.
@@ -197,7 +197,7 @@ The database records are shown below.
 </p>**
 
 **<p style="text-align: center;">
-HDB `R_HOUR` Table Illustrating Extra Data Records (should have every 3 hour but have every 1 hour) (<a href="../ReadReclamationHDB_AlignmentErrorData.png">see also the full-size image</a>)
+HDB `R_HOUR` Table Illustrating Extra Data Records (should have every 3 hour but have every 1 hour) (<a href="../ReadReclamationHDB_AlignmentErrorData.png">see full-size image</a>)
 </p>**
 
 ## See Also ##

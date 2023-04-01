@@ -31,7 +31,7 @@ match the contents of the “loc” column in the table).
 </p>**
 
 **<p style="text-align: center;">
-`SetTimeSeriesPropertiesFromTable` Command Editor (<a href="../SetTimeSeriesPropertiesFromTable.png">see also the full-size image</a>)
+`SetTimeSeriesPropertiesFromTable` Command Editor (<a href="../SetTimeSeriesPropertiesFromTable.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

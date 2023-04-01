@@ -29,7 +29,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FillInterpolate` Command Editor (<a href="../FillInterpolate.png">see also the full-size image</a>)
+`FillInterpolate` Command Editor (<a href="../FillInterpolate.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

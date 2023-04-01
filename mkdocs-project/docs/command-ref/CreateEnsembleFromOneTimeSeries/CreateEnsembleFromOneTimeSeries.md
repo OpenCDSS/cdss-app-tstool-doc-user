@@ -39,7 +39,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`CreateEnsembleFromOneTimeSeries` Command Editor (<a href="../CreateEnsembleFromOneTimeSeries.png">see also the full-size image</a>)
+`CreateEnsembleFromOneTimeSeries` Command Editor (<a href="../CreateEnsembleFromOneTimeSeries.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -88,7 +88,7 @@ The following figure illustrates a graph of the resulting ensemble:
 </p>**
 
 **<p style="text-align: center;">
-`CreateEnsembleFromOneTimeSeries` Example Graph (<a href="../CreateEnsembleFromOneTimeSeries_Graph.png">see also the full-size image</a>)
+`CreateEnsembleFromOneTimeSeries` Example Graph (<a href="../CreateEnsembleFromOneTimeSeries_Graph.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

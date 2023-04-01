@@ -56,7 +56,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`FillPattern` Command Editor (<a href="../FillPattern.png">see also the full-size image</a>)
+`FillPattern` Command Editor (<a href="../FillPattern.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

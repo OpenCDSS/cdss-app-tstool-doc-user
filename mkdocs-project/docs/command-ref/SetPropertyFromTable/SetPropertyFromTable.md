@@ -38,7 +38,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetPropertyFromTable` Command Editor for Cell Parameters (<a href="../SetPropertyFromTable_cell.png">see also the full-size image</a>)
+`SetPropertyFromTable` Command Editor for Cell Parameters (<a href="../SetPropertyFromTable_cell.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -46,7 +46,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`SetPropertyFromTable` Command Editor for Table Row and Column Count Parameters (<a href="../SetPropertyFromTable_table.png">see also the full-size image</a>)
+`SetPropertyFromTable` Command Editor for Table Row and Column Count Parameters (<a href="../SetPropertyFromTable_table.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -82,7 +82,7 @@ The command shown in the editor dialog, used with the following table, will set 
 </p>**
 
 **<p style="text-align: center;">
-`SetPropertyFromTable` Example Table (<a href="../SetPropertyFromTable_example.png">see also the full-size image</a>)
+`SetPropertyFromTable` Example Table (<a href="../SetPropertyFromTable_example.png">see full-size image</a>)
 </p>**
 
 ## Troubleshooting ##

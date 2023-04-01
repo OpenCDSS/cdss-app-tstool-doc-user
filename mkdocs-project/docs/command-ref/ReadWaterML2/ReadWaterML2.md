@@ -44,7 +44,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ReadWaterML2` Command Editor for General Parameters (<a href="../ReadWaterML2_General.png">see also the full-size image</a>)
+`ReadWaterML2` Command Editor for General Parameters (<a href="../ReadWaterML2_General.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -52,7 +52,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ReadWaterML2` Command Editor for Instantaneous Data Parameters (<a href="../ReadWaterML2_InstantaneousData.png">see also the full-size image</a>)
+`ReadWaterML2` Command Editor for Instantaneous Data Parameters (<a href="../ReadWaterML2_InstantaneousData.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -60,7 +60,7 @@ The following dialog is used to edit the command and illustrates the command syn
 </p>**
 
 **<p style="text-align: center;">
-`ReadWaterML2` Command Editor for Daily Data Parameters (<a href="../ReadWaterML2_DailyData.png">see also the full-size image</a>)
+`ReadWaterML2` Command Editor for Daily Data Parameters (<a href="../ReadWaterML2_DailyData.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

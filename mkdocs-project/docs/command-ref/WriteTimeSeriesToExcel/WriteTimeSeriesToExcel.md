@@ -37,7 +37,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Editor (<a href="../WriteTimeSeriesToExcel.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcel` Command Editor (<a href="../WriteTimeSeriesToExcel.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for output parameters.
@@ -47,7 +47,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Editor for Output Parameters (<a href="../WriteTimeSeriesToExcel_ExcelOutput.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcel` Command Editor for Output Parameters (<a href="../WriteTimeSeriesToExcel_ExcelOutput.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for column and cell comment parameters.
@@ -67,7 +67,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Editor for Column Style Formatting Parameters (<a href="../WriteTimeSeriesToExcel_ColumnStyleFormat.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcel` Command Editor for Column Style Formatting Parameters (<a href="../WriteTimeSeriesToExcel_ColumnStyleFormat.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the syntax of the command for data value cell style formatting parameters.
@@ -77,7 +77,7 @@ The following dialog is used to edit the command and illustrates the syntax of t
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Editor for Data Value Cell Style Formatting Parameters (<a href="../WriteTimeSeriesToExcel_StyleFormat.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcel` Command Editor for Data Value Cell Style Formatting Parameters (<a href="../WriteTimeSeriesToExcel_StyleFormat.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -144,7 +144,7 @@ This approach is implemented similarly in the
 </p>**
 
 **<p style="text-align: center;">
-Data Table used with `WriteTimeSeriesToExcel` Command Style Formatting (<a href="../WriteTimeSeriesToExcel_DataTable.png">see also the full-size image</a>)
+Data Table used with `WriteTimeSeriesToExcel` Command Style Formatting (<a href="../WriteTimeSeriesToExcel_DataTable.png">see full-size image</a>)
 </p>**
 
 To configure style-based formatting, a style table is defined listing properties for formatting cells.
@@ -156,7 +156,7 @@ The following figure illustrates a basic style table, which can be shared among 
 </p>**
 
 **<p style="text-align: center;">
-Style Table used with `WriteTimeSeriesToExcel` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_StyleTable.png">see also the full-size image</a>)
+Style Table used with `WriteTimeSeriesToExcel` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_StyleTable.png">see full-size image</a>)
 </p>**
 
 The following style table column names are recognized.
@@ -181,7 +181,7 @@ starting with `ts` should be processed to evaluate for missing, negative, and ze
 </p>**
 
 **<p style="text-align: center;">
-Condition Table used with `WriteTimeSeriesToExcel` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_ConditionTable.png">see also the full-size image</a>)
+Condition Table used with `WriteTimeSeriesToExcel` Command for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_ConditionTable.png">see full-size image</a>)
 </p>**
 
 The column names for the condition table must be specified as shown.
@@ -220,7 +220,7 @@ The following figure illustrates the output from the above example.
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Example Output for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_Output.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcel` Command Example Output for Specific Checks and Formatting (<a href="../WriteTimeSeriesToExcel_Output.png">see full-size image</a>)
 </p>**
 
 The following example illustrates using multiple conditions to implement a color scale.
@@ -230,7 +230,7 @@ The following example illustrates using multiple conditions to implement a color
 </p>**
 
 **<p style="text-align: center;">
-Style Table used with `WriteTimeSeriesToExcel` Command for a Color Scale (<a href="../WriteTimeSeriesToExcel_StyleTable2.png">see also the full-size image</a>)
+Style Table used with `WriteTimeSeriesToExcel` Command for a Color Scale (<a href="../WriteTimeSeriesToExcel_StyleTable2.png">see full-size image</a>)
 </p>**
 
 **<p style="text-align: center;">
@@ -248,7 +248,7 @@ The following is the output.
 </p>**
 
 **<p style="text-align: center;">
-`WriteTimeSeriesToExcel` Command Example Output for Style Formatting (<a href="../WriteTimeSeriesToExcel_Output2.png">see also the full-size image</a>)
+`WriteTimeSeriesToExcel` Command Example Output for Style Formatting (<a href="../WriteTimeSeriesToExcel_Output2.png">see full-size image</a>)
 </p>**
 
 ## Examples ##

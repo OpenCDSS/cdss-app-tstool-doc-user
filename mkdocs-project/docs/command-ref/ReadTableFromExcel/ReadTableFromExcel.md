@@ -97,7 +97,7 @@ The following dialog is used to edit the command and illustrates the syntax for 
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromExcel` Command Editor for Table Parameters (<a href="../ReadTableFromExcel_Table.png">see also the full-size image</a>)
+`ReadTableFromExcel` Command Editor for Table Parameters (<a href="../ReadTableFromExcel_Table.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates main Excel parameters.
@@ -107,7 +107,7 @@ The following dialog is used to edit the command and illustrates main Excel para
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromExcel` Command Editor for Main Excel Parameters (<a href="../ReadTableFromExcel_Excel.png">see also the full-size image</a>)
+`ReadTableFromExcel` Command Editor for Main Excel Parameters (<a href="../ReadTableFromExcel_Excel.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates filter parameters.
@@ -117,7 +117,7 @@ The following dialog is used to edit the command and illustrates filter paramete
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromExcel` Command Editor for Filter Parameters (<a href="../ReadTableFromExcel_Filters.png">see also the full-size image</a>)
+`ReadTableFromExcel` Command Editor for Filter Parameters (<a href="../ReadTableFromExcel_Filters.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates column type parameters.
@@ -127,7 +127,7 @@ The following dialog is used to edit the command and illustrates column type par
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromExcel` Command Editor for Column Type Parameters (<a href="../ReadTableFromExcel_Types.png">see also the full-size image</a>)
+`ReadTableFromExcel` Command Editor for Column Type Parameters (<a href="../ReadTableFromExcel_Types.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates properties parameters.
@@ -137,7 +137,7 @@ The following dialog is used to edit the command and illustrates properties para
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromExcel` Command Editor for Properties Parameters (<a href="../ReadTableFromExcel_Properties.png">see also the full-size image</a>)
+`ReadTableFromExcel` Command Editor for Properties Parameters (<a href="../ReadTableFromExcel_Properties.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
