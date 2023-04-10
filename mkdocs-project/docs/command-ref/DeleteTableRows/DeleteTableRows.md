@@ -19,7 +19,7 @@ The `DeleteTableRows` command deletes specified rows from a table using one of t
     +   delete specific row numbers
     +   delete all rows
     +   delete first N or last N rows, useful when used with the
-        [`SortTable`](../SortTable/SortTable.md`) command
+        [`SortTable`](../SortTable/SortTable.md) command
         to process the first or last item(s) in a table
 
 Because the deletion is a destructive action,

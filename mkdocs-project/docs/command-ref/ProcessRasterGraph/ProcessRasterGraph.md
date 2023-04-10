@@ -1,6 +1,11 @@
 # TSTool / Command / ProcessRasterGraph #
 
 *   [Overview](#overview)
+    +   [Single Time Series](#single-time-series)
+        -   [Single Month Interval Time Series](#single-month-interval-time-series)
+        -   [Single Day Interval Time Series](#single-day-interval-time-series)
+        -   [Single Sub-day Interval Time Series](#single-sub-day-interval-time-series)
+    +   [Multiple Time Series](#multiple-time-series)
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
 *   [Examples](#examples)
@@ -14,13 +19,17 @@
 The `ProcessRasterGraph` command automates creation of a "raster graph",
 also called a "heat map".
 This command is similar to the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command,
-but provides features specific to the raster graph.
+but provides features specific to the raster graph format.
 See the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
 documentation for background on time series product files and editing graphs.
 
 A raster graph is a visual representation of
 time series that emphasizes trends and patterns using colored "pixels".
-Currently this command is limited to displaying day and month interval time series.
+The command creates output in two formats depending on the number of time series that are processed.
+
+### Single Time Series ###
+
+Currently, viewing a single time series command is limited to displaying day and month interval time series.
 For example, the following figure illustrates a raster graph
 for a daily maximum temperature time series.
 
@@ -32,7 +41,7 @@ for a daily maximum temperature time series.
 Example Raster Graph (<a href="../ProcessRasterGraph_ExampleGraph.png">see full-size image</a>)
 </p>**
 
-General concepts related to a raster graph are as follows.
+General concepts related to a single time series raster graph are as follows.
 These concepts may or may not be handled similarly in other software.
 The TSTool design provides custom handling of time series whereas other
 time series may not handle time series intricacies such as leap year.
@@ -75,28 +84,7 @@ time series may not handle time series intricacies such as leap year.
     that overlay the raster graph.
     This command does not currently support annotations.
 
-### Raster Graph with Time on Each Axis ###
-
-A raster graph with time on each axis can be used to display an entire time series,
-as long as the number of pixels corresponding to data values fits within the resolution of the display.
-Depending on data interval, it may be necessary to show a subset of the period.
-The following examples illustrate options for different time series data intervals.
-
-#### Year Interval Time Series ####
-
-Year interval time series do not provide enough detail to display as a raster graph.
-Using a raster graph with location on one axis and time on the other axis may make sense,
-for example:
-
-```
-            1950 1951 1952 1953 1953 ...
-Location1    
-Location2    
-Location3    
-...
-```
-
-#### Month Interval Time Series ####
+#### Single Month Interval Time Series ####
 
 Month interval time series can be displayed in a raster graph,
 although they may appear to be visually blocky for a single time series.
@@ -124,7 +112,7 @@ Year3
 ...
 ```
 
-#### Day Interval Time Series ####
+#### Single Day Interval Time Series ####
 
 Day interval time series can be displayed in a raster graph
 and the number of data points is high enough to result in
@@ -144,7 +132,9 @@ Year1
 ...
 ```
 
-#### Sub-day Interval Time Series ####
+#### Single Sub-day Interval Time Series ####
+
+**Sub-day interval for single time series is not yet handled by this command.**
 
 Time series with interval less than a day can be displayed in a raster graph.
 However, the number of data points may be high enough that only a subset of the period
@@ -163,17 +153,23 @@ Day1
 ...
 ```
 
-### Raster Graph with Location on Y-axis and Time on X-axis ###
+## Multiple Time Series ##
 
-It is often helpful to visualize all of the time series in a geographic area,
+It is often helpful to visualize multiple time series in a geographic area,
 for example, all streamflow along a stream reach, or all precipitation stations in a basin.
-In this case, displaying locations on the Y-axis and time on the X-axis is an effective
-visualization technique.
+In this case, displaying locations on the Y-axis and time on the X-axis is an effective visualization technique.
 The time series can be sorted appropriately to control order on the Y-axis.
 
-*   Full period can be displayed for larger interval (year, month)
-    *   The output year type can indicate the months to sum for a year.
-*   Partial period can be displayed for smaller interval (month if a long period, day, sub-day)
+*   Display period:
+    +   The full period can be displayed for larger interval (year, month).
+    +   A partial period can be displayed for smaller interval (for example days if 15Minute data).
+*   Year type:
+    +   The output year type can indicate the months to sum for a year.
+*   Interval:
+    +   Time series values for intervals that include date and time are interval-ending values.
+        Therefore, the output start is decremented by one interval for display purposes to show the full time interval.
+    +   Time series values for intervals that include only date apply for the full date.
+        Therefore, the output end is incremented by one interval for display purposes to show the full date interval.
 
 The following example displays 50 years of monthly data for streams along a reach.
 
@@ -194,6 +190,18 @@ Location2
 Location3    
 ...
 ```
+
+The following image illustrates a raster graph for two 15Minute time series
+for a short period, where time series 1 is upstream of time series 2,
+illustrating how diversions reduce the flow.
+
+**<p style="text-align: center;">
+![ProcessRasterGraph multiple time series example graph](ProcessRasterGraph_Multiple_ExampleGraph.png)
+</p>**
+
+**<p style="text-align: center;">
+Example Raster Graph for Multiple Time Series (<a href="../ProcessRasterGraph_Multiple_ExampleGraph.png">see full-size image</a>)
+</p>**
 
 ## Command Editor ##
 
@@ -225,7 +233,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
-|`TSProductFile`|The time series product file to process.  The path to the file can be absolute or relative to the working directory.  Can be specified with `${Property}`.  The graph type for the product should be `Raster`. |None – must be specified.|
+|`TSProductFile`|The time series product file to process.  The path to the file can be absolute or relative to the working directory.  Can be specified with `${Property}`.  The time series product file should define the following properties:<ul><li>`GraphType` - specify as `Raster` for the product-level property.</li><li>`SymbolTablePath` - specify as a sub-product (for multiple time series) or data (for single time series) property indicating the path to the color table (see the [Time Series Product File - Symbol Tables](../../appendix-tsview/tsview.md#time-series-product-file-symbol-tables) documentation for the format specification), currently must be manually added to the time series product file after saving from the TSTool graph view.  If not specified in the product file, a default symbol table will be used, which may not be appropriate for optimal data visualization.</li></ul> | None – must be specified.|
 |`RunMode`|Indicate the run mode to process the product:<ul><li>`BatchOnly` – indicates that the product should only be processed in batch mode.</li><li>`GUIOnly` – indicates that the product should only be processed when the TSTool GUI is used (useful when Preview is set to Preview).</li><li>`GUIAndBatch` – indicates that the product should be processed in batch and GUI mode.</li></ul>|None – must be specified.|
 |`View`|Indicates whether the output should be previewed interactively:<ul><li>`True` – display the graph.</li><li>`False` – do not display the graph (specify the output file instead to automate image creation).</li></ul>|None – must be specified.|
 |`OutputFile`|The absolute or relative path to an output file.  Use this parameter with `View=False` to automate image processing.  If the filename ends in “jpg”, a JPEG image file will be produced.  If the filename ends in “png”, a PNG file will be produced (recommended).  Can be specified with `${Property}`. |Graph file will not be created.|

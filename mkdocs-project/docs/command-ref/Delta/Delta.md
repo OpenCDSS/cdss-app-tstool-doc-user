@@ -3,7 +3,7 @@
 *   [Overview](#overview)
     +   [Simple Delta](#simple-delta)
     +   [Cumulative Time Series with Reset](#cumulative-time-series-with-reset)
-        -   [Automatic Reset with Zero Dagum](#automatic-reset-with-zero-datum)
+        -   [Automatic Reset with Zero Datum](#automatic-reset-with-zero-datum)
         -   [Automatic Reset with Variable Datum](#automatic-reset-with-variable-datum)
         -   [Rollover Reset with Bounding Values](#rollover-reset-with-bounding-values)
 *   [Command Editor](#command-editor)
