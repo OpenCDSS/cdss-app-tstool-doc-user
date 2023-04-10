@@ -574,7 +574,7 @@ Time Series Results List Popup Menu Choices
 |***Graph – Point***|Display a graph using symbols but no connecting lines.|
 |***Graph – Predicted Value***|Display a graph of data and the predicted values from regression.|
 |***Graph – Predicted Value Residual***|Display a graph of data minus the predicted values from regression.|
-|***Graph – Raster***|Display a raster (heat map) graph for the first selected time series.|
+|***Graph – Raster***|Display a raster (heat map) graph for the selected time series. The visualization format will depend on whether a single or multiple time series are selected. |
 |***Graph – XY-Scatter***|Display an XY-scatter plot for the selected time series.|
 |***Table***|Display a scrollable table for the selected time series.|
 |***Report – Summary (HTML)***|Display an HTML summary for selected time series using the default web browser.|
@@ -584,12 +584,14 @@ Time Series Results List Popup Menu Choices
 |***Deselect All***|Deselect all time series for output.|
 |***Time Series Properties***|Display the time series properties dialog (see the TSView Time Series Viewing Tools appendix for a complete description of the properties interface).|
 
+##### Graph Templates #####
+
 TSTool does not usually try to decide what titles or other graph
 properties to use for graphs because of the variability in input data that are handled by TSTool.
 However, as of version 12.00.00, graph templates have been enabled to allow configuration of standard graphs.
-The ***Ensembles*** and ***Time Series*** results tabs provide ***Graph with template:*** buttons.
+The ***Ensembles*** and ***Time Series*** results tabs provide ***Graph with template:*** buttons in the lower right.
 These buttons can be used to graph an ensemble or time series by
-relaying on a template graph time series product.
+using a template time series product file for the graph.
 The [TSView Time Series Viewing Tools appendix Time Series Graph Templates](../appendix-tsview/tsview.md#time-series-graph-templates)
 section provides information about time series products.
 

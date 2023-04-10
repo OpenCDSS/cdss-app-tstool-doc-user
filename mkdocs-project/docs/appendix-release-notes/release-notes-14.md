@@ -56,6 +56,17 @@ Issues may also be included in other repositories that are TSTool components.
     +   Change the `IncludeFiles` parameter to `IncludeNames` to handle files and folders.
     +   Change the `ExcludeFiles` parameter to `ExcludeNames` to handle files and folders.
     +   The command parameter defaults match previous functionality.
+*   ![change](change.png) [14.8.0] Enhance the
+    [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
+    +   If a single time series is processed,
+        the time series interval must be day or month and the graph will
+        have dates on both axes (this is the same functionality as before).
+    +   If multiple time series are processed,
+        the time series must have consistent time intervals and any regular interval can be processed.
+        Each time series is listed on the y-axis and the time period is displayed on the x-axis.
+        The period must be short enough that each interval can be displayed as a "pixel" of color.
+        The x-axis can be zoomed to show more detail.
+    +   The ***Results / Graph - Raster Graph*** view has been updated to behave similarly.
 
 ## Changes in Version 14.7.0 ##
 

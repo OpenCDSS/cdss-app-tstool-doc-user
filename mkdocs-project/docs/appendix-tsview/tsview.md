@@ -737,11 +737,24 @@ and then it can be processed and visualized using other software features.
 
 The ***Raster Graph*** (also called a "heat map") provides a visualization technique 
 where the entire period of record is displayed in a grid with “pixels” colored according to a scale.
-Currently only month and day interval data are supported,
-although other small intervals may be added in the future.
+TSTool will automatically display two forms of raster graph:
+
+*   Single time series:
+    +   Currently only month and day interval data are supported,
+        although other small intervals may be added in the future.
+    +   X-axis contains days or months in a year.
+    +   Y-axis contains years in the period of record.
+*   Multiple time series:
+    +   Any regular interval handled by TSTool is allowed.
+    +   Time series must have the same regular interval.
+    +   X-axis contains the period of record containing intervals in the period.
+    +   Y-axis contains the list of time series.
+
 The following are characteristics of the raster graph:
 
-*   Time is represented on both axes, with one axis representing years, and the other time within the year.
+*   Each interval for a time series is color-coded as a "pixel",
+    with the color corresponding to the time series data value.
+*   A "symbol table" (color table) provides the mapping of time series data value range to color.
 *   The colors represent time series values.
     The default is to find "nice" value breaks depending on the range of input values.
     The color table can be specified by creating a time series product and processing
