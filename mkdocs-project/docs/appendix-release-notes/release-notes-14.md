@@ -33,10 +33,9 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 14.8.0 ##
 
-**Maintenance release to address bugs and limitations.**
+**Feature release to improve dataset publishing and visualization.**
 
-*   ![bug](bug.png) [14.8.0] Update the ***View / Datastores*** view table
-    to enable select for copy and paste.
+*   ![bug](bug.png) [14.8.0] Update the time series table view to copy to the clipboard for irregular interval time series.
 *   ![change](change.png) [14.8.0] Enhance the [`Delta`](../command-ref/Delta/Delta.md) command
     to improve handling of rollover:
     +   Add the `CopyDataFlags`, `AutoRestFlag`, `RolloverFlag`, and `ManualResetFlag` parameters
@@ -56,6 +55,22 @@ Issues may also be included in other repositories that are TSTool components.
     +   Change the `IncludeFiles` parameter to `IncludeNames` to handle files and folders.
     +   Change the `ExcludeFiles` parameter to `ExcludeNames` to handle files and folders.
     +   The command parameter defaults match previous functionality.
+*   ![change](change.png) [14.8.0] Enhance the
+    [`NewStatisticYearTS`](../command-ref/NewStatisticYearTS/NewStatisticYearTS.md) command:
+    +   Add the `YearStartTime` and `YearEndTime` parameters to control how midnight
+        is interpreted when determining the sample data.
+        These parameters only apply when the input time series has data interval with time (less than a day).
+    +   Change the default behavior when handling input time series with time in the interval so
+        that `YearStartTime=AfterMidnight` and `YearEndTime=Midnight`,
+        which is consistent with the TSTool convention that the date/time matches the interval end.
+        Previously midnight was not included as the year-ending time.
+    +   The `TestValue` parameter has been removed and `Value` should be used instead.
+        The command will automatically convert `TestValue` to `Value1`.
+        This transition should not impact recent workflows because `Value1` has been the default for a while.
+    +   The `AllowMissingCount` parameter is not checked for irregular interval input time series
+        because irregular interval data often do not store missing values.
+    +   New `OutputYearType` parameter values support all 12-month variations in a general way,
+        similar to old `WaterYear`.
 *   ![change](change.png) [14.8.0] Enhance the
     [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
     +   If a single time series is processed,
