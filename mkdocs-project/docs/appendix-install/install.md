@@ -180,16 +180,9 @@ or [OpenCDSS website](https://opencdss.state.co.us/tstool/):
 
 #### 1. Run the `TSTool_CDSS_Version_Setup.exe` file by selecting from Windows Explorer, the ***Start / Run /***  menu, or from a command shell. ####
 
-You must be logged into the computer using an account with administrator privileges.
-Otherwise, the following warning will be displayed.
-Administrator privileges are required to set registry settings to facilitate normal Windows uninstall
-(this may be changed in the future).
-
-**<p style="text-align: center;">
-![Install Administrator Privileges Warning](Install_AdministratorWarning.png)
-</p>**
-
-If you have administrative privileges, the following welcome will be displayed, and the installation can continue:
+Prior to TSTool 14.8.0, administrator privileges were required to install TSTool.
+Administrator privileges are not required for TSTool 14.8.0 and later.
+The following dialog will be shown.
 
 **<p style="text-align: center;">
 ![TSTool Install Welcome](Install_Welcome.png)
@@ -240,11 +233,6 @@ TSTool Install - Choose Install Location (<a href="../Install_SelectFolder.png">
 </p>**
 
 After selecting the install location, press ***Next***.
-
-Note that this location will be saved as a Windows registry setting
-(`HKEY_LOCAL_MACHINE\Software\State of Colorado\TSTool-Version\Path`)
-to allow future updates to check for and default to the same install location,
-and to allow the standard software uninstall procedure to work correctly.
 
 #### 4. The following dialog will be shown to select the Start menu for the software: ####
 

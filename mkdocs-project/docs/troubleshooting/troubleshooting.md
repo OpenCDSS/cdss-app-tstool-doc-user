@@ -241,7 +241,7 @@ The log file exists in the following locations and can be edited with a text fil
 *   Log file in software installation folder:
     +   Windows: `C:\CDSS\TSTool-version\logs\tstool_user.log`
         (this was used in older versions of TSTool and has been phased out because
-        writing to the folder often requires administrator privileges)
+        writing to the folder may requires administrator privileges)
 
 The log file contains a sequential record of log messages for application startup followed by
 output from interacting with the TSTool user interface and running the commands,
