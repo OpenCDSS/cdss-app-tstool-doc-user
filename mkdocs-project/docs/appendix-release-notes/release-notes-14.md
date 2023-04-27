@@ -82,6 +82,15 @@ Issues may also be included in other repositories that are TSTool components.
         The period must be short enough that each interval can be displayed as a "pixel" of color.
         The x-axis can be zoomed to show more detail.
     +   The ***Results / Graph - Raster Graph*** view has been updated to behave similarly.
+*   ![change](change.png) [14.8.0] Enhance the
+    [`ReadPropertiesFromFile`](../command-ref/ReadPropertiesFromFile/ReadPropertiesFromFile.md) command:
+    +   Add support for the `INI` file format.
+    +   Change the `IncludeProperty` parameter to `IncludeProperties` (plural) to reflect command functionality.
+        The old parameter name is automatically changed to the new name.
+    +   Add the `ExcludeProperties` parameter to control which properties are read.
+    +   Add the `IgnoreCase` parameter to control whether property names are compared by considering or ignoring case.
+    +   Add the `ExpandProperties` parameter to control whether file properties
+        are expanded if `${Property}` notation is found in property values.
 
 ## Changes in Version 14.7.0 ##
 
