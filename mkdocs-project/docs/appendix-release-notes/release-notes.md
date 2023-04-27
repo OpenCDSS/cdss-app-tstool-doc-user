@@ -34,7 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|[14.8.0](release-notes-14.md)|Feature release to improve dataset publishing and visualization, remove requirement for administrator permissions to install on Windows. | 2023-04-26 |
+|[14.8.0](release-notes-14.md)|Feature release to improve dataset publishing and visualization. Remove the requirement for administrator permissions to install on Windows. | 2023-04-27 |
 |[14.7.0](release-notes-14.md)|Feature release to improve the experience for new users. | 2023-03-26 |
 |[14.6.0](release-notes-14.md)|Feature release to implement command indentation. | 2023-02-26 |
 |[14.5.4](release-notes-14.md)|Maintenance release to improve plugin integration and automated testing. | 2023-02-13 |

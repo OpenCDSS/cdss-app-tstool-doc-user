@@ -33,9 +33,11 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 14.8.0 ##
 
-**Feature release to improve dataset publishing and visualization.**
+**Feature release to improve dataset publishing and visualization.
+Remove the requirement for administrator privileges to install on Windows.**
 
 *   ![bug](bug.png) [14.8.0] Update the time series table view to copy to the clipboard for irregular interval time series.
+*   ![change](change.png) [14.8.0] **Remove the requirement for administrator privileges to install on Windows.**
 *   ![change](change.png) [14.8.0] Enhance the [`Delta`](../command-ref/Delta/Delta.md) command
     to improve handling of rollover:
     +   Add the `CopyDataFlags`, `AutoRestFlag`, `RolloverFlag`, and `ManualResetFlag` parameters
@@ -91,6 +93,7 @@ Issues may also be included in other repositories that are TSTool components.
     +   Add the `IgnoreCase` parameter to control whether property names are compared by considering or ignoring case.
     +   Add the `ExpandProperties` parameter to control whether file properties
         are expanded if `${Property}` notation is found in property values.
+    +   Add support for `PARENT_FOLDER` and `PARENT_PARENT_FOLDER` property values.
 
 ## Changes in Version 14.7.0 ##
 
