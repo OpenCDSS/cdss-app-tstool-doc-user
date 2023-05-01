@@ -14,11 +14,14 @@ In all cases, it is recommended to install in the default location to avoid conf
     +   [Install TSTool on Windows](#install-tstool-on-windows)
     +   [Install TSTool on a Windows File Server](#install-tstool-on-a-windows-file-server)
     +   [Install TSTool from the “HydroBase data set Analysis Query Tools DVD”](#install-tstool-from-the-hydrobase-data-set-analysis-query-tools-dvd)
+    +   [Windows TSTool Installation Technical Details](#windows-tstool-installation-technical-details)
     +   [Install TSTool on Linux](#install-tstool-on-linux)
 *  [Uninstalling TSTool](#uninstalling-tstool)
     +   [Uninstall TSTool on Windows](#uninstall-tstool-on-windows)
     +   [Uninstall TSTool on Linux](#uninstall-tstool-on-linux)
 *   [Running TSTool](#running-tstool)
+    +   [Running TSTool on Windows](#running-tstool-on-windows)
+    +   [Running TSTool on Linux](#running-tstool-on-linux)
 *   [TSTool Configuration](#tstool-configuration)
 *   [Map Configuration](#map-configuration)
 
@@ -345,9 +348,52 @@ Refer to the installation instructions for that distribution.
 The version that is installed may be older than the version available on the CDSS web site;
 however, multiple TSTool versions can be installed and run independently.
 
+### Windows TSTool Installation Technical Details ###
+
+This section provides technical details about the TSTool Windows installation,
+which is useful for troubleshooting.
+TSTool 14.8.0 is used as an example,
+which is the first version where the installer did not require administrative privileges.
+
+The TSTool installer configures the following:
+
+1.  ***Start*** menu is configured:
+    *   Right-click on the menu item and ***More / Open file location*** to see where
+        the menu link is saved, for example:
+        `C:\Users\steve\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\CDSS\TSTool-14.8.0`.
+        Prior to TSTool 14.8.0 the link was saved as:
+        `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\CDSS\TSTool-14.8.0`.
+    *   The above is a link to the program to run.
+        Right-click on the link and press ***Properties***.
+        The ***Shortcut*** tab will show the ***Target***,
+        for example `C:\CDSS\TSTool-14.8.0\bin\TSTool.exe`,
+        which will be run when the menu is selected.
+2.  Windows registry keys are set indicating software installation basic information.
+    (the `HKEY_CURRENT_USER` tree is used because the installation is for a normal user,
+    without requring running with administrative privileges).  See:
+    `Computer\HKEY_CURRENT_USER\Software\State of Colorado\CDSS\TSTool-14.8.0`.
+3.  Windows registry keys are set indicating software uninstall information
+    (the `HKEY_CURRENT_USER` tree is used because the installation is for a normal user,
+    without requring running with administrative privileges).
+    This information allows TSTool to know how to uninstall the software.
+
+    **<p style="text-align: center;">
+    ![TSTool uninstall registry](Uninstall_Registry.png)
+    </p>**
+
+    **<p style="text-align: center;">
+    TSTool Uninstall Registry Settings (<a href="../Uninstall_Registry.png">see full-size image</a>)
+    </p>**
+
+If the TSTool uninstall program does not remove the ***Start Menu***,
+***File Explorer*** can be used to remove the link.
+Registry settings can be edited using the `regedit` program.
+
 ### Install TSTool on Linux ###
 
-This documentation needs to be completed.
+TSTool for Linux is available from the Open Water Foundation.
+See the [OWF Software](https://software.openwaterfoundation.org/) website.
+Follow the instructions on the download page.
 
 ## Uninstalling TSTool ##
 
@@ -370,7 +416,7 @@ The next steps are similar to those described below.
 
 The second way to uninstall TSTool is as follows.
 Use the windows ***Run*** search field (lower left of desktop).
-Enter `uninstall`.  This should display an option to open ***Add or remove programs***.
+Enter `uninstall`.  This should display Windows settings for ***Apps * features*** (or ***Apps*** on Windows 11).
 
 **<p style="text-align: center;">
 ![Add remove programs](uninstall-apps-and-features1.png)
@@ -379,12 +425,38 @@ Enter `uninstall`.  This should display an option to open ***Add or remove progr
 Search for `TSTool` as shown above.
 Select the version of TSTool to uninstall and press ***Uninstall***.
 A confirmation will be requested.
-The uninstall will then continue as shown in images in the next section.
 
-After uninstalling, the software files will have been removed from `C:\CDSS\TSTool-Version`.
-However, any files that exist in the user's files will remain.
-This allows datastore configurations, plugins, and other user-configured files to be shared with
-other TSTool version installations.
+The third way to uninstall TSTool is to run the `C:\CDSS\TSTool-14.7.0\Uninstall_TSTool-14.7.0.exe` (or similar)
+using ***File Explorer*** or a command shell.
+
+All of the above three options will display a confirmation similar to the following:
+ 
+**<p style="text-align: center;">
+![TSTool uninstall confirmation](Uninstall_Confirmation.png)
+</p>**
+
+**<p style="text-align: center;">
+TSTool Uninstall - Confirmation (<a href="../Install_Confirmation.png">see full-size image</a>)
+</p>**
+
+After uninstalling has completed, the following will be shown:
+
+**<p style="text-align: center;">
+![TSTool uninstall completed](Uninstall_Complete.png)
+</p>**
+
+**<p style="text-align: center;">
+TSTool Uninstall - Complete (<a href="../Install_Complete.png">see full-size image</a>)
+</p>**
+
+The uninstall process does the following:
+
+1.  Removes the software files from `C:\CDSS\TSTool-Version`.
+    Any files that exist in the user's files (`.tstool` folder) will remain.
+    This allows datastore configurations, plugins, and other user-configured files to be shared with
+    other TSTool version installations.
+2.  Remove the TSTool version from the ***Start / CDSS*** menu.
+3.  Remove registry settings so that the TSTool version is not listed in Windows Apps.
 
 #### Uninstall TSTool 12.05.00 and Earlier from Windows ####
 
@@ -393,27 +465,41 @@ CDSS components that are used by other software (e.g., CDSS Base component softw
 
 ### Uninstall TSTool on Linux ###
 
+TSTool can be uninstalled from Linux simply by removing the 
+software files that were installed.
+The TSTool Linux installer does not currently add a menu.
+
 ## Running TSTool ##
+
+See the following sections for basic information about running TSTool.
+See also the [Running TSTool in Various Modes](../appendix-running/running.md) appendix.
+
+### Running TSTool on Windows ###
 
 TSTool can be started in several ways as described below.
 
-### CDSS Menu ###
+#### CDSS Menu ####
 
 The ***Start / All Programs / CDSS / TSTool-Version*** (or ***Start / Programs / CDSS / TSTool-Version***)
 menu can be used to start the software.  This runs the `TSToolInstallHome\bin\TSTool.exe` software.
 
-### Command Line Executable ###
+#### Command Line Executable ####
 
 The installation process does NOT add the `TSToolInstallHome\bin` folder to the path;
 however, this addition can be made by the user, allowing the TSTool software to be started anywhere by running TSTool.
 Running TSTool from any location will result in the software being run in the installation location.
 Specifying a command file on the command line or interactively will reset the working directory to that of the command file.
 
-### TSTool Batch File – Windows ###
+#### TSTool Batch File ####
 
 A batch file can be used to run the `TSTool.exe` program,
 for example using the `–commands command` line parameter to specify a command file.
 In this case it may be necessary to specify the absolute path to the command file to ensure that the software can locate related files.
+
+### Running TSTool on Linux ###
+
+TSTool can be run on Linux using the `tstool` script,
+which is found in the `bin` folder where TSTool was installed.
 
 ## TSTool Configuration ##
 
