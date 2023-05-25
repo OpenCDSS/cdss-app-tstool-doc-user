@@ -65,6 +65,7 @@ Available TSTool Plugins
 | [Kisters WISKI (KiWIS) web services](https://software.openwaterfoundation.org/tstool-kiwis-plugin/) | Datastores and commands to integrate with the Kisters WISKI (KiWIS) system web services. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Kisters WISKI plugin) |
 | [Synoptic data web services](https://software.openwaterfoundation.org/tstool-synoptic-plugin/) | Datastore and commands to integrate with [Synoptic Data](https://synopticdata.com/) web services. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Synoptic plugin) |
 | [TriLynx Systems NovaStar](https://trilynx.systems/) | Datastores and commands to integrate with the TriLynx NovaStar system for environmental data and flood warning. | [TriLynx Systems](mailto:steve.malers@trilynx.systems?subject=TSTool NovaStar plugin) |
+| [Zabbix web services](https://software.openwaterfoundation.org/tstool-zabbix-plugin/) | Datastore and commands to integrate with [Zabbix](https://www.zabbix.com/) web services. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Synoptic plugin) |
 
 ## Plugin Installation and Configuration ##
 

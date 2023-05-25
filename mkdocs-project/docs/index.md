@@ -12,7 +12,7 @@ This documentation is generally referred to as the **"User Documentation"** in c
 *   [About the Open Water Foundation](#about-the-open-water-foundation)
 *   [License](#license)
 *   [Source Repository on GitHub](#source-repository-on-github)
-*   [Release Notes](appendix-release-notes/release-notes-14.md) - **this documentation has been updated for TSTool version 14.8.0**
+*   [Release Notes](appendix-release-notes/release-notes-14.md) - **this documentation has been updated for TSTool version 14.8.1**
 
 ----------------
 
