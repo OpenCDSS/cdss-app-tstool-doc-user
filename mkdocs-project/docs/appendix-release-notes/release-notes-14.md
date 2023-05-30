@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.8.2](#changes-in-version-1482)
 *   [Changes in Version 14.8.1](#changes-in-version-1481)
 *   [Changes in Version 14.8.0](#changes-in-version-1480)
 *   [Changes in Version 14.7.0](#changes-in-version-1470)
@@ -31,6 +32,15 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.8.2 ##
+
+**Maintenance release to fix raster graphs when no time series data.** 
+
+*   ![bug](bug.png) [14.8.2] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
+    +   Handle case where a time series is completely missing or has no data.
+        This allows the raster graph to be used on large datasets that may have missing data.
+    +   Improve error handling when reading the symbol table file for raster graphs.
 
 ## Changes in Version 14.8.1 ##
 
