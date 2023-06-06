@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.8.3](#changes-in-version-1483)
 *   [Changes in Version 14.8.2](#changes-in-version-1482)
 *   [Changes in Version 14.8.1](#changes-in-version-1481)
 *   [Changes in Version 14.8.0](#changes-in-version-1480)
@@ -32,6 +33,14 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.8.3 ##
+
+**Maintenance release to enable raster graphs for hour and minute interval time series.** 
+
+*   ![change](change.png) [14.8.3] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
+    +   Enable 1-hour and N-minute interval time series.
+    +   Improve tick mark rendering for raster graphs.
 
 ## Changes in Version 14.8.2 ##
 
