@@ -34,6 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.8.3](release-notes-14.md)|Maintenance release to enable raster graph for hour and minute interval time series. | 2023-06-05 |
 |[14.8.2](release-notes-14.md)|Maintenance release to fix raster graphs when missing data. | 2023-05-30 |
 |[14.8.1](release-notes-14.md)|Maintenance release to support the new Zabbix plugin. | 2023-05-25 |
 |[14.8.0](release-notes-14.md)|Feature release to improve dataset publishing and visualization. Remove the requirement for administrator permissions to install on Windows. | 2023-04-27 |
