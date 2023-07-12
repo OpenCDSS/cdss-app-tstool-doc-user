@@ -88,7 +88,7 @@ Command Parameters
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 |`TableID`|Identifier for table to write.  Can specify using processor `${Property}`.|None – must be specified.|
-|`IncludeColumns|Names of columns in table to write.|Write all columns.|
+|`IncludeColumns`|Names of columns in table to write.|Write all columns.|
 |`ExcludeColumns`|Names of columns in table to exclude from writing.|Write all columns.|
 |`ColumnIncludeFilters`|Indicate table column names and pattern to use to include rows.  For example, include rows with blanks in columns.  The format of the parameter is:<br>`ColumnName1:Pattern1,`<br>`ColumnName2:Pattern2,`<br>where patterns can contain `*` to match a substring.|Include all rows.|
 |`ColumnExcludeFilters`|Indicate table column names and pattern to use to exclude rows.  For example, exclude rows with blanks in columns.  The format of the parameter is:<br>`ColumnName1:Pattern1,`<br>`ColumnName2:Pattern2,`|<br>where patterns can contain `*` to match a substring.|Include all rows.|

@@ -50,11 +50,11 @@ Command Parameters
 | `TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 | `TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 | `EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
-|`TableID`<br>**required**|The identifier for the table that contains properties.|None – must be specified.|
-|`TableTSIDColumn`<br>**required**|Table column name that is used to match the time series identifier for processing.|None – must be specified.|
+|`TableID`<br>**required**|The identifier for the table that contains properties.  Can be specified using `${Property}`. |None – must be specified.|
+|`TableTSIDColumn`<br>**required**|Table column name that is used to match the time series identifier for processing.  Can be specified using `${Property}`. |None – must be specified.|
 |`TableTSIDFormat`|The specification to format the time series identifier to match the `TSID` column.  Use the format choices and other characters to define a unique identifier.|Time series alias if available, or otherwise the time series identifier.|
-|`TableInputColumns`<br>**required**|The name(s) of the column(s) to supply properties for the matching time series.  Separate column names with commas.|None – must be specified.|
-|`TSPropertyNames`|Indicate property names that should be renamed from table column names using syntax:<br>`ColumnName1:TableProperty1,`<br>`ColumnName2:TableProperty2`<br>The special property name `${ts:Description}` will set the time series description to that of the column value.`|Same as `TableInputColumns`|
+|`TableInputColumns`<br>**required**|The name(s) of the column(s) to supply properties for the matching time series.  Separate column names with commas.  Can be specified using `${Property}`. |None – must be specified.|
+|`TSPropertyNames`|Indicate property names that should be renamed from table column names using syntax:<br>`ColumnName1:TableProperty1,`<br>`ColumnName2:TableProperty2`<br>The special property name `${ts:Description}` will set the time series description to that of the column value.  Can be specified using `${Property}`. |Same as `TableInputColumns`|
 
 ## Examples ##
 

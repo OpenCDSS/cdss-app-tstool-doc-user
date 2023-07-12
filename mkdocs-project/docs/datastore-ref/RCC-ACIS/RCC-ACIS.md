@@ -31,7 +31,7 @@ however, technical issues remain, as described below.
 The standard time series identifier for RCC ACIS time series is of the form:
 
 ```text
-LacationType:Location.DataSource.DataType.Interval~DataStoreName
+LocationType:Location.DataSource.DataType.Interval~DataStoreName
 ```
 
 More specifically, the identifier follows the following convention:
