@@ -11,9 +11,19 @@
 
 ## Overview ##
 
-The `ReplaceValue` command replaces a range of values in a time series with a constant value,
-sets the values to missing, or removes the values (if an irregular time series).
-If the missing value indicator is a number in the range, missing values also will be replaced.
+The `ReplaceValue` command performs the following tasks:
+
+*  replaces a range of numerical values in a time series with a constant value
+*  or sets the values to missing
+
+Irregular interval time series, which store each date/time and value, can also be updated to:
+
+*   remove values matching the numerical range
+*   remove missing values
+
+If the missing value indicator is a number in the range (e.g., `-999`), missing values also will be replaced.
+The current convention is to use `NaN` for missing, which is handled without specifying a range.
+
 The time series data flag can be checked in place of or addition to checking the numerical values.
 This command is useful for filtering out erroneous data values.
 See also the [`CheckTimeSeries`](../CheckTimeSeries/CheckTimeSeries.md) command,
@@ -55,7 +65,7 @@ Command Parameters
 |`MaxValue`|The maximum value to replace.|If not specified, only data values that exactly match the minimum value will be replaced.|
 |`MatchFlag`|The flag to match.  If specified in addition to `MinValue`, then the value and flag must be matched in order to perform the replacement.  A case-sensitive comparison is made and the data value flag must exactly match MatchFlag.  In the future additional flexibility may be added to match a substring, etc. If `Action=SetMissing`, the original data flag value will remain.  Specifying `SetFlag` will result in the original data flag being modified.|`MinValue` and/or `MatchFlag` must be specified.|
 |`NewValue`|The new data value.|Required, unless the Action parameter is specified.|
-|`Action`|An additional action to take with values that are matched:<ul><li>`Remove` – remove the data points.  This can only be specified for irregular interval time series and will be interpreted as SetMissing for regular interval time series.</li><li>`SetMissing` – set values to missing.</li></ul>|No additional action is taken and the `NewValue` parameter must be specified.|
+|`Action`|An additional action to take with values that are matched:<ul><li>`Remove` – remove the data points.  This can only be specified for irregular interval time series and will be interpreted as `SetMissing` for regular interval time series.</li><li>`RemoveMissing` - remove missing values.  This can only be specified for irregular interval time series.</li><li>`SetMissing` – set values to missing.</li></ul>|No special action is taken.  The `NewValue` parameter must be specified.|
 |`SetStart`|The date/time to start filling, if other than the full time series period.  Can be specified with processor `${Property}`.|Check the full period.|
 |`SetEnd`|The date/time to end filling, if other than the full time series period.  Can be specified with processor `${Property}`.|Check the full period.|
 |`AnalysisWindowStart`|The starting date/time within the calendar year to replace data.  The window CANNOT cross calendar year boundaries (this may be allowed in the future).  Use multiple commands if necessary.|Process each full year.|
@@ -67,7 +77,8 @@ Command Parameters
 
 See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/ReplaceValue).
 
-A sample command file to process a time series from the [State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
+A sample command file to remove negative values from a time series from the
+[State of Colorado’s HydroBase database](../../datastore-ref/CO-HydroBase/CO-HydroBase.md)
 is as follows:
 
 ```text

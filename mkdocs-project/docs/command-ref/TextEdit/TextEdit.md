@@ -3,6 +3,7 @@
 *   [Overview](#overview)
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
+    +   [Search and Replace Example Patterns](#search-and-replace-example-patterns)
 *   [Examples](#examples)
 *   [Troubleshooting](#troubleshooting)
 *   [See Also](#see-also)
@@ -20,7 +21,7 @@ In the future this command may be enhanced to add the following features:
 *   allow multiple operations in one command
 
 The search and replace functionality is implemented using Java pattern matching and regular expressions
-(see [`Pattern`](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) class documentation).
+(see the Java [`Pattern`](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) class documentation).
 It can be complicated to deal with special characters and patterns as they are processed
 through TSTool commands and underlying Java code.
 For example, some patterns pass through to the underlying code without changes whereas others
@@ -30,18 +31,6 @@ The following examples illustrate how to perform common search and replace tasks
 The [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md) command
 can be used to read one or more properties from a text file
 and the property values can be used to replace text in an initial file.
-
-**<p style="text-align: center;">
-Search and Replace Examples
-</p>**
-
-| **`SearchFor`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **`ReplaceWith`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
-| -- | -- | -- |
-| `\r\n` | `\n` | Replace Windows end of line with Linux end of line. | 
-| `\n` | `\r\n` | Replace Linux end of line Windows end of line with Linux end of line. | 
-| `StationId` | `\$\{StationId}` | Replace the static string `StationId` with a property `${StationId}`.  The dollar sign has special meaning to the pattern matcher (end of line) and braces also have meaning.  Additionally, using `${` directly causes TSTool to try to replace with a property value.  Using backslashes in front of the first two characters in the `ReplaceWith` parameter allows the string to pass through TSTool and pattern matcher without interpretation. |
-| `Some.*Text` | `SomeNewText` | The `*` typically cannot be used alone and therefore `.*` indicates "any character followed by one or more characters".  The example shows how intervening characters in the original string can be replaced with new text. |
-| `SomeFile\..*\.ext` | `SomeFile\.ABC\.ext` | Similar to previous example except escape the period from interpretation by pattern matcher and treat literally, needed when handling filenames with extensions. |
 
 ## Command Editor ##
 
@@ -73,10 +62,29 @@ Command Parameters
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 | `InputFile`<br>**required** | The name of the input file.  Can be specified using `${Property}`. | None - must be specified. |
-| `SearchFor`<br>**required** | The literal string to search for in the input file.  Can be specified using `${Property}`. | None - must be specified. |
-| `ReplaceWith`<br>**required** | The literal string to use for the replacement string in the output file.  Can be specified using `${Property}`.<br>Use the syntax `\$\{Property}` to insert property notation in the output file. | None - must be specified. |
+| `SearchFor`<br>**required** | The string to search for in the input file.  Can be specified using `${Property}`. See the examples in [Search and Replace Example Patterns](#search-and-replace-example-patterns). | None - must be specified. |
+| `ReplaceWith`<br>**required** | The string to use for the replacement string in the output file.  See the examples in [Search and Replace Example Patterns](#search-and-replace-example-patterns). | None - must be specified. |
 | `OutputFile`<br>**required** | The name of the output file.  Can be specified using `${Property}`. | None - must be specified. |
 | `IfInputNotFound` | Indicate an action if the source file is not found:  `Ignore` (ignore the missing file and do not warn), `Warn` (generate a warning message), `Fail` (generate a failure message) | `Warn` |
+
+### Search and Replace Example Patterns ###
+
+The following table lists various combinations of `SearchFor` and `ReplaceWith` command parameter values.
+The dollar sign has special meaning to the pattern matcher (end of line) and braces also have meaning.  Using `${ }` directly causes TSTool to try to replace with a property value.  Using backslashes in front of characters allows the string to pass through TSTool without being interpreted as a processor `${Property}` so that the pattern matcher can handle.
+
+**<p style="text-align: center;">
+Search and Replace Example Patterns
+</p>**
+
+| **`SearchFor`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **`ReplaceWith`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
+| -- | -- | -- |
+| `\r\n` | `\n` | Replace Windows end of line with Linux end of line. | 
+| `\n` | `\r\n` | Replace Linux end of line Windows end of line with Linux end of line. | 
+| `StationId` | `\$\{StationId}` | Replace the static string `StationId` with a property `${StationId}`. |
+| `Some.*Text` | `SomeNewText` | The `*` typically cannot be used alone and therefore `.*` indicates "any character followed by one or more characters".  The example shows how intervening characters in the original string can be replaced with new text. |
+| `SomeFile\..*\.ext` | `SomeFile\.ABC\.ext` | Similar to previous example except escape the period from interpretation by pattern matcher and treat literally, needed when handling filenames with extensions. |
+| `\$\{StationId\}` | `1234` | Replace the string `${StationId}` with a literal string `1234`. |
+| `\$\{StationId\}` | `${StationId}` | Replace the string `${StationId}` with the property value in `{StationId}`. |
 
 ## Examples ##
 

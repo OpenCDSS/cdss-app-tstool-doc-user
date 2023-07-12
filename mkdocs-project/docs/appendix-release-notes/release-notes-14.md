@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.8.4](#changes-in-version-1484)
 *   [Changes in Version 14.8.3](#changes-in-version-1483)
 *   [Changes in Version 14.8.2](#changes-in-version-1482)
 *   [Changes in Version 14.8.1](#changes-in-version-1481)
@@ -33,6 +34,29 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.8.4 ##
+
+**Maintenance release to fix issues when processing text files.** 
+
+*   ![change](change.png) [14.8.4] Update the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command:
+    +   The `IncludeText` and `ExcludeText` parameters can now include `${Property}` syntax.
+*   ![change](change.png) [14.8.4] Update the [`Copy`](../command-ref/Copy/Copy.md) command:
+    +   The history of the original time series was being updated with a note that a copy was made,
+        instead of a note in the new copy.
+*   ![change](change.png) [14.8.4] Update the [`ReplaceValue`](../command-ref/ReplaceValue/ReplaceValue.md) command:
+    +   Add the `RemoveMissing` action for irregular interval time series.
+    +   Change to not automatically append to the time series description.
+        The new `Description` command parameter can be used to change the description.
+    +   Fix a bug that was causing time series modified by this command to not display correctly in the table view.
+*   ![change](change.png) [14.8.4] Update the
+    [`SetTimeSeriesPropertiesFromTable`](../command-ref/SetTimeSeriesPropertiesFromTable/SetTimeSeriesPropertiesFromTable.md) command:
+    +   The following command parameters now accept `${Property}` notation:  `TSID`, `TableID`, `EnsembleID`, `TableInputColumns`, `TableTSIDColumn`.
+*   ![change](change.png) [14.8.4] Add the following command parameters to control which datastores are
+    enabled/disabled at run-time, useful for optimizing batch workflows.
+    +   `--enabled-datastores=dastore1,datastore2`
+    +   `--disabled-datastores=dastore1,datastore2`
+    +   See the TSTool [command line parameters](../appendix-running/running.md#tstool-command-line-parameters).
 
 ## Changes in Version 14.8.3 ##
 
