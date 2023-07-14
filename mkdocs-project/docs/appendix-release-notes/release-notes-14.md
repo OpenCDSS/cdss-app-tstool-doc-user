@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.8.5](#changes-in-version-1485)
 *   [Changes in Version 14.8.4](#changes-in-version-1484)
 *   [Changes in Version 14.8.3](#changes-in-version-1483)
 *   [Changes in Version 14.8.2](#changes-in-version-1482)
@@ -34,6 +35,17 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.8.5 ##
+
+**Maintenance release to enhance plugin integration.** 
+
+*   ![change](change.png) [14.8.5] Improve plugin integration with the documentation viewer.
+    Plugins can now view documentation for a specific version.
+    Plugins will need to be updated to use this feature.
+*   ![change](change.png) [14.8.5] Improve handling of timeout for web service requests
+    to allow plugin data requests to timeout.
+    Plugins will need to be updated to use this feature.
 
 ## Changes in Version 14.8.4 ##
 

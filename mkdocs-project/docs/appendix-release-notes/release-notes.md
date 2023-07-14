@@ -34,6 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.8.5](release-notes-14.md)|Maintenance release to enhance plugin integration. | 2023-07-14 |
 |[14.8.4](release-notes-14.md)|Maintenance release to fix issues when processing text files. | 2023-07-11 |
 |[14.8.3](release-notes-14.md)|Maintenance release to enable raster graph for hour and minute interval time series. | 2023-06-05 |
 |[14.8.2](release-notes-14.md)|Maintenance release to fix raster graphs when missing data. | 2023-05-30 |
