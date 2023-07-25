@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.8.6](#changes-in-version-1486)
 *   [Changes in Version 14.8.5](#changes-in-version-1485)
 *   [Changes in Version 14.8.4](#changes-in-version-1484)
 *   [Changes in Version 14.8.3](#changes-in-version-1483)
@@ -35,6 +36,24 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.8.6 ##
+
+**Maintenance release to improve time zone handling.** 
+
+*   ![change](change.png) [14.8.6] Phase out some support for old-style time zones (e.g., `MST`, `MDT`)
+    due to ambiguity with current conventions that are more granular (e.g., use `America/Denver` instead, which includes daylight saving).
+    Some command files may need to be updated.
+*   ![change](change.png) [14.8.6] The time series table view has been updated to improve handling
+    time series with different time zones:
+    +   the date/time column will not show time zone
+    +   the time zone will be shown in the time series value column heading
+    +   column tool tips provide additional details about the time zone and other time series metadata
+*   ![change](change.png) [14.8.6] Update the [`ChangeTimeZone`](../command-ref/ChangeTimeZone/ChangeTimeZone.md) command:
+    +   Add the `ShiftTime` parameter to control whether the date/times in the time series are shifted using
+        the difference between the old and new time zones.
+    +   Add the `OldTimeZone` parameter to specify the old time series for the time series,
+        for cases where the time series being modified does not specify the time zone.
 
 ## Changes in Version 14.8.5 ##
 
