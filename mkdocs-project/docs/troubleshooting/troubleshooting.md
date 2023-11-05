@@ -40,6 +40,7 @@ information on a troubleshooting topic.**
     +   [Issue 13 - Slow startup](#issue-13-slow-startup)
     +   [Issue 14 - SQL Server Express out of date](#issue-14-sql-server-express-out-of-date)
     +   [Issue 15 - HydroBase login is shown at startup when HydroBase is not installed](#issue-15-hydrobase-login-is-shown-at-startup-when-hydrobase-is-not-installed)
+    +   [Issue 16 - `java.awt.HeadlessException`](#issue-16-javaawtheadlessexception)
 *   [Obsolete Commands](#obsolete-commands)
 
 ------------------
@@ -903,6 +904,41 @@ when HydroBase is not installed, which slows down TSTool startup
     3.  Restart TSTool to confirm that the ***Select HydroBase*** dialog is not displayed.
 2.  If HydroBase needs to be installed locally... see the 
     [HydroBase documentation](https://opencdss.state.co.us/opencdss/hydrobase/).
+
+### Issue 16 - `java.awt.HeadlessException` ###
+
+**Scope** – any TSTool version running in headless batch mode
+
+**Behavior** – a `java.awt.HeadlessException` exception may be thrown when trying to run
+TSTool on a computer that does not have a user interface installed,
+for example a Linux cloud server that is only accessed via an SSH terminal.
+The exception is thrown because devices such as displays and mouse are not available.
+
+**Possible Causes** – The following are possible causes:
+
+1.  The Linux server is configured without a user interface,
+    for example X-Windows is not installed,
+    and trying to create a visual information product, such as a graph
+
+**Possible Solution** - The following is an approach to troubleshooting.
+
+1.  Avoid using graphical features of the program.
+    For example, for the [`ProcessTSProduct`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ProcessTSProduct/ProcessTSProduct/)
+    and [`ProcessRasterGraph`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ProcessRasterGraph/ProcessRasterGraph/) commands,
+    specify `OutputFile` to create an image and use the `View=False` command parameter
+    to **not** display the interactive graph view.
+2.  Install a user interface on the computer (X-Windows on Linux).
+    This will add a load to the server and may not be needed if a graphical desktop is not used on the computer.
+3.  Rather than installing the user interface on Linux,
+    install the [`Xvfb` (X virtual frame buffer)](https://en.wikipedia.org/wiki/Xvfb) software,
+    which performs graphical operations in virtual memory without showing any screen output.
+    *   For example, on Linux that uses `apt` to manage packages,
+        install with: `sudo apt-get install xvfb`
+    *   To test:
+        +   Start `Xvfb` with: `sudo Xvfb :1 -screen 0 1280x1024x8 -fbdir /tmp`
+        +   Configure the X Windows environment:  `export DISPLAY=localhost:1.0`
+        +   Run TSTool.  On Linux, may need to use `tstool --headless ...` .
+    *   For a more permanent solution, configure `Xvfb` as a service.
 
 ## Obsolete Commands ##
 

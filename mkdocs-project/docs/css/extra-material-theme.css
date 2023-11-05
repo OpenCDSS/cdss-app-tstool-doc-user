@@ -7,9 +7,27 @@
 /**
  * Web accessibility requires underline for links so that colorblind people can see the link.
  */
-a:link {
+body a:link {
   text-decoration: underline;
 }
+
+/**
+ * Don't underline links in the nav section (menus):
+ * - the following (instead of the above) seems to work but an issue is probably
+ *   that MkDocs includes the navigation in the body so disabling underline
+ *   will cause accessibility scan violations?
+ */
+/*
+div.md-content a {
+  text-decoration: underline;
+}
+*/
+
+/* This does not work either.
+nav a {
+  text-decoration none; !important
+}
+*/
 
 /* Unordered list <ul> symbols:
  * - level 2 is hollow circle
