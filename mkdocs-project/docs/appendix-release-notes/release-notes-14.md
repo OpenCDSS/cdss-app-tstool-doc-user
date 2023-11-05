@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.9.0](#changes-in-version-1490)
 *   [Changes in Version 14.8.6](#changes-in-version-1486)
 *   [Changes in Version 14.8.5](#changes-in-version-1485)
 *   [Changes in Version 14.8.4](#changes-in-version-1484)
@@ -36,6 +37,40 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.9.0 ##
+
+**Feature release to use OpenJDK 8, enable additional plotting symbols, map view fixes.**
+
+*   ![change](change.png) [14.9.0] Switch the Java version to OpenJDK 8.
+    OpenJDK is free and open source whereas Oracle requires a fee for newer Java versions.
+    Future updates will implement newer versions of Java.
+*   ![change](change.png) [14.9.0] Improve handling of `HeadlessException` when trying to display
+    an interactive graph window when running in headless mode.
+*   ![change](change.png) [14.9.0] Enable additional plotting symbols:
+    +   `Ellipse-Horizontal-Filled`
+    +   `Ellipse-Horizontal-Hollow`
+    +   `Ellipse-Vertical-Filled`
+    +   `Ellipse-Vertical-Hollow`
+    +   `Rectangle-Horizontal-Filled`
+    +   `Rectangle-Horizontal-Hollow`
+    +   `Rectangle-Vertical-Filled`
+    +   `Rectangle-Vertical-Hollow`
+*   ![change](change.png) [14.9.0] Fix the following plotting symbols,
+    which were not drawing the bottom line:
+    +   `Triangle-Down-Filled-BotLine`
+    +   `Triangle-Down-Hollow-BotLine`
+*   ![change](change.png) [14.8.4] Update to allow multiple `--disable-datastores` and `--enable-datastores`
+    command parameters to be specified in sequence to control which datastores are enabled.
+    This allows, for example, disabling all datastores and then enabling only the datastore(s)
+    that are needed for a batch workflow.
+    See the TSTool [command line parameters](../appendix-running/running.md#tstool-command-line-parameters).
+    The parameters have also been renamed from previous `--disabled-datastores` and `--enabled-datastores` parameters.
+*   ![bug](bug.png) [14.9.0] The ***View / Map*** features were not working for
+    `UniqueValues` classification type.  This has been fixed.
+*   ![bug](bug.png) [14.9.0] Update the
+    [`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command:
+    +    Fix to handle boolean properties.
 
 ## Changes in Version 14.8.6 ##
 

@@ -1797,13 +1797,71 @@ Data (Time Series) Properties
 |`RasterGraphLegendPosition` | The position of raster graph legend.  See values for the `LegendPosition` property.  Currently only `Right` is supported.  The normal legend showing the time series can be displayed in addition to the raster graph legend. | `Right` |
 |`RegressionLineEnabled`|Indicates whether the regression line should be shown (currently only used with the XY-Scatter graph type). The line is drawn in black (there is currently not a property to set the line color).|`true`|
 |`SymbolSize`|Symbol size in pixels.|`0` (no symbol)|
-|`SymbolStyle`|Symbol style. Recognized styles are:<br><ul><li>`None`</li><li>`Arrow-Down`</li><li>`Arrow-Left`</li><li>`Arrow-Right`</li><li>`Arrow-Up`</li><li>`Asterisk`</li><li>`Circle-Hollow`</li><li>`Circle-Filled`</li><li>`Diamond-Hollow`</li><li>`Diamond-Filled`</li><li>`Plus`</li><li>`Plus-Square`</li><li>`Square-Hollow`</li><li>`Square-Filled`</li><li>`Triangle-Down-Hollow`</li><li>`Triangle-Down-Filled`</li><li>`Triangle-Left-Hollow`</li><li>`Triangle-Left-Filled`</li><li>`Triangle-Right-Hollow`</li><li>`Triangle-Right-Filled`</li><li>`Triangle-Up-Hollow`</li><li>`Triangle-Up-Filled`</li><li>`X, X-Cap`</li><li>`X-Diamond`</li><li>`X-Edge`</li><li>`X-Square`</li></ul>|`None`|
+|`SymbolStyle`|Symbol style (shape type) to draw a symbol at each data point. See the **`SymbolShape` Property Values** table below. | `None` |
 |`SymbolTablePath`| Path to a file containing symbol table, used with a raster graph.  If a relative path is specified, it is relative to the time series product file. | Default symbol table is used. |
 |`TSAlias`|Time series alias to match, will override `TSID`.|Specify `TSAlias` or `TSID`.|
 |`TSID`|Time series identifier to match, will be overrules by `TSAlias`.|Specify `TSAlias` or `TSID`.|
 |`XAxis`|X-axis to use (Bottom or Top). This currently always defaults to bottom.|`Bottom`|
 |`XYScatterConfidenceInterval`|This property is only used with XY scatter plots.  If not blank, the value indicates that confidence level lines should be drawn on the XY Scatter plot for the given confidence interval, percent.  Currently only 99 and 95 percent confidence intervals are supported.  The lines will only be drawn if the curve fit line is drawn (see `RegressionLineEnabled`).|Blank (do not draw).|
 |`YAxis`|Y-axis to use (`Left` or `Right`).|`Left`|
+
+The following table lists symbol styles (shape types) tht can be used to draw a symbol at each data point.
+Some styles have special meaning (e.g., `Instream-Flow` and `Teacup`) and are also used with spatial data layers.
+Additional styles are available for spatial data layers,
+for example to show the value of multiple time series at a point in space.
+
+**<p style="text-align: center;">
+`SymbolStyle` Property Values (centered on data point unless noted)
+</p>**
+
+| **Property Value**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
+| -- | -- |
+|`None` | No symbol is drawn. |
+|`Arrow-Down`| Arrow pointing down (hollow tip). |
+|`Arrow-Down-Left`| Arrow pointing down left (filled tip). |
+|`Arrow-Down-Right`| Arrow pointing down right (filled tip). |
+|`Arrow-Left`| Arrow pointing left (hollow tip). |
+|`Arrow-Right`| Arrow pointing right (hollow tip). |
+|`Arrow-Up`| Arrow pointing up (hollow tip). |
+|`Arrow-Up-Left`| Arrow pointing up left (filled tip). |
+|`Arrow-Up-Right`| Arrow pointing up right (filled tip). |
+|`Asterisk`| Asterisk. |
+|`Circle-Hollow`| Circle (hollow). |
+|`Circle-Filled`| Circle (filled). |
+|`Diamond-Hollow`| Diamond (hollow). |
+|`Diamond-Filled`| Diamond (filled). |
+|`Ellipse-Horizontal-Hollow`| Ellipse with width twice the height (hollow). |
+|`Ellipse-Horizontal-Filled`| Ellipse with width twice the height (filled). |
+|`Ellipse-Vertical-Hollow`| Ellipse with height twice the width (hollow). |
+|`Ellipse-Vertical-Filled`| Ellipse with height twice the width (filled). |
+|`Instream-Flow`| Insteam flow, used with environmental flows. |
+|`Plus`| Plus sign. |
+|`Plus-Square`| Plus inside of a square. |
+|`Pushpin-Vertical`| Pushpin with tip of pin at the data point. |
+|`Rectangle-Horizontal-Hollow`| Rectangle with width twice the height (hollow). |
+|`Rectangle-Horizontal-Filled`| Rectangle with width twice the height (filled). |
+|`Rectangle-Vertical-Hollow`| Rectangle with height twice the widge (hollow). |
+|`Rectangle-Vertical-Filled`| Rectangle with height twice the widge (hollow). |
+|`Square-Hollow`| Square (hollow). |
+|`Square-Filled`| Square (filled). |
+|`Teacup`| Used to indicate water storage in a reservoir. |
+|`Triangle-Down-Filled`| Triangle pointing down (filled). |
+|`Triangle-Down-Filled-BotLine`| Triangle pointing down (filled) with horizontal line at the bottom, used to indicate a low condition. |
+|`Triangle-Down-Hollow`| Triangle pointing down (hollow). |
+|`Triangle-Down-Hollow-BotLine`| Triangle pointing down (hollow) with horizontal line at the bottom, used to indicate a low condition. |
+|`Triangle-Left-Filled`| Triangle pointing left (filled). |
+|`Triangle-Left-Hollow`| Triangle pointing left (hollow). |
+|`Triangle-Right-Filled`| Triangle pointing right (filled). |
+|`Triangle-Right-Hollow`| Triangle pointing right (hollow). |
+|`Triangle-Up-Filled`| Triangle pointing up (filled). |
+|`Triangle-Up-Filled-TopLine`| Triangle pointing up (filled) with horizontal line at the top, used to indicate a high condition. |
+|`Triangle-Up-Hollow`| Triangle pointing up (hollow). |
+|`Triangle-Up-Hollow-TopLine`| Triangle pointing up (hollow) with horizontal line at the top, used to indicate a high condition. |
+|`X`| X. |
+|`X-Cap`| X with lines above and below. |
+|`X-Diamond`| X inside of a diamond. |
+|`X-Edge`| X with lines on the left and right. |
+|`X-Square`| X inside of a square. |
 
 ### Time Series Product File - Annotation Properties ###
 

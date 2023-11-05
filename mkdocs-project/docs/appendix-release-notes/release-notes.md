@@ -34,6 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.9.0](release-notes-14.md)|Feature release to use OpenJDK 8, enable additional plotting symbols, map view fixes. | 2023-10-30 |
 |[14.8.6](release-notes-14.md)|Maintenance release to improve time zone handling. | 2023-07-24 |
 |[14.8.5](release-notes-14.md)|Maintenance release to enhance plugin integration. | 2023-07-14 |
 |[14.8.4](release-notes-14.md)|Maintenance release to fix issues when processing text files. | 2023-07-11 |
