@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.9.1](#changes-in-version-1491)
 *   [Changes in Version 14.9.0](#changes-in-version-1490)
 *   [Changes in Version 14.8.6](#changes-in-version-1486)
 *   [Changes in Version 14.8.5](#changes-in-version-1485)
@@ -37,6 +38,25 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.9.1 ##
+
+**Maintenance release to enhance plugin integration.**
+
+*   ![change](change.png) [14.9.0] Re-enable previously available time series edit features in the graph:
+    +   Use the [`SetTimeSeriesProperty`](../command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md) command
+        to set the time series to editable.
+    +   Use the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command
+        and set the default save file, which can save the edit results.
+    +   Graphing the time series will enable the editing toolbar.
+        These features are experimental and will be enhanced over time.
+    +   Add the `XYAxes` tracker type for time series graphs.
+        This shows a crosshair that spans the entire graph in both directions and is useful during editing.
+*   ![change](change.png) [14.9.0] Update the
+    [`SetConstant`](../command-ref/SetConstant/SetConstant.md) command:
+    +   Add the `SetFlag` and `SetFlagDescription` parameters to allow setting the data flag
+        when values are set.
+    +   Allow only the flag to be set without setting numerical values.
 
 ## Changes in Version 14.9.0 ##
 

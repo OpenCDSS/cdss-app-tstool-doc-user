@@ -13,6 +13,11 @@
 
 The `SetConstant` command sets the values of a time series to a single or monthly constant values.
 
+An optional flag can also be set to indicate which values have been modified.
+If no numerical single or monthly values are set,
+the flag can still be set.
+Currently, only a single flag value can be specified (not monthly flags).
+
 ## Command Editor ##
 
 The command is available in the following TSTool menu:
@@ -40,13 +45,15 @@ SetConstant(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
-|`ConstantValue`|The constant value to use as the data value.|None – must be specified, or specify monthly values.|
-|`MonthValues`|Monthly values to use as the data values.  Twelve values for January – December must be specified, separated by commas.  `*` indicates to keep the original value.  Blank or `NaN` indicates to set the value to missing.  If the time series data interval is less than monthly, each date/time will be set for a specific month.|None – must be specified, or specify a constant value.|
+|`ConstantValue`|The constant value to use as the data value.| Sepecify `ConstantValue` or `MonthValues`.|
+|`MonthValues`|Monthly values to use as the data values:<ul><li>twelve values for January – December must be specified:<ul><li>separate the 12 values by commas</li><li> `*` indicates to keep the original value</li><li>blank or `NaN` indicates to set the value to missing</li></ul></li><li>if the time series data interval is less than monthly, each date/time will be set for a specific month</li><li>if `SetFlag` is specified, it will only be set for months that have a value specified (there is currently no way to set only the flag for months)</li></ul> | Specify `ConstantValue` or `MonthValues`.|
+|`SetFlag`| The string to use for the data flag for each value in the set period. Can be specified without `ConstantValue` or `MonthValues` to only set the flag (e.g., for testing). | No flag is set. |
+|`SetFlagDescription`| The description for `SetFlag`, which will be used in output products. | No description is set. |
 |`SetStart`|The starting date/time for the data set.  Can set using processor `${Property}`.|Set data for the full period.|
 |`SetEnd`|The ending date/time for the data set.  Can set using processor `${Property}`.|Set data for the full period.|
 
