@@ -1,6 +1,7 @@
 # TSTool / Command / ProcessTSProduct #
 
 *   [Overview](#overview)
+    +   [Editing Time Series](#editing-time-series)
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
 *   [Examples](#examples)
@@ -79,6 +80,13 @@ by a command file and be available in TSTool’s ***Results*** area.
 It is also possible to create a template time series product file and use the
 [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command to automate
 creation of large numbers of graphs, for example to create images for a website.
+
+### Editing Time Series ###
+
+The `ProcessTSProduct` command's editor dialog ***Editing*** tab is used to set the
+default save file for time series edits.
+This is used by the graph view to allow saving the results of editing.
+The file can then be loaded into a database or used in a workflow.
 
 ## Command Editor ##
 
