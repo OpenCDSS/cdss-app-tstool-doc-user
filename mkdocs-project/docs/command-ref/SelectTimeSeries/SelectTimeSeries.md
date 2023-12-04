@@ -85,7 +85,7 @@ Command Parameters
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
 |`TSPosition`|A list of time series positions (1+) in output, separated by commas.  Ranges can be specified as `Start-End`.|Required if `TSList=TSPosition`|
 |`DeselectAllFirst`|Indicate whether all time series should be deselected before selecting the specified time series:  `True` or `False`.|`False`|
-|`IfNotFound`|Indicate how to handle the case of no time series being matched:<ul><li>`Ignore` – OK if nothing selected</li><li>`Warn` – generate a warning message</ul><li>`Fail` – generate a failure message|`Fail`|
+|`IfNotFound`|Indicate how to handle the case of no time series being matched:<ul><li>`Ignore` – OK if nothing selected</li><li>`Warn` – generate a warning message</li><li>`Fail` – generate a failure message</li></ul>|`Fail`|
 |`PropertyName`|Name of user-defined property to check.  A property, if specified, is additive to selections from the `TSList` parameter.  Can be specified using processor `${Property}`.||
 |`PropertyCriterion`|Criterion to evaluate to determine which properties match.	Required if `PropertyName` is specified.||
 |`PropertyValue`|Value to check against the property value, using criterion.  Can be specified using processor `${Property}`.|Required if `PropertyName` is specified.||
