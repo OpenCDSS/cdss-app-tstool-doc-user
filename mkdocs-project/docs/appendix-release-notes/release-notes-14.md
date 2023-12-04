@@ -41,9 +41,13 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 14.9.1 ##
 
-**Maintenance release to enhance plugin integration.**
+**Maintenance release to enhance plugin integration and fix workflow issues.**
 
-*   ![change](change.png) [14.9.0] Re-enable previously available time series edit features in the graph:
+*   ![bug](bug.png) [14.9.1] Fix the bug in the raster graph for multiple time series:
+    +   Time series with missing data at the end of a row were being shown with the last non-missing value.
+        This has been fixed.
+*   ![change](change.png) [14.9.1] Update the ***Results / Time Series*** heading to indicate how many time series have no data.
+*   ![change](change.png) [14.9.1] Re-enable previously available time series edit features in the graph:
     +   Use the [`SetTimeSeriesProperty`](../command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md) command
         to set the time series to editable.
     +   Use the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command
@@ -52,7 +56,12 @@ Issues may also be included in other repositories that are TSTool components.
         These features are experimental and will be enhanced over time.
     +   Add the `XYAxes` tracker type for time series graphs.
         This shows a crosshair that spans the entire graph in both directions and is useful during editing.
-*   ![change](change.png) [14.9.0] Update the
+*   ![change](change.png) [14.9.1] Update the
+    [`DeselectTimeSeries`](../command-ref/DeselectTimeSeries/DeselectTimeSeries.md) command:
+    +   Add the `IfNotFound` parameter to allow more control if no time series are matched.
+    +   Add the `SelectedCountProperty` parameter to set a property for how many time series are selected.
+    +   Add the `UnselectedCountProperty` parameter to set a property for how many time series are unselected.
+*   ![change](change.png) [14.9.1] Update the
     [`SetConstant`](../command-ref/SetConstant/SetConstant.md) command:
     +   Add the `SetFlag` and `SetFlagDescription` parameters to allow setting the data flag
         when values are set.
@@ -62,6 +71,11 @@ Issues may also be included in other repositories that are TSTool components.
 
 **Feature release to use OpenJDK 8, enable additional plotting symbols, map view fixes.**
 
+*   ![bug](bug.png) [14.9.0] The ***View / Map*** features were not working for
+    `UniqueValues` classification type.  This has been fixed.
+*   ![bug](bug.png) [14.9.0] Update the
+    [`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command:
+    +    Fix to handle boolean properties.
 *   ![change](change.png) [14.9.0] Switch the Java version to OpenJDK 8.
     OpenJDK is free and open source whereas Oracle requires a fee for newer Java versions.
     Future updates will implement newer versions of Java.
@@ -86,11 +100,6 @@ Issues may also be included in other repositories that are TSTool components.
     that are needed for a batch workflow.
     See the TSTool [command line parameters](../appendix-running/running.md#tstool-command-line-parameters).
     The parameters have also been renamed from previous `--disabled-datastores` and `--enabled-datastores` parameters.
-*   ![bug](bug.png) [14.9.0] The ***View / Map*** features were not working for
-    `UniqueValues` classification type.  This has been fixed.
-*   ![bug](bug.png) [14.9.0] Update the
-    [`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command:
-    +    Fix to handle boolean properties.
 
 ## Changes in Version 14.8.6 ##
 
