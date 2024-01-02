@@ -639,6 +639,18 @@ The following example is for reservoir storage and also indicates data issues on
 **<p style="text-align: center;">
 Example Stacked Area Graph (<a href="../TSView_Graph_AreaStacked_YearReservoir.png">see full-size image</a>)
 </p>**
+
+The following example uses the same time series 3 times but with different `LineConnectType` time series product values
+to control the visualization.
+Using steps can provide a graph that is similar to a bar graph but without the problems of ensuring equal spacing between bars.
+
+**<p style="text-align: center;">
+![Time Series Stacked Area Graph with different LineConnectType](TSView_Graph_AreaStacked_LineConnectType.png)
+</p>**
+
+**<p style="text-align: center;">
+Example Stacked Area Graph with Different `LineConnectType` (<a href="../TSView_Graph_AreaStacked_LineConnectType.png">see full-size image</a>)
+</p>**
  
 #### Bar Graph ####
 
@@ -1848,6 +1860,8 @@ Data (Time Series) Properties
 |`LegendFormat`|The legend for the data can be specified and will override the SubProduct `LegendFormat` property (see that property for details).  The time series property `tsp:LegendFormat` will be used if found.|`Auto`|
 |`LineStyle`|Line style. Currently only `None` (e.g., for symbols only) and `Solid` are allowed.|`Solid`|
 |`LineWidth`|Line width, pixels.|`1`|
+|`LineConnectType`|Indicates how to connect points with a line, for `Line`, `Area`, and `AreaStacked` graph types:<ul><li>`Connect` - connect the data points</li><li>`StepAuto` - automatically determine the connect type:<ul><li>`StepUsingValue` - irregular interval time series and regular interval time series that use dates (no time), because the value should apply for the entire date</li><li>`StepUsingNextValue` - regular interval time series that include time (the timestamp on values is interval-ending in TSTool)</li></ul></li><li>`StepUsingValue`- a stepped line is used to connect points, with the current value being used for the step until the next point</li><li>`StepUsingNextValue` - a stepped line is used to connect points, with the next point's value being used for the step until the next point</ul> | `Connect` |
+|`LineConnectAllowedGap`|Used with irregular interval time series and `Line`, `Area`, and `AreaStacked` graph types to indicated the maximum allowed gap between date/times. Specify as an interval (e.g., `1Day`, `3Month`). If a gap is detected, the line will not be drawn across the gap. This property is useful because irregular interval time series often record only measurements and not missing values.  Therefore, the property can cause a data gap in the graph such as due to seasonal data collection outages. | Any gap is allowed and a line will be drawn between all data points. |
 |`PeriodEnd`|Ending date for time series data in the data item. The date should be formatted according to common conventions (e.g., `YYYY-MM-DD HH:mm`), and should ideally be of appropriate precision for the data being queried.  This property is often set at run time.|Full period is read.|
 |`PeriodStart`|Starting date for time series data in the data item. The date should be formatted according to common conventions (e.g., `YYYY-MM-DD HH:mm`), and should ideally be of appropriate precision for the data being queried. This property is often set at run time.|Full period is read.|
 |`RasterGraphLegendPosition` | The position of raster graph legend.  See values for the `LegendPosition` property.  Currently only `Right` is supported.  The normal legend showing the time series can be displayed in addition to the raster graph legend. | `Right` |
@@ -1861,7 +1875,7 @@ Data (Time Series) Properties
 |`XYScatterConfidenceInterval`|This property is only used with XY scatter plots.  If not blank, the value indicates that confidence level lines should be drawn on the XY Scatter plot for the given confidence interval, percent.  Currently only 99 and 95 percent confidence intervals are supported.  The lines will only be drawn if the curve fit line is drawn (see `RegressionLineEnabled`).|Blank (do not draw).|
 |`YAxis`|Y-axis to use (`Left` or `Right`).|`Left`|
 
-The following table lists symbol styles (shape types) tht can be used to draw a symbol at each data point.
+The following table lists symbol styles (shape types) that can be used to draw a symbol at each data point.
 Some styles have special meaning (e.g., `Instream-Flow` and `Teacup`) and are also used with spatial data layers.
 Additional styles are available for spatial data layers,
 for example to show the value of multiple time series at a point in space.

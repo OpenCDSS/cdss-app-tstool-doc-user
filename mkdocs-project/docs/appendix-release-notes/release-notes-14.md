@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.9.2](#changes-in-version-1492)
 *   [Changes in Version 14.9.1](#changes-in-version-1491)
 *   [Changes in Version 14.9.0](#changes-in-version-1490)
 *   [Changes in Version 14.8.6](#changes-in-version-1486)
@@ -38,6 +39,18 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.9.2 ##
+
+**Maintenance release to enable step graph.**
+
+*   ![change](change.png) [14.9.2] Enable step graphs:
+    +   Add the `LineConnectType` property to [time series products](../appendix-tsview/tsview.md)
+        to indicate how points are connected when drawing.
+    +   Add the `LineConnectAllowedGap` property to [time series products](../appendix-tsview/tsview.md)
+        to indicate the largest date/time interval between points that can be connected with a line,
+        used with irregular interval time series (regular interval time series rely on missing values for gaps).
+    +   Enable the above properties for `Line`, `Area`, and `AreaStacked` graph types.
 
 ## Changes in Version 14.9.1 ##
 
