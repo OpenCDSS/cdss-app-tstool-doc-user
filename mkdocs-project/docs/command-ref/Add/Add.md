@@ -60,6 +60,7 @@ Command Parameters
 |`AddTSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `AddTSList=*TSID`|
 |`AddEnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `AddTSList=*EnsembleID`.  Use if an ensemble is being added to another ensemble.|
 |`HandleMissingHow`|Indicates how to handle missing data in a time series:<ul><li>`IgnoreMissing` – create a result even if missing data are encountered in one or more time series – this option is not as rigorous as the others</li><li>`SetMissingIfOtherMissing` – set the result missing if any of the other time series values is missing</li><li>`SetMissingIfAnyMissing` – set the result missing if any time series value involved is missing `IgnoreMissing`</li></ul>|`IgnoreMissing`|
+|`HandleDataFlagsHow`|Indicates how to handle data flags:<ul><li>`Ignore` - do not modify the data flags</li><li>`Set` - set (override) the data flags in the result to the added time series</li></ul>|`Ignore`|
 |`IfTSListToAddIsEmpty`|Action if time series list to add is empty.|`Fail`|
 |`AnalysisStart`|The date/time to start analyzing data.  Can be specified using processor `${Property}`.|Full period is analyzed.|
 |`AnalysisEnd`|The date/time to end analyzing data.  Can be specified using processor `${Property}`.|Full period is analyzed.|
