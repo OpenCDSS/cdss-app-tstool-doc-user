@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.9.3](#changes-in-version-1493)
 *   [Changes in Version 14.9.2](#changes-in-version-1492)
 *   [Changes in Version 14.9.1](#changes-in-version-1491)
 *   [Changes in Version 14.9.0](#changes-in-version-1490)
@@ -39,6 +40,39 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.9.3 ##
+
+**Maintenance release to improve table comparison and math.**
+
+*   ![bug](bug.png) [14.9.3] Update the
+    [`TableMath`](../command-ref/TableMath/TableMath.md) command:
+    +   Handle input table columns of type long integer.
+*   ![change](change.png) [14.9.3] The time series identifier editor dialog now has wider input fields.
+*   ![change](change.png) [14.9.3] Update the [`Add`](../command-ref/Add/Add.md) command:
+    +   The `HandleMissingHow` parameter now defaults to blank in the editor (`IgnoreMissing` is the default).
+    +   The `HandleDataFlagsHow` parameter has been added to control how data flags are handled.
+*   ![change](change.png) [14.9.3] Update the [`AppendTable`](../command-ref/AppendTable/AppendTable.md) command:
+    +   Add the `AppendRowNumbers` parameter to append specific row numbers.
+*   ![change](change.png) [14.9.3] Update the
+    [`CompareTables`](../command-ref/CompareTables/CompareTables.md) command:
+    +   The `AnalysisMethod` parameter has been added to allow simple and advanced analysis,
+        where the advanced analysis will shift rows in the output to align matching table rows
+    +   Output HTML has been enhanced to add more colors to provide more granularity in the comparison,
+        and the page title matches the difference table ID.
+    +   The `RowNumberColumn` parameter has been added to include the row number in output,
+        to simplify lookup of orginal input rows
+    +   The `NewTableID` and `OutputFile` command parameters have been renamed to support new advanced analysis.
+        Old parameter names are still supported.  See the command documentation.
+    +   The `OutputRows` parameter has been added to allow outputting all, different, or same rows.
+    +   The `DiffRowCountProperty`, `DiffCellCountProperty`, `SameRowCountProperty`, and `SameCellCountProperty`
+        parameters have been added to set processor properties for the number of different/same
+        rows and cells, useful for testing and logic checks.
+*   ![change](change.png) [14.9.3] Update the
+    [`If`](../command-ref/If/If.md) command:
+    +   Add warning if a property name is used in the condition statement without surrounding `${  }`.
+*   ![change](change.png) [14.9.3] Update the [`Subtract`](../command-ref/Subtract/Subtract.md) command:
+    +   The `HandleMissingHow` parameter now defaults to blank in the editor (`IgnoreMissing` is the default).
 
 ## Changes in Version 14.9.2 ##
 

@@ -54,6 +54,7 @@ Command Parameters
 |`ColumnMap`|The map of the append table columns to the first table’s columns, necessary when column names are not the same:<br>`AppendColumn1:OriginalColumn1, AppendColumn2:OriginalColumn2`<br>The `${Property}` syntax is recognized. |If no map, append table column names in `IncludeColumns` must have the same name in the first table.|
 |`ColumnData`|Data values to set in appended rows:<br>`AppendColumn1:DataValue1, AppendColumn2:DataValue2`<br>This is useful when the appended columns need constant data inserted for each row, for example when transposing year from a column heading to year as data.  The `${Property}` syntax is recognized. |No additional data are used.|
 |`ColumnFilters`|Filters that limit the number of rows being appended from the append table, using the syntax:<br>`AppendColumn1:FilterPattern1, AppendColumn2:FilterPattern2`<br>Patterns can use `*` to indicate wildcards for matches.  Only string values can be checked (other data types are converted to strings for comparison).  Comparisons are case-independent.  All patterns must be matched in order to append the row.  In the future a command may be added to perform queries on tables, similar to SQL for databases.  Can use `${Property}` notation.|No filtering.|
+|`AppendRowNumbers`|Only append the specified row numbers (1+) from the second table, specified as a comma-delimited list containing:<ul><li>row number 1+</li><li>`last` - last row</li><li>in the future ranges may be supported</li></ul>|Append all rows that match the column filters.|
 
 ## Examples ##
 
