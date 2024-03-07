@@ -110,14 +110,13 @@ Input Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------------|-----------------|----------------- |
-|`Table1ID`<br>**required**|The identifier for the first table to be compared.|None – must be specified.|
-|`Table2ID`<br>**required**|The identifier for the second table to be compared. | None – must be specified. |
-|`CompareColumns1`|The names of columns to be compared from the first table, separated by commas.|All columns will be compared.|
-|`ExcludeColumns1`|The names of columns in the first table to be excluded from the comparison, separated by commas.|All columns will be compared.|
-|`MatchColumns1`|Used with `AnalysisMethod=Advanced`, the names of columns in the first table to be matched when aligning rows, separated by commas.|All columns will be compared to align.|
-|`CompareColumns2`|The names of columns to be compared from the second table, separated by commas.|All columns will be compared.|
-|`ExcludeColumns2`|The names of columns in the second table to be excluded from the comparison, separated by commas.|All columns will be compared.|
-|`MatchColumns2`|Used with `AnalysisMethod=Advanced`, the names of columns in the second table to be matched when aligning rows, separated by commas.|All columns will be compared to align.|
+|`Table1ID`<br>**required**|The identifier for the first table to be compared, can use `${Property}` notation.|None – must be specified.|
+|`Table2ID`<br>**required**|The identifier for the second table to be compared, can use `${Property}` notation. | None – must be specified. |
+|`CompareColumns1`|The names of columns to be compared from the first table, separated by commas, can use `${Property}` notation.|All columns will be compared.|
+|`ExcludeColumns1`|The names of columns in the first table to be excluded from the comparison, separated by commas, can use `${Property}` notation.|All columns will be compared.|
+|`MatchColumns1`|Used with `AnalysisMethod=Advanced`, the names of columns in the first table to be matched when aligning rows, separated by commas, can use `${Property}` notation.|All columns will be compared to align.|
+|`CompareColumns2`|The names of columns to be compared from the second table, separated by commas, can use `${Property}` notation.|All columns will be compared, can use `${Property}` notation.|
+|`MatchColumns2`|Used with `AnalysisMethod=Advanced`, the names of columns in the second table to be matched when aligning rows, separated by commas, can use `${Property}` notation.|All columns will be compared to align.|
 |`MatchColumnsHow`|Indicate how columns are matched:<ul><li>`Name` - match column names</li><li>`Order` - match columns by order number (used when column names are not available)</li></ul>| `Name` |
 
 **<p style="text-align: center;">
@@ -139,18 +138,18 @@ Output Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------------|-----------------|----------------- |
-|`DiffTable1ID`|The identifier for the first difference table, which indicates differences from the perspective of the first table.  This was `NewTableID` prior to TSTool 14.9.3. |`Table1ID-Table2ID-diff1`|
-|`DiffTable2ID`|The identifier for the second difference table, which indicates differences from the perspective of the second table. |`Table1ID-Table2ID-diff2`|
-|`DiffTableID`|The identifier for the combined difference table. | Not created. |
-|`RowNumberColumn`| New column to add to output containing the row number from the original table. | |
-|`DiffFile1`|If specified, an HTML table will be created for the first difference table, with colored cells.  This was `OutputFile` prior to TSTool 14.9.3. | No HTML output file will be created. |
-|`DiffFile2`|If specified, an HTML table will be created for the second difference table, with colored cells. | No HTML output file will be created. |
-|`DiffFile`|If specified, an HTML table will be created for the combined difference table, with colored cells. | No HTML output file will be created. |
+|`DiffTable1ID`|The identifier for the first difference table, which indicates differences from the perspective of the first table, can use `${Property}` notation.  This was `NewTableID` prior to TSTool 14.9.3. |`Table1ID-Table2ID-diff1`|
+|`DiffTable2ID`|The identifier for the second difference table, which indicates differences from the perspective of the second table, can use `${Property}` notation. |`Table1ID-Table2ID-diff2`|
+|`DiffTableID`|The identifier for the combined difference table, can use `${Property}` notation. | Not created. |
+|`RowNumberColumn`| New column to add to output containing the row number from the original table, can use `${Property}` notation. | |
+|`DiffFile1`|If specified, an HTML table will be created for the first difference table, with colored cells, can use `${Property}` notation.  This was `OutputFile` prior to TSTool 14.9.3. | No HTML output file will be created. |
+|`DiffFile2`|If specified, an HTML table will be created for the second difference table, with colored cells, can use `${Property}` notation. | No HTML output file will be created. |
+|`DiffFile`|If specified, an HTML table will be created for the combined difference table, with colored cells, can use `${Property}` notation. | No HTML output file will be created. |
 |`OutputRows`| Indicate which difference table rows to output:<ul><li>`All` - output all rows</li><li>`Different` - output only different rows</li><li>`Same` - output only same rows</li></ul> | `All`|
-|`DiffRowCountProperty` | Name of the processor property to set with the number of different rows. | |
-|`DiffCellCountProperty` | Name of the processor property to set with the number of different cells. | |
-|`SameRowCountProperty` | Name of the processor property to set with the number of same rows. | |
-|`SameCellCountProperty` | Name of the processor property to set with the number of same cells. | |
+|`DiffRowCountProperty` | Name of the processor property to set with the number of different rows, can use `${Property}` notation. | |
+|`DiffCellCountProperty` | Name of the processor property to set with the number of different cells, can use `${Property}` notation. | |
+|`SameRowCountProperty` | Name of the processor property to set with the number of same rows, can use `${Property}` notation. | |
+|`SameCellCountProperty` | Name of the processor property to set with the number of same cells, can use `${Property}` notation. | |
 
 ## Examples ##
 

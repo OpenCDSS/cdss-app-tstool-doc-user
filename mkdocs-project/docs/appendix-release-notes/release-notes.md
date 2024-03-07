@@ -34,7 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|[14.9.3](release-notes-14.md)|Maintenance release to improve table comparison and math. | 2024-02-26 |
+|[14.9.3](release-notes-14.md)|Maintenance release to improve table comparison and math, and time series comparison. | 2024-03-07 |
 |[14.9.2](release-notes-14.md)|Maintenance release to enable step graph. | 2024-01-02 |
 |[14.9.1](release-notes-14.md)|Maintenance release to enhance plugin integration and fix workflow issues. | 2023-12-04 |
 |[14.9.0](release-notes-14.md)|Feature release to use OpenJDK 8, enable additional plotting symbols, map view fixes. | 2023-10-30 |

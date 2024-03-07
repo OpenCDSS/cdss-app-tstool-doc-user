@@ -43,17 +43,29 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 14.9.3 ##
 
-**Maintenance release to improve table comparison and math.**
+**Maintenance release to improve table comparison and math, and time series comparison.**
 
+*   ![bug](bug.png) [14.9.3] Update Excel workbook commands to always internally use `/` in paths
+    when tracking open worksheets, to handle workflows that use forward and back slashes.
+*   ![bug](bug.png) [14.9.3] Update the ***Where*** filter choices to handle boolean data,
+    which is needed by some datastores.
 *   ![bug](bug.png) [14.9.3] Update the
     [`TableMath`](../command-ref/TableMath/TableMath.md) command:
     +   Handle input table columns of type long integer.
 *   ![change](change.png) [14.9.3] The time series identifier editor dialog now has wider input fields.
+*   ![change](change.png) [14.9.3] For irregular interval time series graph view,
+    default the `LineConnectAllowedGap` value so that time series with long gaps relative to the
+    interval precision do not connect points.
 *   ![change](change.png) [14.9.3] Update the [`Add`](../command-ref/Add/Add.md) command:
     +   The `HandleMissingHow` parameter now defaults to blank in the editor (`IgnoreMissing` is the default).
     +   The `HandleDataFlagsHow` parameter has been added to control how data flags are handled.
 *   ![change](change.png) [14.9.3] Update the [`AppendTable`](../command-ref/AppendTable/AppendTable.md) command:
     +   Add the `AppendRowNumbers` parameter to append specific row numbers.
+*   ![change](change.png) [14.9.3] Update the
+    [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md) command:
+    +   If comparing two time series and the second is not available,
+        add a record to the difference table indicating this rather than just generating a warning.
+        Otherwise, it may not be obvious that there is a difference.
 *   ![change](change.png) [14.9.3] Update the
     [`CompareTables`](../command-ref/CompareTables/CompareTables.md) command:
     +   The `AnalysisMethod` parameter has been added to allow simple and advanced analysis,
@@ -68,11 +80,32 @@ Issues may also be included in other repositories that are TSTool components.
     +   The `DiffRowCountProperty`, `DiffCellCountProperty`, `SameRowCountProperty`, and `SameCellCountProperty`
         parameters have been added to set processor properties for the number of different/same
         rows and cells, useful for testing and logic checks.
+    +   Parameters that specify table identifiers, columns, output files, and properties
+        allow `${Property}` notation, as documented.
+*   ![change](change.png) [14.9.3] Update the [`EndIf`](../command-ref/EndIf/EndIf.md) command:
+    +   Warn if no `For` commands are found prior to the insert location, rather than a general exception message.
+*   ![change](change.png) [14.9.3] Update the [`EndIf`](../command-ref/EndIf/EndIf.md) command:
+    +   Warn if no `If` commands are found prior to the insert location, rather than a general exception message.
 *   ![change](change.png) [14.9.3] Update the
     [`If`](../command-ref/If/If.md) command:
-    +   Add warning if a property name is used in the condition statement without surrounding `${  }`.
+    +   Add a warning if a property name is used in the condition statement without surrounding `${  }`
+        and the property exists (this helps with troubleshooting).
+    +   Add `TsHasData` and `TsHasNoData` parameters in the ***Time Series Exists?*** tab to
+        allow handling time series that have no data.
+*   ![change](change.png) [14.9.3] Update the
+    [`InsertTableRow`](../command-ref/InsertTableRow/InsertTableRow.md) command:
+    +   The `TableID`, `InsertRow`, and `InsertCount` parameters can now be specified using `${Property}`.
+*   ![change](change.png) [14.9.3] Update the
+    [`NewTable`](../command-ref/NewTable/NewTable.md) command:
+    +   The `Columns` parameter can now be specified using `${Property}`.
+*   ![change](change.png) [14.9.3] Update the
+    [`SelectTimeSeries`](../command-ref/SelectTimeSeries/SelectTimeSeries.md) command:
+    +   The `HasData` parameter has been added to only select time series with data.
+        This can avoid problems in later commands that attempt to process the time series.
 *   ![change](change.png) [14.9.3] Update the [`Subtract`](../command-ref/Subtract/Subtract.md) command:
     +   The `HandleMissingHow` parameter now defaults to blank in the editor (`IgnoreMissing` is the default).
+*   ![new](new.png) [14.9.3] Update the [`Comment`](../command-ref/Comment/Comment.md) command:
+    +   The `@docExample` annotation tag is now supported to help with TSTool documentation maintenance.
 
 ## Changes in Version 14.9.2 ##
 

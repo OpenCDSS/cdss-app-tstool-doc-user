@@ -144,20 +144,22 @@ If(Parameter="Value",...)
 Command Parameters
 </p>**
 
-| **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| --------------|-----------------|----------------- |
-| `Name`<br>**required** | The name of the `If` command, which will be matched with the name of an [`EndIf`](../EndIf/EndIf.md) command to indicate the block of commands in the if condition. | None - must be specified. |
-| `Condition`<br>**required** | The conditional statement to evaluate. | `Condition` and/or `TSExists` and/or `PropertyIsNotDefinedOrIsEmpty` must be specified. |
-| `CompareAsStrings` | If `True`, the comparison will be done as strings even if the values could be treated as numbers or Booleans. | `False` |
-| `FileExists` | Causes the command to evaluate to `True` if the specified file exists.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-| `FileDoesNotExist` | Causes the command to evaluate to `True` if the specified file does not exist.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-| `ObjectExists` | Causes the command to evaluate to `True` if the specified object exists, based on checking the object IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-| `ObjectDoesNotExist` | Causes the command to evaluate to `True` if the specified object does not exist, based on checking the object IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-| `PropertyIsNotDefinedOrIsEmpty` | Causes the command to evaluate to `True` if the specified parameter (a property name) is not defined or has a value of null, `NaN` (floating point numbers), or is an empty string. | `Condition` and/or one or more other checks must be specified. |
-| `TableExists` | Causes the command to evaluate to `True` if the specified table exists, based on checking the table IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-| `TableDoesNotExist` | Causes the command to evaluate to `True` if the specified table does not exist, based on checking the table IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-| `TSExists` | Causes the command to evaluate to `True` if the specified time series exists.  Specify a TSID or alias to match.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-| `TSDoesNotExist` | Causes the command to evaluate to `True` if the specified time series does exist.  Specify a TSID or alias to match.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+| **Tab** | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| --|--|--|--|
+|**All**| `Name`<br>**required** | The name of the `If` command, which will be matched with the name of an [`EndIf`](../EndIf/EndIf.md) command to indicate the block of commands in the if condition. | None - must be specified. |
+|**Condition**| `Condition`<br>**required** | The conditional statement to evaluate. | `Condition` and/or `TSExists` and/or `PropertyIsNotDefinedOrIsEmpty` must be specified. |
+|| `CompareAsStrings` | If `True`, the comparison will be done as strings even if the values could be treated as numbers or Booleans. | `False` |
+|**File Exists?**| `FileExists` | Causes the command to evaluate to `True` if the specified file exists.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|| `FileDoesNotExist` | Causes the command to evaluate to `True` if the specified file does not exist.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|**Object Exists?** | `ObjectExists` | Causes the command to evaluate to `True` if the specified object exists, based on checking the object IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|| `ObjectDoesNotExist` | Causes the command to evaluate to `True` if the specified object does not exist, based on checking the object IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|**Property Defined?**| `PropertyIsNotDefinedOrIsEmpty` | Causes the command to evaluate to `True` if the specified parameter (a property name) is not defined or has a value of null, `NaN` (floating point numbers), or is an empty string. | `Condition` and/or one or more other checks must be specified. |
+|**Table Exists?**| `TableExists` | Causes the command to evaluate to `True` if the specified table exists, based on checking the table IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|| `TableDoesNotExist` | Causes the command to evaluate to `True` if the specified table does not exist, based on checking the table IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|**Time Series Exists?**| `TsExists` | Causes the command to evaluate to `True` if the specified time series exists.  Specify a TSID or alias to match.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|| `TsDoesNotExist` | Causes the command to evaluate to `True` if the specified time series does exist.  Specify a TSID or alias to match.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|| `TsHasData` | Causes the command to evaluate to `True` if the specified time series has data.  Specify a TSID or alias to match.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|| `TsHasNoData` | Causes the command to evaluate to `True` if the specified time series has no data, typically because no data records were found in the data source.  Specify a TSID or alias to match.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
 
 ## Examples ##
 
