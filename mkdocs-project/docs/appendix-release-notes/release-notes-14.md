@@ -59,6 +59,12 @@ Issues may also be included in other repositories that are TSTool components.
     [`CompareTables`](../command-ref/CompareTables/CompareTables.md) command:
     +    Add the `ExcludeColumns2` parameter to provide more control over which columns are compared.
 *   ![change](change.png) [14.9.4] Update the
+    [`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command:
+    +   Add the `IncludeBuiltInProperties` command parameter to control whether built-in properties are copied.
+    +   Built-in properties now include `alias`, `datatype`, `description`, `interval`, `tsid`, and `units`.
+    +   Add the `NameMap` property to control renaming properties as they are copied.
+    +   Fix so that the `TableID` is shown in other command editors when editing command files.
+*   ![change](change.png) [14.9.4] Update the
     [`SortTable`](../command-ref/SortTable/SortTable.md) command:
     +    Add the `OrderColumns` parameter to recorder columns.
 
