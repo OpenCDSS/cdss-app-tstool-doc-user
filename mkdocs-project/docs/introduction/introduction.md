@@ -11,6 +11,8 @@
 *   [Time Series Concepts](#time-series-concepts)
     +   [Time Series Objects and Identifiers](#time-series-objects-and-identifiers)
     +   [Time Series Aliases](#time-series-aliases)
+    +   [Time Series Properties](#time-series-properties)
+    +   [Time Series Data Flags](#time-series-data-flags)
     +   [Date/Time Conventions](#datetime-conventions)
     +   [Time Scale for Time Series Data](#time-scale-for-time-series-data)
     +   [Time Series Commands and Processing Sequence](#time-series-commands-and-processing-sequence)
@@ -250,7 +252,7 @@ The benefits of using separate command files are as follows:
 The downside of using separate command files are as follows:
 
 1.  The separate command files may need to repeat some logic, such as initial set-up.
-2.  Hand-off of data from one command file to the next requires writing data at the end of one command file 
+2.  Hand-off of data from one command file to the next requires writing data at the end of one command file
     and reading data in the next command file.
     The [`DateValue`](../datastore-ref/DateValue/DateValue.md) format and other formats
     can be used for this purpose.
@@ -364,7 +366,7 @@ time series within the original data (e.g., to find the time series in a file or
 
 *   `LocationType` – optionally used where necessary to uniquely identify locations
     (e.g., use a location type of `Basin` or `Subbasin` where other identifier information
-    would result in ambiguous interpretation of the identifier parts 
+    would result in ambiguous interpretation of the identifier parts
 *   `Location` – typically a physical location identifier, such as a station, basin, or sensor identifier.
 *   `Source` – a data provider identifier, usually a government or system identifier (e.g., `USGS`, `NWS`),
     necessary because sometimes the provider for a location changes over time or a database may contain time series from multiple data providers
@@ -488,6 +490,39 @@ the original TSID also is maintained with the time series and is available for r
 
 In summary, if an alias is assigned to a time series, it will take precedence over the TSID when identifying the time series.
 
+### Time Series Properties ###
+
+Each time series has two types of properties,
+which can be accessed using `%`-descriptors (for example, see the
+[`SetPropertyFromTimeSeries`](../command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command `PropertyValue` parameter)
+and in some cases the `${ts:Property}` syntax.
+Time series properties are internally managed as:
+
+*   Built-in properties that are common to all time series:
+    +   `alias` - alternative to time series identifier
+    +   `datatype` - data type such as `Streamflow`
+    +   `description` - time series description, often the description for a sensor or location
+    +   `interval` - data interval such as `IrregSecond` or `Day`
+    +   `tsid` - time series identifier
+    +   `units` - data units
+    +   more may be added in the future
+*   User-defined (dynamic) properties:
+    +   Any number of properties is allowed.
+    +   Set by various commands including [`SetTimeSeriesProperty`](../command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md).
+    +   View using the TSTool ***Results / Time Series*** area.  Right-click and view ***Time Series Properties*** and then ***Properties***.
+
+### Time Series Data Flags ###
+
+Time series include a date/time, value, and (optional) data flags.
+Irregular interval time series store a date/time for each value and
+regular interval time series only store the start and end date/time and an array of values.
+
+Optional data flags are stored with each value and can have zero, one, or multiple characters.
+Data flags may be read from the original time series data source
+and many commands allow setting the data flag, for example to mark filled data values.
+The data flag can be output in some file formats and
+can be shown in tabular and graph displays.
+
 ### Date/Time Conventions ###
 
 TSTool uses date/time information in several ways:
@@ -560,7 +595,8 @@ TSTool conventions when reading the data and converting from TSTool conventions 
 
 The time scale for time series data gives an indication of how data values were measured or computed.
 The time scale is generally determined from the data type (or the data type and interval)
-and can be one of the following (the abbreviations are often used in software choices):
+and can be one of the following (the abbreviations are used in some software parameters such as the
+[`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval.md) command):
 
 *   Instantaneous (`INST`):  The data value represents the data observed at
     the time associated with the reading (e.g., instantaneous temperature, streamflow, or snow depth).
@@ -572,7 +608,8 @@ and can be one of the following (the abbreviations are often used in software ch
     The date/time associated with the data value corresponds to the end of the interval.
     For example, precipitation (rain or snow recorded as melt) is often recorded as an accumulation over some interval.
     Accumulated values are typically available as a regular time series,
-    although this is not a requirement (e.g., precipitation might be accumulated between times that a rain gage is read and emptied).
+    although this is not a requirement (e.g., accumulated precipitation might by measured by a sensor with date/time reflecting a change in the value).
+    For interval time series, a statistic may be used, such as `Total`.
 *   Mean (`MEAN`):  The data value represents the mean value of observations during the preceding interval.
     The date/time associated with the data value corresponds to the end of the interval.
     The mean includes values after the previous timestamp and including the current timestamp.
@@ -581,21 +618,19 @@ and can be one of the following (the abbreviations are often used in software ch
     then equal weight may be given to each value when computing the mean (a simple mean).
     If the original data are irregular interval, then the weight given to each irregular
     value may depend on the amount of time that a value was observed (a time-weighted mean, not a simple mean).
+    For regular interval time series,
+    other statistics may be used (e.g., `Median`, `Min`, `Max`).
 
-Without having specific information about the time scale for data, TSTool assumes that all data are instantaneous for displays.
+Without having specific information about the time scale for data, TSTool assumes that all irregular interval time series are instantaneous for displays,
+and regular interval data use the date/time as end of the interval.
 If time series are graphed using bars, an option is given to display the bar to the left,
 centered on, or to the right of the date/time.
 If time series are graphed using lines or points, the data values are drawn at the date/time corresponding to data values.
-This may not be appropriate for the time scale of the data.
 In most cases, this default is adequate for displays.
-Graphing data of different time scales together does result in visual inconsistencies.
-These issues are being evaluated and options may be implemented in future releases of the software.
-In particular, an effort to automatically determine the time scale from the data type and interval is being evaluated.
-This can be difficult given that data types are not consistent between input types and
-time scale may be difficult to determine when reading time series.
-Refer to the input type appendices for information about time scale.
+Graphing data that have different time scales together may result in visual inconsistencies.
+Graphs can be configured to connect points or use a step.
 
-The time scale is particularly important when changing the time interval of data.
+The time scale is important when changing the time interval of data.
 For example, conversion of instantaneous data to mean involves an averaging process.
 Conversion of instantaneous data to accumulated data involves summing the original data.
 Commands that change interval either operate only on data of a certain time scale or
