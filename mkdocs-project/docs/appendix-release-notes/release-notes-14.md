@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.9.4](#changes-in-version-1494)
 *   [Changes in Version 14.9.3](#changes-in-version-1493)
 *   [Changes in Version 14.9.2](#changes-in-version-1492)
 *   [Changes in Version 14.9.1](#changes-in-version-1491)
@@ -40,6 +41,26 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.9.4 ##
+
+**Maintenance release to improve table comparison and enable command notifications.**
+
+*   ![bug](bug.png) [14.9.4] Update the
+    [`ReadTableFromJSON`](../command-ref/ReadTableFromJSON/ReadTableFromJSON.md) command:
+    +    Fix so that the table that is created is listed in other command editors.
+*   ![change](change.png) [14.9.4] Add command notifications:
+    +    The `@fixme` and `@todo` [`Comment`](../command-ref/Comment/Comment.md) comment annotations
+         will cause a blue marker to be shown in the command list
+         as a visual notification that action should be take to improve the command file.
+    +    The `@sourceUrl` [`Comment`](../command-ref/Comment/Comment.md) comment annotation
+         will show a blue marker if the available source copy of the command file is different from the current version.
+*   ![change](change.png) [14.9.4] Update the
+    [`CompareTables`](../command-ref/CompareTables/CompareTables.md) command:
+    +    Add the `ExcludeColumns2` parameter to provide more control over which columns are compared.
+*   ![change](change.png) [14.9.4] Update the
+    [`SortTable`](../command-ref/SortTable/SortTable.md) command:
+    +    Add the `OrderColumns` parameter to recorder columns.
 
 ## Changes in Version 14.9.3 ##
 
