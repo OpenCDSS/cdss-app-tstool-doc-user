@@ -18,7 +18,7 @@ The StateMod time series input type corresponds to the file format used by the S
 *   water right input files that can be converted to cumulative decree time series
 *   specific output (`*.x*`) text files, including the `*.xop` and `*.xpl` files
 
-See also the [StateModB input type](../StateModB/StateModB),
+See also the [StateModB input type](../StateModB/StateModB.md),
 which corresponds to StateMod binary output files and the StateCU input type,
 which corresponds to the State of Colorado’s StateCU consumptive use model.
 
@@ -165,11 +165,11 @@ StateMod files have the following limitations:
 ## Water Right Files ##
 
 StateMod water right input files can be converted to time series of cumulative decrees.
-See the explanation in the in the [`ReadStateMod`](../../command-ref/ReadStateMod/ReadStateMod) command documentation.
+See the explanation in the in the [`ReadStateMod`](../../command-ref/ReadStateMod/ReadStateMod.md) command documentation.
 
 ## Text Output Files ##
 
-StateMod text output files (`*.x*`) can be read by the [`ReadStateMod`](../../command-ref/ReadStateMod/ReadStateMod) command, with the following notes:
+StateMod text output files (`*.x*`) can be read by the [`ReadStateMod`](../../command-ref/ReadStateMod/ReadStateMod.md) command, with the following notes:
 
 *   Identifiers that include period have the period replaced by underscore.
 *   The file formats are different from the standard time series files and

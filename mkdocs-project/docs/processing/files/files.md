@@ -1,4 +1,4 @@
-# TSTool / File Processing #
+# TSTool / Processing / Files #
 
 This documentation provides information about general file processing.
 
@@ -32,7 +32,8 @@ General file processing commands are found in the ***Commands / General - File H
 ## TSTool User Interface ##
 
 The ***Results / Output Files*** tab lists output files that are created when processing commands.
-Click on an output file to view.
+Left-click on an output file to view.
+Right-click in the ***Results / Output Files*** area to search for files in the output list.
 
 ## Examples ##
 

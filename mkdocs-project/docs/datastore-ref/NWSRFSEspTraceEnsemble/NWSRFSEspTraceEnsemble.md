@@ -218,7 +218,7 @@ requires calculating some values and defaulting others.
 Although most values (such as `_ncm`, and `_idarun`) are computed and inserted into the trace header,
 some header information cannot be assigned without user input.
 TSTool does allow for some of these lost header fields to be
-inserted through options in the [`WriteNwsrfsEspTraceEnsemble`](../../command-ref/WriteNwsrfsEspTraceEnsemble/WriteNwsrfsEspTraceEnsemble.md) command.
+inserted through options in the [`WriteNWSRFSESPTraceEnsemble`](../../command-ref/WriteNWSRFSESPTraceEnsemble/WriteNWSRFSESPTraceEnsemble.md) command.
 
 **<p style="text-align: center;">
 ESP Trace Ensemble File Data and Associated Time Series Data

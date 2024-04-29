@@ -106,7 +106,7 @@ Command Parameters
 ||`UpstreamNodeIDs`|Comma-separated list of upstream network node identifiers to match.  If any identifier is preceded by a dash, don’t include the node in output.|If selecting from network, select all nodes upstream of the downstream node.|
 |***All***|`DeselectAllFirst`|Indicate whether all time series should be deselected before selecting the specified time series:  `True` or `False`.|`False`|
 ||`IfNotFound`|Indicate how to handle the case of no time series being matched:<ul><li>`Ignore` – OK if nothing selected</li><li>`Warn` – generate a warning message</li><li>`Fail` – generate a failure message</li></ul>|`Fail`|
-||`SelectCountProperty`|If specified, the corresponding time series property will be set to the number of selected time series after the command is executed.  This is useful in cases where following commands are wrapped in an [`If`](../If/If) command and should only be executed if the count is > 0.  Also use to check for count of 0 and warn with the [`Message`](../Message/Message) command.  Can be specified using processor `${Property}`.||
+||`SelectCountProperty`|If specified, the corresponding time series property will be set to the number of selected time series after the command is executed.  This is useful in cases where following commands are wrapped in an [`If`](../If/If.md) command and should only be executed if the count is > 0.  Also use to check for count of 0 and warn with the [`Message`](../Message/Message.md) command.  Can be specified using processor `${Property}`.||
 
 ## Examples ##
 

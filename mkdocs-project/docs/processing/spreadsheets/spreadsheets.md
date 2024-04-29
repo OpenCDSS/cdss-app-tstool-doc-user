@@ -1,4 +1,4 @@
-# TSTool / Spreadsheet Processing #
+# TSTool / Processing / Spreadsheets #
 
 This documentation provides information about processing Excel files with TSTool.
 

@@ -88,7 +88,7 @@ USGS NWIS datastore limitations relative to TSTool standard features are as foll
     +   WaterML files from NWIS do not indicate the interval of the data.
         A 15-minute interval is assumed for the instantaneous values web service;
         however, trying to read the WaterML file later with
-        [`ReadWaterML`](../../command-ref/ReadWaterML/ReadWaterML) will require that the interval is specified.
+        [`ReadWaterML`](../../command-ref/ReadWaterML/ReadWaterML.md) will require that the interval is specified.
     +   Some of the descriptions contain units, which may lead to confusion if time series are processed into different units.
 *   The USGS web service does not allow for all archived instantaneous values data to be returned.
     Specifying no period returns only the most recent value.

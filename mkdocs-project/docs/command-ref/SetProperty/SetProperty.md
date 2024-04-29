@@ -1,6 +1,7 @@
 # TSTool / Command / SetProperty #
 
 *   [Overview](#overview)
+    +   [Properties in Discovery Phase](#properties-in-discovery-phase)
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
 *   [Examples](#examples)
@@ -29,6 +30,38 @@ which sets a property on specific time series.  The following functionality is p
 *   Set a property by modifying a previous processor property using basic math manipulations.
     In this case, specify the initial property value with `${Property}` and then use the ***Math*** tab parameters
     to manipulate the initial value.
+
+After commands are run, the value of properties can be viewed in the TSTool ***Results / Properties*** tab,
+for example as shown below.
+
+**<p style="text-align: center;">
+![Properties in TSTool results](SetProperty-results.png)
+</p>**
+
+**<p style="text-align: center;">
+Properties in the TSTool Results (<a href="../SetProperty-results.png">see full-size image</a>)
+</p>**
+
+### Properties in Discovery Phase ###
+
+TSTool executes commands in several phases:
+
++   the "initialization" phase performs basic command parsing and error checking
++   the "discovery" phase partially runs a command in order to set data that can be used in command editor
+    and is executed after opening a command file or inserting and editing a command
++   the "run" phase fully runs a command and creates output
+    and is executed when commands are run
+
+When this command is run in discovery mode,
+it sets the property name and value so that other commands can use if appropriate.
+For example, setting a datastore name as a property allows
+the [`ReadTableFromDataStore`](../ReadTableFromDataStore/ReadTableFromDataStore.md) command
+to use the expanded property to access the datastore to populate command editor fields.
+
+Because of the complexity of advanced features, only simple property assignments can be set in discovery mode.
+More complex property definitions, such as manipulating the property using math operations,
+can be executed when the commands are run.
+This may limit how command editors can be used and require additional software enhancements.
 
 ## Command Editor ##
 

@@ -170,7 +170,7 @@ In the future the entire network may be traversed for each timestep to allow for
         is used to retrieve the relevant time series for the node.
         The first time series that matches the location ID, data type, and interval is used as input for the node.
         The time series must have been read prior to the `AnalyzeNetworkPointFlow` command.
-        For example, use the [`CopyTable`](../CopyTable/CopyTable) command to copy a
+        For example, use the [`CopyTable`](../CopyTable/CopyTable.md) command to copy a
         subset of the network table’s `NodeID` values and then use the
         [`ReadTimeSeriesList`](../ReadTimeSeriesList/ReadTimeSeriesList.md) command with the list of identifiers.
     2.  Calculate the node’s inflow:

@@ -1,4 +1,4 @@
-# TSTool / Command / Comment `#` #
+# TSTool / Command / `#` Comment #
 
 *   [Overview](#overview)
     +   [Annotations](#annotations)
@@ -45,7 +45,7 @@ AnotherCommand()
 */
 ```
 
-### Annotations
+### Annotations ###
 
 Annotations are special comments with syntax `#@annotation ...` that provide additional information to software.
 Whereas commands execute some action, annotations provide additional information that can
@@ -54,15 +54,15 @@ Software can read annotations from comments,
 perform checks before a command file is processed,
 and provide diagnostic messages that ensure that a command file is OK to run.
 
-Examples of annotation use include:
+Examples of annotation use include indicating:
 
-*   indicate whether the command file is read-only
-*   indicate the author, version, documentation URL and source URL for the command file to help with maintenance
-*   indicate whether the command file is a template that requires expansion before processing
-*   indicate the expected status for a command file used in testing, which allows success and failure conditions to be handled
-*   indicate input requirements for the command file, such as software and datastore characteristics,
+*   whether the command file is read-only
+*   the author, version, documentation URL and source URL for the command file to help with maintenance and updates
+*   whether the command file is a template that requires expansion before processing
+*   the expected status for a command file used in testing, which allows success and failure conditions to be handled
+*   input requirements for the command file, such as software and datastore characteristics,
     including version and configuration properties
-*   indicate whether a root/admin user is required to run the command file,
+*   whether a root/admin user is required to run the command file,
     useful when testing system-level software on Linux
 
 The following examples illustrate typical annotation syntax.
@@ -73,7 +73,17 @@ In some cases, annotations have no parameters and in other cases parameters may 
 #@expectedStatus Failure
 ```
 
-Annotation comments can be added by editing the `#` comment block or use the ***Commmands / General - Comments*** menu.
+The following example illustrates how to set the version for semantic version number and date cases (in this case for automated tests):
+
+```
+#@sourceUrl https://raw.githubusercontent.com/OpenCDSS/cdss-app-tstool-test/master/test/commands/Comment_sourceUrl/data/test-Comment-sourceUrl-version-123.tstool
+#@version 1.2.4
+
+#@sourceUrl https://raw.githubusercontent.com/OpenCDSS/cdss-app-tstool-test/master/test/commands/Comment_sourceUrl/data/test-Comment-sourceUrl-version-2024-01-01.tstool
+#@versionDate 2024-01-02
+```
+
+Annotation comments can be added by editing the `#` comment block or use the ***Commands / General - Comments*** menu.
 Annotations that are more complex, such as datastore requirements, must be edited with general
 comment editor, referring to the datastore documentation to review annotation syntax.
 Badly-formatted annotation comments may result in a warning or error for the comment.
@@ -100,9 +110,9 @@ information to software that processes the commands.
 |`@os Windows`<br>`@os UNIX`|[`CreateRegressionTestCommandFile`](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command| **Used in automated tests.** Used to filter out test command files that are not appropriate for the operating system.  Linux is included in UNIX.  **May be replaced by `@require` in the future.**|
 |`@readOnly`| TSTool main interface and command editors| **Used to restrict command file editing.** Indicates that the command file should not be edited.  TSTool will update old command syntax to current syntax when a command file is loaded.  However, this tag will cause the software to warn the user when saving the command file, so that they can cancel.  This tag is often used with templates to protect the template from mistakenly being edited and saved in TSTool (TSTool does not currently allow editing templates within the interface).|
 |`@require application TSTool version >= NN.NN.NN` | Command processor | **Used to ensure compatibility.** Indicate that an application version (in this case for TSTool software) is required to run the command file.  The operator can be `>`, `>=`, `=`, `<`, or `<=`.  The version should be specified using [Semantic versioning](https://semver.org/), for example `14.2.2`. Each part of the version is checked numerically and leading zeros are ignored; therefore `03` evaluates to `3`. If specified for automated tests, a test will only be run if the criteria are met, which allows tests to be developed for specific versions of the software.  If the criteria are not met during normal runs, an error is generated. Use multiple `@require` comments if necessary for multiple criteria checks. |
-|`@require datastore HydroBase version >= YYYYMMDD` | Command processor | **Used to ensure compatibility.** The syntax after the datastore name depends on the features implemented for a datastore (see the datastore's documenation).  Indicate that a datastore version (in this case for datastore named `HydroBase`) is required to run the command file.  The operator can be `>`, `>=`, `=`, `<`, or `<=`. The version string must be consistent with what is expected for a datastore.  For example, HydroBase versions use the `YYYYMMDD` syntax, whereas other datastores use semantic versions or other date strings. Refer to the datastore reference documentation for version format information.  Not all datastores support version checks. If specified for automated tests, the test will only be run if the criteria are met, which allows tests to be developed for specific versions of the software.  If the criteria are not met during normal runs, an error is generated. Use multiple `@require` comments if necessary for multiple criteria checks. |
+|`@require datastore HydroBase version >= YYYYMMDD` | Command processor | **Used to ensure compatibility.** The syntax after the datastore name depends on the features implemented for a datastore (see the datastore's documetnation).  Indicate that a datastore version (in this case for datastore named `HydroBase`) is required to run the command file.  The operator can be `>`, `>=`, `=`, `<`, or `<=`. The version string must be consistent with what is expected for a datastore.  For example, HydroBase versions use the `YYYYMMDD` syntax, whereas other datastores use semantic versions or other date strings. Refer to the datastore reference documentation for version format information.  Not all datastores support version checks. If specified for automated tests, the test will only be run if the criteria are met, which allows tests to be developed for specific versions of the software.  If the criteria are not met during normal runs, an error is generated. Use multiple `@require` comments if necessary for multiple criteria checks. |
 |`@require user == name`<br>`@require user != name` | Command processor | **Used to ensure compatibility.** Indicate whether the command file is restricted to a certain user.  This has mainly been used to ensure that automated tests are run as the correct user.  Tests can be grouped by user using a test suite.  A user requirement that fails causes command processing to exit. For example: `@require user == root` |
-|`@sourceUrl https://path/to/source/x.tstool` | TSTool main interface, ***Tools / Commands***. | The URL for the original source file, for example in a GitHub repository.  The URL is used by TSTool features (see ***Tools / Commands*** menu) to compare the current commands with the original source.  The URL should link to the raw file, not a web page that includes menus, etc. If the current command file has a different version (based on a `@version` annotation), a blue marker will be shown next to the command in the command list. |
+|`@sourceUrl https://path/to/source/x.tstool` | TSTool main interface, ***View / Command File Source Diff***. | The URL for the original source file, for example in a GitHub repository.  The URL is used by TSTool features (see ***View / Command File Source Diff*** menu) to compare the current commands with the original source.  The URL should link to the raw file, not a web page that includes menus, etc. If the current command file has a different version (based on a `@version` or `@versionDate` annotation), a blue marker will be shown next to the command in the command list. |
 |`@template`| TSTool main interface | **Used with template processing.** Indicates a template command file that is intended to be expanded with the [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command.  Currently, a text file editor may need to be used to edit template files because the TSTool user interface checks commands for final syntax and may generate warnings for template files.| The command file is not a template. |
 |`@testSuite ABC`|[`CreateRegressionTestCommandFile`](../CreateRegressionTestCommandFile/CreateRegressionTestCommandFile.md) command| **Used in automated tests**. Used to filter out test command files that are not appropriate for the operating system. |
 |`@todo ...`|| Indicate something to do, such as a future enhancement to the command file. A comment typically has the form `#@todo user date Comment`, for example: `#@todo smalers 2021-06-14 Need to fill the following time series`. A blue notification marker will be shown in the command list.  A future TSTool enhancement is planned to list such annotations in the ***Results*** area. |

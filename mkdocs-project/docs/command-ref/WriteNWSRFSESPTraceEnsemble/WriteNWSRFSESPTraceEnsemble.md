@@ -27,11 +27,11 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the command syntax.
 
 **<p style="text-align: center;">
-![WriteNwsrfsEspTraceEnsemble command editor](WriteNwsrfsEspTraceEnsemble.png)
+![WriteNwsrfsEspTraceEnsemble command editor](WriteNWSRFSESPTraceEnsemble.png)
 </p>**
 
 **<p style="text-align: center;">
-`WriteNwsrfsEspTraceEnsemble` Command Editor (<a href="../WriteNwsrfsEspTraceEnsemble.png">see full-size image</a>)
+`WriteNwsrfsEspTraceEnsemble` Command Editor (<a href="../WriteNWSRFSESPTraceEnsemble.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##

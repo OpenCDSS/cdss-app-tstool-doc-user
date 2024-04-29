@@ -1,6 +1,6 @@
 # TSTool / Getting Started #
 
-This chapter provides an overview of the TSTool graphical user interface (GUI).
+This chapter provides an overview of the TSTool user interface (UI).
 
 *   [Introduction](#introduction)
 *   [Starting TSTool](#starting-tstool)
@@ -19,22 +19,28 @@ This chapter provides an overview of the TSTool graphical user interface (GUI).
         -   [Results / Time Series](#results-time-series)
         -   [Results / Views](#results-views)
 *   [File Menu - Main Input and Output Control](#file-menu-main-input-and-output-control)
-    +   [File / New - Open Command File or Databases](#filenew–open-command-file-or-databases)
-    +   [File / Open - Open Command File or Databases](#fileopen-open-command-file-or-databases)
-    +   [File / Save - Save Command File, and Time Series](#filesave–save-command-file-and-time-series)
+    +   [File / New - Open Command File or Databases](#file-new-open-command-file-or-databases)
+    +   [File / Open - Open Command File or Databases](#file-open-open-command-file-or-databases)
+    +   [File / Save - Save Command File, and Time Series](#file-save-save-command-file-and-time-series)
     +   [Print Commands](#print-commands)
     +   [Properties for Commands Run, TSTool Session, and Input Types](#properties-for-commands-run-tstool-session-and-input-types)
     +   [Set Working Directory](#set-working-directory)
-    +   [File / Exit](#fileexit)
+    +   [File / Exit](#file-exit)
 *   [Edit Menu - Editing Commands](#edit-menu-editing-commands)
     +   [Cut/Copy/Paste/Delete](#cutcopypastedelete)
     +   [Select All Commands/Deselect All Commands](#select-all-commandsdeselect-all-commands)
     +   [Edit Command](#edit-command)
     +   [Convert Selected Commands To/From Comments](#convert-selected-commands-tofrom-comments)
     +   [Convert TSID to Read Commands](#convert-tsid-to-read-commands)
-*   [View Menu –-Display Useful Information and Map Interface](#view-menu-display-useful-information-and-map-interface)
+*   [View Menu – Useful Application Data Views](#view-menu-useful-application-data-views)
+    +   [View / Command File Diff](#view-command-file-diff)
+    +   [View / Command File Source Diff](#view-command-file-source-diff)
+    +   [View / Datastores](#view-datastores)
+    +   [View / Data Units](#view-data-units)
+    +   [View / Map](#view-map)
+    +   [View / Close All View Windows](#view-close-all-view-windows)
 *   [Commands Menus](#commands-menus)
-*   [Run Menu - Run Commands](#run-Menu-run-commands)
+*   [Run Menu - Run Commands](#run-menu-run-commands)
     *   [Process TSProduct](#process-tsproduct)
 *   [Results Menu - Display Time Series](#results-menu-display-time-series)
 *   [Tools Menu](#tools-menu)
@@ -57,7 +63,7 @@ The TSTool GUI has three main functions:
     which can be run to generate time series files.
 3.  Process time series products.  For example, create graphs for use on web sites or to facilitate review data or modeling results.
     In this capacity TSTool is used to generate data products in a streamlined fashion.
-    The remainder of this chapter provides an overview of the graphical user interface,
+    The remainder of this chapter provides an overview of the user interface,
     in the general order of the main features and menus on the menu bar (left to right, top to bottom).
     The features necessary to accomplish the above tasks are described at an introductory level.
     See other chapters for more detailed information.
@@ -277,7 +283,7 @@ A summary of the pop-up menu choices is as follows:
 |***Run Selected Commands (ignore output commands)***|Run selected commands but skip any output commands.  This is useful if a batch command file has been read and time series are to be listed in the GUI but output products are not to be generated automatically.|
 
 Commands are numbered to simplify editing.
-The command list also includes left and right gutters to display graphics that help with error handling.
+The command list also includes left and right gutters to display icons that help with error handling.
 The following figure illustrates a command with an error (the first time series
 identifier has been edited to include an x, resulting in an invalid identifier). 
 
@@ -291,7 +297,7 @@ Command List Illustrating Error
 
 The following error handling features are available:
 
-*   The graphic in the left gutter indicates the severity of a problem (see below for full explanation).
+*   The icon in the left gutter indicates the severity of a problem (see below for full explanation).
 *   The colored indicator on the right indicates the severity of a
     problem by its color and, when clicked on, positions the visible list of
     commands to display the command corresponding to the problem.
@@ -300,7 +306,7 @@ The following error handling features are available:
     The discovery phase is executed only for commands that generate time series
     for other commands and provides other commands with identifiers used in command editing.
     The run phase generates full output.
-*   Positioning the mouse over a graphic in the left or right gutter
+*   Positioning the mouse over an icon in the left or right gutter
     will show a popup message with the problem information.
     The popup is only visible for a few seconds so use the right-click popup menu
     ***Show Command Status (Success/Warning/Failure)*** for a dialog that does not automatically disappear.
@@ -310,13 +316,14 @@ The meaning of the error handling symbols is described in the following table.
 The symbol for the most severe error will be displayed next to each command.
 
 **<p style="text-align: center;">
-Command List Graphics for Problems
+Command List Icons for Problems
 </p>**
 
 |**Problem Graphic**|**Description**|
 |--|--|
-|No graphic|Command is successful (a warning or failure has not been detected).|
 |![unknown command icon](status-unknown.png)|The status is unknown, typically because the command has just been inserted.
+|No icon |Command is successful (a warning or failure has not been detected).|
+| Will be added in the future. | Notifications are currently indicated to the right of commands as a blue rectangle. An icon for the left gutter may be added in the future. ||
 |![warning icon](status-warning.png)|The command has a problem that has been classified as non-fatal.  For example, an input file has not been found.  In general, commands with warnings need to be fixed unless work is preliminary.|
 |![error icon](status-error.png)|The command has failed, meaning that output is likely incomplete.  A problem summary and recommendation to fix the problem are available in the status information.  Commands with failures generally need to be fixed.  Software support should be contacted if the fix is not evident.|
 
@@ -376,11 +383,11 @@ See the [Introduction - Time Series Ensembles](../introduction/introduction.md#t
 Ensembles are typically associated with modeling or analysis and are only available from from some data sources.
 See the ***Commands / Ensemble Processing*** menu for commands that process ensembles.
 
-Right-click on an ensemle to access the popup menu for ensemble tools,
+Right-click on an ensemble to access the popup menu for ensemble tools,
 for example to graph the ensemble.
 
 **<p style="text-align: center;">
-![Results: Ensembles](results-ensembles.png)
+![Results for ensembles](results-ensembles.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -399,7 +406,7 @@ See the ***Commands / Network Processing*** menu for commands that process netwo
 Right-click on a network to access the popup menu for network tools.
 
 **<p style="text-align: center;">
-![Results: Networks](results-networks.png)
+![Results for Networks](results-networks.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -416,7 +423,7 @@ See the ***Commands / Object Processing*** menu for commands that process object
 Right-click on an object to access the popup menu for object tools.
 
 **<p style="text-align: center;">
-![Results: Objects](results-objects.png)
+![Results for Objects](results-objects.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -434,7 +441,7 @@ Single-click on an output file to view the file using the operating system defau
 If an associated program is not available, open the file using the file explorer tool.
 
 **<p style="text-align: center;">
-![Results: Output files](results-output-files.png)
+![Results for Output files](results-output-files.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -451,7 +458,7 @@ Click to (un)select cells and right-click on problems to copy and paste into oth
 Use left and right click to select multiple cells.
 
 **<p style="text-align: center;">
-![Results: Problems](results-problems.png)
+![Results for Problems](results-problems.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -669,7 +676,7 @@ File Menu
 The ***File / New / Command File*** menu item clears the current commands so that a new command file can be started.
 A new command file name will be requested when the commands are saved.
 
-### File / Open – Open Command File or Databases ###
+### File / Open - Open Command File or Databases ###
 
 **<p style="text-align: center;">
 ![File Open Menu](Menu_File_Open.png)
@@ -703,7 +710,7 @@ other menu items will be displayed to allow opening databases.
 It is recommended that database connections be configured to automatically open;
 however, the menus are useful for development and troubleshooting.
 
-### File / Save – Save Command File, and Time Series ###
+### File / Save - Save Command File, and Time Series ###
 
 **<p style="text-align: center;">
 ![File Save Menu](Menu_File_Save.png)
@@ -890,7 +897,10 @@ Specific read commands may not be available for all input types and
 therefore the [`ReadTimeSeries`](../command-ref/ReadTimeSeries/ReadTimeSeries.md) command may need to be used.
 Alternatively, insert a read command using the ***Commands*** menu choices.
 
-## View Menu - Display Useful Information and Map Interface ##
+## View Menu – Useful Application Data Views ##
+
+The ***View*** menu provides application view that apply to the entire application,
+whereas ***Results*** data views are for output of processing commands.
 
 **<p style="text-align: center;">
 ![View Menu](Menu_View.png)
@@ -900,21 +910,48 @@ Alternatively, insert a read command using the ***Commands*** menu choices.
 View Menu
 </p>**
 
+### View / Command File Diff ###
+
+The ***View / Command File Diff*** menu displays visual differences of the current TSTool commands and the saved command file.
+If the commands have changed but have not been saved, the current commands are saved to a temporary file for the comparison.
+This tool is useful if it is desired to confirm the changes that have been made but have not yet been saved.
+A visual difference program such as KDiff3 is required to be configured (see the [TSTool Configuration](../appendix-install/install.md#tstool-configuration) documentation).
+
+### View / Command File Source Diff ###
+
+The ***View / Command File Source Diff*** menu displays a visual differences of the current TSTool commands and
+command file source version specified by the `#@sourceUrl` [annotation comment](../command-ref/Comment.md).
+If the commands have changed but have not been saved, the current commands are saved to a temporary file for the comparison.
+This tool is useful if it is desired to confirm the changes have been made in the local copy that are different from the source (remote) version.
+A visual difference program such as KDiff3 is required to be configured (see the [TSTool Configuration](../appendix-install/install.md#tstool-configuration) documentation).
+
+This comparison is more granular than the `#@sourceUrl` comment,
+which just compares the version using `#@version` and `#@versionDate` comment annotations.
+
+### View / Datastores ###
+
 The ***View / Datastores*** menu item displays a list of configured data stores,
 which is useful when troubleshooting whether a data store is properly configured.
-Note that some data stores are not listed in the main window Datastore choices but are available for use by commands.
+Note that some data stores are not listed in the main window ***Input/Query Options / Datastore*** choices but are available for use by commands.
+Only datastores that provide a way to list time series with good interactive speed are enabled in the query area.
+
+### View / Data Units ###
 
 The ***View / Data Units*** menu item displays a list of configured data units,
 which are recognized by the [ConvertDataUnits](../command-ref/ConvertDataUnits/ConvertDataUnits.md)
 command and other TSTool features that enforce data unit consistency.
 Data units from all data repositories are not automatically understood by TSTool,
-although additional capabilities may be added in the future.
+although additional capabilities may be added in the future to add datastore units to units data that are distributed with TSTool.
+
+### View / Map ###
 
 The ***View / Map*** menu displays a map interface in a separate window.
 See the [Processing / Spatial Data ](../processing/spatial-data/spatial-data.md) documentation for more information.
 
+### View / Close All View Windows ###
+
 The ***View / Close All View Windows*** menu closes all visible view windows, including graphs.
-This is useful if the command file has generated many graphs and the user wishes to close them all at once.
+This is useful if the command file has generated many graphs and all need to be closed at once.
 
 ## Commands Menus ##
 
@@ -1202,7 +1239,7 @@ For example, the following commands are suitable to perform the above conceptual
 5.  [`WriteTableToExcel`](../command-ref/WriteTableToExcel/WriteTableToExcel.md) - to output tabular Excel results
     and [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) to process graphs
 
-The command file is typically created using the TSTool graphical user interface
+The command file is typically created using the TSTool user interface
 but command files can also be created with a text editor or other software.
 
 #### Best Practices for Command Files ####
@@ -1234,6 +1271,6 @@ Best practices for command files are:
 
 ### Run the Command File Using TSTool ###
 
-TSTool is typically run using the graphical user interface, as illustrated in the first part of this documentation.
+TSTool is typically run using the user interface, as illustrated in the first part of this documentation.
 However, it can also be run in batch mode.
 See also [Appendix - Running TSTool in Various Modes](../appendix-running/running.md).

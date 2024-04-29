@@ -70,4 +70,4 @@ See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) 
 
 ## See Also ##
 
-*   [`WriteNwsrfsEspTraceEnsemble`](../WriteNwsrfsEspTraceEnsemble/WriteNwsrfsEspTraceEnsemble.md) command
+*   [`WriteNWSRFSESPTraceEnsemble`](../WriteNWSRFSESPTraceEnsemble/WriteNWSRFSESPTraceEnsemble.md) command

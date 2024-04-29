@@ -84,8 +84,8 @@
 *   ![change](change.png) [12.00.00] The following commands have been enhanced to work with the [`For`](../command-ref/For/For.md)
     command and recognize `${Property}` notation (where appropriate):
     [`FormatDateTimeProperty`](../command-ref/FormatDateTimeProperty/FormatDateTimeProperty.md),
-    [`Free`](../command-ref/Free/Free), [`FreeTable`](../command-ref/FreeTable/FreeTable.md),
-    [`SetProperty`](../command-ref/SetProperty/SetProperty) commands.
+    [`Free`](../command-ref/Free/Free.md), [`FreeTable`](../command-ref/FreeTable/FreeTable.md),
+    [`SetProperty`](../command-ref/SetProperty/SetProperty.md) commands.
 *   ![new](new.png) [12.00.00] Add new [`ChangeTimeZone`](../command-ref/ChangeTimeZone/ChangeTimeZone.md) command to change the time zone in time series date/times.
 *   ![new](new.png) [12.00.00] Add new [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md) command to delete a row from a table.
     Additional functionality will be added in the future to delete more than one row at a time.

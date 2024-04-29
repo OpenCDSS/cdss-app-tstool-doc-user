@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.9.5](#changes-in-version-1495)
 *   [Changes in Version 14.9.4](#changes-in-version-1494)
 *   [Changes in Version 14.9.3](#changes-in-version-1493)
 *   [Changes in Version 14.9.2](#changes-in-version-1492)
@@ -41,6 +42,41 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.9.5 ##
+
+**Maintenance release to improve complex workflow automation and maintenance.**
+
+*   ![change](change.png) [14.9.5] Update the TSTool main window:
+    +   Right-clicking in ***Results / Output Files*** will now show a popup menu that allows searching the file names.
+    +   Right-clicking in ***Results / Tables*** will now show a popup menu that allows searching the table identifiers.
+    +   The ***Tools / Commands*** menu items have been removed (moved to ***View***).
+    +   The ***View / Command File Source Diff*** menu has been added to compare the current commands with the source,
+        as specified by the `#@sourceUrl` comment annotation.
+*   ![change](change.png) [14.9.5] Update the
+    [`Comment`](../command-ref/Comment/Comment.md) command:
+    +   Improve error-handling for the `#@sourceUrl` comment annotation.
+*   ![change](change.png) [14.9.5] Update the
+    [`ManipulateTableString`](../command-ref/ManipulateTableString/ManipulateTableString.md) command:
+    +   The `Remove` action now allows specifying a range of characters to remove.
+*   ![change](change.png) [14.9.5] Update the
+    [`NewTable`](../command-ref/NewTable/NewTable.md) command:
+    +   Update the editor to provide a form for editing the column names and data types.
+*   ![change](change.png) [14.9.5] Update the
+    [`ReadTableFromDataStore`](../command-ref/ReadTableFromDataStore/ReadTableFromDataStore.md) command:
+    +   Update to the `DataStore` parameter to allow being specified as a `${Property}`.
+*   ![change](change.png) [14.9.5] Update the
+    [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
+    +   Improve setting properties when used in discovery mode.
+        This allows properties set at the top of a workflow (e.g., datastore name)
+        to be used in later commands when editing commands.
+*   ![change](change.png) [14.9.5] Update the
+    [`TimeSeriesToTable`](../command-ref/TimeSeriesToTable/TimeSeriesToTable.md) command:
+    +   Add the `RowCountProperty` parameter to allow setting the property to the output table row count.
+*   ![change](change.png) [14.9.5] Update the
+    [`WriteTableToExcel`](../command-ref/WriteTableToExcel/WriteTableToExcel.md) command:
+    +   Update the `ColumnWidths` parameter to allow wildcards in the column name.
+    +   Update the `ColumnDecimalPlaces` parameter to allow wildcards in the column name.
 
 ## Changes in Version 14.9.4 ##
 
@@ -379,7 +415,7 @@ Remove the requirement for administrator privileges to install on Windows.**
     These parameters can often be specified with `${Property}` syntax by typing into the form,
     to allow for flexibility in workflows
     and because it may be difficult to provide an accurate list of tables from previous commands.
-    Previously, typing into the editor field did not update the commmand shown at the bottom of the editor.
+    Previously, typing into the editor field did not update the command shown at the bottom of the editor.
     This has been fixed.
 *   ![bug](bug.png) [14.7.0] Fix the [`NewPatternTimeSeries`](../command-ref/NewPatternTimeSeries/NewPatternTimeSeries.md) command editor
     to enable the `IrregularInterval` parameter when the `NewTSID` use `${Property}` and any occurrence of `IRR`, ignoring case.
