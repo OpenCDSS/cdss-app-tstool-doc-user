@@ -92,6 +92,7 @@ Command Parameters
 |`OutputEnd`|The ending date/time for the copy.  Can be specified using processor $`{Property}`.|Available period.|
 |`OutputWindowStart`|The calendar date/time for the output start within each year.  Specify using the format `MM`, `MM-DD`, `MM-DD hh`, or `MM-DD hh:mm`, consistent with the time series interval precision.  A year of 2000 will be used internally to parse the date/time.  Use this parameter to limit data processing within the year, for example to output only a single month or a season.  Can be specified using processor `${Property}` by using the text field below the date editor.|Output the full year.|
 |`OutputWindowEnd`|Specify date/time for the output end within each year.  See `OutputWindowStart` for details.  Can be specified using processor `${Property}`.|Output the full year.|
+|`RowCountProperty`|Property name (without surrounding `${ }`) to set as the output table row count. | Not set. |
 |`IfTableNotFound`|Indicate action if the table identifier is not matched, one of:<br><ul><li>`Create` – create a new table</li><li>`Warn` – warn that the table was not matched</li></ul>|`Warn`|
 
 ## Examples ##
@@ -100,7 +101,7 @@ See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/
 
 ### Example for Multi-Column Output Data Table ###
 
-A sample command file is as follows:
+A sample command file is as follows, consistent with the image at the top of this documentation:
 
 ```text
 # Test copying annual time series to a table, and also create the table
@@ -113,7 +114,7 @@ WriteTableToDelimitedFile(TableID="TestTable",OutputFile="Results\Test_TimeSerie
 
 ```
 
-The resulting table will be listed in the Tables area of the TSTool interface and clicking on
+The resulting table will be listed in the TSTool ***Results / Tables*** area and clicking on
 the TestTable identifier will display the table similar to the following:
 
 **<p style="text-align: center;">

@@ -4,7 +4,7 @@
 *   [Standard Time Series Properties](#standard-time-series-properties)
 *   [Limitations](#limitations)
 *   [Datastore Configuration File](#datastore-configuration-file)
-*   [Technical Note – Handling Time Zone](#technical-note–handling-time-zone)
+*   [Technical Note - Handling Time Zone](#technical-note-handling-time-zone)
 *   [Writing to HDB](#writing-to-hdb)
 *   [Reading from HDB](#reading-from-hdb)
 *   [Examples](#examples)
@@ -287,7 +287,7 @@ before reading time series and tables, and before writing time series.
 If the connection has closed dropped, a new one is opened before data queries are executed.
 Normally software users will not see an impact other than perhaps a slight pause as the new connection is established.
 
-## Technical Note – Handling Time Zone ##
+## Technical Note - Handling Time Zone ##
 
 TSTool uses internal DateTime objects for date/time.
 These objects allow date/time values to be set as familiar for digital clocks and calendars
@@ -303,8 +303,8 @@ The time zone is typically set when reading data from sources that report the ti
     Time zone should be set to the time zone identifier such as MST or America/Denver,
     rather than the display string, which may reflect daylight savings (e.g., MDT, which is in effect for only part of the year).
     For example, the
-    [`ReadNrcsAwdb`](../../command-ref/ReadNrcsAwdb/ReadNrcsAwdb) and
-    [`ReadDelftFewsPiXml`](../../command-ref/ReadDelftFewsPiXml/ReadDelftFewsPiXml)
+    [`ReadNrcsAwdb`](../../command-ref/ReadNrcsAwdb/ReadNrcsAwdb.md) and
+    [`ReadDelftFewsPiXml`](../../command-ref/ReadDelftFewsPiXml/ReadDelftFewsPiXml.md)
     commands have parameters to set time zone to standard time corresponding
     to the time series (rather than local time on the computer).
     In general, a time zone that does not use daylight savings should be used for data management

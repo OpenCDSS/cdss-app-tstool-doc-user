@@ -30,7 +30,7 @@ Tree view definition files have the following characteristics:
     Wildcard conventions follow rules consistent with the `TSList=AllMatchingTSID` ,`TSID=...` command parameters.
     The time series can be graphed by right-clicking on one or more selected time series and graphing.
     +   `TSProduct`:  specify the path to a time series product file as processed by the
-    [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct) command.
+    [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command.
     The path can be specified relative to the command file.
     All time listed in the file must be found in the results of processing the command file.
     **Currently functionality is not implemented to re-use the time series product file as a template.**

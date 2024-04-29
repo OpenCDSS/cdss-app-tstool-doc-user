@@ -1,4 +1,4 @@
-# TSTool / Ensemble Processing #
+# TSTool / Processing / Ensembles #
 
 This documentation provides information about time series ensemble processing.
 

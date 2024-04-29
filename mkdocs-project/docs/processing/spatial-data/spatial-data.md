@@ -1,4 +1,4 @@
-# TSTool / Spatial Data Processing #
+# TSTool / Processing / Spatial Data #
 
 This documentation describes TSTool integration with spatial data.
 
@@ -354,9 +354,13 @@ To select time series from the map:
     This layer should correspond to time series in the list from the first step.
     For example, if the time series list contains daily streamflow time series,
     select the map layer that corresponds to such data.  For example:<br><br>
-    ![Select Map Layer](GeoView_SelectLayer.png)<br>
-3.  Activate the select tool on the map interface toolbar:<br><br>
-    ![Activate the Select Tool](GeoView_SelectLayer2.png)<br>
+    **<p style="text-align: center;">
+    ![Select Map Layer](GeoView_SelectLayer.png)
+    </p>**
+3.  Activate the select tool on the map interface toolbar:
+    **<p style="text-align: center;">
+    ![Activate the Select Tool](GeoView_SelectLayer2.png)
+    </p>**
 4.  Draw a box around features of interest on the map.
     The software will attempt to match the features in the time series list in the TSTool main window.
     To do so, it first matches the layer name with the similar value in the lookup file.
@@ -365,13 +369,17 @@ To select time series from the map:
     `Layer_DataSource` lookup file (`Layer_Interval` can also be used).
     Matched time series are selected in the list.
     Previous selections are not cleared – use the right click popup menu to clear selections first if appropriate.<br><br>
-    ![Clear Map Layer Selections](GeoView_SelectLayer3.png)<br>
+    **<p style="text-align: center;">
+    ![Select Features on the Map](GeoView_SelectLayer3.png)
+    </p>**
     **<p style="text-align: center;">
     Selecting Features on the Map
     </p>**
-    ![Select Features on teh Map](GeoView_SelectLayer4.png)<br>
     **<p style="text-align: center;">
-    Time Series List After Select from Map<br>
+    ![Time series list after select from map](GeoView_SelectLayer4.png)
+    </p>**
+    **<p style="text-align: center;">
+    Time Series List After Select from Map
     </p>**
 5.  Once time series have been matched,
     the information can be copied to the commands area for further processing.
@@ -396,3 +404,11 @@ The above procedure is not completely robust in that the user may select
 a layer that does not match the time series list.
 Additional features are being considered to minimize this possibility.
 However, the use of the map interface is considered an advanced feature and some reliance is made on a user’s capability.
+
+## Spatial Analysis Commands ##
+
+TSTool does not currently provide significant spatial analysis features.
+Instead, use Geographic Information System (GIS) software.
+However, if the spatial data processing boils down to processing spatial data attribute table data,
+the TSTool table commands can be used, for example to manipulate data in a GeoJSON file.
+See the ***Commands(Table)*** and ***Commands / Object Processing*** commands.

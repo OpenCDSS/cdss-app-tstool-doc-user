@@ -140,6 +140,17 @@ After using the above dialog to edit the command, the time series product can be
     `tstool –commands commands.TSTool`<br>
     The working directory will be set to the directory for the commands file and output will be relative to that directory.
 
+## Command Syntax ##
+
+The command syntax is as follows:
+
+```text
+Scale(Parameter="Value",...)
+```
+**<p style="text-align: center;">
+Command Parameters
+</p>**
+
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`TSProductFile`<br>**required**|The time series product file to process.  The path to the file can be absolute or relative to the working directory.  Can be specified using processor ${Property}.  If this file contains a # comment with @template, the file will be expanded to a temporary file and then used.  Expansion is similar to the functionality of the [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command.|None – must be specified.|

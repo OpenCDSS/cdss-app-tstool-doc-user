@@ -115,7 +115,7 @@ similar to how the `ts:` notation provides a scope for time series properties (d
 ### Comment Commands ###
 
 Command files use comments to disable commands without deleting them.
-A [`#`](Comment/Comment) character at the start of a line indicates a one-line comment.
+A [`#`](Comment/Comment.md) character at the start of a line indicates a one-line comment.
 A group of lines that start with [`/*`](CommentBlockStart/CommentBlockStart.md) and end with
 [`*/`](CommentBlockEnd/CommentBlockEnd.md) indicate a block of comments and all intervening commands will be ignored in processing.
 

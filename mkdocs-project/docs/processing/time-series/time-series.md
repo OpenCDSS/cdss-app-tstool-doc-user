@@ -1,4 +1,4 @@
-# TSTool / Time Series Processing #
+# TSTool / Processing / Time Series #
 
 This documentation provides information about time series processing.
 

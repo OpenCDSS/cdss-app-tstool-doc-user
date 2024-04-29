@@ -1,4 +1,4 @@
-# TSTool / Object Processing #
+# TSTool / Processing / Objects #
 
 This documentation provides information about general object processing.
 

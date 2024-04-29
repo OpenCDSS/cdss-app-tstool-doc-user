@@ -12,6 +12,8 @@
 ## Overview ##
 
 The `WriteTableToExcel` command writes a table to a worksheet in a Microsoft Excel workbook file.
+The Excel workbook file should already exist or
+create with the [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook.md) command.
 A contiguous block of cells (rectangle) must be specified in one of the following ways to receive the table:
 
 *   Specify the upper-left cell in a range of cells using Excel address notation (e.g., `A1`).
@@ -85,28 +87,28 @@ WriteTableToExcel(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| --------------|-----------------|----------------- |
-|`TableID`|Identifier for table to write.  Can specify using processor `${Property}`.|None – must be specified.|
-|`IncludeColumns`|Names of columns in table to write.|Write all columns.|
-|`ExcludeColumns`|Names of columns in table to exclude from writing.|Write all columns.|
-|`ColumnIncludeFilters`|Indicate table column names and pattern to use to include rows.  For example, include rows with blanks in columns.  The format of the parameter is:<br>`ColumnName1:Pattern1,`<br>`ColumnName2:Pattern2,`<br>where patterns can contain `*` to match a substring.|Include all rows.|
-|`ColumnExcludeFilters`|Indicate table column names and pattern to use to exclude rows.  For example, exclude rows with blanks in columns.  The format of the parameter is:<br>`ColumnName1:Pattern1,`<br>`ColumnName2:Pattern2,`|<br>where patterns can contain `*` to match a substring.|Include all rows.|
-|`OutputFile`|The name of the Excel workbook file (`*.xls` or `*.xlsx`) to write, as an absolute path or relative to the command file location.  If the Excel file does not exist it will be created.  Can specify using processor `${Property}`.|None – must be specified.|
-|`Worksheet`|The name of the worksheet in the workbook to write.  If the worksheet does not exist it will be created.  Can specify using processor `${Property}`.|Write to the first worksheet.|
-|`ExcelAddress`|Indicates the block of cells to write, using Excel address notation (e.g., `A1:D10`).|Must specify address using one of available address parameters.|
-|`ExcelNamedRange`|Indicates the block of cells to write, using an Excel named range.|Must specify address using one of available address parameters.|
-|`ExcelTableName`|Indicates the block of cells to write, using an Excel named range.|Must specify address using one of available address parameters.|
-|`ExcelColumnNames`|Indicate how to determine the column names for the Excel table (in order to not overwrite with data rows), one of:<br><ul><li>`FirstRowInRange` – column names are written to the first row in the Excel address range</li><li>`None` – column names are not written</li><li>`RowBeforeRange` – column names are written to the row before the Excel address range</li></ul>|`None`|
-|`ColumnNamedRanges`|The map of column names to named ranges, useful when the column of values is used as choices in Excel data validation.|No named ranges will be defined.|
-|`KeepOpen`|Indicate whether to keep the Excel file open (`True`) or close after creating (`False`).  Keeping the file open will increase performance because later commands will not need to reread the workbook.  Make sure to close the file in the last Excel command.|`False`|
-|`ColumnCellTypes`|Column names and corresponding cell types using notation: `ColumnName1:CellType1,ColumnName2:CellType2`<br>Column name can be Default to set the default for all output columns.  Supported cell types are:<ul><li>`Auto` – determine cell type from table column</li><li>`Text` – Excel text cell</li></ul>|`Auto`|
-|`ColumnWidths`|Column names and corresponding widths using notation:<br>`ColumnName1:Width1,ColumnName2:Width2`<br>Column name can be `Default` to set the default for all output columns and `EmptyColumns` to set the width for columns with no data values.  Supported width values are:<br><ul><li>`Auto` – determine width from table contents</li><li>`N` – number of 1/256 of character widths (maximum is 256*256)|Default column with determined by Excel.|
-|`ColumnDecimalPlaces`|Column names and corresponding number of decimal places, for floating point numbers, using notation:<br>`ColumnName1:Num1,ColumnName2:Num2`|Determine from table column precision, or 6 if unable to determine from table.|
-|`ConditionTableID`|Identifier for condition table (see below).  Can be specified using processor `${Property}`.|Style formatting is not used.|
-|`StyleTableID`|Identifier for style table (see below).  Can be specified using processor `${Property}`.|Style formatting is not used.|
-|`LegendWorksheet`|Name of worksheet where the legend should be created.  The legend displays conditions and styles.|Data table worksheet.|
-|`LegendAddress`|Address `A1`, etc. for upper-left of legend.|No legend will be created.|
+|**Tab** | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| --------| ------|-----------------|----------------- |
+|***Table to Write***|`TableID`|Identifier for table to write.  Can specify using processor `${Property}`.|None – must be specified.|
+||`IncludeColumns`|Names of columns in table to write.|Write all columns.|
+||`ExcludeColumns`|Names of columns in table to exclude from writing.|Write all columns.|
+||`ColumnIncludeFilters`|Indicate table column names and pattern to use to include rows.  For example, include rows with blanks in columns.  The format of the parameter is:<br>`ColumnName1:Pattern1,`<br>`ColumnName2:Pattern2,`<br>where patterns can contain `*` to match a substring.|Include all rows.|
+||`ColumnExcludeFilters`|Indicate table column names and pattern to use to exclude rows.  For example, exclude rows with blanks in columns.  The format of the parameter is:<br>`ColumnName1:Pattern1,`<br>`ColumnName2:Pattern2,`|<br>where patterns can contain `*` to match a substring.|Include all rows.|
+|***Excel Output***|`OutputFile`|The name of the Excel workbook file (`*.xls` or `*.xlsx`) to write, as an absolute path or relative to the command file location.  If the Excel file does not exist it will be created.  Can specify using processor `${Property}`.|None – must be specified.|
+||`Worksheet`|The name of the worksheet in the workbook to write.  If the worksheet does not exist it will be created.  Can specify using processor `${Property}`.|Write to the first worksheet.|
+||`ExcelAddress`|Indicates the block of cells to write, using Excel address notation (e.g., `A1:D10`).|Must specify address using one of available address parameters.|
+||`ExcelNamedRange`|Indicates the block of cells to write, using an Excel named range.|Must specify address using one of available address parameters.|
+||`ExcelTableName`|Indicates the block of cells to write, using an Excel named range.|Must specify address using one of available address parameters.|
+||`ExcelColumnNames`|Indicate how to determine the column names for the Excel table (in order to not overwrite with data rows), one of:<br><ul><li>`FirstRowInRange` – column names are written to the first row in the Excel address range</li><li>`None` – column names are not written</li><li>`RowBeforeRange` – column names are written to the row before the Excel address range</li></ul>|`None`|
+||`ColumnNamedRanges`|The map of column names to named ranges, useful when the column of values is used as choices in Excel data validation.|No named ranges will be defined.|
+||`KeepOpen`|Indicate whether to keep the Excel file open (`True`) or close after creating (`False`).  Keeping the file open will increase performance because later commands will not need to reread the workbook.  Make sure to close the file in the last Excel command.|`False`|
+|***Excel Formatting***|`ColumnCellTypes`|Column names and corresponding cell types using notation: `ColumnName1:CellType1,ColumnName2:CellType2`<br> A column name can be Default to set the default for all output columns.  Supported cell types are:<ul><li>`Auto` – determine cell type from the table column</li><li>`Text` – Excel text cell</li></ul>|`Auto`|
+||`ColumnWidths`|Column names and corresponding widths using notation:<br>`ColumnName1:Width1,ColumnName2:Width2`<br>A column name can be:<ul><li>`*` - to match all columns</li><li>`*abc`, `abc*`, `*abc*` - to match a column with a wildcard</li><li>`EmptyColumns` - to set the width for columns with no data values</li><li>`Default` - to set the default for all output columns that are not otherwise specified</li></ul>  Supported width values are:<br><ul><li>`Auto` – determine the width from the table contents</li><li>`N` – number of `1/256` of character widths (maximum is `256*256` = 256 characters) as per Excel measurement units |Default column with determined by Excel.|
+||`ColumnDecimalPlaces`|Column names and corresponding number of decimal places, for floating point numbers, using notation:<br>`ColumnName1:Num1,ColumnName2:Num2`<br> A column name can be:<ul><li>`*` - to match all columns</li><li>`*abc`, `abc*`, `*abc*` - to match a column with a wildcard</li></ul>  A column's width can be:<ul><li>an integer `0` or greater</li></ul>|Determine from the table column precision, or `6` if unable to determine from the table.|
+|***Style Formatting***|`ConditionTableID`|Identifier for condition table (see below).  Can be specified using processor `${Property}`.|Style formatting is not used.|
+||`StyleTableID`|Identifier for style table (see below).  Can be specified using processor `${Property}`.|Style formatting is not used.|
+||`LegendWorksheet`|Name of worksheet where the legend should be created.  The legend displays conditions and styles.|Data table worksheet.|
+||`LegendAddress`|Address `A1`, etc. for upper-left of legend.|No legend will be created.|
 
 Excel cell formatting consists of number formatting, cell colors, cell width, etc.
 The ***Excel Formatting*** tab allows several formatting parameters to be specified.
@@ -238,6 +240,7 @@ See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) 
 
 ## See Also ##
 
+*   [`NewExcelWorkbook`](../NewExcelWorkbook/NewExcelWorkbook.md) command
 *   [`ReadTableFromDelimitedFile`](../ReadTableFromDelimitedFile/ReadTableFromDelimitedFile.md) command
 *   [`WriteTableToExcel`](../WriteTableToExcel/WriteTableToExcel.md) command
 *   [`WriteTimeSeriesToExcel`](../WriteTimeSeriesToExcel/WriteTimeSeriesToExcel.md) command

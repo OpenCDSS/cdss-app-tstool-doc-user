@@ -1,4 +1,4 @@
-# TSTool / Datastore Processing #
+# TSTool / Processing / Datastores #
 
 This documentation provides information about datastore processing.
 

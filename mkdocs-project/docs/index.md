@@ -12,7 +12,7 @@ This documentation is generally referred to as the **"User Documentation"** in c
 *   [About the Open Water Foundation](#about-the-open-water-foundation)
 *   [License](#license)
 *   [Source Repository on GitHub](#source-repository-on-github)
-*   [Release Notes](appendix-release-notes/release-notes-14.md) - **this documentation has been updated for TSTool version 14.9.4**
+*   [Release Notes](appendix-release-notes/release-notes.md) - **this documentation has been updated for TSTool version 14.9.5**
 
 ----------------
 
@@ -52,7 +52,6 @@ TSTool software users are encouraged to provide feedback using the
 The following components are used in TSTool and require or request attribution:
 
 *   [Material Theme icons](https://material.io/icons/) - these icons are used in documentation
-*   More information will be added here as the open source license is finalized.
 
 ## Colorado's Decision Support Systems ##
 

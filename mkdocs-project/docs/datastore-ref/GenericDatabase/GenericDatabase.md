@@ -84,7 +84,7 @@ The following limitations apply to the generic database datastore:
     The work-around is that any floating point data column that has a
     precision of zero is treated as having a precision of 6 digits after the decimal point.
 
-## Datastore Configuration Files ##
+## Datastore Configuration File ##
 
 A datastore is configured by creating a datastore configuration file for the connection.
 Configurations are processed at software startup to enable datastores.

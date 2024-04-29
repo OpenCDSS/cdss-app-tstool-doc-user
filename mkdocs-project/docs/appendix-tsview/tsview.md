@@ -42,7 +42,7 @@
         -   [Time Series Properties - Graph Type](#time-series-properties-graph-type)
         -   [Time Series Properties - Axes](#time-series-properties-axes)
         -   [Time Series Properties - Symbol](#time-series-properties-symbol)
-        -   [Time Series Properties - Label](#time-series-properties-label)
+        -   [Time Series Properties - Data Point Label](#time-series-properties-data-point-label)
         -   [Time Series Properties - Legend](#time-series-properties-legend)
         -   [Time Series Properties - Analysis](#time-series-properties-analysis)
     +   [Changing a Graph Page Layout](#changing-a-graph-page-layout)
@@ -133,7 +133,7 @@ The above example identifies a USGS streamflow gage identified as location `1234
 at which historic average daily flow data are available.
 If possible, data types appropriate for the input type should be used to avoid confusion;
 however, time series file input types often do not contain a simple data type
-abbreviation (see the [input type appendices](../datastore-ref/overview) for more information).
+abbreviation (see the [input type appendices](../datastore-ref/overview.md) for more information).
 The above example illustrates that the scenario can be used to qualify the
 data (in this case as historic data, `HIST`).  The scenario is often omitted.
 When the scenario is used, it often indicates some specific condition

@@ -2,6 +2,7 @@
 
 *   [Overview](#overview)
     +   [Limitations](#limitations)
+    +   [Automating Datastore Processing with Properties](#automating-datastore-processing-with-properties)
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
 *   [Examples](#examples)
@@ -41,7 +42,7 @@ The query can be specified in the following ways:
 *   Specify a SQL select statement:
     +   SQL must be valid for the database (syntax may vary based on database software)
     +   Use `${Property}` notation to insert processor property values set with
-        [`SetProperty`](../SetProperty/SetProperty) or other commands.
+        [`SetProperty`](../SetProperty/SetProperty.md) or other commands.
     +   SQL syntax is not checked for validity and therefore error messages
         from the database may be more difficult to interpret.
     +   Comments can be specified using [`/* */`](../CommentBlockStart/CommentBlockStart.md)
@@ -90,6 +91,19 @@ which includes the parameter names and types.
 
 **The ability to run functions and procedures will be fully enabled in the future.**
 Many databases allow functions to be called in `SELECT` statements.
+
+### Automating Datastore Processing with Properties ###
+
+It may be appropriate to specify the datastore name using a `${Property}`.
+For example, two datastore names can be defined as properties at the top of a command file to
+read data from two databases and then the [`CompareTables`](../CompareTables/CompareTables.md)
+command can be used to compare the tables.
+
+If the datastore name is specified as a `${Property}`,
+the command editor will expand the datastore name and display in the ***Datastore (expanded)*** editor information field
+and use the resulting value to find the datastore to read data for editor choices, such as the table name list.
+This functionality allows TSTool and this command to automate complex workflows.
+Using a property to define the datastore name allows the command file to be reused with only minor changes.
 
 ## Command Editor ##
 
@@ -184,9 +198,11 @@ ReadTableFromDataStore(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Query Method**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|**Tab/Area**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--------------|-----------------|-----------------|----|
-|All|`DataStore`<br>**required**|The name of a database datastore to read.|None – must be specified.|
+|***Top***|`DataStore`<br>**required**|The name of a database datastore to read, can be specified with `${Property}`.|None – must be specified.|
+| |***Datastore (expanded)*** | The `DataStore` parameter, expanded if a `${Property}`, informational only. | Automatically populated. |
+| | `EditorDataStore` | Datastore to use with the command editor, necessary to populate other editor data if `DataStore` is specified with a `${Property}` and the property cannot be expanded. | Not used. |
 |***Table and columns***|`DataStoreTable`|The name of the database table or view to read when querying a single table or view.  If specified, do not specify `Sql`, `SqlFile`, `DataStoreFunction`, or `DataStoreProcedure`.|None.|
 ||`DataStoreColumns`|When reading a single table/view, the names of the columns to read, separated by commas.|All columns from `DataStoreTable` are read.|
 ||`OrderBy`|When reading a single table/view, a list of column names separated by commas to control the order of output.  Additional modifiers are allowed for each column, for example to ignore case when sorting with SQLite, can use: `columnName COLLATE NOCASE`.|Default database sort order will be used.|
@@ -198,7 +214,7 @@ Command Parameters
 |***Procedure***|`DataStoreProcedure`|The name of the database procedure to run, as full signature if metadata are available. If specified, do not specify `DataStoreTable`, `Sql`, `SqlFile`, or `DataStoreFunction`. |None.|
 ||`ProcedureParameters`|Parameters for procedure/function, in order that is required, using syntax `parameter:value1,parameter2:value2,...`.  Use the ***Edit*** button to see the list of parameters and their type.||
 ||`ProcedureReturnProperty`|Property name for procedure return value.||
-|All|`OutputProperties`|A map of table column names to processor property names using syntax `name1:property1,name2:property1,...`  If a result is a single row, the output can be assigned to properties. Specify as many column names as desired. | Properties are not set. |
+|***Bottom***|`OutputProperties`|A map of table column names to processor property names using syntax `name1:property1,name2:property1,...`  If a result is a single row, the output can be assigned to properties. Specify as many column names as desired. | Properties are not set. |
 ||`TableID`<br>**required**|Identifier to assign to the output table in TSTool, which allows the table data to be used with other commands.  A new table will be created.  Can be specified with `${Property}`.|None – must be specified.|
 ||`RowCountProperty`|The name of the processor property that will be set to the row count, optionally using `${Property}` notation to specify the name.|Property is not set.|
 

@@ -1,4 +1,4 @@
-# TSTool / Template Processing #
+# TSTool / Processing / Templates #
 
 This documentation provides information about processing templates.
 

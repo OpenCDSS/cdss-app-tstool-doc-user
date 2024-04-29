@@ -725,5 +725,5 @@ Once a working example is established, the example can be scaled up to a
 larger production either by repeating the example (and changing identifiers)
 or by automatically changing the example to replace strings
 (for example by using `{Property}` notation in a
-[`For`](../command-ref/For/For) or use the
+[`For`](../command-ref/For/For.md) or use the
 [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command).

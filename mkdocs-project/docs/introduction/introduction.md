@@ -567,7 +567,7 @@ However, in some cases the precision can impact plots significantly.
 For example, when plotting daily and monthly data on the same graph,
 the monthly data will be plotted ignoring the day whereas the daily values correspond days 1 to 31.
 The ability to plot monthly data mid-month or end-of-month has not been implemented.
-The [TSView Time Series Viewing Tools Appendix](../appendix-tsview/tsview) provides examples of plots.
+The [TSView Time Series Viewing Tools Appendix](../appendix-tsview/tsview.md) provides examples of plots.
 
 The date/time precision is very important when performing an analysis
 or converting between time series file formats.

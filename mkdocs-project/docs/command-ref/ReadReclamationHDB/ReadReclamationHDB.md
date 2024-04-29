@@ -167,7 +167,7 @@ or because multiple time series intervals are written for the same SDI.
 For example, automated tests re-use the same SDI to read and write data
 for different time series intervals. The solution is to do one of the following.
 
-*   Delete the bad data records in HDB. For exmaple, use the [`RunSql`](../RunSql/RunSql.md)
+*   Delete the bad data records in HDB. For example, use the [`RunSql`](../RunSql/RunSql.md)
     command with an SQL file similar to the following (however, this does not seem to work.):
 
 ```
@@ -177,7 +177,7 @@ DELETE_R_BASE(100376,'hour',to_date('2010-03-12 00','YYYY-MM-DD HH24'),to_date('
 end;
 ```
 
-*   Specify the `NHourIntervalOffset` commmand parameter as the expected hour offset from midnight
+*   Specify the `NHourIntervalOffset` command parameter as the expected hour offset from midnight
     for the first data value in the hourly time series,
     for the HDB time zone (e.g., MST for ECAO database).
     This tells TSTool to ignore all records that do not align.

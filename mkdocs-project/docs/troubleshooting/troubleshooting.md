@@ -323,7 +323,7 @@ In both cases a log file contains messages from the program.
 For TSTool 12.x and later, the log file is created in the `.tstool/logs` folder under the user's
 home folder, and older versions of TSTool
 create a log file in the `logs` directory under the main installation directory.
-It is recommended that the [`StartLog`](../command-ref/StartLog/StartLog)
+It is recommended that the [`StartLog`](../command-ref/StartLog/StartLog.md)
 command be inserted as the first command in each command file,
 using the name of the commands file in its name.
 In any case, the log file can be viewed using the ***Tools / Diagnostics*** features.
@@ -1022,7 +1022,7 @@ TSTool Command Summary – Obsolete Commands
 |`-missing Value`|Use the specified value for missing data values (StateMod only).  The default is `-999.0`.|[`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod.md) command|
 |`-fillusingcomments`|This option only applies to diversion time series and causes the diversion comments to be evaluated.  Comments that indicate no diversion in an irrigation year will result in missing data for that year being replaced with zeros.|[`FillUsingDiversionComments`](../command-ref/FillUsingDiversionComments/FillUsingDiversionComments.md) command|
 |`month1/year1 month2/year2`|Specifies beginning and ending months for period of record - calculations are still based on the entire period of record (i.e., regression values) but the final output is according to these values, if given.  Month 1 is January.  Years are 4-digit.|[`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) command|
-|`-o outputfile`|Specify output file name.  This is used in conjunction with other `-o` options.|[Output (write) commands](../command-ref/overview#output-time-series.md)|
+|`-o outputfile`|Specify output file name.  This is used in conjunction with other `-o` options.|[Output (write) commands](../command-ref/overview.md#output-time-series)|
 |`-odatevalue`|Output a DateValue format file.|[`WriteDateValue`](../command-ref/WriteDateValue/WriteDateValue.md) command|
 |`-ostatemod`|Output a StateMod format file.|[`WriteStateMod`](../command-ref/WriteStateMod/WriteStateMod.md) command|
 |`-osummary`|Output a time series summary.|[`WriteSummary`](../command-ref/WriteSummary/WriteSummary.md) command|

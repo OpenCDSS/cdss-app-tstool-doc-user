@@ -1,4 +1,4 @@
-# TSTool / Visualization Processing #
+# TSTool / Processing / Visualizations #
 
 This documentation provides information about processing data visualizations.
 
