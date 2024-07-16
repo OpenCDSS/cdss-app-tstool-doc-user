@@ -200,7 +200,10 @@ See also the [Annotations](#annotations) section above for annotation syntax.
 
 ## Examples ##
 
-See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/Comment).
+See the automated tests:
+
+*   [`Comment`](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/Comment) - various tests
+*   [`@sourceUrl`](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/Comment_sourceUrl)
 
 ## Troubleshooting ##
 
