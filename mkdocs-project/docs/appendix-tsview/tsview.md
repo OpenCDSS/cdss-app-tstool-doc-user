@@ -499,11 +499,17 @@ The graph view is divided into the following main areas:
     +   ***Table*** - Display the table view for the time series (see the [Time Series Table View](#time-series-table-view) section).
     +   ***Print*** - Print the graph.  Because the physical extents of the printed page are different from the visible window,
         the printed graph may not exactly match the viewed version (e.g., more or less axis labels may be used).
-    +   ***Save*** - Save the graph as a Portable Network Graphic (PNG), JPEG graphic,
-        a [DateValue file](../datastore-ref/DateValue/DateValue.md) (a useful time series format),
-        Time Series Product file (see the [Time Series Product File Reference](#time-series-product-file-reference) section),
-        or other formats, by selecting from the choices.
-        Depending on the main application, saving to a database as a time series product may also be enabled.
+    +   ***Save*** - Save the graph as one of the following formats:
+        -   [DateValue file](../datastore-ref/DateValue/DateValue.md) - a useful time series format
+            that can be read with the [`ReadDateValue`](../command-ref/ReadDateValue/ReadDateValue.md) command.
+        -   JPEG image file - can be good for highly variable content.
+        -   Portable Network Graphic (PNG) image file - usually good for graphs because the files are small when only a few colors are used.
+        -   Scalable Vector Graphic (SVG) file - can be viewed and resized in a web browser and other tools without
+            pixelation (see [SVG on Wikipedia](https://en.wikipedia.org/wiki/SVG)).
+        -   Time Series Product (TSP) text or JSON file - description of a time series product
+            (see the [Time Series Product File Reference](#time-series-product-file-reference) section).
+            The result can be used with web applications to describe a graph.
+            Saving to a database as a time series product may also be enabled.
     +   ***Close*** - Close the graph window.  If related summary or table windows are still visible,
         the graph view can be quickly re-displayed by pressing the ***Graph*** button on the other view windows.
         If the graph properties have been changed but have not been saved, a warning will be displayed asking whether to save the changes.

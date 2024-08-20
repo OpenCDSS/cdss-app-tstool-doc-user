@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.9.6](#changes-in-version-1496)
 *   [Changes in Version 14.9.5](#changes-in-version-1495)
 *   [Changes in Version 14.9.4](#changes-in-version-1494)
 *   [Changes in Version 14.9.3](#changes-in-version-1493)
@@ -42,6 +43,15 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.9.6 ##
+
+**Maintenance release to improve complex workflow automation and maintenance.**
+
+*   ![change](change.png) [14.9.6] Add the JFreeChart SVG writer for saving graph files.
+    This library is less complex than the Batik SVG implementation and gives good performance.
+*   ![change](change.png) [14.9.6] Update the [`Message`](../command-ref/Message/Message.md) command:
+    +   Add the `NOTIFICATION` command status type, which will result in a notification marker for the command.
 
 ## Changes in Version 14.9.5 ##
 
