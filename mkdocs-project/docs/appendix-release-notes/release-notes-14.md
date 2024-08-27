@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 14.9.7](#changes-in-version-1497)
 *   [Changes in Version 14.9.6](#changes-in-version-1496)
 *   [Changes in Version 14.9.5](#changes-in-version-1495)
 *   [Changes in Version 14.9.4](#changes-in-version-1494)
@@ -43,6 +44,15 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 14.9.7 ##
+
+**Maintenance release to improve graph annotations.**
+
+*   ![bug](bug.png) [14.9.7] Fix bugs and limitations in graphs:
+    +   Fix so that an annotation data value that is a date/time string is automatically parsed.
+    +   Fix so that expanding a command parameter in an annotation gracefully handles
+        the case when the closing `}`-bracket of an annotation is not found.
 
 ## Changes in Version 14.9.6 ##
 

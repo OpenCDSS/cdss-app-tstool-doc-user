@@ -34,6 +34,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[14.9.7](release-notes-14.md)|Maintenance release to improve graph annotations. | 2024-08-26 |
 |[14.9.6](release-notes-14.md)|Maintenance release to improve complex workflow automation and maintenance. | 2024-08-19 |
 |[14.9.5](release-notes-14.md)|Maintenance release to improve complex workflow automation and maintenance. | 2024-04-29 |
 |[14.9.4](release-notes-14.md)|Maintenance release to improve table comparison and enable command notifications. | 2024-04-15 |
