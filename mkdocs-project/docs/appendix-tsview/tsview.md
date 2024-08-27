@@ -1979,12 +1979,12 @@ Annotation Properties (All Shape Types)
 |`Color`|Color to use when drawing the annotation. See the [Color Specification](#time-series-product-file-color-specification) section. |`Black`|
 |`Order`|The drawing order for the annotation:<br><ul><li>`BehindAxes` to draw behind axes.</li><li>`BehindData` to draw behind time series data.</li><li>`OnTopOfData` to draw on top of time series data.</li></ul>|`OnTopOfData`|
 |`ShapeType`|The type of shape to be drawn for the annotation.  Currently accepted values are Line, `Rectangle`, `Symbol`, and `Text`.  See the following tables for properties for each annotation shape type.|None – must be specified.|
-|`XAxisSystem`|Indicates the system for X coordinates:<br><ul><li>If `Data`, the X coordinates that are specified will be in data units.  If the x-axis is date/time, specify the value as `YYYY-MM-DD` or as appropriate for precision of date/time (future feature).</li><li>If `Percent`, the X coordinates are percent of the graph (0% is left and 100% is right).|`Data`|
+|`XAxisSystem`|Indicates the system for X coordinates:<br><ul><li>If `Data`, the X coordinates that are specified will be in data units.  If the x-axis is date/time, specify the value as `YYYY`, `YYYY-MM`, `YYYY-MM-DD`, `YYYY-MM-DD hh:mm:ss`, etc., using a precision that is appropriate for the data.</li><li>If `Percent`, the X coordinates are percent of the graph (0% is left and 100% is right).|`Data`|
 |`YAxis`|Indicate which axis the annotation is associated with, either Left or Right.|`Left`|
-|`YAxisSystem`|Indicates the system for Y coordinates:<br><ul><li>If `Data`, the Y coordinates that are specified will be in data units.</li><li>If `Percent`, the Y coordinates are percent of the graph (0% is bottom and 100% is top).|`Data`|
+|`YAxisSystem`|Indicates the system for Y coordinates:<br><ul><li>If `Data`, the Y coordinates that are specified will be in data units.  If the y-axis is date/time, specify the value as `YYYY`, `YYYY-MM`, `YYYY-MM-DD`, `YYYY-MM-DD hh:mm:ss`, etc., using a precision that is appropriate for the data.</li><li>If `Percent`, the Y coordinates are percent of the graph (0% is bottom and 100% is top).|`Data`|
 
 **<p style="text-align: center;">
-Annotation Properties (ShapeType=Line)
+Annotation Properties (`ShapeType=Line`)
 </p>**
 
 |**Annotation Property**|**Description**|**Default**|
@@ -1994,7 +1994,7 @@ Annotation Properties (ShapeType=Line)
 |`Points`|X and Y coordinates for the line endpoints, as follows:  `X1,Y1,X2,Y2`.|`None` – must be specified.|
 
 **<p style="text-align: center;">
-Annotation Properties (ShapeType=Rectangle)
+Annotation Properties (`ShapeType=Rectangle`)
 </p>**
 
 |**Annotation Property**|**Description**|**Default**|
@@ -2005,7 +2005,7 @@ Annotation Properties (ShapeType=Rectangle)
 |`Transparency`|Envisioned for future.||
 
 **<p style="text-align: center;">
-Annotation Properties (ShapeType=Symbol)
+Annotation Properties (`ShapeType=Symbol`)
 </p>**
 
 |**Annotation Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**|
@@ -2016,7 +2016,7 @@ Annotation Properties (ShapeType=Symbol)
 |`SymbolStyle`|Symbol style from provided choices.|`None`|
 
 **<p style="text-align: center;">
-Annotation Properties (ShapeType=Text)
+Annotation Properties (`ShapeType=Text`)
 </p>**
 
 |**Annotation Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**|
