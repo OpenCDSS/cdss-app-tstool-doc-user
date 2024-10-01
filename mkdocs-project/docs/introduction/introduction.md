@@ -85,7 +85,7 @@ Chapter 7 – Processing - automate data processing for the following:
 
 [Appendix - Running TSTool in Various Modes](../appendix-running/running.md) - summarizes how to run TSTool in various modes
 
-[Appendix - Tables](../appendix-tables/tables.md) - provides general information about tables
+[Appendix - Tables](../processing/tables/tables.md) - provides general information about tables
 
 [Appendix - TSView Time Series Viewing Tools](../appendix-tsview/tsview.md) - provides a general reference for time series viewing features.  These features are used throughout TSTool.
 

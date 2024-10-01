@@ -73,7 +73,7 @@ Command Parameters
 | **Tab** | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------|------|-----------------|----------------- |
 | ***All*** | `TableID`<br>**required**|The table identifier for the table to process. Can specify with `${Property}`.|None - must be specified.|
-| ***Condition*** | `Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information in the [Tables appendix](../../appendix-tables/tables.md#condition-evaluation-for-rows).||
+| ***Condition*** | `Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information in the [Tables appendix](../../processing/tables/tables.md#condition-evaluation-for-rows).||
 | ***Row Number*** |`DeleteRowNumbers`|The row number(s) to delete:<ul><li>comma-separated list of row numbers (1+)</li><li>`last` to delete the last row</li><li>`*` to delete all rows.</li></ul><br> Can use `${Property}`.||
 | | `First` | <ul><li>If a number `N` is specified, the first `N` rows will be deleted.</li><li>If a number `-N` is specified, all rows except the first `N` will be deleted.</li></ul> | |
 | | `Last` | <ul><li>If a number `N` is specified, the last `N` rows will be deleted.</li><li>If a number `-N` is specified, all rows except the last `N` will be deleted.</li></ul> | |
