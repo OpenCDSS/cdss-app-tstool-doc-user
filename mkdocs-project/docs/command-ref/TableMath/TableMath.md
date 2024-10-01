@@ -78,7 +78,7 @@ Command Parameters
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 |`TableID`<br>**required**|The identifier for the table to process, can be specified with `${Property}`.|None – must be specified.|
-|`Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information in the [Tables appendix](../../appendix-tables/tables.md#condition-evaluation-for-rows).|Condition or row number must be specified.|
+|`Condition`|A condition to match rows to be deleted. Can use `${Property}` to specify row number.  See additional information in the [Tables appendix](../../processing/tables/tables.md#condition-evaluation-for-rows).|Condition or row number must be specified.|
 |`DeleteRowNumbers`|The row number(s) to process as comma-separated list of row numbers, currently limited to:</li><li>`first` - process the first row in the table</li><li>`last` - process the last row in the table</li></ul><br> Can use `${Property}`.| Process all rows.|
 |`Input1`<br>**required**|First input column name, can be specified with `${Property}`.|None – must be specified.|
 |`Operator`<br>**required**|The operator to be applied as follows:<br>`Input1 Operator Input2 = Output`<br>For example: `Input1 * Input2 = Output`|None – must be specified.|

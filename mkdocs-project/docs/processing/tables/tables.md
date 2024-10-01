@@ -56,8 +56,8 @@ Tables have the following design features:
 Some commands provide a `Condition` parameter to limit which rows will be processed by the command.
 For example, see:
 
-*   [`DeleteTableRows`](../command-ref/DeleteTableRows/DeleteTableRows.md)
-*   [`TableMath`](../command-ref/TableMath/TableMath.md)
+*   [`DeleteTableRows`](../../command-ref/DeleteTableRows/DeleteTableRows.md)
+*   [`TableMath`](../../command-ref/TableMath/TableMath.md)
 
 The `Condition` parameter is restricted to a simple format and comparison.
 More complex evaluations may be implemented over time.
@@ -117,4 +117,4 @@ Left-click on a table to view.  Right-click to view table properties and find ta
 
 ## Examples ##
 
-See the ***Examples*** section of each table commands's documentation.
+See the ***Examples*** section of each table command's documentation.

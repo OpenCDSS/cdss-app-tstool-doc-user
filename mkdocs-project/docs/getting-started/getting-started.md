@@ -136,7 +136,7 @@ Trying to use commands that depend on data connections that have not been initia
 **<p style="text-align: center;">
 TSTool At Startup, Waiting for Data Connections to be Initialized (<a href="../GUI_MainWait.png">see full-size image</a>)
 </p>**
- 
+
 The following figure illustrates the main TSTool interface after data connections are initialized.
 The interface is divided into three main areas:
 
@@ -181,7 +181,7 @@ To select time series, perform the following steps:
         The DateValue input type is the default.
         More specific input types (e.g., HydroBase) may be the default if enabled.
         See the appropriate data store or input type appendix for more information.<br><br>
-        Depending on the input type, some of the remaining selection choices described below may be disabled or limited.  
+        Depending on the input type, some of the remaining selection choices described below may be disabled or limited.
 2.  **Select the time series data type**.  Select the ***Data type*** (if appropriate for the input type).
     example, select ***Streamflow*** or ***Diversion*** if using a HydroBase input type.
     For some input types, the data type will be listed as ***Auto***,
@@ -285,7 +285,7 @@ A summary of the pop-up menu choices is as follows:
 Commands are numbered to simplify editing.
 The command list also includes left and right gutters to display icons that help with error handling.
 The following figure illustrates a command with an error (the first time series
-identifier has been edited to include an x, resulting in an invalid identifier). 
+identifier has been edited to include an x, resulting in an invalid identifier).
 
 **<p style="text-align: center;">
 ![Command List Illustrating Error](CommandListError.png)
@@ -526,6 +526,7 @@ Global properties should be used with care because they may impact multiple comm
 | `TSEnsembleResultsListSize` | The number of time series ensembles in results, which is useful to checking workflow results. | Set when processing time series ensembles. |
 | `TSResultsListSize` | The number of time series in results, which is useful to checking workflow results. | Set when processing time series. |
 | `TempDir` | Temporary directory (folder), using operating system path conventions, useful if a temporary file needs to be created in a workflow. | Set automatically for the operating system. |
+| `TempDirPosix` | Temporary directory (folder), using a POSIX convention (all forward slashes, no colon). | Set automatically for the operating system. |
 | `UserHomeDir` | The user's home directory (folder), using operating system path conventions. | Set automatically. |
 | `UserHomeDirPosix` | The user's home directory (folder), using POSIX path conventions (all slashes, no colon). | Set automatically. |
 | `UserHomeDirURL` | The user's home directory (folder), using URL path conventions. | Set automatically. |
@@ -754,7 +755,7 @@ This is useful when editing and troubleshooting commands.
 **<p style="text-align: center;">
 File / Properties Menu
 </p>**
- 
+
 The ***File / Properties / Commands Run*** menu item displays information from the
 last time that the commands were run, including global properties that impact results.
 
@@ -766,7 +767,7 @@ last time that the commands were run, including global properties that impact re
 Properties of the Last Commands Run (<a href="../Menu_File_PropertiesRun.png">see full-size image</a>)
 </p>**
 
-This information is useful for troubleshooting processing. 
+This information is useful for troubleshooting processing.
 The ***File / Properties / TSTool Session*** menu item displays information about the current TSTool session, as follows.
 
 **<p style="text-align: center;">
@@ -777,7 +778,7 @@ The ***File / Properties / TSTool Session*** menu item displays information abou
 TSTool Session Properties (<a href="../Menu_File_Properties_TSToolSession.png">see full-size image</a>)
 </p>**
 
-This information is useful for checking the TSTool configuration. 
+This information is useful for checking the TSTool configuration.
 Additional properties displays may be available depending on enabled input types.
 For example, the ***File / Properties / HydroBase*** menu item displays HydroBase properties,
 including the database that is being used, database version,
@@ -808,7 +809,7 @@ with the current setting being defined by the most recent selection:
 5.  The directory specified by ***File / Set Working Directory***.
 
 The menu item is provided to allow the working directory to be set before a command file has been saved (or opened).
- 
+
 ### File / Exit ###
 
 The ***File / Exit*** menu exits TSTool.
@@ -920,7 +921,7 @@ A visual difference program such as KDiff3 is required to be configured (see the
 ### View / Command File Source Diff ###
 
 The ***View / Command File Source Diff*** menu displays a visual differences of the current TSTool commands and
-command file source version specified by the `#@sourceUrl` [annotation comment](../command-ref/Comment.md).
+command file source version specified by the `#@sourceUrl` [annotation comment](../command-ref/Comment/Comment.md).
 If the commands have changed but have not been saved, the current commands are saved to a temporary file for the comparison.
 This tool is useful if it is desired to confirm the changes have been made in the local copy that are different from the source (remote) version.
 A visual difference program such as KDiff3 is required to be configured (see the [TSTool Configuration](../appendix-install/install.md#tstool-configuration) documentation).
@@ -1000,7 +1001,7 @@ The ***Commands(Table)*** menu provides commands for table processing.
 **<p style="text-align: center;">
 Commands(Table) Menu
 </p>**
- 
+
 Table commands are organized into the following categories:
 
 *   ***Create, Copy, Free Table*** – create, copy and free memory for tables
@@ -1077,7 +1078,7 @@ The time series can be viewed multiple times, using the same time series results
 **<p style="text-align: center;">
 Results Menu
 </p>**
- 
+
 Graphing time series results in slightly different viewing options being available,
 depending on the type of graph.
 Three views of time series are generally available: graph, summary, and table.
@@ -1104,6 +1105,7 @@ Results Menu Choices
 |***Graph – Point***|Display a graph using symbols but no connecting lines.  This is useful for data that have infrequent measurements.|
 |***Graph – Predicted Value***|Display a graph of data and the predicted values from regression.  First, a regression analysis is performed, similar to the analysis done for the XY-Scatter plot.  The original two time series are then plotted, additionally with the time series that would be generated using the regression results.  The predicted time series and the original time series will be the same where their periods overlap, with only the predicted time series shown outside of that period.|
 |***Graph – Predicted Value Residual***|Display a graph of data minus the predicted values from regression.  The predicted value residual graph performs the same analysis as the predicted value graph.  Where the original and predicted time series overlap, the difference is computed and plotted as a time series.  The resulting bar graph therefore shows the relative goodness of fit of the estimated time series.|
+|***Graph – Raster***|Display a raster (heat map) graph for the selected time series. The visualization format will depend on whether a single or multiple time series are selected. |
 |***Graph – XY-Scatter***|Display an XY-scatter plot for the selected time series.|
 |***Table***|Display a scrollable table for the selected time series.|
 |***Report – Summary (HTML)***|Display an HTML summary for selected time series using the default web browser.|
@@ -1115,7 +1117,7 @@ Results Menu Choices
 |***Select All for Output***|Select all the time series for output.|
 |***Deselect All***|Deselect all the time series.|
 |***Time Series Properties***|Display the time series properties dialog (see the TSView Time Series Viewing Tools appendix for a complete description of the properties interface).|
- 
+
 ## Tools Menu ##
 
 The ***Tools*** menu lists tools that control TSTool behavior or that require interaction,
