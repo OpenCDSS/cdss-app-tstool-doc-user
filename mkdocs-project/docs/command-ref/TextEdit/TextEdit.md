@@ -62,8 +62,8 @@ Command Parameters
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 | `InputFile`<br>**required** | The name of the input file.  Can be specified using `${Property}`. | None - must be specified. |
-| `SearchFor`<br>**required** | The string to search for in the input file.  Can be specified using `${Property}`. See the examples in [Search and Replace Example Patterns](#search-and-replace-example-patterns). | None - must be specified. |
-| `ReplaceWith`<br>**required** | The string to use for the replacement string in the output file.  See the examples in [Search and Replace Example Patterns](#search-and-replace-example-patterns). | None - must be specified. |
+| `SearchFor`<br>**required** | The string to search for in the input file.<ul><li>can be specified using `${Property}`</li><li>see the examples in [Search and Replace Example Patterns](#search-and-replace-example-patterns).</li><li>can begin and/or end with whitespace characters</li></ul>| None - must be specified. |
+| `ReplaceWith`<br>**required** | The string to use for the replacement string in the output file:<ul><li>see the examples in [Search and Replace Example Patterns](#search-and-replace-example-patterns)</li><li>can begin and/or end with whitespace characters</li><li>specify as `EMPTY_STRING` to remove the `SearchFor` string</li></ul> | None - must be specified. |
 | `OutputFile`<br>**required** | The name of the output file.  Can be specified using `${Property}`. | None - must be specified. |
 | `IfInputNotFound` | Indicate an action if the source file is not found:  `Ignore` (ignore the missing file and do not warn), `Warn` (generate a warning message), `Fail` (generate a failure message) | `Warn` |
 
