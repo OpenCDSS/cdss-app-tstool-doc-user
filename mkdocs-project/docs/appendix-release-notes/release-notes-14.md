@@ -56,6 +56,11 @@ Issues may also be included in other repositories that are TSTool components.
         This provides additional control, for example, when selecting time series to graph.
 *   ![change](change.png) [14.9.7] Enhance the processor:
     +   Add the `TempDirPosix` processor property.
+*   ![change](change.png) [14.9.7] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
+    +   Allow the property value to start or end with white space characters.
+*   ![change](change.png) [14.9.7] Update the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command:
+    +   Allow the search and replace strings to start or end with white space characters.
+    +   Allow the replacement string to be an empty string, to remove a matching string.
 *   ![change](change.png) [14.9.7] Update the [`WriteTableToMarkdown`](../command-ref/WriteTableToMarkdown/WriteTableToMarkdown.md) command:
     +   Add the `NewlineReplacement` command parameter to handle line breaks embedded in table cell data.
 *   ![bug](bug.png) [14.9.7] Fix bugs and limitations in graphs:
