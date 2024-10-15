@@ -49,9 +49,19 @@ Issues may also be included in other repositories that are TSTool components.
 
 **Maintenance release to improve graph and table processing.**
 
-*   ![change](change.png) [14.9.7] Improve the "find" tool:
-    +   The tool is used to find substrings in lists, for example, commands and time series.
-    +   The tool now explicitly handled case dependent/independent searches.
+*   ![bug](bug.png) [14.9.7] Improve the dictionary edit tool,
+    which is used to edit `key:value` data pairs:
+    +   The editor was not always properly enabling/disabling buttons.
+    +   The editor was not always properly enabling/disabling the "all" checkbox.
+    +   The editor was not always displaying added rows.
+*   ![bug](bug.png) [14.9.7] Fix bugs and limitations in graphs:
+    +   Fix so that an annotation data value that is a date/time string is automatically parsed.
+    +   Fix so that expanding a command parameter in an annotation gracefully handles
+        the case when the closing `}`-bracket of an annotation is not found.
+    +   Enable mouse tracking for stacked area graphs.
+*   ![change](change.png) [14.9.7] Improve the "find" tool,
+        which is used to find substrings in lists, for example, commands and time series:
+    +   The tool now explicitly handles case dependent/independent searches.
     +   The tool now allows selecting items in the found list and then selecting those items in the original list.
         This provides additional control, for example, when selecting time series to graph.
 *   ![change](change.png) [14.9.7] Enhance the processor:
@@ -63,11 +73,6 @@ Issues may also be included in other repositories that are TSTool components.
     +   Allow the replacement string to be an empty string, to remove a matching string.
 *   ![change](change.png) [14.9.7] Update the [`WriteTableToMarkdown`](../command-ref/WriteTableToMarkdown/WriteTableToMarkdown.md) command:
     +   Add the `NewlineReplacement` command parameter to handle line breaks embedded in table cell data.
-*   ![bug](bug.png) [14.9.7] Fix bugs and limitations in graphs:
-    +   Fix so that an annotation data value that is a date/time string is automatically parsed.
-    +   Fix so that expanding a command parameter in an annotation gracefully handles
-        the case when the closing `}`-bracket of an annotation is not found.
-    +   Enable mouse tracking for stacked area graphs.
 
 ## Changes in Version 14.9.6 ##
 
