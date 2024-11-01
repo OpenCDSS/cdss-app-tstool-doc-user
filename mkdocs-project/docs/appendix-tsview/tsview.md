@@ -2117,7 +2117,7 @@ Graph templates utilizes the following process:
 2.  One or more time series (or time series ensembles) are selected in the ***TSTool Results***
     area and the ***Graph*** with template button is used, with a corresponding graph template.
     The graph template is a time series product file (`*.tsp`) containing properties described in the previous sections,
-    but typically will also contain Freemarker template syntax as described below.
+    but typically will also contain FreeMarker template syntax as described below.
     Graph templates need to be stored in the folder in the user's files (`/home/user` on Linux or `C:\Users\user` on Windows).
     *   TSTool 13+:  `.tstool/NN/template-graphs` folder under the user’s files, where `NN` is the TSTool major version
     *   TSTool 13+:  `.tstool/template-graph` folder under the user’s files
@@ -2126,24 +2126,24 @@ Graph templates utilizes the following process:
     (all other time series in TSTool’s main interface will NOT be used),
     and properties passed as described below.
     If the property is not defined, then the time series are used as is in the following steps with no additional processing.
-4.  The resulting processed results are passed to the Freemarker template engine
+4.  The resulting processed results are passed to the FreeMarker template engine
     to expand the graph template file to a temporary file.
     This step is similar to the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) TSTool command.
 5.  The expanded temporary time series product file is used with the time series from step 3 to produce the graph.
 
 Graph templates processed in step 4 from above use the [FreeMarker templating software](https://freemarker.apache.org).
-Freemarker is also used by the TSTool
+FreeMarker is also used by the TSTool
 [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command.
 The main benefit of FreeMarker is that it provides advanced template processing features
 and minimizes the need to develop such features in the TSTool software.
-TSTool currently uses a simple FreeMarker data model to pass data to the Freemarker data model, as follows:
+TSTool currently uses a simple FreeMarker data model to pass data to the FreeMarker data model, as follows:
 
 *   TSTool processor properties are passed to FreeMarker in their native form.
     These properties are listed in TSTool in the results area in the ***Properties*** tab.
     To pass additional properties, define them in the main TSTool command file.
-*   To facilitate template processing, TSTool passes the following additional properties to Freemarker:
+*   To facilitate template processing, TSTool passes the following additional properties to FreeMarker:
     +   Currently none but can be added if appropriate.
-*   TSTool also passes a number of lists to Freemarket, which can be used with the Freemarker `<#list>` directive.
+*   TSTool also passes a number of lists to Freemarket, which can be used with the FreeMarker `<#list>` directive.
     These lists are of general use for graph templates:
     +   `TemplateTSIDList` – the list of TSID for the time series that are provided to the graph template.
         These identifiers DO include the trailing datastore name or input type.
@@ -2156,7 +2156,7 @@ TSTool currently uses a simple FreeMarker data model to pass data to the Freemar
     +   `TemplateTSEnsembleIDList` – the list of time series ensemble identifiers for ensembles that are provided to the graph template.
     +   `TemplateTSEnsembleNameList` – the list of time series ensemble names for ensembles that are provided to the graph template.
 
-The above data can be referenced in Freemarker templates using its variable syntax
+The above data can be referenced in FreeMarker templates using its variable syntax
 (variable name is used as in within a FreeMarker directive, and as `${variable}` in other template file text).
 
 The following sections provide examples of using the graph templates.
@@ -2215,7 +2215,7 @@ TSAlias = "${TemplateTSAlias}"
 The above template does not use the `TemplatePreprocessCommandFile` property because the
 single time series is already in a form that can be directly used to produce the graph.
 The lists that are passed in are used to reference properties using array notation [0],
-since Freemarker lists use 0-index reference.  The following is an example of the resulting graph.
+since FreeMarker lists use 0-index reference.  The following is an example of the resulting graph.
 
 **<p style="text-align: center;">
 ![Example Time Series Graph Created using Graph Template](TSTool_Results_GraphWithTemplate_TS.png)

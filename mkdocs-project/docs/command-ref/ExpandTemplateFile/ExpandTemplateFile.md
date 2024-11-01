@@ -13,26 +13,43 @@
 
 The `ExpandTemplateFile` command processes a template specified with one of the following methods:
 
-*   template file, such as a command file, time series product file, or HTML, but can be any text file
-*   input text
+*   template input file that includes FreeMarker syntax (see `InputFile` command parameter):
+    +   command file
+    +   time series product file
+    +   any text file
+*   or template text (see the `InputText` command parameter)
+*   with input data:
+    +   TSTool properties (automatically passed and see the `StringProperties` command parameter)
+    +   TSTool one-column tables (automatically passed and see the `TableColumnProperties` command parameter)
 
 and creates a fully-expanded:
 
-*   file
-*   and/or processor property.
+*   output file (see `OutputFile` command parameter)
+*   and/or processor property (see `OutputProperty` command parameter)
 
 Templates facilitate utilizing conditional logic, loops,
 and other dynamic processing functionality that is not provided directly
 by TSTool’s [`If`](../If/If.md) and [`For`](../For/For.md) commands.
-For example, a template can be used to repeat commands for multiple location identifiers.
+For example, a template can be used to automate processing multiple time series identifiers.
+
 One advantage of using the template approach is that problems in the expanded file are clearly indicated,
-whereas a problem in logic that is represented as a loop might be difficult to diagnose.
+whereas a problem in logic that is represented as a loop might be difficult to troubleshoot.
 
 The [FreeMarker software](https://freemarker.apache.org) is used to implement templates.
-Freemarker 2.3.15 is used prior to TSTool version 11.00.00,
-and Freemarker version 2.3.21 is used as of TSTool version 11.00.00.
+The following table lists the FreeMarker versions that are used with different versions of TSTool.
+
+**<p style="text-align: center;">
+TSTool and FreeMarker Versions
+</p>**
+
+| **TSTool Version** | **FreeMarker Version** |
+| -- | -- |
+| < 11.00.00 | 2.3.15 |
+| 11.00.00+ | 2.3.21 |
+| 14.9.7+ | 2.3.33 |
+
 Support for other templating engines such as Apache Velocity can be added if needed.
-Refer to the online Freemarker documentation for information about the markup language used to create templates.
+Refer to the online FreeMarker documentation for information about the markup language used to create templates.
 Because TSTool checks commands for errors and does not itself understand FreeMarker syntax,
 templates must be edited with a text editor outside the normal TSTool command editors.
 Attempts to edit a template command file in TSTool may result in error

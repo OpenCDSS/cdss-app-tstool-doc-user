@@ -22,7 +22,7 @@ Templates can include:
 Example use cases include:
 
 *   expand a command file using the template looping syntax,
-    which uses [Freemarker](https://freemarker.apache.org/) - an alternate
+    which uses [FreeMarker](https://freemarker.apache.org/) - an alternate
     approach is to use the [`For`](../../command-ref/For/For.md) command to iterate
 *   expanding a template time series product graph configuration file for specific time series
 *   expand web page content given an in put list such as stations or time series

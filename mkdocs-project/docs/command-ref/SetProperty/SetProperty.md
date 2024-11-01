@@ -1,6 +1,7 @@
 # TSTool / Command / SetProperty #
 
 *   [Overview](#overview)
+    +   [Nested Property Names](#nested-property-names)
     +   [Properties in Discovery Phase](#properties-in-discovery-phase)
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
@@ -21,15 +22,19 @@ The documentation for each command indicates which command parameters can be spe
 This command should not be confused with the [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command,
 which sets a property on specific time series.  The following functionality is provided:
 
+*   The property name can be defined:
+    +   as a literal string
+    +   use `${Property}` to dynamically create property names
 *   Set a property to a specified value, where the property can be a Boolean, String, DateTime, Double, or Integer type.
 *   Set a property to a special value such as empty string or other special values.
 *   Remove an existing property so that it is no longer available to the processor.
     Care should be taken to understand the implications of removing a property.
     For example, if the property is used in later commands, then removing will cause the processor to not find the property.
     It may be more appropriate, for example, to set a string property to an empty string rather than removing.
-*   Set a property by modifying a previous processor property using basic math manipulations.
-    In this case, specify the initial property value with `${Property}` and then use the ***Math*** tab parameters
-    to manipulate the initial value.
+*   Set a property by modifying a previous processor property using basic math manipulations:
+    +   Set the initial property name and value with `SetProperty` or another command.
+    +   Modify the previous value by specifying the property value with `${Property}` (to match the previous property name)
+        and then use the ***Math*** tab parameters to manipulate the previous value.
 
 After commands are run, the value of properties can be viewed in the TSTool ***Results / Properties*** tab,
 for example as shown below.
@@ -41,6 +46,17 @@ for example as shown below.
 **<p style="text-align: center;">
 Properties in the TSTool Results (<a href="../SetProperty-results.png">see full-size image</a>)
 </p>**
+
+### Nested Property Names ###
+
+Dynamic logic may require flexibility in assigning property names (and value when performing math).
+Use nested property names for a property name that depends on another property,
+such as a property specific to a time series or sequence of values in a [`For`](../For/For.md) loop,
+for example:
+
+*   `${${Property}xxx}`
+*   `${xxx${Property}}`
+*   `${xxx${Property}yyy${Property}zzz}`
 
 ### Properties in Discovery Phase ###
 
@@ -156,19 +172,19 @@ Command Parameters
 
 | **Tab** | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- | -- |
-| ***Set*** | `PropertyName`<br>**required** | The property name. | None - must be specified. |
-| ***Set*** | `PropertyType`| The property type, used for validation, one of:<br><ul><li>`Boolean` – a boolean</li><li>`DateTime` – a date/time</li><li>`Double` – a floating point number</li><li>`Integer` – an integer</li><li>`String` – a string</li></ul><br>DateTime objects can be specified with special syntax to use current time and modifiers on the DateTime.  See the [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command for more information. | None – must be specified when setting a new property, although is not needed when setting to null or removing.|
-| ***Set*** | `PropertyValue`|The value of the property, adhering to property type constraints.  Date/time properties should be specified using standard formats such as `YYYY-MM-DD hh:mm:ss`, to an appropriate precision.  Special date/time syntax is recognized, as shown in the above figure.  Global properties can be used with the `${Property}` syntax.|None – must be specified when setting a value.  The parameter is not needed when setting special values or removing the property. |
+| ***Set*** | `PropertyName`<br>**required** | The property name.  Can use `${Property}` syntax. | None - must be specified. |
+| | `PropertyType`| The property type, used for validation, one of:<br><ul><li>`Boolean` – a boolean</li><li>`DateTime` – a date/time</li><li>`Double` – a floating point number</li><li>`Integer` – an integer</li><li>`String` – a string</li></ul><br>DateTime objects can be specified with special syntax to use current time and modifiers on the DateTime.  See the [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command for more information. | None – must be specified when setting a new property, although is not needed when setting to null or removing.|
+| | `PropertyValue`|The value of the property, adhering to property type constraints.  Date/time properties should be specified using standard formats such as `YYYY-MM-DD hh:mm:ss`, to an appropriate precision.  Special date/time syntax is recognized, as shown in the above figure.  Global properties can be used with the `${Property}` syntax.|None – must be specified when setting a value.  The parameter is not needed when setting special values or removing the property. |
 | ***Environment Variable*** | `EnvironmentVariable` | The name of the environment variable to provide the value.  The `PropertyName` will be used to store the value. | |
 | ***Java Property*** | `JavaProperty` | The name of the Java property to provide the value.  The `PropertyName` will be used to store the value. | |
 | ***Special Values*** | `SetEmpty`|If specified as `True`, the String property will be set to an empty string.|The `PropertyValue` parameter will be used.|
-| ***Special Values*** | `SetNaN`|If specified as `True`, the Double property will be set to the special “not a number” (`NaN`) value.|The `PropertyValue` parameter will be used.|
-| ***Special Values*** | `SetNull`|If specified as True, the property will be set to null (not specified).|The PropertyValue parameter will be used.|
+| | `SetNaN`|If specified as `True`, the Double property will be set to the special “not a number” (`NaN`) value.|The `PropertyValue` parameter will be used.|
+| | `SetNull`|If specified as True, the property will be set to null (not specified).|The PropertyValue parameter will be used.|
 | ***Remove (Unset)*** | `RemoveProperty`|If specified as `True`, the property will be removed and will be unavailable to the processor.  Only user-defined properties can be removed (not important internal properties).|The `PropertyValue` parameter will be used.|
 | ***Math*** | `Add`|Value to add to the property value, can be specified using `${Property}`:<br><ul><li>Double or Integer property value will be incremented by `Add`.</li><li>String property value will have `Add` appended.</li><li>DateTime property value will be shifted forward in time by `Add` (e.g., `Add=1Day`).</li></ul>|No addition.|
-| ***Math*** | `Subtract`|Value to subtract from the property value, can be specified using `${Property}`:<br><ul><li>Double or Integer property value will be decremented by `Subtract`.</li><li>String property value will have `Subtract` removed for all occurrences.</li><li>DateTime property value will be shifted back in time by `Subtract` (e.g., `Subtract=1Day`).</li></ul>|No subtraction.|
-| ***Math*** | `Multiply`|Value to multiply the property value, can be specified using `${Property}`:<br><ul><li>Double or Integer property value will be multiplied by `Multiply.`</li></ul>|No multiplication.|
-| ***Math*** | `Divide`|Value to divide the property value, can be specified using `${Property}`:<br><ul><li>Double or Integer property value will be divided by `Divide`.  Dividing by zero will set the result to `NaN` for Double and null for Integer.|No division.|
+| | `Subtract`|Value to subtract from the property value, can be specified using `${Property}`:<br><ul><li>Double or Integer property value will be decremented by `Subtract`.</li><li>String property value will have `Subtract` removed for all occurrences.</li><li>DateTime property value will be shifted back in time by `Subtract` (e.g., `Subtract=1Day`).</li></ul>|No subtraction.|
+| | `Multiply`|Value to multiply the property value, can be specified using `${Property}`:<br><ul><li>Double or Integer property value will be multiplied by `Multiply.`</li></ul>|No multiplication.|
+| | `Divide`|Value to divide the property value, can be specified using `${Property}`:<br><ul><li>Double or Integer property value will be divided by `Divide`.  Dividing by zero will set the result to `NaN` for Double and null for Integer.|No division.|
 
 ## Examples ##
 
