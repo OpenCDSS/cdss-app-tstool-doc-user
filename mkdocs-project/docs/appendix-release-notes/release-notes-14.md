@@ -5,7 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
-*   [Changes in Version 14.9.7](#changes-in-version-1497)
+*   [Changes in Version 14.10.0](#changes-in-version-14100)
 *   [Changes in Version 14.9.6](#changes-in-version-1496)
 *   [Changes in Version 14.9.5](#changes-in-version-1495)
 *   [Changes in Version 14.9.4](#changes-in-version-1494)
@@ -45,33 +45,46 @@ Issues may also be included in other repositories that are TSTool components.
 
 ----------
 
-## Changes in Version 14.9.7 ##
+## Changes in Version 14.10.0 ##
 
-**Maintenance release to improve graph and table processing.**
+**Feature release to allow iteration over time series data points.**
 
-*   ![bug](bug.png) [14.9.7] Improve the dictionary edit tool,
+*   ![bug](bug.png) [14.10.0] Improve the dictionary edit tool,
     which is used to edit `key:value` data pairs:
     +   The editor was not always properly enabling/disabling buttons.
     +   The editor was not always properly enabling/disabling the "all" checkbox.
     +   The editor was not always displaying added rows.
-*   ![bug](bug.png) [14.9.7] Fix bugs and limitations in graphs:
+*   ![bug](bug.png) [14.10.0] Fix bugs and limitations in graphs:
     +   Fix so that an annotation data value that is a date/time string is automatically parsed.
     +   Fix so that expanding a command parameter in an annotation gracefully handles
         the case when the closing `}`-bracket of an annotation is not found.
     +   Enable mouse tracking for stacked area graphs.
-*   ![change](change.png) [14.9.7] Improve the "find" tool,
+*   ![change](change.png) [14.10.0] Improve the "find" tool,
         which is used to find substrings in lists, for example, commands and time series:
     +   The tool now explicitly handles case dependent/independent searches.
     +   The tool now allows selecting items in the found list and then selecting those items in the original list.
         This provides additional control, for example, when selecting time series to graph.
-*   ![change](change.png) [14.9.7] Enhance the processor:
+*   ![change](change.png) [14.10.0] Update the FreeMarker library to version 2.3.33,
+    which is used with the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command
+    and other template features.
+*   ![change](change.png) [14.10.0] Enhance the processor:
     +   Add the `TempDirPosix` processor property.
-*   ![change](change.png) [14.9.7] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
+*   ![change](change.png) [14.10.0] Update the [`For`](../command-ref/For/For.md) command:
+    +   Add the `PeriodStart`, `PeriodEnd`, and `PeriodIncrement` command parameters to iterate over a date/time period,
+        which allows time series data values to be processed individually.
+*   ![change](change.png) [14.10.0] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
     +   Allow the property value to start or end with white space characters.
-*   ![change](change.png) [14.9.7] Update the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command:
+    +   Allow the property name to contain `${Property}` syntax, which allows property names to be dynamic.
+    +   Add `LastSunday`, etc., to create date/time properties for recent days.
+*   ![change](change.png) [14.10.0] Update the [`SetPropertyFromTimeSeries`](../command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command:
+    +   Allow the property value to start or end with white space characters.
+    +   Allow the property name to contain `${Property}` syntax, which allows property names to be dynamic.
+    +   Add the `DateTime`, `PropertyNameForValue`, and `PropertyNameForFlag` parameters
+        to set a processor property to time series data values.
+*   ![change](change.png) [14.10.0] Update the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command:
     +   Allow the search and replace strings to start or end with white space characters.
     +   Allow the replacement string to be an empty string, to remove a matching string.
-*   ![change](change.png) [14.9.7] Update the [`WriteTableToMarkdown`](../command-ref/WriteTableToMarkdown/WriteTableToMarkdown.md) command:
+*   ![change](change.png) [14.10.0] Update the [`WriteTableToMarkdown`](../command-ref/WriteTableToMarkdown/WriteTableToMarkdown.md) command:
     +   Add the `NewlineReplacement` command parameter to handle line breaks embedded in table cell data.
 
 ## Changes in Version 14.9.6 ##
