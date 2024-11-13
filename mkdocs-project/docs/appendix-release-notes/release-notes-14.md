@@ -47,7 +47,7 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 14.10.0 ##
 
-**Feature release to allow iteration over time series data points.**
+**Feature release to allow iteration over time series data points and dynamic properties.**
 
 *   ![bug](bug.png) [14.10.0] Improve the dictionary edit tool,
     which is used to edit `key:value` data pairs:
@@ -59,6 +59,8 @@ Issues may also be included in other repositories that are TSTool components.
     +   Fix so that expanding a command parameter in an annotation gracefully handles
         the case when the closing `}`-bracket of an annotation is not found.
     +   Enable mouse tracking for stacked area graphs.
+*   ![bug](bug.png) [14.10.0] Fix [`AppendFile`](../command-ref/AppendFile/AppendFile.md) editor actions,
+    for example to properly handle selection of multiple input files.
 *   ![change](change.png) [14.10.0] Improve the "find" tool,
         which is used to find substrings in lists, for example, commands and time series:
     +   The tool now explicitly handles case dependent/independent searches.
@@ -69,6 +71,10 @@ Issues may also be included in other repositories that are TSTool components.
     and other template features.
 *   ![change](change.png) [14.10.0] Enhance the processor:
     +   Add the `TempDirPosix` processor property.
+*   ![change](change.png) [14.10.0] Enhance graphs:
+    +   The `Data` section of a time series product file previously allowed an `Enabled` property,
+        which can be used to disable a time series in output.
+        This functionality has been made more robust and will continue to be tested with various product configurations.
 *   ![change](change.png) [14.10.0] Update the [`For`](../command-ref/For/For.md) command:
     +   Add the `PeriodStart`, `PeriodEnd`, and `PeriodIncrement` command parameters to iterate over a date/time period,
         which allows time series data values to be processed individually.
@@ -86,6 +92,8 @@ Issues may also be included in other repositories that are TSTool components.
     +   Allow the replacement string to be an empty string, to remove a matching string.
 *   ![change](change.png) [14.10.0] Update the [`WriteTableToMarkdown`](../command-ref/WriteTableToMarkdown/WriteTableToMarkdown.md) command:
     +   Add the `NewlineReplacement` command parameter to handle line breaks embedded in table cell data.
+*   ![new](new.png) [14.10.0] Add the initial [`PDFMerge`](../command-ref/PDFMerge/PDFMerge.md) command to merge PDF files.
+    Additional development is necessary to fully test the software.
 
 ## Changes in Version 14.9.6 ##
 
