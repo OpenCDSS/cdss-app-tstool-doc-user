@@ -18,6 +18,7 @@ nav:
   - 'Files': processing/files/files.md
   - 'Networks': processing/networks/networks.md
   - 'Objects': processing/objects/objects.md
+  - 'Properties': processing/properties/properties.md
   - 'Spatial Data': processing/spatial-data/spatial-data.md
   - 'Spreadsheets': processing/spreadsheets/spreadsheets.md
   - 'Tables': processing/tables/tables.md
@@ -147,6 +148,7 @@ nav:
   - OpenCheckFile: command-ref/OpenCheckFile/OpenCheckFile.md
   - OpenDataStore: command-ref/OpenDataStore/OpenDataStore.md
   - OpenHydroBase: command-ref/OpenHydroBase/OpenHydroBase.md
+  - PDFMerge: command-ref/PDFMerge/PDFMerge.md
   - Plugin: command-ref/Plugin/Plugin.md
   - PrintTextFile: command-ref/PrintTextFile/PrintTextFile.md
   - ProcessRasterGraph: command-ref/ProcessRasterGraph/ProcessRasterGraph.md

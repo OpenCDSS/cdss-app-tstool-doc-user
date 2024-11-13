@@ -394,6 +394,7 @@ These commands provide general file handling capabilities.
 *   [`ListFiles`](ListFiles/ListFiles.md) - list files in a folder
 *   [`RemoveFile`](RemoveFile/RemoveFile.md) - remove a file
 *   [`TextEdit`](TextEdit/TextEdit.md) - edit a file
+*   [`PDFMerge`](PDFMerge/PDFMerge.md) - merge PDF files
 *   [`UnzipFile`](UnzipFile/UnzipFile.md) - unzip the contents of a zip file
 *   [`PrintTextFile`](PrintTextFile/PrintTextFile.md) - print a text file to printer
 

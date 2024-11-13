@@ -8,7 +8,7 @@ This documentation provides an overview of data that TSTool can process.
 
 ## Introduction ##
 
-TSTool provides a processor, which runs commands and manages the input and output for commands.
+TSTool provides a "command processor", which runs commands and manages the input and output for commands.
 Data are represented in objects that have the following characteristics:
 
 *   Objects have unique identifiers.
@@ -31,6 +31,7 @@ TSTool Object Types
 | [File](files/files.md) | A file is a text or binary file containing time series, tabular data, text, or other data. |
 | [Network](networks/networks.md) | A network is a linear or converging list of objects, for example rivers or river basins. |
 | [Object](objects/objects.md) | An object is a hierarchical representation of data.  TSTool is able to read objects from JSON files and process into tables. |
+| [Property](properties/properties.md) | A property is a "variable" that is is managed by the command processor. |
 | [Spatial data](spatial-data/spatial-data.md) | Spatial data include layers consisting of geographic shapes and attributes. |
 | [Spreadsheet](spreadsheets/spreadsheets.md) | TSTool is able to read and write time series and tables for Excel workbook files, which can contain one or more spreadsheets |
 | [Table](tables/tables.md) | A table is a two-dimensional representation of dataset with columns and rows of data cells. |

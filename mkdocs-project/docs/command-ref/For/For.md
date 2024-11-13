@@ -26,12 +26,13 @@ commands that support properties, using the `${Property}` notation.
 *   a list of time series and corresponding properties (see `TSList`, `TSID`, and `EnsembleID` parameters)
 
 `For` commands can be nested.
-Status messages for run mode are accumulated in each command (this update is occurring over time –
+Status messages for each run mode are accumulated in each command (this update is occurring over time –
 status messages for some commands may be cleared out each iteration).
-A limitation of using `For` with properties is that the command when edited may show time series
+
+The editor for `For` a command that uses properties may show time series
 identifiers and other command parameters as `${Property}` values,
 rather than actual data, because the values get expanded at run-time.
-This provides increased processing power but errors may not be evident until commands run.
+This provides increased processing power but errors may not be evident until the `For` command is run.
 
 Commands within a `For` block can be indented by selecting the commands,
 right clicking, and using the ***Indent - Right*** menu choice.
@@ -53,7 +54,7 @@ The following dialog is used to edit the command and illustrates the command syn
 ![For command editor for list iteration values](For_List.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a List for Iteration Values (<a href="../For_List.png">see full-size image</a>)
+`For` Command Editor for a List for Iteration Values (<a href="../For_List.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a sequence of numbers.
@@ -61,7 +62,7 @@ The following dialog is used to edit the command and illustrates the command syn
 ![For command editor for sequence of integers](For_Sequence.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a Sequence of Integers for Iteration Values (<a href="../For_Sequence.png">see full-size image</a>)
+`For` Command Editor for a Sequence of Integers for Iteration Values (<a href="../For_Sequence.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over table column values.
@@ -69,7 +70,7 @@ The following dialog is used to edit the command and illustrates the command syn
 ![For command editor for table](For_Table.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a Table for Iteration Values (<a href="../For_Table.png">see full-size image</a>)
+`For` Command Editor for a Table for Iteration Values (<a href="../For_Table.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a time period.
@@ -77,7 +78,7 @@ The following dialog is used to edit the command and illustrates the command syn
 ![For command editor for time period](For_TimePeriod.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a Time Period for Iteration Values (<a href="../For_TimePeriod.png">see full-size image</a>)
+`For` Command Editor for a Time Period for Iteration Values (<a href="../For_TimePeriod.png">see full-size image</a>)
 </p>**
 
 The following dialog is used to edit the command and illustrates the command syntax when iterating over a list of time series.
@@ -85,7 +86,7 @@ The following dialog is used to edit the command and illustrates the command syn
 ![For command editor for list of time series](For_TSList.png)
 
 **<p style="text-align: center;">
-`For` Command Editor Illustrating Using a List of Time Series (<a href="../For_TSList.png">see full-size image</a>)
+`For` Command Editor for a List of Time Series (<a href="../For_TSList.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -110,7 +111,7 @@ Command Parameters
 |***Table***|`TableID` | The table identifier, when specifying the iterator as a column from a table.  Can be specified with processor `${Property}`. | No default if table is used - required if table is used. |
 ||`TableColumn` | The table column name, when specifying the iterator as a column from a table. | No default if table is used - required if table is used. |
 ||`TablePropertyMap` | Specify the names of column names and corresponding processor property names to set.  This allows other commands to access the values of those properties using `${Property}` notation.  Specify using format:<br>`ColumnName1:PropertyName1,`<br>`ColumnName2:PropertyName2` | No default if table is used - required if table is used.  Only the iterator column value will be set as a property using `IteratorProperty`.|
-|***Time Period***|`PeriodStart` | Starting date/time when a time period is specified for iteration, using format `YYYY-MM-DD hh:mm:ss` in precision that is appropriate. Can use `${Property}` syntax. | No default if period is used. |
+|***Time Period***|`PeriodStart` | Starting date/time when a time period is specified for iteration, using format `YYYY-MM-DD hh:mm:ss` using a precision that is appropriate. Can use `${Property}` syntax. | No default if period is used. |
 ||`PeriodEnd` | Ending date/time when a time period is specified for iteration. Can use `${Property}` syntax. | No default if period is used. |
 ||`PeriodIncrement` | Increment for time period iterator, as a date/time interval (e.g., `Day`, `3Hour`). Can use `${Property}` syntax. | `Day`. |
 | ***TS List*** | `TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | If iterating time series, must be specified. |
