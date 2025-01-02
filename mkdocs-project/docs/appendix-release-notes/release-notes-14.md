@@ -83,7 +83,7 @@ Issues may also be included in other repositories that are TSTool components.
 *   ![change](change.png) [14.10.0] Update the [`For`](../command-ref/For/For.md) command:
     +   Add the `PeriodStart`, `PeriodEnd`, and `PeriodIncrement` command parameters to iterate over a date/time period,
         which allows time series data values to be processed individually.
-*   ![change](change.png) [14.10.0] Update the [`For`](../command-ref/ListFiles/ListFiles.md) command:
+*   ![change](change.png) [14.10.0] Update the [`ListFiles`](../command-ref/ListFiles/ListFiles.md) command:
     +   Add the `CountProperty` to set a property with the size of the output list,
 *   ![change](change.png) [14.10.0] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
     +   Allow the property value to start or end with white space characters.
