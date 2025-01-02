@@ -74,6 +74,7 @@ Command Parameters
 |`IncludeNames`|A pattern indicating names to include. The pattern is only checked for the name, not the leading path. Use `*` in the name for a wildcard.| All names will be included.|
 |`ExcludeNames`|A pattern indicating names to exclude. The pattern is only checked for the name, not the leading path. Use `*` in the name for a wildcard.| No names will be excluded.|
 |`TableID`<br>**required**|The identifier for the output table.  If the table does not exist, it will be created.  See also `Append`.|None - must be specified.|
+|`CountProperty`| The name of the property to set as the size of the output list. | No property is set. |
 |`Append`|Indicate whether list output should be appended to the table (`True`).  This allows multiple `ListFiles` commands to be used to create a larger list.|`False` - the table will contain only the current output list.|
 
 ## Examples ##

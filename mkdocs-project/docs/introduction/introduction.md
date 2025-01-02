@@ -492,24 +492,76 @@ In summary, if an alias is assigned to a time series, it will take precedence ov
 
 ### Time Series Properties ###
 
-Each time series has two types of properties,
-which can be accessed using `%`-descriptors (for example, see the
-[`SetPropertyFromTimeSeries`](../command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command `PropertyValue` parameter)
-and in some cases the `${ts:Property}` syntax.
-Time series properties are internally managed as:
+Time series properties are useful for managing metadata associated with a time series,
+which can be easier than looking up properties from a table or copying from processor properties.
+Time series properties can be viewed by right-clicking on a time series in the ***Results / Time Series*** area
+and then selecting ***Properties***.
+Time series properties are typically not available when editing commands because
+the properties are only set when commands are run in sequence.
+
+A time series property is defined in one of the following ways:
 
 *   Built-in properties that are common to all time series:
-    +   `alias` - alternative to time series identifier
-    +   `datatype` - data type such as `Streamflow`
-    +   `description` - time series description, often the description for a sensor or location
-    +   `interval` - data interval such as `IrregSecond` or `Day`
-    +   `tsid` - time series identifier
-    +   `units` - data units
-    +   more may be added in the future
+    +   Can be formatted into text using one-character % descriptors (e.g., `%A` for alias), as shown in the following table
+        (for example, see the [`SetPropertyFromTimeSeries`](../command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command `PropertyValue` parameter).
+    +   `${ts:property}` named properties, as shown in the following table.
 *   User-defined (dynamic) properties:
+    +   `${ts:property}` named properties, where `property` is user-specified.
     +   Any number of properties is allowed.
     +   Set by various commands including [`SetTimeSeriesProperty`](../command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md).
-    +   View using the TSTool ***Results / Time Series*** area.  Right-click and view ***Time Series Properties*** and then ***Properties***.
+    +   View using the TSTool ***Results / Time Series*** area.
+        Right-click on a time series and view ***Time Series Properties*** and then ***Properties***.
+
+The following table lists time series 
+
+**<p style="text-align: center;">
+Time Series Format Descriptors and Properties
+</p>**
+
+| **% Descriptor** | **Named Property Syntax** | **Object Type** | **Description** |
+| -- | -- | -- | -- |
+| `%A` | `${ts:alias}` | string | Alias |
+| `%b` | | string | Data interval base for interval time series (e.g., `Day` for `1Day`) |
+| `%D` | `${ts:description}` | string | Description |
+| `%F` | `${ts:tsid}` | string | Time series identifier (TSID). |
+| `%I` | `${ts:interval}` | string | Data interval (e.g., `IrregSecond`, `Day`, `1Day`) |
+| `%i` | | string | Input name when time series is read from a file. |
+| `%L` | | string | Location full part of the TSID. |
+| `%l` | | string | Location main part of the TSID, when delimited with a dash. |
+| `%m` | | integer | Data interval multiplier for interval time series (e.g., `1` for `1Day`) |
+| `%p` | | string | Data period formatted as ? |
+| | `${ts:periodstart}` | date/time | Data period start. |
+| | `${ts:periodend}`| date/time | Data period end. |
+| `%S` | | string | Data source full part of teh TSID, typically an agency or system abbreviation. |
+| `%s` | | string | Data source main part part of teh TSID when delimited with dash. |
+| `%U` | | string | Data units (e.g., `cfs`). |
+| `%T` | `${ts:datatype}` | string | Data type full part of the TSID (e.g., `Streamflow`). |
+| `%t` | | string | Data type main part of the TSID, when delimited with a dash. |
+| `%k` | | string | Data type sub part of the TSID, when delimited with a dash. |
+| `%u` | `${ts:units}` | string | Data units (e.g., `cfs`). |
+| `%w` | | string | Location sub part of the TSID, when delimited with a dash. |
+| `%x` | | string | Data source sub part of the TSID, when delimited with a dash. |
+| `%y` | | string | Location type. |
+| `%Z` | | string | Scenario. |
+| `%z` | | string | Sequence identifier, used with time series traces in an ensemble. |
+| `%%` | | string | Literal percent. |
+
+Some commands use the above properties to format other properties.
+For example, many commands allow a time series alias to be defined using the `Alias` command parameter.
+To provide flexibility, the alias can be defined dynamically using the above properties.
+Output files and other data may also be defined using time series properties,
+but only in cases where the scope is specific to a time series.
+Otherwise, the command cannot determine which time series is associated with properties.
+In most cases, the result of processing properties is a string,
+but in some cases an object of a certain type may be used
+(e.g., `${ts:periodstart}` is a date/time object that can be used when working with date/time.
+
+Time series properties using syntax `${ts:property}` can also be used in time series products
+to provide dynamic data, such as for graph titles.
+See the [TSView / Time Series Product File Reference](../appendix-tsview/tsview.md#time-series-product-file-reference),
+for a list of properties.
+Using properties in a time series product file may require editing the file directly
+because the product editor lists standard values.
 
 ### Time Series Data Flags ###
 

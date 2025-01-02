@@ -116,6 +116,8 @@ nav:
   - FreeObject: command-ref/FreeObject/FreeObject.md
   - FreeTable: command-ref/FreeTable/FreeTable.md
   - FTPGet: command-ref/FTPGet/FTPGet.md
+  - GeoMap: command-ref/GeoMap/GeoMap.md
+  - GeoMapProject: command-ref/GeoMapProject/GeoMapProject.md
   - If: command-ref/If/If.md
   - InsertTableColumn: command-ref/InsertTableColumn/InsertTableColumn.md
   - InsertTableRow: command-ref/InsertTableRow/InsertTableRow.md
