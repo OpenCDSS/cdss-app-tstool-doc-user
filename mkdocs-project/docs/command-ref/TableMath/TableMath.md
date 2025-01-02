@@ -44,6 +44,8 @@ The table output column values are computed as follows.
     and output will result from an automatic conversion:
     +   if a floating point number is in input (even if other input is an integer),
         the output will be floating point
+    +   use the `OutputType` command parameter to specify the output type,
+        for example as `long` to be more specific when the automatically-determined type of `integer` is incorrect
     +   the width and precision for column properties will be set to the maximum
         of the input column properties
 
@@ -84,7 +86,8 @@ Command Parameters
 |`Operator`<br>**required**|The operator to be applied as follows:<br>`Input1 Operator Input2 = Output`<br>For example: `Input1 * Input2 = Output`|None – must be specified.|
 |`Input2`|Second input column name, or a constant value to use as input, can be specified with `${Property}`.|Required for some operators.  Not required for `ToInteger`.|
 |`Output`<br>**required**|Output column name.  If the column is not found it will be added to the table using the same data type as the input column and will contain the results of processing, can be specified with `${Property}`.  The output column name can be the same as input to overwrite input. |None – must be specified.|
-|`NonValue`|The value to use in cases where an output result could not be computed (missing input, division by zero).  Null will result in blanks in output whereas NaN may be shown in some output products, depending on the specifications for the format.|Null|
+|`OutputType`|The output value's type.  Specify when the automatically-determined type is incorrect (e.g., `long` when `integer` might be the automatic type).<ul><li>`boolean` - boolean value (`true` or `false`)</li><li>`datetime` - date/time object</li><li>`double` - double precision floating point number (`4.94065645841246544e-324` to `1.79769313486231570e+308`)</li><li>`float` - floating point value (`1.40239846e-45` to `3.40282347e+38`)</li><li>`integer` - signed 32-bit integer (`-2147483648` to `2147483647`)</li><li>`long` - signed 64-bit integer (`-9223372036854775808` to `9223372036854775807`)</li><li>`short` - signed 16-bit integer (`-32768` to `32767`)</li><li>`string` - string (text)</li></ul>| Automatically-determined. |
+|`NonValue`|The value to use in cases where an output result could not be computed (missing input, division by zero).  Null will result in blanks in output whereas NaN may be shown in some output products, depending on the specifications for the format.| `null` |
 
 ### Supported Operators and Input ###
 

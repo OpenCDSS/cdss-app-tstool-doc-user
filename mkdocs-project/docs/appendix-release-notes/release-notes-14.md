@@ -59,8 +59,10 @@ Issues may also be included in other repositories that are TSTool components.
     +   Fix so that expanding a command parameter in an annotation gracefully handles
         the case when the closing `}`-bracket of an annotation is not found.
     +   Enable mouse tracking for stacked area graphs.
-*   ![bug](bug.png) [14.10.0] Fix [`AppendFile`](../command-ref/AppendFile/AppendFile.md) editor actions,
+*   ![bug](bug.png) [14.10.0] Fix the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command editor actions,
     for example to properly handle selection of multiple input files.
+*   ![change](change.png) [14.10.0] Add support for `${ts:periodstart}` and `${ts:periodend}`
+    time series properties.
 *   ![change](change.png) [14.10.0] Improve the "find" tool,
         which is used to find substrings in lists, for example, commands and time series:
     +   The tool now explicitly handles case dependent/independent searches.
@@ -75,25 +77,38 @@ Issues may also be included in other repositories that are TSTool components.
     +   The `Data` section of a time series product file previously allowed an `Enabled` property,
         which can be used to disable a time series in output.
         This functionality has been made more robust and will continue to be tested with various product configurations.
+*   ![change](change.png) [14.10.0] Update the [`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval.md) command:
+    +   Expand the `Alias` parameter only when in run mode.
+        The original alias value will be listed in command editors for following commands.
 *   ![change](change.png) [14.10.0] Update the [`For`](../command-ref/For/For.md) command:
     +   Add the `PeriodStart`, `PeriodEnd`, and `PeriodIncrement` command parameters to iterate over a date/time period,
         which allows time series data values to be processed individually.
+*   ![change](change.png) [14.10.0] Update the [`For`](../command-ref/ListFiles/ListFiles.md) command:
+    +   Add the `CountProperty` to set a property with the size of the output list,
 *   ![change](change.png) [14.10.0] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
     +   Allow the property value to start or end with white space characters.
     +   Allow the property name to contain `${Property}` syntax, which allows property names to be dynamic.
     +   Add `LastSunday`, etc., to create date/time properties for recent days.
+*   ![change](change.png) [14.10.0] Update the [`SetPropertyFromTable`](../command-ref/SetPropertyFromTimeSeries/SetPropertyFromTable.md) command:
+    +   Add the `Row` command parameter to match a specific row.
 *   ![change](change.png) [14.10.0] Update the [`SetPropertyFromTimeSeries`](../command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command:
     +   Allow the property value to start or end with white space characters.
     +   Allow the property name to contain `${Property}` syntax, which allows property names to be dynamic.
     +   Add the `DateTime`, `PropertyNameForValue`, and `PropertyNameForFlag` parameters
         to set a processor property to time series data values.
+*   ![change](change.png) [14.10.0] Update the [`TableMath`](../command-ref/TableMath/TableMath.md) command:
+    +   Add the `OuptutType` command parameter.
 *   ![change](change.png) [14.10.0] Update the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command:
     +   Allow the search and replace strings to start or end with white space characters.
     +   Allow the replacement string to be an empty string, to remove a matching string.
 *   ![change](change.png) [14.10.0] Update the [`WriteTableToMarkdown`](../command-ref/WriteTableToMarkdown/WriteTableToMarkdown.md) command:
     +   Add the `NewlineReplacement` command parameter to handle line breaks embedded in table cell data.
+*   ![new](new.png) [14.10.0] Add the initial
+    [`GeoMap`](../command-ref/GeoMap/GeoMap.md) and
+    [`GeoMapProject`](../command-ref/GeoMapProject/GeoMapProject.md)
+    commands to automate the creation of maps.
 *   ![new](new.png) [14.10.0] Add the initial [`PDFMerge`](../command-ref/PDFMerge/PDFMerge.md) command to merge PDF files.
-    Additional development is necessary to fully test the software.
+    Additional development is necessary to fully implement and test the command.
 
 ## Changes in Version 14.9.6 ##
 
