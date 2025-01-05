@@ -103,6 +103,9 @@ Issues may also be included in other repositories that are TSTool components.
     +   Allow the replacement string to be an empty string, to remove a matching string.
 *   ![change](change.png) [14.10.0] Update the [`WriteTableToMarkdown`](../command-ref/WriteTableToMarkdown/WriteTableToMarkdown.md) command:
     +   Add the `NewlineReplacement` command parameter to handle line breaks embedded in table cell data.
+    +   Add the `PrependText` and `PrependFile` parameters to prepend markdown content before the table.
+    +   Add the `AppendText` and `AppendFile` parameters to append markdown content after the table.
+    +   Remove the parameters for the schema file since the schema is more appropriate for data formats such as CSV.
 *   ![new](new.png) [14.10.0] Add the initial
     [`GeoMap`](../command-ref/GeoMap/GeoMap.md) and
     [`GeoMapProject`](../command-ref/GeoMapProject/GeoMapProject.md)
