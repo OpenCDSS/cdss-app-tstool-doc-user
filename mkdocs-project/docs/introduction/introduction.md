@@ -518,17 +518,17 @@ The following table lists time series
 Time Series Format Descriptors and Properties
 </p>**
 
-| **% Descriptor** | **Named Property Syntax** | **Object Type** | **Description** |
+| **% Descriptor** | **Named Property Syntax**&nbsp;&nbsp;&nbsp;&nbsp; | **Object Type** | **Description** |
 | -- | -- | -- | -- |
-| `%A` | `${ts:alias}` | string | Alias |
-| `%b` | | string | Data interval base for interval time series (e.g., `Day` for `1Day`) |
-| `%D` | `${ts:description}` | string | Description |
+| `%A` | `${ts:alias}` | string | Alias. |
+| `%b` | | string | Data interval base for interval time series (e.g., `Day` for `1Day`). |
+| `%D` | `${ts:description}` | string | Description. |
 | `%F` | `${ts:tsid}` | string | Time series identifier (TSID). |
-| `%I` | `${ts:interval}` | string | Data interval (e.g., `IrregSecond`, `Day`, `1Day`) |
+| `%I` | `${ts:interval}` | string | Data interval (e.g., `IrregSecond`, `Day`, `1Day`). |
 | `%i` | | string | Input name when time series is read from a file. |
 | `%L` | | string | Location full part of the TSID. |
 | `%l` | | string | Location main part of the TSID, when delimited with a dash. |
-| `%m` | | integer | Data interval multiplier for interval time series (e.g., `1` for `1Day`) |
+| `%m` | | integer | Data interval multiplier for interval time series (e.g., `1` for `1Day`). |
 | `%p` | | string | Data period formatted as ? |
 | | `${ts:periodstart}` | date/time | Data period start. |
 | | `${ts:periodend}`| date/time | Data period end. |
@@ -763,7 +763,7 @@ By default, the entire time series will be read unless the
 [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) commands have been specified.
 
 1.  Read data.  If the input type, and if needed, input name, are specified in the identifier,
-    they are used to read the data.   Time series properties such as units are assigned.
+    they are used to read the data.  Time series properties such as units are assigned.
 2.  Compute data limits.  The time series data limits are computed because they may be needed later for filling.
     This information includes the long-term monthly averages.  These limits are referred to as the original data limits.
 3.  Save time series in processor.  The time series that are read or created are managed by the processor,
