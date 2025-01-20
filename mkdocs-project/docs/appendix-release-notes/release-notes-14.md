@@ -80,16 +80,28 @@ Issues may also be included in other repositories that are TSTool components.
 *   ![change](change.png) [14.10.0] Update the [`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval.md) command:
     +   Expand the `Alias` parameter only when in run mode.
         The original alias value will be listed in command editors for following commands.
+*   ![change](change.png) [14.10.0] Update the
+    [`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command:
+    +   Add the `ExcludeProperties` parameter to exclude dynamic properties from the copy.
+    +   Add the `ExcludeBuiltInProperties` parameter to exclude built-in properties from the copy.
+    +   Remove the `TableOutputColumns` parameter (use the `NameMap` parameter instead).
 *   ![change](change.png) [14.10.0] Update the [`For`](../command-ref/For/For.md) command:
     +   Add the `PeriodStart`, `PeriodEnd`, and `PeriodIncrement` command parameters to iterate over a date/time period,
         which allows time series data values to be processed individually.
+*   ![change](change.png) [14.10.0] Update the [`If`](../command-ref/If/If.md) command:
+    +   Add the `CompareAsVersions` parameter to compare strings as versions,
+        which allows workflows to more easily handle logic for different software or API versions.
+    +   Add the `PropertyIsDefinedAndIsNotEmpty` parameter to provide more granular control
+        over property checks.
 *   ![change](change.png) [14.10.0] Update the [`ListFiles`](../command-ref/ListFiles/ListFiles.md) command:
     +   Add the `CountProperty` to set a property with the size of the output list,
 *   ![change](change.png) [14.10.0] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
     +   Allow the property value to start or end with white space characters.
     +   Allow the property name to contain `${Property}` syntax, which allows property names to be dynamic.
     +   Add `LastSunday`, etc., to create date/time properties for recent days.
-*   ![change](change.png) [14.10.0] Update the [`SetPropertyFromTable`](../command-ref/SetPropertyFromTimeSeries/SetPropertyFromTable.md) command:
+*   ![change](change.png) [14.10.0] Update the [`SetPropertyFromTable`](../command-ref/SetPropertyFromTable/SetPropertyFromTable.md) command:
+    +   Improve warnings when a column is not found for the `ColumnIncludeFilters` and `ColumnExcludeFilters` parameters.
+    +   Add the `IgnoreCase` command parameter to provide control over filter comparisons.
     +   Add the `Row` command parameter to match a specific row.
 *   ![change](change.png) [14.10.0] Update the [`SetPropertyFromTimeSeries`](../command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command:
     +   Allow the property value to start or end with white space characters.
