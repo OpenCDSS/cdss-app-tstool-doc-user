@@ -24,6 +24,10 @@ This command is similar to the [`ProcessTSProduct`](../ProcessTSProduct/ProcessT
 but provides features specific to the raster graph format.
 See the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
 documentation for background on time series product files and editing graphs.
+The time series product for a raster graph uses a graph (sub-product) with `GraphType=Raster`.
+If necessary, create a template time series product file and use the 
+[`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command
+to handle a variable number of time series.
 
 A raster graph is a visual representation of
 time series that emphasizes trends and patterns using colored "pixels".
@@ -36,10 +40,10 @@ The command creates output in two formats depending on whether a single or multi
 
 Viewing a single time series command is enabled for the following intervals:
 
-*  month (see [Single Month Interval Time Series](#single-month-interval-time-series))
-*  day (see [Single Day Interval Time Series](#single-day-interval-time-series))
-*  1-hour (see [Single Hour Interval Time Series](#single-hour-interval-time-series))
-*  N-minute (see [Single Minute Interval Time Series](#single-minute-interval-time-series))
+*   month (see [Single Month Interval Time Series](#single-month-interval-time-series))
+*   day (see [Single Day Interval Time Series](#single-day-interval-time-series))
+*   1-hour (see [Single Hour Interval Time Series](#single-hour-interval-time-series))
+*   N-minute (see [Single Minute Interval Time Series](#single-minute-interval-time-series))
 
 For example, the following figure illustrates a raster graph
 for a daily maximum temperature time series.
@@ -356,7 +360,7 @@ ProcessRasterGraph(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--------------|-----------------|-----------------|
 |`TSProductFile`|The time series product file to process.  The path to the file can be absolute or relative to the working directory.  Can be specified with `${Property}`.  The time series product file should define the following properties:<ul><li>`GraphType` - specify as `Raster` for the `[SubProduct #]` property.</li><li>`SymbolTablePath` - specify as a `[SsubProduct #]`property for multiple time series or `[Data #.#]` property for single time series, indicating the path to the color table (see the [Time Series Product File - Symbol Tables](../../appendix-tsview/tsview.md#time-series-product-file-symbol-tables) documentation for the format specification).  The property currently must be manually added to the time series product file after saving from the TSTool graph view.  If not specified in the product file, a default symbol table will be used, which may not be appropriate for optimal data visualization.</li></ul> | None – must be specified.|
 |`RunMode`|Indicate the run mode to process the product:<ul><li>`BatchOnly` – indicates that the product should only be processed in batch mode.</li><li>`GUIOnly` – indicates that the product should only be processed when the TSTool GUI is used (useful when Preview is set to Preview).</li><li>`GUIAndBatch` – indicates that the product should be processed in batch and GUI mode.</li></ul>|None – must be specified.|
@@ -364,6 +368,7 @@ Command Parameters
 |`OutputFile`|The absolute or relative path to an output file.  Use this parameter with `View=False` to automate image processing.  If the filename ends in “jpg”, a JPEG image file will be produced.  If the filename ends in “png”, a PNG file will be produced (recommended).  Can be specified with `${Property}`. |Graph file will not be created.|
 |`VisibleStart`|The starting date/time to zoom for the initial (and image file) graph.|Full period is visible.|
 |`VisibleEnd`|The ending date/time to zoom for the initial (and image file) graph.|Full period is visible.|
+|`CommandStatusProperty`|The name of the property to set as the command run status: `Success`, `Warning`, `Failure`.  This can be used to implement error handling in a workflow. | |
 
 It is envisioned that in the future, command parameters will implemented to:
 

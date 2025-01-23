@@ -59,18 +59,18 @@ Issues may also be included in other repositories that are TSTool components.
     +   Fix so that expanding a command parameter in an annotation gracefully handles
         the case when the closing `}`-bracket of an annotation is not found.
     +   Enable mouse tracking for stacked area graphs.
+*   ![bug](bug.png) [14.10.0] Enable nested properties:
+    +   Property references like `${${PropertyInner}_SomeText}` are now allowed,
+        which is necessary for dynamic property names.
 *   ![bug](bug.png) [14.10.0] Fix the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command editor actions,
     for example to properly handle selection of multiple input files.
 *   ![change](change.png) [14.10.0] Add support for `${ts:periodstart}` and `${ts:periodend}`
-    time series properties.
+    time series properties, and add `${ts:property}` choices to time series alias choices.
 *   ![change](change.png) [14.10.0] Improve the "find" tool,
         which is used to find substrings in lists, for example, commands and time series:
     +   The tool now explicitly handles case dependent/independent searches.
     +   The tool now allows selecting items in the found list and then selecting those items in the original list.
         This provides additional control, for example, when selecting time series to graph.
-*   ![change](change.png) [14.10.0] Update the FreeMarker library to version 2.3.33,
-    which is used with the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command
-    and other template features.
 *   ![change](change.png) [14.10.0] Enhance the processor:
     +   Add the `TempDirPosix` processor property.
 *   ![change](change.png) [14.10.0] Enhance graphs:
@@ -84,7 +84,15 @@ Issues may also be included in other repositories that are TSTool components.
     [`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command:
     +   Add the `ExcludeProperties` parameter to exclude dynamic properties from the copy.
     +   Add the `ExcludeBuiltInProperties` parameter to exclude built-in properties from the copy.
-    +   Remove the `TableOutputColumns` parameter (use the `NameMap` parameter instead).
+    +   ![remove](remove.png) Remove the `TableOutputColumns` parameter (use the `NameMap` parameter instead).
+*   ![change](change.png) [14.10.0] Update the [`DeselectTimeSeries`](../command-ref/DeselectTimeSeries/DeselectTimeSeries.md) command:
+    +   Change so that if no time series are found, the `SelectedCountProperty` and `UnselectedCountProperty` values are set to `0`.
+        Previously an error occurred without setting the values.
+*   ![change](change.png) [14.10.0] Update the [`ExpandTemplateFile`](../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command:
+    +   Pass properties to FreeMarker as a dictionary (map) named `propertymap` with all processor properties as key/value pairs,
+        which allows nested properties to be processed.
+        This is in addition to passing individual properties.
+    +   Update the FreeMarker library to version 2.3.33 (the library is also used in other template features).
 *   ![change](change.png) [14.10.0] Update the [`For`](../command-ref/For/For.md) command:
     +   Add the `PeriodStart`, `PeriodEnd`, and `PeriodIncrement` command parameters to iterate over a date/time period,
         which allows time series data values to be processed individually.
@@ -95,6 +103,17 @@ Issues may also be included in other repositories that are TSTool components.
         over property checks.
 *   ![change](change.png) [14.10.0] Update the [`ListFiles`](../command-ref/ListFiles/ListFiles.md) command:
     +   Add the `CountProperty` to set a property with the size of the output list,
+*   ![change](change.png) [14.10.0] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
+    +   Add the `CommandStatusProperty` parameter to set the exit status of the command,
+        used to detect when output could not be created (e.g., no time series data).
+    +   Improve error handling if no time series are available for a graph.
+*   ![change](change.png) [14.10.0] Update the [`ProcessTSProduct`](../command-ref/ProcessTSProduct/ProcessTSProduct.md) command:
+    +   Add the `CommandStatusProperty` parameter to set the exit status of the command,
+        used to detect when output could not be created (e.g., no time series data).
+    +   Improve error handling if no time series are available for a graph.
+*   ![change](change.png) [14.10.0] Update the [`SelectTimeSeries`](../command-ref/SelectTimeSeries/SelectTimeSeries.md) command:
+    +   Change so that if no time series are found, the `SelectCountProperty` value is set to `0`.
+        Previously an error occurred without setting the value.
 *   ![change](change.png) [14.10.0] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
     +   Allow the property value to start or end with white space characters.
     +   Allow the property name to contain `${Property}` syntax, which allows property names to be dynamic.
@@ -109,7 +128,7 @@ Issues may also be included in other repositories that are TSTool components.
     +   Add the `DateTime`, `PropertyNameForValue`, and `PropertyNameForFlag` parameters
         to set a processor property to time series data values.
 *   ![change](change.png) [14.10.0] Update the [`TableMath`](../command-ref/TableMath/TableMath.md) command:
-    +   Add the `OuptutType` command parameter.
+    +   Add the `OutputType` command parameter.
 *   ![change](change.png) [14.10.0] Update the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command:
     +   Allow the search and replace strings to start or end with white space characters.
     +   Allow the replacement string to be an empty string, to remove a matching string.

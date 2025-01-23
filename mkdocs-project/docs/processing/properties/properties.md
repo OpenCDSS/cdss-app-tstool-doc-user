@@ -8,6 +8,7 @@ This documentation provides information about processing properties.
 *   [Commands](#commands)
 *   [TSTool User Interface](#tstool-user-interface)
 *   [Examples](#examples)
+*   [See Also](#see-also)
 
 ---------------------
 
@@ -15,18 +16,19 @@ This documentation provides information about processing properties.
 
 TSTool can automate processing "properties",
 which are values that can be set to control processing logic and can be included in output.
-Some commands are available to set and manipulate properties.
+Commands are available to set and manipulate properties.
 Other commands set properties to describe command output,
 for example the number of rows in a table.
 
-Programming languages typically uses syntax similar to:
+Programming languages typically use syntax similar to:
 
 ```
 Variable = Value
 ```
 
 However, because the TSTool command processor does its work using commands,
-commands like [`SetProperty`](../../command-ref/SetProperty/SetProperty.md) are used to set a command processor property value.
+commands like [`SetProperty`](../../command-ref/SetProperty/SetProperty.md) are used to set a command processor property value
+using command parameters.
 
 ### Command Processor Properties ###
 
@@ -46,31 +48,31 @@ Each property is defined by the following:
 *   Value - the value for the property:
     +   A text representation during editing and in command files.
     +   Internally, an object created from the text of the corresponding type.
-    +   Special values such as `NaN` (not a number), null, and special characters (newline, etc.) are supported by some commands.
+    +   Special values such as `NaN` (not a number), `null` (not defined), and special characters (newline, etc.) are supported by some commands.
 
 Properties can be referenced in command parameters and input data using the syntax:
 
 *   `${Property}`
     +   simple property reference
-*  `${{Property}Something`
+*  `${{Property}Something}`
     +   nested property where the name depends on another property
 
 If a property name cannot be matched, the original `${Property}` text is included in output as a visual indicator that the property is not defined.
 
 Commands like [`ExpandTemplateFile`](../../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) and
-[`TextEdit`](../../command-ref/TextEdit/TextEdit.md) can replace `{Property}` with the value.
+[`TextEdit`](../../command-ref/TextEdit/TextEdit.md) can replace `${Property}` with the property value.
 
 ### Time Series, Table, and other Properties ###
 
 In addition to command processor properties, objects may also have properties.
-For example, each time series has a list of built-in properties and user-defined properties.
+For example, each time series object has a list of built-in properties and user-defined properties.
 Each table also has a list of properties.
 Object-scope properties can be used to set command processor properties
 (e.g., using the [`SetPropertyFromTimeSeries`](../../command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command),
 and command processor properties can be set in objects
 (e.g., using the [`SetTimeSeriesProperty`](../../command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md) command using `${Property}`).
 
-In some cases, special notation is used to avoid confusion between the different properties.
+In some cases, special notation is used to avoid confusion between the different properties by indicating the scope of a property.
 For example, `${ts:TimeSeriesProperty}` can be used with some commands to retrieve a time series property
 whereas `${Property}` is used for command processor properties.
 
@@ -93,3 +95,11 @@ Use the ***Results / Properties*** tab for a list of properties created by comma
 ## Examples ##
 
 See the ***Examples*** section of command documentation.
+
+## See Also ##
+
+*   [`ExpandTemplateFile`](../../command-ref/ExpandTemplateFile/ExpandTemplateFile.md) command
+*   [`SetProperty`](../../command-ref/SetProperty/SetProperty.md) command
+*   [`SetPropertyFromTimeSeries`](../../command-ref/SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command
+*   [`SetTimeSeriesProperty`](../../command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md) command
+*   [`TextEdit`](../../command-ref/TextEdit/TextEdit.md) command
