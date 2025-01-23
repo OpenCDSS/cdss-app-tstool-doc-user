@@ -1730,6 +1730,7 @@ Subproduct (Graph) Properties
 |`LeftYAxisLabelFontStyle`|Left y-axis labels font style (see Product `MainLabelFontStyle`).|`Plain`|
 |`LeftYAxisLabelPrecision`|If numeric data, the number of digits after the decimal point in labels.|Automatically determined from graph type and/or data units.|
 |`LeftYAxisLabel1000Separator`|The character to use for number 1000’s separator:<br><ul><li>`None` – do not use a separator</li><li>`,` – use comma as separator</li><li>`.` – use period as separator</li><li>Space – use a space as separator</li></ul><br>In the future a locale setting may be added.|`None`|
+|`LeftYAxisLegendPosition`|Position of the left Y-axis legend relative to the graph:  `Bottom`, `InsideLowerLeft`, `InsideLowerRight`, `InsideUpperLeft`, `InsideUpperRight`, `Left`, `None`, `Right`.|`Bottom`|
 |`LeftYAxisMajorGridColor`|Color to use for the major grid.  See the [Color Specification](#time-series-product-file-color-specification) section.|Most graph types automatically set to `lightgray`.|
 |`LeftYAxisMajorTickColor`|Color to use for the major ticks.  See the [Color Specification](#time-series-product-file-color-specification) section.|Typically `None` because grid is used instead.|
 |`LeftYAxisMax`|Maximum value for the left Y-Axis.|`Auto`, automatically determined. If the actual data exceed the value, the property will be ignored.|
@@ -1746,7 +1747,7 @@ Subproduct (Graph) Properties
 |`LegendFontName`|Name of font for legend (see Product `MainTitleFontName`).|`Arial`|
 |`LegendFontSize`|Legend font size, points.|`10`|
 |`LegendFormat`|The legend format is composed of literal characters and/or time series data format specifiers, as follows.|`Auto`, which uses `Description`, `Identifier`, `Units`, `Period`|No legend will be displayed.<br><ul><li>`${ts:Property}` - The specified time series property will be inserted as a string.</li><li>`%%` - Literal percent.</li><li>`%A` - Time series alias.</li><li>`%D` - Description (e.g., `RED RIVER BELOW MY TOWN`).</li><li>`%F` - Full time series identifier (e.g., `XX_FREE.USGS.QME.24HOUR.Trace1`).</li><li>`%I` - Full interval part of the identifier (e.g., `24Hour`).</li><li>`%b` - Base part of the interval (e.g., `Hour`).</li><li>`%m` - Multiplier part of the interval (e.g., `24`).</li><li>`%L` - Full location part of the identifier (e.g., `XX_FREE`).</li><li>`%l` - Main part of the location (e.g., `XX`).</li><li>`%w` - Sub-location (e.g., `FREE`).</li><li>`%S` - The full source part of the identifier (e.g., `USGS`).</li><li>`%s` - Main data source (e.g., `USGS`).</li><li>`%x` - Sub-source (reserved for future use).</li><li>`%T` - Full data type (e.g., `QME`).</li><li>`%t` - Main data type.</li><li>`%k` - Sub-data type.</li><li>`%U` - Data units (e.g., `CFS`).</li><li>`%z` - Sequence number (used with traces).</li><li>`%Z` - Scenario part of identifier (e.g., `Trace1`).|Blank|
-|`LegendPosition`|Position of the legend relative to the graph:  `Bottom`, `InsideLowerLeft`, `InsideLowerRight`, `InsideUpperLeft`, `InsideUpperRight`, `Left`, `None`, `Right`.|`Bottom`|
+|`LegendPosition`|Position of the legend relative to the graph.  This has been replaced with `LeftYAxisLegendPosition` and `RightYAxisLegendPosition`.  Previously-recognized values include:  `Bottom`, `InsideLowerLeft`, `InsideLowerRight`, `InsideUpperLeft`, `InsideUpperRight`, `Left`, `None`, `Right`.|`Bottom`|
 |`MainTitleFontName`|Name of font to use for graph main title (see Product `MainTitleFontName`).|`Arial`|
 |`MainTitleFontSize`|Size, in points, for graph main title.|`10`|
 |`MainTitleFontStyle`|Graph main title font style (see Product `MainTitleFontStyle`).|`Plain`|
@@ -1761,6 +1762,7 @@ Subproduct (Graph) Properties
 |`RightYAxisLabelFontName`|Name of font for right y-axis labels (see Product `MainLabelFontName`).|`Arial`|
 |`RightYAxisLabelFontSize`|Right y-axis labels font size, points.|`10`|
 |`RightYAxisLabelFontStyle`|Right y-axis labels font style (see Product `MainLabelFontStyle`).|`Plain`|
+|`RightYAxisLegendPosition`|Position of the right Y-axis legend relative to the graph:  `Bottom`, `InsideLowerLeft`, `InsideLowerRight`, `InsideUpperLeft`, `InsideUpperRight`, `Left`, `None`, `Right`.|`Bottom`|
 |`RightYAxisTitlePosition`|Position of the right y-axis title:  `AboveAxis`, `None`, or `RightOfAxis`.|`None`|
 |`RightYAxisTitleRotation`|Clockwise rotation from horizontal for y-axis title.  Typical values are `0` for horizontal and `90` for vertical.|`0`|
 |`RightYAxisMajorGridColor`|Color to use for the major grid.  See the [Color Specification](#time-series-product-file-color-specification) section.|`None`|

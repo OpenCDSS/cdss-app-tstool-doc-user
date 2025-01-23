@@ -4,6 +4,11 @@
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
 *   [Examples](#examples)
+    *   [Example Using Simple Variable Assignment](#example-using-simple-variable-assignment)
+    *   [Example of Passing Time Series Processor Properties to Templates](#example-of-passing-time-series-processor-properties-to-templates)
+    *   [Example Using a One-Column Table for a List for Looping](#example-using-a-one-column-table-for-a-list-for-looping)
+    *   [Example of Expanding a Template to a Processor Property](#example-of-expanding-a-template-to-a-processor-property)
+    *   [Example of Using `ExpandTemplateFile` in a Loop to Expand Multiple Files](#example-of-using-expandtemplatefile-in-a-loop-to-expand-multiple-files)
 *   [Troubleshooting](#troubleshooting)
 *   [See Also](#see-also)
 
@@ -44,6 +49,8 @@ TSTool and FreeMarker Versions
 
 | **TSTool Version** | **FreeMarker Version** |
 | -- | -- |
+| >= 14.10.00 | 2.3.33 |
+| >= 11.00.00 | 2.3.21 |
 | < 11.00.00 | 2.3.15 |
 | 11.00.00+ | 2.3.21 |
 | 14.9.7+ | 2.3.33 |
@@ -68,13 +75,22 @@ For example, a FreeMarker warning about line 21 would actually be line 20 in the
 FreeMarker messages may be difficult to interpret.
 Common errors include variable names spelled incorrectly or incorrect FreeMarker syntax.
 
-The following information is automatically passed from TSTool to the `ExpandTemplateFile` command:
+The following data are automatically passed from TSTool to the `ExpandTemplateFile` command:
 
-*   Properties set with the [`SetProperty`](../SetProperty/SetProperty.md) command are passed to the template processor.
+*   **Individual processor properties:** Properties set with the [`SetProperty`](../SetProperty/SetProperty.md) command are passed to the template processor.
     Consequently, the property names can be referenced with `${Property}` in
     the template without using a FreeMarker assign command.
     See also the `StringProperties` command parameter.
-*   One-column tables are passed as FreeMarker lists,
+*   **Processor properties as a dictionary:** Properties set with the [`SetProperty`](../SetProperty/SetProperty.md) command are
+    individually passed to the template processor as described above.
+    As of TSTool 14.10.0, nested properties can be defined in TSTool as in `${${InnerProperty}_OutputProperty}`.
+    This is useful, for example, when naming a property based on a group, location, data type, etc.
+    However, FreeMarker does not know how to process nested properties.
+    FreeMarker does allow using dictionaries, which can be used to handle nested properties.
+    The `ExpandTemplateFile` command passes all defined processor properties as a dictionary named `propertymap`.
+    The name of the property can be constructed using a FreeMarker `<#assign propertyname = dynamicproperty + "_someconstant">` statement.
+    Then reference the value in the template as `${propertymap[propertyname]}`.
+*   **One-column tables:** One-column tables are passed as FreeMarker lists,
     using the table identifier (`TableID`) as the list property name.
     Null values in the table are passed as an empty string so that list have the correct number of items for iteration.
     Use the [`CopyTable`](../CopyTable/CopyTable.md) command to create a one-column

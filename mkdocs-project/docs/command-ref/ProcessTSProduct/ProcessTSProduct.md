@@ -24,15 +24,15 @@ For example, the following sequence of actions can be used to define and use tim
     The time series identifiers and/or aliases will be referenced in the time series product.
 2.  Interactively view a graph (e.g., ***Results / Graph – Line***) and edit
     its properties by right clicking on the graph and selecting
-    the Properties choice (e.g., set titles and legend properties).
+    the ***Properties*** choice (e.g., set titles and legend properties).
 3.  Save the graph as a time series product from the graph window
     using the ***Save / Time Series Product*** choice.
-    Typically the product is saved in a location close to the command file.
+    The product is typically saved in a location close to the command file.
     An example time series product file is shown below.
 4.  Add a `ProcessTSProduct` command to the original commands to
     allow the product to be created automatically.
     Select the time series product file created in the previous step.
-5.  Save the commands in a file (e.g., named `stations.TSTool`) so that they can be run again.
+5.  Save the commands in a file (e.g., named `stations.tstool`) so that they can be run again.
     The command file and time series product definition files must be used consistently
     (e.g., the time series identifiers and directory paths must be consistent).
 
@@ -63,7 +63,7 @@ If the product does not appear as intended, especially for complicated products,
 it may be necessary to edit the file and make the following corrections:
 
 * Specify `Color` or other properties so that they are explicitly set and not defaulted.
-* Verify that file paths in `TSID` properties are valid for the machine
+* Verify that file paths in `TSID` properties are valid
 (may need to convert absolute paths to relative paths).
 
 Time series identifiers in the product file are used as follows:
@@ -71,15 +71,17 @@ Time series identifiers in the product file are used as follows:
 *   If the time series are in TSTool’s ***Results*** area, the time series will be used without rereading.
 *   Otherwise, the `TSID` is used to read the time series and must therefore
     contain enough information to locate and read the time series,
-    such as the `~InputType~InputName` information on at the end of the `TSID`.
+    such as the `~DataStore` or `~InputType~InputName` information at the end of the `TSID`.
 
 If the `TSAlias` property is found in the product file,
-then the time series corresponding to the alias must be processed
-by a command file and be available in TSTool’s ***Results*** area.
+then the time series corresponding to the alias must be provided
+by a command prior to the `ProcessTSProduct` command and must be available in TSTool’s ***Results*** area.
 
 It is also possible to create a template time series product file and use the
 [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command to automate
 creation of large numbers of graphs, for example to create images for a website.
+If the time series product file includes `#@template`,
+the time series product file will automatically be expanded before being processed.
 
 ### Editing Time Series ###
 
@@ -87,6 +89,9 @@ The `ProcessTSProduct` command's editor dialog ***Editing*** tab is used to set 
 default save file for time series edits.
 This is used by the graph view to allow saving the results of editing.
 The file can then be loaded into a database or used in a workflow.
+
+Editing features are used when iteratively editing data and rerunning a command file,
+for example when calibrating a model.
 
 ## Command Editor ##
 
@@ -137,7 +142,7 @@ After using the above dialog to edit the command, the time series product can be
 2.  Load and run the command file in one step: Use the ***Run / Process TSProduct File*** menus to select and process the product file.
     The time series must be in the ***Results*** area or must be specified with enough information in the product file to read the time series.
 3.  Run TSTool in batch mode by specifying an output file with `OutputFile` (and optionally changing the `RunMode` parameter to `BatchOnly`) using:<br>
-    `tstool –commands commands.TSTool`<br>
+    `tstool –commands commands.tstool`<br>
     The working directory will be set to the directory for the commands file and output will be relative to that directory.
 
 ## Command Syntax ##
@@ -159,6 +164,7 @@ Command Parameters
 ||`OutputFile`|The absolute or relative path to an output file.  Use this parameter with `View=False` to automate image processing, can be specified using processor `${Property}`.  The type of output depends on the file extension:<ul><li>`.jpg` - JPEG image file</li><li>`.png` - PNG image file (recommended)</li><li>`.svg` - SVG image file</li></ul>.  | Graph output file will not be created. |
 ||`VisibleStart`|The starting date/time to zoom for the initial (and image file) graph.  Can be specified using processor `${Property}`.|Full period is visible.|
 ||`VisibleEnd`|The ending date/time to zoom for the initial (and image file) graph.  Can be specified using processor `${Property}`.|Full period is visible.|
+||`CommandStatusProperty`|The name of the property to set as the command run status: `Success`, `Warning`, `Failure`.  This can be used to implement error handling in a workflow. | |
 |***Output Product***|`OutputProductFile`|The absolute or relative path to output product file.  Use this parameter to create a fully-expanded time series product, for example to hand off the product configuration to other visualization software.  Can be specified using processor `${Property}`. | |
 ||`OutputProductFormat`| The format for the file specified with `OutputProductFile`:<ul><li>`JSON` for JSON</li><li>`Properties` - the format matching a `*.tsp` file</li></ul>. | `JSON` |
 |***Editing***|`DefaultSaveFile`|Used with experimental feature to enabling editing in the time series table that corresponds to a graph view.  Specify the default DateValue filename to save edits.  Can be specified using processor `${Property}`. This feature is seldom used. |Editing is disabled.|
