@@ -14,7 +14,9 @@
 The `Wait` command waits a specified time before continuing.  Examples of use include:
 
 *   Testing to simulate slow datastores or long processes.
-*   Waiting for an external process to finish.  Functionality will be added in the future to wait for a file to exist or not exist.
+*   Waiting for an external process to finish.
+    For example, use the [../If/If.md] command to check whether a file exists and wait until it does
+    (and quit waiting after a time limit is reached).
 
 The TSTool ***Run / Cancel Command Processing (interrupt processing)*** menu will initiate an interrupt on the processor.
 Because the `Wait` command uses an internal wait,
@@ -52,7 +54,7 @@ Command Parameters
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 |`WaitTime`<br>**required**|The number of seconds to wait, can be specified using `${Property}`.  Can specify as a decimal with minimum value of `.001` (1 ms). |None – must be specified.|
-|`ProgressIncrement`|The number of seconds between progress updates in the main TSTool progress indicator, can be specified using `${Property}`.  Can be specified as a decimal. |`WaitTime` divided by ten.|
+|`ProgressIncrement`|The number of seconds between progress updates in the main TSTool progress indicator, can be specified using `${Property}`.  The value should be less than `WaitTime`.  Can be specified as a decimal with minimum value of `.001` (1 ms). |`WaitTime` divided by ten.|
 
 ## Examples ##
 
@@ -64,4 +66,4 @@ See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) 
 
 ## See Also ##
 
-*   [`Exit`](../Exit/Exit.md) command
+*   [`If`](../If/If.md) command

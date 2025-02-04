@@ -42,7 +42,7 @@ when setting a simple property value.
 </p>**
 
 The following illustrates the command syntax when setting a property value to time series data.
-For example, the `Date` property can be set in a [`For`](../command-ref/For/For.md) command.
+For example, the `Date` property can be set in a [`For`](../For/For.md) command.
 
 **<p style="text-align: center;">
 ![SetPropertyFromTimeSeries command editor for time series data](SetPropertyFromTimeSeries-Data.png)

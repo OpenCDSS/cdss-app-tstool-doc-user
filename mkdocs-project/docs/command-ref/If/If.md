@@ -17,6 +17,8 @@ The `If` command evaluates a conditional and if true will result in the commands
 A matching `Name` parameter for the `If` and [`EndIf`](../EndIf/EndIf.md)
 commands defines a block of commands. Currently, there is no “else if” or “else” syntax and nested
 `If` commands must be used to evaluate complex conditions.
+Select (highlight) one or more commands and use the ***> Indent Right*** menu to indent commands to
+improve the readability of the workflow.
 
 The `If` command can evaluate the following:
 

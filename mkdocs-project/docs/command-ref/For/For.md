@@ -13,6 +13,8 @@
 
 The `For` command iterates through a block of commands between `For` and matching
 [`EndFor`](../EndFor/EndFor.md) commands.
+Commands within a `For` block can be indented by selecting (highlighting) one or more commands,
+right clicking, and using the ***> Indent Right*** menu choice.
 A processor property is set to the value of the iteration property and can be used by other
 commands that support properties, using the `${Property}` notation.
 `For` commands can iterate over:
@@ -22,20 +24,18 @@ commands that support properties, using the `${Property}` notation.
     end (`SequenceEnd` parameter), and increment (`SequenceIncrement` parameter)
 *   values from a table column (see `TableID`, `TableColumn`, and `TablePropertyMap` parameters)
 *   time period between a start (see `PeriodStart` parameter) and end (see `PeriodEnd` parameter) date/time,
-    with an interval increment (see `PeriodIncrement` parameter)
+    with an interval increment (see `PeriodIncrement` parameter),
+    which can be used to iterate over individual time serie values with the
+    [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command
 *   a list of time series and corresponding properties (see `TSList`, `TSID`, and `EnsembleID` parameters)
 
 `For` commands can be nested.
-Status messages for each run mode are accumulated in each command (this update is occurring over time –
-status messages for some commands may be cleared out each iteration).
+Status messages for each run mode are accumulated in each command.
 
 The editor for `For` a command that uses properties may show time series
 identifiers and other command parameters as `${Property}` values,
 rather than actual data, because the values get expanded at run-time.
 This provides increased processing power but errors may not be evident until the `For` command is run.
-
-Commands within a `For` block can be indented by selecting the commands,
-right clicking, and using the ***Indent - Right*** menu choice.
 
 See also the
 [`Break`](../Break/Break.md) and
@@ -103,7 +103,9 @@ Command Parameters
 |**Iterator Method**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |--|--------------|-----------------|----------------- |
 |**All**|`Name`<br>**required** | The name of the for loop, which will be matched with the name of an `EndFor` command to indicate the block of commands in the loop. | None - must be specified. |
-||`IteratorProperty` | The processor property that will be set to the iterator property. The object type will depend on that used to provide the iteration property list. For example, if a sequence of integers is being iterated, the property will contain an integer. | Same as `Name`.
+||`IteratorProperty` | The processor property that will be set to the iterator property. The object type will depend on that used to provide the iteration property list. For example, if a sequence of integers is being iterated, the property will contain an integer. | Same as `Name`. |
+||`IndexProperty` | The processor property that will be set to the iteration count (1+, regardless of the iteration direction) as an integer. This is useful when the command logic must be different depending on the loop index. | The property is not set. |
+||`ShowProgress` | Whether the `For` loop should show progress in the TSTool command progress indicator, specified as as `False` or `True`. This is useful when the commands in the `For` block do not update the progress indicator and want to give the user feedback that progress is occurring.  If any commands are run in the loop that update the progress, the `For` loop progress will be quickly overruled.| `False`. |
 |***List***|`List` | A list of comma-separated values to be used as variables for the iteration. Can use `${Property}` syntax. | No default if list is used – must specify a list of values. |
 |***Sequence***|`SequenceStart` | Starting value when a sequence is specified for iteration, an integer or decimal number. | No default if sequence is used. |
 ||`SequenceEnd` | Ending value when a sequence is specified for iteration, an integer or decimal number. | No default if sequence is used. |
