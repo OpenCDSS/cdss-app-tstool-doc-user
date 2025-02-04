@@ -17,6 +17,18 @@ The command minimizes the need for the [`Free`](../Free/Free.md) command because
 commands that operate on a time series list can use `TSList=SelectedTS`.
 See also the [`DeselectTimeSeries`](../DeselectTimeSeries/DeselectTimeSeries.md) command.
 
+If `TSList=AllMatchingTSID` is specified, then the `TSID` parameter specifies a pattern to match, for example:
+
+*   `*` - will match all time series
+*   `A*` - will match:
+    +   all identifiers with alias starting with `A`
+    +   all identifiers with location starting with `A` (including the location type if used by a time series)
+*   `*.*.XXXXX.*.*`:
+    +   all time series with data type `XXXXX`
+
+The use of a period in the `TSID` pattern triggers comparison of all of the parts.
+If necessary, use an alias for each time series and then match using the alias (be careful if a period is used in the alias).
+
 ## Command Editor ##
 
 The command is available in the following TSTool menu:
@@ -91,7 +103,7 @@ SelectTimeSeries(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Tab**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|**Tab**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--|--|--|--|
 |***TS List***| `TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`TSPosition` – time series specified by position in the results list (see `TSPosition` parameter below).</li></ul> | `AllTS` |
 ||`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|

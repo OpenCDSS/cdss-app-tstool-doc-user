@@ -49,6 +49,12 @@ Issues may also be included in other repositories that are TSTool components.
 
 **Feature release to allow iteration over time series data points and dynamic properties.**
 
+*   ![bug](bug.png) [14.10.0] Fix canceling a run:
+    +   The ***Run / Cancel Command Processing (wait for command to finish)*** menu item was inconsistently enabled.
+        The UI now waits 10ms when starting processing to allow the processor to initialize
+        so that the menu state is correct.
+        It should now be possible in most cases to gracefully cancel processing without killing TSTool.
+    +   The status messages in the TSTool UI are now more explicit for cancel and `Exit` cases.
 *   ![bug](bug.png) [14.10.0] Improve the dictionary edit tool,
     which is used to edit `key:value` data pairs:
     +   The editor was not always properly enabling/disabling buttons.
@@ -80,10 +86,10 @@ Issues may also be included in other repositories that are TSTool components.
 *   ![change](change.png) [14.10.0] Update the [`ChangeInterval`](../command-ref/ChangeInterval/ChangeInterval.md) command:
     +   Expand the `Alias` parameter only when in run mode.
         The original alias value will be listed in command editors for following commands.
-*   ![change](change.png) [14.10.0] Update the
+*   [14.10.0] Update the
     [`CopyTimeSeriesPropertiesToTable`](../command-ref/CopyTimeSeriesPropertiesToTable/CopyTimeSeriesPropertiesToTable.md) command:
-    +   Add the `ExcludeProperties` parameter to exclude dynamic properties from the copy.
-    +   Add the `ExcludeBuiltInProperties` parameter to exclude built-in properties from the copy.
+    +   ![change](change.png) Add the `ExcludeProperties` parameter to exclude dynamic properties from the copy.
+    +   ![change](change.png) Add the `ExcludeBuiltInProperties` parameter to exclude built-in properties from the copy.
     +   ![remove](remove.png) Remove the `TableOutputColumns` parameter (use the `NameMap` parameter instead).
 *   ![change](change.png) [14.10.0] Update the [`DeselectTimeSeries`](../command-ref/DeselectTimeSeries/DeselectTimeSeries.md) command:
     +   Change so that if no time series are found, the `SelectedCountProperty` and `UnselectedCountProperty` values are set to `0`.
@@ -93,9 +99,15 @@ Issues may also be included in other repositories that are TSTool components.
         which allows nested properties to be processed.
         This is in addition to passing individual properties.
     +   Update the FreeMarker library to version 2.3.33 (the library is also used in other template features).
+    +   Improve error handling and allow the input file to not exist when editing the command
+        (used with workflows that dynmically create the template file).
+    +   The input file is no longer required to exist when editing the command because it may be created dynamically.
 *   ![change](change.png) [14.10.0] Update the [`For`](../command-ref/For/For.md) command:
     +   Add the `PeriodStart`, `PeriodEnd`, and `PeriodIncrement` command parameters to iterate over a date/time period,
         which allows time series data values to be processed individually.
+    +   Add the `IndexProperty` parameter to provide a count of the iterations.
+    +   Add the `ShowProgress` parameter to show the progress of the command,
+        useful when other commands being executed do not show progress and want to provide a progress indicator to the user.
 *   ![change](change.png) [14.10.0] Update the [`If`](../command-ref/If/If.md) command:
     +   Add the `CompareAsVersions` parameter to compare strings as versions,
         which allows workflows to more easily handle logic for different software or API versions.
@@ -129,6 +141,9 @@ Issues may also be included in other repositories that are TSTool components.
         to set a processor property to time series data values.
 *   ![change](change.png) [14.10.0] Update the [`TableMath`](../command-ref/TableMath/TableMath.md) command:
     +   Add the `OutputType` command parameter.
+*   ![change](change.png) [14.10.0] Update the [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command:
+    +   The `DateTimeColumn`, `DateColumn`, and `TimeColumn` can now use `${Property}`.
+    +   Reorder the command parameter order to match the editor groups.
 *   ![change](change.png) [14.10.0] Update the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command:
     +   Allow the search and replace strings to start or end with white space characters.
     +   Allow the replacement string to be an empty string, to remove a matching string.
