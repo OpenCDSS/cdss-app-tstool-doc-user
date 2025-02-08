@@ -123,6 +123,10 @@ Issues may also be included in other repositories that are TSTool components.
     +   Add the `CommandStatusProperty` parameter to set the exit status of the command,
         used to detect when output could not be created (e.g., no time series data).
     +   Improve error handling if no time series are available for a graph.
+*   ![change](change.png) [14.10.0] Update the [`ReadUsgsNwisDaily`](../command-ref/ReadUsgsNwisDaily/ReadUsgsNwisDaily.md) command:
+    +   Add a default 300 second timeout for requests.
+*   ![change](change.png) [14.10.0] Update the [`ReadUsgsNwisInstantaneous`](../command-ref/ReadUsgsNwisInstantaneous/ReadUsgsNwisInstantaneous.md) command:
+    +   Add a default 300 second timeout for requests.
 *   ![change](change.png) [14.10.0] Update the [`SelectTimeSeries`](../command-ref/SelectTimeSeries/SelectTimeSeries.md) command:
     +   Change so that if no time series are found, the `SelectCountProperty` value is set to `0`.
         Previously an error occurred without setting the value.
