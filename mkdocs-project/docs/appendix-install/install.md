@@ -16,12 +16,15 @@ In all cases, it is recommended to install in the default location to avoid conf
     +   [Install TSTool from the “HydroBase data set Analysis Query Tools DVD”](#install-tstool-from-the-hydrobase-data-set-analysis-query-tools-dvd)
     +   [Windows TSTool Installation Technical Details](#windows-tstool-installation-technical-details)
     +   [Install TSTool on Linux](#install-tstool-on-linux)
+    +   [Install TSTool on a Mac](#install-tstool-on-a-mac)
 *  [Uninstalling TSTool](#uninstalling-tstool)
-    +   [Uninstall TSTool on Windows](#uninstall-tstool-on-windows)
-    +   [Uninstall TSTool on Linux](#uninstall-tstool-on-linux)
+    +   [Uninstall TSTool from Windows](#uninstall-tstool-from-windows)
+    +   [Uninstall TSTool from Linux](#uninstall-tstool-from-linux)
+    +   [Uninstall TSTool from a Mac](#uninstall-tstool-from-a-mac)
 *   [Running TSTool](#running-tstool)
     +   [Running TSTool on Windows](#running-tstool-on-windows)
     +   [Running TSTool on Linux](#running-tstool-on-linux)
+    +   [Running TSTool on a Mac](#running-tstool-on-a-mac)
 *   [TSTool Configuration](#tstool-configuration)
 *   [Map Configuration](#map-configuration)
 
@@ -111,7 +114,7 @@ TSTool user configuration files:
 
 ```
 C:\Users\user\.tstool\          Windows user TSTool configuration files.
-/home/user/.tstool/             Linux user TSTool configuration files.
+/home/someuser/.tstool/         Linux user TSTool configuration files.
   N/                            TSTool major version, e.g., 13
     batchServerHotFolder/       If TSTool is run with -batchServer and -batchServerHotFolder FolderName,
                                 TSTool will look for command files in this folder, process them, and then delete the files.
@@ -395,11 +398,64 @@ TSTool for Linux is available from the Open Water Foundation.
 See the [OWF Software](https://software.openwaterfoundation.org/) website.
 Follow the instructions on the download page.
 
+### Install TSTool on a Mac ###
+
+Mac computers from Apple run a version of Linux.
+TSTool software is portable between operating systems.
+However, the Java Runtime Environment (JRE) is specific to the operating system.
+A Mac TSTool installer is currently not available,
+but the following workarounds can be used to install TSTool on a Mac.
+
+#### Copy a Windows Installation to the Mac ####
+
+The Windows TSTool files can be copied a Mac, as follows:
+
+1.  [Install TSTool on a Windows computer](#install-tstool-on-windows).
+2.  Zip up the `C:\CDSS\TSTool-Version` folder on the Windows computer.
+3.  Copy the zip file to a Mac.
+4.  Unzip the file in a convenient location, for example `/home/someuser/` (e.g., resulting in `/home/someuser/tstool-14.10.0`).
+5.  The `jre_18` folder installed from the zip file (or similar for a newer version)
+    will be the Windows Java Runtime Environment and won't work on the Mac so that folder can be deleted.
+6.  The `bin/tstool` script will look for the JRE using standard Linux folders and TSTool files
+    are found using a location relative to the `tstool` script.
+    The users TSTool files will be located in the user's `.tstool` folder.
+
+#### Create a Mac Installation from a Windows Installation ####
+
+It should be possible to create a Mac installer `run` file as follows:
+
+1.  Install TSTool on a Windows computer.
+2.  Share the files with the Mac computer using NFS, Samba, or some other method **or** install on the Mac as in the previous section.
+3.  In a terminal window on the Mac, `cd` to the TSTool `bin` folder.
+4.  Run the `build-linux-distro.bash` script (e.g., with `./.build-linux-distribution.bash`).
+    This assumes that necessary software has been installed on the Mac,
+    in particular `makeself` (see [`https://ports.macports.org/port/makeself/`](https://ports.macports.org/port/makeself/)).
+    If necessary, install `makeself` on the Mac and try building again.
+5.  The output installer will be a `run` file created in `/tmp`.
+    The installer can then be copied to another Mac computer to install TSTool.
+
+#### Run a Linux or Windows virtual machine on the Mac ####
+
+This would be a lot of work, but 
+installing and running a virtual machine (VM) could be run on the Mac.
+
+1.  For example, install [VirtualBox](https://virtualbox.org) on the Mac
+    and then install a Linux or Windows guest VM.
+2.  Install TSTool using the Windows or Linux installer as described above.
+
 ## Uninstalling TSTool ##
 
-The process to uninstall TSTool changed as of TSTool 12.06.00.
+Completely uninstalling a TSTool version requires:
 
-### Uninstall TSTool on Windows ###
+1.  Uninstalling the software files.
+2.  Uninstalling user files (`.tstool` folder in the user's home folder).
+3.  Uninstalling menu configuration, if used for the operating system.
+
+The above are configured for each TSTool software version that was previously installed.
+
+### Uninstall TSTool from Windows ###
+
+The process to uninstall TSTool from Windows changed as of TSTool 12.06.00.
 
 #### Uninstall TSTool 12.06.00 and Later from Windows ####
 
@@ -463,11 +519,18 @@ The uninstall process does the following:
 To uninstall TSTool 12.05.00 and earlier versions, select the ***CDSS / Uninstall / TSTool*** from the ***Start*** menu and confirm the uninstall.
 CDSS components that are used by other software (e.g., CDSS Base component software) as well as user data will remain installed.
 
-### Uninstall TSTool on Linux ###
+### Uninstall TSTool from Linux ###
 
 TSTool can be uninstalled from Linux simply by removing the 
-software files that were installed.
+software files that were installed, for example from `/home/someuser/tstool-version` for a user installation
+and `/opt/tstool-version` for a system installation.
 The TSTool Linux installer does not currently add a menu.
+
+The `/home/someuser/.tstool` files can also be removed.
+
+### Uninstall TSTool from a Mac ###
+
+See the [Uninstall TSTool from a Mac](#uninstall-tstool-from-a-mac) section.
 
 ## Running TSTool ##
 
@@ -501,6 +564,11 @@ In this case it may be necessary to specify the absolute path to the command fil
 TSTool can be run on Linux using the `tstool` script,
 which is found in the `bin` folder where TSTool was installed.
 
+### Running TSTool on a Mac ###
+
+TSTool can be run on a Mac similar to Linux using the `tstool` script,
+which is found in the `bin` folder where TSTool was installed.
+
 ## TSTool Configuration ##
 
 TSTool requires minimal configuration after installation.
@@ -518,7 +586,7 @@ The `system\TSTool.cfg` file can be specified in the following two locations on 
     +   Linux:  `/opt/TSTool-Version/system/TSTool.cfg`
 * User files (`N` below is the TSTool major version number, e.g., `13`):
     +   Windows:  `C:\Users\user\.tstool\N\system\TSTool.cfg`
-    +   Linux:  `/home/user/.tstool/N/system/TSTool.cfg`
+    +   Linux:  `/home/someuser/.tstool/N/system/TSTool.cfg`
 
 The `TSTool.cfg` file installation folder contains top-level configuration information for TSTool.
 User file configuration properties take precedence over the installation configuration properties.
