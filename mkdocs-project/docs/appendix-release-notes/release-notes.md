@@ -5,6 +5,7 @@ A summary table is provided, with links to details for major versions.
 
 *   [TSTool Version History](#tstool-version-history)
 *   [TSTool Version Details] - the following are separate documentation pages for major TSTool versions
+    +   [Version 15 Details](release-notes-15.md)
     +   [Version 14 Details](release-notes-14.md)
     +   [Version 13 Details](release-notes-13.md)
     +   [Version 12 Details](release-notes-12.md)
@@ -34,6 +35,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[15.0.0](release-notes-15.md)|Feature release to update from Java 8 to Java 11. | 2025-03-03 |
 |[14.10.0](release-notes-14.md)|Feature release with many enhancements to support advanced workflows. | 2025-02-07 |
 |[14.9.6](release-notes-14.md)|Maintenance release to improve complex workflow automation and maintenance. | 2024-08-19 |
 |[14.9.5](release-notes-14.md)|Maintenance release to improve complex workflow automation and maintenance. | 2024-04-29 |
