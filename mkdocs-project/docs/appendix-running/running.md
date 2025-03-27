@@ -133,8 +133,10 @@ The following are potential issues on any operating system:
 ## TSTool Command Line Parameters ##
 
 The following table lists the TSTool command line parameters.
+Using two dashes is the preferred newer standard but single dashes are supported for older parameters.
+
 If [running on Linux](#running-tstool-in-command-line-batch-mode-linux) using the `tstool` script,
-the parameters should be specified after `--` parameter.
+the parameters should be specified after `--` parameter because otherwise the parameters are used by the TSTool launcher.
 
 **<p style="text-align: center;">
 TSTool Command Line Parameters
@@ -146,23 +148,26 @@ TSTool Command Line Parameters
 |`Property=Value`|Define TSTool global application property (similar to the configuration file).  These properties typically are used during development to test specific features.||
 |`Property==Value`|Define global processor properties (similar to the `SetProperty` command).  These properties are initialized for each command file run and are useful for configuring an environment when starting TSTool from a script, such as running in a Linux environment.||
 | | |
-|`-batchServer`<br>`--batchServer`|Run TSTool in headless mode to process command files that are copied into the hot folder (see `-batchServerHotFolder`).  TSTool will exit when a command file named stop is placed in the hot folder.||
-|`-batchServerHotFolder Folder`<br><br>`--batchServerHotFolder Folder`|Specify the hot folder to use with the `-batchServer` parameter.||
-|`-batchTimeout TimeoutSeconds`<br><br>`--batchTimeout TimeoutSeconds`|Timeout in seconds.  If TSTool command processing takes longer, TSTool will exit.  This may be appropriate as a final fallback if other timeout controls do not work.  Warning – this will leave processing incomplete.  May be removed in future.|Do not time out.|
-|`-commands CommandFile`<br><br>`--commands CommandFile`|Specify the name of the command file to run in batch mode.  TSTool will process the commands and exit.|Start TSTool in interactive mode.|
-|`-config ConfigFile`<br><br>`--config ConfigFile`|Start TSTool using the specified configuration file.  This is useful in software test environments.|Start TSTool using the `system/TSTool.cfg` file under the software installation.|
+|`--batchServer`<br>`-batchServer`|Run TSTool in headless mode to process command files that are copied into the hot folder (see `-batchServerHotFolder`).  TSTool will exit when a command file named stop is placed in the hot folder.||
+|`--batchServerHotFolder Folder`<br><br>`-batchServerHotFolder Folder`|Specify the hot folder to use with the `-batchServer` parameter.||
+|`--batchTimeout TimeoutSeconds`<br><br>`-batchTimeout TimeoutSeconds`|Timeout in seconds.  If TSTool command processing takes longer, TSTool will exit.  This may be appropriate as a final fallback if other timeout controls do not work.  Warning – this will leave processing incomplete.  May be removed in future.|Do not time out.|
+|`--commands CommandFile`<br><br>`-commands CommandFile`|Specify the name of the command file to run in batch mode.  TSTool will process the commands and exit.|Start TSTool in interactive mode.|
+|`--config ConfigFile`<br><br>`-config ConfigFile`|Start TSTool using the specified configuration file.  This is useful in software test environments.|Start TSTool using the `system/TSTool.cfg` file under the software installation.|
 |`-dTerm,Log`|Specify the debug level (0+) for terminal and log file debug messages.  This is useful for printing troubleshooting messages at startup.  One or both values can be specified.|No debug messages are generated.|
 |`--datastore-substitute=`<br>`DatastoreNameToUse`,<br>`DatastoreNameInCommands`|Substitute a datastore name to use for a datastore name used in commands.  For example, all automated tests may use a datastore name `datastore-test` in command files and a production system's `DatastoreNameToUse` can be specified as a substitute using `--datastore-substitute=DatastoreNameToUse,datastore-test`. See the [Substitute Datastore Examples](#substitute-datastore-examples) documentation. | No substitutes - the datastore name in command files must match a configured datastore name. |
 | `--disable-datastores=`<br>`datastore1,datastore2,...` | Disable the indicated datastores, used to optimize performance, especially for batch processing.  Datastore configuration files will only be checked if the command line parameters indicate that the datastore is enabled.<ul><li>specify multiple datastores separated with commas</li><li>use `*` to match all datastores, for example to disable all datastores before enabling specific datastores</li><li>use a glob-style regular expression with `*` to match a pattern</li><li>specify a sequence of<br>`--disable-datastores`<br>and `--enable-datastores`<br>parameters, as needed</li></ul> | All enabled datastores in datastore configuration files are enabled unless the datastore configuration file includes `Enabled=False`. |
 | `--enable-datastores=`<br>`datastore1,datastore2,...` | Enable the indicated datastores, used to optimize performance, especially for batch processing.  Datastore configuration files will only be checked if the command line parameters indicate that the datastore is enabled.  **Datastore configuration files that include `Enabled=False` will remain disabled.**  <ul><li>specify multiple datastores separated with commas</li><li>use `*` to match all datastores (typically not needed because datastore configuration files control)</li><li>use a glob-style regular expression with `*` to match a pattern</li><li>specify a sequence of<br>`--disable-datastores`<br>and `--enable-datastores`<br>parameters, as needed</li></ul> | All enabled datastores in datastore configuration files are enabled unless the datastore configuration file includes `Enabled=Flse`. |
-|`-home InstallFolder`<br><br>`--home InstallFolder`|Specify the install folder.  This parameter is used internally by the TSTool launcher (Launch4J) and in the software development environment to specify the TSTool home, in order to locate other files.|Should always be set by the TSTool launcher.|
-|`-httpServer`<br>`--httpServer`|Run TSTool in headless mode to act as an HTTP server.  Experimental||
-|`-nodiscovery`<br>`--nodiscovery`|Do not run discovery on commands as they are loaded.  This can be used for large command files that will not be edited interactively, in order to decrease load time.|Run discovery on commands as they are loaded.|
-|`-nomaingui`<br>`--nomaingui`|Do not show the TSTool main GUI when running commands, but do allow graph windows to be displayed.  Closing the last visible graph window will close the TSTool application.|If `–commands` is specified, do not show any windows.  If `-nomaingui` also is specified, allow graph windows to show.|
+| `--help`<br>`-h` | Print the basic program usage to standard output. |
+|`--home InstallFolder`<br><br>`-home InstallFolder`|Specify the install folder.  This parameter is used internally by the TSTool launcher (Launch4J) and in the software development environment to specify the TSTool home, in order to locate other files.|Should always be set by the TSTool launcher.|
+|`--httpServer`<br>`-httpServer`|Run TSTool in headless mode to act as an HTTP server.  Experimental||
+|`--nodiscovery`<br>`-nodiscovery`|Do not run discovery on commands as they are loaded.  This can be used for large command files that will not be edited interactively, in order to decrease load time.|Run discovery on commands as they are loaded.|
+|`--nomaingui`<br>`-nomaingui`|Do not show the TSTool main GUI when running commands, but do allow graph windows to be displayed.  Closing the last visible graph window will close the TSTool application.|If `–commands` is specified, do not show any windows.  If `-nomaingui` also is specified, allow graph windows to show.|
 |`-runcommandsonload`<br>`--runcommandsonload`|Load and run the commands, used to start the GUI with a specific command file.||
 |`-server`<br>`--server`|Start TSTool as a REST restlet server (under development).||
 |`-test`<br>`--test`|Run TSTool in test mode, for developers.||
 | `-ui-titlemod=TitleMod` | Set the TSTool main UI window title to ***TSTool - TitleMod - ....***.  This is useful for helping users identify custom TSTool configurations, for example when running a test suite that requires a Linux `sudo` login. | |
+| `--version`<br>`-v`<br>`-version` | Print the version to standard output. |
+| `--version-date` | Print the version date to standard output in format `VersionDate=YYYY-MM-DD`.  Other output lines may also be output. |
 
 ### Running TSTool in Command Line Batch Mode – Windows ###
 
@@ -216,7 +221,7 @@ The `--help` parameter should be used to print the current usage.
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default** |
 | -- | -- | -- |
-| `--addpath=path` | **Exploratory** - add a folder/file to the class path. | The TSTool software install folder `/plugins` folder and user's `.tstool/NN/plugins` folders are used to load plugin `jar` files. |
+| `--addpath=path` | **Exploratory** - add a folder/file to the class path. | The TSTool software install folder `plugins/` folder and user's `.tstool/NN/plugins` folders, including dependency `dep/` subfolders are used to load plugin `jar` files. |
 | `--dev` | Run using software development files in the Eclipse development environment, used with automated testing. This allows TSTool to be run with development files rather than building and running the installer. | Use production files. | 
 | `--headless` | Run in headless mode, used on Linux when running batch and unattended processes.  The `-Djava.awt.headless=true` parameter is used to run Java. | |
 | `-h`<br>`--help` | Print the program usage.  The help for this script is printed and then TSTool program is run with `--help`. TSTool command parameters are documented in online documentation. | |
@@ -354,9 +359,9 @@ Output files will be overwritten at each execution of the command unless the nam
 
 For more information, see:
 
-* [man cron](https://man7.org/linux/man-pages/man8/cron.8.html) - information about cron options and system variations
-* [man crontab](https://linux.die.net/man/1/crontab) - information about options and system variations
-* [man 5 crontab](https://linux.die.net/man/5/crontab) - information about syntax and limitations
+*   [man cron](https://man7.org/linux/man-pages/man8/cron.8.html) - information about cron options and system variations
+*   [man crontab](https://linux.die.net/man/1/crontab) - information about options and system variations
+*   [man 5 crontab](https://linux.die.net/man/5/crontab) - information about syntax and limitations
 
 ## Running TSTool as a Web Server ##
 
@@ -419,7 +424,7 @@ The TSTool [`#@require`](../command-ref/Comment/Comment.md) comment can be used 
 
 The following approach is used to configure datastores for testing:
 
-* Datastore configuration 1:
+*   Datastore configuration 1:
     +   The datastore is configured and enabled for `datastore1` (a more specific name would be used) to point to a production system:
         -   allows read-only command file to be tested on the production system
         -   the datastore matches the production system because tests are specific to the system
@@ -430,10 +435,10 @@ The following approach is used to configure datastores for testing:
         and indicate a web services datastore on a specific operating system version, in development environment.
         For example, the web services back-end may use Java Hibernate to point to a specific database,
         and the URL on the testing machine is the same regardless of which back-end database is used.
-* Datastore configuration N:
-    + Repeat the above.
-    + Datastores are configured for each production system.
-    + Testing framework uses a generic datastore name pointing to the development web services, shared among all datastores.
+*   Datastore configuration N:
+    +   Repeat the above.
+    +   Datastores are configured for each production system.
+    +   Testing framework uses a generic datastore name pointing to the development web services, shared among all datastores.
 
 The overall testing approach is then:
 
@@ -458,8 +463,8 @@ The overall testing approach is then:
 
 The TSTool main interface behavior is as follows. If a `--datastore-substitute` parameter is used:
 
-* if the `datastore1` datastore is used in the TSTool interface, the `wsname-osname-dev` datastore will be used instead
-* the `wsname-osname-dev` datastore can also be used directly
+*   If the `datastore1` datastore is used in the TSTool interface, the `wsname-osname-dev` datastore will be used instead.
+*   The `wsname-osname-dev` datastore can also be used directly.
 
 ### Automated Database Tests Use a General Datastore Name and Substitute Uses a Specific Datastore Name
 
@@ -471,17 +476,17 @@ In this case, the data in the database are synthetic and should not conflict wit
 The following approach is used to configure datastores for testing:
 
 * Datastore configuration for general (empty) database using a specific name:
-    + Use a general datastore name such as `system-test-general`, where `system` is a specific system/product name.
-      This datastore name can be used generally for testing or a system-specific datastore could be used (see below)
-    + An empty testing database will be used to run tests.
-    + The testing environment should mimic a production system as much as possible.
-* (Optional) - Datastore configuration for system database:
-    + Configure a datastore for a local production database
-    + This will allow running tests on a copy of a production database,
-      such as restored from a database backup.
-    + The testing environment should mimic a production system as much as possible.
-* Datastore substitute:
-    + See the following approach.
+    +   Use a general datastore name such as `system-test-general`, where `system` is a specific system/product name.
+        This datastore name can be used generally for testing or a system-specific datastore could be used (see below)
+    +   An empty testing database will be used to run tests.
+    +   The testing environment should mimic a production system as much as possible.
+*   (Optional) - Datastore configuration for system database:
+    +   Configure a datastore for a local production database
+    +   This will allow running tests on a copy of a production database,
+        such as restored from a database backup.
+    +   The testing environment should mimic a production system as much as possible.
+*   Datastore substitute:
+    +   See the following approach.
 
 The following approach can be implemented to allow flexibility to run the tests on any database,
 including the generic empty database and system-specific databases.
@@ -504,5 +509,5 @@ including the generic empty database and system-specific databases.
 
 The TSTool main interface behavior is as follows. If a `--datastore-substitute` parameter is used:
 
-* if the `system-test` datastore is used in the TSTool interface, the `system-test-general` datastore will be used instead
-* the `system-test` datastore will not be listed in TSTool because it is not configured as a datastore (it is a placeholder in command files)
+*   If the `system-test` datastore is used in the TSTool interface, the `system-test-general` datastore will be used instead.
+*   The `system-test` datastore will not be listed in TSTool because it is not configured as a datastore (it is a placeholder in command files).

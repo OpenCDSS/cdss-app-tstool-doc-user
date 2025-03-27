@@ -45,68 +45,69 @@ Standard locations of TSTool software files are as follows.
 
 ### Installation Files ###
 
-These files are referred to the "installation files".
+These files are referred to the "installation files"
+(in contrast with "user files" discussed in the [Users Files](#user-files) section).
 
-TSTool software is normally installed on Windows on the `C:` drive but can be installed in a shared location on a server
-if the software is provided in a shared environment (in this case it is recommended to install in `C:` first and
-then copy the `TSTool-Version` folder to the server).
-Note that the following list of software `*.jar` files may be different from the current TSTool version.
-In the future separate documentation may be provided explaining software components and licenses.
+TSTool software is normally installed on Windows on the `C:` drive
+but can be installed on a different drive on a local computer.
+TSTool can also be installed in a shared location on a server for multiple users
+(in this case it is recommended to install in `C:` first and then copy the `TSTool-Version` folder to the server).
 
 ```
-C:\CDSS\TSTool-Version                      Windows top-level install folder.
-/opt/TSTool-version                         Linux top-level install folder.
-  bin/                                      Software program files folder.
-    Blowfish*.jar                           Used for encryption/security.
-    cdss*.jar                               CDSS components.
-    h2*.jar                                 H2 embedded database.
-    jcommon.jar, jfreechart.jar             Plotting package.
-    jsr173_1.0_api.jar, libXMLJava.jar      XML support.
-    jython.jar                              Jython support.
-    sqljdbc4.jar                            Microsoft SQL Server packages.
-    NWSRFS_DMI*.jar                         National Weather Service River Forecast System (NWSRFS) package.
-    cdss-lib-dmi-riversidedb*.jar           Riverside Technology, inc., RiversideDB database package.
-    cdss-lib-dmi-statmonsys*.jar            State of Colorado Satellite Monitoring System package.
-    cdss-li-processor-ts-java*.jar          Time series command processor package.
-    tstool                                  Shell script to run TSTool on Linux and Mac.
-    TSTool.bat                              Batch file to run TSTool using the JRE software, not typically used.
-    TSTool.exe                              Executable program to run TSTool using the JRE software, recommended over batch file.
-    TSTool.l4j.ini                          Configuration file for TSTool.exe launcher.
-    TSTool*.jar                             TSTool program components.
-  datastores/                               Datastore configuration files for databases and web services.
-                                            Note that in versions before 13.00.00 these files were located in the "system" folder.
-    *.cfg                                   See also user files below.
-  doc/TSTool/UserManual/                    Main documentation folder for TSTool.
-    TSTool.pdf                              TSTool documentation as PDF.
-  examples/                                 Example data and command files.
-  jre*\                                     Java Runtime Environment used by TSTool
-  logs/                                     Folder for TSTool log files (should be writable).  See also user files below.
-  plugins/                                  Plugins for datastores and commands.
-    plugin-folder/                          Folder for plugin files.
-      *.jar                                 Jar file for plugin.
-  system/                                   Folder for system files.
-    CDSS.cfg                                CDSS configuration file for HydroBase database configuration.
-    DATAUNIT                                Data units file.
-    TSTool.cfg                              Configuration file to modify TSTool defaults.  See also user files below.
-    *.cfg                                   Shared datastore configuration files. See also user files below.
+C:\CDSS\TSTool-Version            Windows top-level install folder.
+/opt/TSTool-version               Linux system install folder.
+  bin/                            Software program files folder.
+    cdss-app-tstool-main_11.jar   TSTool main application Java jar file, using Java 11.
+    cdss*_11.jar                  Java libaries associated with
+                                  Colorado's Decision Support Systems (CDSS), using Java 11.
+    tstool                        Shell script to run TSTool on Linux and Mac.
+    TSTool.bat                    Batch file to run TSTool using the JRE software,
+                                  not typically used.
+    TSTool.exe                    Executable program to run TSTool using the JRE software,
+                                  recommended for command-line use.
+    TSTool.l4j.ini                Configuration file for the TSTool.exe Launch4j launcher.
+  datastores/                     Datastore configuration files for databases and web services.
+                                  In versions before 13.00.00,
+                                  these files were located in the "system" folder.
+    *.cfg                         See also user files below.
+  doc/training/                   Basic training documentation.
+  examples/                       Example data and command files.
+  jre_11/                         Java Runtime Environment used by TSTool (for Java 11).
+  logs/                           Folder for TSTool startup log file (should be writable).
+                                  See also user files below.
+  plugins/                        Plugins for datastores and commands.
+    plugin-folder/                Folder for TSTool plugins installed with the software
+                                  (user plugins are recommended).
+      1.2.3/                      Plugin version folder.
+        *.jar                     Jar file for plugin.
+        dep/                                
+          *.jar                   Optional jar file dependencies for the plugin.
+  python/                         Basic Python integration examples.
+  system/                         Folder for system files.
+    CDSS.cfg                      CDSS configuration file for HydroBase database configuration.
+    DATAUNIT                      Data units file.
+    TSTool.cfg                    Configuration file to modify TSTool defaults.  See also user files below.
 ```
 
 ### User Files ###
 
-These files are referred to the "user files".
+These files are referred to the "user files"
+(in contrast with "installation files" discussed in the [Installation Files](#installation-files) section).
 
 In addition to the software installation files above,
 user files are saved in a `.tstool` folder under the user’s home folder and
 provide user-specific customization of the TSTool installation.
 Folder names beginning with a period are by default hidden on Linux computers.
-As of TSTool 13.00.00, the user files are separated by major TSTool version,
-meaning that files for version 13.00.00, 13.00.01, 13.01.00, etc. are all stored under `.tstool/13`.
-This allows sharing of configuration file in major version while allowing TSTool features and configuration files to evolve over time.
+
+As of TSTool 13.00.00, the user files are organized by major TSTool version,
+meaning that files for version 15.0.0, 15.1.0, 15.2.0, etc. are all stored under `.tstool/15`.
+This allows sharing configurations file for the major version while allowing TSTool features and configuration files to evolve over time.
 User configuration files will override the installation configuration
 file settings when configuration setting values are found in both places, in particular:
 
-* user `.tstool/N/system/TSTool.cfg` properties will override install `system/TSTool.cfg`
-* user `.tstool/N/datastores/*.cfg` datastore configuration files will override install `datastores/*.cfg`
+*   user `.tstool/N/system/TSTool.cfg` properties will override installation `system/TSTool.cfg`
+*   user `.tstool/N/datastores/*.cfg` datastore configuration files will override installation `datastores/*.cfg`
+*   user `.tstool/N/plugins/` will override installation `plugins/`
 
 The following design was implemented in TSTool 13.00.00, with partial implementation in 12.06.00 and earlier versions.
 
@@ -115,33 +116,41 @@ TSTool user configuration files:
 ```
 C:\Users\user\.tstool\          Windows user TSTool configuration files.
 /home/someuser/.tstool/         Linux user TSTool configuration files.
-  N/                            TSTool major version, e.g., 13
-    batchServerHotFolder/       If TSTool is run with -batchServer and -batchServerHotFolder FolderName,
-                                TSTool will look for command files in this folder, process them, and then delete the files.
-    command-file-history.txt    History of opened command files, used to populate choices in the File / Open / Command file menu.
+  N/                            TSTool major version, e.g., 15
+    batchServerHotFolder/       Experimental feature.
+                                If TSTool is run with --batchServer and
+                                --batchServerHotFolder FolderName,
+                                TSTool will look for command files in this folder,
+                                process them, and then delete the files.
+    command-file-history.txt    History of opened command files,
+                                used to populate choices in the 'File / Open / Command file' menu.
     datastores/
       *.cfg                     User’s datastore configuration files.
-                                Use the Enabled=True property in a datastore configuration file to enable the datastore and
-                                Enabled=False to disable the datastore.  Other options to disable the datastore are
-                                delete the datastore file or move out of the ./tstool/datastores folder.
-    logs/*.log                  Startup log file, which will be used until StartLog commands specify a different log file.
+                                Use the Enabled=True property in a datastore
+                                configuration file to enable the datastore and
+                                Enabled=False to disable the datastore.
+                                Other options to disable the datastore are
+                                delete the datastore file or move out of the
+                                ./tstool/datastores folder.
+    logs/*.log                  Startup log file, which will be used until
+                                StartLog commands specify a different log file.
     plugins/                    Plugin datastores and commands.
       PluginName/               Folder to differentiate plugins.
-        bin/                    Contains a jar file with code for plugin (see plugin developer documentation).
-        bin-depend/             Contains jar file(s) needed by plugin.
-        doc/                    Contains command documentation as Markdown, which is accessed from plugin command editors.
-                                This is being evaluated.
-          images/
-            *.png, etc.
-          include/
-            *.css, etc.
-          CommandName.md
+        1.2.3/                  Plugin version.
+          *.jar                 Plugin jar file.
+          dep/                  Contains jar file(s) needed by plugin.
+            *.jar
     system/
-      TSTool.cfg                User’s TSTool configuration settings.  This file is mainly used to enable/disable
-                                datastore types that are of interest to the user.  See the example below. 
-    template-graph/             Folder containing template graphs, which are shown in the lower right of the
-                                ensemble and time series results next to the Graph with template: buttons.
-    ui-state.txt                Properties describing the user interface state, such as last selected choices.
+      TSTool.cfg                User’s TSTool configuration settings.
+                                This file is mainly used to enable/disable
+                                datastore types that are of interest to the user.
+                                See the example below. 
+    template-graph/             Folder containing template graphs,
+                                which are shown in the lower right of the
+                                TSTool Results area for ensemble and time seriesa,
+                                next to the 'Graph with template:' buttons.
+    ui-state.txt                Properties describing the user interface state,
+                                such as last selected choices.
 ```
 
 The following is an example user `TSTool.cfg` configuration file and is discussed more in the
@@ -172,8 +181,8 @@ TSTool can be installed in various environments, including:
 
 1. on a Windows desktop computer, using the CDSS TSTool installer
 2. on a Windows server, using the CDSS TSTool installer
-3. on Linux, using the CDSS TSTool installer
-4. as part of the HydroBase Tools DVD installation, used in the past but typically not currently used.
+3. on Linux, using the [Open Water Foundation TSTool installer](https://software.openwaterfoundation.org)
+4. as part of the HydroBase Tools DVD installation, used in the past but typically not currently used
 
 In all cases, is recommended that the normal installation file structure is used.
 The following sections describe installation in various environments.
@@ -344,6 +353,8 @@ the network version can be run by running the software in the `ServerName\CDSS\T
 The software will expect that file locations use the same drives as when the software was installed.
 
 ### Install TSTool from the “HydroBase data set Analysis Query Tools DVD” ###
+
+**This is an old approach that is typically not used anymore.**
 
 If you acquired a HydroBase DVD or downloaded the DVD image,
 TSTool will be installed during the DVD install process.

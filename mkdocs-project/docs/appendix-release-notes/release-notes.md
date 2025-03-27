@@ -1,9 +1,19 @@
 # TSTool / Release Notes #
 
 This appendix provides information about changes that have occurred in TSTool.
-A summary table is provided, with links to details for major versions.
+View the details to understand the impacts of specific changes.
 
-*   [TSTool Version History](#tstool-version-history)
+*   [Release Note Details](#release-note-details)
+*   [Version History](#version-history)
+*   [Known Limitations](#known-limitations)
+*   [Version Numbering Convention](#version-numbering-convention)
+*   [Release Note Issue Icons](#release-note-issue-icons)
+*   [TSTool and Java Compatibility](#tstool-and-java-compatibility)
+
+------------------
+
+# Release Note Details #
+
 *   [TSTool Version Details] - the following are separate documentation pages for major TSTool versions
     +   [Version 15 Details](release-notes-15.md)
     +   [Version 14 Details](release-notes-14.md)
@@ -21,7 +31,7 @@ A summary table is provided, with links to details for major versions.
 
 ---------------
 
-## TSTool Version History ##
+## Version History ##
 
 The following table summarizes the TSTool release history.
 See the TSTool Version Details links above or the links in the following table for more detailed information about each version.
@@ -35,7 +45,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|[15.0.0](release-notes-15.md)|Feature release to update from Java 8 to Java 11. | 2025-03-03 |
+|[15.0.0](release-notes-15.md)|Major release to update from Java 8 to Java 11. Add file, plugin, and TSTool installation managers. | 2025-03-27 |
 |[14.10.0](release-notes-14.md)|Feature release with many enhancements to support advanced workflows. | 2025-02-07 |
 |[14.9.6](release-notes-14.md)|Maintenance release to improve complex workflow automation and maintenance. | 2024-08-19 |
 |[14.9.5](release-notes-14.md)|Maintenance release to improve complex workflow automation and maintenance. | 2024-04-29 |
@@ -200,7 +210,7 @@ TSTool Version History Summary (most current at top)
     It is recommended that the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) command be avoided and
     that paths be specified relative to the command file.
 
-## TSTool Version Numbering Convention ##
+## Version Numbering Convention ##
 
 TSTool versioning generally adheres to the following pattern.
 The version may be incremented in source code but does not become official until a public software release is made.
@@ -228,7 +238,7 @@ The above version string is used in the software as follows, where `Version` is 
 *   Windows ***Start*** menu is ***Start / CDSS / TSTool-Version***
 *   Windows install file is `TSTool_CDSS_Version_Setup.exe`
 
-## TSTool Issue Icons ##
+## Release Note Issue Icons ##
 
 The following icons are used to indicate the type of issue in release notes,
 and release note items are typically listed in the following order:
@@ -243,3 +253,38 @@ and release note items are typically listed in the following order:
     Backward compatibility is usually retained.  Modifications to an existing command are considered a change.
 *   ![new](new.png) **New Feature** – A new feature has been added, such as a new command.
     New features may or may not be obvious to users but will generally be visible in menus.
+
+## TSTool and Java Compatibility ##
+
+TSTool is developed using Java.
+A Java Runtime Environment (JRE) is distributed with the Windows version of TSTool so that TSTool is
+isolated from other Java software that is installed on the computer.
+This also allows multiple versions of TSTool to be installed at the same time.
+
+Linux TSTool installations rely on the Java software installed on the Linux computer
+and multiple versions of Java may be installed.
+TSTool will search for a compatible version of Java.
+Newer versions of Java can typically run TSTool developed with older versions
+but software changes may require updating TSTool.
+
+The Java version used to develop TSTool is updated periodically,
+with plans to use long-term support (LTS) releases for future updates
+(see the [Java version history (Wikipedia)](https://en.wikipedia.org/wiki/Java_version_history)).
+
+Newer versions of TSTool can run older versions of plugins.
+See the release notes for plugins for information about TSTool and plugin compatibility.
+
+The following table summarizes Java and TSTool compatibility.
+
+**<p style="text-align: center;">
+Java and TSTool Version Compatibility
+</p>**
+
+| **Java Version**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **TSTool Version** | **Comment** |
+| -- | -- | -- |
+| 21 (OpenJDK) | ? | Planned for a future release. |
+| 17 (OpenJDK) | ? | Planned for a 2026 or 2027 release. |
+| 11 (OpenJDK) | 15.0.0 | New TSTool installation and plugin managers help to manage software versions. |
+| 8 (OpenJDK) | 14.9.0 | Switch from Oracle 32-bit Java to OpenJDK 64-bit Java.  All later releases are 64-bit. |
+| 8 (Oracle) | 12.0.0 | Java through 10 internally uses versions 1.8 for 8. |
+| 7 (Oracle) | 11.0.0 | |
