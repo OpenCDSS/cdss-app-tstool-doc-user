@@ -62,9 +62,11 @@ Available TSTool Plugins
 | **Plugin** | **Description** | **Contact Email** |
 |--|--|--|
 | [Amazon Web Services](https://software.openwaterfoundation.org/tstool-aws-plugin/) | Commands to integrate with AWS. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool AWS plugin) |
+| [Google Drive](https://software.openwaterfoundation.org/tstool-googledrive-plugin/) | Commands to integrate with Google Drive. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Google Drive plugin) |
 | [Kisters WISKI (KiWIS) web services](https://software.openwaterfoundation.org/tstool-kiwis-plugin/) | Datastores and commands to integrate with the Kisters WISKI (KiWIS) system web services. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Kisters WISKI plugin) |
 | [Synoptic data web services](https://software.openwaterfoundation.org/tstool-synoptic-plugin/) | Datastore and commands to integrate with [Synoptic Data](https://synopticdata.com/) web services. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Synoptic plugin) |
-| [TriLynx Systems NovaStar](https://trilynx.systems/) | Datastores and commands to integrate with the TriLynx NovaStar system for environmental data and flood warning. | [TriLynx Systems](mailto:steve.malers@trilynx.systems?subject=TSTool NovaStar plugin) |
+| [Timesheets.com web services](https://software.openwaterfoundation.org/tstool-timesheetscom-plugin/) | Datastore and commands to integrate with [Timesheets.com](https://timesheets.com/) web services. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool TimesheetsCom plugin) |
+| [TriLynx Systems NovaStar](https://software.trilynx.systems/) | Datastores and commands to integrate with the TriLynx NovaStar system for environmental data and flood warning. | [TriLynx Systems](mailto:steve.malers@trilynx.systems?subject=TSTool NovaStar plugin) |
 | [Zabbix web services](https://software.openwaterfoundation.org/tstool-zabbix-plugin/) | Datastore and commands to integrate with [Zabbix](https://www.zabbix.com/) web services. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Synoptic plugin) |
 
 ## Plugin Installation and Configuration ##

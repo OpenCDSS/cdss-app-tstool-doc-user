@@ -344,6 +344,7 @@ nav:
 - 'Appendix - Install TSTool': appendix-install/install.md
 - 'Appendix - Release Notes':
   - Release Notes: appendix-release-notes/release-notes.md
+  - Version 15: appendix-release-notes/release-notes-15.md
   - Version 14: appendix-release-notes/release-notes-14.md
   - Version 13: appendix-release-notes/release-notes-13.md
   - Version 12: appendix-release-notes/release-notes-12.md
