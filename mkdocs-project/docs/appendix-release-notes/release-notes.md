@@ -14,7 +14,7 @@ View the details to understand the impacts of specific changes.
 
 # Release Note Details #
 
-*   [TSTool Version Details] - the following are separate documentation pages for major TSTool versions
+*   The following are separate documentation pages for major TSTool versions:
     +   [Version 15 Details](release-notes-15.md)
     +   [Version 14 Details](release-notes-14.md)
     +   [Version 13 Details](release-notes-13.md)
@@ -25,9 +25,6 @@ View the details to understand the impacts of specific changes.
     +   [Version 8 Details](release-notes-08.md)
     +   [Version 7 Details](release-notes-07.md)
     +   [Version 6 Details](release-notes-06.md)
-*   [Known Limitations](#known-limitations)
-*   [TSTool Version Numbering Convention](#tstool-version-numbering-convention)
-*   [TSTool Issue Icons](#tstool-issue-icons)
 
 ---------------
 
@@ -37,7 +34,7 @@ The following table summarizes the TSTool release history.
 See the TSTool Version Details links above or the links in the following table for more detailed information about each version.
 Only recent versions are documented in detail.
 Comments for minor versions may be listed under a version that is publicly released.
-Release note details are categorized with [issue type icons](#tstool-issue-icons).
+Release note details are categorized with [release note issue icons](#release-note-issue-icons).
 
 **<p style="text-align: center;">
 TSTool Version History Summary (most current at top)
@@ -102,21 +99,21 @@ TSTool Version History Summary (most current at top)
 |11.04.00 – 11.04.03|Add support for `${Property}` in additional commands.  Improve error handling when [`RunCommands`](../command-ref/RunCommands/RunCommands.md) is used with [`For`](../command-ref/For/For.md).   List all output files in TSTool interface when using [`For`](../command-ref/For/For.md).|2015-07-15|
 |11.03.00 – 11.03.10|Add support for `${Property}` in some command parameters for over 50 commands.  Enable nested [`For`](../command-ref/For/For.md) loops.  Add support for Excel formatting condition and style tables.  Multiple incremental updates during beta testing.|2015-06-29|
 |11.02.00 – 11.02.03|Improved Excel integration and automation control for table and properties, add properties and data flag descriptions to [DateValue files](../datastore-ref/DateValue/DateValue.md), add flags and descriptions to more fill/set commands.|2015-05-27|
-|11.01.00|[ReclamationHDB datastore](../datastore-ref/ReclamationHDB/ReclamationHDB.md) support enhancements.|2015-03-23|
+|11.01.00|[ReclamationHDB datastore](https://software.openwaterfoundation.org/tstool-reclamationhdb-plugin/latest/doc-user/datastore-ref/ReclamationHDB/ReclamationHDB/) support enhancements.|2015-03-23|
 |11.00.00|Update from Java 6 to 7.  Enhancements for Excel integration.  Add PostgreSQL database support.|2015-03-16|
 |10.31.00|Add preliminary [`For`](../command-ref/For/For.md) command.|2014-08-05|
 |10.30.00 – 10.30.02|Add [`InsertTableColumn`](../command-ref/InsertTableColumn/InsertTableColumn.md), other enhancements to facilitate calculating statistics and saving output to tables.|2014-06-22|
 |10.29.00|Additional Excel integration and table processing features.|2014-05-19|
-|10.28.02|Enable table view for irregular interval time series.  Enhance [ReclamationHDB](../datastore-ref/ReclamationHDB/ReclamationHDB.md) query features.|2014-04-19|
+|10.28.02|Enable table view for irregular interval time series.  Enhance [ReclamationHDB](https://software.openwaterfoundation.org/tstool-reclamationhdb-plugin/latest/doc-user/datastore-ref/ReclamationHDB/ReclamationHDB/) query features.|2014-04-19|
 |10.27.00|Significant Excel integration improvements, add some utility commands.|2014-03-21|
 |10.26.00|Improve [NRCS AWDB web service](../datastore-ref/NRCS-AWDB/NRCS-AWDB.md) support.  Add [`If`](../command-ref/If/If.md) and [`Endif`](../command-ref/EndIf/EndIf.md) and other enhancements to help automate computation of NRCS Surface Water Supply Index.|2013-12-24|
-|10.25.00|Additional enhancements for [ReclamationHDB datastore](../datastore-ref/ReclamationHDB/ReclamationHDB.md).|2013-10-15|
-|10.24.01|Change ensemble trace identifiers to string to allow more flexibility.  Update [ReclamationHDB](../datastore-ref/ReclamationHDB/ReclamationHDB.md) commands to handle ensembles.|2013-09-30|
+|10.25.00|Additional enhancements for [ReclamationHDB datastore](https://software.openwaterfoundation.org/tstool-reclamationhdb-plugin/latest/doc-user/datastore-ref/ReclamationHDB/ReclamationHDB/).|2013-10-15|
+|10.24.01|Change ensemble trace identifiers to string to allow more flexibility.  Update [ReclamationHDB](https://software.openwaterfoundation.org/tstool-reclamationhdb-plugin/latest/doc-user/datastore-ref/ReclamationHDB/ReclamationHDB/) commands to handle ensembles.|2013-09-30|
 |10.23.00|Initial work to add features to create time series event table to annotate products.  Fix [`FillRegression`](../command-ref/FillRegression/FillRegression.md) and [`FillMixedStation`](../command-ref/FillMixedStation/FillMixedStation.md) issues introduced in previous release.|2013-09-12|
 |10.22.00|Add raster graph and move data visualization commands to new menu, improve [generic database datastore](../datastore-ref/GenericDatabase/GenericDatabase.md) read/write functionality.|2013-08-30|
 |10.21.00|Add initial network processing command, add additional functionality for processing tables, and a number of maintenance updates.|2013-07-14|
-|10.20.00|Enhancements to [ReclamationHDB](../datastore-ref/ReclamationHDB/ReclamationHDB.md) read/write commands.  Enable filtering [HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase.md) diversion coding structures by structure type and WDID.|2013-04-21|
-|10.19.00|Enhancements to [ReclamationHDB](../datastore-ref/ReclamationHDB/ReclamationHDB.md) write features.|2013-03-16|
+|10.20.00|Enhancements to [ReclamationHDB](https://software.openwaterfoundation.org/tstool-reclamationhdb-plugin/latest/doc-user/datastore-ref/ReclamationHDB/ReclamationHDB/) read/write commands.  Enable filtering [HydroBase](../datastore-ref/CO-HydroBase/CO-HydroBase.md) diversion coding structures by structure type and WDID.|2013-04-21|
+|10.19.00|Enhancements to [ReclamationHDB](https://software.openwaterfoundation.org/tstool-reclamationhdb-plugin/latest/doc-user/datastore-ref/ReclamationHDB/ReclamationHDB/) write features.|2013-03-16|
 |10.18.00|Add commands to read a table from Excel and write to a datastore.|2013-03-03|
 |10.17.00|Add [`ProfileCommands`](../command-ref/ProfileCommands/ProfileCommands.md) command and other features to help with performance on large command files.|2013-02-18|
 |10.16.00|Minor update to improve processing of well level data and templates.|2013-02-13|
@@ -127,7 +124,7 @@ TSTool Version History Summary (most current at top)
 |10.11.00|Update to support [RCC ACIS](../datastore-ref/RCC-ACIS/RCC-ACIS.md) version 2.|2012-07-03|
 |10.10.00|Add exceedance probability and related statistics to [`RunningStatisticTimeSeries`](../command-ref/RunningStatisticTimeSeries/RunningStatisticTimeSeries.md) command.|2012-06-12|
 |10.00.00 – 10.09.00|Migrate all `TS Alias = Command()` syntax to `Command(Alias=”...”)`.  Other user interface cleanup, maintenance, and many enhancements.|2012-05-15|
-|9.10.00 – 9.10.03|Add support for [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB.md), [Regional Climate Center RCC ACIS](../datastore-ref/RCC-ACIS/RCC-ACIS.md) (preliminary), and [USGS NWIS](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md) (preliminary) as data stores.  Add area graphs.|2011-02-18|
+|9.10.00 – 9.10.03|Add support for [Reclamation HDB database](https://software.openwaterfoundation.org/tstool-reclamationhdb-plugin/latest/doc-user/datastore-ref/ReclamationHDB/ReclamationHDB/), [Regional Climate Center RCC ACIS](../datastore-ref/RCC-ACIS/RCC-ACIS.md) (preliminary), and [USGS NWIS](../datastore-ref/USGS-NWIS-Daily/USGS-NWIS-Daily.md) (preliminary) as data stores.  Add area graphs.|2011-02-18|
 |9.09.00 – 9.09.01|Add additional commands for table processing.  Improve template integration with processor properties and tables.|2010-10-18|
 |9.08.00 – 9.08.01|Support connecting to more than one [RiversideDB](../datastore-ref/RiversideDB/RiversideDB.md) and introduce the concept of named data stores as an alternative to input type/name.  Add [`TableMath`](../command-ref/TableMath/TableMath.md) and [`TableTimeSeriesMath`](../command-ref/TableTimeSeriesMath/TableTimeSeriesMath.md) commands.|2010-09-15|
 |9.07.00 – 9.07.02|Add HTML summary, improve data flag handling, improve Python integration, initial support for [ColoradoWaterHBGuest web service](../datastore-ref/ColoradoWaterHBGuest/ColoradoWaterHBGuest.md), include training materials, other maintenance.|2010-08-20|
@@ -179,37 +176,45 @@ TSTool Version History Summary (most current at top)
 
 ## Known Limitations ##
 
-*   ![limitation](limitation.png) TSTool uses a “discovery mode” to partially execute commands when editing the commands.
-    This is used to determine lists of time series identifiers, table identifiers, and properties for editor choices.
-    However, some workflow logic is so complex that commands cannot fully execute in discovery mode.
-    Consequently, warnings may result when loading a command file or some editor choices may be incomplete.
-    When this is known to be an issue, the command editors provide a text field rather than a choice.
-    These complexities will be improved over time as additional resources are devoted to solving design limitations.
-*   ![limitation](limitation.png) When saving time series product [(`*.tsp`) files](../appendix-tsview/tsview.md),
-    the absolute path is saved with each file.
-    This is not as portable as saving a path relative to the command file.
-    It may be necessary to edit the product file manually to change file paths from absolute to relative – the
-    relative path will then be converted to absolute when processed and time series files will be found,
-    assuming that the locations are consistent.
-*   ![limitation](limitation.png) The [`ReadStateCUB`](../command-ref/ReadStateCUB/ReadStateCUB.md) command,
-    unlike other read commands, does not provide a discovery mode.
-    Consequently, other commands will not be provided with a list of time series identifiers for the binary file.
-    The reason for this is that StateMod and StateCU binary files can contain a huge number
-    of time series and providing a list could be overwhelming and slow.
-    Alternatives are being evaluated.
-    Currently, commands that reference time series in the binary files must use
-    more generic selection methods such as `TSLIST=AllMatchingTSID` and `TSID` with wildcards.
-*   ![limitation](limitation.png) Plotting features do not understand the concept of instantaneous, mean,
-    and accumulated time series (referred to as the time scale).  All values are plotted at data value date/time.
-    In the future, features may be implemented to automatically determine from the
-    data type and time scale whether to adjust the visual representation based on the time scale,
-    for example to use a “carry forward” line instead of connecting points.
-*   ![limitation](limitation.png) Using the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md)
-    command may result in warnings after commands are edited.
-    This is due to the initial checks on filenames not fully recognizing the impacts of previous
-    [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) commands.
-    It is recommended that the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) command be avoided and
-    that paths be specified relative to the command file.
+The following are known TSTool issues.
+
+*   GitHub repository issues:
+    +   [Main application issues](https://github.com/OpenCDSS/cdss-app-tstool-main/issues)
+    +   [Command processor library](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/issues)
+    +   [Common library](https://github.com/OpenCDSS/cdss-lib-common-java/issues)
+    +   Other libraries also have lists of issues
+*   Other significant known limitations:
+    +   ![limitation](limitation.png) TSTool uses a “discovery mode” to partially execute commands when editing the commands.
+        This is used to determine lists of time series identifiers, table identifiers, and properties for editor choices.
+        However, some workflow logic is so complex that commands cannot fully execute in discovery mode.
+        Consequently, warnings may result when loading a command file or some editor choices may be incomplete.
+        When this is known to be an issue, the command editors provide a text field rather than a choice.
+        These complexities will be improved over time as additional resources are devoted to solving design limitations.
+    +   ![limitation](limitation.png) When saving time series product [(`*.tsp`) files](../appendix-tsview/tsview.md),
+        the absolute path is saved with each file.
+        This is not as portable as saving a path relative to the command file.
+        It may be necessary to edit the product file manually to change file paths from absolute to relative – the
+        relative path will then be converted to absolute when processed and time series files will be found,
+        assuming that the locations are consistent.
+    +   ![limitation](limitation.png) The [`ReadStateCUB`](../command-ref/ReadStateCUB/ReadStateCUB.md) command,
+        unlike other read commands, does not provide a discovery mode.
+        Consequently, other commands will not be provided with a list of time series identifiers for the binary file.
+        The reason for this is that StateMod and StateCU binary files can contain a huge number
+        of time series and providing a list could be overwhelming and slow.
+        Alternatives are being evaluated.
+        Currently, commands that reference time series in the binary files must use
+        more generic selection methods such as `TSLIST=AllMatchingTSID` and `TSID` with wildcards.
+    +   ![limitation](limitation.png) Plotting features do not understand the concept of instantaneous, mean,
+        and accumulated time series (referred to as the time scale).  All values are plotted at data value date/time.
+        In the future, features may be implemented to automatically determine from the
+        data type and time scale whether to adjust the visual representation based on the time scale,
+        for example to use a “carry forward” line instead of connecting points.
+    +   ![limitation](limitation.png) Using the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md)
+        command may result in warnings after commands are edited.
+        This is due to the initial checks on filenames not fully recognizing the impacts of previous
+        [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) commands.
+        It is recommended that the [`SetWorkingDir`](../command-ref/SetWorkingDir/SetWorkingDir.md) command be avoided and
+        that paths be specified relative to the command file.
 
 ## Version Numbering Convention ##
 
