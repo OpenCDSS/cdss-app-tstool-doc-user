@@ -71,4 +71,4 @@ See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) 
 
 ## See Also ##
 
-*   [`ReadReclamationHDB`](../ReadReclamationHDB/ReadReclamationHDB.md) command
+*   [`ReadReclamationHDB`](https://software.openwaterfoundation.org/tstool-reclamationhdb-plugin/latest/doc-user/command-ref/ReadReclamationHDB/ReadReclamationHDB/) command

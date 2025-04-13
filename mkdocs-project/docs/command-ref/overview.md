@@ -146,7 +146,6 @@ The TSTool configuration file may need to be edited to enable a data source.
 *   [`ReadNwsrfsEspTraceEnsemble`](ReadNwsrfsEspTraceEnsemble/ReadNwsrfsEspTraceEnsemble.md)
 *   [`ReadNwsrfsFS5Files`](ReadNwsrfsFS5Files/ReadNwsrfsFS5Files.md)
 *   [`ReadRccAcis`](ReadRccAcis/ReadRccAcis.md) - read time series from [RCC ACIS web service](../datastore-ref/RCC-ACIS/RCC-ACIS.md)
-*   [`ReadReclamationHDB`](ReadReclamationHDB/ReadReclamationHDB.md) - read time series from [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB.md)
 *   [`ReadReclamationPisces`](ReadReclamationPisces/ReadReclamationPisces.md) - read time series from [Reclamation Pisces database](../datastore-ref/ReclamationPisces/ReclamationPisces.md)
 *   [`ReadRiverWare`](ReadRiverWare/ReadRiverWare.md) - read time series from [RiverWare file](../datastore-ref/RiverWare/RiverWare.md)
 *   [`ReadStateCU`](ReadStateCU/ReadStateCU.md) - read time series from a [StateCU file](../datastore-ref/StateCU/StateCU.md)
@@ -248,7 +247,6 @@ The TSTool configuration file may need to be edited to enable a data source.
 *   [`WriteDelftFewsPiXml`](WriteDelftFewsPiXml/WriteDelftFewsPiXml.md) - write time series to [Delft FEWS PI XML format file](../datastore-ref/Delft-FEWS-PI-XML/Delft-FEWS-PI-XML.md)
 *   [`WriteDelimitedFile`](WriteDelimitedFile/WriteDelimitedFile.md) - write time series to a delimited file
 *   [`WriteHecDss`](WriteHecDss/WriteHecDss.md) - write time series to a [HEC-DSS file](../datastore-ref/HEC-DSS/HEC-DSS.md)
-*   [`WriteReclamationHDB`](WriteReclamationHDB/WriteReclamationHDB.md) - write time series to [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB.md)
 *   [`WriteRiverWare`](WriteRiverWare/WriteRiverWare.md) write time series to a [RiverWare file](../datastore-ref/RiverWare/RiverWare.md)
 *   [`WriteStateCU`](WriteStateCU/WriteStateCU.md) - write time series to a [StateCU file](../datastore-ref/StateCU/StateCU.md)
 *   [`WriteStateMod`](WriteStateMod/WriteStateMod.md) - write time series to a [StateMod file](../datastore-ref/StateMod/StateMod.md)
@@ -694,7 +692,6 @@ is useful to software users and developers.  Columns are as follows:
 |[`ReadPropertiesFromExcel`](ReadPropertiesFromExcel/ReadPropertiesFromExcel.md)                                 |Read processor properties from Excel.|||
 |[`ReadPropertiesFromFile`](ReadPropertiesFromFile/ReadPropertiesFromFile.md)                                    |Read processor properties from a file.|||
 |[`ReadRccAcis`](ReadRccAcis/ReadRccAcis.md)                                                                     |Read time series from [RCC ACIS web service](../datastore-ref/RCC-ACIS/RCC-ACIS.md).|||
-|[`ReadReclamationHDB`](ReadReclamationHDB/ReadReclamationHDB.md)                                                |Read time series from [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB.md)|||
 |[`ReadReclamationPisces`](ReadReclamationPisces/ReadReclamationPisces.md)                                       |Read time series from [Reclamation Pisces database](../datastore-ref/ReclamationPisces/ReclamationPisces.md)|||
 |[`ReadRiverWare`](ReadRiverWare/ReadRiverWare.md)                                                               |Read time series from [RiverWare file](../datastore-ref/RiverWare/RiverWare.md)|||
 |[`ReadStateCU`](ReadStateCU/ReadStateCU.md)                                                                     |Read time series from a [StateCU file](../datastore-ref/StateCU/StateCU.md).|||
@@ -793,7 +790,6 @@ is useful to software users and developers.  Columns are as follows:
 |[`WriteNwsCard`](WriteNwsCard/WriteNwsCard.md)                                                                  |Write time series to a [NWS Card](../datastore-ref/NWSCard/NWSCard.md) file.|||
 |[`WriteNWSRFSESPTraceEnsemble`](WriteNWSRFSESPTraceEnsemble/WriteNWSRFSESPTraceEnsemble.md)                     |Write time series ensemble to [NWSRFS ESP trace ensemble file](../datastore-ref/NWSRFSEspTraceEnsemble/NWSRFSEspTraceEnsemble.md).|||
 |[`WritePropertiesToFile`](WritePropertiesToFile/WritePropertiesToFile.md)                                       |Write processor properties to a file.|||
-|[`WriteReclamationHDB`](WriteReclamationHDB/WriteReclamationHDB.md)                                             |Write time series to [Reclamation HDB database](../datastore-ref/ReclamationHDB/ReclamationHDB.md)|||
 |[`WriteRiverWare`](WriteRiverWare/WriteRiverWare.md)                                                            |Write time series to a [RiverWare file](../datastore-ref/RiverWare/RiverWare.md).|||
 |[`WriteSHEF`](WriteSHEF/WriteSHEF.md)                                                                           |Write time series to [SHEF file](../datastore-ref/SHEF/SHEF.md).|||
 |[`WriteStateCU`](WriteStateCU/WriteStateCU.md)                                                                  |Write time series to a [StateCU file](../datastore-ref/StateCU/StateCU.md).|||
