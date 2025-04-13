@@ -172,7 +172,6 @@ nav:
   - ReadPropertiesFromExcel: command-ref/ReadPropertiesFromExcel/ReadPropertiesFromExcel.md
   - ReadPropertiesFromFile: command-ref/ReadPropertiesFromFile/ReadPropertiesFromFile.md
   - ReadRccAcis: command-ref/ReadRccAcis/ReadRccAcis.md
-  - ReadReclamationHDB: command-ref/ReadReclamationHDB/ReadReclamationHDB.md
   - ReadReclamationPisces: command-ref/ReadReclamationPisces/ReadReclamationPisces.md
   - ReadRiverWare: command-ref/ReadRiverWare/ReadRiverWare.md
   - ReadStateCU: command-ref/ReadStateCU/ReadStateCU.md
@@ -277,7 +276,6 @@ nav:
   - WriteNWSRFSESPTraceEnsemble: command-ref/WriteNWSRFSESPTraceEnsemble/WriteNWSRFSESPTraceEnsemble.md
   - WriteObjectToJSON: command-ref/WriteObjectToJSON/WriteObjectToJSON.md
   - WritePropertiesToFile: command-ref/WritePropertiesToFile/WritePropertiesToFile.md
-  - WriteReclamationHDB: command-ref/WriteReclamationHDB/WriteReclamationHDB.md
   - WriteRiverWare: command-ref/WriteRiverWare/WriteRiverWare.md
   - WriteSHEF: command-ref/WriteSHEF/WriteSHEF.md
   - WriteStateCU: command-ref/WriteStateCU/WriteStateCU.md
@@ -323,7 +321,6 @@ nav:
   - NWSRFS FS5Files: datastore-ref/NWSRFS-FS5Files/NWSRFS-FS5Files.md
   - Plugin: datastore-ref/Plugin/Plugin.md
   - RCC ACIS: datastore-ref/RCC-ACIS/RCC-ACIS.md
-  - ReclamationHDB: datastore-ref/ReclamationHDB/ReclamationHDB.md
   - ReclamationPisces: datastore-ref/ReclamationPisces/ReclamationPisces.md
   - RiversideDB: datastore-ref/RiversideDB/RiversideDB.md
   - RiverWare: datastore-ref/RiverWare/RiverWare.md

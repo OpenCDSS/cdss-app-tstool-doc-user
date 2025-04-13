@@ -79,7 +79,8 @@
     `EnembleID` parameter to be specified using wildcard `*`.
     This is useful to match a single ensemble rather than having to know its identifier,
     useful for graph templates.
-*   ![change](change.png) [12.00.00] The [`WriteReclamationHDB`](../command-ref/WriteReclamationHDB/WriteReclamationHDB.md) command has been updated to use
+*   ![change](change.png) [12.00.00] The [`WriteReclamationHDB`](https://software.openwaterfoundation.org/tstool-reclamationhdb-plugin/latest/doc-user/command-ref/WriteReclamationHDB/WriteReclamationHDB/)
+    command has been updated to use
     new `TS_XFER.WRITE_REAL_DATA` and `TS_XFER.WRITE_MODEL_DATA` stored procedures.
 *   ![change](change.png) [12.00.00] The following commands have been enhanced to work with the [`For`](../command-ref/For/For.md)
     command and recognize `${Property}` notation (where appropriate):
