@@ -172,7 +172,6 @@ or can be omitted.
 
 HydroBaseEnabled = true
 #HydroBaseEnabled = false
-ReclamationHDBEnabled = true
 ```
 
 ## Installing TSTool ##

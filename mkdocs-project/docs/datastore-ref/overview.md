@@ -98,7 +98,6 @@ Available TSTool Datastores
 | [NWSRFS ESP Trace Ensemble](NWSRFSEspTraceEnsemble/NWSRFSEspTraceEnsemble.md)<br>**OBSOLETE** input type | File (binary)          | No limit           | NWSRFS time series ensemble (hour interval). |
 | [NWSRFS FS5Files](NWSRFS-FS5Files/NWSRFS-FS5Files.md)<br>**OBSOLETE** input type | File database (binary) | No limit           | National Weather Service River Forecast System |
 | [RCC ACIS](RCC-ACIS/RCC-ACIS.md) datastore                                   | Web service (REST)     | USA                | Precipitation, temperature, other climate      |
-| [Reclamation HDB](ReclamationHDB/ReclamationHDB.md) datastore                | Database (Oracle)      | USA                | Water resources                                |
 | [Reclamation Pisces](ReclamationPisces/ReclamationPisces.md) datastore       | Database (MySQL)       | USA                | Water resources                                |
 | [RiversideDB](RiversideDB/RiversideDB.md)<br>**OBSOLETE** input type         | Database (SQL Server)  | No limit           | Hydrologic modeling database.  Has been removed from TSTool as of version 13. |
 | [RiverWare](RiverWare/RiverWare.md) input type                               | File (text)            | No limit           | University of Colorado Center for Advanced Decision Support for Water and Environmental Systems (CADSWES) RiverWare modeling software data file          |

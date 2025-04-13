@@ -5,10 +5,17 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 15.1.0](#changes-in-version-1510)
 *   [Changes in Version 15.0.0](#changes-in-version-1500)
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 15.1.0 ##
+
+**Feature release to remove Reclamation HDB features since now in a plugin.**
+
+*   ![remove](remove.png) [15.1.0] Remove Reclamation HDB features.
 
 ## Changes in Version 15.0.0 ##
 
