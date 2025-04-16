@@ -22,7 +22,7 @@ improve the readability of the workflow.
 
 The `If` command can evaluate the following:
 
-*   simple conditional statement for strings, integers, boolean, and floating point (double precision) values, as described in the [Condition Syntax](#condition-syntax) section
+*   simple conditional statement for strings, integers, boolean, and floating point (double precision) values, as described in the [Conditional Syntax](#conditional-syntax) section
 *   comparison of Semantic versions (see [semantic versions](https://semver.org/))
 *   file exists or does not exist
 *   object exists or does not exist (by checking for the object ID)

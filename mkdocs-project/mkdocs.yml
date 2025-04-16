@@ -89,6 +89,7 @@ nav:
   - Empty command line: command-ref/Empty/Empty.md
   - EndFor: command-ref/EndFor/EndFor.md
   - EndIf: command-ref/EndIf/EndIf.md
+  - EvaluateExpression: command-ref/EvaluateExpression/EvaluateExpression.md
   - Exit: command-ref/Exit/Exit.md
   - ExpandTemplateFile: command-ref/ExpandTemplateFile/ExpandTemplateFile.md
   - FillConstant: command-ref/FillConstant/FillConstant.md

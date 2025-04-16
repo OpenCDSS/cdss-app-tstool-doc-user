@@ -61,17 +61,18 @@ Command Parameters
 |`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
-|`MinValue`|The minimum value to replace.|The minimum value and/or `MatchFlag` must be specified.|
-|`MaxValue`|The maximum value to replace.|If not specified, only data values that exactly match the minimum value will be replaced.|
-|`MatchFlag`|The flag to match.  If specified in addition to `MinValue`, then the value and flag must be matched in order to perform the replacement.  A case-sensitive comparison is made and the data value flag must exactly match MatchFlag.  In the future additional flexibility may be added to match a substring, etc. If `Action=SetMissing`, the original data flag value will remain.  Specifying `SetFlag` will result in the original data flag being modified.|`MinValue` and/or `MatchFlag` must be specified.|
-|`NewValue`|The new data value.|Required, unless the Action parameter is specified.|
+|`MinValue`|The minimum value to replace.  Can be specified using `${Property}`. |The minimum value and/or `MatchFlag` must be specified.|
+|`MaxValue`|The maximum value to replace.  Can be specified using `${Property}`. |If not specified, only data values that exactly match the minimum value will be replaced.|
+|`MatchFlag`|The flag to match.  Can be specified using `${Property}`.   If specified in addition to `MinValue`, then the value and flag must be matched in order to perform the replacement.  A case-sensitive comparison is made and the data value flag must exactly match MatchFlag.  In the future additional flexibility may be added to match a substring, etc. If `Action=SetMissing`, the original data flag value will remain.  Specifying `SetFlag` will result in the original data flag being modified.|`MinValue` and/or `MatchFlag` must be specified.|
+|`NewValue`|The new data value.  Can be specified using `${Property}`. |Required, unless the Action parameter is specified.|
 |`Action`|An additional action to take with values that are matched:<ul><li>`Remove` – remove the data points.  This can only be specified for irregular interval time series and will be interpreted as `SetMissing` for regular interval time series.</li><li>`RemoveMissing` - remove missing values.  This can only be specified for irregular interval time series.</li><li>`SetMissing` – set values to missing.</li></ul>|No special action is taken.  The `NewValue` parameter must be specified.|
-|`SetStart`|The date/time to start filling, if other than the full time series period.  Can be specified with processor `${Property}`.|Check the full period.|
-|`SetEnd`|The date/time to end filling, if other than the full time series period.  Can be specified with processor `${Property}`.|Check the full period.|
+|`SetStart`|The date/time to start filling, if other than the full time series period.  Can be specified using processor `${Property}`.|Check the full period.|
+|`SetEnd`|The date/time to end filling, if other than the full time series period.  Can be specified using processor `${Property}`.|Check the full period.|
 |`AnalysisWindowStart`|The starting date/time within the calendar year to replace data.  The window CANNOT cross calendar year boundaries (this may be allowed in the future).  Use multiple commands if necessary.|Process each full year.|
 |`AnalysisWindowEnd`|The ending date/time within the calendar year to replace data.|Process each full year.|
-|`SetFlag`|A string to assign to data values that are replaced.|Do not assign a string flag.|
-|`SetFlagDesc`|Description for SetFlag, used for data products.|Auto-generate.|
+|`SetFlag`|A string to assign to data values that are replaced.  Can be specified using `${Property}`. |Do not assign a string flag.|
+|`SetFlagDesc`|Description for SetFlag, used for data products.  Can be specified using `${Property}`. |Auto-generate.|
+|`Description`|Time series description, to replace the previous description .  Can be specified using `${Property}`. ||
 
 ## Examples ##
 
