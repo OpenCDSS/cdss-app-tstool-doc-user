@@ -16,6 +16,13 @@ Issues may also be included in other repositories that are TSTool components.
 **Feature release to remove Reclamation HDB features since now in a plugin.**
 
 *   ![remove](remove.png) [15.1.0] Remove Reclamation HDB features.
+*   ![change](change.png) [15.1.0] Update the [`ReplaceValue`](../command-ref/ReplaceValue/ReplaceValue.md) command:
+    +   Allow `${Property}` to be used for the `MinValue`, `MaxValue`, `NewValue`, `MatchFlag`, `SetFlag`, `SetFlagDesc`, and `Description` command parameters.
+*   ![change](change.png) [15.1.0] Update the [`SetDataValue`](../command-ref/SetDataValue/SetDataValue.md) command:
+    +   Allow `${Property}` to be used for the `NewValue` command parameters.
+*   ![new](new.png) [15.1.0] Add the [`EvaluateExpression`](../command-ref/EvaluateExpression/EvaluateExpression.md) command:
+    +   Allows evaluating arbitrary expressions.
+    +   The initial version will be enhanced over time to streamline processing time series table, and other data.
 
 ## Changes in Version 15.0.0 ##
 

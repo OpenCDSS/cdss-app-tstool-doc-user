@@ -49,8 +49,8 @@ Command Parameters
 |`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 |`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 |`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
-|`SetDateTime`<br>**required**|The date/time at which the data value should be set.  Specify the date/time precision according to the time series that is being manipulated.|None – must be specified.|
-|`NewValue`<br>**required**|The new data value.|None – must be specified.|
+|`SetDateTime`<br>**required**|The date/time at which the data value should be set.  Can be specified with `${Property}`.  Specify the date/time precision according to the time series that is being manipulated.|None – must be specified.|
+|`NewValue`<br>**required**|The new data value.  Can be specified using `${Property}`.|None – must be specified.|
 
 ## Examples ##
 
