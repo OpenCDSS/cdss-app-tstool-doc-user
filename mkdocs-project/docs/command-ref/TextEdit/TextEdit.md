@@ -14,11 +14,8 @@
 
 The `TextEdit` command edits a text file,
 currently providing simple search and replace for literal strings.
-
-In the future this command may be enhanced to add the following features:
-
-*   edit an in-memory property value containing text
-*   allow multiple operations in one command
+The replacement text can be provided using the `ReplaceWith` command parameter or from a file
+using the `ReplaceWithFile` command parameter.
 
 The search and replace functionality is implemented using Java pattern matching and regular expressions
 (see the Java [`Pattern`](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) class documentation).
@@ -28,8 +25,9 @@ For example, some patterns pass through to the underlying code without changes w
 need to be transformed or "escaped" to protect from manipulation by TSTool.
 The following examples illustrate how to perform common search and replace tasks.
 
-The [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md) command
-can be used to read one or more properties from a text file
+See also other commands that manipulate properties such as
+the [`ReadPropertiesFromFile`](../ReadPropertiesFromFile/ReadPropertiesFromFile.md) command,
+which can be used to read one or more properties from a text file
 and the property values can be used to replace text in an initial file.
 
 ## Command Editor ##
@@ -62,8 +60,9 @@ Command Parameters
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
 | `InputFile`<br>**required** | The name of the input file.  Can be specified using `${Property}`. | None - must be specified. |
-| `SearchFor`<br>**required** | The string to search for in the input file.<ul><li>can be specified using `${Property}`</li><li>see the examples in [Search and Replace Example Patterns](#search-and-replace-example-patterns).</li><li>can begin and/or end with whitespace characters</li></ul>| None - must be specified. |
-| `ReplaceWith`<br>**required** | The string to use for the replacement string in the output file:<ul><li>see the examples in [Search and Replace Example Patterns](#search-and-replace-example-patterns)</li><li>can begin and/or end with whitespace characters</li><li>specify as `EMPTY_STRING` to remove the `SearchFor` string</li></ul> | None - must be specified. |
+| `SearchFor`<br>**required** | The string to search for in the input file.<ul><li>can be specified using `${Property}`</li><li>see the examples in [Search and Replace Example Patterns](#search-and-replace-example-patterns).</li><li>can begin and/or end with white space characters</li></ul>| None - must be specified. |
+| `ReplaceWith` | The string to use for the replacement string in the output file:<ul><li>see the examples in [Search and Replace Example Patterns](#search-and-replace-example-patterns)</li><li>can begin and/or end with whitespace characters</li><li>specify as `EMPTY_STRING` to remove the `SearchFor` string</li></ul> | Must be specified if `ReplaceWithFile` is not specified. |
+| `ReplaceWithFile` | The name of a file containing text to use for the `ReplaceWith` text.  The entire file is used for the replacement, including end of line characters. The file name and content can use `${Property}` syntax. | Must be specified if `ReplaceWith` is not specified. |
 | `OutputFile`<br>**required** | The name of the output file.  Can be specified using `${Property}`. | None - must be specified. |
 | `IfInputNotFound` | Indicate an action if the source file is not found:  `Ignore` (ignore the missing file and do not warn), `Warn` (generate a warning message), `Fail` (generate a failure message) | `Warn` |
 

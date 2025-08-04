@@ -31,10 +31,15 @@ Plugins are suitable in the following cases:
 
 *   plugin features are specific to a system,
     for example integrating with a specific database that is used by a relatively small number of users
+    (e.g., the Reclamation HDB plugin)
+*   plugin features are used in a private system that does not require public release
 *   plugin software is developed and maintained independent of the core TSTool software,
     including staff and financial resources independent of OpenCDSS support for the core product
+    (e.g., plugins developed and used by TriLynx Systems)
 *   plugin software has a large footprint such as many software files and dependencies
-*   plugin features are experimental and MAY be incorporated into the core TSTool product at some point in the future
+    (e.g., the Amazon Web Services plugin)
+*   plugin features are experimental and MAY be incorporated into the core TSTool product at some point in the future,
+    or are envisioned for research and may never be released as a production version
 
 Plugins have technical challenges, which must be addressed by plugin developers
 and will continue to be considered by core product developers:
@@ -46,8 +51,9 @@ and will continue to be considered by core product developers:
 *   plugin support and maintenance is provided by third parties, which may have costs
 *   compatibility issues may arise as the core TSTool product is enhanced,
     which may limit plugin usability to certain TSTool versions
-    (new TSTool features are planned to improve configuration and management of different plugin versions
-    for different TSTool versions)
+    (TSTool 15.0.0 introduced the ***Plugin Manager*** and other features to
+    improve configuration and management of different plugin versions
+    for different TSTool versions and will continue to be enhanced over time)
 
 ## Plugin List ##
 
@@ -61,7 +67,8 @@ Available TSTool Plugins
 
 | **Plugin** | **Description** | **Contact Email** |
 |--|--|--|
-| [Amazon Web Services](https://software.openwaterfoundation.org/tstool-aws-plugin/) | Commands to integrate with AWS. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool AWS plugin) |
+| [Amazon Web Services](https://software.openwaterfoundation.org/tstool-aws-plugin/) | Commands to integrate with Amazon Web Services (AWS). | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool AWS plugin) |
+| [Bitbucket Cloud Web Services](https://software.openwaterfoundation.org/tstool-bitbucket-plugin/) | Commands to integrate with Bitbucket Cloud Web Services, which provides hosting of Git repositories. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Bitbucket plugin) |
 | [Google Drive](https://software.openwaterfoundation.org/tstool-googledrive-plugin/) | Commands to integrate with Google Drive. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Google Drive plugin) |
 | [Kisters WISKI (KiWIS) web services](https://software.openwaterfoundation.org/tstool-kiwis-plugin/) | Datastore and commands to integrate with the Kisters WISKI (KiWIS) system web services. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Kisters WISKI plugin) |
 | [Reclamation HDB](https://software.openwaterfoundation.org/tstool-reclamationhdb-plugin/) | Datastore and commands to integrate with the US Bureau of Reclamation's HDB database. | [Open Water Foundation](mailto:steve.malers@openwaterfoundation.org?subject=TSTool Reclamation HDB plugin) |
@@ -92,9 +99,9 @@ whereas plugins installed in software installation files only apply to that vers
 
 Plugins generally consist of a plugin Java `jar` file, which contains various software modules and files.
 Additional dependencies are installed in the `dep` folder under the plugin.
-The providers of plugins will provide documentation that explains plugin installation and datastore configuration.
+Plugin software publishers will provide documentation that explains plugin installation and datastore configuration.
 
-Plugin software are updated on a frequency that is independent of the core TSTool product,
+Plugin software is updated on a frequency that is independent of the core TSTool product,
 although some coordinated releases may be required if the plugin integration requirements change.
-In the future, a plugin manager tool may be added to the TSTool interface
-to help with notification about available software updates.
+In the future, the ***Plugin Manager*** tool will be enhanced to provide additional
+checks and notifications about updates.

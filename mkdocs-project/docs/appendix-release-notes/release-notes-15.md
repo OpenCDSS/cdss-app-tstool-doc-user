@@ -5,11 +5,21 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 15.2.0](#changes-in-version-1520)
 *   [Changes in Version 15.1.0](#changes-in-version-1510)
 *   [Changes in Version 15.0.0](#changes-in-version-1500)
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 15.2.0 ##
+
+**Feature release to improve plugin and data visualization features.**
+
+*   ![change](change.png) [15.2.0] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
+    +   Add the ability to create an HTML image map so that using the image on a website can include links to other content.
+*   ![change](change.png) [15.2.0] Update the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command:
+    +   Add the `ReplaceWithFile` parameter to allow replacing text with text from a file.
 
 ## Changes in Version 15.1.0 ##
 
