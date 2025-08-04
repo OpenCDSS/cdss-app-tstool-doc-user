@@ -8,6 +8,7 @@
         -   [Single Hour Interval Time Series](#single-hour-interval-time-series)
         -   [Single Minute Interval Time Series](#single-minute-interval-time-series)
     +   [Multiple Time Series](#multiple-time-series)
+    +   [Web Page Image Map](#web-page-image-map)
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
 *   [Examples](#examples)
@@ -332,6 +333,57 @@ illustrating how diversions reduce the flow.
 Example Raster Graph for Multiple Time Series (<a href="../ProcessRasterGraph_Multiple_ExampleGraph.png">see full-size image</a>)
 </p>**
 
+It is envisioned that in the future, command parameters will implemented to:
+
+*   Create a raster graph without a time series product file,
+    as a way of streamlining product generation,
+    with parameters for important configuration information such as selecting a time series to plot,
+    and specifying the color scale and whether a log transform should be used.
+*   Specify an output table containing the colors used for plotting,
+    to allow export of the raster plot information to other tools, such as web visualization.
+    This will allow TSTool to be used to create the product, and other tools to visualize.
+*   Specify the output year type as a command parameter.
+*   Specify additional configuration options for controlling the X and Y axes (e.g., allow seasonal or weekly display).
+
+
+## Web Page Image Map ##
+
+A raster map (heat map) image can be published on a web page.
+It is also possible to implement an "image map" (see [Wikipedia article](https://en.wikipedia.org/wiki/Image_map)),
+which provides the following functionality:
+
+*   display a pop-up tooltip for one or more areas of the image,
+    for example to display the value corresponding to the raster cell (see the example below)
+*   enable one or more links, where clicking on the image opens another web page
+
+The following is an example of the image map output for multiple time series,
+with separate shapes for the data area and legend.
+
+```
+<!-- Image map created by TSTool for raster graph -->
+<img src="test-ProcessRasterGraph-Month-multiple-imagemap-out.png" usemap="#imagemap1"/>
+<map name="imagemap1">
+  <area shape="rect" coords="86,21,464,184" href="https://weather.com" title="tooltip for data area for usgs:06752000.DWR.Streamflow-Avg.Month">
+  <area shape="rect" coords="86,185,464,348" href="https://weather.com" title="tooltip for data area for usgs:06752260.USGS.Streamflow-Avg.Month">
+  <area shape="rect" coords="29,376,688,386" href="https://usgs.gov" title="tooltip for legend area for usgs:06752000.DWR.Streamflow-Avg.Month">
+  <area shape="rect" coords="29,386,631,396" href="https://usgs.gov" title="tooltip for legend area for usgs:06752260.USGS.Streamflow-Avg.Month">
+</map>
+```
+
+See the command editor ***Image Map*** tab and command parameters with names starting with `ImageMap` to create an image map.
+Image map shapes for the data area and time series legend can be configured separately
+with each shape having a `title` (tooltip) and/or `href` (link).
+The resulting image map output file specified with the `ImageMapFile` command parameter can then be inserted into an HTML page,
+for example using the [`TextEdit`](../TextEdit/TextEdit.md) command.
+
+**<p style="text-align: center;">
+![Image map  example](ProcessRasterGraph-Example-ImageMap.png)
+</p>**
+
+**<p style="text-align: center;">
+Image Map Web Page Example (<a href="../ProcessRasterGraph-Example-ImageMap.png">see full-size image</a>)
+</p>**
+
 ## Command Editor ##
 
 The command is available in the following TSTool menu:
@@ -341,11 +393,27 @@ The command is available in the following TSTool menu:
 The following dialog is used to edit the command and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
-![ProcessRasterGraph command editor](ProcessRasterGraph.png)
+![ProcessRasterGraph command editor for input parameters](ProcessRasterGraph-Input.png)
 </p>**
 
 **<p style="text-align: center;">
-`ProcessRasterGraph` Command Editor (<a href="../ProcessRasterGraph.png">see full-size image</a>)
+`ProcessRasterGraph` Command Editor for Input Parameters (<a href="../ProcessRasterGraph-Input.png">see full-size image</a>)
+</p>**
+
+**<p style="text-align: center;">
+![ProcessRasterGraph command editor for output parameters](ProcessRasterGraph-Output.png)
+</p>**
+
+**<p style="text-align: center;">
+`ProcessRasterGraph` Command Editor for Output Parameters (<a href="../ProcessRasterGraph-Output.png">see full-size image</a>)
+</p>**
+
+**<p style="text-align: center;">
+![ProcessRasterGraph command editor for image map parameters](ProcessRasterGraph-ImageMap.png)
+</p>**
+
+**<p style="text-align: center;">
+`ProcessRasterGraph` Command Editor for Image Map Parameters (<a href="../ProcessRasterGraph-ImageMap.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -360,27 +428,25 @@ ProcessRasterGraph(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-|--------------|-----------------|-----------------|
-|`TSProductFile`|The time series product file to process.  The path to the file can be absolute or relative to the working directory.  Can be specified with `${Property}`.  The time series product file should define the following properties:<ul><li>`GraphType` - specify as `Raster` for the `[SubProduct #]` property.</li><li>`SymbolTablePath` - specify as a `[SsubProduct #]`property for multiple time series or `[Data #.#]` property for single time series, indicating the path to the color table (see the [Time Series Product File - Symbol Tables](../../appendix-tsview/tsview.md#time-series-product-file-symbol-tables) documentation for the format specification).  The property currently must be manually added to the time series product file after saving from the TSTool graph view.  If not specified in the product file, a default symbol table will be used, which may not be appropriate for optimal data visualization.</li></ul> | None – must be specified.|
-|`RunMode`|Indicate the run mode to process the product:<ul><li>`BatchOnly` – indicates that the product should only be processed in batch mode.</li><li>`GUIOnly` – indicates that the product should only be processed when the TSTool GUI is used (useful when Preview is set to Preview).</li><li>`GUIAndBatch` – indicates that the product should be processed in batch and GUI mode.</li></ul>|None – must be specified.|
-|`View`|Indicates whether the output should be previewed interactively:<ul><li>`True` – display the graph.</li><li>`False` – do not display the graph (specify the output file instead to automate image creation).</li></ul>|None – must be specified.|
-|`OutputFile`|The absolute or relative path to an output file.  Use this parameter with `View=False` to automate image processing.  If the filename ends in “jpg”, a JPEG image file will be produced.  If the filename ends in “png”, a PNG file will be produced (recommended).  Can be specified with `${Property}`. |Graph file will not be created.|
-|`VisibleStart`|The starting date/time to zoom for the initial (and image file) graph.|Full period is visible.|
-|`VisibleEnd`|The ending date/time to zoom for the initial (and image file) graph.|Full period is visible.|
-|`CommandStatusProperty`|The name of the property to set as the command run status: `Success`, `Warning`, `Failure`.  This can be used to implement error handling in a workflow. | |
-
-It is envisioned that in the future, command parameters will implemented to:
-
-*   Create a raster graph without a time series product file,
-    as a way of streamlining product generation,
-    with parameters for important configuration information such as selecting a time series to plot,
-    and specifying the color scale and whether a log transform should be used.
-*   Specify an output table containing the colors used for plotting,
-    to allow export of the raster plot information to other tools, such as web visualization.
-    This will allow TSTool to be used to create the product, and other tools to visualize.
-*   Specify the output year type as a command parameter.
-*   Specify additional configuration options for controlling the X and Y axes (e.g., allow seasonal or weekly display).
+|**Tab**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|--|--------------|-----------------|-----------------|
+|***Input*** | `TSProductFile`<br>**required**</br>|The time series product file to process.  The path to the file can be absolute or relative to the working directory.  Can be specified with `${Property}`.  The time series product file should define the following properties:<ul><li>`GraphType` - specify as `Raster` for the `[SubProduct #]` property.</li><li>`SymbolTablePath` - specify as a `[SsubProduct #]`property for multiple time series or `[Data #.#]` property for single time series, indicating the path to the color table (see the [Time Series Product File - Symbol Tables](../../appendix-tsview/tsview.md#time-series-product-file-symbol-tables) documentation for the format specification).  The property currently must be manually added to the time series product file after saving from the TSTool graph view.  If not specified in the product file, a default symbol table will be used, which may not be appropriate for optimal data visualization.</li></ul> | None – must be specified.|
+| |`RunMode`|Indicate the run mode to process the product:<ul><li>`BatchOnly` – indicates that the product should only be processed in batch mode.</li><li>`GUIOnly` – indicates that the product should only be processed when the TSTool GUI is used (useful when Preview is set to Preview).</li><li>`GUIAndBatch` – indicates that the product should be processed in batch and GUI mode.</li></ul>|None – must be specified.|
+| ***Output*** |`View`|Indicates whether the output should be previewed interactively:<ul><li>`True` – display the graph.</li><li>`False` – do not display the graph (specify the output file instead to automate image creation).</li></ul>|None – must be specified.|
+| |`OutputFile`<br>**required**</br>|The path to the image output file.  Use this parameter with `View=False` to automate image processing.  If the filename ends in “jpg”, a JPEG image file will be produced.  If the filename ends in “png”, a PNG file will be produced (recommended).  Can be specified with `${Property}`. |Graph file will not be created.|
+| |`VisibleStart`|The starting date/time to zoom for the initial (and image file) graph.|Full period is visible.|
+| |`VisibleEnd`|The ending date/time to zoom for the initial (and image file) graph.|Full period is visible.|
+| |`CommandStatusProperty`|The name of the property to set as the command run status: `Success`, `Warning`, `Failure`.  This can be used to implement error handling in a workflow. | |
+| ***Image Map*** | `ImageMapFile` | The path to the image map output file.  Can be specified with `${Property}`. If specified, indicates that an image map is being output and the following parameters will be used. | |
+| | `ImageMapUrl`| The URL for the image map. The URL can be a full URL or path that allows the image to be found from the HTML image map. | None - must be specified. |
+| | `ImageMapName` | The `name` for the image map. | `imagemap` |
+| | `ImageMapDataArea` | Indicates the data area that is mapped to image map shapes:<ul><li>`Cell` - raster cells (coordinates will be rounded up or down to avoid overlap)</li><li>`TimeSeries` - entire time series is mapped to a shape</li></ul> | `imagemap` |
+| | `ImageMapDataHref` | The `href` for the image map data shapes. | If not specified, a link will not be enabled. |
+| | `ImageMapDataTarget` | The `target` for the image map data shapes, one of the following:<ul><li>`Blank` - open link in a new tab or window</li><li>`Parent` - open the link in the parent frame </li><li>`Self` - open link in the same tab</li><li>`Top` - open link in the full window, breaking out of frames</li></ul> | Depends on browser, typically `Self`. |
+| | `ImageMapDataTitle` | The `title` for the image map data shapes, used to display a tooltip.  Can contain:<ul><li>`${Property}` - processor property</li><li>`${ts:property}` - time series property</li><li>`${tsdata:datetime}` - time series date/time for a value</li><li>`${tsdata:flag}` - time series value flag</li><li>`${tsdata:value}` - time series value</li></ul> | If not specified, a tooltip will not be enabled. |
+| | `ImageMapLegendHref` | The `href` for the image map time series legend shapes. | If not specified, a link will not be enabled. |
+| | `ImageMapLegendTarget` | The `target` for the image map time series legend shapes, one of the following:<ul><li>`Blank` - open link in a new tab or window</li><li>`Parent` - open the link in the parent frame </li><li>`Self` - open link in the same tab</li><li>`Top` - open link in the full window, breaking out of frames</li></ul> | Depends on browser, typically `Self`. |
+| | `ImageMapLegendTitle` | The `title` for the image map time series legend shapes, used to display a tooltip.  Can contain:<ul><li>`${Property}` - processor property</li><li>`${ts:property}` - time series property</li></ul> | If not specified, a tooltip will not be enabled. |
 
 ## Examples ##
 
@@ -393,3 +459,4 @@ See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) 
 ## See Also ##
 
 *   [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
+*   [`TextEdit`](../TextEdit/TextEdit.md) command
