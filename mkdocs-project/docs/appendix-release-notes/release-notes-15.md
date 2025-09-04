@@ -18,6 +18,10 @@ Issues may also be included in other repositories that are TSTool components.
 
 *   ![change](change.png) [15.2.0] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
     +   Add the ability to create an HTML image map so that using the image on a website can include links to other content.
+*   ![change](change.png) [15.2.0] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
+    +   Add the `RunDiscovery` parameter to control whether commands in the command file run discovery when loaded.
+    +   Change the default to not run discovery for the command file because interactive editing of
+        the command file does not occur, will slow execution, and may result in warnings and errors that are irrelevant
 *   ![change](change.png) [15.2.0] Update the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command:
     +   Add the `ReplaceWithFile` parameter to allow replacing text with text from a file.
 
