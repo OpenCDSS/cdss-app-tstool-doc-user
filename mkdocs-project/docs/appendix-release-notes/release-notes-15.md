@@ -16,6 +16,14 @@ Issues may also be included in other repositories that are TSTool components.
 
 **Feature release to improve plugin and data visualization features.**
 
+*   ![bug](bug.png) [15.2.0] Fix bug where right-clicking on a graph zooms in addition to showing the popup menu.
+*   ![bug](bug.png) [15.2.0] Fix the ***Tools / Plugin Manager***:
+    +   The column for whether compatible with TSTool was not populated correctly.
+*   ![change](change.png) [15.2.0] Update time series identifier matching:
+    +   Shared code that matches time series identifier did not handle parentheses in the pattern
+        because these are Java regular expression synatax.
+        Parentheses are now escaped so that matches can occur,
+        for example if parentheses are in any part of the time series identifier.
 *   ![change](change.png) [15.2.0] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
     +   Add the ability to create an HTML image map so that using the image on a website can include links to other content.
 *   ![change](change.png) [15.2.0] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
