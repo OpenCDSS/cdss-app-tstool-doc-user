@@ -14,21 +14,32 @@
 
 The `If` command evaluates a conditional and if true will result in the commands between
 `If` and matching [`EndIf`](../EndIf/EndIf.md) commands being executed.
-A matching `Name` parameter for the `If` and [`EndIf`](../EndIf/EndIf.md)
-commands defines a block of commands. Currently, there is no “else if” or “else” syntax and nested
+A matching `Name` parameter for the `If` and [`EndIf`](../EndIf/EndIf.md) commands defines a block of commands.
+Currently, there is no “else if” or “else” syntax and nested
 `If` commands must be used to evaluate complex conditions.
 Select (highlight) one or more commands and use the ***> Indent Right*** menu to indent commands to
 improve the readability of the workflow.
 
-The `If` command can evaluate the following:
+The `If` command can evaluate the following conditions (with the command editor tab indicated).
+If more than one condition is specified, all conditions must be true for the entire condition to evaluate as true
+(the individual conditions are AND'ed).
 
-*   simple conditional statement for strings, integers, boolean, and floating point (double precision) values, as described in the [Conditional Syntax](#conditional-syntax) section
-*   comparison of Semantic versions (see [semantic versions](https://semver.org/))
-*   file exists or does not exist
-*   object exists or does not exist (by checking for the object ID)
-*   property exists, is set, or is not set
-*   table exists or does not exist (by checking for the table ID)
-*   time series exists or does not exist (by checking for the alias and TSID) and does or does not have data
+*   ***Condition***
+    +   simple conditional statement for strings, integers, boolean, and floating point (double precision) values,
+        as described in the [Conditional Syntax](#conditional-syntax) section
+    +   comparison of Semantic versions (see [semantic versions](https://semver.org/))
+*   ***Datastore OK?***
+    +   datastore exists and the status is OK (or does is not Ok)
+*   ***File Exists?***
+    +   file exists or does not exist
+*   ***Object Exists?***
+    +   object exists or does not exist (by checking for the object ID)
+*   ***Property Defined?***
+    +   property exists, is set, or is not set
+*   ***Table Exists?***
+    +   table exists or does not exist (by checking for the table ID)
+*   ***Time Series Exists?***
+    +   time series exists or does not exist (by checking for the alias and TSID) and does or does not have data
 
 `If` blocks can be nested and each level can be indented (right-click on commands in TSTool to indent)
 All nested `If` commands must evaluate to true to execute the commands within the deepest level of nesting.
@@ -90,6 +101,16 @@ The following dialog is used to edit the command and illustrates the command syn
 `If` Command Editor for Conditions Test (<a href="../If.png">see full-size image</a>)
 </p>**
 
+The following illustrates checking for datastore status.
+
+**<p style="text-align: center;">
+![If command editor for datastore check](If_DataStoreIsOk.png)
+</p>**
+
+**<p style="text-align: center;">
+`If` Command Editor to Check Whether a  Datastore Exists (<a href="../If_DataStoreIsOk.png">see full-size image</a>)
+</p>**
+
 The following illustrates checking for file existence.
 
 **<p style="text-align: center;">
@@ -97,7 +118,7 @@ The following illustrates checking for file existence.
 </p>**
 
 **<p style="text-align: center;">
-`If` Command Editor for Check for File Existence (<a href="../If_FileExists.png">see full-size image</a>)
+`If` Command Editor to Check Whether a  File Exists (<a href="../If_FileExists.png">see full-size image</a>)
 </p>**
 
 The following illustrates checking for object existence.
@@ -107,7 +128,7 @@ The following illustrates checking for object existence.
 </p>**
 
 **<p style="text-align: center;">
-`If` Command Editor for Check for Object Existence (<a href="../If_ObjectExists.png">see full-size image</a>)
+`If` Command Editor to Check Whether an Object Exists (<a href="../If_ObjectExists.png">see full-size image</a>)
 </p>**
 
 The following illustrates checking for a property to make sure it is defined and not empty.
@@ -118,7 +139,7 @@ This is useful for detecting logic and data problems.
 </p>**
 
 **<p style="text-align: center;">
-`If` Command Editor for Check for Whether a Property is Defined and is has a Value (<a href="../If_PropDefined.png">see full-size image</a>)
+`If` Command Editor to Check Whether a Property is Defined and has a Value (<a href="../If_PropDefined.png">see full-size image</a>)
 </p>**
 
 The following illustrates checking for table existence.
@@ -128,7 +149,7 @@ The following illustrates checking for table existence.
 </p>**
 
 **<p style="text-align: center;">
-`If` Command Editor for Check for Table Existence (<a href="../If_TableExists.png">see full-size image</a>)
+`If` Command Editor to Check Whether a Table Exists (<a href="../If_TableExists.png">see full-size image</a>)
 </p>**
 
 The following illustrates how to detect if a time series exists.
@@ -140,7 +161,7 @@ This is useful for executing only blocks of commands that operate on the time se
 </p>**
 
 **<p style="text-align: center;">
-`If` Command Editor for Check for Time Series Existance (<a href="../If_TSExists.png">see full-size image</a>)
+`If` Command Editor to Check Whether a Time Series Exists (<a href="../If_TSExists.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -160,7 +181,9 @@ Command Parameters
 |**Condition**| `Condition`<br>**required** | The conditional statement to evaluate. | `Condition` and/or `TSExists` and/or `PropertyIsNotDefinedOrIsEmpty` must be specified. |
 || `CompareAsStrings` | If `True`, the comparison will be done as strings even if the values could be treated as numbers or Booleans. | `False` |
 || `CompareAsVersions` | If `True`, the comparison will be done by treating the strings as [semantic versions](https://semver.org/). This can be used to check the TSTool, plugin, or API version to ensure that enabled command features are used. Version parts are formatted with leading spaces if necessary for comparison (a space character has a value less than alphanumeric characters). | `False` |
-|**File Exists?**| `FileExists` | Causes the command to evaluate to `True` if the specified file exists.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|**Datastore OK?**| `DataStoreIsOk` | Causes the command to evaluate to `True` if the specified datastore exists and its status is OK.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|| `DataStoreIsNotOk` | Causes the command to evaluate to `True` if the specified datastore does not exist or its status is not OK.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|**File Exists?**| `DataStoreIsNotOk` | Causes the command to evaluate to `True` if the specified file exists.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
 || `FileDoesNotExist` | Causes the command to evaluate to `True` if the specified file does not exist.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
 |**Object Exists?** | `ObjectExists` | Causes the command to evaluate to `True` if the specified object exists, based on checking the object IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
 || `ObjectDoesNotExist` | Causes the command to evaluate to `True` if the specified object does not exist, based on checking the object IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
