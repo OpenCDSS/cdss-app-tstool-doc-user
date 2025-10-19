@@ -24,6 +24,8 @@ Issues may also be included in other repositories that are TSTool components.
         because these are Java regular expression synatax.
         Parentheses are now escaped so that matches can occur,
         for example if parentheses are in any part of the time series identifier.
+*   ![change](change.png) [15.2.0] Update the [`If`](../command-ref/If/If.md) command:
+    +   Add `DataStoreIsOk` and `DataStoreIsNotOk` parameters to check whether a datastore is OK.
 *   ![change](change.png) [15.2.0] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
     +   Add the ability to create an HTML image map so that using the image on a website can include links to other content.
 *   ![change](change.png) [15.2.0] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
