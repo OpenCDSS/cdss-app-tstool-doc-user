@@ -151,7 +151,7 @@ nav:
   - OpenCheckFile: command-ref/OpenCheckFile/OpenCheckFile.md
   - OpenDataStore: command-ref/OpenDataStore/OpenDataStore.md
   - OpenHydroBase: command-ref/OpenHydroBase/OpenHydroBase.md
-  - PDFMerge: command-ref/PDFMerge/PDFMerge.md
+  - PDF: command-ref/PDF/PDF.md
   - Plugin: command-ref/Plugin/Plugin.md
   - PrintTextFile: command-ref/PrintTextFile/PrintTextFile.md
   - ProcessRasterGraph: command-ref/ProcessRasterGraph/ProcessRasterGraph.md
