@@ -16,6 +16,7 @@ Issues may also be included in other repositories that are TSTool components.
 
 **Feature release to improve plugin and data visualization features.**
 
+*   ![bug](bug.png) [15.2.0] Update so that the TSTool user interface shows the progress of opening datastores.
 *   ![bug](bug.png) [15.2.0] Fix bug where right-clicking on a graph zooms in addition to showing the popup menu.
 *   ![bug](bug.png) [15.2.0] Fix the ***Tools / Plugin Manager***:
     +   The column for whether compatible with TSTool was not populated correctly.
@@ -26,6 +27,10 @@ Issues may also be included in other repositories that are TSTool components.
         for example if parentheses are in any part of the time series identifier.
 *   ![change](change.png) [15.2.0] Update the [`If`](../command-ref/If/If.md) command:
     +   Add `DataStoreIsOk` and `DataStoreIsNotOk` parameters to check whether a datastore is OK.
+*   ![change](change.png) [15.2.0] Update the [`PDF`](../command-ref/PDF/PDF.md) command:
+    +   Rename the command from `PDFMerge` to `PDF` to allow sub-commands to be added in the future.
+    +   Update to use version 3.0.6 of the Apache PDFBox library.
+    +   Fully enable the command (it was disabled in previous releases due to unreliable behavior).
 *   ![change](change.png) [15.2.0] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
     +   Add the ability to create an HTML image map so that using the image on a website can include links to other content.
 *   ![change](change.png) [15.2.0] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
