@@ -25,8 +25,14 @@ Issues may also be included in other repositories that are TSTool components.
         because these are Java regular expression synatax.
         Parentheses are now escaped so that matches can occur,
         for example if parentheses are in any part of the time series identifier.
+*   ![change](change.png) [15.2.0] Update the Jackson packages from version 2.9.10 to 2.15.4:
+    +   Add support for reading XML files.
+    +   This version fixes an issue reading XML files that have repeated elements.
+        Previously only the last element would be output in a map, but now a list of objects is output.
 *   ![change](change.png) [15.2.0] Update the [`If`](../command-ref/If/If.md) command:
     +   Add `DataStoreIsOk` and `DataStoreIsNotOk` parameters to check whether a datastore is OK.
+*   ![change](change.png) [15.2.0] Update the [`NewObject`](../command-ref/NewObject/NewObject.md) command:
+    +   Add initial support for reading a CSV, XML, and YAML files.
 *   ![change](change.png) [15.2.0] Update the [`PDF`](../command-ref/PDF/PDF.md) command:
     +   Rename the command from `PDFMerge` to `PDF` to allow sub-commands to be added in the future.
     +   Update to use version 3.0.6 of the Apache PDFBox library.
