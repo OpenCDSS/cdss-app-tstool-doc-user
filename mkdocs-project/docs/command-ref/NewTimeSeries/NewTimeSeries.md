@@ -69,6 +69,7 @@ Command Parameters
 |`InitialValue`|The value to initialize the time series.  Can be specified using processor `${Property}`.|Initialize the time series to missing data.|
 |`InitialFlag`|The initial flag value to initialize the time series.  Can be specified using processor `${Property}`.|No flag is set.|
 |`InitialFunction`|The function to use to initialize time series data values.  This parameter can be used to generate data for testing to simplify visual inspection of results.</ul><li>`DATE_YYYY` – 4-digit year</li><li>`DATE_YYYYMM` – and month</li><li>`DATE_YYYYMMDD` – year, month, and day</li><li>`DATE_YYYYMMDD_hh` – year, month, and day, with decimal as hour</li><li>`DATE_YYYYMMDD_hhmm` – year, month, and day, with decimal as hour and minute</li><li>`RANDOM_0_1` – random number >= 0 and < 1</li><li>`RANDOM_0_1000` – random number >= 0 and < 1000</li></ul>|Initialize the time series to missing data.|
+|`NoData`| Indicate whether the time series is allowed to be created with no data:<ul><li>`False` - do not allow the time time series to be created with no data</li><li>`True` - allow the time series to be created with no data</li><ul> This is used on automated tests. | `False` |
 
 ## Examples ##
 
