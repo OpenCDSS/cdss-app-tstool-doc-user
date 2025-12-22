@@ -37,10 +37,20 @@ Issues may also be included in other repositories that are TSTool components.
 *   ![change](change.png) [15.2.0] Update the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command:
     +   Change to allow appending text to the output file when the input file does not exist,
         which is useful in looping.
+*   ![change](change.png) [15.2.0] Update the [`FillConstant`](../command-ref/FillConstant/FillConstant.md) command:
+    +   Add the `DescriptionSuffix` parameter to append to the time series description.
+    +   Change so that the default behavior is to not automatically append to the description.
+        Specify `DescriptionSuffix=Auto` to match the previous behavior.
 *   ![change](change.png) [15.2.0] Update the [`If`](../command-ref/If/If.md) command:
     +   Add `DataStoreIsOk` and `DataStoreIsNotOk` parameters to check whether a datastore is OK.
     +   Fix `TSHasNoData` to work.
     +   Improve logging messages to help with troubleshooting.
+*   ![change](change.png) [15.2.0] Update the [`ManipulateTableString`](../command-ref/ManipulateTableString/ManipulateTableString.md) command:
+    +   Add the `UseEmptyStringForNullInput` parameter.
+    +   Add the following operators:
+        -   `Copy` - to copy the value of the input to output
+        -   `ToBoolean` - to convert the input to a boolean value
+        -   `ToLong` - to convert the input to a long integer value
 *   ![change](change.png) [15.2.0] Update the [`NewObject`](../command-ref/NewObject/NewObject.md) command:
     +   Add initial support for reading a CSV, XML, and YAML files.
 *   ![change](change.png) [15.2.0] Update the [`PDF`](../command-ref/PDF/PDF.md) command:

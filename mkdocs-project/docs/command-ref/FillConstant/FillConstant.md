@@ -51,6 +51,7 @@ Command Parameters
 |`FillEnd`|Date/time indicating the end of filling, using a precision appropriate for the time series, or `OutputEnd`.  Can be specified with a processor `${Property}`.|Fill the entire time series.|
 |`FillFlag`|If specified, data flags will be enabled for the time series and each filled value will be tagged with the specified string.  The flag can then be used later to label graphs, etc.  The flag will be appended to existing flags if necessary.  Can be specified with a processor `${Property}`.|No flag is assigned.|
 |`FillFlagDesc`|Description to use for the fill flag.  The description is used in visual products such as reports and graphs.  Can be specified with a processor `${Property}`.|No description is assigned to the fill flag.|
+|`DescriptionSuffix`| Suffix to append to the time series description if any values were filled.  Can be specified with a processor `${Property}`.  Specify as `Auto` to append the default suffix. | No suffix is appended to the description. |
 
 ## Examples ##
 
@@ -69,6 +70,18 @@ ConstantValue=500,FillStart="1970-02",FillEnd="1970-10",FillFlag="C")
 ## Troubleshooting ##
 
 See the main [TSTool Troubleshooting](../../troubleshooting/troubleshooting.md) documentation.
+
+### Description Does Not Indicate Filling Information ###
+
+Prior to TSTool 15.2.0, the time series description was automatically updated to indicate that the time series was filled with a constant.
+Although this was useful information, it caused descriptions to contain extra information that did not look nice in visual products like graph legends.
+
+TSTool 15.2.0 changed the behavior of how the time series description is modified to use the `DescriptionSuffix` command parameter,
+with the default being no suffix.
+Specify the parameter as `Auto` to match the previous behavior.
+
+The time series history continues to contain information about how the time series was filled.
+Use the time series properties view in TSTool to review the history.
 
 ## See Also ##
 
