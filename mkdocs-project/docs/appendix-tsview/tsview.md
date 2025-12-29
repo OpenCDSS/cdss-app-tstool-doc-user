@@ -1528,38 +1528,81 @@ The time series table view can be selected from the graph or summary view using 
 Additionally, applications that use the TSView package may allow displaying a table from a menu or button option.
 The table view is useful for viewing date and data values in a spreadsheet-like display.
 A time series table view for a long period or many time series may require extra time
-to display (especially if irregular interval time series), but usually only a few seconds are required.
-The following figure illustrates a typical table view.
+to display (especially if irregular interval time series), but is usually very fast.
+The following figure illustrates a typical table view,
+in this case for two regular interval time series with monthly data interval.
 
 **<p style="text-align: center;">
 ![Example Table View showing Monthly Streamflow](TSView_Table_MonthFlow.png)
 </p>**
 
 **<p style="text-align: center;">
-Example Table View showing Monthly Streamflow (<a href="../TSView_Table_MonthFlow.png">see full-size image</a>)
+Example Table View showing Regular Interval Monthly Streamflow (<a href="../TSView_Table_MonthFlow.png">see full-size image</a>)
 </p>**
 
 Characteristics of the table view are:
 
-*   The summary view can be displayed using the ***Summary*** button and the graph view can be displayed using the ***Graph*** button.
-*   If any of the time series have data flags, the ***Flags*** choice will be enabled and allow showing the time series values with flags.
-*   The precision of date/times in the first column matches the data interval for the time series.
-    For irregular time series the precision will match that of the time series start date/time.
-*   If time series with different intervals are selected, multiple tables will be displayed in the window.
-    For irregular time series, a separate table will be shown for each date/time precision.
-*   The table contents can be saved as delimited or [DateValue file](../datastore-ref/DateValue/DateValue.md).
-*   Column headings by default indicate alias if set (or location otherwise),
-    sequence number (used with ensembles), data type and units.
-    If the `TableViewHeaderFormat` time series property is set, it will be used to format the header.
-    The format can contain `%` specifiers and `${ts:Property}` properties.
-*   For irregular time series:
+*   In general:
+    +   If time series with different intervals are selected, multiple tables will be displayed in the window.
+        For irregular interval time series, a separate table will be shown for each date/time precision,
+        determined from the period start date/time.
+    +   If any of the time series have data flags, the ***Flags*** choice will be enabled and allow showing the time series values with flags.
+    +   The number of digits for data values is based on the time series data units or a general default,
+        and can be specified using the ***Digits*** choice.
+    +   Column headings by default indicate alias if set (or location otherwise),
+        sequence number (used with ensembles), data type and units.
+        If the `TableViewHeaderFormat` time series property is set, it will be used to format the header.
+        The format can contain `%` specifiers and `${ts:Property}` properties.
+    +   The table contents can be saved as delimited or [DateValue file](../datastore-ref/DateValue/DateValue.md).
+*   For regular interval time series:
+    +   The precision of date/times in the first column matches the data interval for the time series.
+    +   A date/time is shown for every interval in the time series, even if all data are missing.
+    +   The internal data structure allows the row date/times to be determined quickly.
+*   For irregular interval time series:
     +   Prior to displaying time series, a unique list of date/times is created for all the time series values.
-        This is cached to allow fast lookups of data.  Long irregular time series periods will take longer to determine the list of date/times.
+        This is cached to allow fast lookups of data.
+        Long irregular time series periods will take longer to determine the list of date/times.
+    +   The date/times may not be evenly spaced and there may be large gaps if the source data do not provide data.
+    +   The precision of date/times will match that of the time series start date/time
+        (all date/times within a time series are expected to be consistent).
+    +   Time series with date/time precision less than or equal to second are grouped together
+        and the smallest precision is used to format the date/time column, padding with trailing zeros if necessary.
+        This recognizes that real-time measurements may vary in precision but don't need to be shown in separate tables.
+    +   The date/time must exactly match that in the time series and if not matched a null data value is returned to display in the table.
     +   The starting date/time is used to determine the date/time precision and whether a time zone is used.
-        If the date/times have precision of hour or minute and time zones are the same,
-        the time zone is displayed with the date/time column.  If multiple time zones are found (including no time zone),
-        then no time zone is displayed in the date/time column.
+        If the date/times have precision of hour or finer and time zones are the same for all time series,
+        the time zone is displayed with the date/time column.
+        If multiple time zones are found (including no time zone),
+        then no time zone is displayed in the date/time column but is displayed in the column heading.
         In any case, the time zone can be displayed by mousing over the column headings.
+
+The following example shows real-time irregular interval time series where the first time series has date/times with precision milliscond
+and the second column has date/times with precision second.
+The date/time column values are determined from all irregular time series date/times, sorted in chronological order.
+Consequently, date/times to second precision are extended with `000` milliseconds.
+If it is desired to align the time steps, the time series should be read with output having the same date/time precision
+(e.g., second in this case), which may be offered for some data sources.
+
+**<p style="text-align: center;">
+![Example Table View showing irregular interval time series](TSView_Table_IrregularVoltage.png)
+</p>**
+
+**<p style="text-align: center;">
+Example Table View showing Monthly Streamflow (<a href="../TSView_Table_IrregularVoltage.png">see full-size image</a>)
+</p>**
+
+The following example shows the table view for multiple irregular interval time series,
+which illustrates how separate tables are show for different intervals.
+If regular interval time series were included, corresponding tables would be shown.
+Currently, scrolling one table does not cause the other tables to scroll.
+
+**<p style="text-align: center;">
+![Example Table View showing multiple irregular interval time series](TSView_Table_IrregularMultipleIntervals.png)
+</p>**
+
+**<p style="text-align: center;">
+Example Table View showing Multiple Irregular Intervals (<a href="../TSView_Table_IrregularMultipleIntervals.png">see full-size image</a>)
+</p>**
 
 ## Time Series Product File Reference ##
 

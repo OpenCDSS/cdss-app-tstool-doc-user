@@ -17,10 +17,17 @@ Issues may also be included in other repositories that are TSTool components.
 **Feature release to improve plugin and data visualization features.**
 
 *   ![bug](bug.png) [15.2.0] Update so that the TSTool user interface shows the progress of opening datastores.
-*   ![bug](bug.png) [15.2.0] Fix bug where right-clicking on a graph zooms in addition to showing the popup menu.
+*   ![bug](bug.png) [15.2.0] Fix bug where right-clicking on a graph zooms in slightly when showing the popup menu.
+*   ![bug](bug.png) [15.2.0] Fix bugs in time series table view related to irregular interval time series:
+    +   An error creating the table view resulted in an empty window.
+        Now, if an error occurs, a ***Problems*** button is shown and can be pressed to view problem details.
+    +   Displaying multiple irregular interval real-time time series in the table view would result in errors
+        if the date/times for the time series had different precision.
+        Now, any irregular interval time series with date/time precision <= second are displayed together
+        using the smallest precision to format the date/time column.
+        The table's date/time column will show trailing zeros if necessary.
 *   ![bug](bug.png) [15.2.0] Fix the ***Tools / Plugin Manager***:
     +   The column for whether compatible with TSTool was not populated correctly.
-*   ![change](change.png) [15.2.0] Update the Jackson package from version 2.9.10 to 2.15.4 and add XML and YAML output support.
 *   ![change](change.png) [15.2.0] Update the Microsoft SQL Server driver to version 13.2.1,
     needed to fix issues with stored procedures not working as before.
 *   ![change](change.png) [15.2.0] Catch the `NoClassDefFoundError` exception when loading plugin datastores
@@ -32,6 +39,7 @@ Issues may also be included in other repositories that are TSTool components.
         for example if parentheses are in any part of the time series identifier.
 *   ![change](change.png) [15.2.0] Update the Jackson packages from version 2.9.10 to 2.15.4:
     +   Add support for reading XML files.
+    +   Add support for reading YAML files.
     +   This version fixes an issue reading XML files that have repeated elements.
         Previously only the last element would be output in a map, but now a list of objects is output.
 *   ![change](change.png) [15.2.0] Update the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command:
