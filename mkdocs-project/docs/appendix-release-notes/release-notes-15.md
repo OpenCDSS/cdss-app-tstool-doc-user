@@ -18,6 +18,9 @@ Issues may also be included in other repositories that are TSTool components.
 
 *   ![bug](bug.png) [15.2.0] Update so that the TSTool user interface shows the progress of opening datastores.
 *   ![bug](bug.png) [15.2.0] Fix bug where right-clicking on a graph zooms in slightly when showing the popup menu.
+*   ![bug](bug.png) [15.2.0] Fix bugs in time series graph view:
+    +   The mouse tracker at the bottom of the graph window was not showing date/time to a precision <= second.
+        The tracker now handles date/time precision to nanosecond.
 *   ![bug](bug.png) [15.2.0] Fix bugs in time series table view related to irregular interval time series:
     +   An error creating the table view resulted in an empty window.
         Now, if an error occurs, a ***Problems*** button is shown and can be pressed to view problem details.
@@ -73,6 +76,9 @@ Issues may also be included in other repositories that are TSTool components.
     +   Add the `RunDiscovery` parameter to control whether commands in the command file run discovery when loaded.
     +   Change the default to not run discovery for the command file because interactive editing of
         the command file does not occur, will slow execution, and may result in warnings and errors that are irrelevant
+*   ![change](change.png) [15.2.0] Update the [`SetPropertyFromTable`](../command-ref/SetPropertyFromTable/SetPropertyFromTable.md) command:
+    +   Fully enable the `IgnoreCase` parameter (the editor did not properly handle).
+    +   Add the `DecodeEmbeddedProperties` and `EmbeddedPropertyFormat` parameters to decode properties embedded in cell text.
 *   ![change](change.png) [15.2.0] Update the [`StartLog`](../command-ref/StartLog/StartLog.md) command:
     +   Change so that the default `.log` extension is added only after property expansion.
     +   Change so that a log file specified with a property does not result in problem indicator when a command file is loaded. 
