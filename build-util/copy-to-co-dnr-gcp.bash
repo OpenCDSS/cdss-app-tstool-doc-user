@@ -2,6 +2,17 @@
 #
 # Copy the MkDocs site/* contents to the CO DNR GCP website:
 # - replace all the files on the web with local files
+#
+# ====================================================================================
+# 2026-01-04
+# Apparently recent (2025?) Windows 10/11 updates change how Python is found.
+# Running the 'gsutil.cmd' command in that case may print:
+#  Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+#
+# One solution is to (re)install Python and add to the PATH, but don't want to do that because want to control which version is run.
+# A bundled version of Python is installed with the Google Cloud SDK in the following:
+# '/C/Users/user/AppData/Local/Google/Cloud SDK/google-cloud-sdk/platform/bundledpython/'
+# To use this, set the CLOUDSDK_PYTHON environment variable before any other code is run below.
 
 # Supporting functions, alphabetical.
 
@@ -83,7 +94,7 @@ getVersionModifier() {
 
 # Parse the command parameters.
 parseCommandLine() {
-  local d h l opt
+  local d h opt
   while getopts :dhl opt; do
     #echo "Command line option is ${opt}"
     case $opt in
@@ -93,9 +104,6 @@ parseCommandLine() {
       h) # Usage.
         printUsage
         exit 0
-        ;;
-      l) # Indicate that this should be copied to the latest release and version.
-        copyToLatest="yes"
         ;;
       \?)
         echo "Invalid option:  -${OPTARG}" >&2
@@ -114,12 +122,13 @@ printUsage() {
   echo ""
   echo "Usage:  $0"
   echo ""
-  echo "Copy the site files to the latest website folder if -l specified:  ${gsFolderLatest}"
   echo "Copy the site files to the versioned website folder:  ${gsFolderVersion}"
+  echo "Copy the site files to the latest website folder:  ${gsFolderLatest}"
+  echo ""
+  echo "Prompts will be shown to confirm the copy in both cases."
   echo ""
   echo "-d dry run (print actions but don't execute upload)"
   echo "-h print usage"
-  echo "-l copy to latest folder in addition to auto-detected version folder"
   echo ""
 }
 
@@ -155,7 +164,8 @@ setMkDocsExe() {
 }
 
 # Sync the files to the cloud:
-# - if copyToLatest="yes", also sync to latest folder
+# - version and latest locations will be options
+# - if copyToLatest=no, don't allow (for dev releases)
 syncFiles() {
   local exitStat
   exitStat=0
@@ -177,30 +187,42 @@ syncFiles() {
     gsutil.cmd -m rsync -d -r ${dryrun} ${siteFolder} ${gsFolderVersion}
     exitStat=$?
     if [ ${exitStat} -ne 0 ]; then
-      return ${exitStat}
-    fi
-    if [ ${copyToLatest} = "yes" ]; then
-      echo ""
-      echo 'Copying the documentation to the "latest" folder:'
-      echo "  from: ${siteFolder}"
-      echo "    to: ${gsFolderLatest}"
-      read -p "Continue with upload (Y/n)? " answer
-      if [ -z "${answer}" -o "${answer}" = "Y" -o "${answer}" = "y" ]; then
-        # Also copy to the latest.
-        gsutil.cmd -m rsync -d -r ${dryrun} ${siteFolder} ${gsFolderLatest}
-        exitStat=$?
-        return ${exitStatus}
-      fi
-    else
-      echo ""
-      echo 'Remember to run with -l option to also upload to the "latest" folder.'
-      echo ""
+      echo "Had an error copying files.  Exit status is ${exitStat}."
     fi
   fi
-  return ${exitStatus}
+  if [ "${copyToLatest}" = "yes" ]; then
+    echo ""
+    echo 'Copying the documentation to the "latest" folder:'
+    echo "  from: ${siteFolder}"
+    echo "    to: ${gsFolderLatest}"
+    read -p "Continue with upload (Y/n)? " answer
+    if [ -z "${answer}" -o "${answer}" = "Y" -o "${answer}" = "y" ]; then
+      # Also copy to the latest.
+      gsutil.cmd -m rsync -d -r ${dryrun} ${siteFolder} ${gsFolderLatest}
+      exitStat=$?
+      if [ ${exitStat} -ne 0 ]; then
+        echo "Had an error copying files.  Exit status is ${exitStat}."
+      fi
+    fi
+  fi
+  return ${exitStat}
 }
 
 # Entry point for the script.
+
+pythonExe="/C/Users/${USERNAME}/AppData/Local/Google/Cloud SDK/google-cloud-sdk/platform/bundledpython/python.exe"
+if [ ! -f "${pythonExe}" ]; then
+  echo "Bundled Python for Google Cloud SDK does not exist:" 
+  echo "  ${pythonExe}"
+  echo "Will try to run without setting CLOUDSDK_PYTHON."
+else
+  echo "Setting CLOUD_PYTHON to use Gooble Cloud SDK bundled Python:"
+  echo "  ${pythonExe}"
+  echo "This should avoid the Microsoft shim python program that prints an error."
+  export CLOUDSDK_PYTHON="${pythonExe}"
+fi
+
+# Set the location of python to use the version bundled with the Google Cloud SDK.
 
 # Check the operating system.
 checkOperatingSystem
@@ -254,7 +276,7 @@ gsFolderVersion="gs://opencdss.state.co.us/tstool/${tstoolVersion}/doc-user"
 
 # Whether to copy to latest in addition to the specific version
 # - default to no because the script can be run on any version, and can't assume latest
-copyToLatest="no"
+copyToLatest="yes"
 
 # Parse the command line
 parseCommandLine $@
