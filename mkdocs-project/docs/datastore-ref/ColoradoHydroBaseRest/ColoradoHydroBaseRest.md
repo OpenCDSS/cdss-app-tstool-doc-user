@@ -1,4 +1,4 @@
-# TSTool / Datastore Reference / ColoradoHydroBaseRest #
+# TSTool / Datastore Reference / ColoradoHydroBaseRest (HydroBaseWeb) #
 
 *   [Overview](#overview)
     +   [Web Service to Time Series Mapping](#web-service-to-time-series-mapping)
@@ -8,6 +8,7 @@
 *   [Standard Time Series Properties](#standard-time-series-properties)
 *   [Limitations](#limitations)
 *   [Datastore Configuration File](#datastore-configuration-file)
+*   [Troubleshooting](#troubleshooting)
 *   [See Also](#see-also)
 
 --------------------
@@ -35,7 +36,8 @@ This documentation is general and the documentation for original data sources sh
 
 ---
 
-The ColoradoHydroBaseRest datastore provides access to HydroBase using internet REST web services
+The ColoradoHydroBaseRest datastore (also called HydroBaseWeb)
+provides access to HydroBase using internet REST web services
 and is automatically enabled in TSTool as the `HydroBaseWeb` datastore.
 REST web services use URLs to uniquely identify data resources,
 typically in JSON, comma-separated-value, or other format.
@@ -341,7 +343,6 @@ The following limitations of the web service may impact users of the data.
     grouped by water district, data type, and interval. The cache can be populated based on user requests.
     Caching will be phased in over time as resources are made available to enhance software.
 
-
 ## Datastore Configuration File ##
 
 This datastore is automatically configured in a new TSTool installation,
@@ -408,6 +409,50 @@ ServiceApiDocumentationUri = "https://dwr.state.co.us/rest/get/help"
 **<p style="text-align: center;">
 ColoradoHydroBaseRest Datastore Configuration File
 </p>**
+
+The following table describes configuration file properties.
+
+**<p style="text-align: center;">
+ColoradoHydroBaseRest Datastore Configuration File Properties
+</p>**
+
+| **Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default** |
+| -- | -- | -- |
+| `ApiKey` | The API key to indicate the user. An API key should be used with frequent/large data requests because the default limits may be insufficient and will result in errors. | Default guest request limits will be enforced. |
+| `Description`<br>**required** | Description of the datastore, typically a short sentence, used in some displays. | None - must be specified. |
+| `Enabled` | Indicates whether the datastore is enabled. | `True` |
+| `Name`<br>**required** | Datastore name that is used in the TSTool software and HydroBase web service commands.  The name should be unique across all datastores. | None - must be specified. |
+| `ServiceApiDocumentationUri` | The URL for API documentation, used to provide access to documentation in HydroBase web service commands. | |
+| `ServiceRootURI`<br>**required** | The root URL for the web services.  This should include everything except the service name and query parameters (the specific service name and query parameters are automatically specified by software to query data). A trailing slash will be added if not included. | None - must be specified. |
+| `Type`<br>**required** | Must be `ColoradoHydroBaseRestDataStore`, which is used by TSTool to identify which software to use for the datastore. | None - must be specified. |
+
+## Troubleshooting
+
+Web services are generally highly reliable.
+Major problems typically manifest as no data returned due to one of the following issues.
+
+1.  **Bad request**:
+    *   Check the TSTool problem indicators for information about the problem.
+    *   Check the TSTool log file created when running commands.
+2.  **Datatstore configuration**:
+    *   If the TSTool `HydroBaseWeb` datastore does not list datatypes,
+        then the datastore connection has a problem.
+    *   See the TSTool ***View / Datastores*** view and check for error messages.
+    *   The configuration may require an API key to ensure that request limits are not a problem.
+        Check for information on the [REST Web Services](https://dwr.state.co.us/rest/get/help) page.
+    *   Review the TSTool startup log file and search for `HydroBaseWeb` to determine if there are errors.
+3.  **Web services are offline**:
+    *   Web services may be unavailable due to a network issue or server problem.
+    *   Make sure that the computer can access the internet by using a web browser to check common websites.
+    *   Check the [REST Web Services](https://dwr.state.co.us/rest/get/help) page to ensure that web services are available.
+4.  **Web services API and TSTool are incompatible:**
+    +   The web service API is periodically updated and may require updates to the TSTool software.
+        Check for information about changes on the [REST Web Services](https://dwr.state.co.us/rest/get/help) page.
+    +   Check that the latest version of TSTool is installed.
+
+Data problems may require additional troubleshooting.
+For example, use the [`SetDebugLevel`](../../command-ref/SetDebugLevel/SetDebugLevel.md)
+command to turn on debugging messages.
 
 ## See Also 
 

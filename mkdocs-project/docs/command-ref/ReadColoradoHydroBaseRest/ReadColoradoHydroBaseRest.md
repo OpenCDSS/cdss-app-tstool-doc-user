@@ -45,17 +45,9 @@ command and processed further with other table commands.
 Diversion record time series include
 observations for ditches, reservoirs, wells, and other "structures".
 
-Diversion records queried directly from the HydroBase database using SQL
-and from web services using the API result in different time series
-due to the data representation and how missing/zero values are handled.
-For example, web services return a stream of monthly time series records that may have gaps
-whereas HydroBase monthly data tables include a full representation of a year.
-
-Conceptually, the data representation includes measured values but does not include unmeasured values
-(i.e., HydroBase is not filled with records of missing values).
-The raw data must be transformed into a form that represents the accepted full data representation including handling measurement gaps.
-The default behavior of TSTool is to perform basic data filling consistent with the intended data representation.
-The following sections provide background and examples to illustrate how TSTool handles missing values in daily and monthly diversion records.
+Prior to HydroBase version 20251130, the `vw_CDSS_AnnualAmt` view used `0.0` for missing monthly diversion records
+and consequently the fill carry forward algorithm discussed below was not effective.
+The 20251130 version of the database and TSTool version 15.2.0 ensure that diversion record time series read from HydroBase and web services are consistent.
 
 ### Diversion Records Background ###
 
@@ -85,7 +77,7 @@ derived from daily, monthly, or annual data,
 monthly and annual indicating infrequent measurements.
 Diversion records consist of date, value, and flag (observation code), which can be viewed in TSTool.
 
-### Filling Missing Values with Carry Forward ####
+### Filling Missing Values with Carry Forward ###
 
 If the `FillDivRecordsCarryForward=True` (the default) command parameter is specified,
 daily total diversion (`DivTotal`), daily total reservoir release (`RelTotal`),
@@ -143,15 +135,34 @@ The images below illustrate the process.
 The following example shows the same time series using the [`ReadHydroBase`](../ReadHydroBase/ReadHydroBase.md)
 command and this `ReadColoradoHydroBaseRest` command.
 
-A query of the HydroBase `vw_CDSS_AnnualAmt` view returns the following.
+#### Carry Forward Example for Monthly Data ####
+
+<!-- Query is the following, compress columns before taking the screen shot:
+SELECT * FROM vw_CDSS_AnnualAmt WHERE wd = 3 AND id = 915 ORDER BY irr_year
+-->
+
+A query of the HydroBase `vw_CDSS_AnnualAmt` database view returns the following for HydroBase version 20251130 and later.
+Note the empty cells for missing monthly values.
+Irrigation years with no data are omitted from the view.
+
+**<p style="text-align: center;">
+![ReadColoradoHydroBaseRest Query Results for Monthly Data](ReadColoradoHydroBaseRest_Example_AnnualAmt_20251130.png)
+</p>**
+
+**<p style="text-align: center;">
+HydroBase Query Results for Monthly Data (<a href="../ReadColoradoHydroBaseRest_Example_AnnualAmt_20251130.png">see full-size image)</a>
+</p>**
+
+A query of the HydroBase `vw_CDSS_AnnualAmt` database view returns the following for HydroBase version before 20251130.
 Note the zeros for monthly values and there are no missing values.
+Irrigation years with no data are omitted from the view.
 
 **<p style="text-align: center;">
 ![ReadColoradoHydroBaseRest Query Results for Monthly Data](ReadColoradoHydroBaseRest_Example_AnnualAmt.png)
 </p>**
 
 **<p style="text-align: center;">
-HydroBase Query Results for Monthly Data (<a href="../ReadColoradoHydroBaseRest_Example_AnnualAmt.png">see full-size image)</a>
+HydroBase Query Results for Monthly Data - HydroBase version before 20251130 (<a href="../ReadColoradoHydroBaseRest_Example_AnnualAmt.png">see full-size image)</a>
 </p>**
 
 TSTool commands to read from the database and web services are as follows:
@@ -160,22 +171,34 @@ TSTool commands to read from the database and web services are as follows:
 # Monthly, no filling.
 ReadHydroBase(DataStore="HydroBase",TSID="0300915.DWR.DivTotal.Month~HydroBase",Alias="%L-Database-NoFill",FillDivRecordsCarryForward=False)
 ReadColoradoHydroBaseRest(DataStore="HydroBaseWeb",TSID="0300915..DivTotal.Month~HydroBaseWeb",Alias="%L-Web-NoFill",FillDivRecordsCarryForward=False)
-# Monthly, with carry forward filling.
+# Monthly, with carry forward filling (the default).
 ReadHydroBase(DataStore="HydroBase",TSID="0300915.DWR.DivTotal.Month~HydroBase",Alias="%L-Database-Forward")
 ReadColoradoHydroBaseRest(DataStore="HydroBaseWeb",TSID="0300915..DivTotal.Month~HydroBaseWeb",Alias="%L-Web-Forward")
 ```
 
-The resulting time series at the start of the output period are as shown in the following image.
+For HydroBase version 20251130 and later, the resulting time series at the start of the output period are as shown in the following image.
+The time series from HydroBase database and web services are the same (not filled on the left, and filled on the right).
 The first irrigation year starts in 1949-11.
 The TSTool table view ***Flags*** choice is set to `Superscript` to display the data value flags
 and `c` indicates a value set by the carry forward algorithm.
 
 **<p style="text-align: center;">
-![ReadColoradoHydroBaseRest Results for Monthly Data](ReadColoradoHydroBaseRest_Example_Month.png)
+![ReadColoradoHydroBaseRest Results for Monthly Data](ReadColoradoHydroBaseRest_Example_DivTotal_Month_20251130.png)
 </p>**
 
 **<p style="text-align: center;">
-`ReadColoradoHydroBaseRest` Results for Monthly Data (<a href="../ReadColoradoHydroBaseRest_Example_Month.png">see full-size image)</a>
+`ReadColoradoHydroBaseRest` Results for Monthly Data (<a href="../ReadColoradoHydroBaseRest_Example_DivTotal_Month_20251130.png">see full-size image)</a>
+</p>**
+
+For HydroBase version before 20251130, the resulting time series at the start of the output period are as shown in the following image.
+The HydroBase database and web services results are not the same, as explained below.
+
+**<p style="text-align: center;">
+![ReadColoradoHydroBaseRest Results for Monthly Data](ReadColoradoHydroBaseRest_Example_DivTotal_Month.png)
+</p>**
+
+**<p style="text-align: center;">
+`ReadColoradoHydroBaseRest` Results for Monthly Data - HydroBase version before 20251130 (<a href="../ReadColoradoHydroBaseRest_Example_DivTotal_Month.png">see full-size image)</a>
 </p>**
 
 The time series value columns are explained as follows:
@@ -199,15 +222,32 @@ The time series value columns are explained as follows:
     *   The value for 1951-10 has a filled zero value because the daily time series
         for 1951-09 includes a zero.  See the next image below for more details.
 
-The following example for daily data is consistent with the above monthly data.
-The daily diversion total values from HydroBase are as follows:
+#### Carry Forward Example for Daily Data ####
+
+<!-- Query is the following, compress columns before taking the screen shot:
+SELECT * FROM vw_CDSS_DivRec_WaterClassTS_Day WHERE wdid = '0300915' AND waterclass_num = 10300915 ORDER BY data_meas_date
+-->
+
+The following daily data example is consistent with the above monthly data.
+The daily diversion total values from the `vw_CDSS_DivRec_WaterClassTS_Day` view for HydroBase version 20251130 and later are as follows.
+The database and web service values are the same.
 
 **<p style="text-align: center;">
-![HydroBase Query results for Daily Data](ReadColoradoHydroBaseRest_Example_DivTotal_Day.png)
+![HydroBase Query results for Daily Data](ReadColoradoHydroBaseRest_Example_WaterClass_DivTotal_Day_20251130.png)
 </p>**
 
 **<p style="text-align: center;">
-HydroBase Query Results for Daily Data (<a href="../ReadColoradoHydroBaseRest_Example_DivTotal_Day.png">see full-size image)</a>
+HydroBase Query Results for Daily Data (<a href="../ReadColoradoHydroBaseRest_Example_WaterClass_DivTotal_Day_20251130.png">see full-size image)</a>
+</p>**
+
+The daily diversion total values from HydroBase database version before 20251130 are as follows.
+
+**<p style="text-align: center;">
+![HydroBase Query results for Daily Data](ReadColoradoHydroBaseRest_Example_WaterClass_DivTotal_Day.png)
+</p>**
+
+**<p style="text-align: center;">
+HydroBase Query Results for Daily Data (<a href="../ReadColoradoHydroBaseRest_Example_WaterClass_DivTotal_Day.png">see full-size image)</a>
 </p>**
 
 The commands to query the daily time series in TSTool are as follows:
@@ -217,27 +257,39 @@ The commands to query the daily time series in TSTool are as follows:
 # Daily, no filling.
 ReadHydroBase(DataStore="HydroBase",TSID="0300915.DWR.DivTotal.Day~HydroBase",Alias="%L-Database-NoFill",FillDivRecordsCarryForward=False)
 ReadColoradoHydroBaseRest(DataStore="HydroBaseWeb",TSID="0300915..DivTotal.Day~HydroBaseWeb",Alias="%L-Web-NoFill",FillDivRecordsCarryForward=False)
-# Daily, with carry forward filling.
+# Daily, with carry forward filling (the default).
 ReadHydroBase(DataStore="HydroBase",TSID="0300915.DWR.DivTotal.Day~HydroBase",Alias="%L-Database-Forward")
 ReadColoradoHydroBaseRest(DataStore="HydroBaseWeb",TSID="0300915..DivTotal.Day~HydroBaseWeb",Alias="%L-Web-Forward")
 ```
 
-The resulting time series for periods of interest are as follows:
+For HydroBase database version 20251130, the resulting time series for the periods of interest are as follows.
+The results from the HydroBase database and web services are the same.
 
 **<p style="text-align: center;">
-![ReadColoradoHydroBaseRest Results for Daily Data, Start of Period](ReadColoradoHydroBaseRest_Example_Day0.png)
+![ReadColoradoHydroBaseRest Results for Daily Data](ReadColoradoHydroBaseRest_Example_DivTotal_Day_20251130.png)
 </p>**
 
 **<p style="text-align: center;">
-`ReadColoradoHydroBaseRest` Results for Daily Data, Start of Period (<a href="../ReadColoradoHydroBaseRest_Example_Day0.png">see full-size image)</a>
+`ReadColoradoHydroBaseRest` Results for Daily Data (<a href="../ReadColoradoHydroBaseRest_Example_DivTotal_Day_20251130.png">see full-size image)</a>
+</p>**
+
+For HydroBase database version before 20251130, the resulting time series for the initial and later part of the period are as follows.
+The results from HydroBase database and web services are slightly different due to zeros in the HydroBase database.
+
+**<p style="text-align: center;">
+![ReadColoradoHydroBaseRest Results for Daily Data, Start of Period](ReadColoradoHydroBaseRest_Example_DivTotal_Day0.png)
 </p>**
 
 **<p style="text-align: center;">
-![ReadColoradoHydroBaseRest Results for Daily Data](ReadColoradoHydroBaseRest_Example_Day.png)
+`ReadColoradoHydroBaseRest` Results for Daily Data, Start of Period (<a href="../ReadColoradoHydroBaseRest_Example_DivTotal_Day0.png">see full-size image)</a>
 </p>**
 
 **<p style="text-align: center;">
-`ReadColoradoHydroBaseRest` Results for Daily Data (<a href="../ReadColoradoHydroBaseRest_Example_Day.png">see full-size image)</a>
+![ReadColoradoHydroBaseRest Results for Daily Data](ReadColoradoHydroBaseRest_Example_DivTotal_Day.png)
+</p>**
+
+**<p style="text-align: center;">
+`ReadColoradoHydroBaseRest` Results for Daily Data (<a href="../ReadColoradoHydroBaseRest_Example_DivTotal_Day.png">see full-size image)</a>
 </p>**
 
 The time series value columns in the two images are explained as follows:

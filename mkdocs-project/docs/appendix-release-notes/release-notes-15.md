@@ -14,7 +14,7 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 15.2.0 ##
 
-**Feature release to improve plugin and data visualization features.**
+**Feature release to improve plugin and data visualization features, update to HydroBase 20251130.**
 
 *   ![bug](bug.png) [15.2.0] Update so that the TSTool user interface shows the progress of opening datastores.
 *   ![bug](bug.png) [15.2.0] Fix bug where right-clicking on a graph zooms in slightly when showing the popup menu.
@@ -68,10 +68,16 @@ Issues may also be included in other repositories that are TSTool components.
     +   Rename the command from `PDFMerge` to `PDF` to allow sub-commands to be added in the future.
     +   Update to use version 3.0.6 of the Apache PDFBox library.
     +   Fully enable the command (it was disabled in previous releases due to unreliable behavior).
-*   ![change](change.png) [15.2.0] Update the [`NewTimeSeriess`](../command-ref/NewTimeSeriess/NewTimeSeriess.md) command:
+*   ![change](change.png) [15.2.0] Update the [`NewTimeSeries`](../command-ref/NewTimeSeries/NewTimeSeries.md) command:
     +   Add the `NoData` parameter to allow creating a time series with no data, which is useful for testing.
 *   ![change](change.png) [15.2.0] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
     +   Add the ability to create an HTML image map so that using the image on a website can include links to other content.
+*   ![change](change.png) [15.2.0] Update the [`ReadHydroBase`](../command-ref/ReadHydroBase/ReadHydroBase.md) and
+    [`ReadColoradoHydroBaseRest`](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) commands and related TSID commands:
+    +   The results for diversion records are now the same.
+    +   Prior to HydroBase version 20251130, the HydroBase `vw_CDSS_AnnualAmt` view used `0.0` for no diversion and also missing values.
+    +   HydroBase version 20251130 now includes null values in the view, which allows TSTool to differentiate between zero and missing values.
+    +   HydroBase web services only returns values for diversion values.
 *   ![change](change.png) [15.2.0] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
     +   Add the `RunDiscovery` parameter to control whether commands in the command file run discovery when loaded.
     +   Change the default to not run discovery for the command file because interactive editing of
@@ -81,7 +87,7 @@ Issues may also be included in other repositories that are TSTool components.
     +   Add the `DecodeEmbeddedProperties` and `EmbeddedPropertyFormat` parameters to decode properties embedded in cell text.
 *   ![change](change.png) [15.2.0] Update the [`StartLog`](../command-ref/StartLog/StartLog.md) command:
     +   Change so that the default `.log` extension is added only after property expansion.
-    +   Change so that a log file specified with a property does not result in problem indicator when a command file is loaded. 
+    +   Change so that a log file specified with a property does not result in problem indicator when a command file is loaded.
 *   ![change](change.png) [15.2.0] Update the [`TextEdit`](../command-ref/TextEdit/TextEdit.md) command:
     +   Add the `ReplaceWithFile` parameter to allow replacing text with text from a file.
 
