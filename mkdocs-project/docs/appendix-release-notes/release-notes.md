@@ -42,7 +42,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
-|[15.2.0](release-notes-15.md)|Feature release to improve plugin and data visualization features. | 2025-12-31 |
+|[15.2.0](release-notes-15.md)|Feature release to improve plugin and data visualization features, update to HydroBase 20251130 | 2026-01-04 |
 |[15.1.0](release-notes-15.md)|Feature release to remove Reclamation HDB features, since there is now a Reclamation HDB plugin. | 2025-04-16 |
 |[15.0.0](release-notes-15.md)|Major release to update from Java 8 to Java 11. Add file, plugin, and TSTool installation managers. | 2025-03-27 |
 |[14.10.0](release-notes-14.md)|Feature release with many enhancements to support advanced workflows. | 2025-02-07 |

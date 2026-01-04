@@ -160,7 +160,7 @@ Issues may also be included in other repositories that are TSTool components.
     [`GeoMap`](../command-ref/GeoMap/GeoMap.md) and
     [`GeoMapProject`](../command-ref/GeoMapProject/GeoMapProject.md)
     commands to automate the creation of maps.
-*   ![new](new.png) [14.10.0] Add the initial [`PDFMerge`](../command-ref/PDFMerge/PDFMerge.md) command to merge PDF files.
+*   ![new](new.png) [14.10.0] Add the initial [`PDFMerge` (changed to `PDF` in a later release)](../command-ref/PDF/PDF.md) command to merge PDF files.
     Additional development is necessary to fully implement and test the command.
 
 ## Changes in Version 14.9.6 ##
@@ -375,7 +375,7 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 14.8.6 ##
 
-**Maintenance release to improve time zone handling.** 
+**Maintenance release to improve time zone handling.**
 
 *   ![change](change.png) [14.8.6] Phase out some support for old-style time zones (e.g., `MST`, `MDT`)
     due to ambiguity with current conventions that are more granular (e.g., use `America/Denver` instead, which includes daylight saving).
@@ -393,7 +393,7 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 14.8.5 ##
 
-**Maintenance release to enhance plugin integration.** 
+**Maintenance release to enhance plugin integration.**
 
 *   ![change](change.png) [14.8.5] Improve plugin integration with the documentation viewer.
     Plugins can now view documentation for a specific version.
@@ -404,7 +404,7 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 14.8.4 ##
 
-**Maintenance release to fix issues when processing text files.** 
+**Maintenance release to fix issues when processing text files.**
 
 *   ![change](change.png) [14.8.4] Update the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command:
     +   The `IncludeText` and `ExcludeText` parameters can now include `${Property}` syntax.
@@ -427,7 +427,7 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 14.8.3 ##
 
-**Maintenance release to enable raster graphs for hour and minute interval time series.** 
+**Maintenance release to enable raster graphs for hour and minute interval time series.**
 
 *   ![change](change.png) [14.8.3] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
     +   Enable 1-hour and N-minute interval time series.
@@ -435,7 +435,7 @@ Issues may also be included in other repositories that are TSTool components.
 
 ## Changes in Version 14.8.2 ##
 
-**Maintenance release to fix raster graphs when no time series data.** 
+**Maintenance release to fix raster graphs when no time series data.**
 
 *   ![bug](bug.png) [14.8.2] Update the [`ProcessRasterGraph`](../command-ref/ProcessRasterGraph/ProcessRasterGraph.md) command:
     +   Handle case where a time series is completely missing or has no data.
@@ -639,7 +639,7 @@ Remove the requirement for administrator privileges to install on Windows.**
     The latest HydroBase web services have replaced this old library.
 *   ![change](change.png) [14.5.2] Update the copyright notice for 2023.
 *   ![change](change.png) [14.5.2] Update the [`NewObject`](../command-ref/NewObject/NewObject.md) and
-    [`WriteObjectToJSON`](../command-ref/WriteObjectToJSON/WriteObjectToJSON.md) commands and the main interface to support 
+    [`WriteObjectToJSON`](../command-ref/WriteObjectToJSON/WriteObjectToJSON.md) commands and the main interface to support
     JSON files that have `[ ]` array at the top level.
 *   ![new](new.png) [14.5.2] TSTool has been tested with the [Kisters WISKI (KiWIS) plugin](../plugin-ref/overview.md).
 
@@ -687,7 +687,7 @@ Remove the requirement for administrator privileges to install on Windows.**
 
 **Feature release to improve cloud and JSON object integration and various fixes.**
 
-*   ![bug](bug.png) [14.5.0] The ***Results / Objects*** output has been fixed to only show the object JSON. 
+*   ![bug](bug.png) [14.5.0] The ***Results / Objects*** output has been fixed to only show the object JSON.
     Previously the internal TSTool object was shown, which wraps the original object and adds The JSON object identifier used by TSTool.
 *   ![change](change.png) [14.5.0] The TSTool main user interface code has been made more modular
     to split out code for different data sources to improve maintainability.
@@ -939,7 +939,7 @@ and add support for sub-second time.**
 *   ![change](change.png) [14.2.0] Update the
     [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command to support sub-second
     precision for irregular interval time series.
-    The `IrregularIntervalPrecision` now accepts `HSecond`, `Millisecond`, `Microsecond`, and `Nanosecond`. 
+    The `IrregularIntervalPrecision` now accepts `HSecond`, `Millisecond`, `Microsecond`, and `Nanosecond`.
 
 ## Changes in Version 14.1.1 ##
 
@@ -1070,7 +1070,7 @@ and add support for sub-second time.**
 *   ![change](change.png) [14.0.1] Add `TSTool.cfg` configuration properties `DiffProgram.Windows` and
     `DiffProgram.Linux` to allow configuring visual difference program for each environment
     without having to change the single `DiffProgram` configuration property,
-    and default to KDiff3 as an example of typical use. 
+    and default to KDiff3 as an example of typical use.
 *   ![change](change.png) [14.0.1] Update the following commands to list datastores opened with
     [`OpenDataStore`](../command-ref/OpenDataStore/OpenDataStore.md) command, used in automated testing
     (previously only listed datastores that are opened at startup, which limited the ability to edit command parameters):

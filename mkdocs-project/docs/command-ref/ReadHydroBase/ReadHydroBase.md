@@ -59,10 +59,13 @@ documentation, which provides a comparison of web services and database.
     The observations available in diversion records can be further processed to provide additional
     data values, as described below.
     Diversion records consist of date, value, and flag (observation code), which can be viewed in TSTool.
+
 2.  If `FillDivRecordsCarryForward=True` (the default),
     daily total diversion (`DivTotal`), daily total reservoir release (`RelTotal`),
     and daily water class (`DivClass` and `RelClass`) time series have their values carried forward to fill additional zero
     data values within irrigation years (November to October).
+    If there are no values at the start of an irrigation year, a value of zero is assumed for carry forward filling.
+    If an entire irrigation year is missing, it is NOT assumed to use zero values.
     The Division of Water Resources does implement some data filling by carrying forward non-zero daily values,
     indicated with corresponding data flags.
     In practice, it is common to interpret diversion records by filling in additional zeros and TSTool automates this approach.
@@ -75,6 +78,11 @@ documentation, which provides a comparison of web services and database.
     the read period and time series period is internally set to span full irrigation years
     and is then set to the requested period after filling with the carry forward algorithm.
     **The default behavior is the same as the [`ReadColoradoHydroBaseRest`](../ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) command.**
+
+    Prior to HydroBase version 20251130, the `vw_CDSS_AnnualAmt` view used `0.0` for missing monthly diversion records
+    and consequently the fill carry forward algorithm was not effective.
+    The 20251130 version of the database and TSTool version 15.2.0 ensure that diversion record time series read from HydroBase and web services are consistent.
+
 3.  If `FillUsingDivComments=True` (default is `False`), daily, monthly, and yearly `DivTotal`, `RelTotal`, and `DivClass` time series
     are filled using annual irrigation year (November-October) diversion comments,
     which indicate when irritation years should be treated as additional zero values.
@@ -83,15 +91,17 @@ documentation, which provides a comparison of web services and database.
     daily and monthly records show diversions in all or some months.
     The separate [`FillUsingDiversionComments`](../FillUsingDiversionComments/FillUsingDiversionComments.md) command also
     is available for filling but may be phased out in the future.
+
 4.  It also may be appropriate to use infrequent data types (`IDivTotal`, `IDivClass`, `IRelTotal`, and `IRelClass`) to supply data;
     however, because such values may be annual values,
     additional decisions must be made for how to distribute the values to monthly and daily time series.
     HydroBase diversion record processing automatically integrates such data into larger-interval diversion records;
     however, it may not be obvious.  The HydroBase web services provide additional data to indicate when
     infrequent data are included.
+
 5.  See the [`FillHistMonthAverage`](../FillHistMonthAverage/FillHistMonthAverage.md),
     [`FillPattern`](../FillPattern/FillPattern.md), and other commands,
-    which can be used to fill (estimate) values in data gaps after the initial time series are read.  
+    which can be used to fill (estimate) values in data gaps after the initial time series are read.
 
 ## Command Editor ##
 
