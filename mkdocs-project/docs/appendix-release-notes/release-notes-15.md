@@ -5,12 +5,50 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 15.3.0](#changes-in-version-1530)
 *   [Changes in Version 15.2.0](#changes-in-version-1520)
 *   [Changes in Version 15.1.0](#changes-in-version-1510)
 *   [Changes in Version 15.0.0](#changes-in-version-1500)
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 15.3.0 ##
+
+**Maintenance release to fix HydroBase diversion filling, add NRCS AWDB Rest API support, and improve data viewing tools.**
+
+*   ![bug](bug.png) [15.3.0] Fix some right-click mouse actions that were not working after updating to Java 11.
+    For example, right-clicking on a graph for pop-up menus might zoom the graph.
+*   ![bug](bug.png) [15.3.0] Fix the [`If`](../command-ref/If/If.md) command:
+    +   The `DataStoreIsNotOk` check was not working.  It has been fixed. 
+*   ![change](change.png) [15.3.0] Update the time series product to have the `RasterGraphLayout` graph property,
+    which allows forcing the multiple time series layout even if only one time series is output.
+*   ![change](change.png) [15.3.0] The `NrcsAwdb` datastore configuration has changed:
+    +   The `NrcsAwdb` datastore configuration file that is distributed with TSTool now uses the NRCS AWDB REST API
+        and will become the only option in the future.
+    +   The `NrcsAwdbSOAP` datastore configuration file that is distributed with TSTool uses the SOAP API,
+        which will be discontinued at some point in the future.
+    +   The `NrcsAwdb` datastore is listed in the main datastore list for interactive time series queries
+        (the `NrcsAwdbSoap` datastore is not listed).
+*   ![change](change.png) [15.3.0] Update the [`ListFiles`](../command-ref/ListFiles/ListFiles.md) command:
+    +   Enable property syntax for the `Folder` parameter.
+*   ![change](change.png) [15.3.0] Update the [`ReadNrcsAwdb`](../command-ref/ReadNrcsAwdb/ReadNrcsAwdb.md) command:
+    +   Allow using the `NrcsAwdb` (REST API) or `NrcsAwdbSOAP` (SOAP API) datastores.
+    +   Add new command parameters that are supported by the REST API:
+        -   `StationNames` - to filter on station names
+        -   `StationTriplets` - to filter on station triplets
+        -   `OutputYearType` - to differentiate between calendar and water year for year-interval data
+    +   Add the ***REST API*** tab with additional new command parameters:
+        -   `InsertOrUpdateBeginDate` - to read data values that have been modified since a date
+        -   `ActiveOnly` - to control whether retired stations are included
+        -   `ReturnOriginalValues` - to control whether original values (or processed data) are returned
+        -   `ReturnSuspectData` - to control whether suspect data values are returned
+*   ![change](bug.png) [15.3.0] Update the [`CompareTimeSeries`](../command-ref/CompareTimeSeries/CompareTimeSeries.md) command:
+    +   Add the `CompareSelected2TS` parameter to select two time series to be compared.
+*   ![change](bug.png) [15.3.0] Update the [`ReadHydroBase`](../command-ref/ReadHydroBase/ReadHydroBase.md) and
+    [`ReadColoradoHydroBaseRest`](../command-ref/ReadColoradoHydroBaseRest/ReadColoradoHydroBaseRest.md) commands and related TSID commands:
+    +   Fix so that filling monthly diversion time series when no corresponding daily time series is available will not throw an exception.
+        The filling logic attempts to determine if a previous daily value was zero to apply the carry forward methodology.
 
 ## Changes in Version 15.2.0 ##
 

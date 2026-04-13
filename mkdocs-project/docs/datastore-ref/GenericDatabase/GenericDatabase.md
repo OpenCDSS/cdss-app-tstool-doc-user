@@ -155,7 +155,6 @@ Datastore Configuration File Properties (alphabetized - see example for typical 
 | `SystemPassword` | The password to use, may be a specific user or a service account (if `OdbcName` is not specified). | |
 | `Type`<br>**required** | Must be `GenericDatabaseDataStore`. | None - must be specified. |
 
-
 The `DatabaseEngine` can be one of the following values,
 and is used to control internal database interactions,
 such as properly formatting date/time strings for SQL statements.
