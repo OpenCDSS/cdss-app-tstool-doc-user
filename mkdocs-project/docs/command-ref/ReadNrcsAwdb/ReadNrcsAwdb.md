@@ -16,6 +16,11 @@ Air and Water Database (AWDB) web service
 (see the [NRCS AWDB Datastore Appendix](../../datastore-ref/NRCS-AWDB/NRCS-AWDB.md)),
 including SNOTEL and Snow Course data and other data.
 Data from other sources is available within the NRCS naming convention.
+
+As of TSTool 15.3.0, the `NrcsAwdb` datastore configuration included with TSTool uses the REST API
+and the `NrcsAwdbSoap` datastore uses the older SOAP API.
+Prior to version 15.3.0, the `NrcsAwdb` datastore used the SOAP API.
+The SOAP API will be decommissioned by the NRCS in the future and features will be removed from TSTool.
  
 The NRCS AWDB web service allows station lists to be filtered,
 both as a convenience and to ensure reasonable web service performance.
@@ -77,11 +82,31 @@ includes all the relevant information about the forecast.
 Use table processing commands to filter the table for a specific station and publication date.
 
 **<p style="text-align: center;">
-![ReadNrcsAwdb command output forecast table](ReadNrcsAwdb_ForecastTable.png)
+![ReadNrcsAwdb REST API command output forecast table](ReadNrcsAwdb_ForecastTable_REST.png)
 </p>**
 
 **<p style="text-align: center;">
-`ReadNrcsAwdb` Command Output Forecast Table (<a href="../ReadNrcsAwdb_ForecastTable.png">see full-size image</a>)
+`ReadNrcsAwdb` Command Output Forecast Table (REST API) (<a href="../ReadNrcsAwdb_ForecastTable_REST.png">see full-size image</a>)
+</p>**
+
+The table for the SOAP API uses ***CalculationDate*** instead of ***IssueDate***.
+
+**<p style="text-align: center;">
+![ReadNrcsAwdb SOAP API command output forecast table](ReadNrcsAwdb_ForecastTable_SOAP.png)
+</p>**
+
+**<p style="text-align: center;">
+`ReadNrcsAwdb` Command Output Forecast Table (SOAP API) (<a href="../ReadNrcsAwdb_ForecastTable_SOAP.png">see full-size image</a>)
+</p>**
+
+The following illustrates new command parameters that are available for the REST API, which are being evaluated.
+
+**<p style="text-align: center;">
+![ReadNrcsAwdb command editor for REST API query parameters](ReadNrcsAwdb_REST.png)
+</p>**
+
+**<p style="text-align: center;">
+`ReadNrcsAwdb` Command Editor for REST API Query Parameters (<a href="../ReadNrcsAwdb_REST.png">see full-size image</a>)
 </p>**
 
 ## Command Syntax ##
@@ -95,28 +120,37 @@ ReadNrcsAwdb(Parameter="Value",...)
 Command Parameters
 </p>**
 
-|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-|--------------|-----------------|-----------------|
-|`DataStore`<br>**required**|The NRCS AWDB datastore to use for queries.|None – must be specified.|
-|`Interval`<br>**required**|The data interval (“duration” in NRCS AWDB terms) to query.   The Irregular interval is used for instantaneous data.|None – must be specified.|
-|`Stations`|A list of station identifiers to read, separated by commas.|Do not limit the query to a station list.|
-|`States`|A list of state codes (e.g., `AL`), separated by commas.|Do not limit the query to a state list.|
-|`Networks`|A list of data network codes (e.g., `SNTL`), separated by commas.|Do not limit the query to a network list.|
-|`HUCs`|A list of 8-digit hydrologic unit codes, separated by commas.|Do not limit the query to a HUC list.|
-|`BoundingBox`|A bounding box consisting of west longitude, south latitude, east longitude, and north latitude, separated by spaces.  Longitudes in the western hemisphere are negative.  This feature is not finalized, pending resolution of a web service issue.|Do not limit the query to a bounding box.|
-|`Counties`|A list of county names, separated by commas.  The state must be specified because county names are not unique.|Do not limit the query to a county list.|
-|`ReadForecast`|Indicate whether forecast table should be read.|`False` (read observed time series)|
-|`ForecastTableID`|The identifier for the output table.|`NRCS_Forecasts`|
-|`ForecastPeriod`|The forecast period for a forecast, which is a string like `JAN-MAR`.  A list of choices is provided; however, only certain forecast periods will be valid for specific element codes.|Must be specified when `ReadForecast=True`.|
-|`ForecastPublicationDateStart`|The earliest publication date for a forecast, needed to uniquely identify the time series.|All publication dates are queried.|
-|`ForecastPublicationDateEnd`|The latest publication date for a forecast.|All publication dates are queried.|
-|`Elements`|Data element codes for the stations (e.g., `WTEQ` for snow water equivalent), separated by commas.|All available elements are returned.|
-|`ElevationMin`|Minimum station elevation, feet.|Do not limit the query based on elevation minimum.|
-|`ElevationMax`|Maximum station elevation, feet.|Do not limit the query based on elevation maximum.|
-|`InputStart`|The start of the period to read data – specify if the period should be different from the global query period.  Specify to the precision of the data using the format `YYYY-MM-DD hh:mm`.|Use the global query period.|
-|`InputEnd`|The end of the period to read data – specify if the period should be different from the global query period.  Specify to the precision of the data using the format `YYYY-MM-DD hh:mm`.|Use the global query period.|
-|`TimeZoneMap`|Indicate how to map the NRCS AWDB time zone to the output time series.  This is a simple time zone assignment, with no adjustment of date/time numerical values.  The `stationDataTimeZone` data value from station metadata indicates the time zone for time series data. For SNOTEL this is typically `8.0` (equivalent to Pacific Standard Time), regardless of station location, although Alaska stations use an offset for Alaska. |Specify the time zone map as:<br>`NrcsZone1:ZoneToUse1, NrcsZone2:ZoneToUse2`<br>for example:  `-8.0:PST` sets the time zone on time series date/time objects to `stationDataTimeZone` from the station metadata using format `GMT-8.0`. This ensures that the number does not get interpreted part of the date/time numeric values.||
-|`Alias`<br>**required**|The alias to assign to the time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing, as an alternative to the time series identifier (`TSID`).|None – must be specified.|
+|**Tab**|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|--|--------------|-----------------|-----------------|
+| ***All (top)*** |`DataStore`<br>**required**|The NRCS AWDB datastore to use for queries.|None – must be specified.|
+||`Interval`<br>**required**|The data interval (“duration” in NRCS AWDB terms) to query.   The Irregular interval is used for instantaneous data.|None – must be specified.|
+| ***Stations*** |`Stations`|A list of station identifiers to read, separated by commas.|Do not limit the query to a station list.|
+||`States`|A list of state codes (e.g., `AL`), separated by commas.|Do not limit the query to a state list.|
+||`Networks`|A list of data network codes (e.g., `SNTL`), separated by commas.|Do not limit the query to a network list.|
+||`StationTriplets`| A list of station triplets of the form `StationId:StateAbbrev:Network`, separated by commas, where each part can use `*` wild card. | Do not limit the query to a station triplet list. |
+||`StationNames`| A list of station names of the form `StationId:StateAbbrev:Network`, separated by commas, where each part can use `*` wild card. | Do not limit the query using a station name list. |
+||`HUCs`|A list of 8-digit hydrologic unit codes, separated by commas.|Do not limit the query to a HUC list.|
+||`BoundingBox`|A bounding box consisting of west longitude, south latitude, east longitude, and north latitude, separated by spaces.  Longitudes in the western hemisphere are negative.  This feature is not finalized, pending resolution of a web service issue.|Do not limit the query to a bounding box.|
+||`Counties`|A list of county names, separated by commas.  The state must be specified because county names are not unique.|Do not limit the query to a county list.|
+|***Reservoirs***| | No parameters are currently provided.||
+|***Forecasts***|`ReadForecast`|Indicate whether a forecast table should be read.|`False` (read observed time series)|
+||`ForecastTableID`|The identifier for the output table.|`NRCS_Forecasts`|
+||`ForecastPeriod`|The forecast period for a forecast, which is a string like `JAN-MAR`.  A list of choices is provided; however, only certain forecast periods will be valid for specific element codes.|Must be specified when `ReadForecast=True`.|
+||`ForecastPublicationDateStart`|The earliest publication date for a forecast, needed to uniquely identify the time series.|All publication dates are queried.|
+||`ForecastPublicationDateEnd`|The latest publication date for a forecast.|All publication dates are queried.|
+|***REST API***|`InsertOrUpdateBeginDate`| The date from which to return inserted or updated data, used to query modified data.||
+||`PeriodRef` | Indicate whether the data for data values should be at the `START` of the output interval or the `END`.  For example, for monthly data, `Janary 1` is the start and `January 31` is the end of data for January.  For water year data, using `END` ensures that the end is the last day of the water year and will therefore be the correct year. | `END` |
+||`ActiveOnly` | Indicate that only active stations are returned. Specify as `True` or `False`. | `True` |
+||`ReturnOriginalValues` | Indicate whether calculated and derived values are allowed to be returned. Specify as `True` or `False`. | `False` (allow calculated values to be returned) |
+||`ReturnSuspectData` | Indicate whether suspect data values are returned. Specify as `True` or `False`. | `False` (return approved values) |
+| ***All (bottom)*** |`Elements`|Data element codes for the stations (e.g., `WTEQ` for snow water equivalent), separated by commas.|All available elements are returned.|
+||`ElevationMin`|Minimum station elevation, feet.|Do not limit the query based on elevation minimum.|
+||`ElevationMax`|Maximum station elevation, feet.|Do not limit the query based on elevation maximum.|
+||`InputStart`|The start of the period to read data – specify if the period should be different from the global query period.  Specify to the precision of the data using the format `YYYY-MM-DD hh:mm`.|Use the global query period.|
+||`InputEnd`|The end of the period to read data – specify if the period should be different from the global query period.  Specify to the precision of the data using the format `YYYY-MM-DD hh:mm`.|Use the global query period.|
+||`OutputYearType`| The year type for year interval time series, either `CalenderYear` or `WaterYear`. | `CalendarYear` |
+||`TimeZoneMap`|Indicate how to map the NRCS AWDB time zone to the output time series.  This is a simple time zone assignment, with no adjustment of date/time numerical values.  The `stationDataTimeZone` data value from station metadata indicates the time zone for time series data. For SNOTEL this is typically `8.0` (equivalent to Pacific Standard Time), regardless of station location, although Alaska stations use an offset for Alaska. |Specify the time zone map as:<br>`NrcsZone1:ZoneToUse1, NrcsZone2:ZoneToUse2`<br>for example:  `-8.0:PST` sets the time zone on time series date/time objects to `stationDataTimeZone` from the station metadata using format `GMT-8.0`. This ensures that the number does not get interpreted as part of the date/time numeric values.||
+||`Alias`<br>**required**|The alias to assign to the time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing, as an alternative to the time series identifier (`TSID`).|None – must be specified.|
 
 ## Examples ##
 

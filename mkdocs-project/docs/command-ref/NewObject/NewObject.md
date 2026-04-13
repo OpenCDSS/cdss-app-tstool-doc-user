@@ -4,7 +4,7 @@
     +   [CSV](#csv)
     +   [JSON](#json)
     +   [XML](#xml)
-    +   [YAML](#yamlinput)
+    +   [YAML](#yaml)
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
 *   [Examples](#examples)

@@ -67,7 +67,7 @@ Command Parameters
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`Folder`<br>**required**|The starting folder. | None - must be specified. |
+|`Folder`<br>**required**|The starting folder, can use `${Property}` syntax. | None - must be specified. |
 |`ListScope` | The scope for the listing:<ul><li>`All` - `Folder` and its sub-folders</li><li>`Folder` - only list the contents immediately in `Folder`</li></ul> | `Folder` |
 |`ListFiles` | Whether files should be listed (`True`) or not (`False`). | `True` |
 |`ListFolders` | Whether folders should be listed (`True`) or not (`False`). | `False` |

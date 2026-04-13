@@ -18,13 +18,12 @@ It is designed to process many time series in bulk fashion.
 Time series to compare are determined by trying to match each available time series
 with another time series in the list (ignoring itself) using one of the following options for input:
 
-*   Two lists of time series, for example the same set of time series from two different databases or model results.
-    Typically the location identifiers and possibly data types will be the same in the two lists.
-*   Compare two time series directly.
-*   Compare time series from two ensembles.
+*   Compare two time series directly (***Time Series (2)*** tab).
+*   Compare time series from two ensembles (***Ensembles (2)*** tab).
+*   Two lists of time series, for example the same set of time series from two different databases or model results (.
+    Typically the location identifiers and possibly data types will be the same in the two lists (***Time Series (many)***).
 
-Time series that are not matched are listed in output and the second time series is treated
-as completely missing.
+Time series that are not matched are listed in output and the second time series is treated as completely missing.
 
 Time series are compared value by value for each date/time in the analysis period,
 with the differences computed as the value
@@ -133,6 +132,7 @@ Command Parameters
 |---|--------------|-----------------|----------------- |
 |***Time Series (2)***|`TSID1`|First time series identifier (or alias) to compare.|Specify if only 2 time series are compared.|
 ||`TSID2`|Second time series identifier (or alias) to compare.|Specify if only 2 time series are compared.|
+||`CompareSelected2TS`|Indicate that the two time series to be compared are selected (see the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command). | |
 |***Ensembles (2)***|`EnsembleID1`|First ensemble identifier to compare.|Specify if time series from 2 ensembles are compared.|
 ||`EnsembleID2`|Second ensemble identifier to compare.|Specify if time series from 2 ensembles are compared.|
 |***Time Series (many)***|`MatchLocation`|Match the location part of time series identifiers when matching time series to compare.|`True`|
