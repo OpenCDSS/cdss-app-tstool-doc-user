@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 15.3.1](#changes-in-version-1531)
 *   [Changes in Version 15.3.0](#changes-in-version-1530)
 *   [Changes in Version 15.2.0](#changes-in-version-1520)
 *   [Changes in Version 15.1.0](#changes-in-version-1510)
@@ -12,6 +13,14 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 15.3.1 ##
+
+**Maintenance release to include necessary Oracle libraries.**
+
+*   ![bug](bug.png) [15.3.1] Include the Oracle database `oaclepki.jar`, `osdt_cert.jar`, and `osdt_core.jar`
+    libraries, which were omitted from the previous release.
+    These files are needed to implemnt Oracle Wallet.
 
 ## Changes in Version 15.3.0 ##
 
