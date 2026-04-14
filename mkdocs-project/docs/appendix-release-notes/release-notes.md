@@ -42,6 +42,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[15.3.1](release-notes-15.md)|Maintenance release to include necessary Oracle libraries. | 2026-04-14 |
 |[15.3.0](release-notes-15.md)|Maintenance release to fix HydroBase diversion filling, add NRCS AWDB Rest API support, and improve data viewing tools. | 2026-04-13 |
 |[15.2.0](release-notes-15.md)|Feature release to improve plugin and data visualization features, update to HydroBase 20251130 | 2026-01-04 |
 |[15.1.0](release-notes-15.md)|Feature release to remove Reclamation HDB features, since there is now a Reclamation HDB plugin. | 2025-04-16 |
