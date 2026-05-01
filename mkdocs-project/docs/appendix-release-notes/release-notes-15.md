@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 15.3.2](#changes-in-version-1532)
 *   [Changes in Version 15.3.1](#changes-in-version-1531)
 *   [Changes in Version 15.3.0](#changes-in-version-1530)
 *   [Changes in Version 15.2.0](#changes-in-version-1520)
@@ -13,6 +14,25 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 15.3.2 ##
+
+**Maintenance release to improve NRCS AWDB REST API integration.**
+
+*   ![change](change.png) [15.3.2] Update the [`SelectTimeSeries`](../command-ref/SelectTimeSeries/SelectTimeSeries.md) command:
+    +   Matching a time series property will now convert the property to a string and then do a comparison.
+*   ![change](change.png) [15.3.2] Update the [`SetAveragePeriod`](../command-ref/SetAveragePeriod/SetAveragePeriod.md) command:
+    +   Using the command with no input will now set `AverageStart` and `AverageEnd` properties to null,
+        which will cause defaults to be used.
+    +   Specifying one parameter will only set the property for the specified parameter.
+*   ![change](change.png) [15.3.2] Update the [`SetInputPeriod`](../command-ref/SetInputPeriod/SetInputPeriod.md) command:
+    +   Using the command with no input will now set `InputStart` and `InputEnd` properties to null,
+        which will cause defaults to be used.
+    +   Specifying one parameter will only set the property for the specified parameter.
+*   ![change](change.png) [15.3.2] Update the [`SetOutputPeriod`](../command-ref/SetOutputPeriod/SetOutputPeriod.md) command:
+    +   Using the command with no input will now set `OutputStart` and `OutputEnd` properties to null,
+        which will cause defaults to be used.
+    +   Specifying one parameter will only set the property for the specified parameter.
 
 ## Changes in Version 15.3.1 ##
 

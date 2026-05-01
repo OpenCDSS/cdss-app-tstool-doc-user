@@ -18,6 +18,11 @@ or to force matching a historical period.
 It may be necessary to set the input period if the default for a datastore is very short.
 See also the [`SetOutputPeriod`](../SetOutputPeriod/SetOutputPeriod.md) command.
 
+*   If one or both parameters are provided, only the specified parameter is set
+    (a single unspecified parameter does not cause the other value to be unset).
+*   If the command is called with no parameters, both `InputStart` and `InputEnd` properties are set to null and defaults will be used for commands that follow.
+*   Use a combination of commands to set/unset start and end, as needed.
+
 ## Command Editor ##
 
 The command is available in the following TSTool menu:
@@ -47,8 +52,8 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`InputStart`<br>**required**|The date/time to start reading/querying time series data, one of:<ul><li>A date/time string (see dialog above for examples).</li><li>The current date/time indicated for a precision:<ul><li>`CurrentToYear`</li><li>`CurrentToMonth`</li><li>`CurrentToDay`</li><li>`CurrentToHour`</li><li>`CurrentToMinute`</li></ul></li><li>A `Current*` value +- an interval, for example: `CurrentToMinute - 7Day`.  See modifiers in following table.</li><li>Last day, inclusive of the current day (optionally followed by math operation):<ul><li>`LastSunday`</li><li>`LastMonday`</li><li>`LastTuesday`</li><li>`LastWednesday`</li><li>`LastThursday`</li><li>`LastFriday`</li><li>`LastSaturday`</li></ul><li>A processor property indicated with `${Property}`</li></ul>|None – must be specified.|
-|`InputEnd`<br>**required**|The date/time to end reading/querying time series data.  See the description for `InputStart`.|None – must be specified.|
+|`InputStart`|The date/time to start reading/querying time series data, one of:<ul><li>A date/time string (see dialog above for examples).</li><li>The current date/time indicated for a precision:<ul><li>`CurrentToYear`</li><li>`CurrentToMonth`</li><li>`CurrentToDay`</li><li>`CurrentToHour`</li><li>`CurrentToMinute`</li></ul></li><li>A `Current*` value +- an interval, for example: `CurrentToMinute - 7Day`.  See modifiers in following table.</li><li>Last day, inclusive of the current day (optionally followed by math operation):<ul><li>`LastSunday`</li><li>`LastMonday`</li><li>`LastTuesday`</li><li>`LastWednesday`</li><li>`LastThursday`</li><li>`LastFriday`</li><li>`LastSaturday`</li></ul><li>A processor property indicated with `${Property}`</li></ul>| If not specified:<ul><li>if `InputEnd` is not specified, clear the `InputStart` property</li><li>if `InputEnd` is specified, only `InputEnd` will be changed</li></ul> |
+|`InputEnd`|The date/time to end reading/querying time series data.  See the description for `InputStart`.|  If not specified:<ul><li>if `InputStart` is not specified, clear the `InputEnd` property</li><li>if `InputStart` is specified, only `InputStart` will be changed</li></ul>|
 
 The `CurrentToYear` and other special date/time values can be followed by modifiers,
 which can be chained together in any order.

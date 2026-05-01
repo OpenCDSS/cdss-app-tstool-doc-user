@@ -1,6 +1,9 @@
 # TSTool / Datastore Reference / NRCS AWDB #
 
 *   [Overview](#overview)
+    +   [General Data Handling](#general-data-handling)
+    +   [SNOTEL Data Handling](#snotel-data-handling)
+    +   [Other Network Data Handling](#other-network-data-handling)
 *   [Standard Time Series Properties](#standard-time-series-properties)
 *   [Limitations](#limitations)
 *   [Datastore Configuration File](#datastore-configuration-file)
@@ -19,15 +22,56 @@ Support for the SOAP API will be phased out once the REST API is verified in pro
 See the following resources:
 
 *   [NRCS Snow Survey and Water Supply Forecasting Program](https://www.nrcs.usda.gov/programs-initiatives/sswsf-snow-survey-and-water-supply-forecasting-program?utm_source=chatgpt.com)
-*   REST API:
-    +   [Swagger/OpenAPI User interface](https://wcc.sc.egov.usda.gov/awdbRestApi/swagger-ui)
-*   SOAP API:
-    +   [AWDB Web Service User Guide (online)](https://www.nrcs.usda.gov/sites/default/files/2023-03/AWDB%20Web%20Service%20User%20Guide.pdf)
-    +   [AWDB Web Service User Guide (local copy)](AWDB-Web-Service-User-Guide.pdf)
+*   REST API (latest API):
+    +   Air and Water Database Report Generator:
+        -   [Report Generator Website](https://wcc.sc.egov.usda.gov/reportGenerator/)
+        -   Report Generator Help Guide ([online](https://www.nrcs.usda.gov/sites/default/files/2023-03/Report%20Generator%20Help%20Guide.pdf) | [archived copy](Report-Generator-Help-Guide.pdf))
+    +   [Swagger/OpenAPI User interface](https://wcc.sc.egov.usda.gov/awdbRestApi/swagger-ui/index.html)
+*   SOAP API (will be phased out):
+    +   AWDB Web Service User Guide ([online](https://www.nrcs.usda.gov/sites/default/files/2023-03/AWDB%20Web%20Service%20User%20Guide.pdf) |
+        [archived copy](AWDB-Web-Service-User-Guide.pdf))
     +   [Web service test tool](https://wcc.sc.egov.usda.gov/awdbWebService/webservice/testwebservice.jsf?webserviceName=/awdbWebService)
 
 Although the NRCS AWDB web services are largely compatible with TSTool conventions,
 there are a number of limitations, which are discussed below.
+
+The following sections provide notes on data handling, based on experience and communications with NRCS AWDB support.
+
+### General Data Handling ###
+
+The following are considerations for general data handling:
+
+*  The period reference (`periodRef`) should generally be specified as `END`.
+   The value of `START` was implemented years ago to handle precipitation data but can be confusing.
+
+### SNOTEL Data Handling ###
+
+One of the main uses of the NRCS AWDB API is to provide access to the NRCS SNOTEL dataset, via the `SNTL` network,
+which has the following characteristics:
+
+*   SNOTEL station measurements occur hourly, except for a small number of SNOLite (SNOwpack TELemetry-lite) stations,
+    which report every four to six hours.
+*   SNOTEL hourly station measurements are recorded in Pacific Standard Time (PST) time zone and
+    consequently any derived values (e.g., daily) reflect a day spanning midnight to midnight for PST.
+    The time zone is indicated by the station data time zone, which is -8 for PST.
+    A few stations in Alaska and elsewhere are recorded in station local time zones.
+*   The daily snow water equivalent (SWE, WTEQ element) is the midnight value (PST).
+    If `periodRef=END` (the default), then, for example, the hourly SWE value measured at `2026-04-28 00:00` is assigned to `2026-04-27`.
+    In other words, the midnight-ending value for `2026-04-27` is used for the day,
+    consistent with many systems that use interval-ending values.
+*   Hourly data are not quality controlled in real-time and may experience fluctuations.
+*   The air temperature data is used to estimate if precipitation is snow.
+    Issues with the sensor have historically resulted in bias and the `C` quality control flag is used to indicate bias-corrected data.
+
+### Other Network Data Handling ###
+
+The following are notes on data handling for other networks:
+
+*   Datasets from third-party providers typically include only daily and larger interval (duration).
+    NRCS datasets may include hourly (e.g., SNOTEL) and instantaneous data.
+*   Datasets from third parties use the time zone from the original providers,
+    which is often the station local time.
+    The time zone may not be indicated in the NRCS AWDB station data time zone.
 
 ## Standard Time Series Properties ##
 
@@ -99,10 +143,14 @@ using terms described in the NRCS AWDB web service documentation):
     +   SOAP API: the `StationMetaData` and `StationElement` (and `ReservoirMetadata` if a reservoir)
         objects and are saved as time series properties.  For example, the station longitude and latitude are assigned from station metadata.
 *   The time zone for the period from:
-    +   REST API:  specified in the station metadata `dataTimeZone`
-    +   SOAP API:  specified in `StationDataTimeZone` and the station in `StationTimeZone`
-        (web service documentation says it is set to same value as station data time zone).
-        TSTool does not set the time zone on the time series.  This is being evaluated pending information being provided by the NRCS.
+    +   REST API:
+        -   see the [SNOTEL Data Handling](#snotel-data-handling) for information
+        -   TSTool by default does not set the time zone in returned data,
+            but can use the [`ReadNrcsAwdb(TimeZoneMap=...)`](../../command-ref/ReadNrcsAwdb/ReadNrcsAwdb.md) command parameter to assign the output time zone
+    +   SOAP API:
+        -   specified in `StationDataTimeZone` and the station in `StationTimeZone`
+            (web service documentation says it is set to same value as station data time zone).
+        -   TSTool sets the time zone using format `GMT-8.0`
 
 ## Limitations ##
 
@@ -113,7 +161,7 @@ NRCS AWDB data store limitations relative to TSTool standard features are as fol
         The latter spans October 1 of the previous year to September 30 of the data year.
         This provides more control than the SOAP API, which provided only the `ANNUAL` duration with implied output year type.
         TSID commands default to `CALENDAR_YEAR` for interval of `Year`.
-        Use the [`ReadNrcsAdwd(OutputYearType=...)`](../../command-ref/ReadNrcsAwdb/ReadNrcsAwdb.md) command to provide more control.
+        Use the [`ReadNrcsAwdb(OutputYearType=...)`](../../command-ref/ReadNrcsAwdb/ReadNrcsAwdb.md) command to provide more control.
     +   The `data` service provides the `periodRef` query parameter to control whether the `date` for data
         represents the start or the end of the interval.
         For example, for monthly data, `periodRef=START` returns January 1 and

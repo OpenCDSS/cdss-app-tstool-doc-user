@@ -2,6 +2,11 @@
 
 *   [Overview](#overview)
 *   [Command Editor](#command-editor)
+    +   [Select Using `TSList`](#select-using-tslist)
+    +   [Select Based on a Property](#select-based-on-a-property)
+    +   [Select Based on Whether Time Series Have Data](#select-based-on-whether-time-series-have-data)
+    +   [Select Based on a Time Series Statistic](#select-based-on-a-time-series-statistic)
+    +   [Select Based on Location in a Network](#select-based-on-location-in-a-network)
 *   [Command Syntax](#command-syntax)
 *   [Examples](#examples)
 *   [Troubleshooting](#troubleshooting)
@@ -35,11 +40,15 @@ The command is available in the following TSTool menu:
 
 *   ***Commands / Select, Free, Sort Time Series***
 
+### Select Using `TSList` ###
+
 The following dialog is used to edit the command and illustrates the command
 syntax for selecting time series using the `TSList` parameter.
 This parameter provides the initial filter for the list of time series.
+
 The `TSPosition` parameter is generally not available in other commands - its use is discouraged in
 most cases because time series position in the output list can vary.
+However, it may be of particular use when selecting the first or last time series in a list.
 
 **<p style="text-align: center;">
 ![SelectTimeSeries command editor](SelectTimeSeries.png)
@@ -49,7 +58,10 @@ most cases because time series position in the output list can vary.
 `SelectTimeSeries` Command Editor (<a href="../SelectTimeSeries.png">see full-size image</a>)
 </p>**
 
-The following dialog is used to edit the command and illustrates selecting time series by matching a property value.
+### Select Based on a Property ###
+
+The following illustrates selecting time series by matching a property value.
+The property value is converted to a string (text) and then the property is checked for a match.
 
 **<p style="text-align: center;">
 ![SelectTimeSeries command editor specifying a property to match](SelectTimeSeries_Property.png)
@@ -59,7 +71,10 @@ The following dialog is used to edit the command and illustrates selecting time 
 `SelectTimeSeries` Command Editor Specifying a Property to Match (<a href="../SelectTimeSeries_Property.png">see full-size image</a>)
 </p>**
 
-The following dialog is used to edit the command and illustrates selecting time series based on whether it has data.
+### Select Based on Whether Time Series Have Data ###
+
+The following illustrates selecting time series based on whether it has data.
+This is useful to display warnings and avoid processing command that would fail if no data.
 
 **<p style="text-align: center;">
 ![SelectTimeSeries command editor checking for data](SelectTimeSeries_CheckData.png)
@@ -69,7 +84,9 @@ The following dialog is used to edit the command and illustrates selecting time 
 `SelectTimeSeries` Command Editor Checking for Data (<a href="../SelectTimeSeries_CheckData.png">see full-size image</a>)
 </p>**
 
-The following dialog is used to edit the command and illustrates selecting time series by evaluating a time series statistic.
+### Select Based on a Time Series Statistic ###
+
+The following illustrates selecting time series by evaluating a time series statistic.
 Currently a direct check in this command is not done and instead the
 [`CheckTimeSeriesStatistic`](../CheckTimeSeriesStatistic/CheckTimeSeriesStatistic.md) must be used to set a property,
 which can then be checked in this command.
@@ -82,7 +99,9 @@ which can then be checked in this command.
 `SelectTimeSeries` Command Editor Specifying a Statistic to Check (<a href="../SelectTimeSeries_Statistic.png">see full-size image</a>)
 </p>**
 
-The following dialog is used to edit the command and illustrates selecting time series by matching locations in a network.
+### Select Based on Location in a Network ###
+
+The following illustrates selecting time series by matching locations in a network.
 
 **<p style="text-align: center;">
 ![SelectTimeSeries command editor specifying network nodes](SelectTimeSeries_Network.png)
