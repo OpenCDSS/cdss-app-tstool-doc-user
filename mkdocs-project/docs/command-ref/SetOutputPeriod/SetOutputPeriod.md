@@ -23,6 +23,11 @@ in order to satisfy output and data filling requirements:
 Specifying the output period is necessary when creating model files or filling an extended period
 (time series will not automatically be extended by fill commands).
 
+*   If one or both parameters are provided, only the specified parameter is set
+    (a single unspecified parameter does not cause the other value to be unset).
+*   If the command is called with no parameters, both `OutputStart` and `OutputEnd` properties are set to null and defaults will be used for commands that follow.
+*   Use a combination of commands to set/unset start and end, as needed.
+
 ## Command Editor ##
 
 The command is available in the following TSTool menu:
@@ -54,8 +59,8 @@ Command Parameters
 
 | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --------------|-----------------|----------------- |
-|`OutputStart`<br>**required**|The date/time for the output start, one of:<ul><li>A date/time string (see dialog above for examples).</li><li>The current date/time indicated for a precision:<ul><li>`CurrentToYear`</li><li>`CurrentToMonth`</li><li>`CurrentToDay`</li><li>`CurrentToHour`</li><li>`CurrentToMinute`</li></ul></li><li>A `Current*` value +- an interval, for example: `CurrentToMinute - 7Day`.  See modifiers in following table.</li><li>Last day, inclusive of the current day (optionally followed by math operation):<ul><li>`LastSunday`</li><li>`LastMonday`</li><li>`LastTuesday`</li><li>`LastWednesday`</li><li>`LastThursday`</li><li>`LastFriday`</li><li>`LastSaturday`</li></ul><li>A processor property indicated with `${Property}`</li></ul>|None – must be specified.|
-|`OutputEnd`<br>**required**|The date/time to for the output end.  See the description for `OutputStart`.|None – must be specified.|
+|`OutputStart`|The date/time for the output start, one of:<ul><li>A date/time string (see dialog above for examples).</li><li>The current date/time indicated for a precision:<ul><li>`CurrentToYear`</li><li>`CurrentToMonth`</li><li>`CurrentToDay`</li><li>`CurrentToHour`</li><li>`CurrentToMinute`</li></ul></li><li>A `Current*` value +- an interval, for example: `CurrentToMinute - 7Day`.  See modifiers in following table.</li><li>Last day, inclusive of the current day (optionally followed by math operation):<ul><li>`LastSunday`</li><li>`LastMonday`</li><li>`LastTuesday`</li><li>`LastWednesday`</li><li>`LastThursday`</li><li>`LastFriday`</li><li>`LastSaturday`</li></ul><li>A processor property indicated with `${Property}`</li></ul>| If not specified:<ul><li>if `OutputEnd` is not specified, clear the `OutputStart` property</li><li>if `OutputEnd` is specified, only `OutputEnd` will be changed</li></ul>|
+|`OutputEnd`|The date/time to for the output end.  See the description for `OutputStart`.| If not specified:<ul><li>if `OutputStart` is not specified, clear the `OutputEnd` property</li><li>if `OutputStart` is specified, only `OutputStart` will be changed</li></ul> |
 
 The `CurrentToYear` and other special date/time values can be followed by modifiers,
 which can be chained together in any order.
