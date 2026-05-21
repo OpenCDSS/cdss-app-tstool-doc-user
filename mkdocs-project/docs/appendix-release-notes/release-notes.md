@@ -42,6 +42,7 @@ TSTool Version History Summary (most current at top)
 
 |**TSTool Version(s)**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Summary of Major Changes in Version**|**Release Date**|
 |--|--|--|
+|[15.3.3](release-notes-15.md)|Maintenance release to improve NRCS AWDB REST API integration and graphing. | 2026-05-21 |
 |[15.3.2](release-notes-15.md)|Maintenance release to improve NRCS AWDB REST API integration. | 2026-05-01 |
 |[15.3.1](release-notes-15.md)|Maintenance release to include necessary Oracle libraries. | 2026-04-14 |
 |[15.3.0](release-notes-15.md)|Maintenance release to fix HydroBase diversion filling, add NRCS AWDB Rest API support, and improve data viewing tools. | 2026-04-13 |
