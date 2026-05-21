@@ -1,6 +1,7 @@
 # TSView Time Series Viewing Tools #
 
 *   [Overview](#overview)
+*   [Examples](examples/overview.md) - examples overview page
 *   [Time Series Terminology](#time-series-terminology)
 *   [Time Series Properties Interface](#time-series-properties-interface)
     +   [Time Series Properties - General](#time-series-properties-general)
@@ -1903,6 +1904,10 @@ Data (Time Series) Properties
 |**Data (Time Series) Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|**Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |--|--|--|
 |`Color`|Color to use when drawing the data. See the [Color Specification](#time-series-product-file-color-specification) section.|Repeating, using common colors.|
+|`CompareColor`|Symbol color for comparing time series (see `CompareSymbolStyle` for explanation).  **This property is currently not available in the time series product editor.**  See the [Color Specification](#time-series-product-file-color-specification) section. | No comparison occurs. |
+|`CompareSymbolStyle`|Symbol style for to draw data points when the data are the same (date/time and value matches for the `CompareTolerance`).  For example, graph 2 time series using `GraphType=Point` and specify the `Compare*` properties for each time series.  The points will be drawn as usual for each time series and if the data are the same, another point will be drawn using the `Compare*` properties, which will overwrite the individual symbols.  This is useful for comparing time series from two sources that should be the same.  **This property is currently not available in the time series product editor.**  See the `SymbolStyle` property for possible values. | No comparison occurs. |
+|`CompareSymbolSize`|Symbol style for comparing time series (see `CompareSymbolStyle` for explanation).  **This property is currently not available in the time series product editor.**  See the `SymbolSize` property for possible values. | No comparison occurs. |
+|`CompareTolerance`|Tolerance when comparing data for a match (see `CompareSymbolStyle` for explanation).  For example, `.0001` requires that four digits match to be the same data value. **This property is currently not avaialble in the time series product editor.** | No comparison occurs. |
 |`DataLabelFormat`|Data label format specifiers.  See the graph DataLabelFormat property.  If the graph property is specified and the time series property is not, the graph property will be used.|Blank (no labels).|
 |`DataLabelPosition`|Data label position.  See the graph `DataLabelPosition` property.  If the graph property is specified and the time series property is not, the graph property will be used.|`Right`|
 |`Enabled`|Indicates whether the data should be processed. Specify as `true` or `false`.|`true`|

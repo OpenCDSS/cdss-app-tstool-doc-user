@@ -5,6 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
+*   [Changes in Version 15.3.3](#changes-in-version-1533)
 *   [Changes in Version 15.3.2](#changes-in-version-1532)
 *   [Changes in Version 15.3.1](#changes-in-version-1531)
 *   [Changes in Version 15.3.0](#changes-in-version-1530)
@@ -14,6 +15,23 @@ Issues may also be included in other repositories that are TSTool components.
 *   [Release notes for all versions](release-notes.md)
 
 ----------
+
+## Changes in Version 15.3.3 ##
+
+**Maintenance release to improve NRCS AWDB REST API integration and graphing.**
+
+*   ![change](change.png) [15.3.3] Begin adding [TSView Time Series Viewing Tools](../appendix-tsview/examples/overview.md) example configurations
+    to help create data visualizations.
+*   ![change](change.png) [15.3.3] Update the graphing:
+    +   Add the `CompareSymbolColor`, `CompareSymbolSize`, `CompareSymbolStyle`, and `CompareTolerance` properties for point graphs,
+        which will display a symbol if the data for the graphed time series have the same date/time and value.
+        This can be used to compare time series from two sources.
+*   ![change](change.png) [15.3.3] Update the [`For`](../command-ref/For/For.md) command:
+    +   The `List` values are no longer trimmed for white space and empty values are allowed.
+        The [`If`](../command-ref/If/If.md) command can be used to check for empty strings.
+        This provides more flexibility in processing datasets that are missing values.
+*   ![change](change.png) [15.3.3] Update the [`If`](../command-ref/If/If.md) command:
+    +   Improve error handling for cases where time series could not be retrieved from the command processor.
 
 ## Changes in Version 15.3.2 ##
 
