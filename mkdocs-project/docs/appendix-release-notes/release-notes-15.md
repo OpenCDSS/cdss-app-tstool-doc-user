@@ -32,6 +32,10 @@ Issues may also be included in other repositories that are TSTool components.
         This provides more flexibility in processing datasets that are missing values.
 *   ![change](change.png) [15.3.3] Update the [`If`](../command-ref/If/If.md) command:
     +   Improve error handling for cases where time series could not be retrieved from the command processor.
+    +   Add the `Expression` parameter, which provides many features for evaluating complex expressions.
+    +   Allow any combination of parameters.  Any single false evaluation will result in an overall false evaluation.
+*   ![change](change.png) [15.3.3] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
+    +   Add the `Expression` parameter, which provides many features for evaluating expressions.
 
 ## Changes in Version 15.3.2 ##
 
