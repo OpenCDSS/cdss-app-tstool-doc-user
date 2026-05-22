@@ -4,6 +4,13 @@
     +   [Nested Property Names](#nested-property-names)
     +   [Properties in Discovery Phase](#properties-in-discovery-phase)
 *   [Command Editor](#command-editor)
+    +   [Set](#set)
+    +   [Environment Variable](#environment-variable)
+    +   [Expression](#expression)
+    +   [Java Property](#java-property)
+    +   [Special Values](#special-values)
+    +   [Remove (Unset)](#remove-unset)
+    +   [Math](#math)
 *   [Command Syntax](#command-syntax)
 *   [Examples](#examples)
 *   [Troubleshooting](#troubleshooting)
@@ -14,13 +21,24 @@
 ## Overview ##
 
 The `SetProperty` command sets the value of a property used by the time series processor.
-Processor properties are similar to variables in programming languages and TSTool processor properties have
-a name, type (e.g., integer, string), and value.
+Processor properties are similar to variables in programming languages.
+TSTool processor properties are defined with:
+
+*   name
+*   type (Boolean, DateTime, Double, Integer, String) - more types may be added in the future
+*   value
+
 The property will be available to subsequent commands that support using `${Property}` notation in parameters,
 for example to specify filenames more dynamically or use with [`If`](../If/If.md) commands.
 The documentation for each command indicates which command parameters can be specified as a property.
-This command should not be confused with the [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command,
-which sets a property on specific time series.  The following functionality is provided:
+
+Properties are also used with various objects, including time series
+(e.g., see the [`SetTimeSeriesProperty`](../SetTimeSeriesProperty/SetTimeSeriesProperty.md) command),
+and properties can be set/copied from one object type to another
+(e.g., see the [`SetPropertyFromTimeSeries`](../SetPropertyFromTimeSeries/SetPropertyFromTimeSeries.md) command)
+to provide flexibility in controlling a workflow.
+
+The following functionality is provided:
 
 *   The property name can be defined:
     +   as a literal string
@@ -31,10 +49,15 @@ which sets a property on specific time series.  The following functionality is p
     Care should be taken to understand the implications of removing a property.
     For example, if the property is used in later commands, then removing will cause the processor to not find the property.
     It may be more appropriate, for example, to set a string property to an empty string rather than removing.
+    The [`If`](../If/If.md) command can be used to check whether a property has been defined and has a value.
 *   Set a property by modifying a previous processor property using basic math manipulations:
     +   Set the initial property name and value with `SetProperty` or another command.
-    +   Modify the previous value by specifying the property value with `${Property}` (to match the previous property name)
-        and then use the ***Math*** tab parameters to manipulate the previous value.
+    +   Set the value using the ***Expression*** tab parameter:
+        -   Complex expressions cna be evaluated.  See the `Expression` parameter documentation.
+        -   Use the `${Property}` in the expression to update the existing property.
+    +   Modify the previous value using the ***Math*** tab parameters:
+        -   Specify the property value with `${Property}` (to match the previous property name).
+        -   Use the ***Math*** tab parameters to manipulate the previous value.
 
 After commands are run, the value of properties can be viewed in the TSTool ***Results / Properties*** tab,
 for example as shown below.
@@ -85,6 +108,8 @@ The command is available in the following TSTool menu:
 
 *   ***Commands / General - Running and Properties***
 
+### Set ###
+
 The following dialog is used to edit the command and illustrates the command syntax for general parameters.
 
 **<p style="text-align: center;">
@@ -94,6 +119,8 @@ The following dialog is used to edit the command and illustrates the command syn
 **<p style="text-align: center;">
 `SetProperty` Command Editor for General Set Parameters (<a href="../SetProperty.png">see full-size image</a>)
 </p>**
+
+### Environment Variable ###
 
 The following dialog is used to edit the command and illustrates the command syntax for environment variable parameters.
 
@@ -105,6 +132,18 @@ The following dialog is used to edit the command and illustrates the command syn
 `SetProperty` Command Editor for Environment Variable Parameters (<a href="../SetProperty_EnvVar.png">see full-size image</a>)
 </p>**
 
+### Expression ###
+
+The following illustrates the command syntax for using an expression.
+
+![SetProperty command editor for expression](SetProperty_Expression.png)
+
+**<p style="text-align: center;">
+`SetProperty` Command Editor for an Expression (<a href="../SetProperty_Expression.png">see full-size image</a>)
+</p>**
+
+### Java Property ###
+
 The following dialog is used to edit the command and illustrates the command syntax for Java property parameters.
 
 **<p style="text-align: center;">
@@ -114,6 +153,8 @@ The following dialog is used to edit the command and illustrates the command syn
 **<p style="text-align: center;">
 `SetProperty` Command Editor for Java Property Parameters (<a href="../SetProperty_Java.png">see full-size image</a>)
 </p>**
+
+### Special Values ###
 
 The following dialog is used to edit the command and illustrates the command syntax for special value parameters.
 
@@ -125,6 +166,8 @@ The following dialog is used to edit the command and illustrates the command syn
 `SetProperty` Command Editor for Special Value Parameters (<a href="../SetProperty_Special.png">see full-size image</a>)
 </p>**
 
+### Remove (Unset) ###
+
 The following dialog is used to edit the command and illustrates the command syntax for removing a property.
 
 **<p style="text-align: center;">
@@ -134,6 +177,10 @@ The following dialog is used to edit the command and illustrates the command syn
 **<p style="text-align: center;">
 `SetProperty` Command Editor for Removing a Property (<a href="../SetProperty_Remove.png">see full-size image</a>)
 </p>**
+
+### Math ###
+
+**The newer [`Expression`](#expression) parameter is more flexibible than the older math parameters.**
 
 The following illustrates how to perform a math operation on a property.
 In this case, a new property name can be assigned (or existing name reused) in the `PropertyName` parameter.
@@ -176,6 +223,7 @@ Command Parameters
 | | `PropertyType`| The property type, used for validation, one of:<br><ul><li>`Boolean` – a boolean</li><li>`DateTime` – a date/time</li><li>`Double` – a floating point number</li><li>`Integer` – an integer</li><li>`String` – a string</li></ul><br>DateTime objects can be specified with special syntax to use current time and modifiers on the DateTime.  See the [`SetInputPeriod`](../SetInputPeriod/SetInputPeriod.md) command for more information. | None – must be specified when setting a new property, although is not needed when setting to null or removing.|
 | | `PropertyValue`|The value of the property:<ul><li>The value should adhere to allowed values for the data type.</li><li>Date/time properties should be specified using standard formats such as `YYYY-MM-DD hh:mm:ss`, to an appropriate precision.  Special date/time syntax is recognized, as shown in the above figure.</li><li>Use `${Property}` syntax to use the value from a previously-defined property.</li><li>Use `${Property}` matching the `PropertyName` with the ***Math*** parameters to modify an existing property.</li><li>Use `${${Property}sometext}` for a nested property name.</li></ul>|None – must be specified when setting a value.  The parameter is not needed when setting special values or removing the property. |
 | ***Environment Variable*** | `EnvironmentVariable` | The name of the environment variable to provide the value.  Can use `${Property}` syntax.  The `PropertyName` will be used to store the value. | |
+| ***Expression***| `Expression` | The expression to evaluate, using the EvalEx library (see the [EvalEx documentation:](https://ezylang.github.io/EvalEx/concepts/concepts.html) ). | |
 | ***Java Property*** | `JavaProperty` | The name of the Java property to provide the value.  Can use `${Property}` syntax. The `PropertyName` will be used to store the value. | |
 | ***Special Values*** | `SetEmpty`|If specified as `True`, the String property will be set to an empty string.|The `PropertyValue` parameter will be used.|
 | | `SetNaN`|If specified as `True`, the Double property will be set to the special “not a number” (`NaN`) value.|The `PropertyValue` parameter will be used.|

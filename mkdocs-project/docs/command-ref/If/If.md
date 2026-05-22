@@ -16,7 +16,7 @@ The `If` command evaluates a conditional and if true will result in the commands
 `If` and matching [`EndIf`](../EndIf/EndIf.md) commands being executed.
 A matching `Name` parameter for the `If` and [`EndIf`](../EndIf/EndIf.md) commands defines a block of commands.
 Currently, there is no “else if” or “else” syntax and nested
-`If` commands must be used to evaluate complex conditions.
+`If` commands must be used to evaluate complex conditions (or use the `Expression` parameter).
 Select (highlight) one or more commands and use the ***> Indent Right*** menu to indent commands to
 improve the readability of the workflow.
 
@@ -25,11 +25,15 @@ If more than one condition is specified, all conditions must be true for the ent
 (the individual conditions are AND'ed).
 
 *   ***Condition***
+    +   **use the `Expression` parameter for more functionality**
     +   simple conditional statement for strings, integers, boolean, and floating point (double precision) values,
         as described in the [Conditional Syntax](#conditional-syntax) section
     +   comparison of Semantic versions (see [semantic versions](https://semver.org/))
 *   ***Datastore OK?***
     +   datastore exists and the status is OK (or does is not Ok)
+*   ***Expression***
+    +   provides more features than the simpler `Condition` parameter
+    +   evaluates any expression, including functions
 *   ***File Exists?***
     +   file exists or does not exist
 *   ***Object Exists?***
@@ -60,7 +64,7 @@ which can be used within an `If` block to control logic in a [`For`](../For/For.
 
 ### Conditional Syntax ###
 
-The syntax for a conditional statement is restricted to a simple comparison:
+The syntax for a conditional statement used with the `Condition` parameter is restricted to a simple comparison:
 
 ```
 Value1 operator Value2
@@ -87,6 +91,8 @@ comparisons of integers and floating point numbers occurs using numbers.
 String values that contain spaces can be surrounded by double quotes,
 which will be removed before the comparison.
 
+See the `Expression` parameter for more functionality.
+
 ## Command Editor ##
 
 The command is available in the following TSTool menu:
@@ -95,10 +101,10 @@ The command is available in the following TSTool menu:
 
 The following dialog is used to edit the command and illustrates the command syntax for a condition check.
 
-![If command editor for conditions test](If.png)
+![If command editor for a condition test](If.png)
 
 **<p style="text-align: center;">
-`If` Command Editor for Conditions Test (<a href="../If.png">see full-size image</a>)
+`If` Command Editor for a Condition Test (<a href="../If.png">see full-size image</a>)
 </p>**
 
 The following illustrates checking for datastore status.
@@ -109,6 +115,14 @@ The following illustrates checking for datastore status.
 
 **<p style="text-align: center;">
 `If` Command Editor to Check Whether a  Datastore Exists (<a href="../If_DataStoreIsOk.png">see full-size image</a>)
+</p>**
+
+The following illustrates the command syntax for an expression check.
+
+![If command editor for expression test](If_Expression.png)
+
+**<p style="text-align: center;">
+`If` Command Editor for an Expression Test (<a href="../If_Expression.png">see full-size image</a>)
 </p>**
 
 The following illustrates checking for file existence.
@@ -177,25 +191,26 @@ Command Parameters
 
 | **Tab** | **Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | --|--|--|--|
-|**All**| `Name`<br>**required** | The name of the `If` command, which will be matched with the name of an [`EndIf`](../EndIf/EndIf.md) command to indicate the block of commands in the if condition. | None - must be specified. |
-|**Condition**| `Condition`<br>**required** | The conditional statement to evaluate. | `Condition` and/or `TSExists` and/or `PropertyIsNotDefinedOrIsEmpty` must be specified. |
+|***All***| `Name`<br>**required** | The name of the `If` command, which will be matched with the name of an [`EndIf`](../EndIf/EndIf.md) command to indicate the block of commands in the if condition. | None - must be specified. |
+|***Condition***| `Condition` | The conditional statement to evaluate. | |
 || `CompareAsStrings` | If `True`, the comparison will be done as strings even if the values could be treated as numbers or Booleans. | `False` |
 || `CompareAsVersions` | If `True`, the comparison will be done by treating the strings as [semantic versions](https://semver.org/). This can be used to check the TSTool, plugin, or API version to ensure that enabled command features are used. Version parts are formatted with leading spaces if necessary for comparison (a space character has a value less than alphanumeric characters). | `False` |
-|**Datastore OK?**| `DataStoreIsOk` | Causes the command to evaluate to `True` if the specified datastore exists and its status is OK.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|| `DataStoreIsNotOk` | Causes the command to evaluate to `True` if the specified datastore does not exist or its status is not OK.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|**File Exists?**| `DataStoreIsNotOk` | Causes the command to evaluate to `True` if the specified file exists.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|| `FileDoesNotExist` | Causes the command to evaluate to `True` if the specified file does not exist.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|**Object Exists?** | `ObjectExists` | Causes the command to evaluate to `True` if the specified object exists, based on checking the object IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|| `ObjectDoesNotExist` | Causes the command to evaluate to `True` if the specified object does not exist, based on checking the object IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|**Property Defined?**| `PropertyIsNotDefinedOrIsEmpty` | Causes the command to evaluate to `True` if the property matching the specified name is not defined, because one of the following is true:<ul><li>has a value of null</li><li>has a value of `NaN` for floating point numbers</li><li>is an empty string</li></ul> | `Condition` and/or one or more other checks must be specified. |
-|| `PropertyIsDefined` | Causes the command to evaluate to `True` if the property matching the specified name is defined, meaning that it has a value that is:<ul><li>not null</li><li>not `NaN` (for floating point numbers)</li><li>if a string, may be empty string</li></ul> | `Condition` and/or one or more other checks must be specified. |
-|| `PropertyIsDefined`<br>`AndIsNotEmpty` | Causes the command to evaluate to `True` if the property matching the specified name is defined and not empty, meaning that it has a value that is:<ul><li>not null</li><li>not `NaN` (for floating point number)</li><li>not an empty string</li></ul> | `Condition` and/or one or more other checks must be specified. |
-|**Table Exists?**| `TableExists` | Causes the command to evaluate to `True` if the specified table exists, based on checking the table IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|| `TableDoesNotExist` | Causes the command to evaluate to `True` if the specified table does not exist, based on checking the table IDs.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|**Time Series Exists?**| `TsExists` | Causes the command to evaluate to `True` if the specified time series exists.  Specify a TSID or alias to match.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|| `TsDoesNotExist` | Causes the command to evaluate to `True` if the specified time series does exist.  Specify a TSID or alias to match.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|| `TsHasData` | Causes the command to evaluate to `True` if the specified time series has data.  Specify a TSID or alias to match.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
-|| `TsHasNoData` | Causes the command to evaluate to `True` if the specified time series has no data, typically because no data records were found in the data source.  Specify a TSID or alias to match.  Can specify using `${Property}`. | `Condition` and/or one or more other checks must be specified. |
+|***Datastore OK?***| `DataStoreIsOk` | Causes the command to evaluate to `True` if the specified datastore exists and its status is OK.  Can specify using `${Property}`. |  |
+|| `DataStoreIsNotOk` | Causes the command to evaluate to `True` if the specified datastore does not exist or its status is not OK.  Can specify using `${Property}`. |  |
+|***Expression***| `Expression` | The expression to evaluate, using the EvalEx library (see the [EvalEx documentation:](https://ezylang.github.io/EvalEx/concepts/concepts.html) ). | |
+|***File Exists?***| `DataStoreIsNotOk` | Causes the command to evaluate to `True` if the specified file exists.  Can specify using `${Property}`. | |
+|| `FileDoesNotExist` | Causes the command to evaluate to `True` if the specified file does not exist.  Can specify using `${Property}`. | |
+|***Object Exists?*** | `ObjectExists` | Causes the command to evaluate to `True` if the specified object exists, based on checking the object IDs.  Can specify using `${Property}`. | |
+|| `ObjectDoesNotExist` | Causes the command to evaluate to `True` if the specified object does not exist, based on checking the object IDs.  Can specify using `${Property}`. | |
+|***Property Defined?***| `PropertyIsNotDefinedOrIsEmpty` | Causes the command to evaluate to `True` if the property matching the specified name is not defined, because one of the following is true:<ul><li>has a value of null</li><li>has a value of `NaN` for floating point numbers</li><li>is an empty string</li></ul> | |
+|| `PropertyIsDefined` | Causes the command to evaluate to `True` if the property matching the specified name is defined, meaning that it has a value that is:<ul><li>not null</li><li>not `NaN` (for floating point numbers)</li><li>if a string, may be empty string</li></ul> | |
+|| `PropertyIsDefined`<br>`AndIsNotEmpty` | Causes the command to evaluate to `True` if the property matching the specified name is defined and not empty, meaning that it has a value that is:<ul><li>not null</li><li>not `NaN` (for floating point number)</li><li>not an empty string</li></ul> | |
+|***Table Exists?***| `TableExists` | Causes the command to evaluate to `True` if the specified table exists, based on checking the table IDs.  Can specify using `${Property}`. | |
+|| `TableDoesNotExist` | Causes the command to evaluate to `True` if the specified table does not exist, based on checking the table IDs.  Can specify using `${Property}`. | |
+|***Time Series Exists?***| `TsExists` | Causes the command to evaluate to `True` if the specified time series exists.  Specify a TSID or alias to match.  Can specify using `${Property}`. | |
+|| `TsDoesNotExist` | Causes the command to evaluate to `True` if the specified time series does exist.  Specify a TSID or alias to match.  Can specify using `${Property}`. | |
+|| `TsHasData` | Causes the command to evaluate to `True` if the specified time series has data.  Specify a TSID or alias to match.  Can specify using `${Property}`. | |
+|| `TsHasNoData` | Causes the command to evaluate to `True` if the specified time series has no data, typically because no data records were found in the data source.  Specify a TSID or alias to match.  Can specify using `${Property}`. | |
 
 ## Examples ##
 
