@@ -3,6 +3,7 @@
 *   [Overview](#overview)
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
+    +   [Table Column Notation](#table-column-notation)
 *   [Examples](#examples)
 *   [Troubleshooting](#troubleshooting)
 *   [See Also](#see-also)
@@ -243,7 +244,7 @@ Command Parameters
 ||`DateTimeFormat`|The format for date/time strings in the date/time column, if strings are being parsed.  If blank, common formats such as `YYYY-MM-DD hh:mm` and `MM/DD/YYYY` will automatically be detected.  However, it may be necessary to specify the format to ensure proper parsing.  This format will be used to parse date/times from the `DateTimeColumn` or the merged string from the `DateColumn` and `TimeColumn` (if specified).  The format string will depend on the formatter type.  Currently, only the `C` formatter is available, which uses C programming language specifiers. The resulting format includes the formatter and specifiers (e.g., `C:%m%d%y`).|Will automatically be determined by examining date/time strings.|
 ||`DateColumn`|The name of column that includes the date, used when date and time are in separate columns.  Can be specified using processor `${Property}`.|Required if `DateTimeColumn` is not specified.|
 ||`TimeColumn`|The name of column that includes the time, used when date and time are in separate columns.  If both `DateColumn` and `TimeColumn` are specified, their contents are merged with a joining colon character and are then treated as if `DateTimeColumn` had been specified.  Can be specified using processor `${Property}`.|Required if `DateColumn` is specified and the interval requires time.|
-|***Multiple Data Value Columns***|`LocationID`|Used with multiple data column table.  The location identifier(s) to assign to time series, separated by columns if more than one column is read from the table. Column names can be specified as literal strings or using `TC` notation as explained in the table below.  Can be specified using processor `${Property}`.|None – must be specified for multiple column data tables.|
+|***Multiple Data Value Columns***|`LocationID`|Used with multiple data column table.  The location identifier(s) to assign to time series, separated by columns if more than one column is read from the table. Column names can be specified as literal strings or using `TC` notation (see the [Table Column Notation](#table-column-notation) section.  Can be specified using processor `${Property}`.|None – must be specified for multiple column data tables.|
 |***Single Data Value Column***|`LocationTypeColumn`|Used with single data column table. The name of the column containing the location type.|Do not assign a location type.|
 ||`LocationColumn`|Used with single data column table. The name of the column containing the location identifier.|None – must be specified for single column data tables.|
 ||`DataSourceColumn`|Used with single data column table. The name of the column containing the data source.|Use the `DataSource` parameter, which can be blank.|
@@ -259,9 +260,11 @@ Command Parameters
 ||`Scenario`|The scenario to assign to time series for each of the value columns (or specify one value to apply to all columns).|No scenario will be assigned.|
 ||`SequenceID`|The sequence ID to assign to time series for each of the value columns (or specify one value to apply to all columns).|No sequence ID will be assigned.|
 ||`Alias`|The alias to assign to time series, as a literal string or using the special formatting characters listed by the command editor.  The alias is a short identifier used by other commands to locate time series for processing.  Can be specified using processor `${Property}`.|No alias will be assigned.|
-|***Data***|`ValueColumn`|The name(s) of column(s) containing data values.  Separate column names with commas.  The `TC` explained in the table below can be used.  Only one column should be specified for single data column table.|None – must be specified.|
-||`FlagColumn`|The name(s) of column(s) containing the data flag.  Separate column names with commas.  The `TC` notation explained in the table below can be used.  If specified, the number of columns must match the `ValueColumn` parameter, although specifying blank column names is allowed to indicate that a value column does not have a corresponding flag column.|Flags are not read.|
+|***Data***|`ValueColumn`|The name(s) of column(s) containing data values.  Separate column names with commas.  The `TC` notation can be used (see the [Table Column Notation](#table-column-notation) section).  Only one column should be specified for single data column table.|None – must be specified.|
+||`FlagColumn`|The name(s) of column(s) containing the data flag.  Separate column names with commas.  The `TC` notation can be used (see the [Table Column Notation](#table-column-notation) section).  If specified, the number of columns must match the `ValueColumn` parameter, although specifying blank column names is allowed to indicate that a value column does not have a corresponding flag column.|Flags are not read.|
+||`DescriptionColumn`|The name(s) of column(s) containing the time series description.  Separate column names with commas.  The `TC` notation can be used (see the [Table Column Notation](#table-column-notation) section).  If specified, the number of columns must match the `ValueColumn` parameter.  Most data files do not include the description because it can add to the size of the file and is repetitive.  However, the description may be used  when a data file contains multiple time series for a few data points.|
 ||`Units`|The data units to assign to time series for each of the value columns (or specify one value to apply to all columns).|No units will be assigned.|
+||`Precision` | The number of digits after the decimal point for data display. |
 ||`Missing`|Strings that indicate missing data in the table (e.g., `m`), separated by commas.|Interpret empty column values as missing data.|
 ||`HandleDuplicatesHow`|Indicate how to handle duplicate date/time values in the table:<ul><li>`Add` – add the duplicate values (missing values are ignored)</li><li>`UseFirstNonmissing` – set the output to the first non-missing value</li><li>`UseLast` – set the output to the last value processed, even if missing</li><li>`UseLastNonmissing` – set the output to the last non-missing value processed</li></ul>|`UseLast`|
 |***Block Data***|`BlockLayout`|Indicates how data are laid out when in block format:<ul><li>`Period` – a single block is used for the entire period</li></ul>|`Block` layout is not used.|
@@ -270,6 +273,8 @@ Command Parameters
 ||`BlockOutputYearType`|Indicates the year type for the data block.  For example, if columns are in rows and the output year type is `Water`, then the first value column is `October`:<ul><li>`Calendar` – January to December</li><li>`NovToOct` – November to October</li><li>`Water` – October to September</li></ul>|`Calendar`|
 |***Period***|`InputStart`|The date/time to start reading data.  Can be specified using processor `${Property}`.|All data or global input start.|
 ||`InputEnd`|The date/time to end reading data.  Can be specified using processor `${Property}`.|All data or global input end.|
+
+### Table Column Notation ###
 
 Parameters that specify column names can use the notation `TC[start:stop]` to read the column names for corresponding parameter values,
 as explained in the following table.  `TC` is shorthand for "Table Column".
@@ -280,7 +285,7 @@ as explained in the following table.  `TC` is shorthand for "Table Column".
 
 |**Example**|**Description**|
 |-------|-------|
-| `TC[start:stop]` | `start` and `stop` column numbers, where each value can be 1+ or as explained below.. |
+| `TC[start:stop]` | `start` and `stop` column numbers, where each value can be 1+ or as explained below. |
 | `TC[1:5]` | Use columns 1, 2, 3, 4, and 5. |
 | `TC[2:]` | Use columns 2 through the last column, inclusive. |
 | `TC[2:-2]` | Use columns 2 and following columns but ignore the last 2 columns. |
@@ -289,7 +294,7 @@ as explained in the following table.  `TC` is shorthand for "Table Column".
 
 See the [automated tests](https://github.com/OpenCDSS/cdss-app-tstool-test/tree/master/test/commands/TableToTimeSeries).
 
-Examples were also shown in the [Command Editor section above](#command-editor)
+Examples were also shown in the [Command Editor section above](#command-editor).
 
 ## Troubleshooting ##
 

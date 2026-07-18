@@ -19,15 +19,18 @@
 
 The `Delta` command creates a new time series from an input time series.
 The resulting values are computed as the difference (delta) between each value and the previous value.
+The default is to compute the difference between data values,
+`DeltaValue` command parameter can be used to indicate a time interval to use for the data.
 Examples of use include:
 
 *   Disaggregating a cumulative time series into increments.
-*   Performing data quality control by detecting unexpected values.
+*   Performing data quality control by detecting unexpected values (e.g., large changes).
+*   Checking the time between data measurements.
 
 The output value in the simplest case with default command parameters is
 the current value minus the previous value.
 The result is set to missing if this value cannot be computed due to missing input values,
-and can also be set to missing if certain conditions met by optional data checks
+and can also be set to missing if certain conditions are met from optional data checks
 (see the `DeltaLimitAction` and `IntervalLimitAction` parameters).
 
 Irregular-interval time series that result in differences not being computed will have
@@ -280,7 +283,7 @@ The command is available in the following TSTool menu:
 
 *   ***Commands / Create Time Series***
 
-The following dialog is used to edit the command and illustrates the syntax of the command.
+The following dialog is used to edit the command for general parameters and illustrates the syntax of the command.
 
 **<p style="text-align: center;">
 ![Delta command editor for general parameters](Delta-General.png)
@@ -346,7 +349,8 @@ Command Parameters
 |***All***|`TSList`|Indicates the list of time series to be processed, one of:<br><ul><li>`AllMatchingTSID` – all time series that match the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`AllTS` – all time series before the command.</li><li>`EnsembleID` – all time series in the ensemble will be processed (see the EnsembleID parameter).</li><li>`FirstMatchingTSID` – the first time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`LastMatchingTSID` – the last time series that matches the TSID (single TSID or TSID with wildcards) will be processed.</li><li>`SelectedTS` – the time series are those selected with the [`SelectTimeSeries`](../SelectTimeSeries/SelectTimeSeries.md) command.</li></ul> | `AllTS` |
 ||`TSID`|The time series identifier or alias for the time series to be processed, using the `*` wildcard character to match multiple time series.  Can be specified using `${Property}`.|Required if `TSList=*TSID`|
 ||`EnsembleID`|The ensemble to be processed, if processing an ensemble. Can be specified using `${Property}`.|Required if `TSList=*EnsembleID`|
-|***General***|`ExpectedTrend`|Indicates the expected trend of data for cumulative time series, used when values can reset:<ul><li>`Decreasing` – values should decrease and then reset (**has not been fully tested**)</li><li>`Increasing` – values should increase and then reset</li><li>`Variable` – variable pattern increasing and decreasing and don’t reset at fixed thresholds|`Variable`|
+|***General***|`DeltaValue`|Indicates the value that is used to compute the delta:<ul><li>`DataValue` – time series data value</li><li>`TimeSeconds` – date/time as seconds</li><li>`TimeMinutes` – date/time as minutes</li><li>`TimeHours` - date/time as hours</li><li>`TimeDays` - date/time as days</li><li>`TimeMonths` - date/time as months</li></ul>|`DataValue`|
+||`ExpectedTrend`|Indicates the expected trend of data for cumulative time series, used when values can reset:<ul><li>`Decreasing` – values should decrease and then reset (**has not been fully tested**)</li><li>`Increasing` – values should increase and then reset</li><li>`Variable` – variable pattern increasing and decreasing and don’t reset at fixed thresholds|`Variable`|
 ||`ResetType`| The reset type:<ul><li>`Auto` - automatically reset when a cumulative time series trend direction changes (see the ***Reset - Auto*** tab)</li><li>`Rollover` - automatically reset when a cumulative time series trend direction changes and values are bounded (see the ***Reset - Rollover*** tab)</li><li>`Unknown` - reset behavior is unknown (delta is simple calculation of current minus previous)</li></ul> | `Unknown` |
 ||`AnalysisStart`|The date/time to start analyzing data.  Can be specified using `${Property}`.|Full period is analyzed.|
 ||`AnalysisEnd`|The date/time to end analyzing data.  Can be specified using `${Property}`.|Full period is analyzed.|

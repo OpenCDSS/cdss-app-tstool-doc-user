@@ -49,6 +49,7 @@ Command Parameters
 | --------------|-----------------|----------------- |
 |`TableID`<br>**required**|Identifier for the table to write.  Can be specified using processor `${Property}`.|None – must be specified.|
 |`OutputFile`<br>**required**|The name of the file to write, as an absolute path or relative to the command file location.  Can be specified using processor `${Property}`.|None – must be specified.|
+|`IncludeDocument` | Whether to include the surrounding HTML document (`True`) or just write the table elements (`False`). Excluding the document allows building HTML files incrementally. | `True` |
 
 ## Examples ##
 

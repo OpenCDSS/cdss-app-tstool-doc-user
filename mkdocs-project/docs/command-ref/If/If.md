@@ -1,8 +1,17 @@
 # TSTool / Command / If #
 
 *   [Overview](#overview)
-    +   [Conditional Syntax](#conditional-syntax)
+    +   [Condition Syntax](#condition-syntax)
+    +   [Expression Syntax](#expression-syntax)
 *   [Command Editor](#command-editor)
+    +   [Condition](#condition)
+    +   [Datastore OK?](#datastore-ok)
+    +   [Expression](#expression)
+    +   [File Exists?](#file-exists)
+    +   [Object Exists?](#object-exists)
+    +   [Property Defined?](#property-defined)
+    +   [Table Exists?](#table-exists)
+    +   [Time Series Conditions](#time-series-conditions)
 *   [Command Syntax](#command-syntax)
 *   [Examples](#examples)
 *   [Troubleshooting](#troubleshooting)
@@ -27,7 +36,7 @@ If more than one condition is specified, all conditions must be true for the ent
 *   ***Condition***
     +   **use the `Expression` parameter for more functionality**
     +   simple conditional statement for strings, integers, boolean, and floating point (double precision) values,
-        as described in the [Conditional Syntax](#conditional-syntax) section
+        as described in the [Condition Syntax](#condition-syntax) section
     +   comparison of Semantic versions (see [semantic versions](https://semver.org/))
 *   ***Datastore OK?***
     +   datastore exists and the status is OK (or does is not Ok)
@@ -42,8 +51,9 @@ If more than one condition is specified, all conditions must be true for the ent
     +   property exists, is set, or is not set
 *   ***Table Exists?***
     +   table exists or does not exist (by checking for the table ID)
-*   ***Time Series Exists?***
+*   ***Time Series Conditions***
     +   time series exists or does not exist (by checking for the alias and TSID) and does or does not have data
+    +   time series property exists, is set, or is not set
 
 `If` blocks can be nested and each level can be indented (right-click on commands in TSTool to indent)
 All nested `If` commands must evaluate to true to execute the commands within the deepest level of nesting.
@@ -62,7 +72,7 @@ See also the [`Break`](../Break/Break.md) and
 [`Continue`](../Continue/Continue.md) commands,
 which can be used within an `If` block to control logic in a [`For`](../For/For.md) loop.
 
-### Conditional Syntax ###
+### Condition Syntax ###
 
 The syntax for a conditional statement used with the `Condition` parameter is restricted to a simple comparison:
 
@@ -93,6 +103,39 @@ which will be removed before the comparison.
 
 See the `Expression` parameter for more functionality.
 
+### Expression Syntax ###
+
+Expressions are implemented using the EvalEx library (see the [EvalEx documentation](https://ezylang.github.io/EvalEx/concepts/concepts.html) ),
+which is capable of evaluating equations that use variables, for example:
+
+```
+((a + b) - 3*c) > 0.0
+```
+
+The expression must evaluate to a boolean result.
+The variable values are provided using TSTool properties, for example:
+
+```
+((${a} + ${b}) - 3*${c}) > 0.0
+```
+
+The evaluation sequence is as follows:
+
+1.  Expand properties, resulting in the expression only containing basic data types.
+2.  Evaluate the expression.
+3.  Set the `If` command result based on the expression result.
+
+The EvalEx library is able to process various data types, including boolean, number, and string values.
+Literal strings must be surrounded by single quotes.
+Therefore, use an expression similar to the following:
+
+```
+STR_UPPER('${Property}') > 0
+```
+
+It is generally best to ensure that null values are not used in an expression,
+for example by initializing all input variables or using TSTool `If` commands to avoid attempting to use null values.
+
 ## Command Editor ##
 
 The command is available in the following TSTool menu:
@@ -101,11 +144,15 @@ The command is available in the following TSTool menu:
 
 The following dialog is used to edit the command and illustrates the command syntax for a condition check.
 
+### Condition ###
+
 ![If command editor for a condition test](If.png)
 
 **<p style="text-align: center;">
 `If` Command Editor for a Condition Test (<a href="../If.png">see full-size image</a>)
 </p>**
+
+### Datastore OK? ###
 
 The following illustrates checking for datastore status.
 
@@ -117,6 +164,8 @@ The following illustrates checking for datastore status.
 `If` Command Editor to Check Whether a  Datastore Exists (<a href="../If_DataStoreIsOk.png">see full-size image</a>)
 </p>**
 
+### Expression ###
+
 The following illustrates the command syntax for an expression check.
 
 ![If command editor for expression test](If_Expression.png)
@@ -124,6 +173,8 @@ The following illustrates the command syntax for an expression check.
 **<p style="text-align: center;">
 `If` Command Editor for an Expression Test (<a href="../If_Expression.png">see full-size image</a>)
 </p>**
+
+### File Exists? ###
 
 The following illustrates checking for file existence.
 
@@ -135,6 +186,8 @@ The following illustrates checking for file existence.
 `If` Command Editor to Check Whether a  File Exists (<a href="../If_FileExists.png">see full-size image</a>)
 </p>**
 
+### Object Exists? ###
+
 The following illustrates checking for object existence.
 
 **<p style="text-align: center;">
@@ -144,6 +197,8 @@ The following illustrates checking for object existence.
 **<p style="text-align: center;">
 `If` Command Editor to Check Whether an Object Exists (<a href="../If_ObjectExists.png">see full-size image</a>)
 </p>**
+
+### Property Defined? ###
 
 The following illustrates checking for a property to make sure it is defined and not empty.
 This is useful for detecting logic and data problems.
@@ -156,6 +211,8 @@ This is useful for detecting logic and data problems.
 `If` Command Editor to Check Whether a Property is Defined and has a Value (<a href="../If_PropDefined.png">see full-size image</a>)
 </p>**
 
+### Table Exists? ###
+
 The following illustrates checking for table existence.
 
 **<p style="text-align: center;">
@@ -166,9 +223,14 @@ The following illustrates checking for table existence.
 `If` Command Editor to Check Whether a Table Exists (<a href="../If_TableExists.png">see full-size image</a>)
 </p>**
 
+### Time Series Conditions ###
+
 The following illustrates how to detect if a time series exists.
 This is useful for executing only blocks of commands that operate on the time series
 (and avoiding those steps and related warning/failure messages when the time series does not exist).
+
+Parameters are also available to check whether a time series property exists, does not exist, and is set.
+This is useful to control logic specific to the command.
 
 **<p style="text-align: center;">
 ![If command editor for time series existence check](If_TSExists.png)
@@ -197,7 +259,7 @@ Command Parameters
 || `CompareAsVersions` | If `True`, the comparison will be done by treating the strings as [semantic versions](https://semver.org/). This can be used to check the TSTool, plugin, or API version to ensure that enabled command features are used. Version parts are formatted with leading spaces if necessary for comparison (a space character has a value less than alphanumeric characters). | `False` |
 |***Datastore OK?***| `DataStoreIsOk` | Causes the command to evaluate to `True` if the specified datastore exists and its status is OK.  Can specify using `${Property}`. |  |
 || `DataStoreIsNotOk` | Causes the command to evaluate to `True` if the specified datastore does not exist or its status is not OK.  Can specify using `${Property}`. |  |
-|***Expression***| `Expression` | The expression to evaluate, using the EvalEx library (see the [EvalEx documentation:](https://ezylang.github.io/EvalEx/concepts/concepts.html) ). | |
+|***Expression***| `Expression` | The expression to evaluate, using the EvalEx library (see the [EvalEx documentation](https://ezylang.github.io/EvalEx/concepts/concepts.html) ). | |
 |***File Exists?***| `DataStoreIsNotOk` | Causes the command to evaluate to `True` if the specified file exists.  Can specify using `${Property}`. | |
 || `FileDoesNotExist` | Causes the command to evaluate to `True` if the specified file does not exist.  Can specify using `${Property}`. | |
 |***Object Exists?*** | `ObjectExists` | Causes the command to evaluate to `True` if the specified object exists, based on checking the object IDs.  Can specify using `${Property}`. | |
@@ -211,6 +273,10 @@ Command Parameters
 || `TsDoesNotExist` | Causes the command to evaluate to `True` if the specified time series does exist.  Specify a TSID or alias to match.  Can specify using `${Property}`. | |
 || `TsHasData` | Causes the command to evaluate to `True` if the specified time series has data.  Specify a TSID or alias to match.  Can specify using `${Property}`. | |
 || `TsHasNoData` | Causes the command to evaluate to `True` if the specified time series has no data, typically because no data records were found in the data source.  Specify a TSID or alias to match.  Can specify using `${Property}`. | |
+|| `TSID` | Time series identifier used to check the following properties. | |
+|| `TSPropertyIsNotDefinedOrIsEmpty` | Use with `TSID`. Evaluate as true if the specified time series property is not defined or is defined and is empty (null or empty string). |
+|| `TSPropertyIsDefined` | Use with `TSID`. Evaluate as true if the specified time series property is defined (but may be empty). |
+|| `TSPropertyIsDefinedAndIsNotEmpty` | Use with `TSID`. Evaluate as true if the specified time series property is defined and is not empty (is not null or an empty string). |
 
 ## Examples ##
 
