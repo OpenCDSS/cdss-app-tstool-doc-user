@@ -20,22 +20,44 @@ Issues may also be included in other repositories that are TSTool components.
 
 **Maintenance release to improve NRCS AWDB REST API integration and graphing.**
 
+*   ![bug](change.png) [15.3.3] Fix the [`ReadDelimitedFile`](../command-ref/ReadDelimitedFile/ReadDelimitedFile.md) command:
+    +   Irregular interval time series records with no data value were being skipped.
+        The values are now set using the time series' missing data value.
 *   ![change](change.png) [15.3.3] Begin adding [TSView Time Series Viewing Tools](../appendix-tsview/examples/overview.md) example configurations
     to help create data visualizations.
+*   ![change](change.png) [15.3.3] Improve database connection code to better handle resource management for statements and sessions,
+    especially when connections are lost.
 *   ![change](change.png) [15.3.3] Update the graphing:
     +   Add the `CompareSymbolColor`, `CompareSymbolSize`, `CompareSymbolStyle`, and `CompareTolerance` properties for point graphs,
         which will display a symbol if the data for the graphed time series have the same date/time and value.
         This can be used to compare time series from two sources.
+    +   Determine the y-axis limits based on the time series period that is output for a time series product
+        (previously the full available period was used).
+*   ![change](change.png) [15.3.3] Update the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command:
+    +   Do not trim the `AppendText` parameter value so that text with leading and trailing spaces can be appended.
+*   ![change](change.png) [15.3.3] Update the [`Delta`](../command-ref/Delta/Delta.md) command:
+    +   Add the `DeltaValue` parameter and allow using the date/time parts as the delta.
+        This is useful for evaluating gaps between data transmissions.
 *   ![change](change.png) [15.3.3] Update the [`For`](../command-ref/For/For.md) command:
     +   The `List` values are no longer trimmed for white space and empty values are allowed.
-        The [`If`](../command-ref/If/If.md) command can be used to check for empty strings.
+        The [`If`](../command-ref/If/If.md) command can then be used in a loop to check for empty strings.
         This provides more flexibility in processing datasets that are missing values.
 *   ![change](change.png) [15.3.3] Update the [`If`](../command-ref/If/If.md) command:
     +   Improve error handling for cases where time series could not be retrieved from the command processor.
     +   Add the `Expression` parameter, which provides many features for evaluating complex expressions.
     +   Allow any combination of parameters.  Any single false evaluation will result in an overall false evaluation.
+    +   Add the `TSID`, `TSPropertyIsNotDefinedOrIsEmpty`, `TSPropertyIsDefined`, and `TSPropertyIsDefinedAndIsNotEmpty` parameters
+        to check time series properties.
+*   ![change](change.png) [15.3.3] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
+    +   Add the `IncludeProperties` and `ExcludeProperties` command parameters to control which processor properties to share.
 *   ![change](change.png) [15.3.3] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
     +   Add the `Expression` parameter, which provides many features for evaluating expressions.
+*   ![change](change.png) [15.3.3] Update the [`SetTimeSeriesProperty`](../command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md) command:
+    +   Enable `Boolean` as a `PropertyType` choice.
+*   ![change](change.png) [15.3.3] Update the [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command:
+    +   Add the `DescriptionColumn` to set the time series description from a column value.
+*   ![change](change.png) [15.3.3] Update the [`WriteTableToHTML`](../command-ref/WriteTableToHTML/WriteTableToHTML.md) command:
+    +   Add the `IncludeDocument` parameter to control whether the surrounding document is written or just the table elements.
 
 ## Changes in Version 15.3.2 ##
 

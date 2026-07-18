@@ -71,8 +71,8 @@ Command Parameters
 | |`Precision`| Number of digits after the decimal point when formatting data for output. Can be specified using `${Property}`.| Commands and visualization tools may determine the precision from the data units or default for a software feature. |
 | |`Editable`|If set to `True`, then graphing the time series will enable interactive editing features, including the ability to save the edited time series if the data management system supports this functionality.|`False`|
 | **User-defined** | `PropertyName`|Name of user-defined property.||
-| |`PropertyType`|Property type, to ensure proper initialization and data check. | Required if `PropertyName` is specified. |
-| |`PropertyValue`|Value for property as a string but adhering to the property type requirements (e.g., date as a string must match format that can be parsed).  Specify `%` formatter to access a built-in time series property, `${ts:Property}` to access a user-defined time series property, and `${Property}` to access a processor property.|Required if `PropertyName` is specified.|
+| |`PropertyType`|Property type, to ensure proper initialization and data check, one of:<ul><li>`Boolean` - boolean (true/false)</li><li>`DateTime` - date/time</li><li>`Double` - double precision floating point number</li><li>`Integer` - integer</li><li>`String` - string/text</li></ul> | Required if `PropertyName` is specified. |
+| |`PropertyValue`|Value for property as a string while adhering to the property type requirements:<ul><li>literal string</li><li>date/time as a string that can be parsed</li><li>`%` formatter to access a built-in time series property</li><li>`${ts:Property}` to access a built-in or user-defined time series property</li><li>`${Property}` to access a processor property</li></ul>|Required if `PropertyName` is specified.|
 
 ## Examples ##
 

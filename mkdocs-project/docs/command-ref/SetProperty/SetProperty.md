@@ -1,6 +1,7 @@
 # TSTool / Command / SetProperty #
 
 *   [Overview](#overview)
+    +   [Expression Syntax](#expression-syntax)
     +   [Nested Property Names](#nested-property-names)
     +   [Properties in Discovery Phase](#properties-in-discovery-phase)
 *   [Command Editor](#command-editor)
@@ -69,6 +70,39 @@ for example as shown below.
 **<p style="text-align: center;">
 Properties in the TSTool Results (<a href="../SetProperty-results.png">see full-size image</a>)
 </p>**
+
+### Expression Syntax ###
+
+Expressions are implemented using the EvalEx library (see the [EvalEx documentation](https://ezylang.github.io/EvalEx/concepts/concepts.html) ),
+which is capable of evaluating equations that use variables, for example:
+
+```
+((a + b) - 3*c
+```
+
+The variable values are provided using TSTool properties, for example:
+
+```
+(${a} + ${b}) - 3*${c}
+```
+
+The evaluation sequence is as follows:
+
+1.  Expand properties, resulting in the expression only containing basic data types.
+2.  Evaluate the expression.
+3.  Set the output property to the resulting value.
+
+The EvalEx library is able to process various data types, including boolean, number, and string values.
+Literal strings must be surrounded by single quotes.
+Therefore, use an expression similar to the following:
+
+```
+STR_UPPER('${Property}')
+```
+
+It is generally best to ensure that null values are not used in an expression,
+for example by initializing all input variables or using TSTool
+[`If`](../If/If.md) commands to avoid attempting to use null values.
 
 ### Nested Property Names ###
 
