@@ -27,6 +27,7 @@ In all cases, it is recommended to install in the default location to avoid conf
     +   [Running TSTool on a Mac](#running-tstool-on-a-mac)
 *   [TSTool Configuration](#tstool-configuration)
 *   [Map Configuration](#map-configuration)
+*   [Troubleshooting](#troubleshooting)
 
 -------
 
@@ -61,8 +62,8 @@ C:\CDSS\TSTool-Version            Windows top-level install folder.
     cdss*_11.jar                  Java libaries associated with
                                   Colorado's Decision Support Systems (CDSS), using Java 11.
     tstool                        Shell script to run TSTool on Linux and Mac.
-    TSTool.bat                    Batch file to run TSTool using the JRE software,
-                                  not typically used.
+    tstool.cmd                    Windows command file to run TSTool using the JRE software,
+                                  typically only used for troubleshooting.
     TSTool.exe                    Executable program to run TSTool using the JRE software,
                                   recommended for command-line use.
     TSTool.l4j.ini                Configuration file for the TSTool.exe Launch4j launcher.
@@ -545,7 +546,9 @@ See the [Uninstall TSTool from a Mac](#uninstall-tstool-from-a-mac) section.
 ## Running TSTool ##
 
 See the following sections for basic information about running TSTool.
-See also the [Running TSTool in Various Modes](../appendix-running/running.md) appendix.
+
+See the [Appendix - Running TSTool in Various Modes](../appendix-running/running.md)
+documentation for information about running TSTool on Linux.
 
 ### Running TSTool on Windows ###
 
@@ -574,10 +577,16 @@ In this case it may be necessary to specify the absolute path to the command fil
 TSTool can be run on Linux using the `tstool` script,
 which is found in the `bin` folder where TSTool was installed.
 
+See the [Appendix - Running TSTool in Various Modes](../appendix-running/running.md)
+documentation for information about running TSTool on Linux.
+
 ### Running TSTool on a Mac ###
 
 TSTool can be run on a Mac similar to Linux using the `tstool` script,
 which is found in the `bin` folder where TSTool was installed.
+
+See the [Appendix - Running TSTool in Various Modes](../appendix-running/running.md)
+documentation for information about running TSTool on Linux.
 
 ## TSTool Configuration ##
 
@@ -813,3 +822,25 @@ In particular, the `TS*` columns define values that are seen in the TSTool inter
 columns define the layer and attribute names for map layers.
 The `Layer_Interval` and `Layer_DataSource` are optional but if
 specified result in more specific links between time series and map layers.
+
+## Troubleshooting ##
+
+This section describes how to troubleshoot the TSTool installation,
+in particular for cases when the software does not start.
+
+Problems are generally due to files not being properly installed or have permission issues.
+A virus checker may also be preventing loading the software.
+
+The software is run using the `TSTool.exe` program on Windows or `tstool` script on Linux,
+which are located in the software installation `bin` folder.
+The Windows ***Start*** menu typically lists all TSTool versions that have been installed.
+The user interface should usually be shown.
+
+If TSTool does not run on Windows, try the following steps:
+
+1.  Review the software startup log file located in the user files in the `.tstool/NN/logs` folder.
+2.  Run the `TSTool.exe --l4j-debug` command from a Windows `cmd` window in
+    the TSTool installation `bin` folder.  This will create the log file `launch4j.log`.
+    Review the file to see if there are warning or error messages.
+3.  Run the `tstool.cmd` Windows command file from a Windows `cmd` window in the TSTool installation `bin` folder.
+    If there are configuration issues, messages should print to the Window.

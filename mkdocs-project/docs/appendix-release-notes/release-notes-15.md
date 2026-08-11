@@ -5,7 +5,7 @@ See also the [GitHub repository issues](https://github.com/OpenCDSS/cdss-app-tst
 for outstanding issues and enhancement requests.
 Issues may also be included in other repositories that are TSTool components.
 
-*   [Changes in Version 15.3.3](#changes-in-version-1533)
+*   [Changes in Version 15.4.0](#changes-in-version-1540)
 *   [Changes in Version 15.3.2](#changes-in-version-1532)
 *   [Changes in Version 15.3.1](#changes-in-version-1531)
 *   [Changes in Version 15.3.0](#changes-in-version-1530)
@@ -16,47 +16,55 @@ Issues may also be included in other repositories that are TSTool components.
 
 ----------
 
-## Changes in Version 15.3.3 ##
+## Changes in Version 15.4.0 ##
 
-**Maintenance release to improve NRCS AWDB REST API integration and graphing.**
+**Feature release to improve NRCS AWDB REST API integration, graphing, and complex workflows.**
 
-*   ![bug](change.png) [15.3.3] Fix the [`ReadDelimitedFile`](../command-ref/ReadDelimitedFile/ReadDelimitedFile.md) command:
+*   ![bug](change.png) [15.4.0] Fix the [`ReadDelimitedFile`](../command-ref/ReadDelimitedFile/ReadDelimitedFile.md) command:
     +   Irregular interval time series records with no data value were being skipped.
         The values are now set using the time series' missing data value.
-*   ![change](change.png) [15.3.3] Begin adding [TSView Time Series Viewing Tools](../appendix-tsview/examples/overview.md) example configurations
+*   ![new](new.png) [15.4.0] Begin adding [TSView Time Series Viewing Tools](../appendix-tsview/examples/overview.md) example configurations
     to help create data visualizations.
-*   ![change](change.png) [15.3.3] Improve database connection code to better handle resource management for statements and sessions,
+*   ![change](change.png) [15.4.0] Update the ***Results / Time Series Properties*** view:
+    +   include notes explaining the data
+    +   improve the properties table layout
+    +   add the data flag table
+*   ![change](change.png) [15.4.0] Improve database connection code to better handle resource management for statements and sessions,
     especially when connections are lost.
-*   ![change](change.png) [15.3.3] Update the graphing:
+*   ![change](change.png) [15.4.0] Update graphing tools:
     +   Add the `CompareSymbolColor`, `CompareSymbolSize`, `CompareSymbolStyle`, and `CompareTolerance` properties for point graphs,
         which will display a symbol if the data for the graphed time series have the same date/time and value.
         This can be used to compare time series from two sources.
     +   Determine the y-axis limits based on the time series period that is output for a time series product
         (previously the full available period was used).
-*   ![change](change.png) [15.3.3] Update the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command:
+*   ![change](change.png) [15.4.0] Update heat map (raster graph) tools:
+    +   Add the `expression` column to symbol table to allow more complex logic in symbol tables using the EvalEx library.
+*   ![change](change.png) [15.4.0] Replace the `TSTool.bat` file with `tstool.cmd` for Windows:
+    +   Update to the current TSTool configuration so that it can be run as an option to `TSTool.exe` for troubleshooting.
+*   ![change](change.png) [15.4.0] Update the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command:
     +   Do not trim the `AppendText` parameter value so that text with leading and trailing spaces can be appended.
-*   ![change](change.png) [15.3.3] Update the [`Delta`](../command-ref/Delta/Delta.md) command:
+*   ![change](change.png) [15.4.0] Update the [`Delta`](../command-ref/Delta/Delta.md) command:
     +   Add the `DeltaValue` parameter and allow using the date/time parts as the delta.
         This is useful for evaluating gaps between data transmissions.
-*   ![change](change.png) [15.3.3] Update the [`For`](../command-ref/For/For.md) command:
+*   ![change](change.png) [15.4.0] Update the [`For`](../command-ref/For/For.md) command:
     +   The `List` values are no longer trimmed for white space and empty values are allowed.
         The [`If`](../command-ref/If/If.md) command can then be used in a loop to check for empty strings.
         This provides more flexibility in processing datasets that are missing values.
-*   ![change](change.png) [15.3.3] Update the [`If`](../command-ref/If/If.md) command:
+*   ![change](change.png) [15.4.0] Update the [`If`](../command-ref/If/If.md) command:
     +   Improve error handling for cases where time series could not be retrieved from the command processor.
     +   Add the `Expression` parameter, which provides many features for evaluating complex expressions.
     +   Allow any combination of parameters.  Any single false evaluation will result in an overall false evaluation.
     +   Add the `TSID`, `TSPropertyIsNotDefinedOrIsEmpty`, `TSPropertyIsDefined`, and `TSPropertyIsDefinedAndIsNotEmpty` parameters
         to check time series properties.
-*   ![change](change.png) [15.3.3] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
+*   ![change](change.png) [15.4.0] Update the [`RunCommands`](../command-ref/RunCommands/RunCommands.md) command:
     +   Add the `IncludeProperties` and `ExcludeProperties` command parameters to control which processor properties to share.
-*   ![change](change.png) [15.3.3] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
+*   ![change](change.png) [15.4.0] Update the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) command:
     +   Add the `Expression` parameter, which provides many features for evaluating expressions.
-*   ![change](change.png) [15.3.3] Update the [`SetTimeSeriesProperty`](../command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md) command:
+*   ![change](change.png) [15.4.0] Update the [`SetTimeSeriesProperty`](../command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md) command:
     +   Enable `Boolean` as a `PropertyType` choice.
-*   ![change](change.png) [15.3.3] Update the [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command:
+*   ![change](change.png) [15.4.0] Update the [`TableToTimeSeries`](../command-ref/TableToTimeSeries/TableToTimeSeries.md) command:
     +   Add the `DescriptionColumn` to set the time series description from a column value.
-*   ![change](change.png) [15.3.3] Update the [`WriteTableToHTML`](../command-ref/WriteTableToHTML/WriteTableToHTML.md) command:
+*   ![change](change.png) [15.4.0] Update the [`WriteTableToHTML`](../command-ref/WriteTableToHTML/WriteTableToHTML.md) command:
     +   Add the `IncludeDocument` parameter to control whether the surrounding document is written or just the table elements.
 
 ## Changes in Version 15.3.2 ##
