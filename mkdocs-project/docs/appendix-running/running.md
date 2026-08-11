@@ -2,6 +2,7 @@
 
 *   [Overview](#overview)
 *   [Running TSTool in Interactive Mode](#running-tstool-in-interactive-mode)
+    +   [Running TSTool in Interactive Mode - Linux](#running-tstool-in-interactive-mode-linux)
 *   [Running TSTool in Limited Interactive Mode](#running-tstool-in-limited-interactive-mode)
 *   [Running TSTool in Command Line Batch Mode](#running-tstool-in-command-line-batch-mode)
     +   [TSTool Command Line Parameters](#tstool-command-line-parameters)
@@ -58,6 +59,47 @@ efficiency or as a scheduled task to support other tasks.
 The following sections describe how such processing can be implemented.
 Because the command files are the same regardless of whether TSTool is run in interactive or batch mode,
 the interactive tool can be used to modify and troubleshoot command files, as appropriate.
+
+### Running TSTool in Interactive Mode - Linux ###
+
+Running TSTool interactively on Linux requires that X Windows System software is running.
+X Windows allows running TSTool and other software with graphical user interfaces.
+TSTool can be run at the computer terminal or via a remote login, with display to another computer that is also running X Windows,
+such as a VirtualBox virtual machine or Cygwin.
+
+#### Running from a Terminal ####
+
+If logged into a Linux computer or a Virtual Machine with a display,
+it is generally possible to just run TSTool using the `tstool` command.
+
+#### Running from a Terminal after Switching Users ####
+
+Running TSTool after switching users requires proper X Windows configuration.
+The following summarizes the steps on a Debian Linux computer,
+which need to be repeated each time that the user logs into the computer.
+
+1.  Log into the terminal for the initial user.
+
+2.  Configure to allow X-windows connections from the second user `user123`:
+
+      ```
+      xhost +SI:localuser:user123
+      ```
+
+3.  Switch to the other user in the terminal:
+    
+      ```
+      sudo su - user123
+      ```
+
+4.  When logged in as the second user in the terminal window,
+    set the `DISPLAY` environment variable needed by X Windows:
+
+      ```
+      export DISPLAY=:0.0
+      ```
+
+5.  Run TSTool in the terminal using the `tstool` script.
 
 ## Running TSTool in Limited Interactive Mode ##
 

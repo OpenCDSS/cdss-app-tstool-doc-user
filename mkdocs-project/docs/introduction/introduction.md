@@ -9,10 +9,12 @@
         -   [Separate Command Files](#separate-command-files)
         -   [Templates](#templates)
 *   [Time Series Concepts](#time-series-concepts)
-    +   [Time Series Objects and Identifiers](#time-series-objects-and-identifiers)
-    +   [Time Series Aliases](#time-series-aliases)
-    +   [Time Series Properties](#time-series-properties)
-    +   [Time Series Data Flags](#time-series-data-flags)
+    +   [Time Series - Objects and Identifiers](#time-series-objects-and-identifiers)
+    +   [Time Series - Aliases](#time-series-aliases)
+    +   [Time Series - Properties](#time-series-properties)
+    +   [Time Series - Missing Data](#time-series-missing-data)
+    +   [Time Series - Data Interval](#time-series-data-interval)
+    +   [Time Series - Data Flags](#time-series-data-flags)
     +   [Date/Time Conventions](#datetime-conventions)
     +   [Time Scale for Time Series Data](#time-scale-for-time-series-data)
     +   [Time Series Commands and Processing Sequence](#time-series-commands-and-processing-sequence)
@@ -321,8 +323,10 @@ The downside of using a template for a TSTool command file are as follows:
 ## Time Series Concepts ##
 
 The following sections provide information about important time series concepts as implemented in TSTool.
+Time series properties can be viewed using the
+[***Results / Time Series Properties***](../appendix-tsview/tsview.md#time-series-properties-view) view.
 
-### Time Series Objects and Identifiers ###
+### Time Series - Objects and Identifiers ###
 
 TSTool handles time series as objects that are read (or internally created),
 manipulated, viewed, and output.
@@ -353,28 +357,33 @@ To identify time series in the original data and manage time series internally,
 TSTool assigns each time series a time series identifier (TSID) that uses the notation:
 
 ```
-LocationType:Location.Source.Type.Interval.Scenario[Seq]~InputType~InputName
+LocationType:LocationID.Source.DataType.Interval.Scenario[SequenceID]~InputType~InputName
 ```
 
 ```
-LocationType:Location.Source.Type.Interval.Scenario[Seq]~DataStoreName
+LocationType:LocationID.Source.DataType.Interval.Scenario[SequenceID]~DataStoreName
 ```
 
-The TSID can be thought of as a unique resource identifier, similar to a URL for web resources.
-The first five parts (`Location.Source.Type.Interval.Scenario`) are used to identify
+The TSID is a unique resource identifier, similar to a URL for web resources.
+The first five parts (`LocationID.Source.DataType.Interval.Scenario`) are used to identify
 time series within the original data (e.g., to find the time series in a file or database):
 
-*   `LocationType` – optionally used where necessary to uniquely identify locations
+*   `LocationType` – Optionally used where necessary to uniquely identify locations
     (e.g., use a location type of `Basin` or `Subbasin` where other identifier information
-    would result in ambiguous interpretation of the identifier parts
-*   `Location` – typically a physical location identifier, such as a station, basin, or sensor identifier.
-*   `Source` – a data provider identifier, usually a government or system identifier (e.g., `USGS`, `NWS`),
-    necessary because sometimes the provider for a location changes over time or a database may contain time series from multiple data providers
-*   `Type` – the data type, typically specific to the data
-    (e.g., `Streamflow`, `Precip`) – TSTool does not try to institute global data type definitions).
-*   `Interval` – the data interval, indicating the time between data values (e.g., `6Hour`, `Day`, `Irregular`).
+    would result in ambiguous interpretation of the identifier parts.
+*   `LocationID` – Typically a physical location identifier, such as a station, site, basin, sensor,
+    or physical feature name.
+*   `Source` – A data provider identifier, usually a government or system identifier (e.g., `USGS`, `NWS`),
+    necessary because sometimes the provider for a location changes over time or a database may contain time series from multiple data providers.
+*   `DataType` – The data type, typically specific to the data
+    (e.g., `Streamflow`, `Precip`).
+    TSTool does not try to institute global data type definitions because there is too much variation between data sources.
+*   `Interval` – the data interval, indicating the time between data values (e.g., `6Hour`, `Day`, `Irregular`):
+    +   See the [Time Series - Data Interval](#time-series-data-interval) documentation below.
+    +   One time series with interval `day` has a different identifier than a time series with interval `1day`,
+        although they may bot have the same contents (other than the identifier).
 *   `Scenario` – an optional item that indicates a scenario (e.g., `Hist`, `Filled`, `Max`, `Critical`).
-*   `Seq` – an optional sequence identifier used in cases
+*   `SequenceID` – an optional sequence identifier used in cases
     where multiple time series traces in an ensemble may be available,
     with all other identifier information being equal (e.g., for simulations
     where multiple versions of input are used or for cases when a historical
@@ -424,15 +433,15 @@ however, command files can be edited with a text editor.
 The path to files can be absolute or relative to the command file.
 The latter is recommended to improve portability of files between computers.
 
-TSTool only shows the input type and input name
+TSTool only shows the datastore and input type and input name
 parts of the identifier when editing read commands.
 There are cases where two time series identifiers will be the same except for the input type and name.
 In these cases, an alias should be assigned when reading
 the time series and the alias used in later commands (see the next section).
 
-### Time Series Aliases ###
+### Time Series - Aliases ###
 
-Because time series identifiers are somewhat cumbersome to work with,
+Because time series identifiers can be cumbersome to work with,
 TSTool allows a time series alias to be used instead.
 For example, the following command illustrates how a HydroBase time series can be read and associated with an alias:
 
@@ -474,6 +483,10 @@ and insert aliases where possible.
 For example, an inventory of time series may be defined to describe time series used in a process,
 similar to the following (where the bold indicates information that will be replaced with a specific value):
 
+**<p style="text-align: center;">
+Time Series Alias Examples
+</p>**
+
 |**Time Series Alias**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|
 |--|--|
 |`Location-Streamflow-Month-Original`|Original monthly streamflow.|
@@ -490,14 +503,14 @@ the original TSID also is maintained with the time series and is available for r
 
 In summary, if an alias is assigned to a time series, it will take precedence over the TSID when identifying the time series.
 
-### Time Series Properties ###
+### Time Series - Properties ###
 
-Time series properties are useful for managing metadata associated with a time series,
-which can be easier than looking up properties from a table or copying from processor properties.
+Time series properties are useful metadata associated with a time series.
 Time series properties can be viewed by right-clicking on a time series in the ***Results / Time Series*** area
 and then selecting ***Properties***.
+See the [Results / Time Series Properties View](../appendix-tsview/tsview.md#time-series-properties-view) documentation.
 Time series properties are typically not available when editing commands because
-the properties are only set when commands are run in sequence.
+the properties are only set when commands are run.
 
 A time series property is defined in one of the following ways:
 
@@ -507,12 +520,12 @@ A time series property is defined in one of the following ways:
     +   `${ts:property}` named properties, as shown in the following table.
 *   User-defined (dynamic) properties:
     +   `${ts:property}` named properties, where `property` is user-specified.
-    +   Any number of properties is allowed.
+    +   Any number of properties are allowed.
     +   Set by various commands including [`SetTimeSeriesProperty`](../command-ref/SetTimeSeriesProperty/SetTimeSeriesProperty.md).
     +   View using the TSTool ***Results / Time Series*** area.
         Right-click on a time series and view ***Time Series Properties*** and then ***Properties***.
 
-The following table lists time series 
+The following table lists time series built-in properties and format descriptors.
 
 **<p style="text-align: center;">
 Time Series Format Descriptors and Properties
@@ -563,7 +576,164 @@ for a list of properties.
 Using properties in a time series product file may require editing the file directly
 because the product editor lists standard values.
 
-### Time Series Data Flags ###
+### Time Series - Missing Data ###
+
+Understanding how time series handle missing data is important because it impacts the
+how commands can process the time series data and data are visualized.
+
+Original sensor-based data sources often do not store missing data because they only store actual sensor measurements.
+Sensor measurements may occur at regular intervals (which may or may not align with rounded time boundaries)
+and/or may store event data triggered by changes in measurements.
+Although it is possible to take "continuous" (frequent) measurements,
+it is typical that measurements are made on a frequency supported by sensors,
+power availability, communication limitations, and other criteria.
+
+Time series that are treated as irregular interval can have irregular timestamp spacing
+and typically always contain non-missing values.
+TSTool allows irregular interval time series to store missing values.
+
+See the [Time Series - Data Interval](#time-series-data-interval) documentation for more information about how
+data are managed for time intervals.
+
+Regular interval time series have data values that are evenly spaced.
+Data sources such as databases may only store non-missing values, but this can lead to ambiguity if data gaps are not described.
+Web service APIs may return regular interval time series by ignoring missing data
+(to reduce the size of the response) or may return missing values.
+TSTool generally initializes regular interval time series with the missing data value and then assigns non-missing values.
+
+The missing value for a time series in TSTool is a floating point number.
+The value `-999` was used historically because important water agencies like the USGS used this value.
+However, the special value `NaN` is being phased in because it avoids conflicts with time series that may actually use the `-999` value.
+TSTool does not use the `null` value for missing data and consequently if the original data source uses `null`,
+it will be converted to `NaN` or another designated value.
+Internally, TSTool is able to use any floating point number for the missing value and applies a small offset on either side to check the value.
+
+### Time Series - Data Interval ###
+
+A time series is a sequence of date/time and data values.
+Time series broadly fall into two main forms related to the data interval:
+
+*   Irregular interval:
+    +   Time series consists of a list of objects, each containing the timestamp, value, flags, and duration.
+    +   Date/time can be irregular (not align nicely) and occur at any time, possibly.
+    +   Can apply to sensor data and sparse data (e.g., reservoir level, snow depth).
+    +   Can reflect a duration (e.g., storm total with an ending time and a duration indicating the storm duration).
+    +   Can be aggregated into regular interval time series.
+    +   Can be used for instantaneous data measurements (e.g., water level and temperature)
+        or accumulated values (e.g., precipitation).
+    +   Date/time for data values will be determined from input data and should ideally match the TSID interval irregular interval precision
+        (e.g., `IrregSecond`).
+*   Regular interval:
+    +   Typically reflect aggregation of irregular interval or smaller regular interval data.
+    +   Aggregation requires an output interval and statistic.
+    +   The date/time precision for data should match the TSID interval.
+    +   The "value temporal reference" time series property is being phased into TSTool as of version 15.4.0,
+        and indicates the point in time within an interval for the value (see the table below).
+    +   The "value interval closure" time series property is being phased into TSTool as of version 15.4.0,
+        which indicates how input sample values that fall exactly on an interval boundary are handled (see the table below).
+
+The "value temporal reference" and "value interval closure" properties are being phased in as of TSTool 15.4.0
+to provide more detail about how interval are computed.
+In many cases, such as from original data sources, the information will be unknown.
+However, if TSTool computes interval data, software is being updated to indicate the values.
+
+The following table summarizes the value temporal reference for time series that use time.
+Time series that use only date are currently restricted to single days, months, and years,
+and therefore a regular interval corresponds to the date for the appropriate date precision.
+The temporal reference typically aligns with the end of an interval or duration,
+meaning that the value has been observed (not will be observed in the future).
+
+**<p style="text-align: center;">
+Value Temporal Reference
+</p>**
+
+| **Value Temporal Reference** | **Description** |
+| -- | -- |
+| `Instant` | The time series data value aligns with an instant in date/time (typically the case for irregular interval sensor data). |
+| `Date` | The time series data value aligns with a date. |
+| `DurationStart` | The time series data value aligns with the duration end time. |
+| `DurationEnd` | The time series data value aligns with the duration end time (typically the default, such as for storm event total or analysis result). |
+| `IntervalStart` | The time series data value aligns with the interval end time. |
+| `IntervalEnd` | The time series data value aligns with the interval end time (typically the default, such as for a calculated interval statistic. |
+| `Unknown` | The reference is unknown, which may be the case if a data source's conventions are not fully documented or understood. |
+
+The following table summarizes the value interval closure,
+which indicates how input sample data values are handled when they fall exactly on an interval or duration time boundary.
+The closure is used when calculating an interval output value from samples within the interval.
+There are three main cases as listed in the following table:
+
+**<p style="text-align: center;">
+Value Interval Closure
+</p>**
+
+| **Value Interval Closure**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Notation**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Condition** |
+| -- | -- | -- |
+| `EndInclusive` | `(start,end]` | `> start and <= end` |
+| `StartInclusive` | `[start,end)` | `>= start and < end` |
+| `StartAndEndInclusive` | `[start,end]` | `>= start and <= end` |
+| `NA` | | Not applicable (special cases). |
+| `Unknown` | | The closure is unknown, which may be the case if a data source's conventions are not fully documented or understood. |
+
+Regular interval time series and irregular interval time series with a duration use interval notation to describe the date/time interval.
+For example, a daily time series uses an interval of `day` or `1day` for the fourth part of the time series identifier (TSID).
+The following table summarizes available time series intervals, which can be used in time series identifiers.
+See the [`NewTimeSeries`](../command-ref/NewTimeSeries/NewTimeSeries.md) command for an example of a command that requires an interval.
+
+Note that although `24hour` and `1day` (or `day`) are equivalent, time series that use time require different handling than time series that only use date.
+Also, time series identifiers are uniquely matched so a TSID with interval `1Day` is different than a separate TSID with interval `Day`.
+
+**<p style="text-align: center;">
+Time Series Intervals (small to large)
+</p>**
+
+| **Regular or Irregular Interval** | **Interval**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
+| -- | -- | -- |
+| **Regular** | `Second` | Second (not supported for regular interval time series - see irregular intervals). | 
+|| `Minute` | Generalized form of `1Minute` interval. |
+|| `1Minute` | Multiplier and base interval. |
+|| `2Minute` | |
+|| `3Minute` | |
+|| `4Minute` | |
+|| `5Minute` | |
+|| `6Minute` | |
+|| `10Minute` | |
+|| `15Minute` | |
+|| `20Minute` | |
+|| `30Minute` | |
+|| `60Minute` | Equivalent to 1 hour, but uses minute time precision. |
+|| `Hour` | Generalized form of `1Hour` interval. |
+|| `1Hour` | Multiplier and base interval. |
+|| `2Hour` | |
+|| `3Hour` | |
+|| `4Hour` | |
+|| `6Hour` | |
+|| `8Hour` | |
+|| `12Hour` | |
+|| `24Hour` | Equivalent to 1 day, but uses hour time precision. |
+|| `Day` | Generalized form of daily data interval. |
+|| `Month` | Generalized form of monthly data interval. |
+|| `Year` | Generalized form of yearly (annual) data interval. |
+| **Irregular** | `IrregNanoSecond` | Irregular interval with date/time precision of nanosecond, 1/billionth of a second, 9 digits. |
+|| `IrregMicroSecond` | Irregular interval with date/time precision of microsecond, 1/millionth of a second, 6 digits. |
+|| `IrregMilliSecond` | Irregular interval with date/time precision of millisecond, 1/thousandth of a second, 3 digits. |
+|| `IrregHSecond` | Irregular interval with date/time precision of 1/hundredth of a second, 2 digits. |
+|| `IrregSecond` | **Irregular interval with date/time precision of second, often uses generally to represent instantaneous data in a TSID even if the times have more precision internally.** |
+|| `IrregMinute` | Irregular interval with date/time precision of minute. |
+|| `IrregHour` | Irregular interval with date/time precision of hour. |
+|| `IrregDay` | Irregular interval with date/time precision of day. |
+|| `IrregMonth` | Irregular interval with date/time precision of month. |
+|| `IrregYear` | Irregular interval with date/time precision of year. |
+|| `Irregular` | **General interval with unknown date/time precision (date/time precision will be set from parsed input data).** |
+
+Processing time series may require that the data are converted to an interval representation
+so that math operations and modeling can occur on values that are aligned in time.
+Interval data may be provided by an origional source or may need to be created with TSTool commands.
+
+The TSTool [Time Series Viewing](../appendix-tsview/tsview.md) tools provide graph, table,
+and summary views that handle the data interval.
+Graphing data with different interval does result in offsets that must be considered when interpreting the visualization.
+
+### Time Series - Data Flags ###
 
 Time series include a date/time, value, and (optional) data flags.
 Irregular interval time series store a date/time for each value and

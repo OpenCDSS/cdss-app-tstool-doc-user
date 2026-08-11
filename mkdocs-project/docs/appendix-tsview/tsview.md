@@ -3,8 +3,10 @@
 *   [Overview](#overview)
 *   [Examples](examples/overview.md) - examples overview page
 *   [Time Series Terminology](#time-series-terminology)
-*   [Time Series Properties Interface](#time-series-properties-interface)
+*   [Time Series Properties View](#time-series-properties-view)
+    +   [Time Series Properties - Identifier](#time-series-properties-identifier)
     +   [Time Series Properties - General](#time-series-properties-general)
+    +   [Time Series Properties - Properties](#time-series-properties-properties)
     +   [Time Series Properties - Comments](#time-series-properties-comments)
     +   [Time Series Properties - Period](#time-series-properties-period)
     +   [Time Series Properties - Limits](#time-series-properties-limits)
@@ -97,6 +99,17 @@ The following basic attributes are stored for each time series:
 *   Data interval as an interval base (e.g., `Month`, `Hour`) and multiplier
     (e.g., `1` for month, or `24` for hour) - in many cases,
     the multiplier is `1` and is not shown in output (e.g., `Month` rather than `1Month`)
+*   The "value temporal reference" indicates the time position corresponding to the value:
+    +   `DurationEnd` - timestamp is at the end of the duration, for irregular interval time series (typically the default in TSTool)
+    +   `DurationStart` - timestamp is at the start of the duration, for irregular interval time series
+    +   `Instant` - timestamp is at the instant (applies to time or date) 
+    +   `IntervalEnd` - timestamp is at the end of the interval, for regular interval time series (typically the default in TSTool)
+    +   `IntervalStart` - timestamp is at the start of the interval, for regular interval time series
+*   The "value interval closure" indicates how input data sample values that fall exactly on time boundaries are handled:
+    +   `StartInclusive` - the interval (or duration) start is included
+    +   `StartAndEndInclusive` - the interval (or duration) start and end are included
+    +   `EndInclusive` - the interval (or duration) end is included
+    +   `NA` - not applicable (only applies to time series that include time, not date-only)
 *   Data type (e.g., `Streamflow`), which ideally can be checked to determine
     whether a time series contains mean, instantaneous, or accumulated values
 *   Units (e.g., `CFS`), which ideally can be used to make units conversions and look up precision for output
@@ -189,67 +202,93 @@ Time Series Terminology (listed alphabetically)
 |Time Series Product|A graph or report that can be defined and reproduced.  See the [Time Series Product File Reference](#time-series-product-file-reference) section.|
 |Time Step|See Data Interval.|
 
-## Time Series Properties Interface ##
+## Time Series Properties View ##
 
 Time series properties are displayed in a tabbed panel as appropriate in applications
-(e.g., the TSTool application can display the properties after time series are read and listed in the TSTool interface).
-Differences between time series input types may result in variations in the
-properties (e.g., some input types do not have descriptions for time series).
+(e.g., see TSTool use the ***Results / Properties*** output).
+Differences between time series data sources and processing result in variations in the properties.
 The following figures describe the properties tabs.
-The size of each tabbed panel is set to the size of the largest tab;
-therefore, some tabbed panels are not completely filled.
+
+### Time Series Properties - Identifier ###
+
+Identifier properties are used to uniquely identify the time series so that
+commands and information productions can match the time series.
+
+**<p style="text-align: center;">
+![Time Series Identifier Properties](TSView_TSProps_Identifier.png)
+</p>**
+
+**<p style="text-align: center;">
+Time Series Properties - Identifier (<a href="../TSView_TSProps_Identifier.png">see full-size image</a>)
+</p>**
+
+Time series identifier properties are described in the following table.
+
+**<p style="text-align: center;">
+Time Series Properties - General (listed in UI order)
+</p>**
+
+| **Property** | **Description** |
+| -- | -- |
+| ***TSID*** | The five-part time series identifier without the datastore (or input type and name).  This identifier is used internally in applications to manage time series.  See the [Time Series Terminology](#time-series-terminology) section for a complete explanation of time series identifiers. |
+| ***TSID (with datastore or input type)*** | The full identifier, including the datastore or input type (if available).  The datastore identifier (or input type and name) indicate the format and storage of the data. |
+| ***Location type*** | The optional string that indicates the location type, for example `County` if the TSID requires differentiating between counties and other location types. |
+| ***Location ID*** | The location identifier, which is typically a station or site identifier. |
+| ***Data source*** | The data source, which is typically an organization abbreviation or a software system short name. |
+| ***Data type*** | The data type used by a data source (e.g., `Streamflow`), which may also contain a statistic or other modifier.  Data types are consistent with the original data source and therefore many data types may be used. |
+| ***Data interval*** | The data interval, which indicates whether a regular or irregular interval spacing is used, and the precision of date/time |
+| ***Scenario*** | The optional scenario to allow uniquely identifying time series that otherwise have the same identifier. |
+| ***Sequence ID*** | The optional sequence identifier, typically used to uniquely identify the time series in an ensemble (e.g., `[1950]` to indicate an annual trace. |
+| ***Sequence (ensemble trace) ID*** | If the time series is part of a series of traces, the sequence number is used to identify the trace.  Often it is the year for the start of the trace. |
+| ***Alias*** | A time series may be assigned an alias to facilitate processing (e.g., the alias is used by the TSTool application in time series commands). |
 
 ### Time Series Properties - General ###
 
+General properties provide basic metadata about a time series.
+
 **<p style="text-align: center;">
-![General Time Series Properties](TSView_TSProps_General.png)
+![Time Series General Properties](TSView_TSProps_General.png)
 </p>**
 
 **<p style="text-align: center;">
 Time Series Properties - General (<a href="../TSView_TSProps_General.png">see full-size image</a>)
 </p>**
 
-General time series properties are as follows:
+Time series general properties are described in the following table.
 
-*   ***Identifier*** - The five-part time series identifier without the input type and name.
-    This identifier is often used internally in applications to manage time series.
-    See the [Time Series Terminology](#time-series-terminology) section for a complete explanation of time series identifiers.
-*   ***Identifier (with input)*** - The full identifier, including the input type and name (if available).
-    The datastore identifier (or input type and name) indicate the format and storage of the data.
-*   ***Alias*** - A time series may be assigned an alias to facilitate processing (e.g.,
-    the alias is used by the TSTool application in time series commands).
-*   ***Sequence (ensemble trace) ID*** - If the time series is part of a series of traces,
-    the sequence number is used to identify the trace.  Often it is the year for the start of the trace.
-*   ***Description*** - The description is a mid-length phrase (i.e.,
-    longer than the location but shorter than comments) describing the time series (e.g., `XYZ RIVER AT ABC`).
-*   ***Units (Current)*** - The units that are currently used for data.
-    The units may have been converted from the original.
-*   ***Units (Original)*** - The units in the original data source.
+**<p style="text-align: center;">
+Time Series Properties - General (listed in UI order)
+</p>**
+
+| **Property** | **Description** |
+| -- | -- |
+| ***Description*** | The description is a mid-length phrase (i.e., longer than the location but shorter than comments) describing the time series (e.g., `XYZ RIVER AT ABC`). |
+| ***Units (current)*** | The units that are currently used for data, which reflect processing.  The units may have been changed from the original. |
+| ***Units (Original)*** | The units in the original data source. |
+| ***Output precision (from units)*** | The number of digits to output, based on the data units. |
+| ***Output precision (specified)*** | The number of digits to output, if specified during processing, which will override the precision from the units. |
+| ***Value temporal reference*** | Indicates the time position within an interval or duration for the data value (not used for date interval). See the [Time Series Terminology](#time-series-terminology) documentation. |
+| ***Value interval closure*** | Indicates how input sample values on interval boundaries are handled when calculating interval time series and duration values. See the [Time Series Terminology](#time-series-terminology) documentation. |
+| ***Is selected?*** | Is the time series currently selected? |
+| ***Is editable?*** | Is the time series editable? |
+| ***Is dirty?*** | Has the time series been modified without recomputing limits? |
 
 ### Time Series Properties - (Dynamic) Properties ###
 
+Whereas the other properties tabs show built-in time series properties,
+the ***Properties*** tab lists dynamic properties that are associated with a time series.
+For example, properties from the original data source may be set.
+TSTool commands may also set properties to control the processing logic.
+
 **<p style="text-align: center;">
-![Dynamic Time Series Properties](TSView_TSProps_Properties.png)
+![Time Series Dynamic Properties](TSView_TSProps_Properties.png)
 </p>**
 
 **<p style="text-align: center;">
 Time Series Properties – (Dynamic) Properties (<a href="../TSView_TSProps_Properties.png">see full-size image</a>)
 </p>**
 
-Whereas the other properties tabs show built-in time series properties,
-the ***Properties*** tab lists dynamic properties that are associated with a time series.
-For example, a TSTool command file may assign properties to time series
-from the original data source, or based on quality control or other analysis.
-
 ### Time Series Properties - Comments ###
-
-**<p style="text-align: center;">
-![Time Series Properties for Comments](TSView_TSProps_Comments.png)
-</p>**
-
-**<p style="text-align: center;">
-Time Series Properties - Comments (<a href="../TSView_TSProps_Comments.png">see full-size image</a>)
-</p>**
 
 Comments for time series can be created a number of ways and may be formatted specifically for an application.
 Common ways of creating comments are:
@@ -259,11 +298,23 @@ Common ways of creating comments are:
     for data stations in hard copy water reports; however, comments may not be available electronically),
 *   Format comments from existing data (e.g.,
     the figure illustrates a standard set of comments for State of Colorado data, using the
-    [HydroBase input type](../datastore-ref/CO-HydroBase/CO-HydroBase.md)).
+    [HydroBase datastore](../datastore-ref/CO-HydroBase/CO-HydroBase.md)).
 
-In the future, the time series dynamic properties may be used more and text comments less.
+Dynamic time series dynamic properties can be used with templates to format output products.
+
+**<p style="text-align: center;">
+![Time Series Properties for Comments](TSView_TSProps_Comments.png)
+</p>**
+
+**<p style="text-align: center;">
+Time Series Properties - Comments (<a href="../TSView_TSProps_Comments.png">see full-size image</a>)
+</p>**
 
 ### Time Series Properties - Period ###
+
+The time series period indicates the overall data period.
+Regular interval time series have data values for each interval in the period.
+Irregular interval time series may have sparse data within the overall period.
 
 **<p style="text-align: center;">
 ![Time Series Properties for Period](TSView_TSProps_Period.png)
@@ -273,27 +324,19 @@ In the future, the time series dynamic properties may be used more and text comm
 Time Series Properties - Period (<a href="../TSView_TSProps_Period.png">see full-size image</a>)
 </p>**
 
-Properties related to the period are as follows:
+Properties related to the period described in the following table.
 
-*   ***Current (reflects manipulation)*** - The current period is used to allocate computer memory for the time series data.
-    This period may be set by an application (e.g., when creating model input files a specific period may be used).
-    The precision of the date/time objects should generally be consistent with the time series data interval.
-*   ***Original (from input)*** - The original period can be used to indicate the full period available from a database.
-    Setting the original period can sometimes be complicated by how missing data are handled
-    (e.g., a database or file may indicate a certain period but a much shorter period is actually available).
-*   ***Total Points*** - Total number of data points.  If a regular time series, this is computed from the period.
-    If an irregular time series, the number of points is the count of all data values.
-    The data points may include missing data – see the data limits for additional information.
+**<p style="text-align: center;">
+Time Series Properties - Period (listed in UI order)
+</p>**
+
+| **Property** | **Description** |
+| -- | -- |
+| ***Current (reflects manipulation)*** | The current period is used to allocate computer memory for the time series data.  This period may be set by an application (e.g., when creating model input files a specific period may be used).  The precision of the date/time objects should generally be consistent with the time series data interval. |
+| ***Original (from input)*** | The original period can be used to indicate the full period available from a database.  Setting the original period can sometimes be complicated by how missing data are handled (e.g., a database or file may indicate a certain period but a much shorter period is actually available). |
+| ***Total Points*** | Total number of data points.  If a regular time series, this is computed from the period.  If an irregular time series, the number of points is the count of all data values.  The data points may include missing data – see the data limits for additional information. |
 
 ### Time Series Properties - Limits ###
-
-**<p style="text-align: center;">
-![Time Series Properties for Limits](TSView_TSProps_Limits.png)
-</p>**
-
-**<p style="text-align: center;">
-Time Series Properties - Limits (<a href="../TSView_TSProps_Limits.png">see full-size image</a>)
-</p>**
 
 Time series limits are determined for both the current data (top in figure)
 and the original data (bottom in figure).
@@ -312,7 +355,31 @@ However, automatically including this level of detail decreases performance and
 it is difficult to automatically make the right decisions (e.g., about whether to average or total values).
 Consequently, the limits are currently computed in a basic fashion on the raw data (no interval changes).
 
+**<p style="text-align: center;">
+![Time Series Properties for Limits](TSView_TSProps_Limits.png)
+</p>**
+
+**<p style="text-align: center;">
+Time Series Properties - Limits (<a href="../TSView_TSProps_Limits.png">see full-size image</a>)
+</p>**
+
 ### Time Series Properties - History ###
+
+The time series history (sometimes called the genesis history) is a list of notes
+indicating how the time series has been processed.
+The completeness of this history is totally dependent on the time series input/output and processing software.
+Although efforts have been made to add appropriate notes as time series are processed,
+enhancements to the history are always being considered.
+
+At the bottom of the history list (see ***Read From***) is the input name that was actually used to read the data.
+This input name may or may not be exactly the same as the input name in the time series identifier.
+For example, if reading from a [HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase.md),
+the time series identifier may specify a datastore name of `HydroBase` and no input name
+(because the software knows from the other parts of the time series identifier which database tables to read).
+However, it is also useful to know the actual table that is read
+in order to help users and developers understand the data flow, and reference documentation.
+If reading from a file input type, the ***Read From*** information will show the full path to the file;
+however, the input name in the time series identifier may only include a relative path.
 
 **<p style="text-align: center;">
 ![Time Series Properties for History](TSView_TSProps_History.png)
@@ -322,23 +389,23 @@ Consequently, the limits are currently computed in a basic fashion on the raw da
 Time Series Properties - History (<a href="../TSView_TSProps_History.png">see full-size image</a>)
 </p>**
 
-The time series history (sometimes called the genesis history) is a list of comments
-indicating how the time series has been processed.
-The completeness of this history is totally dependent on the time series input/output and manipulation software.
-Although efforts have been made to add appropriate comments as time series are processed,
-enhancements to the history comments are always being considered.
-
-At the bottom of the history list (see ***Read From***) is the input name that was actually used to read the data.
-This input name may or may not be exactly the same as the input name in the time series identifier.
-For example, if reading from a [HydroBase database](../datastore-ref/CO-HydroBase/CO-HydroBase.md),
-the time series identifier may specify an input type of `HydroBase` and no input name
-(because the software knows from the other parts of the time series identifier which database tables to read).
-However, it is also useful to know the actual table that is read
-in order to help users and developers understand the data flow, and reference documentation.
-If reading from a file input type, the ***Read From*** information will show the full path to the file;
-however, the input name in the time series identifier may only include a relative path.
-
 ### Time Series Properties - Data Flags ###
+
+The missing data value is a special floating point value that is used to
+indicate that a data value is missing at a point.
+The value `-999` is used by default for historical reasons but the special value `NaN` (not a number)
+is now the default for new code and is being phased in universally because it does not conflict with a possible physical data value.
+All time series are typically assigned a missing data value.
+
+Time series data flags contain information that describe the quality of a data point.
+
+The ***Has Data Flags*** checkbox indicates whether the time series has data flags.
+Data flags will generally be used, based on whether an input type supports data flags.
+The [USGS NWIS RDB file format](../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB.md) is an example
+of a data source that supports data flags (e.g., `e` is used to indicate estimated data).
+The data flags can be displayed as labels on graphs and as superscript (or similar) on tabular data.
+Data flags are not universally consistent and care
+must be taken to understand their meaning, especially when using data from multiple sources.
 
 **<p style="text-align: center;">
 ![Time Series Properties for Data](TSView_TSProps_DataFlags.png)
@@ -347,22 +414,6 @@ however, the input name in the time series identifier may only include a relativ
 **<p style="text-align: center;">
 Time Series Properties - Data Flags (<a href="../TSView_TSProps_DataFlags.png">see full-size image</a>)
 </p>**
-
-Time series data flags contain information that describe the quality of a data point.
-The missing data value indicates a special value that is used to
-indicate that a data value is missing at a point.
-Currently only floating point values are recognized; however the `NaN` (not a number)
-value is generally supported for input types that use the convention and is being
-phased in where possible because there is less potential that a value such as `-999` could be an actual value.
-All time series are typically assigned a missing data value.
-
-The ***Has Data Flags*** checkbox indicates whether the time series has data flags.
-Data flags will generally be used, based on whether an input type supports data flags.
-The [USGS NWIS RDB file format](../datastore-ref/USGS-NWIS-RDB/USGS-NWIS-RDB.md) is an example
-of an input type that supports data flags (e.g., `e` is used to indicate estimated data).
-The data flags can be displayed as labels on graphs and as superscript (or similar) on tabular data.
-Unfortunately, data flags are not universally consistent and care
-must be taken to understand their meaning, especially when using data from multiple sources.
 
 ## Time Series Traces ##
 
@@ -2102,12 +2153,22 @@ as discussed in the next section.
 ### Time Series Product File - Symbol Tables ###
 
 Symbol tables contain color and other properties to be used when visualizing data values in multiple ranges.
-For example, the time series property `SymbolTablePath` is used with raster graphs to
-specify the colors to use for the raster graph.
-The following is an example of a symbol table file.
+For example, the time series property `SymbolTablePath` is used with raster graphs (heat maps) to
+specify the colors to use for a cell in the raster graph.
+The first matched row is typically used to specify visualization information,
+although specific software features may allow superimposing effects from multiple rows,
+as per the documentation for that feature.
+
+The following is an example of a symbol table file that uses `valueMin` and `valueMax`
+columns to indicate how a value should be visualized (the value must match both conditions to match the row).
+This approach is suitable for many visualizations.
+
+**<p style="text-align: center;">
+Symbol Table with Minimum and Maximum Conditions 
+</p>**
 
 ```
-# Symbol table for air temperature raster graph with high temperature being bad.
+# Symbol table for air temperature raster graph with high temperature being a higher concern.
 valueMin,  valueMax, color,   opacity, fillColor, fillOpacity, comment
 -Infinity, <0,       #0000ff, 1.0,     #0000ff,   1.0,         blue
 >=0,       <32,      #00ffff, 1.0,     #00ffff,   1.0,         cyan
@@ -2118,6 +2179,39 @@ valueMin,  valueMax, color,   opacity, fillColor, fillOpacity, comment
 >=90,      <100,     #ff00ff, 1.0,     #ff00ff,   1.0,         magenta
 >=100,     Infinity, #990099, 1.0,     #990099,   1.0,         purple
 NoData,    NoData,   #ffffff, 1.0,     #ffffff,   1.0,         white
+```
+
+Alternatively, the following example shows how an expression can be used to indicate conditions.
+This approach may be needed where more complex visualization is required.
+
+*   The EvalEx software library is used to evaluate expressions,
+    similar to features int the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) and
+    [`If`](../command-ref/If/If.md) commands.
+*   The parentheses are optional but help organize multipart expressions.
+*   Expressions can contain functions and if the function contains a comma,
+    the entire expression should be surrounded by double quotes to protect the expression
+    from breaking the comma-separated-value table format
+    (enclosed double quotes can be escaped using `\"`).
+*   The syntax `${tsdata:value}` and other properties are first replaced with an appropriate time series data value,
+    and then the expanded expression is evaluated.
+*   Any errors in evaluation are interpreted as false (no match).
+
+**<p style="text-align: center;">
+Symbol Table with Expressions
+</p>**
+
+```
+# Symbol table for air temperature raster graph with high temperature being a higher concern (red).
+expression,                                          color,   opacity, fillColor, fillOpacity, comment
+(${tsdata:value} < 0),                               #0000ff, 1.0,     #0000ff,   1.0,         blue
+((${tsdata:value} >=0) && (${tsdata:value} <32)),    #00ffff, 1.0,     #00ffff,   1.0,         cyan
+((${tsdata:value} >=32) && (${tsdata:value} <50)),   #00ff00, 1.0,     #00ff00,   1.0,         green
+((${tsdata:value} >=50) && (${tsdata:value} <70)),   #ffff00, 1.0,     #ffff00,   1.0,         yellow
+((${tsdata:value} >=70) && (${tsdata:value} <80)),   #ffa500, 1.0,     #ffa500,   1.0,         orange
+((${tsdata:value} >=80) && (${tsdata:value} <90)),   #ff0000, 1.0,     #ff0000,   1.0,         red
+((${tsdata:value} >=90) && (${tsdata:value} <100)),  #ff00ff, 1.0,     #ff00ff,   1.0,         magenta
+(${tsdata:value} >=100),                             #990099, 1.0,     #990099,   1.0,         purple
+(${tsdata:isvaluemissing}),                          #ffffff, 1.0,     #ffffff,   1.0,         white
 ```
 
 Symbol table file properties include the following, listed the order typically used in the file.
@@ -2133,8 +2227,9 @@ Symbol Table File Properties
 
 | **Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
 | -- | -- |
-| `valueMin` | Minimum value in the range using syntax similar to the following.  The operator convention shown in the above example is recommended to implement consistent visualizations. <ul><li>`-Infinity` - use to indicate lower bound on values</li><li>`>= 123` - indicate the lower bound of the range</li><li>`NoData` - indicator for no data (software should detect missing values and use this color</li></ul> |
-| `valueMax` | Maximum value in the range using syntax similar to the following.  The operator convention shown in the above example is recommended to implement consistent visualizations. <ul><li>`< 123` - indicate the upper bound of the range</li><li>`Infinity` - use to indicate upper bound on values</li><li>`NoData` - indicator for no data</li></ul>|
+| `expression` | A conditional expression for the EvalEx library.  See the [`SetProperty` - Expression Syntax](../command-ref/SetProperty/SetProperty.md#expression-syntax) documentation. An expression will be used if found. |
+| `valueMin` | Used if `exprssion` is not specified. Minimum value in the range using syntax similar to the following.  The operator convention shown in the above example is recommended to implement consistent visualizations. <ul><li>`-Infinity` - use to indicate lower bound on values</li><li>`>= 123` - indicate the lower bound of the range</li><li>`NoData` - indicator for no data (software should detect missing values and use this color</li></ul> |
+| `valueMax` | Used if `exprssion` is not specified. Maximum value in the range using syntax similar to the following.  The operator convention shown in the above example is recommended to implement consistent visualizations. <ul><li>`< 123` - indicate the upper bound of the range</li><li>`Infinity` - use to indicate upper bound on values</li><li>`NoData` - indicator for no data</li></ul>|
 | `color` | Outline color for the range.  See the [Color Specification](#time-series-product-file-color-specification) section. |
 | `opacity` | Opacity for the outline color, in the range `0.0` to `1.0`. |
 | `fillColor` | Fill color for the range.  See the [Color Specification](#time-series-product-file-color-specification) section. |
