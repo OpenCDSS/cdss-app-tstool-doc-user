@@ -2152,16 +2152,41 @@ as discussed in the next section.
 
 ### Time Series Product File - Symbol Tables ###
 
-Symbol tables contain color and other properties to be used when visualizing data values in multiple ranges.
-For example, the time series property `SymbolTablePath` is used with raster graphs (heat maps) to
-specify the colors to use for a cell in the raster graph.
+Symbol tables contain color and other properties to visualize data values in multiple ranges.
+The time series property `SymbolTablePath` is used with raster graphs (heat maps) to
+specify the colors for a cell in the raster graph.
 The first matched row is typically used to specify visualization information,
 although specific software features may allow superimposing effects from multiple rows,
 as per the documentation for that feature.
 
+Symbol table file properties include the following, listed the order typically used in the file.
+Each line of the file corresponds to a range of values and color that is used for visualization.
+An operator is included with each value to ensure that the ranges are distinct and do not overlap.
+Lines beginning with `#` are optional comments.
+The first non-comment line contains the column names.
+Columns are separated by commas and can contain surrounding spaces, which will be removed when the file is read.
+
+**<p style="text-align: center;">
+Symbol Table File Properties
+</p>**
+
+| **Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** | **Default** |
+| -- | -- | -- |
+| `expression` | A conditional expression for the EvalEx library.  See the [`SetProperty` - Expression Syntax](../command-ref/SetProperty/SetProperty.md#expression-syntax) documentation. An expression takes precedence over `valueMin` and `valueMax`. | If not specified, `valueMin` and `valueMax` are required. |
+| `valueMin` | Used if `exprssion` is not specified. Minimum value in the range using syntax similar to the following.  The operator convention results in consistent visualizations. <ul><li>`-Infinity` - use to indicate lower bound on values</li><li>`>= 123` - indicate the lower bound of the range</li><li>`NoData` - indicator for no data (software should detect missing values and use this color</li></ul> | Required if `expression` is not specified. |
+| `valueMax` | Used if `exprssion` is not specified. Maximum value in the range using syntax similar to the following.  The operator convention results in visualizations. <ul><li>`< 123` - indicate the upper bound of the range</li><li>`Infinity` - use to indicate upper bound on values</li><li>`NoData` - indicator for no data</li></ul>| Required if `expression` is not specified. |
+| `legend` | Text to use for the legend. | If not specified, the `valueMin`, `valueMax`, and `expression` properties will be used if specified. | Format the legend from `expression` (full string as is) or `valueMin` and `valuemax`. |
+| `color` | Outline color for the range.  See the [Color Specification](#time-series-product-file-color-specification) section. | Must be specified. |
+| `opacity` | Opacity for the outline color, in the range `0.0` to `1.0`. | `1.0` |
+| `fillColor` | Fill color for the range.  See the [Color Specification](#time-series-product-file-color-specification) section. | `color` |
+| `fillOpacity` | Opacity for the fill color, in the range `0.0` to `1.0`. | `1.0` |
+| Others | Ignored (more recognized properties may be enabled in the future). |
+
+#### Symbol Table Using `valueMin` and `valueMax` Properties for Value Ranges ####
+
 The following is an example of a symbol table file that uses `valueMin` and `valueMax`
 columns to indicate how a value should be visualized (the value must match both conditions to match the row).
-This approach is suitable for many visualizations.
+This approach is suitable for many visualizations based on the time series numerical value.
 
 **<p style="text-align: center;">
 Symbol Table with Minimum and Maximum Conditions 
@@ -2181,23 +2206,90 @@ valueMin,  valueMax, color,   opacity, fillColor, fillOpacity, comment
 NoData,    NoData,   #ffffff, 1.0,     #ffffff,   1.0,         white
 ```
 
-Alternatively, the following example shows how an expression can be used to indicate conditions.
-This approach may be needed where more complex visualization is required.
+#### Symbol Table Using `expression`, `legend` and Variable Names for Value Ranges ####
+
+The following example shows how variable names can be used to indicate conditions.
 
 *   The EvalEx software library is used to evaluate expressions,
     similar to features int the [`SetProperty`](../command-ref/SetProperty/SetProperty.md) and
     [`If`](../command-ref/If/If.md) commands.
-*   The parentheses are optional but help organize multipart expressions.
+*   Parentheses around expressions are optional but help organize multi-part expressions.
 *   Expressions can contain functions and if the function contains a comma,
     the entire expression should be surrounded by double quotes to protect the expression
     from breaking the comma-separated-value table format
     (enclosed double quotes can be escaped using `\"`).
-*   The syntax `${tsdata:value}` and other properties are first replaced with an appropriate time series data value,
-    and then the expanded expression is evaluated.
+*   The variable names must match recognized variable names described in the table below.
 *   Any errors in evaluation are interpreted as false (no match).
+*   Rows with `valueismissing` and `flagismissing` should be first in the table to detect missing data,
+    which will avoid errors processing rows that do not have corresponding time series data.
 
 **<p style="text-align: center;">
-Symbol Table with Expressions
+Symbol Table with Expressions that Use Variable Names
+</p>**
+
+```
+# Symbol table for 15 minute streamflow example:
+# - use an expression rather than value minimum and maximum (but keep the columns with different names for comparison)
+expression,                         legend,         color,   opacity, fillColor, fillOpacity, comment
+(valueismissing),                   NoData,         #ffffff, 1.0,     #ffffff,   1.0,         white
+(value <0),                         <0,             #000000, 1.0,     #000000,   1.0,         black
+((value >=0) && (value <50)),       >=0 < 50,       #ff0000, 1.0,     #ff0000,   1.0,         red
+((value >=50) && (value <100)),     >=50 < 100,     #ffa500, 1.0,     #ffa500,   1.0,         orange
+((value >=100) && (value <500)),    >=100 < 500,    #ffff00, 1.0,     #ffff00,   1.0,         yellow
+((value >=500) && (value <1000)),   >=500 <1000,    #00ff00, 1.0,     #00ff00,   1.0,         green
+((value >=1000) && (value <2000)),  >=1000 < 2000,  #00ffff, 1.0,     #00ffff,   1.0,         cyan
+((value >=2000) && (value <5000)),  >=2000 < 5000,  #0000ff, 1.0,     #0000ff,   1.0,         blue
+(value >=5000),                     >=5000,         #ff00ff, 1.0,     #ff00ff,   1.0,         magenta
+```
+
+The following table describes how time series data are provided to the EvalEx library as named variables.
+
+**<p style="text-align: center;">
+Time Series Property to Symbol Table Variable Name Mapping
+</p>**
+
+| **Time Series Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Symbol Table Expression Variable** | **Description** |
+| -- | -- | -- |
+| | `valueismissing` | Will be set to `true` if the time series data value is missing, and `false` otherwise. Use at the start of the symbol table to detect missing data as the first check. |
+| | `flagismissing` | Will be set to `true` if the time series data flag is missing or an empty string, and `false` otherwise. Use after `valueismissing` to detect missing flag as the second check. |
+| `${tsdata:value}` | `value` | Data value (may be null, `NaN` or the missing data value). |
+| `${tsdata:flag}` | `flag` | Data flag (may be null, or empty). |
+
+#### Symbol Table Using `expression`, `legend` and Variable Names to Match Data Flags ####
+
+The following symbol example illustrates how to match time series data flags:
+
+*   check for missing flag first so that missing flag does not cause errors with other comparisons
+*   literal strings surrounded by single quotes can be matched if the flag is sure to exactly match
+*   use EvalEx string functions if a more complex comparison is required
+
+**<p style="text-align: center;">
+Symbol Table with Expressions that Use Variable Names to Match Time Series Data Flags
+</p>**
+
+```
+# Symbol table for 15 minute streamflow example:
+# - use variables to work with EvalEx expressions
+# - the legend is explicitly provided
+expression,       legend, color,   opacity, fillColor, fillOpacity, comment
+(valueismissing), NoData, #ffffff, 1.0,     #ffffff,   1.0,         white
+(flagismissing),  NoFlag, #d3d3d3, 1.0,     #d3d3d3,   1.0,         light grey
+(flag == 'C'),    C,      #ff0000, 1.0,     #ff0000,   1.0,         red
+(flag == 'c'),    c,      #00ff00, 1.0,     #00ff00,   1.0,         green
+(flag == 'E'),    E,      #ffa500, 1.0,     #ffa500,   1.0,         orange
+(flag == '*'),    *,      #00ffff, 1.0,     #00ffff,   1.0,         cyan
+"(!STR_CONTAINS(flag,'C') && !STR_CONTAINS(flag,'c') && !STR_CONTAINS(flag,'*') && !STR_CONTAINS(flag,E))", Other, #0000ff, 1.0, #0000ff, 1.0, blue
+```
+
+#### Symbol Table Using `expression`, `legend` and `${Property}` Syntax for Value Ranges ####
+
+The following example shows how `${Property}` syntax can be used with `expression` syntax.
+**This format is not currenlty supported because it requires recreating the expression objects for each time series value,
+which is an expensive operation.**
+Instead, use the approach described in the above sections.
+
+**<p style="text-align: center;">
+Symbol Table with Expressions that Use `${Property}` Syntax
 </p>**
 
 ```
@@ -2213,28 +2305,6 @@ expression,                                          color,   opacity, fillColor
 (${tsdata:value} >=100),                             #990099, 1.0,     #990099,   1.0,         purple
 (${tsdata:isvaluemissing}),                          #ffffff, 1.0,     #ffffff,   1.0,         white
 ```
-
-Symbol table file properties include the following, listed the order typically used in the file.
-Each line of the file corresponds to a range of values and color that is used for visualization.
-An operator is included with each value to ensure that the ranges are distinct and do not overlap.
-Lines beginning with `#` are optional comments.
-The first non-comment line contains the column names.
-Columns are separated by commas and can contain surrounding spaces, which will be removed when the file is read.
-
-**<p style="text-align: center;">
-Symbol Table File Properties
-</p>**
-
-| **Property**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Description** |
-| -- | -- |
-| `expression` | A conditional expression for the EvalEx library.  See the [`SetProperty` - Expression Syntax](../command-ref/SetProperty/SetProperty.md#expression-syntax) documentation. An expression will be used if found. |
-| `valueMin` | Used if `exprssion` is not specified. Minimum value in the range using syntax similar to the following.  The operator convention shown in the above example is recommended to implement consistent visualizations. <ul><li>`-Infinity` - use to indicate lower bound on values</li><li>`>= 123` - indicate the lower bound of the range</li><li>`NoData` - indicator for no data (software should detect missing values and use this color</li></ul> |
-| `valueMax` | Used if `exprssion` is not specified. Maximum value in the range using syntax similar to the following.  The operator convention shown in the above example is recommended to implement consistent visualizations. <ul><li>`< 123` - indicate the upper bound of the range</li><li>`Infinity` - use to indicate upper bound on values</li><li>`NoData` - indicator for no data</li></ul>|
-| `color` | Outline color for the range.  See the [Color Specification](#time-series-product-file-color-specification) section. |
-| `opacity` | Opacity for the outline color, in the range `0.0` to `1.0`. |
-| `fillColor` | Fill color for the range.  See the [Color Specification](#time-series-product-file-color-specification) section. |
-| `fillOpacity` | Opacity for the fill color, in the range `0.0` to `1.0`. |
-| Others | Ignored. |
 
 ## Time Series Graph Templates ##
 

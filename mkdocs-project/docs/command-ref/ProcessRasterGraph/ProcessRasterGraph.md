@@ -1,13 +1,19 @@
 # TSTool / Command / ProcessRasterGraph #
 
 *   [Overview](#overview)
+    +   [Symbol Table](#symbol-table)
     +   [Single Time Series](#single-time-series)
-        -   [Single Year Interval Time Series](#single-year-interval-time-series)
-        -   [Single Month Interval Time Series](#single-month-interval-time-series)
-        -   [Single Day Interval Time Series](#single-day-interval-time-series)
-        -   [Single Hour Interval Time Series](#single-hour-interval-time-series)
-        -   [Single Minute Interval Time Series](#single-minute-interval-time-series)
+        -   [Single Time Series - Year Interval](#single-time-series-year-interval)
+        -   [Single Time Series - Month Interval](#single-time-series-month-interval)
+        -   [Single Time Series - Day Interval](#single-time-series-day-interval)
+        -   [Single Time Series - Hour Interval](#single-time-series-hour-interval)
+        -   [Single Time Series - Minute Interval](#single-time-series-minute-interval)
     +   [Multiple Time Series](#multiple-time-series)
+        -   [Multiple Time Series - Year Interval](#multiple-time-series-year-interval)
+        -   [Multiple Time Series - Month Interval](#multiple-time-series-month-interval)
+        -   [Multiple Time Series - Day Interval](#multiple-time-series-day-interval)
+        -   [Multiple Time Series - Hour Interval](#multiple-time-series-hour-interval)
+        -   [Multiple Time Series - Minute Interval](#multiple-time-series-minute-interval)
     +   [Web Page Image Map](#web-page-image-map)
 *   [Command Editor](#command-editor)
 *   [Command Syntax](#command-syntax)
@@ -19,32 +25,64 @@
 
 ## Overview ##
 
-The `ProcessRasterGraph` command automates creation of a "raster graph",
-also called a "heat map".
+The `ProcessRasterGraph` command automates creation of a "raster graph"
+(also called a "heat map") for interval time series.
 This command is similar to the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command,
 but provides features specific to the raster graph format.
+
 See the [`ProcessTSProduct`](../ProcessTSProduct/ProcessTSProduct.md) command
 documentation for background on time series product files and editing graphs.
 The time series product for a raster graph uses a graph (sub-product) with `GraphType=Raster`.
+
 If necessary, create a template time series product file and use the 
 [`ExpandTemplateFile`](../ExpandTemplateFile/ExpandTemplateFile.md) command
 to handle a variable number of time series.
+A time series product file that includes the `#@template` annotation will automatically be expanded to a temporary file
+so that using an `ExpandTemplateFile` command can be avoided.
 
 A raster graph is a visual representation of
-time series that emphasizes trends and patterns using colored "pixels".
-A primary benefit of raster graphs is that the entire period of record (or a significant part of the period)
-can be viewed on one page without scrolling or zooming.
+time series that emphasizes trends and patterns using colored "pixels" to represent the "quality" of the data.
+A primary benefit of raster graphs is that the entire period of record (or a significant part of the period),
+depending on the interval and period, can be viewed on one page without scrolling or zooming.
 
-The command creates output in two formats depending on whether a single or multiple time series that are processed.
+The image output format depends on whether a single or multiple time series are processed:
+
+1.  single time series are output with larger time interval on the x-axis and shorter time interval on the y-axis,
+    which allows viewing the entire period of record
+2.  multiple time series are output with date/time x-axis and time series count as the y-axis,
+    which allows viewing a period where the number of intervals is less than or equal to the number of output pixels
+3.  special cases include:
+    *   a single time series with year interval is always shown similar to multiple time series
+        with year as the x-axis (because there is no shorter interval to show on the y-axis)
+    *   a single time series having month, day, hour, or minute interval can be output similar to multiple time series layout
+        (date/time on the x-axis only), which may be a more appropriate format
+
+It is envisioned that in the future, command parameters will implemented to:
+
+*   Create a raster graph without a time series product file,
+    as a way of streamlining product generation,
+    with parameters for important configuration information such as selecting a time series to plot,
+    and specifying the color scale and whether a log transform should be used.
+*   Specify an output table containing the colors used for plotting,
+    to allow export of the raster plot information to other tools, such as web visualization.
+    This will allow TSTool to be used to create the product, and other tools to visualize.
+*   Specify the output year type as a command parameter (currently only calendar year is supported).
+*   Specify additional configuration options for controlling the X and Y axes (e.g., allow seasonal or weekly display).
+
+### Symbol Table ###
+
+The mapping of time series data to raster graph cell representation requires a lookup, which uses a "symbol table".
+The symbol table contains criteria that are checked for each time series interval value and/or data flag.
+See the [TSView Time Series Viewing Tools / Time Series Product File - Symbol Tables](../../appendix-tsview/tsview.md#time-series-product-file-symbol-tables) documentation
 
 ### Single Time Series ###
 
-Viewing a single time series command is enabled for the following intervals:
+Viewing a single time series is enabled for the following intervals:
 
-*   month (see [Single Month Interval Time Series](#single-month-interval-time-series))
-*   day (see [Single Day Interval Time Series](#single-day-interval-time-series))
-*   1-hour (see [Single Hour Interval Time Series](#single-hour-interval-time-series))
-*   N-minute (see [Single Minute Interval Time Series](#single-minute-interval-time-series))
+*   month (see [Single Time Series - Month Interval](#multiple-time-series-month-interval))
+*   day (see [Single Time Series - Day Interval](#multiple-time-series-day-interval))
+*   1-hour (see [Single Time Series - Hour Interval](#multiple-time-series-hour-interval))
+*   N-minute (see [Single Time Series - Minute Interval](#multiple-time-series-minute-interval))
 
 For example, the following figure illustrates a raster graph
 for a daily maximum temperature time series.
@@ -100,7 +138,7 @@ software may not handle time series intricacies such as leap year.
     that overlay the raster graph, for example important events.
     This command does not currently support annotations.
 
-#### Single Year Interval Time Series ####
+#### Single Time Series - Year Interval ####
 
 Because single year interval time series have a single time axis (year),
 the raster graph defaults the format to a [Multiple Time Series](#multiple-time-series) raster graph.
@@ -112,14 +150,14 @@ The following example illustrates a raster graph
 for a year interval reservoir inflow time series using the default color scale.
 
 **<p style="text-align: center;">
-![ProcessRasterGraph example for a single year interval time series graph](ProcessRasterGraph_Example_Year_Graph.png)
+![ProcessRasterGraph example for a single year interval time series graph](ProcessRasterGraph_Example_Single_Year_Graph.png)
 </p>**
 
 **<p style="text-align: center;">
-Example Raster Graph for a Single Year Interval Time Series (<a href="../ProcessRasterGraph_Example_Year_Graph.png">see full-size image</a>)
+Example Raster Graph for a Single Year Interval Time Series (<a href="../ProcessRasterGraph_Example_Single_Year_Graph.png">see full-size image</a>)
 </p>**
 
-#### Single Month Interval Time Series ####
+#### Single Time Series - Month Interval ####
 
 Month interval time series can be displayed in a raster graph,
 although they may appear to be visually blocky for a single time series.
@@ -153,14 +191,14 @@ The following example illustrates a raster graph
 for a month interval reservoir inflow time series using the default color scale.
 
 **<p style="text-align: center;">
-![ProcessRasterGraph example for a single month interval time series graph](ProcessRasterGraph_Example_Month_Graph.png)
+![ProcessRasterGraph example for a single month interval time series graph](ProcessRasterGraph_Example_Single_Month_Graph.png)
 </p>**
 
 **<p style="text-align: center;">
-Example Raster Graph for a Single Month Interval Time Series (<a href="../ProcessRasterGraph_Example_Month_Graph.png">see full-size image</a>)
+Example Raster Graph for a Single Month Interval Time Series (<a href="../ProcessRasterGraph_Example_Single_Month_Graph.png">see full-size image</a>)
 </p>**
 
-#### Single Day Interval Time Series ####
+#### Single Time Series - Day Interval ####
 
 Day interval time series can be displayed in a raster graph.
 The number of data points is typically high enough to result in
@@ -186,14 +224,14 @@ The following example illustrates a raster graph
 for a day interval reservoir inflow time series using the default color scale.
 
 **<p style="text-align: center;">
-![ProcessRasterGraph example for a single day interval time series graph](ProcessRasterGraph_Example_Day_Graph.png)
+![ProcessRasterGraph example for a single day interval time series graph](ProcessRasterGraph_Example_Single_Day_Graph.png)
 </p>**
 
 **<p style="text-align: center;">
-Example Raster Graph for a Single Day Interval Time Series (<a href="../ProcessRasterGraph_Example_Day_Graph.png">see full-size image</a>)
+Example Raster Graph for a Single Day Interval Time Series (<a href="../ProcessRasterGraph_Example_Single_Day_Graph.png">see full-size image</a>)
 </p>**
 
-#### Single Hour Interval Time Series ####
+#### Single Time Series - Hour Interval ####
 
 Time series with 1-hour interval can be displayed in a raster graph.
 The period of record must be short enough to ensure that rendered pixels are visible and don't overwrite each other.
@@ -229,14 +267,14 @@ for an hour interval streamflow time series using the default color scale.
 Note that the spring runoff occurs over a period of approximately two months.
 
 **<p style="text-align: center;">
-![ProcessRasterGraph example for a single hour interval time series graph](ProcessRasterGraph_Example_Hour_Graph.png)
+![ProcessRasterGraph example for a single hour interval time series graph](ProcessRasterGraph_Example_Single_Hour_Graph.png)
 </p>**
 
 **<p style="text-align: center;">
-Example Raster Graph for a Single Hour Interval Time Series (<a href="../ProcessRasterGraph_Example_Hour_Graph.png">see full-size image</a>)
+Example Raster Graph for a Single Hour Interval Time Series (<a href="../ProcessRasterGraph_Example_Single_Hour_Graph.png">see full-size image</a>)
 </p>**
 
-#### Single Minute Interval Time Series ####
+#### Single Time Series - Minute Interval ####
 
 Time series with N-minute interval can be displayed in a raster graph.
 The period of record must be short enough to ensure that rendered pixels are visible and don't overwrite each other.
@@ -273,14 +311,21 @@ Note that the spring runoff occurs over a period of approximately two months.
 The details of the flow are more refined (granular) than the hourly data.
 
 **<p style="text-align: center;">
-![ProcessRasterGraph example for a single 15-minute interval time series graph](ProcessRasterGraph_Example_15Minute_Graph.png)
+![ProcessRasterGraph example for a single 15-minute interval time series graph](ProcessRasterGraph_Example_Single_15Minute_Graph.png)
 </p>**
 
 **<p style="text-align: center;">
-Example Raster Graph for a Single 15-Minute Interval Time Series (<a href="../ProcessRasterGraph_Example_15Minute_Graph.png">see full-size image</a>)
+Example Raster Graph for a Single 15-Minute Interval Time Series (<a href="../ProcessRasterGraph_Example_Single_15Minute_Graph.png">see full-size image</a>)
 </p>**
 
-## Multiple Time Series ##
+### Multiple Time Series ###
+
+Viewing multiple time series is enabled for the following intervals:
+
+*   month (see [Multiple Time Series - Month Interval](#multiple-time-series-month-interval))
+*   day (see [Multiple Time Series - Day Interval](#multiple-time-series-day-interval))
+*   1-hour (see [Multiple Time Series - Hour Interval](#multiple-time-series-hour-interval))
+*   N-minute (see [Multiple Time Series - Minute Interval](#multiple-time-series-minute-interval))
 
 It is often helpful to visualize multiple time series in a geographic area or a system,
 for example, all streamflow along a stream reach, or all precipitation stations in a basin.
@@ -301,7 +346,32 @@ The time series can be sorted appropriately to control the order on the Y-axis
     +   Time series values for intervals that include only date apply for the full date.
         Therefore, the output end is incremented by one interval for display purposes to show the full date interval.
 
-The following example displays 50 years of monthly data for streams along a reach.
+#### Multiple Time Series - Year Interval ####
+
+The following example displays year interval data for streams along a reach.
+The full period can typically be viewed because a year will correspond to 1+ pixels.
+
+```
+            Year1 Year2 Year3 Year4 ... YearLast
+Location1    
+Location2    
+Location3    
+...
+```
+
+**<p style="text-align: center;">
+![ProcessRasterGraph multiple year time series example graph](ProcessRasterGraph_Example_Multiple_Year_Graph.png)
+</p>**
+
+**<p style="text-align: center;">
+Example Raster Graph for Multiple Year Interval Time Series (<a href="../ProcessRasterGraph_Example_Multiple_Year_Graph.png">see full-size image</a>)
+</p>**
+
+#### Multiple Time Series - Month Interval ####
+
+The following example displays 16 years of monthly data for streams along a reach.
+If the period is too long, the calculated pixel with will be less than 1,
+pixels will overwrite, and the colors will not represent all values.
 
 ```
             Month1 Month2 Month3 Month4 ... Month50
@@ -311,7 +381,41 @@ Location3
 ...
 ```
 
-The following example displays 7 days of hourly data.
+**<p style="text-align: center;">
+![ProcessRasterGraph multiple month time series example graph](ProcessRasterGraph_Example_Multiple_Month_Graph.png)
+</p>**
+
+**<p style="text-align: center;">
+Example Raster Graph for Multiple Month Interval Time Series (<a href="../ProcessRasterGraph_Example_Multiple_Month_Graph.png">see full-size image</a>)
+</p>**
+
+
+#### Multiple Time Series - Day Interval ####
+
+The following example displays 2 years of daily data.
+If the period is too long, the calculated pixel with will be less than 1,
+pixels will overwrite, and the colors will not represent all values.
+
+```
+            Day1 Day2 ... DayLast 
+Location1    
+Location2    
+...
+```
+
+**<p style="text-align: center;">
+![ProcessRasterGraph multiple day time series example graph](ProcessRasterGraph_Example_Multiple_Day_Graph.png)
+</p>**
+
+**<p style="text-align: center;">
+Example Raster Graph for Multiple Day Interval Time Series (<a href="../ProcessRasterGraph_Example_Multiple_Day_Graph.png">see full-size image</a>)
+</p>**
+
+#### Multiple Time Series - Hour Interval ####
+
+The following example displays a month of data involving two months.
+If the period is too long, the calculated pixel with will be less than 1,
+pixels will overwrite, and the colors will not represent all values.
 
 ```
             Day1Hour01 Day1Hour02 ... Day7Hour22 Day7Hour23
@@ -321,30 +425,35 @@ Location3
 ...
 ```
 
+**<p style="text-align: center;">
+![ProcessRasterGraph multiple hour time series example graph](ProcessRasterGraph_Example_Multiple_Hour_Graph.png)
+</p>**
+
+**<p style="text-align: center;">
+Example Raster Graph for Multiple Hour Interval Time Series (<a href="../ProcessRasterGraph_Example_Multiple_Hour_Graph.png">see full-size image</a>)
+</p>**
+
+#### Multiple Time Series - Minute Interval ####
+
 The following image illustrates a raster graph for two 15Minute time series
 for a short period, where time series 1 is upstream of time series 2,
 illustrating how diversions reduce the flow.
 
+```
+            Interval1 Interval2 ... IntervalLast
+Location1    
+Location2    
+Location3    
+...
+```
+
 **<p style="text-align: center;">
-![ProcessRasterGraph multiple time series example graph](ProcessRasterGraph_Multiple_ExampleGraph.png)
+![ProcessRasterGraph multiple time series example graph](ProcessRasterGraph_Example_Multiple_15Minute_Graph.png)
 </p>**
 
 **<p style="text-align: center;">
-Example Raster Graph for Multiple Time Series (<a href="../ProcessRasterGraph_Multiple_ExampleGraph.png">see full-size image</a>)
+Example Raster Graph for Multiple Time Series (<a href="../ProcessRasterGraph_Example_Multiple_15Minute_Graph.png">see full-size image</a>)
 </p>**
-
-It is envisioned that in the future, command parameters will implemented to:
-
-*   Create a raster graph without a time series product file,
-    as a way of streamlining product generation,
-    with parameters for important configuration information such as selecting a time series to plot,
-    and specifying the color scale and whether a log transform should be used.
-*   Specify an output table containing the colors used for plotting,
-    to allow export of the raster plot information to other tools, such as web visualization.
-    This will allow TSTool to be used to create the product, and other tools to visualize.
-*   Specify the output year type as a command parameter.
-*   Specify additional configuration options for controlling the X and Y axes (e.g., allow seasonal or weekly display).
-
 
 ## Web Page Image Map ##
 
