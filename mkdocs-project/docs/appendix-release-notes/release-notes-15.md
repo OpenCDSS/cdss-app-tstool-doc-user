@@ -39,10 +39,13 @@ Issues may also be included in other repositories that are TSTool components.
         (previously the full available period was used).
 *   ![change](change.png) [15.4.0] Update heat map (raster graph) tools:
     +   Add the `expression` column to symbol table to allow more complex logic in symbol tables using the EvalEx library.
+    +   Verify that single and multiple time series graphs can be created for all regular intervals minute through year.
 *   ![change](change.png) [15.4.0] Replace the `TSTool.bat` file with `tstool.cmd` for Windows:
     +   Update to the current TSTool configuration so that it can be run as an option to `TSTool.exe` for troubleshooting.
 *   ![change](change.png) [15.4.0] Update the [`AppendFile`](../command-ref/AppendFile/AppendFile.md) command:
     +   Do not trim the `AppendText` parameter value so that text with leading and trailing spaces can be appended.
+*   ![change](change.png) [15.4.0] Update the [`CheckTimeSeries`](../command-ref/CheckTimeSeries/CheckTimeSeries.md) command:
+    +   Add the `ActionStatus` parameter to control the command status when criteria matches occur.
 *   ![change](change.png) [15.4.0] Update the [`Delta`](../command-ref/Delta/Delta.md) command:
     +   Add the `DeltaValue` parameter and allow using the date/time parts as the delta.
         This is useful for evaluating gaps between data transmissions.
